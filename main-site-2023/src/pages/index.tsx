@@ -1,11 +1,11 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
-import Button from '../../../shared-ui/components/Button';
+import ExampleButton from '../../../shared-ui/components/example-button/ExampleButton';
 
 const IndexPage = () => {
   return (
     <div>
-      Welcome to our main site!!!! <Button />
+      Welcome to our main site!!!! <ExampleButton />
     </div>
   );
 };
