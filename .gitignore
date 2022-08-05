@@ -24,4 +24,4 @@ yarn-error.log*
 
 .cache
 public
-src/gatsby-types.d.ts
+gatsby-types.d.ts
