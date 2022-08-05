@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/HackBeanpot/2023-mono-repo#readme",
   "devDependencies": {
+    "@types/react": "^18.0.15",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "eslint": "^8.21.0",
@@ -27,5 +28,8 @@
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
