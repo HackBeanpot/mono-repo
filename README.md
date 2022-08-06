@@ -71,9 +71,3 @@ A quick look at the top-level file structure used
 12. **`tsconfig.json`**: This is a typescript configuration file to specify typescript language checks
 
 13. **`yarn.lock`**: (First see `package.json`, below) This is an automatically generated file based on the exact versions of your yarn dependencies used for the project. **You won't change this file directly.**
-
-## :gear: Technologies
-
-The website is built on the following technologies:
-
-- [Gatsby](https://www.gatsbyjs.com/): Site hosting provider
