@@ -1,54 +1,64 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+# Live site 2023
 
-## 🚀 Quick start
+## :joy: Introduction
 
-1.  **Create a Gatsby site.**
+Welcome to Hackbeanpot's 2023 live site! This is where hackers can find day of and live information about the hackathon.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## :zany_face: Getting Started
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+1. **Clone the repository:**
 
-2.  **Start developing.**
+```bash
+git clone https://github.com/HackBeanpot/2023-mono-repo.git
+```
 
-    Navigate into your new site’s directory and start it up.
+2. **Change directories**
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```bash
+cd 2023-mono-repo/live-site-2023
+```
 
-3.  **Open the code and start customizing!**
+3. **Install the packages**
 
-    Your site is now running at http://localhost:8000!
+```bash
+# In the project directory
+yarn install
+```
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+4. **Run the server locally**
 
-4.  **Learn more**
+```bash
+yarn develop
+```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Now the server will run locally, most likely on `http://localhost:8000`. Your work will be displayed, and as changes are saved it will auto-refresh the site.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## :file_folder: File Structure
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+A quick look at the top-level file structure used inside live-site-2023
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    .
+    ├── /node_modules
+    ├── /src
+    ├── gatsby-config.ts
+    ├── package.json
+    ├── README.md
+    └── yarn.lock
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+2.  **`/src`**: This directory contains all the source code for live-site-2023.
 
-## 🚀 Quick start (Gatsby Cloud)
+3.  **`gatsby-config.ts`**: This is a Gatsby configuration file.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+4.  **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadat incluedes the project's name, author, etc. This manifest is how yarn knows which packages to isntall to run the project.
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+5.  **`README.md`**: A reference text file containing information about the project.
+
+6.  **`yarn.lock`**: (First see `package.json`, below) This is an automatically generated file based on the exact versions of your yarn dependencies used for the project. **You won't change this file directly.**
+
+## :gear: Technologies
+
+The website is built on the following technologies:
+
+- [Gatsby](https://www.gatsbyjs.com/): Site hosting provider
