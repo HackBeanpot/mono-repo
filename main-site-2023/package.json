@@ -15,8 +15,8 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
+  "devDependencies": {},
   "dependencies": {
     "gatsby": "^4.20.0"
-  },
-  "devDependencies": {}
+  }
 }
