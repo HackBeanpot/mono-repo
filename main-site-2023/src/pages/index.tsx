@@ -5,7 +5,7 @@ import ExampleButton from '../../../shared-ui/components/example-button/ExampleB
 const IndexPage = () => {
   return (
     <div>
-      Welcome to our main site!!! <ExampleButton />
+      Welcome to our main site!!!! <ExampleButton />
     </div>
   );
 };
