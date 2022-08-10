@@ -32,13 +32,15 @@ yarn install
 A quick look at the top-level file structure used
 
     .
+    ├── /husky
     ├── /vscode
+    ├── /docs
     ├── /live-site-2023
     ├── /main-site-2023
     ├── /node_modules
     ├── /shared-ui
     ├── .eslintignore
-    ├── .eslintrc.cjs
+    ├── .eslintrc.json
     ├── .gitignore
     ├── .prettierrc
     ├── package.json
@@ -46,28 +48,32 @@ A quick look at the top-level file structure used
     ├── tsconfig.json
     └── yarn.lock
 
-1.  **`/vscode`**: This directory contains vscode setting configurations.
+1.  **`/husky`**: This directory contains the husky pre-commit hook.
 
-2.  **`/live-site-2023`**: This directory contains the project code for the live site
+2.  **`/vscode`**: This directory contains vscode setting configurations.
 
-3.  **`/main-site-2023`**: This directory contains the project code for the main site
+3.  **`/docs`**: This directory contains the pull request template.
 
-4.  **`/node_modules`**: This directory contains all of the shared modules of code that the live site, main site, and shared ui depends on (npm packages)are automatically installed.
+4.  **`/live-site-2023`**: This directory contains the project code for the live site
 
-5.  **`/shared-ui`**: This directory contains the shared ui components and styles
+5.  **`/main-site-2023`**: This directory contains the project code for the main site
 
-6.  **`.eslintignore`**: This file specifies which files should be ignored by eslint
+6.  **`/node_modules`**: This directory contains all of the shared modules of code that the live site, main site, and shared ui depends on (npm packages)are automatically installed.
 
-7.  **`.eslintrc.cjs`**: This file configures eslint styling rules
+7.  **`/shared-ui`**: This directory contains the shared ui components and styles
 
-8.  **`.gitignore`**: This file tells git which files will not maintain a version history, thus don't need to be tracked.
+8.  **`.eslintignore`**: This file specifies which files should be ignored by eslint
 
-9.  **`.prettierrc`**: This file configures prettier styling rules
+9.  **`.eslintrc.json`**: This file configures eslint styling rules
 
-10. **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadat incluedes the project's name, author, etc. This manifest is how npm knows which packages to isntall to run the project.
+10.  **`.gitignore`**: This file tells git which files will not maintain a version history, thus don't need to be tracked.
 
-11. **`README.md`**: A reference text file containing information about the project.
+11.  **`.prettierrc`**: This file configures prettier styling rules
 
-12. **`tsconfig.json`**: This is a typescript configuration file to specify typescript language checks
+12. **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadat incluedes the project's name, author, etc. This manifest is how npm knows which packages to isntall to run the project.
 
-13. **`yarn.lock`**: (First see `package.json`, below) This is an automatically generated file based on the exact versions of your yarn dependencies used for the project. **You won't change this file directly.**
+13. **`README.md`**: A reference text file containing information about the project.
+
+14. **`tsconfig.json`**: This is a typescript configuration file to specify typescript language checks
+
+15. **`yarn.lock`**: (First see `package.json`, below) This is an automatically generated file based on the exact versions of your yarn dependencies used for the project. **You won't change this file directly.**
