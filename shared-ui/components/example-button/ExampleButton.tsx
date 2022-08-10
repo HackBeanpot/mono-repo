@@ -5,4 +5,4 @@ const ExampleButton: React.FC = () => {
   return <StyledExampleButton>Example button!!!</StyledExampleButton>;
 };
 
-export default ExampleButton;
+export default ExampleButton
