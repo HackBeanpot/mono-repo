@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ] ,
+    "lib": ["dom", "esnext"],
     "jsx": "react",
-    "module": "esnext", 
-    "moduleResolution": "node" ,
+    "module": "esnext",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true, 
+    "skipLibCheck": true,
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
@@ -22,11 +19,7 @@
     "allowUnusedLabels": true,
     "exactOptionalPropertyTypes": false
   },
-  "include": [
-    "main-site-2023",
-    "live-site-2023",
-    "shared-ui"
-  ],
+  "include": ["main-site-2023", "live-site-2023", "shared-ui"],
   "exclude": [
     "node_modules",
     "public",
