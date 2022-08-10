@@ -1,7 +1,11 @@
 import styled from 'styled-components';
+import { min } from '../../lib/responsive';
 
 const StyledExampleButton = styled.button`
-  color: pink;
+  color: blue;
+  @media ${min.tablet} {
+    color: pink;
+  }
 `;
 
 export { StyledExampleButton };

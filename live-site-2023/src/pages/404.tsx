@@ -23,7 +23,7 @@ const codeStyles = {
   borderRadius: 4,
 }
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
