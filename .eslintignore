@@ -2,3 +2,5 @@ node_modules
 public
 gatsby-config.ts
 gatsby-types.d.ts
+package.json
+.eslintrc.json
