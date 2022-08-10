@@ -72,7 +72,7 @@ A quick look at the top-level file structure used
 
 11. **`.prettierrc`**: This file configures prettier styling rules
 
-12. **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadat incluedes the project's name, author, etc. This manifest is how npm knows which packages to isntall to run the project.
+12. **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadata includes the project's name, author, etc. This manifest is how npm knows which packages to install to run the project.
 
 13. **`README.md`**: A reference text file containing information about the project.
 

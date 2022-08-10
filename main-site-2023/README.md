@@ -51,7 +51,7 @@ A quick look at the top-level file structure used inside live-site-2023
 
 3.  **`gatsby-config.ts`**: This is a Gatsby configuration file.
 
-4.  **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadata incluedes the project's name, author, etc. This manifest is how yarn knows which packages to install to run the project.
+4.  **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadata includes the project's name, author, etc. This manifest is how npm knows which packages to install to run the project.
 
 5.  **`README.md`**: A reference text file containing information about the project.
 
