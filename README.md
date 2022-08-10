@@ -2,7 +2,7 @@
 
 ## :joy: Introduction
 
-Welcome to Hackbeanpot's 2023 monorepo! This repository contains both the live site and main site. The reason we have a monorepo is to allow both sites to use the same components from a shared ui folder.
+Welcome to Hackbeanpot's 2023 monorepo! This repository contains both the live site and main site. The reason we have a monorepo is to allow both sites to use the same components from a shared ui folder. VSCode is strongly recommended as a code editor since we have settings configured for Vscode and also use their extensions.
 
 ## :zany_face: Getting Started
 
@@ -25,7 +25,9 @@ cd 2023-mono-repo
 yarn install
 ```
 
-4. **Cd into the respective project you want to run, yarn install, then yarn develop**
+4. **Install the ESlint and Prettier VSCode extensions**
+
+5. **Cd into the respective project you want to run, yarn install, then yarn develop**
 
 ## :file_folder: File Structure
 
@@ -66,9 +68,9 @@ A quick look at the top-level file structure used
 
 9.  **`.eslintrc.json`**: This file configures eslint styling rules
 
-10.  **`.gitignore`**: This file tells git which files will not maintain a version history, thus don't need to be tracked.
+10. **`.gitignore`**: This file tells git which files will not maintain a version history, thus don't need to be tracked.
 
-11.  **`.prettierrc`**: This file configures prettier styling rules
+11. **`.prettierrc`**: This file configures prettier styling rules
 
 12. **`package.json`**: A manifest file for Node.js projects, this file includes the metadata for the project. Metadat incluedes the project's name, author, etc. This manifest is how npm knows which packages to isntall to run the project.
 
