@@ -62,3 +62,4 @@ A quick look at the top-level file structure used inside live-site-2023
 The website is built on the following technologies:
 
 - [Gatsby](https://www.gatsbyjs.com/): Site hosting provider
+- [Vercel](https://vercel.com/): Application deployment
