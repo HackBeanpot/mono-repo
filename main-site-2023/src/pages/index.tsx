@@ -2,7 +2,7 @@ import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 import ExampleButton from '../../../shared-ui/components/example-button/ExampleButton';
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   return (
     <div>
       Welcome to our main site!!!! <ExampleButton />

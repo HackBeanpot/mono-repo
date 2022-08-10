@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 
-const PacketPage = () => {
+const PacketPage: React.FC = () => {
   return <div>Sponsib packet!!!</div>;
 };
 

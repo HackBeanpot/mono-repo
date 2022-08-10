@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyledExampleButton } from './ExampleButton.style';
 
-export default function ExampleButton() {
+const ExampleButton: React.FC = () => {
   return <StyledExampleButton>Example button!!!</StyledExampleButton>;
-}
+};
+
+export default ExampleButton;
