@@ -1,4 +1,4 @@
-# Monorepo 
+# Monorepo
 
 ## :joy: Introduction
 

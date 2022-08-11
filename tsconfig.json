@@ -17,7 +17,7 @@
     "noUnusedParameters": true,
     "allowUnreachableCode": true,
     "allowUnusedLabels": true,
-    "exactOptionalPropertyTypes": false, 
+    "exactOptionalPropertyTypes": false,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true
