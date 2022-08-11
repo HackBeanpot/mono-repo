@@ -1,21 +1,21 @@
-# Main site 2023
+# Monorepo 
 
 ## :joy: Introduction
 
-Welcome to Hackbeanpot's 2023 monorepo! This repository contains both the live site and main site. The reason we have a monorepo is to allow both sites to use the same components from a shared ui folder. VSCode is strongly recommended as a code editor since we have settings configured for Vscode and also use their extensions.
+Welcome to Hackbeanpot's monorepo! This repository contains both the live site and main site. The reason we have a monorepo is to allow both sites to use the same components from a shared ui folder. VSCode is strongly recommended as a code editor since we have settings configured for Vscode and also use their extensions.
 
 ## :zany_face: Getting Started
 
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/HackBeanpot/2023-mono-repo.git
+git clone https://github.com/HackBeanpot/mono-repo.git
 ```
 
 2. **Change directories**
 
 ```bash
-cd 2023-mono-repo
+cd mono-repo
 ```
 
 3. **Install the packages**
@@ -37,8 +37,8 @@ A quick look at the top-level file structure used
     ├── /husky
     ├── /vscode
     ├── /docs
-    ├── /live-site-2023
-    ├── /main-site-2023
+    ├── /live-site
+    ├── /main-site
     ├── /node_modules
     ├── /shared-ui
     ├── .eslintignore
@@ -56,9 +56,9 @@ A quick look at the top-level file structure used
 
 3.  **`/docs`**: This directory contains the pull request template.
 
-4.  **`/live-site-2023`**: This directory contains the project code for the live site
+4.  **`/live-site`**: This directory contains the project code for the live site
 
-5.  **`/main-site-2023`**: This directory contains the project code for the main site
+5.  **`/main-site`**: This directory contains the project code for the main site
 
 6.  **`/node_modules`**: This directory contains all of the shared modules of code that the live site, main site, and shared ui depends on (npm packages)are automatically installed.
 

@@ -1,21 +1,21 @@
-# Live site 2023
+# Main site
 
 ## :joy: Introduction
 
-Welcome to Hackbeanpot's 2023 live site! This is where hackers can find day of and live information about the hackathon.
+Welcome to Hackbeanpot's main site! This is where hackers and sponsors can find information about our hackathon in the months before our event!
 
 ## :zany_face: Getting Started
 
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/HackBeanpot/2023-mono-repo.git
+git clone git@github.com:HackBeanpot/mono-repo.git
 ```
 
 2. **Change directories**
 
 ```bash
-cd 2023-mono-repo/live-site-2023
+cd mono-repo/main-site
 ```
 
 3. **Install the packages**
@@ -35,7 +35,7 @@ Now the server will run locally, most likely on `http://localhost:8000`. Your wo
 
 ## :file_folder: File Structure
 
-A quick look at the top-level file structure used inside live-site-2023
+A quick look at the top-level file structure used inside live-site
 
     .
     ├── /node_modules
@@ -47,7 +47,7 @@ A quick look at the top-level file structure used inside live-site-2023
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-2.  **`/src`**: This directory contains all the source code for live-site-2023.
+2.  **`/src`**: This directory contains all the source code for live-site.
 
 3.  **`gatsby-config.ts`**: This is a Gatsby configuration file.
 
