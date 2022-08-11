@@ -56,9 +56,9 @@ A quick look at the top-level file structure used
 
 3.  **`/docs`**: This directory contains the pull request template.
 
-4.  **`/live-site`**: This directory contains the project code for the live site
+4.  **`/live-site`**: This directory contains the project code for the live site.
 
-5.  **`/main-site`**: This directory contains the project code for the main site
+5.  **`/main-site`**: This directory contains the project code for the main site.
 
 6.  **`/node_modules`**: This directory contains all of the shared modules of code that the live site, main site, and shared ui depends on (npm packages)are automatically installed.
 
