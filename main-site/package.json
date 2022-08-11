@@ -1,8 +1,8 @@
 {
-  "name": "live-site-2023",
+  "name": "main-site",
   "version": "1.0.0",
   "private": true,
-  "description": "live-site-2023",
+  "description": "main-site",
   "author": "jzhzhang66",
   "keywords": [
     "gatsby"
@@ -15,8 +15,8 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
+  "devDependencies": {},
   "dependencies": {
     "gatsby": "^4.20.0"
-  },
-  "devDependencies": {}
+  }
 }

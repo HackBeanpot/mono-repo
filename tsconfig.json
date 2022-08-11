@@ -17,12 +17,12 @@
     "noUnusedParameters": true,
     "allowUnreachableCode": true,
     "allowUnusedLabels": true,
-    "exactOptionalPropertyTypes": false, 
+    "exactOptionalPropertyTypes": false,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true
   },
-  "include": ["main-site-2023", "live-site-2023", "shared-ui"],
+  "include": ["main-site", "live-site", "shared-ui"],
   "exclude": [
     "node_modules",
     "public",
