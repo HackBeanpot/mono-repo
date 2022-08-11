@@ -62,7 +62,7 @@ A quick look at the top-level file structure used
 
 6.  **`/node_modules`**: This directory contains all of the shared modules of code that the live site, main site, and shared ui depends on (npm packages)are automatically installed.
 
-7.  **`/shared-ui`**: This directory contains the shared ui components and styles
+7.  **`/shared-ui`**: This directory contains the shared ui components and styles.
 
 8.  **`.eslintignore`**: This file specifies which files should be ignored by eslint
 
