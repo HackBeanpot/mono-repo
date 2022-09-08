@@ -2,10 +2,12 @@ import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 import ExampleButton from '../../../shared-ui/components/example-button/ExampleButton';
 import Logo from '../../../shared-ui/images/hackbeanpot-logo.png';
+import BackgroundImage from '../../../shared-ui/components/background-image/BackgroundImage';
 
 const IndexPage: React.FC = () => {
   return (
     <div>
+      <BackgroundImage />
       Welcome to our main site!!! <ExampleButton />
       <img src={Logo} />
     </div>
