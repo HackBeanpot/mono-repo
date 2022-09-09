@@ -1,13 +1,16 @@
 import * as React from 'react';
-import Background from '../../images/background.svg';
-//import StyledBackgroundImage from './BackgroundImage.style';
+//import Background from '../../images/day-background.svg';
+import StyledDayBackground from './DayBackground.style';
+
+
 //NEXT STEP, TRY TO PASS IMAGE SRC PROP TO STYLING
+// GET A DIFFERENT BACKGROUND DEPENDING ON THE IMAGE .. don't pass it in as a prop lol
 //objectFit: 'cover'
 const BackgroundImage: React.FC = () => {
   return (
     <>
-      {/* <StyledBackgroundImage src={Background} /> */}
-      <img
+      <StyledDayBackground />
+      {/* <img
         style={{
           objectFit: 'cover',
           backgroundSize: 'cover',
@@ -15,7 +18,7 @@ const BackgroundImage: React.FC = () => {
           width: '100%'
         }}
         src={Background}
-      />
+      /> */}
     </>
   );
 };
