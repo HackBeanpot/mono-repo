@@ -4,7 +4,7 @@ import { colors } from './colors';
 
 // desert exploration
 const H1 = styled.h1`
-  fontfamily: 'Calistoga-Regular';
+  font-family: 'Calistoga-Regular';
 `;
 
 // Hackbeanpot is about...
