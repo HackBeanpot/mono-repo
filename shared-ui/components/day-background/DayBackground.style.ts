@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { min } from '../../lib/responsive';
 import background from '../../images/day-background.svg';
 const StyledDayBackground = styled.div`
-  height: 2000vh; // how to make dynamic
+  height: 1000vh;
   width: 100vw;
   background-size: cover;
   background-image: url(${background});
@@ -15,25 +15,3 @@ const StyledDayBackground = styled.div`
 `;
 
 export default StyledDayBackground;
-
-// background-position: left top, center top;
-// background-repeat: no-repeat;
-
-// background-size:cover;
-// background-position:center center;
-// background-attachment:fixed;
-// position: fixed;
-// top: 0;
-// right: 10;
-// @media ${min.tablet} {
-//   color: pink;
-// }
-
-// 100 vh for width height
-
-//   width: 100vw;
-// height: 100vh;
-
-// background-color: green;
-// backgroundSize: cover;
-// backgroundImage: url(${'../../images/day-background.svg'});
