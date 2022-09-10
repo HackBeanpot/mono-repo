@@ -7,9 +7,10 @@ import BackgroundImage from '../../../shared-ui/components/day-background/DayBac
 const IndexPage: React.FC = () => {
   return (
     <div>
-      <BackgroundImage />
-      Welcome to our main site!!! <ExampleButton />
-      <img src={Logo} />
+      <BackgroundImage>
+        Welcome to our main site!!! <ExampleButton />
+        <img src={Logo} />
+      </BackgroundImage>
     </div>
   );
 };
