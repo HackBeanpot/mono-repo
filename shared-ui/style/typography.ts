@@ -2,21 +2,62 @@ import styled from 'styled-components';
 import { min } from '../lib/responsive';
 import { colors } from './colors';
 
-// desert exploration
+const fonts = {
+  calistogaRegular: 'Calistoga-Regular',
+  nunitoSansBold: 'NunitoSans-Bold',
+  nunitoSansLight: 'NunitoSans-Light',
+  nunitoSansRegular: 'NunitoSans-Regular',
+  nunitoSansSemibold: 'NunitoSans-SemiBold'
+};
+
 const H1 = styled.h1`
-  font-family: 'NunitoSans-SemiBold';
+  font-family: ${fonts.calistogaRegular};
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
+  font-size: clamp(1.5em, 9.5vw, 6.5em);
+  letter-spacing: 0.04em;
+  margin: 0;
 `;
 
-// Hackbeanpot is about...
-const H2 = styled.h2``;
+const H2 = styled.h2`
+  font-family: ${fonts.nunitoSansRegular};
+  font-size: clamp(1.5em, 8.2vw, 3.1em);
+  margin: 0;
+  @media ${min.tablet} {
+    letter-spacing: 0.1em;
+  }
+`;
 
-// Explore the desert with Hackbeanpot
-const H3 = styled.h3``;
+const H3 = styled.h3`
+  color: ${(props): string => (props.color ? props.color : colors.BLACK)};
+  font-family: ${fonts.nunitoSansRegular};
+  font-size: clamp(1.3em, 6.6vw, 2.1em);
+  margin: 0;
+`;
 
-// Explore the desert with Hackbeanpot
 const H4 = styled.h4`
+  font-family: ${fonts.nunitoSansRegular};
   color: ${(props): string =>
     props.color ? props.color : colors.BUTTON_GREEN};
+  margin: 0;
+  font-size: 1.3em;
+  @media ${min.tablet} {
+    font-size: 1.5em;
+  }
+  letter-spacing: 0.1em;
 `;
 
-export { H1 };
+const P = styled.p`
+  margin: 0;
+  font-family: ${fonts.nunitoSansRegular};
+  font-size: 1.1em;
+  line-height: 1.4em;
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
+  @media ${min.mobile} {
+    font-size: 1.2em;
+  }
+  @media ${min.tablet} {
+    font-size: 1.25em;
+  }
+`;
+
+export { H1, H2, H3, H4, P };
