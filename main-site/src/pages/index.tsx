@@ -1,12 +1,23 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
-import { StyledDayBackground } from '../../../shared-ui/styled-components/day-background/background.style';
-import DayBackground from '../../../shared-ui/images/day-background.svg';
+import useMatchMedia from 'react-use-match-media';
+import { min } from '../../../shared-ui/lib/responsive';
+import { StyledDayBackground } from '../../../shared-ui/styled-components/day-background.style';
+import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
+import DayBackgroundMobile from '../../../shared-ui/images/day-background.svg';
+
+//CHANGE THE CSS STUFF
 
 const IndexPage: React.FC = () => {
+  // idk if this is working
+const isWideViewport = useMatchMedia({ minWidth: min.tablet});
   return (
     <div>
-      <StyledDayBackground src={DayBackground} />
+      {isWideViewport ? (
+        <StyledDayBackground src={DayBackgroundDesktop} />
+      ) : (
+        <StyledDayBackground src={DayBackgroundMobile} />
+      )}
     </div>
   );
 };
