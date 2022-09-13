@@ -4,7 +4,8 @@ import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import { StyledDayBackground } from '../../../shared-ui/styled-components/day-background.style';
 import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
-import DayBackgroundMobile from '../../../shared-ui/images/day-background.svg';
+import DayBackgroundMobile from '../../../shared-ui/images/day-background-mobile.svg';
+//import Test from '../../../shared-ui/images/hackbeanpot-logo.png';
 
 //CHANGE THE CSS STUFF
 
