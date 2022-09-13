@@ -6,17 +6,14 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { StyledDayBackground } from '../../../shared-ui/styled-components/day-background.style';
 import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
 import DayBackgroundMobile from '../../../shared-ui/images/day-background-mobile.svg';
-//import Test from '../../../shared-ui/images/hackbeanpot-logo.png';
 
-//CHANGE THE CSS STUFF
 
 const IndexPage: React.FC = () => {
-  // idk if this is working
-  const isWideViewport = useMatchMedia({ minWidth: min.tablet});
+  // CHANGE NAME
+  const isDesktop = useMatchMedia(min.tablet);
   return (
     <div>
-       <StyledDayBackground src={DayBackgroundDesktop} />
-      {isWideViewport ? (
+      {isDesktop ? (
         <StyledDayBackground src={DayBackgroundDesktop} />
       ) : (
         <StyledDayBackground src={DayBackgroundMobile} />
