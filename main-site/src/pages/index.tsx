@@ -9,7 +9,6 @@ import DayBackgroundMobile from '../../../shared-ui/images/day-background-mobile
 
 
 const IndexPage: React.FC = () => {
-  // CHANGE NAME
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <div>
