@@ -6,15 +6,14 @@ const StyledPrimaryButton = styled.button`
   color: ${colors.HEADER_FOOTER_BLUE};
   background-color: ${colors.BUTTON_GREEN};
   border-color: ${colors.HEADER_FOOTER_BLUE};
-  font-size: 1.0em;
-  background-color: ${colors.BUTTON_GREEN};
-  padding: 1em 1em;
+  font-size: 1em;
+  padding: 1em;
   border-radius: 2em;
-  border: 1.5px solid;
+  border: 0.1em solid;
   cursor: pointer;
 
   @media ${max.tablet} {
-    font size: 0.8rem;
+    font-size: 0.8em;
   };
 `;
 

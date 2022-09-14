@@ -2,9 +2,9 @@ import React from 'react';
 import { StyledSecondaryButton } from './SecondaryButton.styles';
 import { ButtonProps } from '../../lib/types';
 
-const SecondaryButton: React.FC<ButtonProps> = ({ btnText, btnlink }) => {
+const SecondaryButton: React.FC<ButtonProps> = ({ btnText, btnLink }) => {
   return (
-    <a href={btnlink}>
+    <a href={btnLink}>
       <StyledSecondaryButton>{btnText}</StyledSecondaryButton>
     </a>
   );
