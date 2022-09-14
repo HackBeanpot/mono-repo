@@ -2,10 +2,22 @@ import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 import { H1, H2, H3, H4, P } from '../../../shared-ui/style/typography';
 import '../../../shared-ui/index.css';
+import useMatchMedia from 'react-use-match-media';
+import '../../../shared-ui/style/global.css';
+import { min } from '../../../shared-ui/lib/responsive';
+import { StyledDayBackground } from '../../../shared-ui/styled-components/background.style';
+import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
+import DayBackgroundMobile from '../../../shared-ui/images/day-background-mobile.svg';
 
 const IndexPage: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tablet);
   return (
     <div>
+      {isDesktop ? (
+        <StyledDayBackground src={DayBackgroundDesktop} />
+      ) : (
+        <StyledDayBackground src={DayBackgroundMobile} />
+      )}
       <H1>Desert Exploration</H1>
       <H2>Explore the desert with HackBeanpot!</H2>
       <H3>HackBeanpot 2023</H3>
