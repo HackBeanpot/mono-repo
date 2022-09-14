@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { max } from '../../lib/responsive';
-import { colors } from '../../style/colors';
+import { max } from '../../../lib/responsive';
+import { colors } from '../../../style/colors';
 
 const StyledPrimaryButton = styled.button`
   color: ${colors.HEADER_FOOTER_BLUE};
