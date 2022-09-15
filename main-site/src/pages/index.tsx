@@ -8,11 +8,14 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { StyledDayBackground } from '../../../shared-ui/styled-components/background.style';
 import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
 import DayBackgroundMobile from '../../../shared-ui/images/day-background-mobile.svg';
+import Header from '../../../shared-ui/components/header/Header';
+import { homeTabInfo } from '../../../shared-ui/lib/data';
 
 const IndexPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <div>
+      <Header tabs={homeTabInfo} />
       {isDesktop ? (
         <StyledDayBackground src={DayBackgroundDesktop} />
       ) : (

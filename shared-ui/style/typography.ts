@@ -60,4 +60,4 @@ const P = styled.p`
   }
 `;
 
-export { H1, H2, H3, H4, P };
+export { H1, H2, H3, H4, P, fonts };
