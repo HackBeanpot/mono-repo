@@ -10,3 +10,7 @@ export interface TabInfo {
 export interface HeaderProps {
   tabs: TabInfo[];
 }
+
+export interface StyledHeaderProps {
+  isOpen: boolean;
+}

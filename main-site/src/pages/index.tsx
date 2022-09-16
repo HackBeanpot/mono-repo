@@ -17,9 +17,9 @@ const IndexPage: React.FC = () => {
     <div>
       <Header tabs={homeTabInfo} />
       {isDesktop ? (
-        <StyledDayBackground src={DayBackgroundDesktop} />
+        <StyledDayBackground src={DayBackgroundDesktop} alt='desktop day background'/>
       ) : (
-        <StyledDayBackground src={DayBackgroundMobile} />
+        <StyledDayBackground src={DayBackgroundMobile} alt='mobile day background'/>
       )}
       <H1>Desert Exploration</H1>
       <H2>Explore the desert with HackBeanpot!</H2>

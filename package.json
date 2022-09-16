@@ -45,6 +45,7 @@
   "dependencies": {
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "nanoid": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-media-match": "^1.14.2",
