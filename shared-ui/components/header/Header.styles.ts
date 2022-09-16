@@ -9,7 +9,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     height: ${(props): string => props.isOpen ? '40em' : '4.8em'};
     background-color: ${colors.HEADER_FOOTER_BLUE};
     width: 100%;
-    position: absolute;
+    position: fixed;
     @media ${min.tablet} {
       height: 4.8em;
     }
