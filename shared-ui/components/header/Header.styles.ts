@@ -60,6 +60,7 @@ const StyledHamburgerIcon = styled.img`
     position: absolute;
     right: 2em;
     top: 1.5em;
+    cursor: pointer;
   }
 `;
 
@@ -68,6 +69,7 @@ const StyledXIcon = styled.img`
     position: absolute;
     top: 1.2em;
     right: 2em;
+    cursor: pointer;
   }
 `;
 
