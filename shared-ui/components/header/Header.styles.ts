@@ -4,8 +4,6 @@ import { StyledHeaderProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
 
-
-
 const StyledHeader = styled.div<StyledHeaderProps>`
    {
     height: ${(props): string => props.isOpen ? '40em' : '4.8em'};
@@ -72,6 +70,7 @@ const StyledXIcon = styled.img`
     right: 2em;
   }
 `;
+
 export {
   StyledHeader,
   StyledTab,
