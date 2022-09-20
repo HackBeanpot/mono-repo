@@ -52,6 +52,13 @@ const StyledEmailInput = styled.input`
   border-radius: 2em;
 `
 
+const StyledButtonRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+`
+
 export {
   StyledFooter,
   StyledLogoContainer,
@@ -59,5 +66,6 @@ export {
   StyledTabContainer,
   StyledTab,
   StyledButtonContainer,
-  StyledEmailInput
+  StyledEmailInput,
+  StyledButtonRow
 }
