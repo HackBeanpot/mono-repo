@@ -4,7 +4,6 @@ import {
   StyledHeader,
   StyledTab,
   StyledTabsContainer,
-  StyledLink,
   StyledHackBeanpotLogo,
   StyledHamburgerIcon,
   StyledXIcon
@@ -14,7 +13,7 @@ import useMatchMedia from 'react-use-match-media';
 import { min } from '../../lib/responsive';
 import Hamburger from '../../images/hamburger-icon.svg';
 import XIcon from '../../images/X-icon.svg';
-import { nanoid } from 'nanoid';
+import { StyledLink } from '../../style/typography';
 
 const Header: React.FC<HeaderProps> = ({ tabs }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -36,13 +35,13 @@ const Header: React.FC<HeaderProps> = ({ tabs }) => {
         <StyledXIcon
           src={XIcon}
           onClick={(): void => setIsOpen(false)}
-          alt="Close Icon"
+          alt="Close"
         />
       )}
       {(isDesktop || (!isDesktop && isOpen)) && (
         <StyledTabsContainer>
           {tabs.map((tab: TabInfo) => (
-            <StyledLink href={tab.link} key={nanoid()}>
+            <StyledLink href={tab.link} key={tab.name}>
               <StyledTab>{tab.name}</StyledTab>
             </StyledLink>
           ))}

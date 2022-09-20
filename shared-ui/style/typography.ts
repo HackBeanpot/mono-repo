@@ -60,4 +60,10 @@ const P = styled.p`
   }
 `;
 
-export { H1, H2, H3, H4, P, fonts };
+const StyledLink = styled.a`
+  {
+    text-decoration: none;
+  }
+`;
+
+export { H1, H2, H3, H4, P, fonts, StyledLink };

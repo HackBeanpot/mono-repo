@@ -1,7 +1,11 @@
-import { TabInfo } from "./types";
+import { TabInfo } from './types';
 
+const homeTabInfo: TabInfo[] = [
+  { name: 'About', link: '' },
+  { name: 'Calendar', link: '' },
+  { name: 'FAQ', link: '' },
+  { name: 'Sponsors', link: '' },
+  { name: 'Team', link: '' }
+];
 
-const homeTabInfo: TabInfo[] = [{name: 'About', link: ''},{name: 'Calendar', link: ''},{name: 'FAQ', link: ''},
-{name: 'Sponsors', link: ''},{name: 'Team', link: ''}]
-
-export {homeTabInfo};
+export { homeTabInfo };

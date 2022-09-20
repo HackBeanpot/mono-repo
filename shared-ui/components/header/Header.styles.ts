@@ -43,12 +43,6 @@ const StyledTabsContainer = styled.div`
   }
 `;
 
-const StyledLink = styled.a`
-  {
-    text-decoration: none;
-  }
-`;
-
 const StyledHackBeanpotLogo = styled.img`
    {
     padding: 0.7em;
@@ -77,7 +71,6 @@ export {
   StyledHeader,
   StyledTab,
   StyledTabsContainer,
-  StyledLink,
   StyledHackBeanpotLogo,
   StyledHamburgerIcon,
   StyledXIcon
