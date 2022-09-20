@@ -15,6 +15,7 @@ const IndexPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <div>
+      <div>
       {isDesktop ? (
         <StyledDayBackground src={DayBackgroundDesktop} />
       ) : (
@@ -34,6 +35,7 @@ const IndexPage: React.FC = () => {
         someone in-between, we’re excited for you to embark on this adventure
         with us!
       </P>
+      </div>
       <Footer tabs={homeTabInfo} />
     </div>
   );
