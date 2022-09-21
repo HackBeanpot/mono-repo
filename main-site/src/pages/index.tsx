@@ -5,7 +5,7 @@ import '../../../shared-ui/index.css';
 import useMatchMedia from 'react-use-match-media';
 import '../../../shared-ui/style/global.css';
 import { min } from '../../../shared-ui/lib/responsive';
-import { StyledDayBackground } from '../../../shared-ui/styled-components/background.style';
+import { StyledDayBackground } from '../../../shared-ui/styled-components/Background.styles';
 import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
 import DayBackgroundMobile from '../../../shared-ui/images/day-background-mobile.svg';
 import Header from '../../../shared-ui/components/header/Header';
