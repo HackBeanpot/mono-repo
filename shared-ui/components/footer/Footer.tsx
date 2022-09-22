@@ -29,8 +29,8 @@ const Footer: React.FC<FooterProps> = ({ tabs }) => {
       <StyledHackBeanpotLogo
         src={HackBeanpotWhiteLogo}
         alt='White HackBeanpot Logo'
-        width='287px'
-        height='84px'
+        width='287em'
+        height='84em'
       />
       <StyledFooterContentContainer>
         <StyledTabContainer>

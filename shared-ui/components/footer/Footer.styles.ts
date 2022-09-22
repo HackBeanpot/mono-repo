@@ -20,7 +20,8 @@ const StyledFooter = styled.div`
 
 const StyledHackBeanpotLogo = styled.img`
   @media ${max.tablet} {
-    align-self: auto
+    align-self: auto;
+    padding: 0.7em 0em 0em 0em;
   }
   align-self: flex-start;
   padding: 0.7em 0em 0em 0.7em;
