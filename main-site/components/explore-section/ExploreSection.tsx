@@ -12,16 +12,20 @@ import { colors } from '../../../shared-ui/style/colors';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import Explorer from '../../../shared-ui/images/explorer.svg';
 import Vases from '../../../shared-ui/images/vases.svg';
+import { min } from '../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
+
 
 
 const ExploreSection: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tablet);
   return (
     <>
       <StyledFillerSection />
       <StyledExploreSectionContainer>
       <StyledExplorer src={Explorer}/>
         <StyledTextContainer>
-          <H3 color={colors.WHITE}>Explore the Desert with HackBeanpot!</H3>
+          <H3 color={isDesktop ? colors.WHITE : colors.TEXT_BOX}>Explore the Desert with HackBeanpot!</H3>
           <StyledParagraph>
             HackBeanpot 2022 is gonna be out of this world! Join our community
             of astronaut trainees* for a weekend of exploration, collaboration,

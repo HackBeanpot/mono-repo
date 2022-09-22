@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../shared-ui/style/colors';
 import { P } from '../../../shared-ui/style/typography';
+import { min } from '../../../shared-ui/lib/responsive';
  
 
 const StyledFillerSection = styled.div`
@@ -10,10 +11,20 @@ const StyledFillerSection = styled.div`
 
 const StyledTextContainer = styled.div`
     padding: 3em;
-    background-color: ${colors.TEXT_BOX};
     width: 38em;
     border-radius: 3em;
     margin-left: 5em;
+
+    @media ${min.tablet} {
+      width: 34em;
+      background-color: ${colors.TEXT_BOX};
+    }
+
+    @media ${min.tabletLg} {
+      width: 38em;
+
+    }
+
 
 `;
 
@@ -29,8 +40,6 @@ const StyledParagraph = styled(P)`
     padding: 1.5em 0;
 `;
 
-
-
 const StyledExplorer = styled.img`
     position: absolute;
     left: 7em;
@@ -39,8 +48,15 @@ const StyledExplorer = styled.img`
 
 const StyledVases = styled.img`
     position: absolute;
-    right: 17em;
-    top: 35em;
+    right: 1em;
+    top: 37em;
+
+
+    @media ${min.tabletLg} {
+      top: 25em;
+      right: 6em;
+
+    }
 `;
 
 
