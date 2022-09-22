@@ -10,6 +10,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     background-color: ${colors.HEADER_FOOTER_BLUE};
     width: 100%;
     position: fixed;
+    z-index: 20;
     @media ${min.tablet} {
       height: 4.8em;
     }

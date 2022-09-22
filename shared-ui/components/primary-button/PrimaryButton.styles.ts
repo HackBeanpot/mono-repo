@@ -14,7 +14,7 @@ const StyledPrimaryButton = styled.button`
 
   @media ${max.tablet} {
     font-size: 0.8em;
-  };
+  } ;
 `;
 
 export { StyledPrimaryButton };

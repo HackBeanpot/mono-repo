@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { colors } from '../../../shared-ui/style/colors';
+import { P } from '../../../shared-ui/style/typography';
  
 
 const StyledFillerSection = styled.div`
-  height: 100em;
+  height: 66em;
+  border: solid;
 `;
 
 const StyledTextContainer = styled.div`
@@ -15,5 +17,32 @@ const StyledTextContainer = styled.div`
 
 `;
 
+const StyledExploreSectionContainer = styled.div`
+padding-top: 16em;
+position: relative;
 
-export { StyledFillerSection, StyledTextContainer };
+
+`;
+
+
+const StyledParagraph = styled(P)`
+    padding: 1.5em 0;
+`;
+
+
+
+const StyledExplorer = styled.img`
+    position: absolute;
+    left: 7em;
+    top: -1.5em;
+`;
+
+const StyledVases = styled.img`
+    position: absolute;
+    right: 17em;
+    top: 35em;
+`;
+
+
+
+export { StyledFillerSection, StyledTextContainer,StyledExploreSectionContainer, StyledParagraph, StyledExplorer, StyledVases };
