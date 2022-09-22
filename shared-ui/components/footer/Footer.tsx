@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FooterProps, TabInfo } from '../../lib/types';
 import {
   StyledButtonContainer,
@@ -11,9 +11,10 @@ import {
   StyledHackBeanpotLogo,
   StyledSocialMediaButtons,
   StyledTab,
-  StyledTabContainer
+  StyledTabContainer,
+  StyledFooterContentContainer
 } from './Footer.styles';
-import HackBeanpotWhiteLogo from '../../images/hackbeanpot-white-logo.png';
+import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.svg';
 import Instagram from '../../images/social-icons/instagram.svg';
 import Facebook from '../../images/social-icons/facebook.svg';
 import Medium from '../../images/social-icons/medium.svg';
@@ -28,40 +29,42 @@ const Footer: React.FC<FooterProps> = ({ tabs }) => {
       <StyledHackBeanpotLogo
         src={HackBeanpotWhiteLogo}
         alt='White HackBeanpot Logo'
-        width='191px'
-        height='56px'
+        width='287px'
+        height='84px'
       />
-      <StyledTabContainer>
-        {tabs.map((tab: TabInfo) => (
-          <StyledTab>
-            {tab.name}
-          </StyledTab>
-        ))}
-      </StyledTabContainer>
-      <StyledFooterTextContainer>
-        <StyledFooterText>
-          HackBeanpot, Inc. is a registered 501(c)(3) organization.
-        </StyledFooterText>
-        <StyledFooterTextLink href="">
-          Code of Conduct
-        </StyledFooterTextLink>
-      </StyledFooterTextContainer>
-      <StyledButtonContainer>
-        <StyledEmailInput
-          placeholder='Enter your email'
-          value={email}
-          onChange={(e: React.FormEvent<HTMLInputElement>): void => setEmail(e.currentTarget.value)}
-        />
-        <StyledButtonRow>
-          <PrimaryButton btnText='Join our mailing list' btnLink='' />
-          <StyledSocialMediaButtons>
-            <a href="https://www.instagram.com/hackbeanpot/"><img width='41' height='41' src={Instagram} /></a>
-            <a href="https://www.facebook.com/hackbeanpot"><img width='41' height='41' src={Facebook} /></a>
-            <a href="https://hackbeanpot.medium.com/"><img width='41' height='41' src={Medium} /></a>
-            <a href="https://twitter.com/HackBeanpot"><img width='41' height='41' src={Twitter} /></a>
-          </StyledSocialMediaButtons>
-        </StyledButtonRow>
-      </StyledButtonContainer>
+      <StyledFooterContentContainer>
+        <StyledTabContainer>
+          {tabs.map((tab: TabInfo) => (
+            <StyledTab>
+              {tab.name}
+            </StyledTab>
+          ))}
+        </StyledTabContainer>
+        <StyledFooterTextContainer>
+          <StyledFooterText>
+            HackBeanpot, Inc. is a registered 501(c)(3) organization.
+          </StyledFooterText>
+          <StyledFooterTextLink href="">
+            Code of Conduct
+          </StyledFooterTextLink>
+        </StyledFooterTextContainer>
+        <StyledButtonContainer>
+          <StyledEmailInput
+            placeholder='Enter your email'
+            value={email}
+            onChange={(e: React.FormEvent<HTMLInputElement>): void => setEmail(e.currentTarget.value)}
+          />
+          <StyledButtonRow>
+            <PrimaryButton btnText='Join our mailing list' btnLink='' />
+            <StyledSocialMediaButtons>
+              <a href="https://www.instagram.com/hackbeanpot/" target="_blank"><img width='30' height='30' src={Instagram} /></a>
+              <a href="https://www.facebook.com/hackbeanpot" target="_blank"><img width='30' height='30' src={Facebook} /></a>
+              <a href="https://hackbeanpot.medium.com/" target="_blank"><img width='30' height='30' src={Medium} /></a>
+              <a href="https://twitter.com/HackBeanpot" target="_blank"><img width='30' height='30' src={Twitter} /></a>
+            </StyledSocialMediaButtons>
+          </StyledButtonRow>
+        </StyledButtonContainer>
+      </StyledFooterContentContainer>
     </StyledFooter>
   )
 }

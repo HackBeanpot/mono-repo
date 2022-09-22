@@ -12,40 +12,56 @@ const StyledFooter = styled.div`
   flex-direction: column;
   align-items: center;
   height: 23em;
-  @media ${min.tablet} {
+  @media ${min.desktop} {
     flex-direction: row;
     align-items: flex-start;
   }
 `
 
-const StyledLogoContainer = styled.div`
-  flex-basis: 20%;
+const StyledHackBeanpotLogo = styled.img`
+  @media ${max.tablet} {
+    align-self: auto
+  }
+  align-self: flex-start;
+  padding: 0.7em 0em 0em 0.7em;
 `
 
-const StyledHackBeanpotLogo = styled.img`
-  padding: 0.7em;
+const StyledFooterContentContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  @media ${max.tablet} {
+    flex-direction: column;
+    gap: 1em;
+  }
 `
 
 const StyledTabContainer = styled.div`
+  box-sizing: border-box;
   @media ${max.tablet} {
     display: none;
   }
   @media ${max.desktop} {
-    padding: 8em 0em 8em 0em;
+    padding: 2em 0em 4em 0em;
   }
+  gap: 0 3em;
   height: 100%;
-  box-sizing: border-box;
+  padding: 8em 0em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-self: center;
-  flex-basis: 40%;
-  padding: 8em 0 8em 10em;
+  
+
 `
 
 const StyledTab = styled(P)`{
   color: ${colors.WHITE};
-  font-family: ${fonts.nunitoSansSemibold};
+  font-family: ${fonts.nunitoSansRegular};
+  letter-spacing: 0.15em;
   padding: 0.15em;
 }
 `;
@@ -53,29 +69,37 @@ const StyledTab = styled(P)`{
 const StyledButtonContainer = styled.div`
   height: 100%;
   box-sizing: border-box;
-  flex-basis: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-start;
   @media ${max.tablet} {
     padding: 0;
     width: 20em;
   }
   @media ${max.desktop} {
     align-items: center;
-    gap: 12px;
+    gap: 1em;
     justify-content: center;
+    padding: 2em 0em 4em 0em;
   }
   padding: 3em 0;
 `
 
 const StyledEmailInput = styled.input`
-  color: ${colors.HEADER_FOOTER_BLUE};
   font-size: 1em;
+  font-family: ${fonts.nunitoSansSemibold};
+  color: ${colors.HEADER_FOOTER_BLUE};
   background-color: ${colors.WHITE};
-  border: 1px solid white;
   padding: 1em;
   border-radius: 2em;
+  border: none;
+  width: 25em;
+  ::placeholder {
+    font-family: ${fonts.nunitoSansSemibold};
+    color: ${colors.HEADER_FOOTER_BLUE};
+    opacity: 1;
+  }
   @media ${max.tablet} {
     padding: 0.5em 1em;
   }
@@ -91,7 +115,7 @@ const StyledEmailInput = styled.input`
 const StyledButtonRow = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 1em;
   align-items: center;
   @media ${max.desktop} {
     flex-direction: column;
@@ -101,7 +125,7 @@ const StyledButtonRow = styled.div`
 const StyledSocialMediaButtons = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 1em;
 `
 
 const StyledFooterTextContainer = styled.div`
@@ -110,7 +134,6 @@ const StyledFooterTextContainer = styled.div`
   }
   text-align: center;
   box-sizing: border-box;
-  flex-basis: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -133,8 +156,8 @@ const StyledFooterTextLink = styled.a`{
 
 export {
   StyledFooter,
-  StyledLogoContainer,
   StyledHackBeanpotLogo,
+  StyledFooterContentContainer,
   StyledTabContainer,
   StyledTab,
   StyledButtonContainer,
