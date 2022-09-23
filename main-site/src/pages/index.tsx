@@ -23,7 +23,7 @@ const IndexPage: React.FC = () => {
         ) : (
           <StyledDayBackground src={DayBackgroundMobile} />
         )}
-        <ExploreSection/>
+        <ExploreSection />
       </div>
       <Footer tabs={homeTabInfo} />
     </div>
