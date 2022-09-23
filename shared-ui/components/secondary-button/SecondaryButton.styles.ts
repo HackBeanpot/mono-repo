@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { max } from '../../lib/responsive';
 import { colors } from '../../style/colors';
+import { fonts } from '../../style/typography';
 
 const StyledSecondaryButton = styled.button`
   color: ${colors.BUTTON_GREEN};
@@ -10,12 +11,12 @@ const StyledSecondaryButton = styled.button`
   border-radius: 2em;
   cursor: pointer;
   border: none;
-  font-size: 1em;
-
-  @media ${max.tablet} { 
-    font-size: 0.8em; 
-    padding: 1em; 
-  };
+  font-size: 1.2em;
+  font-family: ${fonts.nunitoSansSemibold};
+  @media ${max.tablet} {
+    font-size: 1.3em;
+    padding: 1em;
+  } ;
 `;
 
 export { StyledSecondaryButton };
