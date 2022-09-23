@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import { colors } from '../../../shared-ui/style/colors';
 import { P } from '../../../shared-ui/style/typography';
-import { min } from '../../../shared-ui/lib/responsive';
+import { min, max } from '../../../shared-ui/lib/responsive';
  
 
 const StyledFillerSection = styled.div`
   height: 66em;
-  border: solid;
 `;
 
 const StyledTextContainer = styled.div`
@@ -47,7 +46,8 @@ const StyledExplorer = styled.img`
     width: 8em;
 
 
-     @media ${min.tablet} {
+  
+    @media ${min.tablet} {
       width: 13em;
       top: -1.5em;
       left: 7em;
@@ -75,6 +75,16 @@ const StyledVases = styled.img`
     
 `;
 
+const StyledButtonContainer = styled.div`
 
 
-export { StyledFillerSection, StyledTextContainer,StyledExploreSectionContainer, StyledParagraph, StyledExplorer, StyledVases };
+@media ${max.tablet} {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+`;
+
+
+
+export { StyledFillerSection, StyledTextContainer,StyledExploreSectionContainer, StyledParagraph, StyledExplorer, StyledVases, StyledButtonContainer };

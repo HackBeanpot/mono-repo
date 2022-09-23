@@ -1,6 +1,5 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
-import { H1, H2, H3, H4, P } from '../../../shared-ui/style/typography';
 import '../../../shared-ui/index.css';
 import useMatchMedia from 'react-use-match-media';
 import '../../../shared-ui/style/global.css';
@@ -26,7 +25,7 @@ const IndexPage: React.FC = () => {
         )}
         <ExploreSection/>
       </div>
-      {/*<Footer tabs={homeTabInfo} />*/}
+      <Footer tabs={homeTabInfo} />
     </div>
   );
 };

@@ -5,7 +5,8 @@ import {
   StyledParagraph,
   StyledExploreSectionContainer,
   StyledExplorer,
-  StyledVases
+  StyledVases,
+  StyledButtonContainer
 } from './ExploreSection.styles';
 import { H3, P } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
@@ -37,11 +38,13 @@ const ExploreSection: React.FC = () => {
             in-between, we’re excited for you to embark on this adventure with
             us!
           </StyledParagraph>
+          <StyledButtonContainer >
           <PrimaryButton 
             btnText="Join our mailing list"
             btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
             newTab
           />
+          </StyledButtonContainer>
         </StyledTextContainer>
         <StyledVases src={Vases}/>
       </StyledExploreSectionContainer>
