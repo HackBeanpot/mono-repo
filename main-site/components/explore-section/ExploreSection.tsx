@@ -24,9 +24,9 @@ const ExploreSection: React.FC = () => {
       <StyledFillerSection />
       <StyledExploreSectionContainer>
       <StyledExplorer src={Explorer}/>
-        <StyledTextContainer>
-          <H3 color={isDesktop ? colors.WHITE : colors.TEXT_BOX}>Explore the Desert with HackBeanpot!</H3>
-          <StyledParagraph>
+        <StyledTextContainer >
+          <H3 color={isDesktop ? colors.WHITE : colors.BLACK}>Explore the Desert with HackBeanpot!</H3>
+          <StyledParagraph color={isDesktop ? colors.WHITE : colors.TEXT_BROWN}>
             HackBeanpot 2022 is gonna be out of this world! Join our community
             of astronaut trainees* for a weekend of exploration, collaboration,
             and fun! (Oh, and did we mention free food and swag?) <br /> <br />
@@ -37,7 +37,7 @@ const ExploreSection: React.FC = () => {
             in-between, we’re excited for you to embark on this adventure with
             us!
           </StyledParagraph>
-          <PrimaryButton
+          <PrimaryButton 
             btnText="Join our mailing list"
             btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
             newTab

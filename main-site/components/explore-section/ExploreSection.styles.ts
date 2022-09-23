@@ -11,18 +11,18 @@ const StyledFillerSection = styled.div`
 
 const StyledTextContainer = styled.div`
     padding: 3em;
-    width: 38em;
     border-radius: 3em;
-    margin-left: 5em;
+    margin-top: 5em;
 
     @media ${min.tablet} {
       width: 34em;
       background-color: ${colors.TEXT_BOX};
+      margin-left: 5em;
+      margin-top: 0;
     }
 
     @media ${min.tabletLg} {
       width: 38em;
-
     }
 
 
@@ -42,21 +42,37 @@ const StyledParagraph = styled(P)`
 
 const StyledExplorer = styled.img`
     position: absolute;
-    left: 7em;
-    top: -1.5em;
+    left: 2em;
+    top: 3em;
+    width: 8em;
+
+
+     @media ${min.tablet} {
+      width: 13em;
+      top: -1.5em;
+      left: 7em;
+
+    }
+
 `;
 
 const StyledVases = styled.img`
     position: absolute;
-    right: 1em;
-    top: 37em;
+    right: 2em;
+    top: 15em;
+    width: 7em;
 
+    
+    @media ${min.tablet} {
+      top: 45em;
+      right: 6em;
+      width: 13em;
+    }
 
     @media ${min.tabletLg} {
       top: 25em;
-      right: 6em;
-
     }
+    
 `;
 
 
