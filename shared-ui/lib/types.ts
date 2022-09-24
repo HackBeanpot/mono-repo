@@ -1,6 +1,7 @@
 export interface ButtonProps {
-  btnText: string
-  btnLink: string
+  btnText: string;
+  btnLink: string;
+  newTab?: boolean;
 }
 
 export interface TabInfo {
