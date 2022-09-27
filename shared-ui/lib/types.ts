@@ -1,11 +1,11 @@
 export interface ButtonProps {
-  btnText: string
-  btnLink: string
+  btnText: string;
+  btnLink: string;
 }
 
 export interface TabInfo {
-  name: string
-  link: string
+  name: string;
+  link: string;
 }
 
 export interface HeaderProps {
@@ -17,5 +17,10 @@ export interface StyledHeaderProps {
 }
 
 export interface FooterProps {
-  tabs: TabInfo[]
+  tabs: TabInfo[];
+}
+
+export interface ArrowProps {
+  left?: boolean;
+  onClick: () => void;
 }
