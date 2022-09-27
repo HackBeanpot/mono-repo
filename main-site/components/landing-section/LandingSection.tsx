@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { H1 } from '../../../shared-ui/style/typography';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import {
-  H3White,
+  StyledHackathonText,
+  StyledThemeText,
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledToggle
@@ -35,8 +35,8 @@ const LandingSection: React.FC = () => {
         <StyledStar src={Moon} />
       )}
       <StyledLandingSectionContainer>
-        <H3White>HackBeanpot 2023</H3White>
-        <H1>Desert Exploration</H1>
+        <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
+        <StyledThemeText>Desert Exploration</StyledThemeText>
 
         <StyledLandingButtonContainer>
           <PrimaryButton
