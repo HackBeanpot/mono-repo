@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { H1 } from '../../../shared-ui/style/typography';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import {
   H3White,
   StyledLandingButtonContainer,
-  StyledLandingSectionContainer
+  StyledLandingSectionContainer,
+  StyledToggle
 } from './LandingSection.styles';
+import Toggle from '../../../shared-ui/images/toggle-day-dark.svg';
+import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
+import NightBackgroundDesktop from '../../../shared-ui/images/dark-background-desktop.svg';
+import Sun from '../../../shared-ui/images/sun.svg';
+import Moon from '../../../shared-ui/images/moon.svg';
+import { StyledBackgrounds, StyledStar } from '../../../shared-ui/styled-components/Background.styles';
 
 const LandingSection: React.FC = () => {
   // const isDesktop = useMatchMedia(min.tablet);
+  const [isDay, setIsDay] = useState<boolean>(true);
   return (
     <>
+      <StyledToggle
+        src={Toggle}
+        alt="toggle-day-night"
+        onClick={(): void => setIsDay(!isDay)}
+      />
+      {isDay ? (
+        <StyledBackgrounds src={DayBackgroundDesktop} />
+      ) : (
+        <StyledBackgrounds src={NightBackgroundDesktop} />
+      )}
+      {isDay ? (
+        <StyledStar src={Sun} />
+      ) : (
+        <StyledStar src={Moon} />
+      )}
       <StyledLandingSectionContainer>
         <H3White>HackBeanpot 2023</H3White>
         <H1>Desert Exploration</H1>

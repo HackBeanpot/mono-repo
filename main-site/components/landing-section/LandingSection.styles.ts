@@ -31,5 +31,12 @@ padding-top: 3em;
     align-items: center;
   }
 `;
+// TODO: IMPORT SUN/MOON ICONS DEPENDING ON WHICH
+const StyledToggle = styled.img`
+float: right;
+padding-top: 5.5em;
+padding-right: 0.5em;
 
-export { StyledLandingButtonContainer, StyledLandingSectionContainer, H3White };
+`;
+
+export { StyledLandingButtonContainer, StyledLandingSectionContainer, H3White, StyledToggle };
