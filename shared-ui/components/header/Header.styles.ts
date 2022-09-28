@@ -5,16 +5,18 @@ import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
 
 const StyledHeader = styled.div<StyledHeaderProps>`
-   {
-    height: ${(props): string => props.isOpen ? '40em' : '4.8em'};
-    background-color: ${colors.HEADER_FOOTER_BLUE};
-    width: 100%;
-    position: fixed;
-    @media ${min.tablet} {
-      height: 4.8em;
-    }
+{
+  height: ${(props): string => props.isOpen ? '40em' : '4.8em'};
+  background-color: ${(props): string => props.isDay ? colors.HEADER_FOOTER_BLUE : 
+    colors.NIGHT_HEADER_COLOR};
+  width: 100%;
+  position: fixed;
+  @media ${min.tablet} {
+    height: 4.8em;
   }
+}
 `;
+
 const StyledTab = styled(P)`
    {
     color: ${colors.WHITE};
@@ -73,5 +75,5 @@ export {
   StyledTabsContainer,
   StyledHackBeanpotLogo,
   StyledHamburgerIcon,
-  StyledXIcon
+  StyledXIcon, 
 };

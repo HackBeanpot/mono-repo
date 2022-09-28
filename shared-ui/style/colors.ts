@@ -17,7 +17,8 @@ const colors = {
   TEXT_BOX: '#8D743E',
   BUTTON_GREEN: '#BED9AA',
   BUTTON_DARK_GREEN: '#5A978C',
-  HEADER_FOOTER_BLUE: '#395885'
+  HEADER_FOOTER_BLUE: '#395885',
+  NIGHT_HEADER_COLOR: '#628BC6'
 };
 
 export { colors };

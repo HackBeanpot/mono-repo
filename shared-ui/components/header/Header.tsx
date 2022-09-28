@@ -15,11 +15,11 @@ import Hamburger from '../../images/hamburger-icon.svg';
 import XIcon from '../../images/X-icon.svg';
 import { StyledLink } from '../../style/typography';
 
-const Header: React.FC<HeaderProps> = ({ tabs }) => {
+const Header: React.FC<HeaderProps> = ({ tabs, isDay}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isDesktop = useMatchMedia(min.tablet);
   return (
-    <StyledHeader isOpen={isOpen}>
+    <StyledHeader isOpen={isOpen} isDay={isDay}>
       <StyledHackBeanpotLogo
         src={HackBeanpotWhiteLogo}
         alt="White HackBeanpot Logo"

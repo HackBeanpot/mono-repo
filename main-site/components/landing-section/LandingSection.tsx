@@ -13,12 +13,16 @@ import NightBackgroundDesktop from '../../../shared-ui/images/dark-background-de
 import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
 import { StyledBackgrounds, StyledStar } from '../../../shared-ui/styled-components/Background.styles';
+import Header from '../../../shared-ui/components/header/Header';
+import { homeTabInfo } from '../../../shared-ui/lib/data';
+import Footer from '../../../shared-ui/components/footer/Footer';
 
 const LandingSection: React.FC = () => {
   // const isDesktop = useMatchMedia(min.tablet);
   const [isDay, setIsDay] = useState<boolean>(true);
   return (
     <>
+    <Header tabs={homeTabInfo} isDay={isDay}/>
       <StyledToggle
         src={Toggle}
         alt="toggle-day-night"
@@ -46,6 +50,7 @@ const LandingSection: React.FC = () => {
           />
         </StyledLandingButtonContainer>
       </StyledLandingSectionContainer>
+      <Footer tabs={homeTabInfo} isDay={isDay}/>
     </>
   );
 };

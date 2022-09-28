@@ -12,7 +12,7 @@ const H3White = styled(H3)`{
 const StyledLandingSectionContainer = styled.div`
   padding-top: 21em;
   text-align: center;
-  padding-bottom: 27em;
+  margin-bottom: 30em;
   @media ${max.tablet} {
     padding-top: 20em;
     margin: 20em;

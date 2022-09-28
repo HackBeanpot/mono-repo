@@ -11,12 +11,19 @@ export interface TabInfo {
 
 export interface HeaderProps {
   tabs: TabInfo[];
+  isDay: boolean;
 }
 
 export interface StyledHeaderProps {
   isOpen: boolean;
+  isDay: boolean;
 }
 
 export interface FooterProps {
   tabs: TabInfo[]
+  isDay: boolean;
+}
+
+export interface StyledFooterProps {
+  isDay: boolean;
 }
