@@ -20,3 +20,8 @@ export interface StyledHeaderProps {
 export interface FooterProps {
   tabs: TabInfo[];
 }
+
+export interface ArrowProps {
+  left?: boolean;
+  onClick: () => void;
+}
