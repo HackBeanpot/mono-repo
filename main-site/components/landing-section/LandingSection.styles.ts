@@ -13,6 +13,7 @@ const StyledHackathonText = styled(H3)`
       justify-content: center;
       align-items: center;
       padding-bottom: 0em;
+      padding-top: 1em;
     }
   }
 `;
@@ -20,11 +21,13 @@ const StyledHackathonText = styled(H3)`
 const StyledThemeText = styled(H1)`
    {
     color: ${colors.WHITE};
+    padding-bottom: 0.5em;
     @media ${max.tablet} {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 0em;
+      padding-bottom: 1em;
+      padding-top: 0.2em;
     }
   }
 `;
@@ -47,26 +50,24 @@ const StyledLandingButtonContainer = styled(PrimaryButton)`
   justify-content: left;
   font-size: 0.5em;
   @media ${max.tablet} {
-    padding-top: 2em;
+    float: bottom;
+    padding-top: 4em;
     font-size: 0.5em;
     width: 5%;
   }
-  // @media ${max.mobile} {
-  //   padding-top: 2em;
-  //   width: 20%;
-  // }
 `;
 
 const StyledToggle = styled.img`
   float: right;
   padding-top: 5.5em;
   padding-right: 0.5em;
+  cursor: pointer;
   @media ${max.mobile} {
     padding-top: 19em;
     width: 15%;
   }
   @media ${max.tablet} {
-    padding-top: 7em;
+    padding-top: 5.5em;
     width: 20%;
   }
 `;

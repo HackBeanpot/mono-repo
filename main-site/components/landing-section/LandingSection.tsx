@@ -9,8 +9,12 @@ import {
 import Toggle from '../../../shared-ui/images/toggle-day-dark.svg';
 import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
 import NightBackgroundDesktop from '../../../shared-ui/images/dark-background-desktop.svg';
+import DayBackgroundMobile from '../../../shared-ui/images/mobile-light-background.svg';
+import NightBackgroundMobile from '../../../shared-ui/images/mobile-dark-background.svg';
 import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
+import { min } from '../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
 import {
   StyledBackgrounds,
   StyledStar
@@ -21,6 +25,7 @@ import Footer from '../../../shared-ui/components/footer/Footer';
 
 const LandingSection: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
+  const isDesktop = useMatchMedia(min.tablet);
   return (
     <>
       <Header tabs={homeTabInfo} isDay={isDay} />
@@ -29,9 +34,16 @@ const LandingSection: React.FC = () => {
         alt="toggle-day-night"
         onClick={(): void => setIsDay(!isDay)}
       />
-      {isDay ? (
+      {!isDesktop && isDay && (
+        <StyledBackgrounds src={DayBackgroundMobile} />
+      )}
+      {!isDesktop && !isDay && (
+        <StyledBackgrounds src={NightBackgroundMobile} />
+      )}
+       {isDesktop && isDay && (
         <StyledBackgrounds src={DayBackgroundDesktop} />
-      ) : (
+      )}
+      {isDesktop && !isDay && (
         <StyledBackgrounds src={NightBackgroundDesktop} />
       )}
       {isDay ? <StyledStar src={Sun} /> : <StyledStar src={Moon} />}
@@ -50,3 +62,4 @@ const LandingSection: React.FC = () => {
 };
 
 export default LandingSection;
+

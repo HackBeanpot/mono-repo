@@ -19,6 +19,10 @@ const StyledStar = styled.img`
   }
   @media ${max.tablet} {
     width: 12%;
+    padding-top: 2em;
+    position: absolute;
+    padding-left: 18.5em;
+    float: right;
   }
   @media ${max.tabletLg} {
     width: 13%;
