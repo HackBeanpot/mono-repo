@@ -10,6 +10,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
   background-color: ${(props): string => props.isDay ? colors.HEADER_FOOTER_BLUE : 
     colors.NIGHT_HEADER_COLOR};
   width: 100%;
+  z-index: 20;
   position: fixed;
   @media ${min.tablet} {
     height: 4.8em;

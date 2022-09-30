@@ -24,6 +24,11 @@ export interface FooterProps {
   isDay: boolean;
 }
 
+export interface ArrowProps {
+  left?: boolean;
+  onClick: () => void;
+}
+
 export interface StyledFooterProps {
   isDay: boolean;
 }

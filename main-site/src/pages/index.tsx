@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/index.css';
 import '../../../shared-ui/style/global.css';
@@ -7,7 +7,7 @@ import Header from '../../../shared-ui/components/header/Header';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import Background from '../../../shared-ui/components/background/Background';
-import { useState } from 'react';
+import ExploreSection from '../../components/explore-section/ExploreSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -16,6 +16,7 @@ const IndexPage: React.FC = () => {
       <Header tabs={homeTabInfo} isDay={isDay} />
       <Background isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
+      <ExploreSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );
