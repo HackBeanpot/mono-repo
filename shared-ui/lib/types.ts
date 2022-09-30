@@ -5,8 +5,8 @@ export interface ButtonProps {
 }
 
 export interface TabInfo {
-  name: string
-  link: string
+  name: string;
+  link: string;
 }
 
 export interface HeaderProps {
@@ -20,10 +20,20 @@ export interface StyledHeaderProps {
 }
 
 export interface FooterProps {
-  tabs: TabInfo[]
+  tabs: TabInfo[];
   isDay: boolean;
 }
 
 export interface StyledFooterProps {
   isDay: boolean;
 }
+
+export interface LandingSectionProps {
+  isDay: boolean;
+  setIsDay: (isDay: boolean) => void;
+}
+
+export interface BackgroundProps {
+  isDay: boolean;
+}
+
