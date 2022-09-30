@@ -3,12 +3,12 @@ import DayBackgroundDesktop from '../../../shared-ui/images/day-background-deskt
 import NightBackgroundDesktop from '../../../shared-ui/images/dark-background-desktop.svg';
 import DayBackgroundMobile from '../../../shared-ui/images/mobile-light-background.svg';
 import NightBackgroundMobile from '../../../shared-ui/images/mobile-dark-background.svg';
-import { min } from '../../../shared-ui/lib/responsive';
+import { min } from '../../lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import {
   StyledBackgrounds,
-} from '../../../shared-ui/styled-components/Background.styles';
-import { BackgroundProps } from '../../../shared-ui/lib/types';
+} from '../../styled-components/Background.styles';
+import { BackgroundProps } from '../../lib/types';
 
 const Background: React.FC<BackgroundProps> = ({isDay}) => {
   const isDesktop = useMatchMedia(min.tablet);

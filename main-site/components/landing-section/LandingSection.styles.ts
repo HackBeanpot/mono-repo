@@ -18,6 +18,24 @@ const StyledHackathonText = styled(H3)`
   }
 `;
 
+const StyledStar = styled.img`
+  position: absolute;
+  z-index: -1;
+  width: 12%;
+  top: 9em;
+  right: 13em;
+  @media ${max.tabletLg} {
+    right: 8em;
+  }
+  @media ${max.tablet} {
+    right: 5em;
+    width: 14%;
+  }
+  @media ${max.tabletSm} {
+    right: 2em;
+  }
+`;
+
 const StyledThemeText = styled(H1)`
    {
     color: ${colors.WHITE};
@@ -32,16 +50,26 @@ const StyledThemeText = styled(H1)`
   }
 `;
 
-const StyledLandingSectionContainer = styled.div`
+const StyledLandingTextContainer = styled.div`
   padding-top: 21em;
   text-align: center;
-  margin-bottom: 30em;
   @media ${max.tabletLg} {
     padding-top: 14em;
   }
   @media ${max.tablet} {
+    padding-top: 18em;
+  }
+  @media ${max.tabletSm} {
+    padding-top: 13em;
+  }
+  @media ${max.mobile} {
     padding-top: 10em;
   }
+`;
+
+const StyledLandingSectionContainer = styled.div`
+  margin-bottom: 30em;
+  position: relative;
 `;
 
 const StyledLandingButtonContainer = styled(PrimaryButton)`
@@ -52,7 +80,6 @@ const StyledLandingButtonContainer = styled(PrimaryButton)`
   @media ${max.tablet} {
     float: bottom;
     padding-top: 4em;
-    font-size: 0.5em;
     width: 5%;
   }
 `;
@@ -77,5 +104,7 @@ export {
   StyledThemeText,
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
-  StyledToggle
+  StyledToggle,
+  StyledLandingTextContainer,
+  StyledStar
 };
