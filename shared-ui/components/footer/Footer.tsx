@@ -21,11 +21,11 @@ import Medium from '../../images/social-icons/medium.svg';
 import Twitter from '../../images/social-icons/twitter.svg';
 import PrimaryButton from '../primary-button/PrimaryButton';
 
-const Footer: React.FC<FooterProps> = ({ tabs }) => {
+const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
   const [email, setEmail] = useState<string>('');
 
   return (
-    <StyledFooter>
+    <StyledFooter isDay={isDay}>
       <StyledHackBeanpotLogo
         src={HackBeanpotWhiteLogo}
         alt="White HackBeanpot Logo"

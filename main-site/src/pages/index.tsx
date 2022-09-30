@@ -1,31 +1,23 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/index.css';
-import useMatchMedia from 'react-use-match-media';
 import '../../../shared-ui/style/global.css';
-import { min } from '../../../shared-ui/lib/responsive';
-import { StyledDayBackground } from '../../../shared-ui/styled-components/Background.styles';
-import DayBackgroundDesktop from '../../../shared-ui/images/day-background-desktop.svg';
-import DayBackgroundMobile from '../../../shared-ui/images/day-background-mobile.svg';
-import Footer from '../../../shared-ui/components/footer/Footer';
+import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
+import Footer from '../../../shared-ui/components/footer/Footer';
+import Background from '../../../shared-ui/components/background/Background';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 
 const IndexPage: React.FC = () => {
-  const isDesktop = useMatchMedia(min.tablet);
+  const [isDay, setIsDay] = useState<boolean>(true);
   return (
     <div>
-      <div>
-        <Header tabs={homeTabInfo} />
-        {isDesktop ? (
-          <StyledDayBackground src={DayBackgroundDesktop} />
-        ) : (
-          <StyledDayBackground src={DayBackgroundMobile} />
-        )}
-        <ExploreSection />
-      </div>
-      <Footer tabs={homeTabInfo} />
+      <Header tabs={homeTabInfo} isDay={isDay} />
+      <Background isDay={isDay} />
+      <LandingSection isDay={isDay} setIsDay={setIsDay} />
+      <ExploreSection />
+      <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );
 };
