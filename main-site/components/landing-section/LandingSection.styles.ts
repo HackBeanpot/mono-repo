@@ -68,7 +68,6 @@ const StyledLandingTextContainer = styled.div`
 `;
 
 const StyledLandingSectionContainer = styled.div`
-  margin-bottom: 30em;
   position: relative;
 `;
 

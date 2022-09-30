@@ -18,7 +18,6 @@ import useMatchMedia from 'react-use-match-media';
 const ExploreSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
-    <>
       <StyledExploreSectionContainer>
         <StyledExplorer src={Explorer} />
         <StyledTextContainer>
@@ -46,7 +45,6 @@ const ExploreSection: React.FC = () => {
         </StyledTextContainer>
         <StyledVases src={Vases} />
       </StyledExploreSectionContainer>
-    </>
   );
 };
 

@@ -20,7 +20,24 @@ const StyledTextContainer = styled.div`
 
 const StyledExploreSectionContainer = styled.div`
   padding-top: 16em;
+  margin-top: 8em;
   position: relative;
+  @media ${min.mobile} {
+    margin-top: 14em;
+  }
+  @media ${min.tabletSm} {
+    margin-top: 24em;
+  }
+  @media ${min.tablet} {
+    margin-top: 4em;
+  }
+  @media ${min.tabletLg} {
+    margin-top: 10em;
+  }
+  @media ${min.desktop} {
+    margin-top: 23em;
+  }
+ 
 `;
 
 const StyledParagraph = styled(P)`
