@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { max } from '../lib/responsive';
 
 const StyledBackgrounds = styled.img`
   width: 100%;
@@ -7,9 +8,21 @@ const StyledBackgrounds = styled.img`
 `;
 
 const StyledStar = styled.img`
-  z-index: -1;
   float: right;
-  margin-top: 8em;
+  margin-top: 6em;
+  margin-right: 2em;
+  position: relative;
+  z-index: -1;
+  @media ${max.mobile} {
+    margin-top: 6em;
+    width: 10%;
+  }
+  @media ${max.tablet} {
+    width: 12%;
+  }
+  @media ${max.tabletLg} {
+    width: 13%;
+  }
 `;
 
 export { StyledBackgrounds, StyledStar };

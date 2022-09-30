@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import {
   StyledHackathonText,
   StyledThemeText,
@@ -12,17 +11,19 @@ import DayBackgroundDesktop from '../../../shared-ui/images/day-background-deskt
 import NightBackgroundDesktop from '../../../shared-ui/images/dark-background-desktop.svg';
 import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
-import { StyledBackgrounds, StyledStar } from '../../../shared-ui/styled-components/Background.styles';
+import {
+  StyledBackgrounds,
+  StyledStar
+} from '../../../shared-ui/styled-components/Background.styles';
 import Header from '../../../shared-ui/components/header/Header';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 
 const LandingSection: React.FC = () => {
-  // const isDesktop = useMatchMedia(min.tablet);
   const [isDay, setIsDay] = useState<boolean>(true);
   return (
     <>
-    <Header tabs={homeTabInfo} isDay={isDay}/>
+      <Header tabs={homeTabInfo} isDay={isDay} />
       <StyledToggle
         src={Toggle}
         alt="toggle-day-night"
@@ -33,24 +34,17 @@ const LandingSection: React.FC = () => {
       ) : (
         <StyledBackgrounds src={NightBackgroundDesktop} />
       )}
-      {isDay ? (
-        <StyledStar src={Sun} />
-      ) : (
-        <StyledStar src={Moon} />
-      )}
+      {isDay ? <StyledStar src={Sun} /> : <StyledStar src={Moon} />}
       <StyledLandingSectionContainer>
         <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
         <StyledThemeText>Desert Exploration</StyledThemeText>
-
-        <StyledLandingButtonContainer>
-          <PrimaryButton
-            btnText="Join our mailing list"
-            btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
-            newTab
-          />
-        </StyledLandingButtonContainer>
+        <StyledLandingButtonContainer
+          btnText="Join our mailing list"
+          btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
+          newTab
+        />
       </StyledLandingSectionContainer>
-      <Footer tabs={homeTabInfo} isDay={isDay}/>
+      <Footer tabs={homeTabInfo} isDay={isDay} />
     </>
   );
 };
