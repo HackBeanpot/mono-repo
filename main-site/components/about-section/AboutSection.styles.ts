@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '../../../shared-ui/style/colors';
 import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { min } from '../../../shared-ui/lib/responsive';
 

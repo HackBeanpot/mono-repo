@@ -5,27 +5,19 @@ export function getLeftOrRight(
   sectionData: SectionData[],
   currItem: SectionData
 ): SectionData {
+  const dataLength = sectionData.length;
+  const itemIndex = sectionData.indexOf(currItem);
   if (direction === 'left') {
-    if (currItem === sectionData[0]) {
-      return sectionData[2];
+    if (itemIndex === 0) {
+      return sectionData[dataLength - 1];
     }
-    if (currItem === sectionData[1]) {
-      return sectionData[0];
-    }
-    if (currItem === sectionData[2]) {
-      return sectionData[1];
-    }
+    return sectionData[itemIndex - 1];
   }
   if (direction === 'right') {
-    if (currItem === sectionData[0]) {
-      return sectionData[1];
-    }
-    if (currItem === sectionData[1]) {
-      return sectionData[2];
-    }
-    if (currItem === sectionData[2]) {
+    if (itemIndex === dataLength - 1) {
       return sectionData[0];
     }
+    return sectionData[itemIndex + 1];
   }
   return currItem;
 }

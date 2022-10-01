@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
-import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import {
   StyledAboutSectionContainer,
