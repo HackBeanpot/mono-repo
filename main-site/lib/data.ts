@@ -7,13 +7,13 @@ export const aboutSectionData: AboutSectionData[] = [
     id: nanoid(),
     title: 'Community',
     description:
-      'Connect with fellow students and our partners in the Boston tech community. Build connections that will last for lightyears!'
+      'Connect with fellow students and our partners in the tech community. Make connections that will last a life time!'
   },
   {
     id: nanoid(),
     title: 'Exploration',
     description:
-      'Discover new ideas and technologies (and maybe even galaxies?!) with the help of experienced mentors.'
+      'Discover new ideas and technologies with the help of our experienced mentors, or learn new skills at our beginner-friendly workshops!'
   },
   {
     id: nanoid(),

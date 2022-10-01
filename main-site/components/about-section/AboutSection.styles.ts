@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { colors } from '../../../shared-ui/style/colors';
-import { H2, P } from '../../../shared-ui/style/typography';
+import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { min } from '../../../shared-ui/lib/responsive';
 
 const StyledAboutSectionContainer = styled.div`
   margin-top: 8em;
-  margin-bottom: 20em;
+  padding-bottom: 10em;
+  margin-bottom: 10em;
   position: relative;
   overflow: hidden;
 `;
@@ -105,6 +106,28 @@ const StyledArrowDescriptionContainer = styled.div`
   display: flex;
 `;
 
+const StyledRedRocks = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 3em;
+  width: 10em;
+  @media ${min.tabletSm} {
+    width: 15em;
+  }
+  @media ${min.tabletLg} {
+    right: 16em;
+    width: 17em;
+  }
+  @media ${min.desktop} {
+    right: 20em;
+    width: 17em;
+  }
+`;
+
+const StyledItemTitle = styled(H3)`
+  font-size: clamp(1.2em, 5vw, 1.7em);
+`;
+
 export {
   StyledAboutSectionContainer,
   StyledItemsContainer,
@@ -116,5 +139,7 @@ export {
   StyledCenterImage,
   StyledLeftImage,
   StyledRightImage,
-  StyledArrowDescriptionContainer
+  StyledArrowDescriptionContainer,
+  StyledRedRocks,
+  StyledItemTitle
 };
