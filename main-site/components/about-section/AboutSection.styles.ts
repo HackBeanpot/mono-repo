@@ -5,7 +5,6 @@ import { min } from '../../../shared-ui/lib/responsive';
 const StyledAboutSectionContainer = styled.div`
   margin-top: 2em;
   padding-bottom: 10em;
-  margin-bottom: 10em;
   position: relative;
   overflow: hidden;
   @media ${min.tablet} {
