@@ -20,7 +20,7 @@ import {
 import { aboutSectionData } from '../../lib/data';
 import Community from '../../../shared-ui/images/community.png';
 import Exploration from '../../../shared-ui/images/Exploration.png';
-import Growth from '../../../shared-ui/images/Growth.png';
+import Growth from '../../../shared-ui/images/growth.png';
 import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import RedRocks from '../../../shared-ui/images/red-rocks.svg';

@@ -18,9 +18,18 @@ const StyledItemsContainer = styled.div`
 
 const StyledItemTextContainer = styled.div`
   text-align: center;
-  padding-top: 25em;
+  padding-top: 20em;
+  @media ${min.tabletSm} {
+    padding-top: 25em;
+  }
   @media ${min.tablet} {
-    padding-top: 30em;
+    padding-top: 17em;
+  }
+  @media ${min.tabletLg} {
+    padding-top: 22em;
+  }
+  @media ${min.desktop} {
+    padding-top: 25em;
   }
 `;
 
@@ -30,7 +39,15 @@ const StyledTitle = styled(H2)`
 
 const StyledItemImage = styled.img`
   position: absolute;
-  width: 20em;
+  @media ${min.tablet} {
+    width: 14em;
+  }
+  @media ${min.tabletLg} {
+    width: 19em;
+  }
+  @media ${min.desktop} {
+    width: 21em;
+  }
 `;
 
 const StyledItemDescription = styled(P)`
@@ -42,54 +59,47 @@ const StyledItemDescription = styled(P)`
 
 const StyledItemContainer = styled.div`
   width: 17em;
+  display: flex;
+  justify-content: center;
+  margin: 0 1em;
   @media ${min.mobile} {
-    width: 20em;
-  }
-  @media ${min.tabletSm} {
-    width: 23em;
+    width: 24em;
   }
   @media ${min.tablet} {
-    width: 23em;
+    width: 14em;
+  }
+  @media ${min.tabletLg} {
+    width: 19em;
   }
   @media ${min.desktop} {
-    width: 25em;
+    width: 23em;
   }
 `;
 
-
-const StyledCenterImage = styled.img`
+const StyledMobileImage = styled.img`
   position: absolute;
+  width: 16em;
+  @media ${min.tabletSm} {
+    width: 23em;
+  }
+`;
+
+const StyledCenterImage = styled(StyledMobileImage)`
   align-self: center;
-  width: 17em;
-  @media ${min.mobile} {
-    width: 20em;
-  }
+  top: 9em;
+`;
+
+const StyledLeftImage = styled(StyledMobileImage)`
+  left: -14em;
   @media ${min.tabletSm} {
-    width: 23em;
+    left: -20em;
   }
 `;
 
-const StyledLeftImage = styled.img`
-  position: absolute;
-  left: -18em;
-  width: 17em;
-  @media ${min.mobile} {
-    width: 20em;
-  }
+const StyledRightImage = styled(StyledMobileImage)`
+  right: -14em;
   @media ${min.tabletSm} {
-    width: 23em;
-  }
-`;
-
-const StyledRightImage = styled.img`
-  position: absolute;
-  right: -20em;
-  width: 17em;
-  @media ${min.mobile} {
-    width: 20em;
-  }
-  @media ${min.tabletSm} {
-    width: 23em;
+    right: -20em;
   }
 `;
 
@@ -116,7 +126,7 @@ const StyledRedRocks = styled.img`
 `;
 
 const StyledItemTitle = styled(H3)`
-  font-size: clamp(1.2em, 5vw, 1.7em);
+  font-size: 1.7em;
 `;
 
 export {
