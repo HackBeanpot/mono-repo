@@ -1,16 +1,12 @@
-
-export type SectionData = AboutSectionData
+export type SectionData = AboutSectionData;
 
 export interface AboutSectionData {
-    id: string;
-    title: string;
-    description: string;
-  }
+  id: string;
+  title: string;
+  description: string;
+}
 
 export interface LandingSectionProps {
-    isDay: boolean;
-    setIsDay: (isDay: boolean) => void;
-  }
-  
-  
-  
+  isDay: boolean;
+  setIsDay: (isDay: boolean) => void;
+}

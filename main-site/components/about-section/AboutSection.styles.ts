@@ -56,6 +56,7 @@ const StyledItemContainer = styled.div`
   }
 `;
 
+
 const StyledCenterImage = styled.img`
   position: absolute;
   align-self: center;
@@ -65,9 +66,6 @@ const StyledCenterImage = styled.img`
   }
   @media ${min.tabletSm} {
     width: 23em;
-  }
-  @media ${min.tablet} {
-    width: 25em;
   }
 `;
 
@@ -81,9 +79,6 @@ const StyledLeftImage = styled.img`
   @media ${min.tabletSm} {
     width: 23em;
   }
-  @media ${min.tablet} {
-    width: 25em;
-  }
 `;
 
 const StyledRightImage = styled.img`
@@ -95,9 +90,6 @@ const StyledRightImage = styled.img`
   }
   @media ${min.tabletSm} {
     width: 23em;
-  }
-  @media ${min.tablet} {
-    width: 25em;
   }
 `;
 
