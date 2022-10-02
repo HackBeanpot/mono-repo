@@ -3,11 +3,14 @@ import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { min } from '../../../shared-ui/lib/responsive';
 
 const StyledAboutSectionContainer = styled.div`
-  margin-top: 8em;
+  margin-top: 2em;
   padding-bottom: 10em;
   margin-bottom: 10em;
   position: relative;
   overflow: hidden;
+  @media ${min.tablet} {
+    margin-top: 6em;
+  }
 `;
 
 const StyledItemsContainer = styled.div`
@@ -109,12 +112,9 @@ const StyledArrowDescriptionContainer = styled.div`
 
 const StyledRedRocks = styled.img`
   position: absolute;
-  bottom: 0;
+  bottom: 2em;
   right: 3em;
   width: 10em;
-  @media ${min.tabletSm} {
-    width: 15em;
-  }
   @media ${min.tabletLg} {
     right: 16em;
     width: 17em;
