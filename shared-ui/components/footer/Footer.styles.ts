@@ -3,7 +3,6 @@ import { min, max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
 
-
 const StyledFooter = styled.div`
   position: absolute;
   width: 100%;
@@ -16,7 +15,7 @@ const StyledFooter = styled.div`
     flex-direction: row;
     align-items: flex-start;
   }
-`
+`;
 
 const StyledHackBeanpotLogo = styled.img`
   @media ${max.tablet} {
@@ -25,11 +24,11 @@ const StyledHackBeanpotLogo = styled.img`
   }
   align-self: flex-start;
   padding: 0.7em 0em 0em 0.7em;
-`
+`;
 
 const StyledFooterContentContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: left;
   align-items: center;
   justify-content: space-around;
   width: 100%;
@@ -38,7 +37,7 @@ const StyledFooterContentContainer = styled.div`
     flex-direction: column;
     gap: 1em;
   }
-`
+`;
 
 const StyledTabContainer = styled.div`
   box-sizing: border-box;
@@ -55,16 +54,15 @@ const StyledTabContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-self: center;
-  
+`;
 
-`
-
-const StyledTab = styled(P)`{
-  color: ${colors.WHITE};
-  font-family: ${fonts.nunitoSansRegular};
-  letter-spacing: 0.15em;
-  padding: 0.15em;
-}
+const StyledTab = styled(P)`
+   {
+    color: ${colors.WHITE};
+    font-family: ${fonts.nunitoSansRegular};
+    letter-spacing: 0.15em;
+    padding: 0.15em;
+  }
 `;
 
 const StyledButtonContainer = styled.div`
@@ -85,7 +83,7 @@ const StyledButtonContainer = styled.div`
     padding: 2em 0em 4em 0em;
   }
   padding: 3em 0;
-`
+`;
 
 const StyledEmailInput = styled.input`
   font-size: 1em;
@@ -111,7 +109,7 @@ const StyledEmailInput = styled.input`
       text-align: center;
     }
   }
-`
+`;
 
 const StyledButtonRow = styled.div`
   display: flex;
@@ -121,39 +119,55 @@ const StyledButtonRow = styled.div`
   @media ${max.desktop} {
     flex-direction: column;
   }
-`
+`;
 
 const StyledSocialMediaButtons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1em;
-`
+`;
 
 const StyledFooterTextContainer = styled.div`
   @media ${min.tablet} {
-    display: none;
+    display: flex;
   }
   text-align: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-`
+  padding-top: 7em;
+`;
 
 const StyledFooterText = styled.div`
   font-size: 1em;
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansRegular};
   padding: 0 3em;
-`
+`;
 
-const StyledFooterTextLink = styled.a`{
-  font-size: 1em;
-  color: ${colors.WHITE};
-  font-family: ${fonts.nunitoSansRegular};
-  padding: 0 3em;
-  text-decoration: underline;
-}`
+const StyledFooterTextLink = styled.a`
+   {
+    font-size: 1em;
+    color: ${colors.WHITE};
+    font-family: ${fonts.nunitoSansRegular};
+    padding: 0 3em;
+    text-decoration: underline;
+  }
+`;
+
+const StyledFooterCodeOfConduct = styled.div`
+  @media ${min.tablet} {
+    display: flex;
+  }
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-top: 7em;
+  padding-left: 0.7em;
+`;
 
 export {
   StyledFooter,
@@ -167,5 +181,6 @@ export {
   StyledSocialMediaButtons,
   StyledFooterTextContainer,
   StyledFooterText,
-  StyledFooterTextLink
-}
+  StyledFooterTextLink,
+  StyledFooterCodeOfConduct
+};
