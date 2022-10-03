@@ -8,6 +8,7 @@ import { homeTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import Background from '../../../shared-ui/components/background/Background';
 import ExploreSection from '../../components/explore-section/ExploreSection';
+import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -17,6 +18,7 @@ const IndexPage: React.FC = () => {
       <Background isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
+      <AdventureAheadSection/>
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );
