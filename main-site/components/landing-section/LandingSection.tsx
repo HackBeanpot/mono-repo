@@ -5,7 +5,7 @@ import {
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledToggle,
-  StyledLandingTextContainer, 
+  StyledLandingTextContainer,
   StyledStar
 } from './LandingSection.styles';
 import Toggle from '../../../shared-ui/images/toggle-day-dark.svg';

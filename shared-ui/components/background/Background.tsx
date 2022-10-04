@@ -5,12 +5,10 @@ import DayBackgroundMobile from '../../../shared-ui/images/mobile-light-backgrou
 import NightBackgroundMobile from '../../../shared-ui/images/mobile-dark-background.svg';
 import { min } from '../../lib/responsive';
 import useMatchMedia from 'react-use-match-media';
-import {
-  StyledBackgrounds,
-} from '../../styled-components/Background.styles';
+import { StyledBackgrounds } from '../../styled-components/Background.styles';
 import { BackgroundProps } from '../../lib/types';
 
-const Background: React.FC<BackgroundProps> = ({isDay}) => {
+const Background: React.FC<BackgroundProps> = ({ isDay }) => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <>
@@ -26,4 +24,4 @@ const Background: React.FC<BackgroundProps> = ({isDay}) => {
   );
 };
 
-export default Background
+export default Background;
