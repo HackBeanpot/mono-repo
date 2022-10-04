@@ -12,10 +12,10 @@ const StyledSecondaryButton = styled.button`
   border: none;
   font-size: 1em;
 
-  @media ${max.tablet} { 
-    font-size: 0.8em; 
-    padding: 1em; 
-  };
+  @media ${max.tablet} {
+    font-size: 0.8em;
+    padding: 1em;
+  } ;
 `;
 
 export { StyledSecondaryButton };

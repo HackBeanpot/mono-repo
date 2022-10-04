@@ -6,7 +6,7 @@ import { P, fonts } from '../../style/typography';
 
 const StyledHeader = styled.div<StyledHeaderProps>`
    {
-    height: ${(props): string => props.isOpen ? '40em' : '4.8em'};
+    height: ${(props): string => (props.isOpen ? '40em' : '4.8em')};
     background-color: ${colors.HEADER_FOOTER_BLUE};
     width: 100%;
     position: fixed;

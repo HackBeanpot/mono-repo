@@ -12,7 +12,8 @@ import {
   StyledTab,
   StyledTabContainer,
   StyledFooterContentContainer,
-  StyledFooterCodeOfConduct
+  StyledFooterCodeOfConduct,
+  StyledHBPContent
 } from './Footer.styles';
 import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.svg';
 import Instagram from '../../images/social-icons/instagram.svg';
@@ -25,21 +26,22 @@ const Footer: React.FC<FooterProps> = ({ tabs }) => {
 
   return (
     <StyledFooter>
-      <StyledHackBeanpotLogo
-        src={HackBeanpotWhiteLogo}
-        alt="White HackBeanpot Logo"
-        width="287em"
-        height="84em"
-      />
-
-      <StyledFooterCodeOfConduct>
-        <StyledFooterText>
-          HackBeanpot, Inc. is a registered 501(c)(3) organization.
-        </StyledFooterText>
-        <StyledFooterTextLink href="/code-of-conduct/">
-          Code of Conduct
-        </StyledFooterTextLink>
-      </StyledFooterCodeOfConduct>
+      <StyledHBPContent>
+        <StyledHackBeanpotLogo
+          src={HackBeanpotWhiteLogo}
+          alt="White HackBeanpot Logo"
+          width="287em"
+          height="84em"
+        />
+        <StyledFooterCodeOfConduct>
+          <StyledFooterText>
+            HackBeanpot, Inc. is a registered 501(c)(3) organization.
+          </StyledFooterText>
+          <StyledFooterTextLink href="/code-of-conduct/">
+            Code of Conduct
+          </StyledFooterTextLink>
+        </StyledFooterCodeOfConduct>
+      </StyledHBPContent>
 
       <StyledFooterContentContainer>
         <StyledTabContainer>

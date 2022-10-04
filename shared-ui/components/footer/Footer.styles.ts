@@ -17,6 +17,24 @@ const StyledFooter = styled.div`
   }
 `;
 
+const StyledHBPContent = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  @media ${max.tablet} {
+    padding: 0;
+    width: 20em;
+  }
+  @media ${max.desktop} {
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+    padding: 2em 0em 4em 0em;
+  }
+`;
+
 const StyledHackBeanpotLogo = styled.img`
   @media ${max.tablet} {
     align-self: auto;
@@ -164,9 +182,8 @@ const StyledFooterCodeOfConduct = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  padding-top: 7em;
-  padding-left: 0.7em;
+  padding-left: 0em;
+  padding-top: 2em;
 `;
 
 export {
@@ -182,5 +199,6 @@ export {
   StyledFooterTextContainer,
   StyledFooterText,
   StyledFooterTextLink,
-  StyledFooterCodeOfConduct
+  StyledFooterCodeOfConduct,
+  StyledHBPContent
 };
