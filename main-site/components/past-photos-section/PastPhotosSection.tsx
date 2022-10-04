@@ -4,9 +4,7 @@ import useMatchMedia from 'react-use-match-media';
 import PhotosDesktop from "../../../shared-ui/images/old-photos-desktop.svg"
 import PhotosMobile from "../../../shared-ui/images/old-photos-mobile.svg"
 import {
-  StyledPastPhotosSectionContainer,
-  StyledDesktopPhotos,
-  StyledMobilePhotos,
+  StyledPhotos,
   StyledPastPhotosButton
 } from './PastPhotosSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
@@ -14,19 +12,19 @@ import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryB
 const PastPhotosSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
-    <StyledPastPhotosSectionContainer>
+    <>
         {isDesktop ? 
-          <StyledDesktopPhotos src={PhotosDesktop}/> 
-          : <StyledMobilePhotos src={PhotosMobile}/> 
+          <StyledPhotos src={PhotosDesktop}/> 
+          : <StyledPhotos src={PhotosMobile}/> 
         }
         <StyledPastPhotosButton>
           <PrimaryButton 
               btnText="Past Photos"
-              btnLink="www.hackbeanpot.com"
+              btnLink="https://drive.google.com/drive/folders/1qQMVmQLCNCEf7UwDp5QLqDD20d_QRHIp"
               newTab
           />
         </StyledPastPhotosButton>
-    </StyledPastPhotosSectionContainer>
+    </>
   );
 };
 

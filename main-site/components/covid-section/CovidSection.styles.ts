@@ -29,7 +29,7 @@ const StyledDesertVan = styled.img`
 const StyledCovidInformationAndButton = styled.div`
   display: inline-block;
   justify-content: center;
-  padding-left: 7em;
+  padding-left: 20em;
   padding-top: 4em;
 `;
 

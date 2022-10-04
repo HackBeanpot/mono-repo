@@ -1,24 +1,18 @@
 import styled from 'styled-components';
 
-const StyledPastPhotosSectionContainer = styled.div`
-    // margin-top: 0.5em;
-`;
-
-const StyledDesktopPhotos = styled.img`
-    // margin-top: 0.5em;
-`;
-
-const StyledMobilePhotos = styled.img`
-    // margin-top: 0.5em;
+const StyledPhotos = styled.img`
+  display: inline-block;
+  position: absolute;
+  z-index: -0.5;
 `;
 
 const StyledPastPhotosButton = styled.div`
-    // margin-top: 0.5em;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
 `;
 
 export {
-  StyledPastPhotosSectionContainer,
-  StyledDesktopPhotos,
-  StyledMobilePhotos,
+  StyledPhotos,
   StyledPastPhotosButton
 };
