@@ -41,7 +41,3 @@ export interface LandingSectionProps {
 export interface BackgroundProps {
   isDay: boolean;
 }
-
-export interface CovidSectionProps {
-  isDay: boolean;
-}

@@ -1,36 +1,25 @@
 import styled from 'styled-components';
 import { P } from '../../../shared-ui/style/typography';
-import { min } from '../../../shared-ui/lib/responsive';
 
 const StyledCovidSectionContainer = styled.div`
-  width: 17em;
+  width: 90%;
   display: flex;
-  justify-content: center;
   margin: 0 1em;
-  @media ${min.mobile} {
-    width: 24em;
-  }
-  @media ${min.tablet} {
-    width: 14em;
-  }
-  @media ${min.tabletLg} {
-    width: 19em;
-  }
-  @media ${min.desktop} {
-    width: 23em;
-  }
 `;
 
 const StyledDesertVan = styled.img`
   display: inline-block;
-  vertical-align: top;
+  padding-left: 0em;
+  padding-top: 4em;
+  padding-right: 3em;
 `;
 
 const StyledCovidInformationAndButton = styled.div`
   display: inline-block;
   justify-content: center;
-  padding-left: 20em;
+  align-items: center;
   padding-top: 4em;
+  padding-bottom: 4em;
 `;
 
 const StyledCovidPolicyButtonContainer = styled.div`

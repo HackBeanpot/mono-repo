@@ -1,18 +1,15 @@
 import styled from 'styled-components';
 
 const StyledPhotos = styled.img`
-  display: inline-block;
+  display: grid;
   position: absolute;
-  z-index: -0.5;
+  z-index: 0;
 `;
 
 const StyledPastPhotosButton = styled.div`
   align-items: center;
   justify-content: center;
-  display: inline-block;
+  z-index: 1;
 `;
 
-export {
-  StyledPhotos,
-  StyledPastPhotosButton
-};
+export { StyledPhotos, StyledPastPhotosButton };
