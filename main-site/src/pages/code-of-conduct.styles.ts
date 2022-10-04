@@ -16,7 +16,7 @@ const StyledParagraph = styled(P)`
   line-height: 1.8em;
 
   @media ${max.tablet} {
-    padding-left: 1.5em;
+    padding-left: 2em;
   }
 `;
 
@@ -49,7 +49,7 @@ const StyledParagraphBottom = styled(P)`
   padding-bottom: 5em;
 
   @media ${max.tablet} {
-    padding-left: 1.5em;
+    padding-left: 1em;
   }
 `;
 

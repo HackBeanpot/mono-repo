@@ -34,7 +34,7 @@ const CodeOfConduct: React.FC = () => {
         Harassment is not tolerated in any part of the hackathon, including
         within our virtual spaces, as a part of hackathon projects created at
         the event, or on social media. Hackathon attendees, sponsors, judges,
-        mentors, organizers, and all other individuals at HackBeanpot 2022 are
+        mentors, organizers, and all other individuals at HackBeanpot 2023 are
         subject to this Code of Conduct.
       </StyledParagraph>
       <StyledParagraph>
