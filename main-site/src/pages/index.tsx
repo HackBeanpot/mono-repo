@@ -8,6 +8,8 @@ import { homeTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import Background from '../../../shared-ui/components/background/Background';
 import ExploreSection from '../../components/explore-section/ExploreSection';
+import CovidSection from '../../components/covid-section/CovidSection';
+import PastPhotosSection from '../../components/past-photos-section/PastPhotosSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -17,6 +19,8 @@ const IndexPage: React.FC = () => {
       <Background isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
+      <PastPhotosSection />
+      <CovidSection isDay={isDay} />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );
