@@ -91,7 +91,7 @@ const AboutSection: React.FC = () => {
       {isDesktop && (
         <StyledItemsContainer>
           {aboutSectionData.map((curr) => (
-            <StyledItemContainer key={curr.id}>
+            <StyledItemContainer key={curr.title}>
               <StyledItemImage src={getImage(curr.title)} />
               <StyledItemTextContainer>
                 <StyledItemTitle color={colors.TEXT_BROWN}>

@@ -1,7 +1,6 @@
 export type SectionData = AboutSectionData;
 
 export interface AboutSectionData {
-  id: string;
   title: string;
   description: string;
 }
