@@ -7,7 +7,7 @@ export const aboutSectionData: AboutSectionData[] = [
     id: nanoid(),
     title: 'Community',
     description:
-      'Connect with fellow students and our partners in the tech community. Make connections that will last a life time!'
+      'Connect with fellow students and our partners in the tech community. Make connections that will last a lifetime!'
   },
   {
     id: nanoid(),
