@@ -15,6 +15,11 @@ const StyledFooter = styled.div`
     flex-direction: row;
     align-items: flex-start;
   }
+
+  @media ${max.tabletLg} {
+    align-items: left;
+    height: 35em;
+  }
 `;
 
 const StyledHBPContent = styled.div`
@@ -184,6 +189,12 @@ const StyledFooterCodeOfConduct = styled.div`
   flex-direction: column;
   padding-left: 0em;
   padding-top: 2em;
+  text-align: left;
+
+  @media ${max.tabletLg} {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export {
