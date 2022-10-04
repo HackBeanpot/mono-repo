@@ -3,11 +3,8 @@ import { P } from "../../../shared-ui/style/typography";
 import { min, max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 
-
-
 const StyledAdeventureAheadSectionContainer = styled.div`
     padding-top: 16em;
-    display: inline-block;
 
     @media ${min.mobile} {
         margin-top: 14em;
@@ -27,19 +24,24 @@ const StyledAdeventureAheadSectionContainer = styled.div`
 `;
 
 const StyledParagraph = styled(P)`
-    padding: 1.5em 0;
-    color: ${colors.TEXT_BROWN}`;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    color: ${colors.TEXT_BROWN}`
+;
 
 const StyledSignpost = styled.img`
-    left:8em,
-    bottom: 4em,  
-
+padding-left: 8em;
+    display: inline-block;
+    vertical-align: top;
 `;
 
 const StyledTextContainer = styled.div`
     display: inline-block;
     justify-content: center;
     color: ${colors.TEXT_BROWN}
+    display: inline-block;
+    padding-left: 7em;
+    padding-top: 4em;
 `;
 const StyledButtonContainer = styled.div`
       margin-top: 0.5em;
