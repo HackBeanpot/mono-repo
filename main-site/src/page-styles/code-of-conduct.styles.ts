@@ -43,7 +43,6 @@ const StyledDirections = styled(P)`
 const StyledParagraphBottom = styled(P)`
   color: ${colors.TEXT_BOX};
   line-height: 1.9em;
-  padding-bottom: 5em;
 `;
 
 export {

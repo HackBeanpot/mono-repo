@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 import { min, max } from '../../../shared-ui/lib/responsive';
+import { StyledFooterProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.div<StyledFooterProps>`
   position: absolute;
   width: 100%;
-  background-color: ${colors.HEADER_FOOTER_BLUE};
+  background-color: ${(props): string =>
+    props.isDay ? colors.HEADER_FOOTER_BLUE : colors.NIGHT_HEADER_COLOR};
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 23em;
+  height: 28em;
   @media ${min.desktop} {
+    height: 23em;
     flex-direction: row;
     align-items: flex-start;
   }
@@ -109,7 +112,7 @@ const StyledButtonContainer = styled.div`
 `;
 
 const StyledEmailInput = styled.input`
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: ${fonts.nunitoSansSemibold};
   color: ${colors.HEADER_FOOTER_BLUE};
   background-color: ${colors.WHITE};
@@ -123,7 +126,7 @@ const StyledEmailInput = styled.input`
     opacity: 1;
   }
   @media ${max.tablet} {
-    padding: 0.5em 1em;
+    padding: 1em;
   }
   @media ${max.desktop} {
     width: 15em;
@@ -148,18 +151,6 @@ const StyledSocialMediaButtons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1em;
-`;
-
-const StyledFooterTextContainer = styled.div`
-  @media ${min.tablet} {
-    display: flex;
-  }
-  text-align: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-top: 7em;
 `;
 
 const StyledFooterText = styled.div`
@@ -207,7 +198,6 @@ export {
   StyledEmailInput,
   StyledButtonRow,
   StyledSocialMediaButtons,
-  StyledFooterTextContainer,
   StyledFooterText,
   StyledFooterTextLink,
   StyledFooterCodeOfConduct,

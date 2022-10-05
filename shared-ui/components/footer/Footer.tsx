@@ -21,11 +21,12 @@ import Facebook from '../../images/social-icons/facebook.svg';
 import Medium from '../../images/social-icons/medium.svg';
 import Twitter from '../../images/social-icons/twitter.svg';
 import PrimaryButton from '../primary-button/PrimaryButton';
-const Footer: React.FC<FooterProps> = ({ tabs }) => {
+
+const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
   const [email, setEmail] = useState<string>('');
 
   return (
-    <StyledFooter>
+    <StyledFooter isDay={isDay}>
       <StyledHBPContent>
         <StyledHackBeanpotLogo
           src={HackBeanpotWhiteLogo}
@@ -42,7 +43,6 @@ const Footer: React.FC<FooterProps> = ({ tabs }) => {
           </StyledFooterTextLink>
         </StyledFooterCodeOfConduct>
       </StyledHBPContent>
-
       <StyledFooterContentContainer>
         <StyledTabContainer>
           {tabs.map((tab: TabInfo) => (

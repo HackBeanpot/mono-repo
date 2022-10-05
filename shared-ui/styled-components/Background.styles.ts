@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const StyledDayBackground = styled.img`
+const StyledBackgrounds = styled.img`
   width: 100%;
   position: absolute;
   z-index: -1;
 `;
 
-export { StyledDayBackground };
+export { StyledBackgrounds };
