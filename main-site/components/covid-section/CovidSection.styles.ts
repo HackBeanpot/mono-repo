@@ -2,24 +2,25 @@ import styled from 'styled-components';
 import { P } from '../../../shared-ui/style/typography';
 
 const StyledCovidSectionContainer = styled.div`
-  width: 90%;
   display: flex;
   margin: 0 1em;
+  width: 90%;
+  position: relative;
 `;
 
 const StyledDesertVan = styled.img`
   display: inline-block;
   padding-left: 0em;
-  padding-top: 4em;
-  padding-right: 3em;
+  top: 4em;
+  right: 3em;
+  position: absolute;
 `;
 
 const StyledCovidInformationAndButton = styled.div`
   display: inline-block;
   justify-content: center;
   align-items: center;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding: 4em 0;
 `;
 
 const StyledCovidPolicyButtonContainer = styled.div`
@@ -30,8 +31,7 @@ const StyledCovidPolicyButtonContainer = styled.div`
 `;
 
 const StyledCovidSectionInformation = styled(P)`
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em 0;
 `;
 
 export {

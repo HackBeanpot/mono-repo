@@ -15,11 +15,9 @@ import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryB
 
 const CovidSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
-
   return (
     <StyledCovidSectionContainer>
       {isDesktop && <StyledDesertVan src={DesertVan} />}
-
       <StyledCovidInformationAndButton>
         <H3 color={colors.BLACK}>Safety first!</H3>
         <StyledCovidSectionInformation color={colors.TEXT_BROWN}>
@@ -30,7 +28,6 @@ const CovidSection: React.FC = () => {
           capacity, maintaining cleanliness, wearing masks, supplying sanitizer
           stations, and more. Take a look at our policies to learn more.
         </StyledCovidSectionInformation>
-
         <StyledCovidPolicyButtonContainer>
           <PrimaryButton
             btnText="Our COVID Policies"
