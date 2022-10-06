@@ -33,11 +33,6 @@ export interface StyledFooterProps {
   isDay: boolean;
 }
 
-export interface LandingSectionProps {
-  isDay: boolean;
-  setIsDay: (isDay: boolean) => void;
-}
-
 export interface BackgroundProps {
   isDay: boolean;
 }
