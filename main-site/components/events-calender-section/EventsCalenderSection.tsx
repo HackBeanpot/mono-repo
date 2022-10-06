@@ -1,10 +1,20 @@
 import React from 'react';
-import EventsCalender from '../../../shared-ui/images/events-calender.svg';
 import EventsGrass from '../../../shared-ui/images/events-grass.svg';
 import EventsCactus from '../../../shared-ui/images/events-cactus.svg';
-import EventsCalenderMobile from '../../../shared-ui/images/events-calender-mobile.svg';
-import { StyledEventsCactus, StyledEventsCalender, StyledEventsGrass, StyledEventsContainer } from './EventsCalenderSection.styles';
-import { min } from '../../../shared-ui/lib/responsive'
+import {
+  StyledEventsCactus,
+  StyledEventsGrass,
+  StyledEventsContainer,
+  StyledEventsCalender,
+  EventsHeader,
+  EventsPBolded,
+  EventsSubHeader,
+  EventsP,
+  StyledEventsBox, 
+  StyledTextContainer, 
+  EventsLocationP
+} from './EventsCalenderSection.styles';
+import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 
 const EventsCalenderSection: React.FC = () => {
@@ -12,13 +22,38 @@ const EventsCalenderSection: React.FC = () => {
   return (
     <StyledEventsContainer>
       {isDesktop && <StyledEventsGrass src={EventsGrass} />}
-      {isDesktop && <StyledEventsCalender src={EventsCalender} />}
-      {!isDesktop && <StyledEventsCalender src={EventsCalenderMobile} />}
+      <StyledEventsCalender>
+        <StyledEventsBox>
+          <StyledTextContainer>
+            <EventsHeader>
+              MiniHacks Workshop #1 -- 10/16 1:30pm-3pm
+            </EventsHeader>
+            <EventsSubHeader>
+              Intro to HTML, CSS, and JavaScript
+            </EventsSubHeader>
+            <EventsPBolded>
+              Putting the FUN in Fundamentals of Web Development
+            </EventsPBolded>
+            <br />
+            <EventsP>
+              Create your very first website with HTML, CSS, and JavaScript.{' '}
+              <br />
+              Perfect for beginners who are looking to get started on their{' '}
+              <br />
+              web development journey!
+            </EventsP>
+            <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
+            <EventsLocationP>
+              Northeastern University <br />
+              Shillman Hall 210
+            </EventsLocationP>
+          </StyledTextContainer>
+        </StyledEventsBox>
+      </StyledEventsCalender>
+
       {isDesktop && <StyledEventsCactus src={EventsCactus} />}
-      </StyledEventsContainer>
+    </StyledEventsContainer>
   );
 };
 
 export default EventsCalenderSection;
-
-

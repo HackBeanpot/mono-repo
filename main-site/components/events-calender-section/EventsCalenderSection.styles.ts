@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { min } from "../../../shared-ui/lib/responsive";
+import { colors } from "../../../shared-ui/style/colors";
+import { fonts, P } from '../../../shared-ui/style/typography';
 
 
 const StyledEventsContainer = styled.div`
@@ -7,11 +9,27 @@ top: 3em;
 position: relative;
 `;
 
-const StyledEventsCalender = styled.img`
-width: 90%;
-height: 60em;
+const StyledEventsBox = styled.div`
+border-radius: 2em;
+background-color: ${colors.BUTTON_DARK_GREEN};
+width: 95%;
 position: absolute;
-margin-left: 5%;
+margin-left: 2%;
+margin-top: 4%;
+`;
+
+const StyledTextContainer = styled.div`
+margin: 5%;
+display; grid;
+`;
+
+const StyledEventsCalender = styled.div`
+border-radius: 3em;
+width: 50%;
+height: 60em;
+background-color: ${colors.BUTTON_GREEN};
+position: absolute;
+margin-left: 25%;
 `;
 
 const StyledEventsCactus = styled.img`
@@ -44,9 +62,44 @@ position: absolute;
   }
 `;
 
+const EventsHeader = styled(P)`
+font-family: ${fonts.nunitoSansBold};
+line-height: 1em;
+`;
+
+const EventsP = styled(P)`
+font-size: 0.8em;
+`;
+
+const EventsSubHeader = styled(P)`
+font-family: ${fonts.nunitoSansSemibold};
+font-size: 1em;
+line-height: 2em;
+`;
+
+const EventsPBolded = styled(P)`
+font-family: ${fonts.nunitoSansSemibold};
+font-size: 0.8em;
+`;
+
+const EventsLocationP = styled(P)`
+text-align: right;
+font-size: 0.8em;
+`;
+
+
+
+
 export {
     StyledEventsCalender,
     StyledEventsCactus,
     StyledEventsGrass,
-    StyledEventsContainer
+    StyledEventsContainer, 
+    EventsHeader, 
+    EventsSubHeader, 
+    EventsPBolded,
+    EventsP, 
+    StyledEventsBox, 
+    StyledTextContainer, 
+    EventsLocationP
 }
