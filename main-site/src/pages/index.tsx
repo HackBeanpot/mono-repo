@@ -20,7 +20,7 @@ const IndexPage: React.FC = () => {
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <PastPhotosSection />
-      <CovidSection />
+      {/* <CovidSection /> */}
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );

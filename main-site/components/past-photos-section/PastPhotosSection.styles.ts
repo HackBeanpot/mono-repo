@@ -3,23 +3,21 @@ import { max } from '../../../shared-ui/lib/responsive';
 
 const StyledPhotosSection = styled.div`
   padding: 4em 0;
+  position: relative;
   @media ${max.tablet} {
     padding 6em 0;
   }
 `;
 
 const StyledPhotos = styled.img`
-  position: absolute;
   width: 100vw;
 `;
 
 const StyledPastPhotosButton = styled.div`
-  align-items: center;
   position: absolute;
-  left: 50vw;
-  margin: auto;
-  justify-content: center;
-  display: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 `;
 
 export { StyledPhotosSection, StyledPhotos, StyledPastPhotosButton };
