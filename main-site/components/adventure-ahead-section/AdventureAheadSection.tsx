@@ -3,18 +3,17 @@ import PrimaryButton from "../../../shared-ui/components/primary-button/PrimaryB
 import { H3 } from "../../../shared-ui/style/typography";
 import { colors } from '../../../shared-ui/style/colors';
 
-import { StyledAdeventureAheadSectionContainer, 
+import { StyledAdventureAheadSectionContainer, 
   StyledParagraph, 
   StyledSignpost,
   StyledTextContainer,
 StyledButtonContainer } from "./AdventureAheadSection.styles";
 
 import Signpost from "../../../shared-ui/images/signpost.svg"
-import {  } from "../explore-section/ExploreSection.styles";
 
 const AdventureAheadSection: React.FC = () => {
     return (
-      <StyledAdeventureAheadSectionContainer>
+      <StyledAdventureAheadSectionContainer>
         <StyledSignpost src={Signpost}/>
             <StyledTextContainer>
             <H3 color={colors.TEXT_BROWN}>We can't wait to meet you!</H3>
@@ -31,7 +30,7 @@ const AdventureAheadSection: React.FC = () => {
           </StyledButtonContainer>
             </StyledTextContainer>
 
-      </StyledAdeventureAheadSectionContainer>
+      </StyledAdventureAheadSectionContainer>
 
     )
 }
