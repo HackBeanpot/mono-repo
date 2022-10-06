@@ -1,27 +1,52 @@
 import styled from 'styled-components';
 import { P } from '../../../shared-ui/style/typography';
+import { min } from '../../../shared-ui/lib/responsive';
+import { H3 } from '../../../shared-ui/style/typography';
 
 const StyledCovidSectionContainer = styled.div`
   display: flex;
-  margin: 0 1em;
-  width: 90%;
   position: relative;
+  padding-bottom: 5em;
+  @media ${min.tablet} {
+    padding: 10em 0;
+  }
 `;
 
 const StyledDesertVan = styled.img`
-  display: absolute;
   left: 0;
-  top: 4em;
   right: 3em;
   position: absolute;
+  display: none;
+  @media ${min.tablet} {
+    display: block;
+    width: 20em;
+    top: 13em;
+  }
+  @media ${min.tabletLg} {
+    width: 30em;
+    top: 10em;
+  }
+  @media ${min.desktop} {
+    width: 35em;
+    top: 4em;
+  }
 `;
 
 const StyledCovidInformationAndButton = styled.div`
-  display: inline-block;
-  justify-content: center;
-  padding: 4em 0;
-  left: 5em;
-  position: absolute;
+  padding: 0 2em;
+  @media ${min.tablet} {
+    width: 60%;
+    padding-left: 22em;
+    padding-right: 2em;
+  }
+  @media ${min.tabletLg} {
+    padding-left: 35em;
+    padding-right: 5em;
+  }
+  @media ${min.desktop} {
+    padding-left: 40em;
+    padding-right: 10em;
+  }
 `;
 
 const StyledCovidPolicyButtonContainer = styled.div`
@@ -29,10 +54,20 @@ const StyledCovidPolicyButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 0.5em;
+  @media ${min.tablet} {
+    justify-content: left;
+  }
 `;
 
 const StyledCovidSectionInformation = styled(P)`
   padding: 1em 0;
+`;
+
+const StyledTitle = styled(H3)`
+  text-align: center;
+  @media ${min.tablet} {
+    text-align: left;
+  }
 `;
 
 export {
@@ -40,5 +75,6 @@ export {
   StyledDesertVan,
   StyledCovidInformationAndButton,
   StyledCovidPolicyButtonContainer,
-  StyledCovidSectionInformation
+  StyledCovidSectionInformation,
+  StyledTitle
 };

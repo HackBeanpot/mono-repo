@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import { max } from '../../../shared-ui/lib/responsive';
 
 const StyledPhotosSection = styled.div`
-  padding: 4em 0;
-  position: relative;
+  padding-top: 10em;
   @media ${max.tablet} {
-    padding 6em 0;
+    padding-bottom: 5em;
   }
 `;
 
