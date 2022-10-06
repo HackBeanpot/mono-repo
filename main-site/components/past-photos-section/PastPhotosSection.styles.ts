@@ -9,19 +9,17 @@ const StyledPhotosSection = styled.div`
 `;
 
 const StyledPhotos = styled.img`
-  display: grid;
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
   width: 100vw;
 `;
 
 const StyledPastPhotosButton = styled.div`
   align-items: center;
-  position: absolute
-  top: 50%;
-  left: 50%;
+  position: absolute;
+  left: 50vw;
+  margin: auto;
   justify-content: center;
+  display: absolute;
 `;
 
 export { StyledPhotosSection, StyledPhotos, StyledPastPhotosButton };

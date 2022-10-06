@@ -1,8 +1,8 @@
 import React from 'react';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
-import PhotosDesktop from '../../../shared-ui/images/old-photos-desktop.svg';
-import PhotosMobile from '../../../shared-ui/images/old-photos-mobile.svg';
+import PhotosDesktop from '../../../shared-ui/images/old-photos-desktop.png';
+import PhotosMobile from '../../../shared-ui/images/old-photos-mobile.png';
 import {
   StyledPhotosSection,
   StyledPhotos,

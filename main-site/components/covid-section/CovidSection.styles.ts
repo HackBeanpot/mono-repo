@@ -9,8 +9,8 @@ const StyledCovidSectionContainer = styled.div`
 `;
 
 const StyledDesertVan = styled.img`
-  display: inline-block;
-  padding-left: 0em;
+  display: absolute;
+  left: 0;
   top: 4em;
   right: 3em;
   position: absolute;
@@ -19,8 +19,9 @@ const StyledDesertVan = styled.img`
 const StyledCovidInformationAndButton = styled.div`
   display: inline-block;
   justify-content: center;
-  align-items: center;
   padding: 4em 0;
+  left: 5em;
+  position: absolute;
 `;
 
 const StyledCovidPolicyButtonContainer = styled.div`
