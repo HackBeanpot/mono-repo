@@ -3,6 +3,7 @@ import { max } from '../../../shared-ui/lib/responsive';
 
 const StyledPhotosSection = styled.div`
   padding-top: 10em;
+  position: relative;
   @media ${max.tablet} {
     padding-bottom: 5em;
   }
@@ -15,7 +16,10 @@ const StyledPhotos = styled.img`
 const StyledPastPhotosButton = styled.div`
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  @media ${max.tablet} {
+    top: 52%;
+  }
+  top: 55%;
   left: 50%;
 `;
 
