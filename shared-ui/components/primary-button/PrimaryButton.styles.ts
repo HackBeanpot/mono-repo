@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../style/colors';
 import { fonts } from '../../style/typography';
+import { max } from '../../lib/responsive';
 
 const StyledPrimaryButton = styled.button`
   color: ${colors.HEADER_FOOTER_BLUE};
@@ -12,6 +13,10 @@ const StyledPrimaryButton = styled.button`
   border-radius: 2em;
   border: 0.1em solid;
   cursor: pointer;
+
+  @media ${max.tablet} {
+    font-size: 0.8em;
+  }
   text-decoration: none;
 `;
 
