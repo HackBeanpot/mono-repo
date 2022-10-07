@@ -10,16 +10,21 @@ import { StyledAdventureAheadSectionContainer,
 StyledButtonContainer } from "./AdventureAheadSection.styles";
 
 import Signpost from "../../../shared-ui/images/signpost.svg"
+import useMatchMedia from 'react-use-match-media';
+import { min } from "../../../shared-ui/lib/responsive";
+
 
 const AdventureAheadSection: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tablet)
+  console.log(isDesktop)
     return (
       <StyledAdventureAheadSectionContainer>
-        <StyledSignpost src={Signpost}/>
+        {isDesktop && <StyledSignpost src={Signpost}/> }
             <StyledTextContainer>
             <H3 color={colors.TEXT_BROWN}>We can't wait to meet you!</H3>
             <StyledParagraph>
                 Stay up to date with all things Hackbeanpot like when we announce the <br/>
-                 location,date,and when applications open! (no spam we promise!)
+                 location, date, and when applications open! (no spam we promise!)
             </StyledParagraph>
             <StyledButtonContainer>
             <PrimaryButton
@@ -29,7 +34,7 @@ const AdventureAheadSection: React.FC = () => {
             />
           </StyledButtonContainer>
             </StyledTextContainer>
-
+            {!isDesktop && <StyledSignpost src={Signpost}/>}
       </StyledAdventureAheadSectionContainer>
 
     )
