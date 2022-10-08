@@ -5,7 +5,7 @@ import FaqItem from './FaqItems';
 import { StyledFaqContainer } from './FaqSection.styles';
 
 const Faq: React.FC<FaqData> = () => {
-  const [selectedQuestion, setSelectedQuestion] = useState(0);
+  const [selectedQuestion, setSelectedQuestion] = useState<number>(0);
   return (
     <>
       <StyledFaqContainer>

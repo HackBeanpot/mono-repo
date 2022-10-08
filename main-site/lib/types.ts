@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from 'react';
-
 export interface FaqPropsArray {
   id: number;
   question: string;
@@ -15,7 +13,7 @@ export interface FaqProps {
   question: string;
   answer: string;
   selectedQuestion: number;
-  setSelectedQuestion: Dispatch<SetStateAction<number>>;
+  setSelectedQuestion: (id: number) => void;
 }
 export type SectionData = AboutSectionData;
 
