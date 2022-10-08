@@ -9,7 +9,6 @@ const StyledAdventureAheadSectionContainer = styled.div`
   margin: 10em 0;
   @media ${max.tablet} {
     flex-wrap: wrap;
-    justify-content: center;
   }
 `;
 
@@ -18,20 +17,17 @@ const StyledParagraph = styled(P)`
   color: ${colors.TEXT_BROWN};
 `;
 const StyledSignpost = styled.img`
-  padding: 2em 4em;
+  padding: 2em 2em;
   vertical-align: top;
   @media ${max.tablet} {
     width: 13em;
     height: auto;
-    top: -1.5em;
-    left: 7em;
-    padding: 2em 1em;
-    justify-content: flex-start;
+    margin: 0em 0em;
   }
 `;
 
 const StyledTextContainer = styled.div`
-  margin: 2em 5em;
+  margin: 2em 3em;
     justify-content: center;
     color: ${colors.TEXT_BROWN}
     padding: 2em 2em;
