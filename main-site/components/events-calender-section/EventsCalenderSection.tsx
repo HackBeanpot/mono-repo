@@ -12,7 +12,8 @@ import {
   EventsP,
   StyledEventsBox, 
   StyledTextContainer, 
-  EventsLocationP
+  EventsLocationP, 
+  TextLeftContainer
 } from './EventsCalenderSection.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
@@ -25,6 +26,7 @@ const EventsCalenderSection: React.FC = () => {
       <StyledEventsCalender>
         <StyledEventsBox>
           <StyledTextContainer>
+            <TextLeftContainer>
             <EventsHeader>
               MiniHacks Workshop #1 -- 10/16 1:30pm-3pm
             </EventsHeader>
@@ -43,12 +45,40 @@ const EventsCalenderSection: React.FC = () => {
               web development journey!
             </EventsP>
             <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
+            </TextLeftContainer>
             <EventsLocationP>
               Northeastern University <br />
               Shillman Hall 210
             </EventsLocationP>
-          </StyledTextContainer>
-        </StyledEventsBox>
+            </StyledTextContainer>
+            </StyledEventsBox>
+
+            <StyledEventsBox>
+              <StyledTextContainer>
+            <EventsHeader>
+              MiniHacks Workshop #2 -- 10/16 10am-12:30pm <br/>
+              Intro to React.js
+            </EventsHeader>
+            </StyledTextContainer>
+            </StyledEventsBox>
+            
+            <StyledEventsBox>
+              <StyledTextContainer>
+            <EventsHeader>
+              Security + Tech Discussion - mid November
+            </EventsHeader>
+            </StyledTextContainer>
+            </StyledEventsBox>
+
+            <StyledEventsBox>
+              <StyledTextContainer>
+            <EventsHeader>
+              Go Workshop - mid January
+            </EventsHeader>
+            </StyledTextContainer>
+            </StyledEventsBox>
+          
+        
       </StyledEventsCalender>
 
       {isDesktop && <StyledEventsCactus src={EventsCactus} />}
