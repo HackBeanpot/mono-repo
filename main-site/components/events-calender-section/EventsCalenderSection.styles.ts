@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { min } from "../../../shared-ui/lib/responsive";
+import { max, min } from "../../../shared-ui/lib/responsive";
 import { colors } from "../../../shared-ui/style/colors";
 import { fonts, P } from '../../../shared-ui/style/typography';
 
@@ -15,14 +15,25 @@ width: 95%;
 position: relative;
 flex-direction: column;
 display: flex;
-margin-left: 2.3%;
+margin-left: 2.5%;
 margin-top: 4%;
 margin-bottom: 2%;
+@media ${max.tabletLg} {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+@media ${max.tablet} {
+  height: 18%;
+  border-radius: 1.3em;
+}
 `;
 
 const StyledTextContainer = styled.div`
 display: flex;
 margin: 4%;
+@media ${max.tablet} {
+  display: grid;
+}
 `;
 
 const TextLeftContainer = styled.div`
@@ -33,10 +44,21 @@ width: 85%;
 const StyledEventsCalender = styled.div`
 border-radius: 3em;
 width: 50%;
-height: 43em;
+height: 42em;
 background-color: ${colors.BUTTON_GREEN};
 position: absolute;
 margin-left: 25%;
+
+@media ${max.tabletLg} {
+  height: 44em;
+}  
+@media ${max.tabletSm} {
+  height: 60em;
+}
+@media ${max.tablet} {
+  border-radius: 1.3em;
+  height: 40em;
+}
 `;
 
 const StyledEventsCactus = styled.img`
@@ -88,12 +110,22 @@ line-height: 2em;
 const EventsPBolded = styled(P)`
 font-family: ${fonts.nunitoSansSemibold};
 font-size: 0.8em;
+
 `;
 
 const EventsLocationP = styled(P)`
 font-size: 0.8em;
 float: right;
-padding-top: 13em;
+padding-top: 14em;
+@media ${max.tabletLg} {
+  padding-top: 21em;
+}
+@media ${max.tablet} {
+  padding-bottom: 0em;
+  text-align: right;
+}
+
+
 
 
 `;
