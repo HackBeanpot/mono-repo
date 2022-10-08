@@ -18,11 +18,15 @@ const StyledParagraph = styled(P)`
   color: ${colors.TEXT_BROWN};
 `;
 const StyledSignpost = styled.img`
-  padding: 2em 8em;
+  padding: 2em 4em;
   vertical-align: top;
-  @media${max.tablet} {
-    height: 25%;
-    max-width: 100%;  
+  @media ${max.tablet} {
+    width: 13em;
+    height: auto;
+    top: -1.5em;
+    left: 7em;
+    padding: 2em 1em;
+    justify-content: flex-start;
   }
 `;
 
