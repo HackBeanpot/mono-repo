@@ -21,25 +21,21 @@ margin-top: 4%;
 margin-bottom: 2%;
 @media ${max.tabletLg} {
   margin-top: 5%;
-  height: 15em;
   margin-bottom: 3%;
   width: 88%;
   border-radius: 1.7em;
   margin-left: 2em;
 }
 @media ${max.tablet} {
-  height: 8.5em;
   border-radius: 1.3em;
 }
 @media ${max.tabletSm} {
   width: 90%;
   margin-left: 5%;
-  height: 9em;
 }
 @media ${max.mobile} {
   width: 88%;
   margin-left: 6%;
-  height: 7em;
 }
 `;
 
@@ -72,24 +68,23 @@ background-color: ${colors.BUTTON_GREEN};
 position: absolute;
 margin-left: 25%;
 @media ${max.tabletLg} {
-  height: 70em;
+  height: 42em;
   width: 70%;
   margin-left: 15%;
 }  
 @media ${max.tablet} {
   border-radius: 1.3em;
-  height: 44em;
+  height: 36em;
   margin-left: 5%;
   width: 90%;
 }
 @media ${max.tabletSm} {
-  height: 42em;
+  height: 28em;
   margin-left: 5%;
 }
 @media ${max.mobile} {
-  height: 32em;
+  height: 20em;
 } 
-
 `;
 
 const StyledEventsCactus = styled.img`
@@ -103,10 +98,12 @@ position: absolute;
   top: 50em;
 }  
 @media ${min.tablet} {
+  top: 50em;
   right: 0em;
 }  
 @media ${min.tabletSm} {
-  right: -3em;
+  right: 0em;
+  top: 30em;
   height: 16em;
 }
 
