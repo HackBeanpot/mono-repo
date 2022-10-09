@@ -1,14 +1,10 @@
-export interface FaqPropsArray {
+export interface FaqData {
   id: number;
   question: string;
   answer: string;
 }
 
-export interface FaqData {
-  data: Array<FaqPropsArray>;
-}
-
-export interface FaqProps {
+export interface FaqItemProps {
   id: number;
   question: string;
   answer: string;

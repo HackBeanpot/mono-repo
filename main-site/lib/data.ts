@@ -1,4 +1,4 @@
-import { AboutSectionData, FaqPropsArray } from './types';
+import { AboutSectionData, FaqData } from './types';
 
 export const aboutSectionData: AboutSectionData[] = [
   {
@@ -18,7 +18,7 @@ export const aboutSectionData: AboutSectionData[] = [
   }
 ];
 
-export const FaqSectionData: FaqPropsArray[] = [
+export const FaqSectionData: FaqData[] = [
   {
     id: 1,
     question: 'How do I apply to HackBeanpot?',

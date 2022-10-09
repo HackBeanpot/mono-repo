@@ -6,7 +6,6 @@ import {
   StyledH4
 } from './FaqSection.styles';
 import { H2 } from '../../../shared-ui/style/typography';
-import { FaqSectionData } from '../../lib/data';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import Faq from './faq/Faq';
 
@@ -15,7 +14,7 @@ const FaqSection: React.FC = () => {
     <StyledFaqSectionContainer>
       <H2>FAQ</H2>
       <StyledCactus src={cactus} />
-      <Faq data={FaqSectionData} />
+      <Faq />
       <StyledH4>
         Don't see your question?
         <br />

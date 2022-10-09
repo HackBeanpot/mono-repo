@@ -4,7 +4,6 @@ import { H4, P } from '../../../../shared-ui/style/typography';
 
 const StyledFaqQuestionText = styled(H4)`
   color: ${colors.TEXT_BROWN};
-
   padding: 1em;
   padding-left: 0;
   text-align: left;

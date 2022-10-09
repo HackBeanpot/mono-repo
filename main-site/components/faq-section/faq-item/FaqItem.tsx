@@ -1,4 +1,4 @@
-import { FaqProps } from '../../../lib/types';
+import { FaqItemProps } from '../../../lib/types';
 import React from 'react';
 import {
   StyledFaqButton,
@@ -7,7 +7,7 @@ import {
   StyledFaqQuestionText
 } from './FaqItem.styles';
 
-const FaqItem: React.FC<FaqProps> = ({
+const FaqItem: React.FC<FaqItemProps> = ({
   id,
   question,
   answer,
