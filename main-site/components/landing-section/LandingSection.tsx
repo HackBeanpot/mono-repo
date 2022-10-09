@@ -5,13 +5,13 @@ import {
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledToggle,
-  StyledLandingTextContainer, 
+  StyledLandingTextContainer,
   StyledStar
 } from './LandingSection.styles';
 import Toggle from '../../../shared-ui/images/toggle-day-dark.svg';
 import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
-import { LandingSectionProps } from '../../../shared-ui/lib/types';
+import { LandingSectionProps } from '../../lib/types';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (

@@ -4,12 +4,11 @@ import { StyledFooterProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
 
-
 const StyledFooter = styled.div<StyledFooterProps>`
   position: absolute;
   width: 100%;
-  background-color: ${(props): string => props.isDay ? colors.HEADER_FOOTER_BLUE : 
-    colors.NIGHT_HEADER_COLOR};
+  background-color: ${(props): string =>
+    props.isDay ? colors.HEADER_FOOTER_BLUE : colors.NIGHT_HEADER_COLOR};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +17,29 @@ const StyledFooter = styled.div<StyledFooterProps>`
     height: 23em;
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  @media ${max.tabletLg} {
+    align-items: left;
+    height: 35em;
+  }
+`;
+
+const StyledHBPContent = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  @media ${max.tablet} {
+    padding: 0;
+    width: 20em;
+  }
+  @media ${max.desktop} {
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+    padding: 2em 0em 4em 0em;
   }
 `;
 
@@ -32,7 +54,7 @@ const StyledHackBeanpotLogo = styled.img`
 
 const StyledFooterContentContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: left;
   align-items: center;
   justify-content: space-around;
   width: 100%;
@@ -131,17 +153,6 @@ const StyledSocialMediaButtons = styled.div`
   gap: 1em;
 `;
 
-const StyledFooterTextContainer = styled.div`
-  @media ${min.tablet} {
-    display: none;
-  }
-  text-align: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-`;
-
 const StyledFooterText = styled.div`
   font-size: 1em;
   color: ${colors.WHITE};
@@ -159,6 +170,24 @@ const StyledFooterTextLink = styled.a`
   }
 `;
 
+const StyledFooterCodeOfConduct = styled.div`
+  @media ${min.tablet} {
+    display: flex;
+  }
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0em;
+  padding-top: 2em;
+  text-align: left;
+
+  @media ${max.tabletLg} {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
 export {
   StyledFooter,
   StyledHackBeanpotLogo,
@@ -169,7 +198,8 @@ export {
   StyledEmailInput,
   StyledButtonRow,
   StyledSocialMediaButtons,
-  StyledFooterTextContainer,
   StyledFooterText,
-  StyledFooterTextLink
+  StyledFooterTextLink,
+  StyledFooterCodeOfConduct,
+  StyledHBPContent
 };

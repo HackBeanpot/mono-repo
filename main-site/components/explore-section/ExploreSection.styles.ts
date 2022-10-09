@@ -37,7 +37,6 @@ const StyledExploreSectionContainer = styled.div`
   @media ${min.desktop} {
     margin-top: 23em;
   }
- 
 `;
 
 const StyledParagraph = styled(P)`
