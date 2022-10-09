@@ -5,7 +5,7 @@ import {
   StyledFaqDropdown,
   StyledFaqLine,
   StyledFaqQuestionText
-} from './FaqSection.styles';
+} from './FaqItem.styles';
 
 const FaqItem: React.FC<FaqProps> = ({
   id,

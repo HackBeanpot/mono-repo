@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaqData } from '../../lib/types';
 import { FaqSectionData } from '../../lib/data';
-import FaqItem from './FaqItems';
-import { StyledFaqContainer } from './FaqSection.styles';
+import FaqItem from './FaqItem';
+import { StyledFaqContainer } from './Faq.styles';
 
 const Faq: React.FC<FaqData> = () => {
   const [selectedQuestion, setSelectedQuestion] = useState<number>(0);
