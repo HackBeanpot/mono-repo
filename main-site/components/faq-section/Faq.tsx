@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaqData } from '../../lib/types';
-import { data } from './Data';
+import { FaqSectionData } from '../../lib/data';
 import FaqItem from './FaqItems';
 import { StyledFaqContainer } from './FaqSection.styles';
 
@@ -9,7 +9,7 @@ const Faq: React.FC<FaqData> = () => {
   return (
     <>
       <StyledFaqContainer>
-        {data.map((data) => (
+        {FaqSectionData.map((data) => (
           <FaqItem
             id={data.id}
             question={data.question}

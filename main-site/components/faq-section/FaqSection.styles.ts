@@ -9,6 +9,7 @@ const StyledFaqSectionContainer = styled.div`
   top: 2em;
   margin-bottom: 5em;
 `;
+
 const StyledCactus = styled.img`
   position: absolute;
   margin-left: 5em;
@@ -21,19 +22,21 @@ const StyledCactus = styled.img`
     display: none;
   }
 `;
+
 const StyledH4 = styled(H4)`
   color: ${colors.TEXT_BROWN};
   margin-top: 3em;
   padding: 2em;
 `;
+
 const StyledFaqContainer = styled.div`
-position: relative;
-width: 60%;
-margin: 0 auto;
-color: ${colors.TEXT_BROWN}
-position: relative;
-padding: 4em;
-padding-bottom: 0;
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  color: ${colors.TEXT_BROWN}
+  position: relative;
+  padding: 4em;
+  padding-bottom: 0;
 
 @media ${max.tablet} {
     width: 75%;
@@ -41,10 +44,12 @@ padding-bottom: 0;
    
 }
 `;
+
 const StyledFaqQuestionText = styled(H4)`
   color: ${colors.TEXT_BROWN};
   margin: 0.5em;
 `;
+
 const StyledFaqButton = styled.button`
   cursor: pointer;
   display: flex;
@@ -67,6 +72,7 @@ const StyledFaqDropdown = styled(P)`
   color: ${colors.TEXT_BROWN};
   text-align: left;
 `;
+
 export {
   StyledCactus,
   StyledFaqContainer,
