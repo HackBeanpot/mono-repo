@@ -26,7 +26,12 @@ const FaqItem: React.FC<FaqProps> = ({
         <StyledFaqQuestionText>{question}</StyledFaqQuestionText>
       </StyledFaqButton>
       <StyledFaqLine />
-      {isSelected && <StyledFaqDropdown>{answer}</StyledFaqDropdown>}
+      {isSelected && (
+        <>
+          <StyledFaqDropdown>{answer}</StyledFaqDropdown>
+          <StyledFaqLine />
+        </>
+      )}
     </>
   );
 };

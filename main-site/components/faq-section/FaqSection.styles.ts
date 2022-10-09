@@ -6,7 +6,7 @@ import { H4, P } from '../../../shared-ui/style/typography';
 const StyledFaqSectionContainer = styled.div`
   text-align: center;
   position: relative;
-  top: 2em;
+  top: 5em;
   margin-bottom: 5em;
 `;
 
@@ -36,6 +36,7 @@ const StyledFaqContainer = styled.div`
   color: ${colors.TEXT_BROWN}
   position: relative;
   padding: 4em;
+  text-align: left;
   padding-bottom: 0;
 
 @media ${max.tablet} {
@@ -47,7 +48,11 @@ const StyledFaqContainer = styled.div`
 
 const StyledFaqQuestionText = styled(H4)`
   color: ${colors.TEXT_BROWN};
-  margin: 0.5em;
+
+  padding: 1em;
+  padding-left: 0;
+  text-align: left;
+  margin-left: 0;
 `;
 
 const StyledFaqButton = styled.button`
@@ -62,15 +67,20 @@ const StyledFaqButton = styled.button`
   background-repeat: no-repeat;
   border: none;
   color: ${colors.TEXT_BROWN};
+  padding-left: 0;
 `;
 
 const StyledFaqLine = styled.hr`
   border: 1.5px solid ${colors.TEXT_BROWN};
+  margin: 0;
 `;
 
 const StyledFaqDropdown = styled(P)`
   color: ${colors.TEXT_BROWN};
   text-align: left;
+  margin: 0;
+  padding: 1.5em;
+  padding-left: 0;
 `;
 
 export {
