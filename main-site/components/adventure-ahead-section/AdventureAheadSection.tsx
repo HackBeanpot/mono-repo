@@ -16,7 +16,6 @@ import { min } from "../../../shared-ui/lib/responsive";
 
 const AdventureAheadSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet)
-  console.log(isDesktop)
     return (
       <StyledAdventureAheadSectionContainer>
         {isDesktop && <StyledSignpost src={Signpost}/> }
