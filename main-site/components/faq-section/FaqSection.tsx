@@ -1,5 +1,5 @@
 import React from 'react';
-import { cactus } from '../../../shared-ui/images/cactus.svg';
+import cactus from '../../../shared-ui/images/cactus.svg';
 import {
   StyledCactus,
   StyledFaqSectionContainer,
