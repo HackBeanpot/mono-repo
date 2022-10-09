@@ -21,10 +21,10 @@ const IndexPage: React.FC = () => {
       <Background isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
-      <FaqSection />
       <AboutSection />
       <PastPhotosSection />
       <CovidSection />
+      <FaqSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );

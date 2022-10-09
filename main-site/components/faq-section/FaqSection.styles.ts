@@ -6,7 +6,7 @@ import { H4, P } from '../../../shared-ui/style/typography';
 const StyledFaqSectionContainer = styled.div`
   text-align: center;
   position: relative;
-  top: 5em;
+  top: 1em;
   margin-bottom: 5em;
 `;
 
