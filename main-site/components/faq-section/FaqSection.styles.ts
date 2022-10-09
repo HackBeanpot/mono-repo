@@ -36,7 +36,8 @@ padding: 4em;
 padding-bottom: 0;
 
 @media ${max.tablet} {
-    width: 75%
+    width: 75%;
+    padding: 0em;
    
 }
 `;
