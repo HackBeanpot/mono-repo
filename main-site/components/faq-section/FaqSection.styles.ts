@@ -59,7 +59,7 @@ const StyledFaqButton = styled.button`
 `;
 
 const StyledFaqLine = styled.hr`
-  border: 1.5px solid ${colors.TEXT_BROWN};
+  border: 0.07em solid ${colors.TEXT_BROWN};
 `;
 
 const StyledFaqDropdown = styled(P)`
