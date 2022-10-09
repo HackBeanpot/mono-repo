@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { FaqData } from '../../lib/types';
-import { FaqSectionData } from '../../lib/data';
-import FaqItem from './FaqItem';
+import { FaqData } from '../../../lib/types';
+import { FaqSectionData } from '../../../lib/data';
+import FaqItem from '../faq-item/FaqItem';
 import { StyledFaqContainer } from './Faq.styles';
 
 const Faq: React.FC<FaqData> = () => {

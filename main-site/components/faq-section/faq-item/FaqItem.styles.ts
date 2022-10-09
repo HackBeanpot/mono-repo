@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colors } from '../../../shared-ui/style/colors';
-import { H4, P } from '../../../shared-ui/style/typography';
+import { colors } from '../../../../shared-ui/style/colors';
+import { H4, P } from '../../../../shared-ui/style/typography';
 
 const StyledFaqQuestionText = styled(H4)`
   color: ${colors.TEXT_BROWN};

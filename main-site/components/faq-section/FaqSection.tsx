@@ -8,7 +8,7 @@ import {
 import { H2 } from '../../../shared-ui/style/typography';
 import { FaqSectionData } from '../../lib/data';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import Faq from './Faq';
+import Faq from './faq/Faq';
 
 const FaqSection: React.FC = () => {
   return (

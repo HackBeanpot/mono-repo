@@ -1,4 +1,4 @@
-import { FaqProps } from '../../lib/types';
+import { FaqProps } from '../../../lib/types';
 import React from 'react';
 import {
   StyledFaqButton,

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { max } from '../../../shared-ui/lib/responsive';
-import { colors } from '../../../shared-ui/style/colors';
+import { max } from '../../../../shared-ui/lib/responsive';
+import { colors } from '../../../../shared-ui/style/colors';
 
 export const StyledFaqContainer = styled.div`
   position: relative;
