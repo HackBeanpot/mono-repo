@@ -28,12 +28,9 @@ const DesktopTexts: React.FC = () => {
             <br />
             <EventsP>
               Create your very first website with HTML, CSS, and JavaScript.{' '}
-              <br />
               Perfect for beginners who are looking to get started on their{' '}
-              <br />
               web development journey!
             </EventsP>
-            <br />
             <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
           </TextLeftContainer>
           <EventsLocationP>

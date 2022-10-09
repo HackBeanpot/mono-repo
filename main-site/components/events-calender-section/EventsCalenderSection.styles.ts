@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { max, min } from "../../../shared-ui/lib/responsive";
 import { colors } from "../../../shared-ui/style/colors";
 import { fonts, P } from '../../../shared-ui/style/typography';
+import { H3 } from '../../../shared-ui/style/typography';
 
 const StyledEventsContainer = styled.div`
 top: 3em;
@@ -20,11 +21,25 @@ margin-top: 4%;
 margin-bottom: 2%;
 @media ${max.tabletLg} {
   margin-top: 5%;
+  height: 15em;
   margin-bottom: 3%;
+  width: 88%;
+  border-radius: 1.7em;
+  margin-left: 2em;
 }
 @media ${max.tablet} {
-  height: 18%;
+  height: 8.5em;
   border-radius: 1.3em;
+}
+@media ${max.tabletSm} {
+  width: 90%;
+  margin-left: 5%;
+  height: 9em;
+}
+@media ${max.mobile} {
+  width: 88%;
+  margin-left: 6%;
+  height: 7em;
 }
 `;
 
@@ -32,7 +47,15 @@ const StyledTextContainer = styled.div`
 display: flex;
 margin: 4%;
 @media ${max.tablet} {
-  display: grid;
+  margin: 1.5em;
+}
+@media ${max.tabletSm} {
+  margin: 6%;
+  padding-left: 1em;
+}
+@media ${max.mobile} {
+  margin: 4%;
+  padding-left: 0.5em;
 }
 `;
 
@@ -42,41 +65,52 @@ width: 85%;
 
 
 const StyledEventsCalender = styled.div`
-border-radius: 3em;
+border-radius: 2em;
 width: 50%;
-height: 42em;
+height: 40em;
 background-color: ${colors.BUTTON_GREEN};
 position: absolute;
 margin-left: 25%;
-
 @media ${max.tabletLg} {
-  height: 44em;
+  height: 70em;
+  width: 70%;
+  margin-left: 15%;
 }  
-@media ${max.tabletSm} {
-  height: 60em;
-}
 @media ${max.tablet} {
   border-radius: 1.3em;
-  height: 40em;
+  height: 44em;
+  margin-left: 5%;
+  width: 90%;
 }
+@media ${max.tabletSm} {
+  height: 42em;
+  margin-left: 5%;
+}
+@media ${max.mobile} {
+  height: 32em;
+} 
+
 `;
 
 const StyledEventsCactus = styled.img`
 width: 20em;
 right: 10em;
-top: 50em;
+top: 30em;
 position: absolute;
 
+@media ${max.tabletLg} {
+  right: 6em;
+  top: 50em;
+}  
+@media ${min.tablet} {
+  right: 0em;
+}  
 @media ${min.tabletSm} {
   right: -3em;
   height: 16em;
 }
-@media ${min.tablet} {
-  right: 0em;
-}  
-@media ${min.tabletLg} {
-  right: 8em;
-}  
+
+
 `;
 
 const StyledEventsGrass = styled.img`
@@ -95,6 +129,12 @@ const EventsHeader = styled(P)`
 font-family: ${fonts.nunitoSansSemibold};
 line-height: 1.2em;
 letter-spacing: 0.08em;
+@media ${max.tabletSm} {
+  font-size: 0.8em;
+}
+@media ${max.mobile} {
+  font-size: 0.6em;
+}
 `;
 
 const EventsP = styled(P)`
@@ -105,6 +145,17 @@ const EventsSubHeader = styled(P)`
 font-family: ${fonts.nunitoSansSemibold};
 font-size: 1em;
 line-height: 2em;
+@media ${max.tabletSm} {
+  font-size: 0.8em;
+}
+@media ${max.mobile} {
+  font-size: 0.5em;
+}
+`;
+
+const StyledH3 = styled(H3)`
+text-align: center;
+letter-spacing: 0.2em;
 `;
 
 const EventsPBolded = styled(P)`
@@ -116,18 +167,23 @@ font-size: 0.8em;
 const EventsLocationP = styled(P)`
 font-size: 0.8em;
 float: right;
-padding-top: 14em;
+padding-top: 8em;
 @media ${max.tabletLg} {
-  padding-top: 21em;
+  padding-top: 9em;
+  width: 5%;
 }
 @media ${max.tablet} {
-  padding-bottom: 0em;
-  text-align: right;
+  padding-top: 3em;
+  width: 28%;
 }
-
-
-
-
+@media ${max.tabletSm} {
+  padding-top: 6em;
+  font-size: 0.5em;
+  width: 25%;
+}
+@media ${max.mobile} {
+  width: 29%;
+}
 `;
 
 
@@ -145,5 +201,6 @@ export {
     StyledEventsBox, 
     StyledTextContainer, 
     EventsLocationP, 
-    TextLeftContainer
+    TextLeftContainer, 
+    StyledH3
 }

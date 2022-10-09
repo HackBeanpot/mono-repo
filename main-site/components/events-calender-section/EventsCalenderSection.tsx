@@ -5,7 +5,8 @@ import {
   StyledEventsCactus,
   StyledEventsGrass,
   StyledEventsContainer,
-  StyledEventsCalender
+  StyledEventsCalender, 
+  StyledH3
 } from './EventsCalenderSection.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
@@ -15,6 +16,8 @@ import NonDesktopTexts from './NonDesktopTexts';
 const EventsCalenderSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
+    <>
+    <StyledH3>Events Calender</StyledH3>
     <StyledEventsContainer>
       {isDesktop && <StyledEventsGrass src={EventsGrass} />}
       <StyledEventsCalender>
@@ -23,6 +26,7 @@ const EventsCalenderSection: React.FC = () => {
       </StyledEventsCalender>
       {isDesktop && <StyledEventsCactus src={EventsCactus} />}
     </StyledEventsContainer>
+    </>
   );
 };
 
