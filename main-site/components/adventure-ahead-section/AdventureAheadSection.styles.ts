@@ -4,15 +4,15 @@ import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 
 const StyledAdventureAheadSectionContainer = styled.div`
-display: flex;
-margin: 10em 8em;
-padding-top: 10em;
-@media ${max.tabletLg} {
-margin: 10em 0;
-}
-@media ${max.tablet} {
-flex-wrap: wrap;
-}
+  display: flex;
+  margin: 10em 8em;
+  padding-top: 10em;
+  @media ${max.tabletLg} {
+    margin: 10em 0;
+  }
+  @media ${max.tablet} {
+    flex-wrap: wrap;
+  }
 `;
 
 const StyledParagraph = styled(P)`
