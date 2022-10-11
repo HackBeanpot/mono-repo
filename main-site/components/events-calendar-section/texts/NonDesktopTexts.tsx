@@ -6,7 +6,7 @@ import {
     StyledTextContainer, 
     EventsLocationP, 
     TextLeftContainer
-  } from '../EventsCalenderSection.styles';
+  } from '../EventsCalendarSection.styles';
 
 const NonDesktopTexts: React.FC = () => {
   return (

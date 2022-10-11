@@ -60,7 +60,7 @@ width: 85%;
 `;
 
 
-const StyledEventsCalender = styled.div`
+const StyledEventsCalendar = styled.div`
 border-radius: 2em;
 width: 50%;
 height: 40em;
@@ -187,7 +187,7 @@ padding-top: 8em;
 
 
 export {
-    StyledEventsCalender,
+    StyledEventsCalendar,
     StyledEventsCactus,
     StyledEventsGrass,
     StyledEventsContainer, 

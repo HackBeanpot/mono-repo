@@ -8,7 +8,7 @@ import {
     StyledTextContainer, 
     EventsLocationP, 
     TextLeftContainer
-  } from '../EventsCalenderSection.styles';
+  } from '../EventsCalendarSection.styles';
 
 const DesktopTexts: React.FC = () => {
   return (
