@@ -5,7 +5,7 @@ import '../../../shared-ui/style/global.css';
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
-// import Footer from '../../../shared-ui/components/footer/Footer';
+import Footer from '../../../shared-ui/components/footer/Footer';
 import Background from '../../../shared-ui/components/background/Background';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
@@ -29,7 +29,7 @@ const IndexPage: React.FC = () => {
       <CovidSection />
       <FaqSection />
       <AdventureAheadSection />
-      {/* <Footer tabs={homeTabInfo} isDay={isDay} /> */}
+      <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );
 };

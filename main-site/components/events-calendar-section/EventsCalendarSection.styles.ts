@@ -4,6 +4,13 @@ import { colors } from "../../../shared-ui/style/colors";
 import { fonts, P } from '../../../shared-ui/style/typography';
 import { H3 } from '../../../shared-ui/style/typography';
 
+const StyledSectionContainer = styled.div`
+padding-top: 15em;
+@media ${max.tabletSm} {
+  padding-top: 0.6em;
+}
+`;
+
 const StyledEventsContainer = styled.div`
 top: 3em;
 position: relative;
@@ -56,7 +63,10 @@ margin: 4%;
 `;
 
 const TextLeftContainer = styled.div`
-width: 85%;
+width: 80%;
+@media ${max.tabletSm} {
+  width: 93%;
+}
 `;
 
 
@@ -163,23 +173,12 @@ font-size: 0.8em;
 
 const EventsLocationP = styled(P)`
 font-size: 0.8em;
-float: right;
-padding-top: 8em;
-@media ${max.tabletLg} {
-  padding-top: 9em;
-  width: 5%;
-}
-@media ${max.tablet} {
-  padding-top: 3em;
-  width: 28%;
-}
+position: absolute;
+right: 2em;
+bottom: 2em;
 @media ${max.tabletSm} {
-  padding-top: 6em;
   font-size: 0.5em;
-  width: 25%;
-}
-@media ${max.mobile} {
-  width: 29%;
+  bottom: 1.5em;
 }
 `;
 
@@ -187,6 +186,7 @@ padding-top: 8em;
 
 
 export {
+    StyledSectionContainer,
     StyledEventsCalendar,
     StyledEventsCactus,
     StyledEventsGrass,
