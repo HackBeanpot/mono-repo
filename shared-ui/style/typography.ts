@@ -61,7 +61,7 @@ const P = styled.p`
 `;
 
 const StyledLink = styled.a`
-  {
+   {
     text-decoration: none;
   }
 `;
