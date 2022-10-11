@@ -6,6 +6,7 @@ import { H3 } from '../../../shared-ui/style/typography';
 
 const StyledSectionContainer = styled.div`
 padding-top: 15em;
+padding-bottom: 12em;
 @media ${max.tabletSm} {
   padding-top: 0.6em;
 }
@@ -24,6 +25,7 @@ position: relative;
 flex-direction: column;
 display: flex;
 margin-left: 2.5%;
+top: 4%;
 margin-top: 4%;
 margin-bottom: 2%;
 @media ${max.tabletLg} {
@@ -75,8 +77,8 @@ border-radius: 2em;
 width: 50%;
 height: 40em;
 background-color: ${colors.BUTTON_GREEN};
-position: absolute;
 margin-left: 25%;
+position: relative;
 @media ${max.tabletLg} {
   height: 42em;
   width: 70%;
@@ -93,7 +95,7 @@ margin-left: 25%;
   margin-left: 5%;
 }
 @media ${max.mobile} {
-  height: 20em;
+  height: 18em;
 } 
 `;
 
