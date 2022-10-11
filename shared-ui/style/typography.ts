@@ -50,6 +50,7 @@ const P = styled.p`
   margin: 0;
   font-family: ${fonts.nunitoSansRegular};
   font-size: 1.1em;
+  line-height: 1.4em;
   color: ${(props): string => (props.color ? props.color : colors.WHITE)};
   @media ${min.mobile} {
     font-size: 1.2em;

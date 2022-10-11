@@ -1,36 +1,26 @@
 import React from 'react';
 import {
     EventsHeader,
-    EventsPBolded,
     EventsSubHeader,
-    EventsP,
     StyledEventsBox, 
     StyledTextContainer, 
     EventsLocationP, 
     TextLeftContainer
-  } from './EventsCalenderSection.styles';
+  } from '../EventsCalenderSection.styles';
 
-const DesktopTexts: React.FC = () => {
+const NonDesktopTexts: React.FC = () => {
   return (
     <>
       <StyledEventsBox>
         <StyledTextContainer>
           <TextLeftContainer>
             <EventsHeader>
-              MiniHacks Workshop #1 -- 10/16 1:30pm-3pm
+              MiniHacks Workshop #1 <br />
+              10/16 1:30pm-3pm
             </EventsHeader>
             <EventsSubHeader>
               Intro to HTML, CSS, and JavaScript
             </EventsSubHeader>
-            <EventsPBolded>
-              Putting the FUN in Fundamentals of Web Development
-            </EventsPBolded>
-            <br />
-            <EventsP>
-              Create your very first website with HTML, CSS, and JavaScript.{' '}
-              Perfect for beginners who are looking to get started on their{' '}
-              web development journey!
-            </EventsP>
             <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
           </TextLeftContainer>
           <EventsLocationP>
@@ -43,7 +33,8 @@ const DesktopTexts: React.FC = () => {
       <StyledEventsBox>
         <StyledTextContainer>
           <EventsHeader>
-            MiniHacks Workshop #2 -- 10/16 10am-12:30pm <br />
+            MiniHacks Workshop #2 <br />
+            10/16 10am-12:30pm <br />
             Intro to React.js
           </EventsHeader>
         </StyledTextContainer>
@@ -64,4 +55,4 @@ const DesktopTexts: React.FC = () => {
   );
 };
 
-export default DesktopTexts;
+export default NonDesktopTexts;

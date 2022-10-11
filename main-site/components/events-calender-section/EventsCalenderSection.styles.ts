@@ -99,10 +99,10 @@ position: absolute;
 }  
 @media ${min.tablet} {
   top: 50em;
-  right: 0em;
+  right: 0;
 }  
 @media ${min.tabletSm} {
-  right: 0em;
+  right: 0;
   top: 30em;
   height: 16em;
 }

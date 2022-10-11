@@ -10,8 +10,8 @@ import {
 } from './EventsCalenderSection.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
-import DesktopTexts from './DesktopTexts';
-import NonDesktopTexts from './NonDesktopTexts';
+import DesktopTexts from './texts/DesktopTexts';
+import NonDesktopTexts from './texts/NonDesktopTexts';
 
 const EventsCalenderSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
