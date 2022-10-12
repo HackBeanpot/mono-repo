@@ -8,6 +8,7 @@ import { homeTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import Background from '../../../shared-ui/components/background/Background';
 import ExploreSection from '../../components/explore-section/ExploreSection';
+import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import FaqSection from '../../components/faq-section/FaqSection';
 import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
 import CovidSection from '../../components/covid-section/CovidSection';
@@ -24,6 +25,7 @@ const IndexPage: React.FC = () => {
       <ExploreSection />
       <AboutSection />
       <PastPhotosSection />
+      <EventsCalendarSection/>
       <CovidSection />
       <FaqSection />
       <AdventureAheadSection />
