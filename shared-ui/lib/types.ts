@@ -36,3 +36,7 @@ export interface StyledFooterProps {
 export interface BackgroundProps {
   isDay: boolean;
 }
+
+export interface MeetTheTeamProps {
+  teamLabels: string[];
+}
