@@ -40,3 +40,8 @@ export interface BackgroundProps {
 export interface MeetTheTeamProps {
   teamLabels: string[];
 }
+
+export interface TeamColumnProps {
+  label: string;
+  pictures: string[];
+}

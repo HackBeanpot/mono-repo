@@ -29,7 +29,7 @@ const IndexPage: React.FC = () => {
       <EventsCalendarSection/>
       <CovidSection />
       <FaqSection />
-      <MeetTheTeamSection />
+      <MeetTheTeamSection teamLabels={['Directors', 'Tech', 'Design', 'Social Outreach', 'Sponsorship']}/>
       <AdventureAheadSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>

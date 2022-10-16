@@ -3,7 +3,9 @@ import { MeetTheTeamProps } from '../../../shared-ui/lib/types';
 import {
     StyledMeetTheTeamSection, 
     StyledImageContainer, 
-    StyledH3
+    StyledH3, 
+    StyledTeamHeaders, 
+    StyledTeamLabel
   } from './MeetTheTeamSection.styles';
 
 const MeetTheTeamSection: React.FC<MeetTheTeamProps> = ({teamLabels}) => {
@@ -12,6 +14,11 @@ const MeetTheTeamSection: React.FC<MeetTheTeamProps> = ({teamLabels}) => {
     <StyledH3>Meet the Team</StyledH3>
       <StyledImageContainer>
           <StyledTeamHeaders>
+          {teamLabels.map((label: string) => (
+            <StyledTeamLabel>
+          {label}
+            </StyledTeamLabel>
+          ))}
               
           </StyledTeamHeaders>
       </StyledImageContainer>
