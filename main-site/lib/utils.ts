@@ -1,4 +1,4 @@
-import { SectionData } from './types';
+import { SectionData, TestimonialData } from './types';
 
 export function getLeftOrRight(
   direction: string,
@@ -20,4 +20,30 @@ export function getLeftOrRight(
     return sectionData[itemIndex + 1];
   }
   return currItem;
+}
+
+export function getLeftOrRightTestimonial(
+  side: string,
+  testimonialData: TestimonialData[],
+  currentIndex: number
+): TestimonialData {
+  const testimonialDatalength = testimonialData.length;
+  console.log(currentIndex);
+  if (side == 'left') {
+    if (currentIndex == 0) {
+      return testimonialData[testimonialDatalength - 2];
+    } else {
+      return testimonialData[currentIndex - 1];
+    }
+  }
+
+  if (side == 'right') {
+    if (currentIndex == testimonialDatalength - 1) {
+      return testimonialData[currentIndex - 2];
+    } else {
+      return testimonialData[currentIndex + 1];
+    }
+  }
+
+  return testimonialData[currentIndex];
 }

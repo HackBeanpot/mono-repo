@@ -19,7 +19,8 @@ const colors = {
   BUTTON_DARK_GREEN: '#5A978C',
   HEADER_FOOTER_BLUE: '#395885',
   NIGHT_HEADER_COLOR: '#628BC6',
-  TEXT_BROWN: '#634C1B'
+  TEXT_BROWN: '#634C1B',
+  TEXT_GREY: '#D9D9D9'
 };
 
 export { colors };
