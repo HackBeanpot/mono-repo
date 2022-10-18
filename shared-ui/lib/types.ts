@@ -9,6 +9,11 @@ export interface TabInfo {
   link: string;
 }
 
+export interface TeamColumnInfo {
+  teamLabel: string;
+  listOfPictures: string[];
+}
+
 export interface HeaderProps {
   tabs: TabInfo[];
   isDay: boolean;
@@ -37,11 +42,6 @@ export interface BackgroundProps {
   isDay: boolean;
 }
 
-export interface MeetTheTeamProps {
-  teamLabels: string[];
-}
-
 export interface TeamColumnProps {
-  label: string;
-  pictures: string[];
+  columnInfo: TeamColumnInfo;
 }
