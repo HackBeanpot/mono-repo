@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-    EventsHeader,
-    EventsPBolded,
-    EventsSubHeader,
-    EventsP,
-    StyledEventsBox, 
-    StyledTextContainer, 
-    EventsLocationP, 
-    TextLeftContainer
-  } from '../EventsCalendarSection.styles';
+  EventsHeader,
+  EventsPBolded,
+  EventsSubHeader,
+  EventsP,
+  StyledEventsBox,
+  StyledTextContainer,
+  EventsLocationP,
+  TextLeftContainer
+} from '../EventsCalendarSection.styles';
 
 const DesktopTexts: React.FC = () => {
   return (
@@ -28,8 +28,8 @@ const DesktopTexts: React.FC = () => {
             <br />
             <EventsP>
               Create your very first website with HTML, CSS, and JavaScript.
-              Perfect for beginners who are looking to get started on their
-              web development journey!
+              Perfect for beginners who are looking to get started on their web
+              development journey!
             </EventsP>
             <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
           </TextLeftContainer>

@@ -9,9 +9,9 @@ import {
   StyledTestimonialCardYear
 } from './TestimonialCard.styles';
 
-import Karyna from '../../../../shared-ui/images/karyna.png';
-import Jimin from '../../../../shared-ui/images/jimin.png';
-import Spencer from '../../../../shared-ui/images/spencer.png';
+import Karyna from '../../../../shared-ui/images/Karyna.png';
+import Jimin from '../../../../shared-ui/images/Jimin.png';
+import Spencer from '../../../../shared-ui/images/Spencer.png';
 import Group from '../../../../shared-ui/images/group.png';
 
 function getImage(author: string): string {
