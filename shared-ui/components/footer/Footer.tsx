@@ -21,6 +21,7 @@ import Facebook from '../../images/social-icons/facebook.svg';
 import Medium from '../../images/social-icons/medium.svg';
 import Twitter from '../../images/social-icons/twitter.svg';
 import PrimaryButton from '../primary-button/PrimaryButton';
+import MailinglistSignup from '../../../main-site/components/mailinglist-signup/MailinglistSignup';
 
 const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
   const [email, setEmail] = useState<string>('');
@@ -59,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
             }
           />
           <StyledButtonRow>
-            <PrimaryButton btnText="Join our mailing list" btnLink="" />
+            <MailinglistSignup/>
             <StyledSocialMediaButtons>
               <a href="https://www.instagram.com/hackbeanpot/" target="_blank">
                 <img width="30" height="30" src={Instagram} />
