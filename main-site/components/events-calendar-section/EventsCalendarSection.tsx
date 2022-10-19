@@ -5,7 +5,7 @@ import {
   StyledEventsCactus,
   StyledEventsGrass,
   StyledEventsContainer,
-  StyledEventsCalendar, 
+  StyledEventsCalendar,
   StyledH3,
   StyledSectionContainer
 } from './EventsCalendarSection.styles';
@@ -18,15 +18,15 @@ const EventsCalendarSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <StyledSectionContainer>
-    <StyledH3>Events Calendar</StyledH3>
-    <StyledEventsContainer>
-      {isDesktop && <StyledEventsGrass src={EventsGrass} />}
-      <StyledEventsCalendar>
-        {isDesktop && <DesktopTexts />}
-        {!isDesktop && <NonDesktopTexts />}
-      </StyledEventsCalendar>
-      {isDesktop && <StyledEventsCactus src={EventsCactus} />}
-    </StyledEventsContainer>
+      <StyledH3>Events Calendar</StyledH3>
+      <StyledEventsContainer>
+        {isDesktop && <StyledEventsGrass src={EventsGrass} />}
+        <StyledEventsCalendar>
+          {isDesktop && <DesktopTexts />}
+          {!isDesktop && <NonDesktopTexts />}
+        </StyledEventsCalendar>
+        {isDesktop && <StyledEventsCactus src={EventsCactus} />}
+      </StyledEventsContainer>
     </StyledSectionContainer>
   );
 };

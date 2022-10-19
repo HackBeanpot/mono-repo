@@ -16,7 +16,7 @@ const StyledPastProjectsSection = styled.div`
   background-color: ${colors.TEXT_BOX};
   width: 80%;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 1.25em;
   height: 100%;
 
   @media ${max.tabletLg} {
@@ -30,14 +30,14 @@ const StyledPastProjectsContainer = styled.div`
 `;
 
 const StyledPastProjectsContainerBottom = styled.div`
-  padding-top: 3em;
+  padding-top: 2em;
   padding-left: 3em;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
 `;
 
 const StyledPastProjectsInfo = styled.div`
   text-align: left;
-  padding-left: 300px;
+  padding-left: 18.75em;
   padding-right: 3em;
 `;
 
@@ -46,12 +46,12 @@ const StyledPastProjectsInfoContainer = styled.div`
 `;
 
 const StyledPastProjectsTitle = styled(H2)`
-  font-size: 25px;
+  font-size: 1.5625em;
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
 `;
 const StyledPastProjectsMembers = styled(P)`
-  font-size: 13px;
+  font-size: 0.8125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
 `;
@@ -63,7 +63,7 @@ const StyledPastProjectsDescription = styled(P)`
 `;
 
 const StyledPastProjectsViewText = styled(P)`
-  font-size: 20px;
+  font-size: 1.25em;
   text-align: center;
   padding-top: 3.5em;
   padding-bottom: 2em;
@@ -77,13 +77,20 @@ const StyledPastProjectsPhotos = styled.img`
   width: 320px;
   height: 220px;
   padding-right: 1em;
+
+  @media ${max.tabletLg} {
+    height: 200px;
+    width: 280px;
+  }
 `;
 
 const StyledFennecFox = styled.img`
   position: absolute;
-  right: 0px;
+  right: 0;
   padding-top: 46em;
   z-index: 1;
+  height: 20em;
+  width: 20em;
 
   @media ${max.tabletLg} {
     display: none;
@@ -92,7 +99,7 @@ const StyledFennecFox = styled.img`
 
 const StyledCamel = styled.img`
   position: absolute;
-  right: 0px;
+  right: 0;
   z-index: 1;
   padding-top: 10em;
 

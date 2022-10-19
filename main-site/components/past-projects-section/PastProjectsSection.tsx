@@ -81,7 +81,7 @@ const PastProjectsSection: React.FC = () => {
             </StyledPastProjectsDescription>
             <PrimaryButton
               btnText="View Project"
-              btnLink="https://www.google.com/url?q=https://devpost.com/software/oh-duck&sa=D&source=editors&ust=1666054462827053&usg=AOvVaw1GNRfexvIUKuYxcp3Ey09w"
+              btnLink="https://devpost.com/software/oh-duck"
               newTab
             />
           </StyledPastProjectsInfo>
