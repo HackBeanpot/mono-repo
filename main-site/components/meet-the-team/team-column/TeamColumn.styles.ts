@@ -9,13 +9,13 @@ width: 14em;
 
 const StyledLabel = styled(P)`
 color: ${colors.TEXT_BROWN};
-margin: 1em;
 letter-spacing: 0.1em;
 font-size: 1.3em;
 `;
 
 const StyledHeadshot = styled.img`
 padding-top: 2em;
+width: 7.5em;
 `;
 
 export {
