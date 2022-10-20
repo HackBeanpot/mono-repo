@@ -1,5 +1,5 @@
 import { TabInfo, TeamColumnInfo } from './types';
-import Judy from '../../shared-ui/images/judy-placeholder.svg'
+import Judy from '../../shared-ui/images/judy.png'
 
 const homeTabInfo: TabInfo[] = [
   { name: 'About', link: '' },

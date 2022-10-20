@@ -1,3 +1,4 @@
+
 export interface ButtonProps {
   btnText: string;
   btnLink: string;
@@ -44,4 +45,8 @@ export interface BackgroundProps {
 
 export interface TeamColumnProps {
   columnInfo: TeamColumnInfo;
+}
+
+export interface StyledTeamLabelProps {
+  twoLines: boolean;
 }

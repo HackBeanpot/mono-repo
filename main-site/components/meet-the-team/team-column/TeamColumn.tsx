@@ -6,7 +6,7 @@ const TeamColumn: React.FC<TeamColumnProps> = ({columnInfo}) => {
   const listOfPictures: string[] = columnInfo.listOfPictures;
     return (
       <StyledTeamColumn>
-          <StyledLabel>
+          <StyledLabel twoLines={columnInfo.teamLabel.split(/\r\n|\r|\n/).length == 2}>
               {columnInfo.teamLabel}
           </StyledLabel>
           {listOfPictures.map((picture: string) => (
