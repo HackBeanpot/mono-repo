@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { H4 } from "../../../shared-ui/style/typography";
+import { H3 } from "../../../shared-ui/style/typography";
 
 const StyledMeetTheTeamSection = styled.div`
 padding-top: 10em, 0;
@@ -12,7 +12,7 @@ justify-content: center;
 text-align: center;
 `;
 
-const StyledH3 = styled(H4)`
+const StyledH3 = styled(H3)`
 text-align: center;
 `;
 

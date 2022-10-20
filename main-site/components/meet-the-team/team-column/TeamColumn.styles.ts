@@ -13,14 +13,15 @@ width: 11em;
 `;
 
 const StyledLabel = styled(P)<StyledTeamLabelProps>`
-margin: ${(props): string => (props.twoLines ? '-1em' : '0em')};
+width: 8em;
+margin-bottom: ${(props): string => (props.twoLines ? '-1.2em' : '0')};
 color: ${colors.TEXT_BROWN};
 letter-spacing: 0.1em;
 `;
 
 const StyledHeadshot = styled.img`
 padding-top: 2em;
-width: 7.5em;
+width: 8.5em;
 @media ${max.tabletLg} {
     width: 6.8em;
   }
