@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import addToMailChimp from 'gatsby-plugin-mailchimp';
 import { StyledEmailInput } from '../../../shared-ui/components/footer/Footer.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
+import { StyledPrimaryButton } from '../../../shared-ui/components/primary-button/PrimaryButton.styles';
 
 const MailinglistSignup: React.FunctionComponent<{}> = () => {
   const [email, setEmail] = useState('');
@@ -28,16 +29,19 @@ const MailinglistSignup: React.FunctionComponent<{}> = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="footer__form">
+      <form onSubmit={handleSubmit}>
         <StyledEmailInput
           placeholder="Enter your email"
           name="email"
           type="text"
           onChange={handleEmailChange} />
-        <PrimaryButton
-          btnText="Join our mailing list" btnLink={''} type="submit"        />
-      <div className="footer__form-msg">{message}</div>
-    </form>
+          <div>
+          <StyledPrimaryButton type="submit">
+          Join our mailing list
+        </StyledPrimaryButton>
+          </div>
+        <div>{message}</div>
+      </form>
     </div>
   );
 
