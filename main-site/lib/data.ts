@@ -103,7 +103,7 @@ export const testimonialSectionData: TestimonialData[] = [
     author: 'Karyna Yen',
     year: "Northeastern '25",
     quote:
-      '"I had a ton of fun at HackBeanpot! We made a Chrome extension that censored inappropriate language on the internet. My favorite part was went one of my teammates got an animated duck to quack when clicking on the extension icon!"'
+      '"I had a ton of fun at HackBeanpot! We made a Chrome extension that censored inappropriate language on the internet. My favorite part was when one of my teammates got an animated duck to quack when clicking on the extension icon!"'
   },
   {
     id: 1,
