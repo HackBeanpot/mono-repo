@@ -21,7 +21,6 @@ const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const goToTestimonial = (index: number): void => {
     setCurrentIndex(index);
-    console.log(index);
   };
 
   function getCactus(index: number): string {
@@ -36,8 +35,6 @@ const Testimonials: React.FC = () => {
     }
     return cactus4;
   }
-
-  console.log(currentIndex);
   return (
     <>
       <StyledTestimonialsContainer>

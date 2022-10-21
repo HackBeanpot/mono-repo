@@ -28,7 +28,6 @@ export function getLeftOrRightTestimonial(
   currentIndex: number
 ): TestimonialData {
   const testimonialDatalength = testimonialData.length;
-  console.log(currentIndex);
   if (side == 'left') {
     if (currentIndex == 0) {
       return testimonialData[testimonialDatalength - 2];
@@ -44,6 +43,5 @@ export function getLeftOrRightTestimonial(
       return testimonialData[currentIndex + 1];
     }
   }
-
   return testimonialData[currentIndex];
 }
