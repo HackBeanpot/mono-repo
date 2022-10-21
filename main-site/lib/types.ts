@@ -37,3 +37,7 @@ export interface TestimonialCardProps {
   quote: string;
   currentIndex: number;
 }
+
+export interface LeftOrRightTestimonialCardProps {
+  testimonial: TestimonialData;
+}

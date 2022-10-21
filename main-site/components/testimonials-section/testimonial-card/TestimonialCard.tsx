@@ -34,7 +34,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   quote,
   currentIndex
 }) => {
-  const isSelected: boolean = currentIndex == id;
+  const isSelected = currentIndex == id;
   return (
     isSelected && (
       <StyledTestimonialCardContainer>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { TestimonialCardProps } from '../../../lib/types';
 import {
   StyledTestimonialCardContainer,
   StyledTestimonialCardBox,
@@ -13,6 +12,7 @@ import Karyna from '../../../../shared-ui/images/karyna.png';
 import Jimin from '../../../../shared-ui/images/jimin.png';
 import Spencer from '../../../../shared-ui/images/spencer.png';
 import Group from '../../../../shared-ui/images/group.png';
+import { LeftOrRightTestimonialCardProps } from '../../../lib/types';
 
 function getImage(author: string): string {
   if (author === 'Karyna Yen') {
@@ -27,23 +27,25 @@ function getImage(author: string): string {
   return Group;
 }
 
-const LeftOrRightTestimonialCard: React.FC<TestimonialCardProps> = ({
-  author,
-  year,
-  quote
+const LeftOrRightTestimonialCard: React.FC<LeftOrRightTestimonialCardProps> = ({
+  testimonial
 }) => {
   return (
     <StyledTestimonialCardContainer>
       <StyledTestimonialCardBox>
-        <StyledTestimonialCardImage src={getImage(author)} />
+        <StyledTestimonialCardImage src={getImage(testimonial.author)} />
 
         <StyledTestimonialCardAuthor>
-          <p>{author}</p>
+          <p>{testimonial.author}</p>
         </StyledTestimonialCardAuthor>
 
-        <StyledTestimonialCardYear>{year}</StyledTestimonialCardYear>
+        <StyledTestimonialCardYear>
+          {testimonial.year}
+        </StyledTestimonialCardYear>
 
-        <StyledTestimonialCardQuote>{quote}</StyledTestimonialCardQuote>
+        <StyledTestimonialCardQuote>
+          {testimonial.quote}
+        </StyledTestimonialCardQuote>
       </StyledTestimonialCardBox>
     </StyledTestimonialCardContainer>
   );

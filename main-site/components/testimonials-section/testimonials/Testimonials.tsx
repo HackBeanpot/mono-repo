@@ -16,6 +16,7 @@ import cactus2 from '../../../../shared-ui/images/cactus2.png';
 import cactus3 from '../../../../shared-ui/images/cactus3.png';
 import cactus4 from '../../../../shared-ui/images/cactus4.png';
 import LeftOrRightTestimonialCard from '../testimonial-card/LeftOrRightTestimonialCard';
+import { TestimonialData } from '../../../lib/types';
 
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -35,48 +36,21 @@ const Testimonials: React.FC = () => {
     }
     return cactus4;
   }
+  const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
+    'left',
+    testimonialSectionData,
+    currentIndex
+  );
+  const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
+    'left',
+    testimonialSectionData,
+    currentIndex
+  );
   return (
     <>
       <StyledTestimonialsContainer>
         <StyledTestimonialsLeftContainer>
-          <LeftOrRightTestimonialCard
-            key={
-              getLeftOrRightTestimonial(
-                'left',
-                testimonialSectionData,
-                currentIndex
-              ).id
-            }
-            id={
-              getLeftOrRightTestimonial(
-                'left',
-                testimonialSectionData,
-                currentIndex
-              ).id
-            }
-            author={
-              getLeftOrRightTestimonial(
-                'left',
-                testimonialSectionData,
-                currentIndex
-              ).author
-            }
-            year={
-              getLeftOrRightTestimonial(
-                'left',
-                testimonialSectionData,
-                currentIndex
-              ).year
-            }
-            quote={
-              getLeftOrRightTestimonial(
-                'left',
-                testimonialSectionData,
-                currentIndex
-              ).quote
-            }
-            currentIndex={currentIndex}
-          />
+          <LeftOrRightTestimonialCard testimonial={getLeftTestimonial} />
         </StyledTestimonialsLeftContainer>
         <StyledTestimonialsCenterContainer>
           {testimonialSectionData.map((data) => (
@@ -91,44 +65,7 @@ const Testimonials: React.FC = () => {
           ))}
         </StyledTestimonialsCenterContainer>
         <StyledTestimonialsRightContainer>
-          <LeftOrRightTestimonialCard
-            key={
-              getLeftOrRightTestimonial(
-                'right',
-                testimonialSectionData,
-                currentIndex
-              ).id
-            }
-            id={
-              getLeftOrRightTestimonial(
-                'right',
-                testimonialSectionData,
-                currentIndex
-              ).id
-            }
-            author={
-              getLeftOrRightTestimonial(
-                'right',
-                testimonialSectionData,
-                currentIndex
-              ).author
-            }
-            year={
-              getLeftOrRightTestimonial(
-                'right',
-                testimonialSectionData,
-                currentIndex
-              ).year
-            }
-            quote={
-              getLeftOrRightTestimonial(
-                'right',
-                testimonialSectionData,
-                currentIndex
-              ).quote
-            }
-            currentIndex={currentIndex}
-          />
+          <LeftOrRightTestimonialCard testimonial={getRightTestimonial} />
         </StyledTestimonialsRightContainer>
       </StyledTestimonialsContainer>
       <StyledTestimonialButtons>
