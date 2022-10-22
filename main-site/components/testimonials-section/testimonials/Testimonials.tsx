@@ -42,7 +42,7 @@ const Testimonials: React.FC = () => {
     currentIndex
   );
   const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
-    'left',
+    'right',
     testimonialSectionData,
     currentIndex
   );
