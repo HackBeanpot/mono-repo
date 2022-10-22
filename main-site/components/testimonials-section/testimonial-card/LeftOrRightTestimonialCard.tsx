@@ -1,4 +1,5 @@
 import React from 'react';
+import { LeftOrRightTestimonialCardProps } from '../../../lib/types';
 import { getImage } from '../../../lib/utils';
 import {
   StyledTestimonialCardContainer,
