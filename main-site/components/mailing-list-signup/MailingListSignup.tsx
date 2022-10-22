@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import addToMailChimp from 'gatsby-plugin-mailchimp';
-import { StyledEmailInput } from '../../../shared-ui/components/footer/Footer.styles';
+import {
+  StyledButtonRow,
+  StyledEmailInput,
+  StyledSocialMediaButtons
+} from '../../../shared-ui/components/footer/Footer.styles';
 import { StyledPrimaryButton } from '../../../shared-ui/components/primary-button/PrimaryButton.styles';
 import { P } from '../../../shared-ui/style/typography';
+import { StyledMailingMessage } from './MailingListSignup.styles';
+import Instagram from '../../../shared-ui/images/social-icons/instagram.svg';
+import Facebook from '../../../shared-ui/images/social-icons/facebook.svg';
+import Medium from '../../../shared-ui/images/social-icons/medium.svg';
+import Twitter from '../../../shared-ui/images/social-icons/twitter.svg';
 
-const MailingListSignup: React.FunctionComponent<{}> = () => {
+const MailingListSignup: React.FunctionComponent = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -19,7 +28,6 @@ const MailingListSignup: React.FunctionComponent<{}> = () => {
       .catch((error: Error) => {
         setMessage('There was an error. Please try again');
       });
-
   };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,15 +42,32 @@ const MailingListSignup: React.FunctionComponent<{}> = () => {
           placeholder="Enter your email"
           name="email"
           type="text"
-          onChange={handleEmailChange} />
-        <P>{message}</P>
-        <StyledPrimaryButton type="submit">
-          Join our mailing list
-        </StyledPrimaryButton>
+          onChange={handleEmailChange}
+        />
+        <StyledMailingMessage>{message}</StyledMailingMessage>
+
+        <StyledButtonRow>
+          <StyledPrimaryButton type="submit">
+            Join our mailing list
+          </StyledPrimaryButton>
+          <StyledSocialMediaButtons>
+            <a href="https://www.instagram.com/hackbeanpot/" target="_blank">
+              <img width="30" height="30" src={Instagram} />
+            </a>
+            <a href="https://www.facebook.com/hackbeanpot" target="_blank">
+              <img width="30" height="30" src={Facebook} />
+            </a>
+            <a href="https://hackbeanpot.medium.com/" target="_blank">
+              <img width="30" height="30" src={Medium} />
+            </a>
+            <a href="https://twitter.com/HackBeanpot" target="_blank">
+              <img width="30" height="30" src={Twitter} />
+            </a>
+          </StyledSocialMediaButtons>
+        </StyledButtonRow>
       </form>
     </div>
   );
-
 };
 
 export default MailingListSignup;
