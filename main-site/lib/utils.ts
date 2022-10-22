@@ -1,8 +1,8 @@
 import { SectionData, TestimonialData } from './types';
 
-import karyna from '../../shared-ui/images/karyna.png';
-import jimin from '../../shared-ui/images/jimin.png';
-import spencer from '../../shared-ui/images/spencer.png';
+import karyna from '../../shared-ui/images/Karyna.png';
+import jimin from '../../shared-ui/images/Jimin.png';
+import spencer from '../../shared-ui/images/Spencer.png';
 import group from '../../shared-ui/images/group.png';
 
 export function getLeftOrRight(
