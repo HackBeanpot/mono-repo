@@ -34,7 +34,7 @@ const StyledTestimonialCardYear = styled(P)`
 `;
 
 const StyledTestimonialCardQuote = styled(P)`
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin-top: -1em;
   letter-spacing: 0.05em;
 `;
