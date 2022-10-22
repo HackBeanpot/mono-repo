@@ -13,11 +13,13 @@ const MeetTheTeamSection: React.FC = () => {
   return (
     <StyledMeetTheTeamSection>
     <H2>Meet the Team</H2>
+    {/* if desktop --> then do the styled image container, mobile render mobile team column */}
       <StyledImageContainer>
           {teamColumnsInfo.map((teamColumn: TeamColumnInfo) => (
             <TeamColumn columnInfo={teamColumn}/>
           ))}
       </StyledImageContainer>
+      {/*for mobile jsut pass in the const teamColumnsInfo*/}
     </StyledMeetTheTeamSection>
   );
 };

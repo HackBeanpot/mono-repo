@@ -47,6 +47,10 @@ export interface TeamColumnProps {
   columnInfo: TeamColumnInfo;
 }
 
+export interface MobileTeamColumnProps {
+  listOfColumnInfo: TeamColumnInfo[];
+}
+
 export interface StyledTeamLabelProps {
   twoLines: boolean;
 }
