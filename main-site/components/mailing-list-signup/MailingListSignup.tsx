@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import addToMailChimp from 'gatsby-plugin-mailchimp';
 import { StyledEmailInput } from '../../../shared-ui/components/footer/Footer.styles';
-import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { StyledPrimaryButton } from '../../../shared-ui/components/primary-button/PrimaryButton.styles';
+import { P } from '../../../shared-ui/style/typography';
 
-const MailinglistSignup: React.FunctionComponent<{}> = () => {
+const MailingListSignup: React.FunctionComponent<{}> = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -14,7 +14,7 @@ const MailinglistSignup: React.FunctionComponent<{}> = () => {
     addToMailChimp(email)
       .then((data: any) => {
         setEmail('');
-        setMessage('Thank you for subscribing!');
+        setMessage(data.msg);
       })
       .catch((error: Error) => {
         setMessage('There was an error. Please try again');
@@ -35,16 +35,14 @@ const MailinglistSignup: React.FunctionComponent<{}> = () => {
           name="email"
           type="text"
           onChange={handleEmailChange} />
-          <div>
-          <StyledPrimaryButton type="submit">
+        <P>{message}</P>
+        <StyledPrimaryButton type="submit">
           Join our mailing list
         </StyledPrimaryButton>
-          </div>
-        <div>{message}</div>
       </form>
     </div>
   );
 
 };
 
-export default MailinglistSignup;
+export default MailingListSignup;
