@@ -5,6 +5,7 @@ import { fonts, P } from '../../../shared-ui/style/typography';
 import { H3 } from '../../../shared-ui/style/typography';
 
 const StyledSectionContainer = styled.div`
+text-align: center;
 padding-top: 15em;
 padding-bottom: 12em;
 @media ${max.tabletSm} {
@@ -162,11 +163,6 @@ line-height: 2em;
 }
 `;
 
-const StyledH3 = styled(H3)`
-text-align: center;
-letter-spacing: 0.2em;
-`;
-
 const EventsPBolded = styled(P)`
 font-family: ${fonts.nunitoSansSemibold};
 font-size: 0.8em;
@@ -200,6 +196,5 @@ export {
     StyledEventsBox, 
     StyledTextContainer, 
     EventsLocationP, 
-    TextLeftContainer, 
-    StyledH3
+    TextLeftContainer
 }

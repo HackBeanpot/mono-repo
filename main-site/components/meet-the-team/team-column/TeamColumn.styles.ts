@@ -13,6 +13,7 @@ width: 11em;
 `;
 
 const StyledLabel = styled(P)<StyledTeamLabelProps>`
+padding-left: 0.5em;
 width: 8em;
 margin-bottom: ${(props): string => (props.twoLines ? '-1.2em' : '0')};
 color: ${colors.TEXT_BROWN};
