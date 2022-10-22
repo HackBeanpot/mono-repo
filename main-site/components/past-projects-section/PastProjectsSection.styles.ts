@@ -22,6 +22,10 @@ const StyledPastProjectsSection = styled.div`
   @media ${max.tabletLg} {
     margin-top: 6em;
   }
+
+  @media ${max.tablet} {
+    background-color: transparent;
+  }
 `;
 
 const StyledPastProjectsContainer = styled.div`
@@ -39,6 +43,11 @@ const StyledPastProjectsInfo = styled.div`
   text-align: left;
   padding-left: 18.75em;
   padding-right: 3em;
+
+  @media ${max.tablet} {
+    font-size: 15px;
+    text-align: center;
+  }
 `;
 
 const StyledPastProjectsInfoContainer = styled.div`
