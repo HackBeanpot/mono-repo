@@ -1,9 +1,9 @@
 import { SectionData, TestimonialData } from './types';
 
-import Karyna from '../../shared-ui/images/karyna.png';
-import Jimin from '../../shared-ui/images/jimin.png';
-import Spencer from '../../shared-ui/images/spencer.png';
-import Group from '../../shared-ui/images/group.png';
+import karyna from '../../shared-ui/images/karyna.png';
+import jimin from '../../shared-ui/images/jimin.png';
+import spencer from '../../shared-ui/images/spencer.png';
+import group from '../../shared-ui/images/group.png';
 
 export function getLeftOrRight(
   direction: string,
@@ -53,13 +53,13 @@ export function getLeftOrRightTestimonial(
 
 export function getImage(author: string): string {
   if (author === 'Karyna Yen') {
-    return Karyna;
+    return karyna;
   }
   if (author === 'Ji-min Kim') {
-    return Jimin;
+    return jimin;
   }
   if (author === 'Spencer Shao') {
-    return Spencer;
+    return spencer;
   }
-  return Group;
+  return group;
 }
