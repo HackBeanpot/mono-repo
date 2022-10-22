@@ -20,22 +20,23 @@ const StyledTestimonialCardImage = styled.img`
   width: 100%;
   height: 50%;
   text-align: center;
+  margin-bottom: 1em;
 `;
 
 const StyledTestimonialCardAuthor = styled(H4)`
   font-size: 1.2em;
+  margin-bottom: 0.4em;
 `;
 
 const StyledTestimonialCardYear = styled(P)`
   font-size: 1em;
-  margin-top: -1em;
-  margin-bottom: 1em;
   color: ${colors.TEXT_GREY};
+  margin-bottom: 0.4em;
 `;
 
 const StyledTestimonialCardQuote = styled(P)`
   font-size: 0.8em;
-  margin-top: -1em;
+
   letter-spacing: 0.05em;
 `;
 

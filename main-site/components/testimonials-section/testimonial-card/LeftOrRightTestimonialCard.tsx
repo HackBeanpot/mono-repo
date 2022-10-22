@@ -36,7 +36,7 @@ const LeftOrRightTestimonialCard: React.FC<LeftOrRightTestimonialCardProps> = ({
         <StyledTestimonialCardImage src={getImage(testimonial.author)} />
 
         <StyledTestimonialCardAuthor>
-          <p>{testimonial.author}</p>
+          {testimonial.author}
         </StyledTestimonialCardAuthor>
 
         <StyledTestimonialCardYear>

@@ -40,9 +40,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <StyledTestimonialCardContainer>
         <StyledTestimonialCardBox>
           <StyledTestimonialCardImage src={getImage(author)} />
-          <StyledTestimonialCardAuthor>
-            <p>{author}</p>
-          </StyledTestimonialCardAuthor>
+          <StyledTestimonialCardAuthor>{author}</StyledTestimonialCardAuthor>
           <StyledTestimonialCardYear>{year}</StyledTestimonialCardYear>
           <StyledTestimonialCardQuote>{quote}</StyledTestimonialCardQuote>
         </StyledTestimonialCardBox>
