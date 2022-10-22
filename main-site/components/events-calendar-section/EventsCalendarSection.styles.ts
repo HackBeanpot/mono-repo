@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { max, min } from "../../../shared-ui/lib/responsive";
 import { colors } from "../../../shared-ui/style/colors";
 import { fonts, P } from '../../../shared-ui/style/typography';
-import { H3 } from '../../../shared-ui/style/typography';
 
 const StyledSectionContainer = styled.div`
 text-align: center;
