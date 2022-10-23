@@ -6,7 +6,6 @@ import {
   StyledSocialMediaButtons
 } from '../../../shared-ui/components/footer/Footer.styles';
 import { StyledPrimaryButton } from '../../../shared-ui/components/primary-button/PrimaryButton.styles';
-import { P } from '../../../shared-ui/style/typography';
 import { StyledMailingMessage } from './MailingListSignup.styles';
 import Instagram from '../../../shared-ui/images/social-icons/instagram.svg';
 import Facebook from '../../../shared-ui/images/social-icons/facebook.svg';
@@ -17,20 +16,21 @@ const MailingListSignup: React.FunctionComponent = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) : Promise<any> => {
     e.preventDefault();
 
     addToMailChimp(email)
-      .then((data: any) => {
+      .then((data: MailchimpResult) => {
         setEmail('');
         setMessage(data.msg);
       })
       .catch((error: Error) => {
-        setMessage('There was an error. Please try again');
+        console.log(error);
+        setMessage("There was an error, please try again.");
       });
   };
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) : void => {
     e.preventDefault();
     setEmail(e.target.value);
   };

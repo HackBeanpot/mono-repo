@@ -1,6 +1,4 @@
-declare module 'gatsby-plugin-mailchimp' {
-    import * as React from 'react';
-  
+declare module 'gatsby-plugin-mailchimp' {  
     type MailchimpResult = 'success' | 'error';
   
     export interface MailchimpResponse {
@@ -12,6 +10,6 @@ declare module 'gatsby-plugin-mailchimp' {
       [key: string]: string
     }
   
-    function addToMailChimp(email: String, listFields?: MailchimpFields): Promise<MailchimpResponse>;
+    function addToMailChimp(email: string, listFields?: MailchimpFields): Promise<MailchimpResponse>;
     export default addToMailchimp;
   }

@@ -15,7 +15,6 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
           endpoint:  "https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431",
-          timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     }
   ]
