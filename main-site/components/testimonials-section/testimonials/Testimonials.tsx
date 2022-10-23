@@ -73,6 +73,7 @@ const Testimonials: React.FC = () => {
           <StyledCactusButtons
             src={getCactus(testimonialIndex)}
             onClick={(): void => goToTestimonial(testimonialIndex)}
+            isToggled={testimonialIndex == currentIndex}
           />
         ))}
       </StyledTestimonialButtons>

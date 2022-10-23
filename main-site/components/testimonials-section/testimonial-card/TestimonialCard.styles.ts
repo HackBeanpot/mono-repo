@@ -11,8 +11,8 @@ const StyledTestimonialCardBox = styled.div`
   background-color: ${colors.TEXT_BOX};
   margin: 2em;
   border-radius: 2em;
-  width: 20em;
-  height: 25em;
+  width: 22em;
+  height: 28em;
 `;
 
 const StyledTestimonialCardImage = styled.img`
@@ -35,16 +35,14 @@ const StyledTestimonialCardYear = styled(P)`
 `;
 
 const StyledTestimonialCardQuote = styled(P)`
-  font-size: 0.8em;
+  font-size: 0.85em;
 
   letter-spacing: 0.05em;
 `;
 
 const StyledTestimonialButtons = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   cursor: pointer;
+  padding: 1em;
 `;
 
 export {

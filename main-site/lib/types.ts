@@ -41,3 +41,7 @@ export interface TestimonialCardProps {
 export interface LeftOrRightTestimonialCardProps {
   testimonial: TestimonialData;
 }
+
+export interface StyledCactusButtonsProps {
+  isToggled: boolean;
+}

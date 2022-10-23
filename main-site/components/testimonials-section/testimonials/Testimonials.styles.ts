@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
+import { StyledCactusButtonsProps } from '../../../lib/types';
 
 const StyledTestimonialsContainer = styled.div`
   display: flex;
@@ -17,31 +18,34 @@ const StyledTestimonialsCenterContainer = styled.div`
 const StyledTestimonialsLeftContainer = styled.div`
   justify-content: left;
   position: absolute;
-  left: -12em;
+  left: -14em;
   @media ${max.tabletLg} {
-    left: -18em;
+    left: -20em;
   }
   @media ${max.tablet} {
-    left: -20em;
+    left: -22em;
   }
 `;
 
 const StyledTestimonialsRightContainer = styled.div`
   justify-content: right;
   position: absolute;
-  right: -12em;
+  right: -14em;
   @media ${max.tabletLg} {
-    right: -18em;
+    right: -20em;
   }
   @media ${max.tablet} {
-    right: -20em;
+    right: -22em;
   }
 `;
 
-const StyledCactusButtons = styled.img`
-  width: 3em;
-  height: 3em;
+const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
+  width: ${(StyledCactusButtonsProps): string =>
+    StyledCactusButtonsProps.isToggled ? '4em' : '3em'};
+  height: ${(StyledCactusButtonsProps): string =>
+    StyledCactusButtonsProps.isToggled ? '4em' : '3em'};
   padding: 1em;
+  align-item: center;
 `;
 
 export {
