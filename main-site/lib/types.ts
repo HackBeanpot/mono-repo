@@ -22,3 +22,14 @@ export interface LandingSectionProps {
   isDay: boolean;
   setIsDay: (isDay: boolean) => void;
 }
+
+type MailchimpResult = 'success' | 'error';
+
+export interface MailchimpResponse {
+  result: MailchimpResult;
+  msg: string;
+}
+
+export interface MailchimpFields {
+  [key: string]: string;
+}

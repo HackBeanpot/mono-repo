@@ -12,25 +12,32 @@ import Facebook from '../../../shared-ui/images/social-icons/facebook.svg';
 import Medium from '../../../shared-ui/images/social-icons/medium.svg';
 import Twitter from '../../../shared-ui/images/social-icons/twitter.svg';
 
+type MailchimpResult = 'success' | 'error';
+
+export interface MailchimpResponse {
+  result: MailchimpResult;
+  msg: string;
+}
+
 const MailingListSignup: React.FunctionComponent = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) : Promise<any> => {
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
 
     addToMailChimp(email)
-      .then((data: MailchimpResult) => {
+      .then((data: MailchimpResponse) => {
         setEmail('');
         setMessage(data.msg);
       })
       .catch((error: Error) => {
         console.log(error);
-        setMessage("There was an error, please try again.");
+        setMessage('There was an error, please try again.');
       });
   };
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) : void => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     e.preventDefault();
     setEmail(e.target.value);
   };
