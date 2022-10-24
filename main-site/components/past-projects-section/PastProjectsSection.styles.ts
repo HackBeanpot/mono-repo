@@ -9,6 +9,12 @@ const StyledPastProjectsHeader = styled(H2)`
   color: ${colors.BLACK};
   padding-bottom: 0.5em;
   text-align: center;
+
+  @media ${max.tablet} {
+    padding-bottom:-5em;
+
+
+  }
 `;
 
 const StyledPastProjectsSection = styled.div`
@@ -47,7 +53,12 @@ const StyledPastProjectsInfo = styled.div`
   @media ${max.tablet} {
     font-size: 15px;
     text-align: center;
+    padding-left: 0;
+    padding-right: 3em;
+
   }
+
+
 `;
 
 const StyledPastProjectsInfoContainer = styled.div`
@@ -58,6 +69,12 @@ const StyledPastProjectsTitle = styled(H2)`
   font-size: 1.5625em;
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
+
+
+  @media ${max.tablet} {
+    text-align: center;
+
+  }
 `;
 const StyledPastProjectsMembers = styled(P)`
   font-size: 0.8125em;
@@ -90,6 +107,11 @@ const StyledPastProjectsPhotos = styled.img`
   @media ${max.tabletLg} {
     height: 200px;
     width: 280px;
+  }
+
+  @media ${max.tablet} {
+    float: center;
+    padding-bottom: 1em;
   }
 `;
 

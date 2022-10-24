@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FennecFox from '../../../shared-ui/images/fennec-fox.svg';
 import Inky from '../../../shared-ui/images/inky.jpg';
 import Swaple from '../../../shared-ui/images/swaple.png';
 import Camel from '../../../shared-ui/images/camel.svg';
 import Duck from '../../../shared-ui/images/duck.png';
+import useMatchMedia from 'react-use-match-media';
 
 import {
   StyledPastProjectsSection,
@@ -22,71 +23,46 @@ import {
   StyledPastProjectsContainerBottom
 } from './PastProjectsSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
+import { min } from '../../../shared-ui/lib/responsive';
+import { pastProjectsData } from '../../lib/data';
 const PastProjectsSection: React.FC = () => {
+  function getImage(title: string): string {
+    if (title === 'Inky the Black Hole Pet, 2022') {
+      return Inky;
+    }
+    if (title === 'Swaple, 2022') {
+      return Swaple;
+    }
+    return Duck;
+  }
+
   return (
     <StyledPastProjects>
       <StyledCamel src={Camel} />
       <StyledFennecFox src={FennecFox} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>
-        <StyledPastProjectsContainer>
-          <StyledPastProjectsPhotos src={Inky} />
-          <StyledPastProjectsInfo>
-            <StyledPastProjectsTitle>
-              Inky the Black Hole Pet, 2022
-            </StyledPastProjectsTitle>
-            <StyledPastProjectsMembers>
-              by Rachael Cheung, Euann Gu, Jessica Luo
-            </StyledPastProjectsMembers>
-            <StyledPastProjectsDescription>
-              Inky is a desktop pet! He can perform different actions: be
-              dragged around, sleep, eat, etc.
-            </StyledPastProjectsDescription>
-            <PrimaryButton
-              btnText="View Project"
-              btnLink="https://devpost.com/software/inky-the-black-hole-pet
-              "
-              newTab
-            />
-          </StyledPastProjectsInfo>
-        </StyledPastProjectsContainer>
-
-        <StyledPastProjectsContainer>
-          <StyledPastProjectsPhotos src={Swaple} />
-          <StyledPastProjectsInfo>
-            <StyledPastProjectsTitle>Swaple, 2022</StyledPastProjectsTitle>
-            <StyledPastProjectsMembers>
-              by Bob Zheng, Tze Zhe Brandon Lim, Nathan Kim, Daniel Ostapenko
-            </StyledPastProjectsMembers>
-            <StyledPastProjectsDescription>
-              A parody of wordle, but you swap letters from a list of words
-              instead! Try and complete the game in as few moves as possible.
-            </StyledPastProjectsDescription>
-            <PrimaryButton
-              btnText="View Project"
-              btnLink="https://brandonlim8890.github.io/wordle_variation/"
-              newTab
-            />
-          </StyledPastProjectsInfo>
-        </StyledPastProjectsContainer>
-
-        <StyledPastProjectsContainerBottom>
-          <StyledPastProjectsPhotos src={Duck} />
-          <StyledPastProjectsInfo>
-            <StyledPastProjectsTitle>Oh Duck!, 2022</StyledPastProjectsTitle>
-            <StyledPastProjectsMembers>by Karyna Yen</StyledPastProjectsMembers>
-            <StyledPastProjectsDescription>
-              'Oh, Duck!' is a chrome chrome extension that replaces profane
-              words with a duck emoji.
-            </StyledPastProjectsDescription>
-            <PrimaryButton
-              btnText="View Project"
-              btnLink="https://devpost.com/software/oh-duck"
-              newTab
-            />
-          </StyledPastProjectsInfo>
-        </StyledPastProjectsContainerBottom>
+        {pastProjectsData.map((project) => (
+          <StyledPastProjectsContainer>
+            <StyledPastProjectsPhotos src={getImage(project.title)} />
+            <StyledPastProjectsInfo>
+              <StyledPastProjectsTitle>{project.title}</StyledPastProjectsTitle>
+              <StyledPastProjectsMembers>
+                {project.members}
+              </StyledPastProjectsMembers>
+              <StyledPastProjectsDescription>
+                {project.description}
+              </StyledPastProjectsDescription>
+              <PrimaryButton
+                btnText="View Project"
+                btnLink={project.btnLink}
+                newTab
+              />
+            </StyledPastProjectsInfo>
+          </StyledPastProjectsContainer>
+        ))}
       </StyledPastProjectsSection>
+
       <StyledPastProjectsInfoContainer>
         <StyledPastProjectsViewText>
           Interested in seeing more about our past events and past hacker

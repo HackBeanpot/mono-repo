@@ -22,3 +22,11 @@ export interface LandingSectionProps {
   isDay: boolean;
   setIsDay: (isDay: boolean) => void;
 }
+
+export interface PastProjectData{
+  title: string
+  members: string
+  description: string
+  btnLink: string
+
+}
