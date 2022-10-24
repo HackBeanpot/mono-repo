@@ -1,4 +1,3 @@
-import { TeamColumnInfo } from "../../shared-ui/lib/types";
 
 export interface FaqData {
   id: number;
@@ -13,7 +12,7 @@ export interface FaqItemProps {
   selectedQuestion: number;
   setSelectedQuestion: (id: number) => void;
 }
-export type SectionData = AboutSectionData | TeamColumnInfo;
+export type SectionData = AboutSectionData;
 
 export interface AboutSectionData {
   title: string;
