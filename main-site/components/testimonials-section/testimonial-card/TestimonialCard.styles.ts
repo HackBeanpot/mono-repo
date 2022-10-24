@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P } from '../../../../shared-ui/style/typography';
 
@@ -13,6 +14,10 @@ const StyledTestimonialCardBox = styled.div`
   border-radius: 2em;
   width: 22em;
   height: 28em;
+  @media ${max.tablet} {
+    width: 14em;
+    padding: 2em;
+  }
 `;
 
 const StyledTestimonialCardImage = styled.img`
@@ -36,8 +41,10 @@ const StyledTestimonialCardYear = styled(P)`
 
 const StyledTestimonialCardQuote = styled(P)`
   font-size: 0.85em;
-
   letter-spacing: 0.05em;
+  @media ${max.tablet} {
+    font-size: 0.67em;
+  }
 `;
 
 const StyledTestimonialButtons = styled.div`

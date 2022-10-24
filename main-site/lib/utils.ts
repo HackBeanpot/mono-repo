@@ -1,15 +1,15 @@
-import { SectionData, TestimonialData } from './types';
+import { TestimonialData } from './types';
 
 import karyna from '../../shared-ui/images/Karyna.png';
 import jimin from '../../shared-ui/images/Jimin.png';
 import spencer from '../../shared-ui/images/Spencer.png';
 import group from '../../shared-ui/images/group.png';
 
-export function getLeftOrRight(
+export function getLeftOrRight<T>(
   direction: string,
-  sectionData: SectionData[],
-  currItem: SectionData
-): SectionData {
+  sectionData: T[],
+  currItem: T
+): T {
   const dataLength = sectionData.length;
   const itemIndex = sectionData.indexOf(currItem);
   if (direction === 'left') {

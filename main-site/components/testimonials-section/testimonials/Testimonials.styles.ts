@@ -46,6 +46,8 @@ const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
     StyledCactusButtonsProps.isToggled ? '4em' : '3em'};
   padding: 1em;
   align-item: center;
+  margin-bottom: ${(StyledCactusButtonsProps): string =>
+    StyledCactusButtonsProps.isToggled ? '-0.5em' : '0'};
 `;
 
 export {
