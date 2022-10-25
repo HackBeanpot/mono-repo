@@ -25,7 +25,7 @@ const IndexPage: React.FC = () => {
       <ExploreSection />
       <AboutSection />
       <PastPhotosSection />
-      <EventsCalendarSection/>
+      <EventsCalendarSection />
       <CovidSection />
       <FaqSection />
       <AdventureAheadSection />
