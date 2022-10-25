@@ -79,6 +79,7 @@ const StyledPastProjectsTitle = styled(H2)`
 
   @media ${max.tablet} {
     text-align: center;
+    color: black;
   }
 `;
 const StyledPastProjectsMembers = styled(P)`
@@ -94,6 +95,9 @@ const StyledPastProjectsDescription = styled(P)`
   font-size: 18px;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
+  @media ${max.tablet} {
+    color: ${colors.TEXT_BROWN};
+  }
 `;
 
 const StyledPastProjectsViewText = styled(P)`
@@ -102,6 +106,8 @@ const StyledPastProjectsViewText = styled(P)`
   padding-top: 3.5em;
   padding-bottom: 2em;
   line-height: 2;
+  padding-left: 2em;
+  padding-right: 2em;
   color: ${colors.TEXT_BROWN};
 `;
 
@@ -148,7 +154,7 @@ const StyledCamel = styled.img`
   padding-top: 10em;
 
   @media ${max.tabletLg} {
-    display: none;
+    height: 20em;
   }
 `;
 export {
