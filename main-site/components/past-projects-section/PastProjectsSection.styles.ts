@@ -16,8 +16,12 @@ const StyledPastProjectsHeader = styled(H2)`
   text-align: center;
 
   @media ${max.tablet} {
-    padding-bottom: -5em;
+    padding-bottom: -10em;
   }
+`;
+
+const StyledPastProjectsDiv = styled.div`
+  margin: 0 1em;
 `;
 
 const StyledPastProjectsSection = styled.div`
@@ -27,10 +31,6 @@ const StyledPastProjectsSection = styled.div`
   margin: auto;
   border-radius: 1.25em;
   height: 100%;
-
-  @media ${max.tabletLg} {
-    margin-top: 6em;
-  }
 
   @media ${max.tablet} {
     background-color: transparent;
@@ -42,6 +42,11 @@ const StyledPastProjectsContainer = styled.div`
   padding-top: 3em;
   padding-left: 3em;
   padding-bottom: 4em;
+
+  @media ${max.tablet} {
+    display: absolute;
+    padding-left: 0;
+  }
 `;
 
 const StyledPastProjectsContainerBottom = styled.div`
@@ -74,7 +79,6 @@ const StyledPastProjectsTitle = styled(H2)`
 
   @media ${max.tablet} {
     text-align: center;
-    padding-top: 9em;
   }
 `;
 const StyledPastProjectsMembers = styled(P)`
@@ -102,25 +106,26 @@ const StyledPastProjectsViewText = styled(P)`
 `;
 
 const StyledPastProjectsPhotos = styled.img`
+  @media ${max.tablet} {
+    float: none;
+    padding-bottom: 1em;
+    position: relative;
+    display: inline-block;
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  @media ${max.tabletLg} {
+    height: 200px;
+    width: 280px;
+    position: relative;
+  }
+
   left: 0;
   float: left;
   width: 320px;
   height: 220px;
   padding-right: 1em;
-
-  @media ${max.tabletLg} {
-    height: 200px;
-    width: 280px;
-    align: center;
-    position: relative;
-  }
-
-  @media ${max.tablet} {
-    float: center;
-    padding-bottom: 1em;
-    position: relative;
-    display: inline-block;
-  }
 `;
 
 const StyledFennecFox = styled.img`
@@ -161,5 +166,6 @@ export {
   StyledPastProjectsInfoContainer,
   StyledPastProjects,
   StyledPastProjectsContainerBottom,
-  StyledArrowContainer
+  StyledArrowContainer,
+  StyledPastProjectsDiv
 };
