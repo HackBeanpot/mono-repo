@@ -3,8 +3,6 @@ import { colors } from '../../../shared-ui/style/colors';
 import { H2, P } from '../../../shared-ui/style/typography';
 import { max } from '../../../shared-ui/lib/responsive';
 
-const StyledPastProjects = styled.div``;
-
 const StyledArrowContainer = styled.div`
   display: flex;
   position: relative;
@@ -61,7 +59,7 @@ const StyledPastProjectsInfo = styled.div`
   padding-right: 3em;
 
   @media ${max.tablet} {
-    font-size: 15px;
+    font-size: 0.9375em;
     text-align: center;
     padding-left: 0;
     padding-right: 3em;
@@ -92,7 +90,7 @@ const StyledPastProjectsMembers = styled(P)`
 `;
 
 const StyledPastProjectsDescription = styled(P)`
-  font-size: 18px;
+  font-size: 1.125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
   @media ${max.tablet} {
@@ -122,15 +120,15 @@ const StyledPastProjectsPhotos = styled.img`
   }
 
   @media ${max.tabletLg} {
-    height: 200px;
-    width: 280px;
+    height: 12.5em;
+    width: 17.5em;
     position: relative;
   }
 
   left: 0;
   float: left;
-  width: 320px;
-  height: 220px;
+  width: 20em;
+  height: 13.75em;
   padding-right: 1em;
 `;
 
@@ -170,7 +168,6 @@ export {
   StyledPastProjectsInfo,
   StyledPastProjectsViewText,
   StyledPastProjectsInfoContainer,
-  StyledPastProjects,
   StyledPastProjectsContainerBottom,
   StyledArrowContainer,
   StyledPastProjectsDiv

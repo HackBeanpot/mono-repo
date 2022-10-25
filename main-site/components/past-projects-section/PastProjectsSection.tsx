@@ -20,7 +20,6 @@ import {
   StyledPastProjectsViewText,
   StyledPastProjectsInfoContainer,
   StyledCamel,
-  StyledPastProjects,
   StyledArrowContainer,
   StyledPastProjectsDiv
 } from './PastProjectsSection.styles';
@@ -47,7 +46,7 @@ const PastProjectsSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
 
   return (
-    <StyledPastProjects>
+    <div>
       <StyledCamel src={Camel} />
       <StyledFennecFox src={FennecFox} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
@@ -134,7 +133,7 @@ const PastProjectsSection: React.FC = () => {
           newTab
         />
       </StyledPastProjectsInfoContainer>
-    </StyledPastProjects>
+    </div>
   );
 };
 
