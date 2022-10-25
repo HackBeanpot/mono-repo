@@ -5,6 +5,7 @@ import Swaple from '../../../shared-ui/images/swaple.png';
 import Camel from '../../../shared-ui/images/camel.svg';
 import Duck from '../../../shared-ui/images/duck.png';
 import useMatchMedia from 'react-use-match-media';
+import Arrow from '../../../shared-ui/components/arrow/Arrow';
 
 import {
   StyledPastProjectsSection,
@@ -20,11 +21,14 @@ import {
   StyledPastProjectsInfoContainer,
   StyledCamel,
   StyledPastProjects,
-  StyledPastProjectsContainerBottom
+  StyledArrowContainer
 } from './PastProjectsSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
 import { pastProjectsData } from '../../lib/data';
+import { PastProjectData } from '../../lib/types';
+import { getLeftOrRight } from '../../lib/utils';
+
 const PastProjectsSection: React.FC = () => {
   function getImage(title: string): string {
     if (title === 'Inky the Black Hole Pet, 2022') {
@@ -36,32 +40,82 @@ const PastProjectsSection: React.FC = () => {
     return Duck;
   }
 
+  const [currItem, setCurrItem] = useState<PastProjectData>(
+    pastProjectsData[0]
+  );
+  const isDesktop = useMatchMedia(min.tablet);
+
   return (
     <StyledPastProjects>
       <StyledCamel src={Camel} />
       <StyledFennecFox src={FennecFox} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>
-        {pastProjectsData.map((project) => (
-          <StyledPastProjectsContainer>
-            <StyledPastProjectsPhotos src={getImage(project.title)} />
-            <StyledPastProjectsInfo>
-              <StyledPastProjectsTitle>{project.title}</StyledPastProjectsTitle>
+        {isDesktop &&
+          pastProjectsData.map((project) => (
+            <StyledPastProjectsContainer>
+              <StyledPastProjectsPhotos src={getImage(project.title)} />
+              <StyledPastProjectsInfo>
+                <StyledPastProjectsTitle>
+                  {project.title}
+                </StyledPastProjectsTitle>
+                <StyledPastProjectsMembers>
+                  {project.members}
+                </StyledPastProjectsMembers>
+                <StyledPastProjectsDescription>
+                  {project.description}
+                </StyledPastProjectsDescription>
+                <PrimaryButton
+                  btnText="View Project"
+                  btnLink={project.btnLink}
+                  newTab
+                />
+              </StyledPastProjectsInfo>
+            </StyledPastProjectsContainer>
+          ))}
+      </StyledPastProjectsSection>
+
+      {!isDesktop && (
+        <>
+          <StyledPastProjectsSection>
+            <StyledPastProjectsPhotos src={getImage(currItem.title)} />
+
+            <StyledArrowContainer>
+              <Arrow
+                left
+                onClick={(): void =>
+                  setCurrItem(
+                    getLeftOrRight('left', pastProjectsData, currItem)
+                  )
+                }
+              />
+              <StyledPastProjectsTitle>
+                {currItem.title}
+              </StyledPastProjectsTitle>
               <StyledPastProjectsMembers>
-                {project.members}
+                {currItem.members}
               </StyledPastProjectsMembers>
               <StyledPastProjectsDescription>
-                {project.description}
+                {currItem.description}
               </StyledPastProjectsDescription>
-              <PrimaryButton
-                btnText="View Project"
-                btnLink={project.btnLink}
-                newTab
+              <Arrow
+                left={false}
+                onClick={(): void =>
+                  setCurrItem(
+                    getLeftOrRight('right', pastProjectsData, currItem)
+                  )
+                }
               />
-            </StyledPastProjectsInfo>
-          </StyledPastProjectsContainer>
-        ))}
-      </StyledPastProjectsSection>
+            </StyledArrowContainer>
+
+            <PrimaryButton
+              btnText="View Project"
+              btnLink={currItem.btnLink}
+              newTab
+            />
+          </StyledPastProjectsSection>
+        </>
+      )}
 
       <StyledPastProjectsInfoContainer>
         <StyledPastProjectsViewText>

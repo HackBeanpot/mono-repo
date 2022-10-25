@@ -5,15 +5,18 @@ import { max } from '../../../shared-ui/lib/responsive';
 
 const StyledPastProjects = styled.div``;
 
+const StyledArrowContainer = styled.div`
+  display: flex;
+  position: relative;
+`;
+
 const StyledPastProjectsHeader = styled(H2)`
   color: ${colors.BLACK};
   padding-bottom: 0.5em;
   text-align: center;
 
   @media ${max.tablet} {
-    padding-bottom:-5em;
-
-
+    padding-bottom: -5em;
   }
 `;
 
@@ -31,12 +34,14 @@ const StyledPastProjectsSection = styled.div`
 
   @media ${max.tablet} {
     background-color: transparent;
+    text-align: center;
   }
 `;
 
 const StyledPastProjectsContainer = styled.div`
   padding-top: 3em;
   padding-left: 3em;
+  padding-bottom: 4em;
 `;
 
 const StyledPastProjectsContainerBottom = styled.div`
@@ -55,10 +60,7 @@ const StyledPastProjectsInfo = styled.div`
     text-align: center;
     padding-left: 0;
     padding-right: 3em;
-
   }
-
-
 `;
 
 const StyledPastProjectsInfoContainer = styled.div`
@@ -70,16 +72,18 @@ const StyledPastProjectsTitle = styled(H2)`
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
 
-
   @media ${max.tablet} {
     text-align: center;
-
+    padding-top: 9em;
   }
 `;
 const StyledPastProjectsMembers = styled(P)`
   font-size: 0.8125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
+
+  @media ${max.tablet} {
+  }
 `;
 
 const StyledPastProjectsDescription = styled(P)`
@@ -107,18 +111,22 @@ const StyledPastProjectsPhotos = styled.img`
   @media ${max.tabletLg} {
     height: 200px;
     width: 280px;
+    align: center;
+    position: relative;
   }
 
   @media ${max.tablet} {
     float: center;
     padding-bottom: 1em;
+    position: relative;
+    display: inline-block;
   }
 `;
 
 const StyledFennecFox = styled.img`
   position: absolute;
   right: 0;
-  padding-top: 46em;
+  padding-top: 51em;
   z-index: 1;
   height: 20em;
   width: 20em;
@@ -152,5 +160,6 @@ export {
   StyledPastProjectsViewText,
   StyledPastProjectsInfoContainer,
   StyledPastProjects,
-  StyledPastProjectsContainerBottom
+  StyledPastProjectsContainerBottom,
+  StyledArrowContainer
 };
