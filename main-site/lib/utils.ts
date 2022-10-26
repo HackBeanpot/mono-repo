@@ -1,10 +1,8 @@
-import { SectionData } from './types';
-
-export function getLeftOrRight(
+export function getLeftOrRight<T>(
   direction: string,
-  sectionData: SectionData[],
-  currItem: SectionData
-): SectionData {
+  sectionData: T[],
+  currItem: T
+): T {
   const dataLength = sectionData.length;
   const itemIndex = sectionData.indexOf(currItem);
   if (direction === 'left') {
