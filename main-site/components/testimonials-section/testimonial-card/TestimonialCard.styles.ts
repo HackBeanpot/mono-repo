@@ -14,6 +14,9 @@ const StyledTestimonialCardBox = styled.div`
   border-radius: 2em;
   width: 22em;
   height: 28em;
+  @media ${max.tablet} {
+    margin-bottom: 10em;
+  }
 
   @media ${max.tablet} {
     width: 18em;
@@ -67,6 +70,7 @@ const StyledTestimonialCardQuote = styled(P)`
 const StyledTestimonialButtons = styled.div`
   cursor: pointer;
   padding: 1em;
+  margin-bottom: 4em;
 `;
 
 export {
