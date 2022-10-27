@@ -2,7 +2,7 @@ import { TestimonialData } from './types';
 
 import karyna from '../../shared-ui/images/Karyna.png';
 import jimin from '../../shared-ui/images/Jimin.png';
-import spencer from '../../shared-ui/images/Spencer.png';
+import spencer2 from '../../shared-ui/images/spencer2.png';
 import group from '../../shared-ui/images/group.png';
 
 export function getLeftOrRight<T>(
@@ -59,7 +59,7 @@ export function getImage(author: string): string {
     return jimin;
   }
   if (author === 'Spencer Shao') {
-    return spencer;
+    return spencer2;
   }
   return group;
 }

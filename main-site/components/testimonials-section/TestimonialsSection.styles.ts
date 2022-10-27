@@ -5,4 +5,5 @@ const StyledTestimonialsSectionContainer = styled.div`
   position: relative;
   overflow: hidden;
 `;
+
 export { StyledTestimonialsSectionContainer };

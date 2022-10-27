@@ -15,8 +15,15 @@ const StyledTestimonialCardBox = styled.div`
   width: 22em;
   height: 28em;
   @media ${max.tablet} {
-    width: 14em;
+    width: 18em;
     padding: 2em;
+    height: 32em;
+  }
+
+  @media ${max.tabletXs} {
+    width: 12em;
+    height: 35em;
+    padding: 1.5em;
   }
 `;
 
@@ -26,6 +33,9 @@ const StyledTestimonialCardImage = styled.img`
   height: 50%;
   text-align: center;
   margin-bottom: 1em;
+  @media ${max.tabletXs} {
+    border-radius: 1em;
+  }
 `;
 
 const StyledTestimonialCardAuthor = styled(H4)`
@@ -43,7 +53,10 @@ const StyledTestimonialCardQuote = styled(P)`
   font-size: 0.85em;
   letter-spacing: 0.05em;
   @media ${max.tablet} {
-    font-size: 0.67em;
+    font-size: 0.8em;
+  }
+  @media ${max.tabletXs} {
+    font-size: 0.65em;
   }
 `;
 
