@@ -45,3 +45,10 @@ export interface LeftOrRightTestimonialCardProps {
 export interface StyledCactusButtonsProps {
   isToggled: boolean;
 }
+
+export interface PastProjectData {
+  title: string;
+  members: string;
+  description: string;
+  btnLink: string;
+}
