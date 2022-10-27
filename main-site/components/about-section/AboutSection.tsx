@@ -58,6 +58,7 @@ const AboutSection: React.FC = () => {
               <StyledItemTitle color={colors.TEXT_BROWN}>
                 {currItem.title}
               </StyledItemTitle>
+
               <StyledArrowDescriptionContainer>
                 <Arrow
                   left
@@ -88,6 +89,7 @@ const AboutSection: React.FC = () => {
           />
         </StyledItemsContainer>
       )}
+
       {isDesktop && (
         <StyledItemsContainer>
           {aboutSectionData.map((curr) => (

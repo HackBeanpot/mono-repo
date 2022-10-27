@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-    EventsHeader,
-    EventsSubHeader,
-    StyledEventsBox, 
-    StyledTextContainer, 
-    EventsLocationP, 
-    TextLeftContainer
-  } from '../EventsCalendarSection.styles';
+  EventsHeader,
+  EventsSubHeader,
+  StyledEventsBox,
+  StyledTextContainer,
+  EventsLocationP,
+  TextLeftContainer
+} from '../EventsCalendarSection.styles';
 
 const NonDesktopTexts: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const NonDesktopTexts: React.FC = () => {
               Intro to HTML, CSS, and JavaScript
             </EventsSubHeader>
             <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
-            <br/>
+            <br />
           </TextLeftContainer>
           <EventsLocationP>
             Northeastern University <br />
