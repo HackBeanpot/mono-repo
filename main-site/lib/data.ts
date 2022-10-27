@@ -120,7 +120,7 @@ export const testimonialSectionData: TestimonialData[] = [
   {
     id: 2,
     author: 'Spencer Shao',
-    year: "Northeastern '23",
+    year: "Northeastern '24",
     quote:
       '"I loved the collaboration between me, my teammates, and the amazing mentors! I really felt like it was a very welcoming environment for me to prioritize learning and having fun over 3 days. Prior to this hackathon I had never touched any kind of React or front-end web development but I came out of it feeling accomplished, having achieved a working website!"'
   },
