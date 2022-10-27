@@ -12,7 +12,7 @@ export interface TabInfo {
 
 export interface TeamColumnInfo {
   teamLabel: string;
-  listOfPictures: string[];
+  listOfPictures: string[][];
 }
 
 export interface HeaderProps {

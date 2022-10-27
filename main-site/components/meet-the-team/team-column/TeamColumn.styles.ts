@@ -23,6 +23,10 @@ letter-spacing: 0.1em;
 }
 `;
 
+const ImageContainer = styled.div`
+
+`;
+
 const StyledHeadshot = styled.img`
 padding-top: 2em;
 width: 8.5em;
@@ -44,5 +48,6 @@ width: 8.5em;
 export {
     StyledTeamColumn, 
     StyledLabel, 
-    StyledHeadshot
+    StyledHeadshot, 
+    ImageContainer
 }
