@@ -14,6 +14,7 @@ const StyledTestimonialCardBox = styled.div`
   border-radius: 2em;
   width: 22em;
   height: 28em;
+
   @media ${max.tablet} {
     width: 18em;
     padding: 2em;
@@ -33,6 +34,7 @@ const StyledTestimonialCardImage = styled.img`
   height: 50%;
   text-align: center;
   margin-bottom: 1em;
+
   @media ${max.tabletXs} {
     border-radius: 1em;
   }
@@ -52,9 +54,11 @@ const StyledTestimonialCardYear = styled(P)`
 const StyledTestimonialCardQuote = styled(P)`
   font-size: 0.85em;
   letter-spacing: 0.05em;
+
   @media ${max.tablet} {
     font-size: 0.8em;
   }
+
   @media ${max.tabletXs} {
     font-size: 0.65em;
   }
