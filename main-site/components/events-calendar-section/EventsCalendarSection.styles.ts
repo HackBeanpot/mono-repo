@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { max, min } from "../../../shared-ui/lib/responsive";
 import { colors } from "../../../shared-ui/style/colors";
-import { fonts, P } from '../../../shared-ui/style/typography';
+import { fonts, H2, P } from '../../../shared-ui/style/typography';
 
 const StyledSectionContainer = styled.div`
-text-align: center;
 padding-top: 15em;
 padding-bottom: 12em;
 @media ${max.tabletSm} {
@@ -179,6 +178,10 @@ bottom: 2em;
 }
 `;
 
+const StyledH2 = styled(H2)`
+text-align: center;
+`;
+
 
 
 
@@ -195,5 +198,6 @@ export {
     StyledEventsBox, 
     StyledTextContainer, 
     EventsLocationP, 
-    TextLeftContainer
+    TextLeftContainer, 
+    StyledH2
 }

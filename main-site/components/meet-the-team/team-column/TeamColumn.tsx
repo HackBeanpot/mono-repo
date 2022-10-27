@@ -4,7 +4,8 @@ import {
   StyledTeamColumn,
   StyledLabel,
   StyledHeadshot, 
-  ImageContainer
+  ImageContainer, 
+  StyledImageRow
 } from './TeamColumn.styles';
 
 const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
@@ -15,11 +16,13 @@ const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
         {columnInfo.teamLabel}
       </StyledLabel>
       <ImageContainer>
-      {listOfPictures.map((group: string[]) => {
-        group.map((picture: string) => {
-          <StyledHeadshot src={picture} />;
-        })
-      })}
+      {listOfPictures.map((rowPics: string[]) => 
+          <StyledImageRow>
+            {rowPics.map((pic: string) => 
+              <StyledHeadshot src={pic} />
+            )}
+          </StyledImageRow>
+        )}
       </ImageContainer>
     </StyledTeamColumn>
   );

@@ -27,6 +27,10 @@ const ImageContainer = styled.div`
 
 `;
 
+const StyledImageRow = styled.div`
+
+`;
+
 const StyledHeadshot = styled.img`
 padding-top: 2em;
 width: 8.5em;
@@ -49,5 +53,6 @@ export {
     StyledTeamColumn, 
     StyledLabel, 
     StyledHeadshot, 
-    ImageContainer
+    ImageContainer, 
+    StyledImageRow
 }

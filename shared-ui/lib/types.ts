@@ -54,3 +54,4 @@ export interface MobileTeamColumnProps {
 export interface StyledTeamLabelProps {
   twoLines: boolean;
 }
+
