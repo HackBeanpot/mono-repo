@@ -15,6 +15,7 @@ import CovidSection from '../../components/covid-section/CovidSection';
 import PastPhotosSection from '../../components/past-photos-section/PastPhotosSection';
 import AboutSection from '../../components/about-section/AboutSection';
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
+import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 
 const IndexPage: React.FC = () => {
@@ -32,6 +33,7 @@ const IndexPage: React.FC = () => {
       <EventsCalendarSection />
       <CovidSection />
       <FaqSection />
+      <MeetTheTeamSection />
       <AdventureAheadSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
