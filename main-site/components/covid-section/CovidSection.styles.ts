@@ -32,7 +32,7 @@ const StyledDesertVan = styled.img`
   }
 `;
 
-const StyledCovidInformationAndButton = styled.div`
+const StyledCovidTitleAndInformation = styled.div`
   padding: 0 2em;
   @media ${min.tablet} {
     width: 60%;
@@ -46,16 +46,6 @@ const StyledCovidInformationAndButton = styled.div`
   @media ${min.desktop} {
     padding-left: 40em;
     padding-right: 10em;
-  }
-`;
-
-const StyledCovidPolicyButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.5em;
-  @media ${min.tablet} {
-    justify-content: left;
   }
 `;
 
@@ -73,8 +63,7 @@ const StyledTitle = styled(H3)`
 export {
   StyledCovidSectionContainer,
   StyledDesertVan,
-  StyledCovidInformationAndButton,
-  StyledCovidPolicyButtonContainer,
+  StyledCovidTitleAndInformation,
   StyledCovidSectionInformation,
   StyledTitle
 };
