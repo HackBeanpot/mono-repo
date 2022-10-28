@@ -24,10 +24,9 @@ const MeetTheTeamSection: React.FC = () => {
           ))}
         </StyledImageContainer>
       )}
-      {!isDesktop && (<MobileTeamColumn listOfColumnInfo={teamColumnsInfo}/>)}
+      {!isDesktop && <MobileTeamColumn listOfColumnInfo={teamColumnsInfo} />}
     </StyledMeetTheTeamSection>
   );
 };
 
 export default MeetTheTeamSection;
-

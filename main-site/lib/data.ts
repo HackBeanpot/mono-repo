@@ -1,4 +1,9 @@
-import { PastProjectData, AboutSectionData, FaqData } from './types';
+import {
+  PastProjectData,
+  AboutSectionData,
+  FaqData,
+  TestimonialData
+} from './types';
 
 export const aboutSectionData: AboutSectionData[] = [
   {
@@ -94,6 +99,38 @@ export const FaqSectionData: FaqData[] = [
     question: 'What will I need to bring',
     answer:
       'To have a great time at HackBeanpot 2022, you should prepare your workspace with your computer, scrap paper for ideation, any hardware you may want for your hack and your best space cadet energy to learn and create new things! Stay tuned for an Astronaut Training Manual in your inbox sent out closer to the event with more details.'
+  }
+];
+
+export const testimonialSectionData: TestimonialData[] = [
+  {
+    id: 0,
+    author: 'Karyna Yen',
+    year: "Northeastern '25",
+    quote:
+      '"I had a ton of fun at HackBeanpot! We made a Chrome extension that censored inappropriate language on the internet. My favorite part was when one of my teammates got an animated duck to quack when clicking on the extension icon!"'
+  },
+  {
+    id: 1,
+    author: 'Ji-min Kim',
+    year: "Northeastern '22",
+    quote:
+      '"I joined the astronaut bootcamp event in 2021, and I wanted to highlight my great experience there. I was able to connect with friendly people, learn about web development through workshops, and have free pizza for lunch! It was a really unique experience I had during the weekend, and this event also gave me motivation for me to join my first hackathon event in bostonhacks!"'
+  },
+  {
+    id: 2,
+    author: 'Spencer Shao',
+    year: "Northeastern '24",
+    quote:
+      '"I loved the collaboration between me, my teammates, and the amazing mentors! I really felt like it was a very welcoming environment for me to prioritize learning and having fun over 3 days. Prior to this hackathon I had never touched any kind of React or front-end web development but I came out of it feeling accomplished, having achieved a working website!"'
+  },
+
+  {
+    id: 3,
+    author: 'Raisa Bhuiyan',
+    year: "Northeastern '25",
+    quote:
+      '"I enjoyed working with my teammates and trying to debug our mistakes. Debugging is a lot more fun when you have people doing it with you."'
   }
 ];
 

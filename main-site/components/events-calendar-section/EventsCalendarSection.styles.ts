@@ -90,7 +90,6 @@ const StyledEventsCalendar = styled.div`
   }
   @media ${max.tabletSm} {
     height: 28em;
-    margin-left: 5%;
   }
   @media ${max.mobile} {
     height: 18em;
@@ -109,7 +108,6 @@ const StyledEventsCactus = styled.img`
   }
   @media ${min.tablet} {
     top: 50em;
-    right: 0;
   }
   @media ${min.tabletSm} {
     right: 0;

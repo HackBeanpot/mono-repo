@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import Arrow from '../../arrow/Arrow';
-import {
-  MobileTeamColumnProps,
-  TeamColumnInfo
-} from '../../../lib/types';
+import { MobileTeamColumnProps, TeamColumnInfo } from '../../../lib/types';
 import { getLeftOrRight } from '../../../../main-site/lib/utils';
 import {
   StyledMobileTeamColumn,
   LabelArrowContainer,
   MobileImageContainer,
-  StyledImageRow, 
-  StyledHeadshot, 
+  StyledImageRow,
+  StyledHeadshot,
   StyledLabel
 } from './MobileTeamColumn.styles';
 
@@ -27,7 +24,13 @@ const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
         <Arrow
           left
           onClick={(): void =>
-            setCurColumn(getLeftOrRight<TeamColumnInfo>('left', listOfColumnInfo, curColumn))
+            setCurColumn(
+              getLeftOrRight<TeamColumnInfo>(
+                'left',
+                listOfColumnInfo,
+                curColumn
+              )
+            )
           }
         />
         <StyledLabel twoLines={curColumn.teamLabel == 'Social Outreach'}>
@@ -36,18 +39,24 @@ const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
         <Arrow
           left={false}
           onClick={(): void =>
-            setCurColumn(getLeftOrRight<TeamColumnInfo>('right', listOfColumnInfo, curColumn))
+            setCurColumn(
+              getLeftOrRight<TeamColumnInfo>(
+                'right',
+                listOfColumnInfo,
+                curColumn
+              )
+            )
           }
         />
       </LabelArrowContainer>
       <MobileImageContainer>
-        {listOfPictures.map((rowPics: string[]) => 
+        {listOfPictures.map((rowPics: string[]) => (
           <StyledImageRow>
-            {rowPics.map((pic: string) => 
+            {rowPics.map((pic: string) => (
               <StyledHeadshot src={pic} />
-            )}
+            ))}
           </StyledImageRow>
-        )}
+        ))}
       </MobileImageContainer>
     </StyledMobileTeamColumn>
   );

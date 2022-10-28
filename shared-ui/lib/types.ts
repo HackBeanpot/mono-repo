@@ -1,4 +1,3 @@
-
 export interface ButtonProps {
   btnText: string;
   btnLink: string;
@@ -54,4 +53,3 @@ export interface MobileTeamColumnProps {
 export interface StyledTeamLabelProps {
   twoLines: boolean;
 }
-

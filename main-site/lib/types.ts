@@ -1,4 +1,3 @@
-
 export interface FaqData {
   id: number;
   question: string;
@@ -22,6 +21,29 @@ export interface AboutSectionData {
 export interface LandingSectionProps {
   isDay: boolean;
   setIsDay: (isDay: boolean) => void;
+}
+
+export interface TestimonialData {
+  id: number;
+  author: string;
+  year: string;
+  quote: string;
+}
+
+export interface TestimonialCardProps {
+  id: number;
+  author: string;
+  year: string;
+  quote: string;
+  currentIndex: number;
+}
+
+export interface LeftOrRightTestimonialCardProps {
+  testimonial: TestimonialData;
+}
+
+export interface StyledCactusButtonsProps {
+  isToggled: boolean;
 }
 
 export interface PastProjectData {
