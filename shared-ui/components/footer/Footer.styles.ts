@@ -46,12 +46,15 @@ const StyledHBPContent = styled.div`
 `;
 
 const StyledHackBeanpotLogo = styled.img`
+  align-self: flex-start;
+  padding: 0.7em 0em 0em 0.7em;
+  @media ${max.tabletLg} {
+    padding: 0.7em 0em 0em 5em;
+  }
   @media ${max.tablet} {
     align-self: auto;
     padding: 0.7em 0em 0em 0em;
   }
-  align-self: flex-start;
-  padding: 0.7em 0em 0em 5em;
 `;
 
 const StyledFooterContentContainer = styled.div`
