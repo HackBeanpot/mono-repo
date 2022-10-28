@@ -24,7 +24,7 @@ const IndexPage: React.FC = () => {
   return (
     <div className="parent">
       <Header tabs={homeTabInfo} isDay={isDay} />
-      <Background isDay={isDay} />
+      {/* <Background isDay={isDay} /> */}
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />
