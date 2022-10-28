@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { max } from "../../../../shared-ui/lib/responsive";
-import { StyledTeamLabelProps } from "../../../../shared-ui/lib/types";
-import { colors } from "../../../../shared-ui/style/colors";
-import { P } from "../../../../shared-ui/style/typography";
+import { max } from "../../../lib/responsive";
+import { StyledTeamLabelProps } from "../../../lib/types";
+import { colors } from "../../../style/colors";
+import { P } from "../../../style/typography";
 
 const StyledMobileTeamColumn = styled.div`
 padding-top: 2.5em;

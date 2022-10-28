@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Arrow from '../../../../shared-ui/components/arrow/Arrow';
+import Arrow from '../../arrow/Arrow';
 import {
   MobileTeamColumnProps,
   TeamColumnInfo
-} from '../../../../shared-ui/lib/types';
-import { getLeftOrRight } from '../../../lib/utils';
+} from '../../../lib/types';
+import { getLeftOrRight } from '../../../../main-site/lib/utils';
 import {
   StyledMobileTeamColumn,
   LabelArrowContainer,

@@ -1,8 +1,8 @@
 import React from 'react';
-import { teamInfo } from '../../../shared-ui/lib/data';
-import { min } from '../../../shared-ui/lib/responsive';
-import { TeamColumnInfo } from '../../../shared-ui/lib/types';
-import { H2 } from '../../../shared-ui/style/typography';
+import { teamInfo } from '../../lib/data';
+import { min } from '../../lib/responsive';
+import { TeamColumnInfo } from '../../lib/types';
+import { H2 } from '../../style/typography';
 import useMatchMedia from 'react-use-match-media';
 import {
   StyledMeetTheTeamSection,

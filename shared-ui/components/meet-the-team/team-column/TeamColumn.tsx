@@ -1,5 +1,5 @@
 import React from 'react';
-import { TeamColumnProps } from '../../../../shared-ui/lib/types';
+import { TeamColumnProps } from '../../../lib/types';
 import {
   StyledTeamColumn,
   StyledLabel,
