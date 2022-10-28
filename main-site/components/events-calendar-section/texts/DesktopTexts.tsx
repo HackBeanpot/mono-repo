@@ -7,12 +7,13 @@ import {
   StyledEventsBox,
   StyledTextContainer,
   EventsLocationP,
-  TextLeftContainer
+  TextLeftContainer,
+  StyledDesktopTextsContainer
 } from '../EventsCalendarSection.styles';
 
 const DesktopTexts: React.FC = () => {
   return (
-    <>
+    <StyledDesktopTextsContainer>
       <StyledEventsBox>
         <StyledTextContainer>
           <TextLeftContainer>
@@ -60,7 +61,7 @@ const DesktopTexts: React.FC = () => {
           <EventsHeader>Go Workshop - mid January</EventsHeader>
         </StyledTextContainer>
       </StyledEventsBox>
-    </>
+    </StyledDesktopTextsContainer>
   );
 };
 
