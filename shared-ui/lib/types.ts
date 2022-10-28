@@ -1,3 +1,4 @@
+
 export interface ButtonProps {
   btnText: string;
   btnLink: string;
@@ -7,6 +8,11 @@ export interface ButtonProps {
 export interface TabInfo {
   name: string;
   link: string;
+}
+
+export interface TeamColumnInfo {
+  teamLabel: string;
+  listOfPictures: string[][];
 }
 
 export interface HeaderProps {
@@ -36,3 +42,16 @@ export interface StyledFooterProps {
 export interface BackgroundProps {
   isDay: boolean;
 }
+
+export interface TeamColumnProps {
+  columnInfo: TeamColumnInfo;
+}
+
+export interface MobileTeamColumnProps {
+  listOfColumnInfo: TeamColumnInfo[];
+}
+
+export interface StyledTeamLabelProps {
+  twoLines: boolean;
+}
+
