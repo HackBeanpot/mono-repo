@@ -7,7 +7,7 @@ const StyledFaqSectionContainer = styled.div`
   text-align: center;
   position: relative;
   top: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 10em;
 `;
 
 const StyledCactus = styled.img`
