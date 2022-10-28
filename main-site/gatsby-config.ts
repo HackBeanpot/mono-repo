@@ -15,7 +15,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint:
-          'https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431'
+          'https://hackbeanpot.us10.list-manage.com/subscribe/post?u=a98050d47fdae2481521f0474&id=dccd8c8431&f_id=00e336e2f0'
       }
     }
   ]
