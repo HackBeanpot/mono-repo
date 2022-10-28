@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../pageStyles/globals.css';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/index.css';
 import '../../../shared-ui/style/global.css';
@@ -21,7 +22,7 @@ import PastProjectsSection from '../../components/past-projects-section/PastProj
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
   return (
-    <div>
+    <div className="parent">
       <Header tabs={homeTabInfo} isDay={isDay} />
       <Background isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />

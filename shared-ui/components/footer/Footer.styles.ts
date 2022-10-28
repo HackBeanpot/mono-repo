@@ -12,16 +12,15 @@ const StyledFooter = styled.div<StyledFooterProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 28em;
+  height: 35em;
+  @media ${min.tabletLg} {
+    height: 28em;
+    align-items: left;
+  }
   @media ${min.desktop} {
     height: 23em;
     flex-direction: row;
     align-items: flex-start;
-  }
-
-  @media ${max.tabletLg} {
-    align-items: left;
-    height: 35em;
   }
 `;
 
@@ -31,15 +30,18 @@ const StyledHBPContent = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+
   @media ${max.tablet} {
     padding: 0;
     width: 20em;
+  }
+  @media ${max.tabletLg} {
+    padding: 2em 0em 4em 0em;
   }
   @media ${max.desktop} {
     align-items: center;
     gap: 1em;
     justify-content: center;
-    padding: 2em 0em 4em 0em;
   }
 `;
 
@@ -49,7 +51,7 @@ const StyledHackBeanpotLogo = styled.img`
     padding: 0.7em 0em 0em 0em;
   }
   align-self: flex-start;
-  padding: 0.7em 0em 0em 0.7em;
+  padding: 0.7em 0em 0em 5em;
 `;
 
 const StyledFooterContentContainer = styled.div`
@@ -106,9 +108,7 @@ const StyledButtonContainer = styled.div`
     align-items: center;
     gap: 1em;
     justify-content: center;
-    padding: 2em 0em 4em 0em;
   }
-  padding: 3em 0;
 `;
 
 const StyledEmailInput = styled.input`
@@ -144,7 +144,9 @@ const StyledButtonRow = styled.div`
   align-items: center;
   @media ${max.desktop} {
     flex-direction: column;
+    margin-top: 0;
   }
+  margin-top: -4em;
 `;
 
 const StyledSocialMediaButtons = styled.div`
@@ -171,20 +173,19 @@ const StyledFooterTextLink = styled.a`
 `;
 
 const StyledFooterCodeOfConduct = styled.div`
-  @media ${min.tablet} {
-    display: flex;
-  }
   text-align: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding-left: 0em;
   padding-top: 2em;
-  text-align: left;
-
-  @media ${max.tabletLg} {
-    flex-direction: column;
-    text-align: center;
+  text-align: center;
+  @media ${min.tablet} {
+    padding-top: 0;
+    display: flex;
+  }
+  @media ${min.tabletLg} {
+    text-align: left;
   }
 `;
 
