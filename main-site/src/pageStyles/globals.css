@@ -17,3 +17,8 @@
   background-image: url(../../../shared-ui/images/mobile-dark-background.svg);
   background-size: cover;
 }
+
+html,
+body {
+  width: 100vw;
+}

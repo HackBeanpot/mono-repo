@@ -54,9 +54,9 @@ const IndexPage: React.FC = () => {
       <EventsCalendarSection />
       <TestimonialsSection />
       <PastProjectsSection />
+      <FaqSection />
       <PastPhotosSection />
       <CovidSection />
-      <FaqSection />
       <MeetTheTeamSection />
       <AdventureAheadSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />

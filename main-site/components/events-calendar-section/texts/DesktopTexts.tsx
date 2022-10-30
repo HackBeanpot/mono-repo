@@ -52,13 +52,15 @@ const DesktopTexts: React.FC = () => {
 
       <StyledEventsBox>
         <StyledTextContainer>
-          <EventsHeader>Security + Tech Discussion - mid November</EventsHeader>
+          <EventsHeader>
+            Cybersecurity Workshop + Minihack - January
+          </EventsHeader>
         </StyledTextContainer>
       </StyledEventsBox>
 
       <StyledEventsBox>
         <StyledTextContainer>
-          <EventsHeader>Go Workshop - mid January</EventsHeader>
+          <EventsHeader>Go Workshop - December</EventsHeader>
         </StyledTextContainer>
       </StyledEventsBox>
     </StyledDesktopTextsContainer>
