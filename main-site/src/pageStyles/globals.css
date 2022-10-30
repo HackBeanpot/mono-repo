@@ -1,4 +1,19 @@
-.parent {
-  background-image: url(../../../shared-ui/images//day-background-desktop.svg);
+.day-background-desktop {
+  background-image: url(../../../shared-ui/images/day-background-desktop.svg);
+  background-size: cover;
+}
+
+.dark-background-desktop {
+  background-image: url(../../../shared-ui/images/dark-background-desktop.svg);
+  background-size: cover;
+}
+
+.mobile-light-background {
+  background-image: url(../../../shared-ui/images/mobile-light-background.svg);
+  background-size: cover;
+}
+
+.mobile-dark-background {
+  background-image: url(../../../shared-ui/images/mobile-dark-background.svg);
   background-size: cover;
 }
