@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../pageStyles/globals.css';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/index.css';
@@ -23,6 +23,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
   const isDesktop = useMatchMedia(min.tablet);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
       return 'day-background-desktop';
@@ -35,6 +36,14 @@ const IndexPage: React.FC = () => {
     }
     return 'mobile-dark-background';
   };
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div className={getBackgroundClassName()}>
