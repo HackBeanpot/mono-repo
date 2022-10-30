@@ -51,10 +51,10 @@ const IndexPage: React.FC = () => {
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />
+      <EventsCalendarSection />
       <TestimonialsSection />
       <PastProjectsSection />
       <PastPhotosSection />
-      <EventsCalendarSection />
       <CovidSection />
       <FaqSection />
       <MeetTheTeamSection />

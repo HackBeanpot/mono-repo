@@ -28,7 +28,7 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'How do I apply to HackBeanpot?',
     answer:
-      'Applications for HackBeanpot 2022 will be open from November 15th - January 14th. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
+      'Applications for HackBeanpot 2023 will be open from November 15th - January 14th. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
   },
 
   {
@@ -42,7 +42,7 @@ export const FaqSectionData: FaqData[] = [
     id: 3,
     question: 'When and where is HackBeanpot 2023',
     answer:
-      'HackBeanpot 2022 will be held virtually on the weekend of February 11-13.'
+      'HackBeanpot 2023 will be held virtually on the weekend of February 11-13.'
   },
   {
     id: 4,

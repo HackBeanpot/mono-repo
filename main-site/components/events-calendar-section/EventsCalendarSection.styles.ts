@@ -8,8 +8,8 @@ const StyledDesktopTextsContainer = styled.div`
 `;
 
 const StyledSectionContainer = styled.div`
-  padding-top: 15em;
-  padding-bottom: 12em;
+  padding-top: 5em;
+  padding-bottom: 20em;
   @media ${max.tabletSm} {
     padding-top: 0.6em;
   }
