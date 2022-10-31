@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { fonts, P } from '../../../shared-ui/style/typography';
-import { H3 } from '../../../shared-ui/style/typography';
+import { fonts, H2, P } from '../../../shared-ui/style/typography';
 
 const StyledSectionContainer = styled.div`
   padding-top: 15em;
@@ -159,9 +158,8 @@ const EventsSubHeader = styled(P)`
   }
 `;
 
-const StyledH3 = styled(H3)`
+const StyledH2 = styled(H2)`
   text-align: center;
-  letter-spacing: 0.2em;
 `;
 
 const EventsPBolded = styled(P)`
@@ -194,5 +192,5 @@ export {
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
-  StyledH3
+  StyledH2
 };

@@ -1,4 +1,4 @@
-import { AboutSectionData, FaqData } from './types';
+import { PastProjectData, AboutSectionData, FaqData } from './types';
 
 export const aboutSectionData: AboutSectionData[] = [
   {
@@ -94,5 +94,31 @@ export const FaqSectionData: FaqData[] = [
     question: 'What will I need to bring',
     answer:
       'To have a great time at HackBeanpot 2022, you should prepare your workspace with your computer, scrap paper for ideation, any hardware you may want for your hack and your best space cadet energy to learn and create new things! Stay tuned for an Astronaut Training Manual in your inbox sent out closer to the event with more details.'
+  }
+];
+
+export const pastProjectsData: PastProjectData[] = [
+  {
+    title: 'Inky the Black Hole Pet, 2022',
+    members: 'by Rachael Cheung, Euann Gu, Jessica Luo',
+    description:
+      'Inky is a desktop pet! He can perform different actions: be dragged around, sleep, eat, etc.',
+    btnLink: 'https://devpost.com/software/inky-the-black-hole-pet'
+  },
+
+  {
+    title: 'Swaple, 2022',
+    members: 'by Bob Zheng, Tze Zhe Brandon Lim, Nathan Kim, Daniel Ostapenko',
+    description:
+      'A parody of wordle, but you swap letters from a list of words instead! Try and complete the game in as few moves as possible.',
+    btnLink: 'https://brandonlim8890.github.io/wordle_variation/'
+  },
+
+  {
+    title: 'Oh Duck!, 2022',
+    members: 'by Karyna Yen',
+    description:
+      "'Oh, Duck!' is a chrome chrome extension that replaces profane words with a duck emoji.",
+    btnLink: 'https://devpost.com/software/oh-duck'
   }
 ];

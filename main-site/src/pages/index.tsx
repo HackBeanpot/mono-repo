@@ -14,6 +14,8 @@ import AdventureAheadSection from '../../components/adventure-ahead-section/Adve
 import CovidSection from '../../components/covid-section/CovidSection';
 import PastPhotosSection from '../../components/past-photos-section/PastPhotosSection';
 import AboutSection from '../../components/about-section/AboutSection';
+import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
+import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -24,10 +26,12 @@ const IndexPage: React.FC = () => {
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />
+      <PastProjectsSection />
       <PastPhotosSection />
       <EventsCalendarSection />
       <CovidSection />
       <FaqSection />
+      <MeetTheTeamSection />
       <AdventureAheadSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
