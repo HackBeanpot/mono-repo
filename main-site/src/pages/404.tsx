@@ -1,9 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import DesktopBackground from '../../../shared-ui/images/error-desktop-background.svg';
+import MobileBackground from '../../../shared-ui/images/error-mobile-background.svg';
 import { fonts, H1, H4 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
+import { max, min } from '../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
 
 const StyledBackgrounds = styled.img`
   position: absolute;
@@ -11,17 +14,23 @@ const StyledBackgrounds = styled.img`
   z-index: -1;
 `;
 
-const ButtonContainer = styled.div`
-padding-top: 19em;
-float: right;
-padding-right: 6em;
-`;
 
 const StyledH1 = styled(H1)`
   padding-top: 1em;
   padding-left: 2em;
   font-size: 5em;
   color: ${colors.HEADER_FOOTER_BLUE};
+  @media ${max.tabletLg} {
+    font-size: 3em;
+  }
+  @media ${max.tablet} {
+    padding-top: 6em;
+    padding-left: 1em;
+    font-size: 2.5em;
+  }
+  @media ${max.tabletSm} {
+    font-size: 2em;
+  }
 `;
 
 const StyledH4 = styled(H4)`
@@ -31,12 +40,39 @@ const StyledH4 = styled(H4)`
   font-size: 1.6em;
   font-family: ${fonts.nunitoSansSemibold};
   color: ${colors.HEADER_FOOTER_BLUE};
+  @media ${max.tabletLg} {
+    padding-top: 2em;
+    padding-right: 6em;
+  }
+  @media ${max.tablet} {
+    padding-right: 2em;
+  }
+  @media ${max.tabletSm} {
+    padding-top: 7em;
+    font-size: 1em;
+  }
+`;
+
+const ButtonContainer = styled.div`
+padding-top: 2%;
+float: right;
+padding-right: 14em;
+@media ${max.tabletLg} {
+  padding-top: 3em;
+  padding-right: 10em;
+}
+@media ${max.tablet} {
+  padding-top: 2em;
+  padding-right: 5em;
+}
 `;
 
 const NotFoundPage: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tablet);
   return (
     <>
-      <StyledBackgrounds src={DesktopBackground} />
+      {isDesktop && <StyledBackgrounds src={DesktopBackground} />}
+      {!isDesktop && <StyledBackgrounds src={MobileBackground} />}
       <StyledH1>
         Uh oh, how did we end <br /> up here?
       </StyledH1>
