@@ -1,49 +1,55 @@
 import * as React from 'react';
-import { Link, HeadFC } from 'gatsby';
+import styled from 'styled-components';
+import DesktopBackground from '../../../shared-ui/images/error-desktop-background.svg';
+import { fonts, H1, H4 } from '../../../shared-ui/style/typography';
+import { colors } from '../../../shared-ui/style/colors';
+import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif'
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320
-};
+const StyledBackgrounds = styled.img`
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+`;
 
-const paragraphStyles = {
-  marginBottom: 48
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4
-};
+const ButtonContainer = styled.div`
+padding-top: 19em;
+float: right;
+padding-right: 6em;
+`;
+
+const StyledH1 = styled(H1)`
+  padding-top: 1em;
+  padding-left: 2em;
+  font-size: 5em;
+  color: ${colors.HEADER_FOOTER_BLUE};
+`;
+
+const StyledH4 = styled(H4)`
+  text-align: right;
+  padding-top: 3em;
+  padding-right: 9em;
+  font-size: 1.6em;
+  font-family: ${fonts.nunitoSansSemibold};
+  color: ${colors.HEADER_FOOTER_BLUE};
+`;
 
 const NotFoundPage: React.FC = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === 'development' ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>
-      </p>
-    </main>
+    <>
+      <StyledBackgrounds src={DesktopBackground} />
+      <StyledH1>
+        Uh oh, how did we end <br /> up here?
+      </StyledH1>
+      <StyledH4>Let's get back to exploring!</StyledH4>
+      <ButtonContainer>
+      <PrimaryButton btnText = 'return home' btnLink='/'></PrimaryButton>
+      </ButtonContainer>
+        
+
+    </>
   );
 };
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>;
+
