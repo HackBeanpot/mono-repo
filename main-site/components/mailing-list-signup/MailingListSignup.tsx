@@ -31,8 +31,7 @@ const MailingListSignup: React.FunctionComponent = () => {
         setEmail('');
         setMessage(data.msg);
       })
-      .catch((error: Error) => {
-        console.log(error);
+      .catch(() => {
         setMessage('There was an error, please try again.');
       });
   };
