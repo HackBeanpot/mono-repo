@@ -13,7 +13,6 @@ export const StyledFaqContainer = styled.div`
 
 @media ${max.tablet} {
     width: 80%;
-    padding: 0em;
-   
+    padding: 0em; 
 }
 `;

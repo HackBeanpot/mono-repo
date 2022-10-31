@@ -6,6 +6,7 @@ import { H3 } from '../../../shared-ui/style/typography';
 const StyledCovidSectionContainer = styled.div`
   display: flex;
   position: relative;
+  margin: 5em 0;
   padding-bottom: 5em;
   @media ${min.tablet} {
     padding: 10em 0;
