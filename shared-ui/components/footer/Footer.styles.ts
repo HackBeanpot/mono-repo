@@ -12,7 +12,7 @@ const StyledFooter = styled.div<StyledFooterProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 35em;
+  height: 39em;
   @media ${min.tabletLg} {
     height: 28em;
     align-items: left;
@@ -36,7 +36,7 @@ const StyledHBPContent = styled.div`
     width: 20em;
   }
   @media ${max.tabletLg} {
-    padding: 2em 0em 4em 0em;
+    padding-top: 2em;
   }
   @media ${max.desktop} {
     align-items: center;
@@ -76,7 +76,6 @@ const StyledTabContainer = styled.div`
     display: none;
   }
   @media ${max.desktop} {
-    padding: 2em 0em 4em 0em;
   }
   gap: 0 3em;
   height: 100%;
@@ -150,7 +149,6 @@ const StyledButtonRow = styled.div`
     flex-direction: column;
     margin-top: 0;
   }
-  margin-top: -4em;
 `;
 
 const StyledSocialMediaButtons = styled.div`

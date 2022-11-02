@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { P } from '../../../shared-ui/style/typography';
 import { min } from '../../../shared-ui/lib/responsive';
-import { H3 } from '../../../shared-ui/style/typography';
+import { H2 } from '../../../shared-ui/style/typography';
 
 const StyledCovidSectionContainer = styled.div`
   display: flex;
@@ -54,7 +54,7 @@ const StyledCovidSectionInformation = styled(P)`
   padding: 1em 0;
 `;
 
-const StyledTitle = styled(H3)`
+const StyledTitle = styled(H2)`
   text-align: center;
   @media ${min.tablet} {
     text-align: left;
