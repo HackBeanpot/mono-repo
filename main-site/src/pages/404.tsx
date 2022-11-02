@@ -1,18 +1,17 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import DesktopBackground from '../../../shared-ui/images/error-desktop-background.svg';
-import MobileBackground from '../../../shared-ui/images/error-mobile-background.svg';
 import { fonts, H1, H4 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
+import '../page-styles/globals.css';
 
-const StyledBackgrounds = styled.img`
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-`;
+// const StyledBackgrounds = styled.img`
+//   position: absolute;
+//   width: 100%;
+//   z-index: -1;
+// `;
 
 
 const StyledH1 = styled(H1)`
@@ -69,10 +68,24 @@ padding-right: 14em;
 
 const NotFoundPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
+  const [isLoading, setIsLoading] = React.useState<boolean>(true);
+  const getBackgroundClassName = (): string => {
+    if (isDesktop) {
+      return 'error-background-desktop';
+    }
+    return 'error-background-mobile';
+  };
+  React.useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return null;
+  }
+  
   return (
     <>
-      {isDesktop && <StyledBackgrounds src={DesktopBackground} />}
-      {!isDesktop && <StyledBackgrounds src={MobileBackground} />}
+      <div className={getBackgroundClassName()}>
       <StyledH1>
         Uh oh, how did we end <br /> up here?
       </StyledH1>
@@ -80,6 +93,7 @@ const NotFoundPage: React.FC = () => {
       <ButtonContainer>
       <PrimaryButton btnText = 'return home' btnLink='/'></PrimaryButton>
       </ButtonContainer>
+      </div>
         
 
     </>
