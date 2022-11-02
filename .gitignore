@@ -25,3 +25,5 @@ yarn-error.log*
 .cache
 public
 gatsby-types.d.ts
+
+.env
