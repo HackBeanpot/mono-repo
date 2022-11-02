@@ -43,72 +43,74 @@ const AboutSection: React.FC = () => {
   );
 
   return (
-    <StyledAboutSectionContainer>
-      <StyledTitle>HackBeanpot is about...</StyledTitle>
-      {!isDesktop && (
-        <StyledItemsContainer>
-          <StyledLeftImage
-            src={getImage(
-              getLeftOrRight('left', aboutSectionData, currItem).title
-            )}
-          />
-          <StyledItemContainer>
-            <StyledCenterImage src={getImage(currItem.title)} />
-            <StyledItemTextContainer>
-              <StyledItemTitle color={colors.TEXT_BROWN}>
-                {currItem.title}
-              </StyledItemTitle>
-
-              <StyledArrowDescriptionContainer>
-                <Arrow
-                  left
-                  onClick={(): void =>
-                    setCurrItem(
-                      getLeftOrRight('left', aboutSectionData, currItem)
-                    )
-                  }
-                />
-                <StyledItemDescription color={colors.TEXT_BROWN}>
-                  {currItem.description}
-                </StyledItemDescription>
-                <Arrow
-                  left={false}
-                  onClick={(): void =>
-                    setCurrItem(
-                      getLeftOrRight('right', aboutSectionData, currItem)
-                    )
-                  }
-                />
-              </StyledArrowDescriptionContainer>
-            </StyledItemTextContainer>
-          </StyledItemContainer>
-          <StyledRightImage
-            src={getImage(
-              getLeftOrRight('right', aboutSectionData, currItem).title
-            )}
-          />
-        </StyledItemsContainer>
-      )}
-
-      {isDesktop && (
-        <StyledItemsContainer>
-          {aboutSectionData.map((curr) => (
-            <StyledItemContainer key={curr.title}>
-              <StyledItemImage src={getImage(curr.title)} />
+    <div id="about">
+      <StyledAboutSectionContainer>
+        <StyledTitle>HackBeanpot is about...</StyledTitle>
+        {!isDesktop && (
+          <StyledItemsContainer>
+            <StyledLeftImage
+              src={getImage(
+                getLeftOrRight('left', aboutSectionData, currItem).title
+              )}
+            />
+            <StyledItemContainer>
+              <StyledCenterImage src={getImage(currItem.title)} />
               <StyledItemTextContainer>
                 <StyledItemTitle color={colors.TEXT_BROWN}>
-                  {curr.title}
+                  {currItem.title}
                 </StyledItemTitle>
-                <StyledItemDescription color={colors.TEXT_BROWN}>
-                  {curr.description}
-                </StyledItemDescription>
+
+                <StyledArrowDescriptionContainer>
+                  <Arrow
+                    left
+                    onClick={(): void =>
+                      setCurrItem(
+                        getLeftOrRight('left', aboutSectionData, currItem)
+                      )
+                    }
+                  />
+                  <StyledItemDescription color={colors.TEXT_BROWN}>
+                    {currItem.description}
+                  </StyledItemDescription>
+                  <Arrow
+                    left={false}
+                    onClick={(): void =>
+                      setCurrItem(
+                        getLeftOrRight('right', aboutSectionData, currItem)
+                      )
+                    }
+                  />
+                </StyledArrowDescriptionContainer>
               </StyledItemTextContainer>
             </StyledItemContainer>
-          ))}
-        </StyledItemsContainer>
-      )}
-      <StyledRedRocks src={RedRocks} />
-    </StyledAboutSectionContainer>
+            <StyledRightImage
+              src={getImage(
+                getLeftOrRight('right', aboutSectionData, currItem).title
+              )}
+            />
+          </StyledItemsContainer>
+        )}
+
+        {isDesktop && (
+          <StyledItemsContainer>
+            {aboutSectionData.map((curr) => (
+              <StyledItemContainer key={curr.title}>
+                <StyledItemImage src={getImage(curr.title)} />
+                <StyledItemTextContainer>
+                  <StyledItemTitle color={colors.TEXT_BROWN}>
+                    {curr.title}
+                  </StyledItemTitle>
+                  <StyledItemDescription color={colors.TEXT_BROWN}>
+                    {curr.description}
+                  </StyledItemDescription>
+                </StyledItemTextContainer>
+              </StyledItemContainer>
+            ))}
+          </StyledItemsContainer>
+        )}
+        <StyledRedRocks src={RedRocks} />
+      </StyledAboutSectionContainer>
+    </div>
   );
 };
 

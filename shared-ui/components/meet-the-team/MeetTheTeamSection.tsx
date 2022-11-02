@@ -15,17 +15,19 @@ const MeetTheTeamSection: React.FC = () => {
   const teamColumnsInfo: TeamColumnInfo[] = teamInfo;
   const isDesktop = useMatchMedia(min.tablet);
   return (
-    <StyledMeetTheTeamSection>
-      <H2>Meet the Team</H2>
-      {isDesktop && (
-        <StyledImageContainer>
-          {teamColumnsInfo.map((teamColumn: TeamColumnInfo) => (
-            <TeamColumn columnInfo={teamColumn} />
-          ))}
-        </StyledImageContainer>
-      )}
-      {!isDesktop && <MobileTeamColumn listOfColumnInfo={teamColumnsInfo} />}
-    </StyledMeetTheTeamSection>
+    <div id="team">
+      <StyledMeetTheTeamSection>
+        <H2>Meet the Team</H2>
+        {isDesktop && (
+          <StyledImageContainer>
+            {teamColumnsInfo.map((teamColumn: TeamColumnInfo) => (
+              <TeamColumn columnInfo={teamColumn} />
+            ))}
+          </StyledImageContainer>
+        )}
+        {!isDesktop && <MobileTeamColumn listOfColumnInfo={teamColumnsInfo} />}
+      </StyledMeetTheTeamSection>
+    </div>
   );
 };
 

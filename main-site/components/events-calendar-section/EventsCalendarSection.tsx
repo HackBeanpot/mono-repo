@@ -17,17 +17,19 @@ import NonDesktopTexts from './texts/NonDesktopTexts';
 const EventsCalendarSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
-    <StyledSectionContainer>
-      <StyledH2>Events Calendar</StyledH2>
-      <StyledEventsContainer>
-        {isDesktop && <StyledEventsGrass src={EventsGrass} />}
-        <StyledEventsCalendar>
-          {isDesktop && <DesktopTexts />}
-          {!isDesktop && <NonDesktopTexts />}
-        </StyledEventsCalendar>
-        {isDesktop && <StyledEventsCactus src={EventsCactus} />}
-      </StyledEventsContainer>
-    </StyledSectionContainer>
+    <div id="calendar">
+      <StyledSectionContainer>
+        <StyledH2>Events Calendar</StyledH2>
+        <StyledEventsContainer>
+          {isDesktop && <StyledEventsGrass src={EventsGrass} />}
+          <StyledEventsCalendar>
+            {isDesktop && <DesktopTexts />}
+            {!isDesktop && <NonDesktopTexts />}
+          </StyledEventsCalendar>
+          {isDesktop && <StyledEventsCactus src={EventsCactus} />}
+        </StyledEventsContainer>
+      </StyledSectionContainer>
+    </div>
   );
 };
 
