@@ -38,7 +38,9 @@ const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
       <StyledFooterContentContainer>
         <StyledTabContainer>
           {tabs.map((tab: TabInfo) => (
-            <StyledTab>{tab.name}</StyledTab>
+            <StyledLink href={tab.link} key={tab.name}>
+              <StyledTab>{tab.name}</StyledTab>
+            </StyledLink>
           ))}
         </StyledTabContainer>
 

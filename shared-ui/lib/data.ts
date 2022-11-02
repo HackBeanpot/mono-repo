@@ -24,11 +24,11 @@ import Ally from '../../shared-ui/images/meet-the-team/ally.png';
 import Jasmine from '../../shared-ui/images/meet-the-team/jasmine.png';
 
 const homeTabInfo: TabInfo[] = [
-  { name: 'About', link: '' },
-  { name: 'Calendar', link: '' },
-  { name: 'FAQ', link: '' },
-  { name: 'Sponsors', link: '' },
-  { name: 'Team', link: '' }
+  { name: 'About', link: '#about' },
+  { name: 'Calendar', link: '#calendar' },
+  { name: 'FAQ', link: '#faq' },
+  { name: 'Sponsors', link: '#sponsors' },
+  { name: 'Team', link: '#team' }
 ];
 
 const directorsPictures: string[][] = [[Sreya, David]];
