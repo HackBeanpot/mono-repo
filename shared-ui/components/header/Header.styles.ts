@@ -43,6 +43,9 @@ const StyledTabsContainer = styled.div`
       padding-top: 0;
       text-align: left;
     }
+    @media ${min.tabletLg} {
+      padding-right: 3em;
+    }
   }
 `;
 

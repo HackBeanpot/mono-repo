@@ -28,34 +28,32 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'How do I apply to HackBeanpot?',
     answer:
-      'Applications for HackBeanpot 2023 will be open from November 15th - January 14th. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
+      'Pre-registration begins November 6th, but applications will be open on November 22nd. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
   },
 
   {
     id: 2,
     question: 'Will HackBeanpot 2023 be in-person or virtual?',
-    answer:
-      'Due to the increased transmissibility of the Omicron variant of COVID-19, HackBeanpot will be virtual again this year to keep our attendees as safe as possible. We know that many hackers were looking forward to an in-person event, so we plan to have some in-person activities for people to meet each other, like our outdoor Sunrise Walk.'
+    answer: 'HackBeanpot 2023 will be fully in-person!'
   },
 
   {
     id: 3,
-    question: 'When and where is HackBeanpot 2023',
-    answer:
-      'HackBeanpot 2023 will be held virtually on the weekend of February 11-13.'
+    question: 'When and where is HackBeanpot 2023?',
+    answer: 'The location of HackBeanpot 2023 will be announced in November.'
   },
   {
     id: 4,
     question: 'What is HackBeanpot doing about COVID safety?',
     answer:
-      'Even as a mostly virtual event, there will be still some in-person elements such as our Swag Outposts or Sunrise Walk. We will make sure to maintain the appropriate COVID-19 protocols.'
+      'HackBeanpot is committed to ensuring that hackers feel safe and activities comply with local COVID-19 policies. For this reason, we encourage masks to be worn by hackers attending in the in-person activities.'
   },
 
   {
     id: 5,
-    question: 'How long is the event?/What will the schedule be like?',
+    question: 'How long is the event? / What will the schedule be like?',
     answer:
-      'The event will start around 7 pm EST on Friday, Feb 11th and will go until around Sunday, Feb 13th 3:30 pm EST. (Note: These times are tentative and may change closer to the event date). Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
+      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
   },
 
   {
@@ -67,7 +65,7 @@ export const FaqSectionData: FaqData[] = [
 
   {
     id: 7,
-    question: 'How do I find a team?/Are there limits on team size?plus sign',
+    question: 'How do I find a team? / Are there limits on team size?plus sign',
     answer:
       'There will be a team formation activity at the beginning of the hackathon where you can meet your dream team! Another way of finding team members is through our event Slack, which will be sent out one week before the event. You are also free to attend with a premade team. While there isn’t a limit on team sizes, our prizes are budgeted for teams of up to 5 members.'
   },

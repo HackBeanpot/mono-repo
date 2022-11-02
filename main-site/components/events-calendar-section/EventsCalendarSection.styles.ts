@@ -75,7 +75,7 @@ const StyledEventsCalendar = styled.div`
   }
   @media ${max.tablet} {
     border-radius: 1.3em;
-    margin-left: 3%;
+    margin-left: 3.5%;
     width: 90%;
   }
 `;
