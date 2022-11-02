@@ -27,7 +27,6 @@ const homeTabInfo: TabInfo[] = [
   { name: 'About', link: '#about' },
   { name: 'Calendar', link: '#calendar' },
   { name: 'FAQ', link: '#faq' },
-  { name: 'Sponsors', link: '#sponsors' },
   { name: 'Team', link: '#team' }
 ];
 
