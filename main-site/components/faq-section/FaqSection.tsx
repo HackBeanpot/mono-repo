@@ -11,22 +11,24 @@ import Faq from './faq/Faq';
 
 const FaqSection: React.FC = () => {
   return (
-    <StyledFaqSectionContainer>
-      <H2>FAQ</H2>
-      <StyledCactus src={cactus} />
-      <Faq />
-      <StyledH4>
-        Don't see your question?
-        <br />
-        <br />
-        Reach out to us at team@hackbeanpot.com!
-      </StyledH4>
-      <PrimaryButton
-        btnText={'Contact Us'}
-        btnLink={'mailto:team@hackbeanpot.com'}
-        newTab={true}
-      ></PrimaryButton>
-    </StyledFaqSectionContainer>
+    <div id="faq">
+      <StyledFaqSectionContainer>
+        <H2>FAQ</H2>
+        <StyledCactus src={cactus} />
+        <Faq />
+        <StyledH4>
+          Don't see your question?
+          <br />
+          <br />
+          Reach out to us at team@hackbeanpot.com!
+        </StyledH4>
+        <PrimaryButton
+          btnText={'Contact Us'}
+          btnLink={'mailto:team@hackbeanpot.com'}
+          newTab={true}
+        ></PrimaryButton>
+      </StyledFaqSectionContainer>
+    </div>
   );
 };
 
