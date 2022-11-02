@@ -119,6 +119,7 @@ const StyledEmailInput = styled.input`
   font-family: ${fonts.nunitoSansSemibold};
   color: ${colors.HEADER_FOOTER_BLUE};
   background-color: ${colors.WHITE};
+  margin: 1em 0;
   padding: 1em;
   border-radius: 2em;
   border: none;
