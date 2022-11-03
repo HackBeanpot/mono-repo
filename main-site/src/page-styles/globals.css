@@ -1,14 +1,12 @@
 .error-background-desktop {
     background-image: url(../../../shared-ui/images/error-desktop-background.svg);
-    background-size: cover;
+    background-size: cover; 
+    height: 100vh;
   }
   
   .error-background-mobile {
     background-image: url(../../../shared-ui/images/error-mobile-background.svg);
     background-size: cover;
+    height: 100vh;
   }
 
-  html,
-  body {
-    max-width: 1920px;
-  }
