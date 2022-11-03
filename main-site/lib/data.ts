@@ -34,19 +34,21 @@ export const FaqSectionData: FaqData[] = [
   {
     id: 2,
     question: 'Will HackBeanpot 2023 be in-person or virtual?',
-    answer: 'HackBeanpot 2023 will be fully in-person!'
+    answer:
+      'HackBeanpot 2023 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
   },
 
   {
     id: 3,
     question: 'When and where is HackBeanpot 2023?',
-    answer: 'The location of HackBeanpot 2023 will be announced in November.'
+    answer:
+      'The location of HackBeanpot 2023 will be announced by the time registration is opened on November 22nd. The venue will be in Boston and we ask that all hackers review and abide by the Code of Conduct during the event.'
   },
   {
     id: 4,
     question: 'What is HackBeanpot doing about COVID safety?',
     answer:
-      'HackBeanpot is committed to ensuring that hackers feel safe and activities comply with local COVID-19 policies. For this reason, we encourage masks to be worn by hackers attending in the in-person activities.'
+      'HackBeanpot is committed to ensuring that hackers feel safe and activities comply with local COVID-19 policies. For this reason, we ask that hackers upload proof of vaccination when asked after registration and encourage everyone to wear masks during the event as it is indoors.'
   },
 
   {
@@ -60,12 +62,12 @@ export const FaqSectionData: FaqData[] = [
     id: 6,
     question: 'What kind of projects can I work on?',
     answer:
-      'The Milky Way is your oyster! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
+      'The desert is yours to explore! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
   },
 
   {
     id: 7,
-    question: 'How do I find a team? / Are there limits on team size?plus sign',
+    question: 'How do I find a team? / Are there limits on team size?',
     answer:
       'There will be a team formation activity at the beginning of the hackathon where you can meet your dream team! Another way of finding team members is through our event Slack, which will be sent out one week before the event. You are also free to attend with a premade team. While there isn’t a limit on team sizes, our prizes are budgeted for teams of up to 5 members.'
   },
@@ -74,7 +76,7 @@ export const FaqSectionData: FaqData[] = [
     id: 8,
     question: 'Who can attend HackBeanpot?',
     answer:
-      'HackBeanpot is open to all high school, undergraduate, and graduate school students. You must be 13 years or older to apply. Please note that any student under 18 years old will have to have a form signed by a parent or guardian in order to attend. All attendees must abide by our Code of Conduct.'
+      'HackBeanpot is open to all high school, undergraduate, and graduate school students. You must be 13 years or older to apply. All attendees must abide by our Code of Conduct.'
   },
 
   {
@@ -89,14 +91,14 @@ export const FaqSectionData: FaqData[] = [
     id: 10,
     question: 'How much does it cost? Will there be swag?',
     answer:
-      'HackBeanpot is completely free for all our attendees! We will also be giving out free space-themed swag 👀🚀 as well as have lots of yummy meals and snacks!'
+      'HackBeanpot is completely free for all our attendees, including meals and snacks! We will also be giving out free swag so you can ~ thrive in our desert oasis ~!'
   },
 
   {
     id: 11,
-    question: 'What will I need to bring',
+    question: 'What will I need to bring?',
     answer:
-      'To have a great time at HackBeanpot 2022, you should prepare your workspace with your computer, scrap paper for ideation, any hardware you may want for your hack and your best space cadet energy to learn and create new things! Stay tuned for an Astronaut Training Manual in your inbox sent out closer to the event with more details.'
+      'To have a great time at HackBeanpot 2023, you should arrive with your laptop and a curious mindset fit for an explorer! Stay tuned for a Desert Exploration Guide in your inbox sent out closer to the event with more details.'
   }
 ];
 
