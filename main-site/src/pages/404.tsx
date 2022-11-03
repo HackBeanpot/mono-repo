@@ -1,49 +1,45 @@
 import * as React from 'react';
-import { Link, HeadFC } from 'gatsby';
 
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif'
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320
-};
-
-const paragraphStyles = {
-  marginBottom: 48
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4
-};
+import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
+import { min } from '../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
+import '../pageStyles/globals.css';
+import { StyledH1, StyledH4, ButtonContainer} from '../page-styles/404.styles';
 
 const NotFoundPage: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tablet);
+  const [isLoading, setIsLoading] = React.useState<boolean>(true);
+  const getBackgroundClassName = (): string => {
+    if (isDesktop) {
+      return 'error-background-desktop';
+    }
+    return 'error-background-mobile';
+  };
+  React.useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return null;
+  }
+  
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === 'development' ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>
-      </p>
-    </main>
+    
+      <div className={getBackgroundClassName()}>
+      <StyledH1>
+        Uh oh, how did we end <br /> up here?
+      </StyledH1>
+      <StyledH4>Let's get back to exploring!</StyledH4>
+      <ButtonContainer>
+      <PrimaryButton btnText = 'return home' btnLink='/'></PrimaryButton>
+      </ButtonContainer>
+      </div>
+        
+
+  
   );
 };
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>;
+
