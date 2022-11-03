@@ -3,7 +3,7 @@ import * as React from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
-import '../page-styles/globals.css';
+import '../pageStyles/globals.css';
 import { StyledH1, StyledH4, ButtonContainer} from '../page-styles/404.styles';
 
 const NotFoundPage: React.FC = () => {
