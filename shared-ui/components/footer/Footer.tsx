@@ -5,7 +5,6 @@ import {
   StyledButtonRow,
   StyledFooter,
   StyledFooterText,
-  StyledFooterTextLink,
   StyledHackBeanpotLogo,
   StyledTab,
   StyledTabContainer,
@@ -24,16 +23,13 @@ const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
         <StyledHackBeanpotLogo
           src={HackBeanpotWhiteLogo}
           alt="White HackBeanpot Logo"
-          width="11.9em"
-          height="3.5em"
+          width="287em"
+          height="84em"
         />
         <StyledFooterCodeOfConduct>
           <StyledFooterText>
             HackBeanpot, Inc. is a registered 501(c)(3) organization.
           </StyledFooterText>
-          <StyledFooterTextLink href="/code-of-conduct/">
-            Code of Conduct
-          </StyledFooterTextLink>
         </StyledFooterCodeOfConduct>
       </StyledHBPContent>
       <StyledFooterContentContainer>
