@@ -3,9 +3,13 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H2, P } from '../../../shared-ui/style/typography';
 
+const StyledDesktopTextsContainer = styled.div`
+  padding: 1em 0;
+`;
+
 const StyledSectionContainer = styled.div`
-  padding-top: 15em;
-  padding-bottom: 12em;
+  padding-top: 5em;
+  padding-bottom: 20em;
   @media ${max.tabletSm} {
     padding-top: 0.6em;
   }
@@ -23,42 +27,30 @@ const StyledEventsBox = styled.div`
   position: relative;
   flex-direction: column;
   display: flex;
-  margin-left: 2.5%;
-  top: 4%;
-  margin-top: 4%;
-  margin-bottom: 2%;
+  margin: 2em 1.5em;
+  @media ${max.desktop} {
+    margin: 2em 1em;
+  }
   @media ${max.tabletLg} {
-    margin-top: 5%;
-    margin-bottom: 3%;
-    width: 88%;
+    margin: 2em 1em;
     border-radius: 1.7em;
-    margin-left: 2em;
   }
   @media ${max.tablet} {
     border-radius: 1.3em;
-  }
-  @media ${max.tabletSm} {
-    width: 90%;
-    margin-left: 5%;
-  }
-  @media ${max.mobile} {
-    width: 88%;
-    margin-left: 6%;
   }
 `;
 
 const StyledTextContainer = styled.div`
   display: flex;
-  margin: 4%;
+  margin: 2em;
   @media ${max.tablet} {
     margin: 1.5em;
   }
   @media ${max.tabletSm} {
-    margin: 6%;
     padding-left: 1em;
   }
   @media ${max.mobile} {
-    margin: 4%;
+    margin: 2em;
     padding-left: 0.5em;
   }
 `;
@@ -72,59 +64,52 @@ const TextLeftContainer = styled.div`
 
 const StyledEventsCalendar = styled.div`
   border-radius: 2em;
-  width: 50%;
-  height: 40em;
+  width: 60%;
   background-color: ${colors.BUTTON_GREEN};
-  margin-left: 25%;
+  margin-left: 21%;
   position: relative;
   @media ${max.tabletLg} {
-    height: 42em;
-    width: 70%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left: 10%;
+    padding: 0.5em;
   }
   @media ${max.tablet} {
     border-radius: 1.3em;
-    height: 36em;
-    margin-left: 5%;
+    margin-left: 3.5%;
     width: 90%;
-  }
-  @media ${max.tabletSm} {
-    height: 28em;
-  }
-  @media ${max.mobile} {
-    height: 18em;
   }
 `;
 
 const StyledEventsCactus = styled.img`
-  width: 20em;
-  right: 10em;
-  top: 30em;
   position: absolute;
-
-  @media ${max.tabletLg} {
-    right: 6em;
-    top: 50em;
-  }
-  @media ${min.tablet} {
-    top: 50em;
-  }
   @media ${min.tabletSm} {
-    right: 0;
-    top: 30em;
+    right: 2em;
+    top: 50em;
     height: 16em;
+  }
+  @media ${min.desktop} {
+    right: 5em;
+    top: 40em;
+    height: 20em;
+  }
+  @media ${min.desktopLg} {
+    right: 10em;
+    top: 35em;
+    height: 25em;
   }
 `;
 
 const StyledEventsGrass = styled.img`
-  width: 10em;
-  height: 60em;
-  top: -25em;
-  left: 6em;
   position: absolute;
   @media ${min.tabletSm} {
+    height: 10em;
     left: 2em;
-    top: -30em;
+    top: -8em;
+  }
+  @media ${min.tabletLg} {
+    height: 15em;
+    left: 2em;
+    top: -8em;
   }
 `;
 
@@ -132,8 +117,9 @@ const EventsHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   line-height: 1.2em;
   letter-spacing: 0.08em;
+  font-size: 1.7em;
   @media ${max.tabletSm} {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   @media ${max.mobile} {
     font-size: 0.6em;
@@ -141,12 +127,12 @@ const EventsHeader = styled(P)`
 `;
 
 const EventsP = styled(P)`
-  font-size: 0.8em;
+  font-size: 1.1em;
 `;
 
 const EventsSubHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 2em;
   @media ${max.tabletSm} {
     font-size: 0.8em;
@@ -162,11 +148,11 @@ const StyledH2 = styled(H2)`
 
 const EventsPBolded = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
-  font-size: 0.8em;
+  font-size: 1.1em;
 `;
 
 const EventsLocationP = styled(P)`
-  font-size: 0.8em;
+  font-size: 1em;
   position: absolute;
   right: 2em;
   bottom: 2em;
@@ -190,5 +176,6 @@ export {
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
-  StyledH2
+  StyledH2,
+  StyledDesktopTextsContainer
 };

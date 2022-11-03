@@ -15,6 +15,7 @@ import {
 } from './Footer.styles';
 import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.svg';
 import MailingListSignup from '../../../main-site/components/mailing-list-signup/MailingListSignup';
+import { StyledLink } from '../../style/typography';
 
 const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
   return (
@@ -23,8 +24,8 @@ const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
         <StyledHackBeanpotLogo
           src={HackBeanpotWhiteLogo}
           alt="White HackBeanpot Logo"
-          width="287em"
-          height="84em"
+          width="11.9em"
+          height="3.5em"
         />
         <StyledFooterCodeOfConduct>
           <StyledFooterText>
@@ -38,7 +39,9 @@ const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
       <StyledFooterContentContainer>
         <StyledTabContainer>
           {tabs.map((tab: TabInfo) => (
-            <StyledTab>{tab.name}</StyledTab>
+            <StyledLink href={tab.link} key={tab.name}>
+              <StyledTab>{tab.name}</StyledTab>
+            </StyledLink>
           ))}
         </StyledTabContainer>
 

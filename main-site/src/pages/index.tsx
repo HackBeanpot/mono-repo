@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import '../pageStyles/globals.css';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/index.css';
 import '../../../shared-ui/style/global.css';
@@ -6,7 +7,6 @@ import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
-import Background from '../../../shared-ui/components/background/Background';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import FaqSection from '../../components/faq-section/FaqSection';
@@ -17,22 +17,46 @@ import AboutSection from '../../components/about-section/AboutSection';
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
 import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
+import useMatchMedia from 'react-use-match-media';
+import { min } from '../../../shared-ui/lib/responsive';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
+  const isDesktop = useMatchMedia(min.tablet);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const getBackgroundClassName = (): string => {
+    if (isDay && isDesktop) {
+      return 'day-background-desktop';
+    }
+    if (isDay && !isDesktop) {
+      return 'mobile-light-background';
+    }
+    if (!isDay && isDesktop) {
+      return 'dark-background-desktop';
+    }
+    return 'mobile-dark-background';
+  };
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return null;
+  }
+
   return (
-    <div>
+    <div className={getBackgroundClassName()}>
       <Header tabs={homeTabInfo} isDay={isDay} />
-      <Background isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />
+      <EventsCalendarSection />
       <TestimonialsSection />
       <PastProjectsSection />
-      <PastPhotosSection />
-      <EventsCalendarSection />
-      <CovidSection />
       <FaqSection />
+      <PastPhotosSection />
+      <CovidSection />
       <MeetTheTeamSection />
       <AdventureAheadSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
@@ -41,5 +65,4 @@ const IndexPage: React.FC = () => {
 };
 
 export default IndexPage;
-
 export const Head: HeadFC = () => <title>Home Page</title>;

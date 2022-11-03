@@ -23,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
       <StyledHackBeanpotLogo
         src={HackBeanpotWhiteLogo}
         alt="White HackBeanpot Logo"
+        width={190}
       />
       {!isDesktop && !isOpen && (
         <StyledHamburgerIcon

@@ -48,6 +48,7 @@ const MailingListSignup: React.FunctionComponent = () => {
           placeholder="Enter your email"
           name="email"
           type="text"
+          value={email}
           onChange={handleEmailChange}
         />
         <StyledMailingMessage>{message}</StyledMailingMessage>

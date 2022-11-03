@@ -28,46 +28,46 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'How do I apply to HackBeanpot?',
     answer:
-      'Applications for HackBeanpot 2022 will be open from November 15th - January 14th. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
+      'Pre-registration begins November 6th, but applications will be open on November 22nd. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
   },
 
   {
     id: 2,
     question: 'Will HackBeanpot 2023 be in-person or virtual?',
     answer:
-      'Due to the increased transmissibility of the Omicron variant of COVID-19, HackBeanpot will be virtual again this year to keep our attendees as safe as possible. We know that many hackers were looking forward to an in-person event, so we plan to have some in-person activities for people to meet each other, like our outdoor Sunrise Walk.'
+      'HackBeanpot 2023 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
   },
 
   {
     id: 3,
-    question: 'When and where is HackBeanpot 2023',
+    question: 'When and where is HackBeanpot 2023?',
     answer:
-      'HackBeanpot 2022 will be held virtually on the weekend of February 11-13.'
+      'The location of HackBeanpot 2023 will be announced by the time registration is opened on November 22nd. The venue will be in Boston and we ask that all hackers review and abide by the Code of Conduct during the event.'
   },
   {
     id: 4,
     question: 'What is HackBeanpot doing about COVID safety?',
     answer:
-      'Even as a mostly virtual event, there will be still some in-person elements such as our Swag Outposts or Sunrise Walk. We will make sure to maintain the appropriate COVID-19 protocols.'
+      'HackBeanpot is committed to ensuring that hackers feel safe and activities comply with local COVID-19 policies. For this reason, we ask that hackers upload proof of vaccination when asked after registration and encourage everyone to wear masks during the event as it is indoors.'
   },
 
   {
     id: 5,
-    question: 'How long is the event?/What will the schedule be like?',
+    question: 'How long is the event? / What will the schedule be like?',
     answer:
-      'The event will start around 7 pm EST on Friday, Feb 11th and will go until around Sunday, Feb 13th 3:30 pm EST. (Note: These times are tentative and may change closer to the event date). Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
+      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
   },
 
   {
     id: 6,
     question: 'What kind of projects can I work on?',
     answer:
-      'The Milky Way is your oyster! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
+      'The desert is yours to explore! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
   },
 
   {
     id: 7,
-    question: 'How do I find a team?/Are there limits on team size?plus sign',
+    question: 'How do I find a team? / Are there limits on team size?',
     answer:
       'There will be a team formation activity at the beginning of the hackathon where you can meet your dream team! Another way of finding team members is through our event Slack, which will be sent out one week before the event. You are also free to attend with a premade team. While there isn’t a limit on team sizes, our prizes are budgeted for teams of up to 5 members.'
   },
@@ -76,7 +76,7 @@ export const FaqSectionData: FaqData[] = [
     id: 8,
     question: 'Who can attend HackBeanpot?',
     answer:
-      'HackBeanpot is open to all high school, undergraduate, and graduate school students. You must be 13 years or older to apply. Please note that any student under 18 years old will have to have a form signed by a parent or guardian in order to attend. All attendees must abide by our Code of Conduct.'
+      'HackBeanpot is open to all high school, undergraduate, and graduate school students. You must be 13 years or older to apply. All attendees must abide by our Code of Conduct.'
   },
 
   {
@@ -91,14 +91,14 @@ export const FaqSectionData: FaqData[] = [
     id: 10,
     question: 'How much does it cost? Will there be swag?',
     answer:
-      'HackBeanpot is completely free for all our attendees! We will also be giving out free space-themed swag 👀🚀 as well as have lots of yummy meals and snacks!'
+      'HackBeanpot is completely free for all our attendees, including meals and snacks! We will also be giving out free swag so you can ~ thrive in our desert oasis ~!'
   },
 
   {
     id: 11,
-    question: 'What will I need to bring',
+    question: 'What will I need to bring?',
     answer:
-      'To have a great time at HackBeanpot 2022, you should prepare your workspace with your computer, scrap paper for ideation, any hardware you may want for your hack and your best space cadet energy to learn and create new things! Stay tuned for an Astronaut Training Manual in your inbox sent out closer to the event with more details.'
+      'To have a great time at HackBeanpot 2023, you should arrive with your laptop and a curious mindset fit for an explorer! Stay tuned for a Desert Exploration Guide in your inbox sent out closer to the event with more details.'
   }
 ];
 

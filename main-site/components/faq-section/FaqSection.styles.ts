@@ -6,8 +6,7 @@ import { H4 } from '../../../shared-ui/style/typography';
 const StyledFaqSectionContainer = styled.div`
   text-align: center;
   position: relative;
-  top: 1em;
-  margin-bottom: 5em;
+  margin-top: 8em;
 `;
 
 const StyledCactus = styled.img`

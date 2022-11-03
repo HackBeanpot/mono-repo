@@ -20,7 +20,7 @@ const StyledHackathonText = styled(H3)`
 
 const StyledStar = styled.img`
   position: absolute;
-  z-index: -1;
+  z-index: 10;
   width: 12%;
   top: 9em;
   right: 13em;
