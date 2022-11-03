@@ -10,11 +10,9 @@ export const StyledFaqContainer = styled.div`
   position: relative;
   padding: 4em;
   text-align: left;
-  padding-bottom: 0;
 
 @media ${max.tablet} {
     width: 80%;
-    padding: 0em;
-   
+    padding: 0em; 
 }
 `;

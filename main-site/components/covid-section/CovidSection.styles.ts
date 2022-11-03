@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { P } from '../../../shared-ui/style/typography';
 import { min } from '../../../shared-ui/lib/responsive';
-import { H3 } from '../../../shared-ui/style/typography';
+import { H2 } from '../../../shared-ui/style/typography';
 
 const StyledCovidSectionContainer = styled.div`
   display: flex;
   position: relative;
+  margin: 5em 0;
   padding-bottom: 5em;
   @media ${min.tablet} {
     padding: 10em 0;
@@ -32,7 +33,7 @@ const StyledDesertVan = styled.img`
   }
 `;
 
-const StyledCovidInformationAndButton = styled.div`
+const StyledCovidTitleAndInformation = styled.div`
   padding: 0 2em;
   @media ${min.tablet} {
     width: 60%;
@@ -49,21 +50,11 @@ const StyledCovidInformationAndButton = styled.div`
   }
 `;
 
-const StyledCovidPolicyButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.5em;
-  @media ${min.tablet} {
-    justify-content: left;
-  }
-`;
-
 const StyledCovidSectionInformation = styled(P)`
   padding: 1em 0;
 `;
 
-const StyledTitle = styled(H3)`
+const StyledTitle = styled(H2)`
   text-align: center;
   @media ${min.tablet} {
     text-align: left;
@@ -73,8 +64,7 @@ const StyledTitle = styled(H3)`
 export {
   StyledCovidSectionContainer,
   StyledDesertVan,
-  StyledCovidInformationAndButton,
-  StyledCovidPolicyButtonContainer,
+  StyledCovidTitleAndInformation,
   StyledCovidSectionInformation,
   StyledTitle
 };

@@ -25,9 +25,9 @@ const ExploreSection: React.FC = () => {
           Explore the Desert with HackBeanpot!
         </H3>
         <StyledParagraph color={isDesktop ? colors.WHITE : colors.TEXT_BROWN}>
-          HackBeanpot 2022 is gonna be out of this world! Join our community of
-          astronaut trainees* for a weekend of exploration, collaboration, and
-          fun! (Oh, and did we mention free food and swag?) <br /> <br />
+          HackBeanpot 2023 is gonna be a journey through the desert! Join our
+          community of adventurers for a weekend of exploration, collaboration,
+          and fun! (Oh, and did we mention free food and swag?) <br /> <br />
           Hackers can expect to put their resourcefulness to the test, while
           sharing stories, and learning new skills from peers. So whether you're
           a seasoned hackathon-goer, an ‘I-have-never-written-a-line-of-code’

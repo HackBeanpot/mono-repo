@@ -9,7 +9,7 @@ const StyledHeader = styled.div<StyledHeaderProps>`
     height: ${(props): string => (props.isOpen ? '40em' : '4.8em')};
     background-color: ${(props): string =>
       props.isDay ? colors.HEADER_FOOTER_BLUE : colors.NIGHT_HEADER_COLOR};
-    width: 100%;
+    width: 100vw;
     z-index: 20;
     position: fixed;
     @media ${min.tablet} {
@@ -42,6 +42,9 @@ const StyledTabsContainer = styled.div`
       float: right;
       padding-top: 0;
       text-align: left;
+    }
+    @media ${min.tabletLg} {
+      padding-right: 3em;
     }
   }
 `;
