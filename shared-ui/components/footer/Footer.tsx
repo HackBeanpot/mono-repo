@@ -10,7 +10,8 @@ import {
   StyledTabContainer,
   StyledFooterContentContainer,
   StyledFooterCodeOfConduct,
-  StyledHBPContent
+  StyledHBPContent,
+  StyledFooterTextLink
 } from './Footer.styles';
 import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.svg';
 import MailingListSignup from '../../../main-site/components/mailing-list-signup/MailingListSignup';
@@ -30,6 +31,9 @@ const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
           <StyledFooterText>
             HackBeanpot, Inc. is a registered 501(c)(3) organization.
           </StyledFooterText>
+          <StyledFooterTextLink href="/code-of-conduct/">
+            Code of Conduct
+          </StyledFooterTextLink>
         </StyledFooterCodeOfConduct>
       </StyledHBPContent>
       <StyledFooterContentContainer>
