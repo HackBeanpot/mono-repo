@@ -4,8 +4,11 @@ import {
   StyledFaqButton,
   StyledFaqDropdown,
   StyledFaqLine,
-  StyledFaqQuestionText
+  StyledFaqQuestionText,
+  StyledFaqPlusSign
 } from './FaqItem.styles';
+
+import PlusSign from '../../../../shared-ui/images/plus-sign.svg';
 
 const FaqItem: React.FC<FaqItemProps> = ({
   id,
@@ -23,6 +26,7 @@ const FaqItem: React.FC<FaqItemProps> = ({
           isSelected ? setSelectedQuestion(-1) : setSelectedQuestion(id)
         }
       >
+        <StyledFaqPlusSign src={PlusSign} />
         <StyledFaqQuestionText>{question}</StyledFaqQuestionText>
       </StyledFaqButton>
       <StyledFaqLine />

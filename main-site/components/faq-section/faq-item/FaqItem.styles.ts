@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P } from '../../../../shared-ui/style/typography';
+import { max } from '../../../../shared-ui/lib/responsive';
 
 const StyledFaqQuestionText = styled(H4)`
   color: ${colors.TEXT_BROWN};
@@ -38,9 +39,21 @@ const StyledFaqDropdown = styled(P)`
   padding-left: 0;
 `;
 
+const StyledFaqPlusSign = styled.img`
+  height: 1.5em;
+  width: 1.5em;
+  padding-left: 85%;
+  position: absolute;
+
+  @media ${max.tablet} {
+    display: none;
+  }
+`;
+
 export {
   StyledFaqButton,
   StyledFaqDropdown,
   StyledFaqQuestionText,
-  StyledFaqLine
+  StyledFaqLine,
+  StyledFaqPlusSign
 };
