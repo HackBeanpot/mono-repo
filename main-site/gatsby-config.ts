@@ -17,6 +17,9 @@ const config: GatsbyConfig = {
         endpoint:
           'https://hackbeanpot.us10.list-manage.com/subscribe/post?u=a98050d47fdae2481521f0474&id=dccd8c8431&f_id=00e336e2f0'
       }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`
     }
   ]
 };
