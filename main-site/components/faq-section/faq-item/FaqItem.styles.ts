@@ -43,7 +43,6 @@ const StyledFaqPlusSign = styled.img`
   height: 1.5em;
   width: 1.5em;
   float: right;
-  position: absolute;
 
   @media ${max.tablet} {
     display: none;
