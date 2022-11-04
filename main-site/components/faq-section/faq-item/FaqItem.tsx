@@ -26,7 +26,6 @@ const FaqItem: React.FC<FaqItemProps> = ({
           isSelected ? setSelectedQuestion(-1) : setSelectedQuestion(id)
         }
       >
-        {' '}
         <StyledFaqQuestionText>{question}</StyledFaqQuestionText>
         <StyledFaqPlusSign src={PlusSign} />
       </StyledFaqButton>
