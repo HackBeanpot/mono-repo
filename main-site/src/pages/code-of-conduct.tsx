@@ -15,7 +15,7 @@ import {
 
 const CodeOfConduct: React.FC = () => {
   return (
-    <StyledBackground>
+    <div>
       <Header tabs={homeTabInfo} isDay={true} />
 
       <StyledTextContainer>
@@ -75,7 +75,7 @@ const CodeOfConduct: React.FC = () => {
         </StyledBodyTextContainer>
       </StyledTextContainer>
       <Footer tabs={homeTabInfo} isDay={true} />
-    </StyledBackground>
+    </div>
   );
 };
 
