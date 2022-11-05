@@ -2,6 +2,8 @@ import Footer from '../../../shared-ui/components/footer/Footer';
 import React from 'react';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
 import '../../../shared-ui/style/global.css';
+import type { HeadFC } from 'gatsby';
+import '../../../shared-ui/index.css';
 import Header from '../../../shared-ui/components/header/Header';
 import {
   StyledParagraph,
@@ -16,7 +18,8 @@ import {
 const CodeOfConduct: React.FC = () => {
   return (
     <div>
-      <Header tabs={homeTabInfo} isDay={true} />
+      hi
+      {/* <Header tabs={homeTabInfo} isDay={true} />
 
       <StyledTextContainer>
         <StyledHeading>HackBeanpot 2023 Code of Conduct</StyledHeading>
@@ -74,9 +77,10 @@ const CodeOfConduct: React.FC = () => {
           </StyledParagraphBottom>
         </StyledBodyTextContainer>
       </StyledTextContainer>
-      <Footer tabs={homeTabInfo} isDay={true} />
+      <Footer tabs={homeTabInfo} isDay={true} /> */}
     </div>
   );
 };
 
 export default CodeOfConduct;
+export const Head: HeadFC = () => <title>Code of conduct</title>;
