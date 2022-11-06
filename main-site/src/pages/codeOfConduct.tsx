@@ -1,5 +1,5 @@
-import Footer from '../../../shared-ui/components/footer/Footer';
 import * as React from 'react';
+import Footer from '../../../shared-ui/components/footer/Footer';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
 import '../../../shared-ui/style/global.css';
 import '../pageStyles/globals.css';
