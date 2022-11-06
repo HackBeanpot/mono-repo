@@ -1,7 +1,8 @@
 import Footer from '../../../shared-ui/components/footer/Footer';
-import React from 'react';
+import * as React from 'react';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
 import '../../../shared-ui/style/global.css';
+import '../pageStyles/globals.css';
 import '../../../shared-ui/index.css';
 import Header from '../../../shared-ui/components/header/Header';
 import {
