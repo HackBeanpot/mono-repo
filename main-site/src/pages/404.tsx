@@ -4,7 +4,7 @@ import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryB
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import '../pageStyles/globals.css';
-import { StyledH1, StyledH4, ButtonContainer} from '../page-styles/404.styles';
+import { StyledH1, StyledH4, ButtonContainer } from '../page-styles/404.styles';
 
 const NotFoundPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
@@ -22,24 +22,18 @@ const NotFoundPage: React.FC = () => {
   if (isLoading) {
     return null;
   }
-  
+
   return (
-    
-      <div className={getBackgroundClassName()}>
+    <div className={getBackgroundClassName()}>
       <StyledH1>
         Uh oh, how did we end <br /> up here?
       </StyledH1>
       <StyledH4>Let's get back to exploring!</StyledH4>
       <ButtonContainer>
-      <PrimaryButton btnText = 'return home' btnLink='/'></PrimaryButton>
+        <PrimaryButton btnText="return home" btnLink="/"></PrimaryButton>
       </ButtonContainer>
-      </div>
-        
-
-  
+    </div>
   );
 };
 
 export default NotFoundPage;
-
-
