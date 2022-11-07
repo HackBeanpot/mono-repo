@@ -10,7 +10,7 @@ const StyledPhotosSection = styled.div`
 `;
 
 const StyledPhotos = styled.img`
-  width: 100vw;
+  width: 100%;
 `;
 
 const StyledPastPhotosButton = styled.div`
