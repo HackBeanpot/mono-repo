@@ -155,7 +155,7 @@ export const pastProjectsData: PastProjectData[] = [
     title: 'Oh Duck!, 2022',
     members: 'by Karyna Yen',
     description:
-      "'Oh, Duck!' is a chrome chrome extension that replaces profane words with a duck emoji.",
+      "'Oh, Duck!' is a chrome extension that replaces profane words with a duck emoji.",
     btnLink: 'https://devpost.com/software/oh-duck'
   }
 ];
