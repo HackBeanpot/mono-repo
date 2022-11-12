@@ -33,6 +33,7 @@ const StyledShopCardName = styled(H4)`
 
 const StyledDesertShopSectionHeader = styled(H2)`
   color: ${colors.BLACK};
+  padding-top: 4em;
   padding-bottom: 0.5em;
   text-align: center;
 
