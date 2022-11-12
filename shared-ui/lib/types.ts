@@ -11,7 +11,18 @@ export interface TabInfo {
 
 export interface TeamColumnInfo {
   teamLabel: string;
-  listOfPictures: string[][];
+  listOfPictures: Person[][];
+}
+
+export interface Person {
+  picture: string;
+  toolTipInfo: ToolTipInfo;
+}
+
+export interface ToolTipInfo {
+  year: string;
+  major: string;
+  pronouns: string;
 }
 
 export interface HeaderProps {

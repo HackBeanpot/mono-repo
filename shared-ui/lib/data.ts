@@ -1,4 +1,4 @@
-import { TabInfo, TeamColumnInfo } from './types';
+import { Person, TabInfo, TeamColumnInfo, ToolTipInfo } from './types';
 import Judy from '../../shared-ui/images/meet-the-team/judy.png';
 import Dean from '../../shared-ui/images/meet-the-team/dean.png';
 import Surbhi from '../../shared-ui/images/meet-the-team/surbhi.png';
@@ -30,32 +30,288 @@ const homeTabInfo: TabInfo[] = [
   { name: 'Team', link: '#team' }
 ];
 
-const directorsPictures: string[][] = [[Sreya, David]];
+const sreyaToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
 
-const techPictures: string[][] = [
-  [Judy],
-  [Dean, Surbhi],
-  [Mike, Dhivas],
-  [Lisa]
+const sreya: Person = {
+  picture: Sreya, 
+  toolTipInfo: sreyaToolTip
+}
+
+const davidToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const david: Person = {
+  picture: David, 
+  toolTipInfo: davidToolTip
+}
+
+const judyToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const judy: Person = {
+  picture: Judy, 
+  toolTipInfo: judyToolTip
+}
+
+const deanToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const dean: Person = {
+  picture: Dean, 
+  toolTipInfo: deanToolTip
+}
+
+const surbhiToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const surbhi: Person = {
+  picture: Surbhi, 
+  toolTipInfo: surbhiToolTip
+}
+
+const mikeToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const mike: Person = {
+  picture: Mike, 
+  toolTipInfo: mikeToolTip
+}
+
+const dhivasToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const dhivas: Person = {
+  picture: Dhivas, 
+  toolTipInfo: dhivasToolTip
+}
+
+const lisaToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const lisa: Person = {
+  picture: Lisa, 
+  toolTipInfo: lisaToolTip
+}
+
+const spencerToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const spencer: Person = {
+  picture: Spencer, 
+  toolTipInfo: spencerToolTip
+}
+
+const julieToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const julie: Person = {
+  picture: Julie, 
+  toolTipInfo: julieToolTip
+}
+
+const sarahToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const sarah: Person = {
+  picture: Sarah, 
+  toolTipInfo: sarahToolTip
+}
+
+const amandaToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const amanda: Person = {
+  picture: Amanda, 
+  toolTipInfo: amandaToolTip
+}
+
+const onotinaToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const onotina: Person = {
+  picture: Onotina, 
+  toolTipInfo: onotinaToolTip
+}
+
+const baydenToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const bayden: Person = {
+  picture: Bayden, 
+  toolTipInfo: baydenToolTip
+}
+
+const jessToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const jess: Person = {
+  picture: Jess, 
+  toolTipInfo: jessToolTip
+}
+
+const karynaToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const karyna: Person = {
+  picture: Karyna, 
+  toolTipInfo: karynaToolTip
+}
+
+const sanjanaToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const sanjana: Person = {
+  picture: Sanjana, 
+  toolTipInfo: sanjanaToolTip
+}
+
+const aarushiToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const aarushi: Person = {
+  picture: Aarushi, 
+  toolTipInfo: aarushiToolTip
+}
+
+const karenToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const karen: Person = {
+  picture: Karen, 
+  toolTipInfo: karenToolTip
+}
+
+const rachelToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const rachel: Person = {
+  picture: Rachel, 
+  toolTipInfo: rachelToolTip
+}
+
+const wendiToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const wendi: Person = {
+  picture: Wendi, 
+  toolTipInfo: wendiToolTip
+}
+
+const allyToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const ally: Person = {
+  picture: Ally, 
+  toolTipInfo: allyToolTip
+}
+
+const jasmineToolTip: ToolTipInfo = {
+  year: "year: 3rd", 
+  major: "major: CS + Design", 
+  pronouns: "pronouns: she/her"
+}
+
+const jasmine: Person = {
+  picture: Jasmine, 
+  toolTipInfo: jasmineToolTip
+}
+
+const directorsPictures: Person[][] = [[sreya, david]];
+
+const techPictures: Person[][] = [
+  [judy],
+  [dean, surbhi],
+  [mike, dhivas],
+  [lisa]
 ];
 
-const designPictures: string[][] = [
-  [Spencer],
-  [Sarah, Julie],
-  [Amanda, Onotina]
+const designPictures: Person[][] = [
+  [spencer],
+  [sarah, julie],
+  [amanda, onotina]
 ];
 
-const socialOutreachPictures: string[][] = [
-  [Bayden],
-  [Jess, Karyna],
-  [Sanjana, Aarushi]
+const socialOutreachPictures: Person[][] = [
+  [bayden],
+  [jess, karyna],
+  [sanjana, aarushi]
 ];
 
-const sponsorshipPictures: string[][] = [
-  [Karen],
-  [Rachel, Wendi],
-  [Ally, Jasmine]
+const sponsorshipPictures: Person[][] = [
+  [karen],
+  [rachel, wendi],
+  [ally, jasmine]
 ];
+
+
+
 
 const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Directors', listOfPictures: directorsPictures },

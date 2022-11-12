@@ -1,5 +1,5 @@
 import React from 'react';
-import { TeamColumnProps } from '../../../lib/types';
+import { Person, TeamColumnProps } from '../../../lib/types';
 import {
   StyledTeamColumn,
   StyledLabel,
@@ -9,17 +9,18 @@ import {
 } from './TeamColumn.styles';
 
 const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
-  const listOfPictures: string[][] = columnInfo.listOfPictures;
+  const listOfPictures: Person[][] = columnInfo.listOfPictures; // data for each team
   return (
     <StyledTeamColumn>
       <StyledLabel twoLines={columnInfo.teamLabel == 'Social Outreach'}>
         {columnInfo.teamLabel}
       </StyledLabel>
       <ImageContainer>
-        {listOfPictures.map((rowPics: string[]) => (
+        {listOfPictures.map((rowPics: Person[]) => (
           <StyledImageRow>
-            {rowPics.map((pic: string) => (
-              <StyledHeadshot src={pic} />
+            {rowPics.map((pic: Person) => (
+              <ToolTip tooltipInfo={pic.toolTipInfo}/>
+              <StyledHeadshot src={pic.picture} />
             ))}
           </StyledImageRow>
         ))}
