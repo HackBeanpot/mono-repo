@@ -10,6 +10,7 @@ import {
 } from './MeetTheTeamSection.styles';
 import MobileTeamColumn from './mobile-team-column/MobileTeamColumn';
 import TeamColumn from './team-column/TeamColumn';
+import MeetAllCore from './meet-all-core/MeetAllCore';
 
 const MeetTheTeamSection: React.FC = () => {
   const teamColumnsInfo: TeamColumnInfo[] = teamInfo;
@@ -26,6 +27,7 @@ const MeetTheTeamSection: React.FC = () => {
           </StyledImageContainer>
         )}
         {!isDesktop && <MobileTeamColumn listOfColumnInfo={teamColumnsInfo} />}
+        <MeetAllCore />
       </StyledMeetTheTeamSection>
     </div>
   );
