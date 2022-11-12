@@ -7,18 +7,12 @@ import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import { homeTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
-import ExploreSection from '../../components/explore-section/ExploreSection';
-import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
-import FaqSection from '../../components/faq-section/FaqSection';
-import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
 import CovidSection from '../../components/covid-section/CovidSection';
-import PastPhotosSection from '../../components/past-photos-section/PastPhotosSection';
-import AboutSection from '../../components/about-section/AboutSection';
-import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
-import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
+import DesertShopSection from '../../components/desert-shop-section/DesertShopSection';
+import RotateSection from '../../components/rotate-section/rotateSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -49,16 +43,10 @@ const IndexPage: React.FC = () => {
     <div className={getBackgroundClassName()}>
       <Header tabs={homeTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
-      <ExploreSection />
-      <AboutSection />
-      <EventsCalendarSection />
-      <TestimonialsSection />
-      <PastProjectsSection />
-      <FaqSection />
-      <PastPhotosSection />
+      <DesertShopSection/>
       <CovidSection />
-      <MeetTheTeamSection />
-      <AdventureAheadSection />
+      <RotateSection/>
+      <PastProjectsSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>
   );

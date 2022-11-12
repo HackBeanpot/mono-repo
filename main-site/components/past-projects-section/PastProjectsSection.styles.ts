@@ -12,6 +12,7 @@ const StyledPastProjectsHeader = styled(H2)`
   color: ${colors.BLACK};
   padding-bottom: 0.5em;
   text-align: center;
+  padding-top: 5em;
 
   @media ${max.tablet} {
     padding-bottom: -10em;
@@ -29,6 +30,7 @@ const StyledPastProjectsSection = styled.div`
   margin: auto;
   border-radius: 1.25em;
   height: 100%;
+
 
   @media ${max.tablet} {
     background-color: transparent;
@@ -135,7 +137,7 @@ const StyledPastProjectsPhotos = styled.img`
 const StyledFennecFox = styled.img`
   position: absolute;
   right: 0;
-  padding-top: 51em;
+  padding-top: 100em;
   z-index: 1;
   height: 20em;
   width: 20em;
@@ -149,12 +151,24 @@ const StyledCamel = styled.img`
   position: absolute;
   right: 0;
   z-index: 1;
-  padding-top: 10em;
+  padding-top: 58em;
 
   @media ${max.tabletLg} {
     height: 20em;
   }
 `;
+
+const StyledNewSectionHeader = styled(H2)`
+  color: ${colors.BLACK};
+  padding-bottom: 0.5em;
+  text-align: center;
+
+  padding-top: 7em;
+
+
+
+`;
+
 export {
   StyledPastProjectsSection,
   StyledPastProjectsHeader,
@@ -170,5 +184,6 @@ export {
   StyledPastProjectsInfoContainer,
   StyledPastProjectsContainerBottom,
   StyledArrowContainer,
-  StyledPastProjectsDiv
+  StyledPastProjectsDiv,
+  StyledNewSectionHeader
 };

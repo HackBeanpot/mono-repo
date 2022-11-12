@@ -21,7 +21,8 @@ import {
   StyledPastProjectsInfoContainer,
   StyledCamel,
   StyledArrowContainer,
-  StyledPastProjectsDiv
+  StyledPastProjectsDiv,
+  StyledNewSectionHeader
 } from './PastProjectsSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
@@ -49,7 +50,10 @@ const PastProjectsSection: React.FC = () => {
     <div>
       <StyledCamel src={Camel} />
       <StyledFennecFox src={FennecFox} />
-      <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
+      <StyledNewSectionHeader>Bring Our Main Site to Life</StyledNewSectionHeader>
+      <StyledPastProjectsHeader>Camels react to clicks
+        <br/> Foxes get shy when clicked
+      </StyledPastProjectsHeader>
       <StyledPastProjectsSection>
         {isDesktop &&
           pastProjectsData.map((project) => (
@@ -127,11 +131,6 @@ const PastProjectsSection: React.FC = () => {
           <br />
           Check out the HackBeanpot Archive!
         </StyledPastProjectsViewText>
-        <PrimaryButton
-          btnText="View Archive"
-          btnLink="https://projects.hackbeanpot.com/"
-          newTab
-        />
       </StyledPastProjectsInfoContainer>
     </div>
   );

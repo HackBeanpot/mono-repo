@@ -9,6 +9,7 @@ const StyledCovidSectionContainer = styled.div`
   position: relative;
   margin: 5em 0;
   padding-bottom: 5em;
+
   
   @media ${min.tablet} {
     padding: 10em 0;
@@ -64,13 +65,24 @@ const StyledTitle = styled(H2)`
 `;
 
 
-const StyledCovidSectionSubHeader = styled(H2)`
+const StyledRotateSectionSubHeader = styled(H2)`
   color: ${colors.WHITE};
   margin-top:2em;
   padding-left: 1em;
+  padding-top: 5em; 
   @media ${max.tablet} {
     padding-bottom: -10em;
   }
+`;
+
+const StyledStar = styled.img`
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  top: 9em;
+
 `;
 
 export {
@@ -79,5 +91,6 @@ export {
   StyledCovidTitleAndInformation,
   StyledCovidSectionInformation,
   StyledTitle,
-  StyledCovidSectionSubHeader
+  StyledRotateSectionSubHeader,
+  StyledStar
 };

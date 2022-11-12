@@ -2,7 +2,6 @@ import React from 'react';
 import {
   StyledHackathonText,
   StyledThemeText,
-  StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledToggle,
   StyledLandingTextContainer,
@@ -24,13 +23,10 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
 
       {isDay ? <StyledStar src={Sun} /> : <StyledStar src={Moon} />}
       <StyledLandingTextContainer>
-        <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
-        <StyledThemeText>Desert Exploration</StyledThemeText>
-        <StyledLandingButtonContainer
-          btnText="Join our mailing list"
-          btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
-          newTab
-        />
+        <StyledHackathonText>Tech Team 2023</StyledHackathonText>
+        <StyledThemeText>Animations Workshop</StyledThemeText>
+        <StyledHackathonText>Framer Motion <br/>By Mike</StyledHackathonText>
+        <StyledThemeText>🤪</StyledThemeText>
       </StyledLandingTextContainer>
     </StyledLandingSectionContainer>
   );
