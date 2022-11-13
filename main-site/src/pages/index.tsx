@@ -5,7 +5,7 @@ import '../../../shared-ui/index.css';
 import '../../../shared-ui/style/global.css';
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
-import { homeTabInfo } from '../../../shared-ui/lib/data';
+import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
@@ -47,7 +47,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <div className={getBackgroundClassName()}>
-      <Header tabs={homeTabInfo} isDay={isDay} />
+      <Header tabs={mainSiteTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />
@@ -59,7 +59,7 @@ const IndexPage: React.FC = () => {
       <CovidSection />
       <MeetTheTeamSection />
       <AdventureAheadSection />
-      <Footer tabs={homeTabInfo} isDay={isDay} />
+      <Footer tabs={mainSiteTabInfo} isDay={isDay} />
     </div>
   );
 };

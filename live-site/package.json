@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^4.20.0"
+    "gatsby": "^5.0.1"
   },
   "devDependencies": {}
 }
