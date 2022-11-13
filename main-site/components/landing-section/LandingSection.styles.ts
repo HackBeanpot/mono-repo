@@ -1,10 +1,11 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H1, H3 } from '../../../shared-ui/style/typography';
 
-const StyledHackathonText = styled(H3)`
+const StyledHackathonText = styled(motion(H3))`
    {
     color: ${colors.WHITE};
     padding-bottom: 1em;
@@ -36,7 +37,7 @@ const StyledStar = styled.img`
   }
 `;
 
-const StyledThemeText = styled(H1)`
+const StyledThemeText = styled(motion(H1))`
    {
     color: ${colors.WHITE};
     padding-bottom: 0.5em;
@@ -50,7 +51,19 @@ const StyledThemeText = styled(H1)`
   }
 `;
 
-const StyledLandingTextContainer = styled.div`
+const StyledEmoji = styled(motion(H1))`
+  overflow: hidden;
+  padding-bottom: 0.5em;
+  @media ${max.tablet} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+    padding-top: 0.2em;
+  }
+`;
+
+const StyledLandingTextContainer = styled(motion.div)`
   padding-top: 21em;
   text-align: center;
   @media ${max.tabletLg} {
@@ -67,7 +80,7 @@ const StyledLandingTextContainer = styled.div`
   }
 `;
 
-const StyledLandingSectionContainer = styled.div`
+const StyledLandingSectionContainer = styled(motion.div)`
   position: relative;
 `;
 
@@ -105,5 +118,6 @@ export {
   StyledLandingSectionContainer,
   StyledToggle,
   StyledLandingTextContainer,
-  StyledStar
+  StyledStar,
+  StyledEmoji
 };
