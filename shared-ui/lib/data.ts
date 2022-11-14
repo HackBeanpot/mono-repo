@@ -271,7 +271,7 @@ const rachel: Person = {
 }
 
 const wendiToolTip: ToolTipInfo = {
-  name: 'name: Onwuakpa',
+  name: 'name: Wendi Onwuakpa',
   year: "year: 3rd", 
   major: "major: CS + Business", 
   pronouns: "pronouns: she/her"
