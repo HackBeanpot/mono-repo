@@ -5,25 +5,26 @@
  * 
  * one list: [year: 5th, major: CS, pronouns: she/her]
  */
- import React from 'react';
-import { ToolTipInfo } from '../../../lib/types';
+import React from 'react';
+import { ToolTipProps } from '../../../lib/types';
+import { StyledToolTip, StyledToolTipText, StyledToolTipYear, StyledToolTipMajor, StyledToolTipPronouns } from './ToolTip.styles';
 
- const ToolTip: React.FC<ToolTipInfo> = (toolTipInfo) => {
-    
-
+ const ToolTip: React.FC<ToolTipProps> = ({toolTipInfo}) => {
     return (
-    <ToolTip>
-        <ToolTipYear>
+    <StyledToolTip>
+        <StyledToolTipText>
+        <StyledToolTipYear>
             {toolTipInfo.year}
-        </ToolTipYear>
-        <ToolTipMajor>
+        </StyledToolTipYear>
+        <StyledToolTipMajor>
             {toolTipInfo.major}
-        </ToolTipYear>
-        <ToolTipPronouns>
+        </StyledToolTipMajor>
+        <StyledToolTipPronouns>
             {toolTipInfo.pronouns}
-        </ToolTipPronoun>
+        </StyledToolTipPronouns>
+        </StyledToolTipText>
 
-    </ToolTip>
+    </StyledToolTip>
     );
   };
   

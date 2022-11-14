@@ -3,6 +3,7 @@ import { max } from '../../../lib/responsive';
 import { StyledTeamLabelProps } from '../../../lib/types';
 import { colors } from '../../../style/colors';
 import { P } from '../../../style/typography';
+import { StyledToolTip } from '../tooltip/ToolTip.styles';
 
 const StyledTeamColumn = styled.div`
   flex-direction: column;
@@ -30,6 +31,10 @@ const StyledImageRow = styled.div``;
 const StyledHeadshot = styled.img`
   padding-top: 2em;
   width: 8.5em;
+  &:hover ${StyledToolTip}{
+    visibility: visible;
+  }
+
   @media ${max.tabletLg} {
     width: 6.5em;
     margin: 0;

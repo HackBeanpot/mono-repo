@@ -25,6 +25,10 @@ export interface ToolTipInfo {
   pronouns: string;
 }
 
+export interface ToolTipProps {
+  toolTipInfo: ToolTipInfo;
+}
+
 export interface HeaderProps {
   tabs: TabInfo[];
   isDay: boolean;
