@@ -9,9 +9,9 @@ import React from 'react';
 import { ToolTipProps } from '../../../lib/types';
 import { StyledToolTip, StyledToolTipText, StyledToolTipYear, StyledToolTipMajor, StyledToolTipPronouns } from './ToolTip.styles';
 
- const ToolTip: React.FC<ToolTipProps> = ({toolTipInfo}) => {
+ const ToolTip: React.FC<ToolTipProps> = ({toolTipInfo, team}) => {
     return (
-    <StyledToolTip>
+    <StyledToolTip team={team}>
         <StyledToolTipText>
         <StyledToolTipYear>
             {toolTipInfo.year}

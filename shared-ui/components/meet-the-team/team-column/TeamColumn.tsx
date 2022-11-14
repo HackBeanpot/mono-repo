@@ -23,9 +23,9 @@ const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
             {rowPics.map((person: Person) => (
               <>
               <StyledHeadshot onMouseEnter={(): void => setCurPerson(person)} 
-              src={person.picture} 
+              src={person.picture} key={person.picture}
               onMouseLeave={(): void => setCurPerson(null)}/>
-             {curPerson != null && <ToolTip toolTipInfo={curPerson.toolTipInfo}/>}
+             {curPerson !== null && curPerson.picture === person.picture && <ToolTip toolTipInfo={curPerson.toolTipInfo} team ={columnInfo.teamLabel}/>}
              </>
               
             ))}

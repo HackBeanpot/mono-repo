@@ -27,6 +27,11 @@ export interface ToolTipInfo {
 
 export interface ToolTipProps {
   toolTipInfo: ToolTipInfo;
+  team: string;
+}
+
+export interface StyledToolTipProps {
+  team: string;
 }
 
 export interface HeaderProps {

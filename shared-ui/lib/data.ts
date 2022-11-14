@@ -42,6 +42,7 @@ const sreya: Person = {
 }
 
 const davidToolTip: ToolTipInfo = {
+  // add name lol wtf doesn't have names kjhkjhadf
   year: "year: 3rd", 
   major: "major: CS + Design", 
   pronouns: "pronouns: she/her"
