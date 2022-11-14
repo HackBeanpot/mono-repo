@@ -20,6 +20,7 @@ export interface Person {
 }
 
 export interface ToolTipInfo {
+  name: string;
   year: string;
   major: string;
   pronouns: string;

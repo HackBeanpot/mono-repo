@@ -13,6 +13,7 @@ import { StyledToolTip, StyledToolTipText, StyledToolTipYear, StyledToolTipMajor
     return (
     <StyledToolTip team={team}>
         <StyledToolTipText>
+        {toolTipInfo.name}
         <StyledToolTipYear>
             {toolTipInfo.year}
         </StyledToolTipYear>

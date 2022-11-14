@@ -10,7 +10,7 @@ font-family: ${fonts.nunitoSansSemibold};
 `;
 
 const StyledToolTip = styled.div<StyledToolTipProps>`
-  width: 9.3em;
+  width: 12em;
   background-color: ${(props): string => (props.team === 'Directors' ? '#F2C94C': 
   props.team ==='Tech' ? '#2F80ED' : props.team==='Design' ? '#BB6BD9' : 
   props.team === 'Social Outreach' ? '#F2A32B' : '#27AE60')};
@@ -20,7 +20,7 @@ const StyledToolTip = styled.div<StyledToolTipProps>`
   padding: 1em 1em;
   position: absolute;
   z-index: 1;
-  margin-top: -18em;
+  margin-top: -19em;
 &:after {
     content: "";
     position: absolute;

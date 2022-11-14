@@ -31,8 +31,9 @@ const homeTabInfo: TabInfo[] = [
 ];
 
 const sreyaToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: "name: Sreya Katabathuni",
+  year: "year: 4th", 
+  major: "major: CS + Business", 
   pronouns: "pronouns: she/her"
 }
 
@@ -42,9 +43,9 @@ const sreya: Person = {
 }
 
 const davidToolTip: ToolTipInfo = {
-  // add name lol wtf doesn't have names kjhkjhadf
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: David Yan',
+  year: "year: 4th", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -54,8 +55,9 @@ const david: Person = {
 }
 
 const judyToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Judy Zhang',
+  year: "year: 5th", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -65,9 +67,10 @@ const judy: Person = {
 }
 
 const deanToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
-  pronouns: "pronouns: she/her"
+  name: 'name: Dean Frame',
+  year: "year: 4th", 
+  major: "major: CS", 
+  pronouns: "pronouns: he/him"
 }
 
 const dean: Person = {
@@ -76,8 +79,9 @@ const dean: Person = {
 }
 
 const surbhiToolTip: ToolTipInfo = {
+  name: 'name: Surbhi Gulati',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -87,9 +91,10 @@ const surbhi: Person = {
 }
 
 const mikeToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
-  pronouns: "pronouns: she/her"
+  name: 'name: Mike Mundia',
+  year: "year: 2nd", 
+  major: "major: CS + Theater", 
+  pronouns: "pronouns: he/him"
 }
 
 const mike: Person = {
@@ -98,9 +103,10 @@ const mike: Person = {
 }
 
 const dhivasToolTip: ToolTipInfo = {
+  name: 'name: Dhivas Sugumar',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
-  pronouns: "pronouns: she/her"
+  major: "major: CS", 
+  pronouns: "pronouns: he/him"
 }
 
 const dhivas: Person = {
@@ -109,8 +115,9 @@ const dhivas: Person = {
 }
 
 const lisaToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Lisa Jiang',
+  year: "year: 2nd", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -120,9 +127,10 @@ const lisa: Person = {
 }
 
 const spencerToolTip: ToolTipInfo = {
+  name: 'name: Spencor Shao',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
-  pronouns: "pronouns: she/her"
+  major: "major: CS + Music Tech", 
+  pronouns: "pronouns: he/him"
 }
 
 const spencer: Person = {
@@ -131,8 +139,9 @@ const spencer: Person = {
 }
 
 const julieToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Julie Wang',
+  year: "year: 4th", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -142,6 +151,7 @@ const julie: Person = {
 }
 
 const sarahToolTip: ToolTipInfo = {
+  name: 'name: Sarah Zhang',
   year: "year: 3rd", 
   major: "major: CS + Design", 
   pronouns: "pronouns: she/her"
@@ -153,7 +163,8 @@ const sarah: Person = {
 }
 
 const amandaToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
+  name: 'name: Amanda Lee',
+  year: "year: 2nd", 
   major: "major: CS + Design", 
   pronouns: "pronouns: she/her"
 }
@@ -164,8 +175,9 @@ const amanda: Person = {
 }
 
 const onotinaToolTip: ToolTipInfo = {
+  name: 'name: Onotina Imoudu',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
+  major: "major: CS + Business", 
   pronouns: "pronouns: she/her"
 }
 
@@ -175,8 +187,9 @@ const onotina: Person = {
 }
 
 const baydenToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Bayden Ibrahim',
+  year: "year: 4th", 
+  major: "major: CS + Cogn Psych", 
   pronouns: "pronouns: she/her"
 }
 
@@ -186,8 +199,9 @@ const bayden: Person = {
 }
 
 const jessToolTip: ToolTipInfo = {
+  name: 'name: Jessica Su',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -197,8 +211,9 @@ const jess: Person = {
 }
 
 const karynaToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Karyna Yen',
+  year: "year: 2nd", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -208,8 +223,9 @@ const karyna: Person = {
 }
 
 const sanjanaToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Sanjana Mishra',
+  year: "year: 4th", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -219,6 +235,7 @@ const sanjana: Person = {
 }
 
 const aarushiToolTip: ToolTipInfo = {
+  name: 'name: Aarushi Basmatkar',
   year: "year: 3rd", 
   major: "major: CS + Design", 
   pronouns: "pronouns: she/her"
@@ -230,8 +247,9 @@ const aarushi: Person = {
 }
 
 const karenToolTip: ToolTipInfo = {
+  name: 'name: Karen Li',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
+  major: "major: CS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -241,8 +259,9 @@ const karen: Person = {
 }
 
 const rachelToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Rachel Li',
+  year: "year: 4th", 
+  major: "major: DS", 
   pronouns: "pronouns: she/her"
 }
 
@@ -252,8 +271,9 @@ const rachel: Person = {
 }
 
 const wendiToolTip: ToolTipInfo = {
+  name: 'name: Onwuakpa',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
+  major: "major: CS + Business", 
   pronouns: "pronouns: she/her"
 }
 
@@ -263,8 +283,9 @@ const wendi: Person = {
 }
 
 const allyToolTip: ToolTipInfo = {
+  name: 'name: Ally Chao',
   year: "year: 3rd", 
-  major: "major: CS + Design", 
+  major: "major: DS + Business", 
   pronouns: "pronouns: she/her"
 }
 
@@ -274,8 +295,9 @@ const ally: Person = {
 }
 
 const jasmineToolTip: ToolTipInfo = {
-  year: "year: 3rd", 
-  major: "major: CS + Design", 
+  name: 'name: Jasmine McCoy',
+  year: "year: 2nd", 
+  major: "major: CS + Business", 
   pronouns: "pronouns: she/her"
 }
 
