@@ -30,12 +30,13 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           src={Hamburger}
           alt="Hamburger Icon"
           onClick={(): void => setIsOpen(true)}
+          
         />
       )}
       {!isDesktop && isOpen && (
         <StyledXIcon
           src={XIcon}
-          onClick={(): void => setIsOpen(false)}
+          onClick ={(): void => setIsOpen(false)}
           alt="Close"
         />
       )}

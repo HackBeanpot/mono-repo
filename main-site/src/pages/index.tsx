@@ -20,6 +20,7 @@ import PastProjectsSection from '../../components/past-projects-section/PastProj
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 
+
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
   const isDesktop = useMatchMedia(min.tablet);
@@ -46,8 +47,11 @@ const IndexPage: React.FC = () => {
   }
 
   return (
+    
     <div className={getBackgroundClassName()}>
+
       <Header tabs={mainSiteTabInfo} isDay={isDay} />
+
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />

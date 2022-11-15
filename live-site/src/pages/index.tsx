@@ -1,17 +1,19 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
+
+import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import liveSiteTabInfo from '../../lib/data';
 import { min } from '../../../shared-ui/lib/responsive';
-import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
-import LandingSection from '../../../main-site/components/landing-section/LandingSection';
+import '../../../shared-ui/index.css';
+import useMatchMedia from 'react-use-match-media';
 
 
 const IndexPage: React.FC = () => {
-  const [isDay, setIsDay] = React.useState<boolean>(true);
-  const isDesktop = matchMedia(min.tablet);
-  const [isLoading, setIsLoading] = React.useState<boolean>(true);
+  const [isDay, setIsDay] = useState<boolean>(true);
+  const isDesktop = useMatchMedia(min.tablet);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
       return 'day-background-desktop';
@@ -24,14 +26,24 @@ const IndexPage: React.FC = () => {
     }
     return 'mobile-dark-background';
   };
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return null;
+  }
+
   return (
 
-    <div >
+    <div className={getBackgroundClassName()}>
       <Header tabs={liveSiteTabInfo} isDay={isDay} />
       <Footer tabs={liveSiteTabInfo} isDay={isDay} />
     </div>
   )
 };
+
 
 export default IndexPage;
 
