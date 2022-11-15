@@ -9,8 +9,8 @@ import {
   StyledMobileHeaderCore,
   StyledMobileParagraphCore
 } from './MeetAllCore.styles';
-import GroupDesktop from '../../../shared-ui/images/meet-the-team/groupDesktop.svg';
-import GroupMobile from '../../../shared-ui/images/meet-the-team/groupMobile.svg';
+import GroupDesktop from '../../../shared-ui/images/meet-the-team/groupDesktop.png';
+import GroupMobile from '../../../shared-ui/images/meet-the-team/groupMobile.png';
 
 const MeetAllCore: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
