@@ -19,6 +19,8 @@ import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/Meet
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
+import { Helmet } from "react-helmet"
+
 
 
 const IndexPage: React.FC = () => {
@@ -49,7 +51,7 @@ const IndexPage: React.FC = () => {
   return (
     
     <div className={getBackgroundClassName()}>
-
+      
       <Header tabs={mainSiteTabInfo} isDay={isDay} />
 
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
