@@ -2,10 +2,12 @@ import React from 'react';
 import { min } from '../../../lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import {
-  StyledDesktopCore,
-  StyledMobileCore,
+  StyledDesktopImageCore,
+  StyledDesktopOurTeamCore,
   StyledDesktopHeaderCore,
   StyledDesktopParagraphCore,
+  StyledMobileImageCore,
+  StyledMobileOurTeamCore,
   StyledMobileHeaderCore,
   StyledMobileParagraphCore
 } from './MeetAllCore.styles';
@@ -18,6 +20,7 @@ const MeetAllCore: React.FC = () => {
     <div id="meetAllCore">
       {isDesktop && (
         <div>
+          <StyledDesktopOurTeamCore>OUR TEAM</StyledDesktopOurTeamCore>
           <StyledDesktopHeaderCore>
             Meet this year’s pioneers behind HackBeanpot!
           </StyledDesktopHeaderCore>
@@ -28,14 +31,16 @@ const MeetAllCore: React.FC = () => {
             technical experience and knowledge accessible to anyone who is
             interested!
           </StyledDesktopParagraphCore>
-          <StyledDesktopCore src={GroupDesktop} />
+          <StyledDesktopImageCore src={GroupDesktop} />
         </div>
       )}
       {!isDesktop && (
         <div>
+          <StyledMobileOurTeamCore>OUR TEAM</StyledMobileOurTeamCore>
           <StyledMobileHeaderCore>
             Meet this year’s pioneers behind HackBeanpot!
           </StyledMobileHeaderCore>
+          <StyledMobileImageCore src={GroupMobile} />
           <StyledMobileParagraphCore>
             The HackBeanpot Core Team has been hard at work to create the best
             adventure for you at HackBeanpot 2023! We are a group of 23 driven
@@ -43,7 +48,6 @@ const MeetAllCore: React.FC = () => {
             technical experience and knowledge accessible to anyone who is
             interested!
           </StyledMobileParagraphCore>
-          <StyledMobileCore src={GroupMobile} />
         </div>
       )}
     </div>
