@@ -14,7 +14,6 @@ const StyledMobileCore = styled.img`
 `;
 
 const StyledDesktopHeaderCore = styled(H3)`
-  color: colors.WHITE;
   display: flex;
   padding-top: 3.5em;
   justify-content: center;
