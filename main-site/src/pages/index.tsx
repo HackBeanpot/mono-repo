@@ -12,7 +12,7 @@ import PastProjectsSection from '../../components/past-projects-section/PastProj
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import DesertShopSection from '../../components/desert-shop-section/DesertShopSection';
-import RotateSection from '../../components/rotate-section/rotateSection';
+import RotateSection from '../../components/rotate-section/RotateSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -43,9 +43,9 @@ const IndexPage: React.FC = () => {
     <div className={getBackgroundClassName()}>
       <Header tabs={homeTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
-      <DesertShopSection/>
       <CovidSection />
       <RotateSection/>
+      <DesertShopSection/>
       <PastProjectsSection />
       <Footer tabs={homeTabInfo} isDay={isDay} />
     </div>

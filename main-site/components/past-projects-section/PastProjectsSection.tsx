@@ -44,6 +44,8 @@ const PastProjectsSection: React.FC = () => {
   const [currItem, setCurrItem] = useState<PastProjectData>(
     pastProjectsData[0]
   );
+
+  // This section is for you bring a section of our main site to life anyway you would like!
   const isDesktop = useMatchMedia(min.tablet);
 
   return (
