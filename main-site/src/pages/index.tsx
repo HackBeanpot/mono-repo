@@ -19,10 +19,8 @@ import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/Meet
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 import favicon from '../../../main-site/lib/favicon.png';
-
-
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -51,9 +49,9 @@ const IndexPage: React.FC = () => {
 
   return (
     <div className={getBackgroundClassName()}>
-        <Helmet>
-          <meta name="icon" ref='../../../main-site/lib/favicon.png' />
-        </Helmet>
+      {/* <Helmet>
+        <meta name="icon" href="../../../main-site/lib/favicon.png" />
+      </Helmet> */}
       <Header tabs={mainSiteTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />

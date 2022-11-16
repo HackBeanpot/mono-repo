@@ -18,11 +18,10 @@
   "dependencies": {
     "gatsby": "^4.20.0",
     "gatsby-plugin-mailchimp": "^5.2.2",
-    "gatsby-plugin-react-helmet": "^6.0.0",
+    "react-media-match": "^1.14.2",
     "react-helmet": "^6.1.0",
-    "react-media-match": "^1.14.2"
+    "gatsby-plugin-react-helmet": "^5.9.0",
+    "gatsby-plugin-manifest": "^4.9.1"
   },
-  "devDependencies": {
-    "@types/react-helmet": "^6.1.5"
-  }
+  "devDependencies": {}
 }
