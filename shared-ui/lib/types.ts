@@ -31,6 +31,14 @@ export interface ToolTipProps {
   team: string;
 }
 
+export interface Team {
+  directors: string;
+  tech: string;
+  design: string;
+  socialOutreach: string;
+  sponsorship: string;
+}
+
 export interface StyledToolTipProps {
   team: string;
 }

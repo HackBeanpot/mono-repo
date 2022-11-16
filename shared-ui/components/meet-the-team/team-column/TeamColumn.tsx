@@ -5,8 +5,6 @@ import {
   StyledTeamColumn,
   StyledLabel,
   StyledHeadshot,
-  ImageContainer,
-  StyledImageRow
 } from './TeamColumn.styles';
 
 const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
@@ -17,21 +15,28 @@ const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
       <StyledLabel twoLines={columnInfo.teamLabel == 'Social Outreach'}>
         {columnInfo.teamLabel}
       </StyledLabel>
-      <ImageContainer>
+      <div>
         {listOfPictures.map((rowPics: Person[]) => (
-          <StyledImageRow>
+          <div>
             {rowPics.map((person: Person) => (
               <>
-              <StyledHeadshot onMouseEnter={(): void => setCurPerson(person)} 
-              src={person.picture} key={person.picture}
-              onMouseLeave={(): void => setCurPerson(null)}/>
-             {curPerson !== null && curPerson.picture === person.picture && <ToolTip toolTipInfo={curPerson.toolTipInfo} team ={columnInfo.teamLabel}/>}
-             </>
-              
+                <StyledHeadshot
+                  onMouseEnter={(): void => setCurPerson(person)}
+                  src={person.picture}
+                  key={person.picture}
+                  onMouseLeave={(): void => setCurPerson(null)}
+                />
+                {curPerson !== null && curPerson.picture === person.picture && (
+                  <ToolTip
+                    toolTipInfo={curPerson.toolTipInfo}
+                    team={columnInfo.teamLabel}
+                  />
+                )}
+              </>
             ))}
-          </StyledImageRow>
+          </div>
         ))}
-      </ImageContainer>
+      </div>
     </StyledTeamColumn>
   );
 };
