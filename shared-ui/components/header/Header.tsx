@@ -26,34 +26,30 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
         width={190}
       />
 
-
-
-      
       {!isDesktop && !isOpen && (
         <StyledHamburgerIcon
           src={Hamburger}
           alt="Hamburger Icon"
           onClick={(): void => setIsOpen(true)}
-          
         />
-
-
       )}
-
 
       {!isDesktop && isOpen && (
         <StyledXIcon
           src={XIcon}
-          onClick ={(): void => setIsOpen(false)}
+          onClick={(): void => setIsOpen(false)}
           alt="Close"
         />
       )}
 
-
       {(isDesktop || (!isDesktop && isOpen)) && (
-        <StyledTabsContainer >
+        <StyledTabsContainer>
           {tabs.map((tab: TabInfo) => (
-            <StyledLink onClick={(): void => setIsOpen(false)} href={tab.link} key={tab.name}>
+            <StyledLink
+              onClick={(): void => setIsOpen(false)}
+              href={tab.link}
+              key={tab.name}
+            >
               <StyledTab>{tab.name}</StyledTab>
             </StyledLink>
           ))}

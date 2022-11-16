@@ -1,5 +1,4 @@
 export interface TabInfo {
-    name: string;
-    link: string;
-  }
-  
+  name: string;
+  link: string;
+}
