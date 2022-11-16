@@ -5,7 +5,6 @@ import { colors } from '../../../style/colors';
 
 const StyledMeetCoreContainer = styled.div`
   display: flex;
-  position: relative;
   margin: 5em 0;
   padding-bottom: 5em;
   text-align: left;
@@ -16,10 +15,13 @@ const StyledMeetCoreContainer = styled.div`
 
 const StyledOurTeamCore = styled(P)`
   color: ${colors.WHITE};
+  text-align: left;
   padding-top: 3.5em;
 `;
 
 const StyledDescriptionTeamCore = styled(P)`
+  color: ${colors.TEXT_BROWN};
+  text-align: left;
   padding-top: 1em;
 `;
 

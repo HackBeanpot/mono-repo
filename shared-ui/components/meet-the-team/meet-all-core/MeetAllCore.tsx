@@ -18,15 +18,17 @@ const MeetAllCore: React.FC = () => {
     <div id="meetAllCore">
       {isDesktop && (
         <StyledMeetCoreContainer>
-          <StyledOurTeamCore>OUR TEAM</StyledOurTeamCore>
-          <H3>Meet this year’s pioneers behind HackBeanpot!</H3>
-          <StyledDescriptionTeamCore>
-            The HackBeanpot Core Team has been hard at work to create the best
-            adventure for you at HackBeanpot 2023! We are a group of 23 driven
-            students from universities in the Boston-area who aim to make
-            technical experience and knowledge accessible to anyone who is
-            interested!
-          </StyledDescriptionTeamCore>
+          <div>
+            <StyledOurTeamCore>OUR TEAM</StyledOurTeamCore>
+            <H3>Meet this year’s pioneers behind HackBeanpot!</H3>
+            <StyledDescriptionTeamCore>
+              The HackBeanpot Core Team has been hard at work to create the best
+              adventure for you at HackBeanpot 2023! We are a group of 23 driven
+              students from universities in the Boston-area who aim to make
+              technical experience and knowledge accessible to anyone who is
+              interested!
+            </StyledDescriptionTeamCore>
+          </div>
           <StyledDesktopImageCore src={GroupDesktop} />
         </StyledMeetCoreContainer>
       )}
