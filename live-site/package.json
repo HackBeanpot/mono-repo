@@ -16,7 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^5.0.1"
-  },
-  "devDependencies": {}
+    "gatsby": "^5.0.1",
+    "gatsby-plugin-react-helmet": "^6.0.0",
+    "react-helmet": "^6.1.0"
+  }
 }

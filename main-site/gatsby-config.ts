@@ -21,7 +21,6 @@ const config: GatsbyConfig = {
     },
 
     "gatsby-plugin-react-helmet",
-
     
   ]
 };

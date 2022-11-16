@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
   plugins: [
 
 
+
   ]
 };
 

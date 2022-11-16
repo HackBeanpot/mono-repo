@@ -5280,6 +5280,13 @@
     "globby" "^11.1.0"
     "lodash" "^4.17.21"
 
+"gatsby-plugin-react-helmet@^6.0.0":
+  "integrity" "sha512-uK+KManFE06oeWrZcxpmrpDT0dfDLMPtTxBiU1YPeQeP31IMSsR1vMDTYnQcB+8y8Jw7xwM59id+mwmAYz1fZA=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+
 "gatsby-plugin-typescript@^5.0.0":
   "integrity" "sha512-tfCKbUnEWIBn7fpQhuLtTPDi+xWrkwo23tcd18D2gWmCMTvjKtBFNYmyrTGz38hZHuU0mH+pkCz0v7XV2jW5ww=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-typescript/-/gatsby-plugin-typescript-5.0.0.tgz"
@@ -8111,6 +8118,21 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   "version" "6.0.11"
 
+"react-fast-compare@^3.1.1":
+  "integrity" "sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA=="
+  "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz"
+  "version" "3.2.0"
+
+"react-helmet@^5.1.3 || ^6.0.0", "react-helmet@^6.1.0":
+  "integrity" "sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw=="
+  "resolved" "https://registry.npmjs.org/react-helmet/-/react-helmet-6.1.0.tgz"
+  "version" "6.1.0"
+  dependencies:
+    "object-assign" "^4.1.1"
+    "prop-types" "^15.7.2"
+    "react-fast-compare" "^3.1.1"
+    "react-side-effect" "^2.1.0"
+
 "react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -8148,6 +8170,11 @@
     "loose-envify" "^1.1.0"
     "neo-async" "^2.6.1"
 
+"react-side-effect@^2.1.0":
+  "integrity" "sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw=="
+  "resolved" "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.2.tgz"
+  "version" "2.1.2"
+
 "react-use-match-media@^1.4.0":
   "integrity" "sha512-wbCZ3yHWQZxIQRpivI4pqppiyuDwbZWcQf7a0q1oEKwHak3RQkKMH1V+PJbCD7yOmd47v1x4IgR5brfHcOLqEQ=="
   "resolved" "https://registry.npmjs.org/react-use-match-media/-/react-use-match-media-1.4.0.tgz"
@@ -8155,7 +8182,7 @@
   dependencies:
     "tiny-invariant" "^1.2.0"
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || 17 || 18", "react@^18.0.0 || ^0.0.0", "react@^18.2.0", "react@>= 16.8.0", "react@0.0.0-experimental-c8b778b7f-20220825", "react@18.x":
+"react@^16.3.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || 17 || 18", "react@^18.0.0 || ^0.0.0", "react@^18.2.0", "react@>= 16.8.0", "react@>=16.3.0", "react@0.0.0-experimental-c8b778b7f-20220825", "react@18.x":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

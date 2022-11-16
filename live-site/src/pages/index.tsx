@@ -8,6 +8,8 @@ import { min } from '../../../shared-ui/lib/responsive';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import '../../../shared-ui/index.css';
 import useMatchMedia from 'react-use-match-media';
+import { StyledBackgrounds } from '../../../shared-ui/styled-components/Background.styles';
+import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 
 
 const IndexPage: React.FC = () => {
@@ -36,11 +38,12 @@ const IndexPage: React.FC = () => {
   }
 
   return (
-
-    <div className={getBackgroundClassName()}>
+<div>
       <Header tabs={liveSiteTabInfo} isDay={isDay} />
+      <Background isDay={isDay} />
+
       <Footer tabs={liveSiteTabInfo} isDay={isDay} />
-    </div>
+      </div>
   )
 };
 
