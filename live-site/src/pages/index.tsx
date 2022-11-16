@@ -11,7 +11,6 @@ import useMatchMedia from 'react-use-match-media';
 import { StyledBackgrounds } from '../../../shared-ui/styled-components/Background.styles';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 
-
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
   const isDesktop = useMatchMedia(min.tablet);
@@ -38,15 +37,14 @@ const IndexPage: React.FC = () => {
   }
 
   return (
-<div>
+    <div>
       <Header tabs={liveSiteTabInfo} isDay={isDay} />
       <Background isDay={isDay} />
 
       <Footer tabs={liveSiteTabInfo} isDay={isDay} />
-      </div>
-  )
+    </div>
+  );
 };
-
 
 export default IndexPage;
 
