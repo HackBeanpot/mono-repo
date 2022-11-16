@@ -4,6 +4,7 @@ import useMatchMedia from 'react-use-match-media';
 import {
   StyledMeetCoreContainer,
   StyledOurTeamCore,
+  StyledDescriptionTeamCore,
   StyledDesktopImageCore,
   StyledMobileImageCore
 } from './MeetAllCore.styles';
@@ -19,13 +20,13 @@ const MeetAllCore: React.FC = () => {
         <StyledMeetCoreContainer>
           <StyledOurTeamCore>OUR TEAM</StyledOurTeamCore>
           <H3>Meet this year’s pioneers behind HackBeanpot!</H3>
-          <P>
+          <StyledDescriptionTeamCore>
             The HackBeanpot Core Team has been hard at work to create the best
             adventure for you at HackBeanpot 2023! We are a group of 23 driven
             students from universities in the Boston-area who aim to make
             technical experience and knowledge accessible to anyone who is
             interested!
-          </P>
+          </StyledDescriptionTeamCore>
           <StyledDesktopImageCore src={GroupDesktop} />
         </StyledMeetCoreContainer>
       )}

@@ -19,19 +19,24 @@ const StyledOurTeamCore = styled(P)`
   padding-top: 3.5em;
 `;
 
+const StyledDescriptionTeamCore = styled(P)`
+  padding-top: 1em;
+`;
+
 const StyledDesktopImageCore = styled.img`
   right: 5em;
-  padding-top: 3.5em;
+  padding-top: 2em;
 `;
 
 const StyledMobileImageCore = styled.img`
   right: 3em;
-  padding-top: 3.5em;
+  padding-top: 2em;
 `;
 
 export {
   StyledMeetCoreContainer,
   StyledOurTeamCore,
+  StyledDescriptionTeamCore,
   StyledDesktopImageCore,
   StyledMobileImageCore
 };
