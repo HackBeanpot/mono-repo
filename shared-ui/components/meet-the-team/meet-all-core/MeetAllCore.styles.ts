@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 import { P, H3 } from '../../../style/typography';
-import { min } from '../../../lib/responsive';
 
 const StyledMeetCoreContainer = styled.div`
   display: flex;
   margin: 5em 0;
+  padding-left: 2em;
+  padding-right: 2em;
   padding-bottom: 5em;
-  @media ${min.tablet} {
-    padding: 10em 0;
-  }
 `;
 
 const StyledOurTeamCore = styled(P)`
