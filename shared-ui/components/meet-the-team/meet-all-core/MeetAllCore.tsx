@@ -11,7 +11,6 @@ import {
 } from './MeetAllCore.styles';
 import GroupDesktop from '../../../images/meet-the-team/groupDesktop.png';
 import GroupMobile from '../../../images/meet-the-team/groupMobile.png';
-import { colors } from '../../../style/colors';
 
 const MeetAllCore: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
@@ -20,11 +19,11 @@ const MeetAllCore: React.FC = () => {
       {isDesktop && (
         <StyledMeetCoreContainer>
           <div>
-            <StyledOurTeamCore color={colors.WHITE}>OUR TEAM</StyledOurTeamCore>
+            <StyledOurTeamCore>OUR TEAM</StyledOurTeamCore>
             <StyledHeaderCore>
               Meet this year’s pioneers behind HackBeanpot!
             </StyledHeaderCore>
-            <StyledDescriptionTeamCore color={colors.TEXT_BROWN}>
+            <StyledDescriptionTeamCore>
               The HackBeanpot Core Team has been hard at work to create the best
               adventure for you at HackBeanpot 2023! We are a group of 23 driven
               students from universities in the Boston-area who aim to make

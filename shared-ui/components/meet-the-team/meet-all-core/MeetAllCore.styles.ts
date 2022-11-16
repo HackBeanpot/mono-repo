@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { P, H3 } from '../../../style/typography';
+import { colors } from '../../../style/colors';
 
 const StyledMeetCoreContainer = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const StyledMeetCoreContainer = styled.div`
 `;
 
 const StyledOurTeamCore = styled(P)`
+  color: ${colors.WHITE};
   text-align: left;
   padding-top: 3.5em;
 `;
@@ -19,6 +21,7 @@ const StyledHeaderCore = styled(H3)`
 `;
 
 const StyledDescriptionTeamCore = styled(P)`
+  color: ${colors.TEXT_BROWN};
   text-align: left;
   padding-top: 1em;
 `;
