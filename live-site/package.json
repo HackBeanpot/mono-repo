@@ -16,7 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^4.20.0"
-  },
-  "devDependencies": {}
+    "gatsby": "^4.20.0",
+    "gatsby-plugin-mailchimp": "^5.2.2"
+
+  }
 }

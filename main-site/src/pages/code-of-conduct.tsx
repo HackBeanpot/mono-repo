@@ -1,6 +1,6 @@
 import Footer from '../../../shared-ui/components/footer/Footer';
 import React from 'react';
-import { homeTabInfo } from '../../../shared-ui/lib/data';
+import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import {
@@ -16,7 +16,7 @@ import {
 const CodeOfConduct: React.FC = () => {
   return (
     <StyledBackground>
-      <Header tabs={homeTabInfo} isDay={true} />
+      <Header tabs={mainSiteTabInfo} isDay={true} />
 
       <StyledTextContainer>
         <StyledHeading>HackBeanpot 2023 Code of Conduct</StyledHeading>
@@ -74,7 +74,7 @@ const CodeOfConduct: React.FC = () => {
           </StyledParagraphBottom>
         </StyledBodyTextContainer>
       </StyledTextContainer>
-      <Footer tabs={homeTabInfo} isDay={true} />
+      <Footer tabs={mainSiteTabInfo} isDay={true} />
     </StyledBackground>
   );
 };

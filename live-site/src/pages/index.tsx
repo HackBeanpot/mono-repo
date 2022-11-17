@@ -1,8 +1,29 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
+import '../../../shared-ui/style/global.css';
+import Header from '../../../shared-ui/components/header/Header';
+import liveSiteTabInfo from '../../lib/data';
+import Footer from '../../../shared-ui/components/footer/Footer';
+import '../../../shared-ui/index.css';
+import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 
 const IndexPage: React.FC = () => {
-  return <div>Welcome to our live site!!!!</div>;
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return null;
+  }
+
+  return (
+    <div>
+      <Header tabs={liveSiteTabInfo} isDay={true} />
+      <Background isDay={true} />
+    </div>
+  );
 };
 
 export default IndexPage;
