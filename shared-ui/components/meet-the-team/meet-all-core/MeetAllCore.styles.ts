@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { P, H3 } from '../../../style/typography';
 import { colors } from '../../../style/colors';
+import { max } from '../../../lib/responsive';
 
 const StyledMeetCoreContainer = styled.div`
   display: flex;
   margin: 5em 0;
-  padding-left: 15em;
-  padding-right: 2em;
-  padding-bottom: 5em;
+  padding: 8em;
+  @media ${max.tabletLg} {
+    padding: 5em;
+  }
 `;
 
 const StyledOurTeamCore = styled(P)`
@@ -29,6 +31,8 @@ const StyledDescriptionTeamCore = styled(P)`
 const StyledImageCore = styled.img`
   right: 5em;
   padding-top: 2em;
+  object-fit: cover;
+  width: 100%;
 `;
 
 export {
