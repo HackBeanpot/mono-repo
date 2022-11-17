@@ -54,7 +54,7 @@ const davidToolTip: ToolTipInfo = {
   name: 'name: David Yan',
   year: 'year: 4th',
   major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  pronouns: 'pronouns: he/him'
 };
 
 const david: Person = {
