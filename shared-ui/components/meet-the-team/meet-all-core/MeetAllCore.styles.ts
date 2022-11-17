@@ -5,7 +5,7 @@ import { colors } from '../../../style/colors';
 const StyledMeetCoreContainer = styled.div`
   display: flex;
   margin: 5em 0;
-  padding-left: 2em;
+  padding-left: 15em;
   padding-right: 2em;
   padding-bottom: 5em;
 `;
