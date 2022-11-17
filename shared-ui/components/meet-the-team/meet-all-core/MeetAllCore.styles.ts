@@ -5,10 +5,10 @@ import { max } from '../../../lib/responsive';
 
 const StyledMeetCoreContainer = styled.div`
   display: flex;
-  margin: 5em 0;
+  margin: auto;
   padding: 8em;
   @media ${max.tabletLg} {
-    padding: 5em;
+    padding: 4em;
   }
 `;
 
@@ -31,10 +31,18 @@ const StyledDescriptionTeamCore = styled(P)`
 const StyledImageCore = styled.img`
   right: 5em;
   padding-top: 2em;
-  object-fit: cover;
   width: 100%;
+  @media ${max.tabletLg} {
+    width: 80%;
+    padding: 7em;
+  }
   @media ${max.tabletSm} {
+    width: 60%;
     padding: 5em;
+  }
+  @media ${max.mobile} {
+    width: 50%;
+    padding: 4em;
   }
 `;
 
