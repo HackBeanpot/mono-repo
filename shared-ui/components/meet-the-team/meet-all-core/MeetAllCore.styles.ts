@@ -33,6 +33,9 @@ const StyledImageCore = styled.img`
   padding-top: 2em;
   object-fit: cover;
   width: 100%;
+  @media ${max.tabletSm} {
+    padding: 5em;
+  }
 `;
 
 export {
