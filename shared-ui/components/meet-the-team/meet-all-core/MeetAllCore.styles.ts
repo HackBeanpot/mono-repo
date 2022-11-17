@@ -26,13 +26,8 @@ const StyledDescriptionTeamCore = styled(P)`
   padding-top: 1em;
 `;
 
-const StyledDesktopImageCore = styled.img`
+const StyledImageCore = styled.img`
   right: 5em;
-  padding-top: 2em;
-`;
-
-const StyledMobileImageCore = styled.img`
-  right: 3em;
   padding-top: 2em;
 `;
 
@@ -41,6 +36,5 @@ export {
   StyledOurTeamCore,
   StyledHeaderCore,
   StyledDescriptionTeamCore,
-  StyledDesktopImageCore,
-  StyledMobileImageCore
+  StyledImageCore
 };
