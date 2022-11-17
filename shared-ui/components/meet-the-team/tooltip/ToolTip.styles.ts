@@ -42,20 +42,20 @@ const StyledToolTip = styled.div<StyledToolTipProps>`
     border-width: 0.5em;
     border-style: solid;
     border-color: ${(props): string =>
-        props.team === 'Directors'
-          ? colors.DIRECTORS_YELLOW
-          : props.team === 'Tech'
-          ? colors.TECH_BLUE
-          : props.team === 'Design'
-          ? colors.DESIGN_PINK
-          : props.team === 'Social Outreach'
-          ? colors.SOORANGE
-          : colors.SPONSIBGREEN}
+      props.team === team.directors
+        ? colors.DIRECTORS_YELLOW
+        : props.team === team.tech
+        ? colors.TECH_BLUE
+        : props.team === team.design
+        ? colors.DESIGN_PINK
+        : props.team === team.socialOutreach
+        ? colors.SOORANGE
+        : colors.SPONSIBGREEN}
       transparent transparent transparent;
   }
   @media ${max.tabletLg} {
     width: 9.07em;
-    padding: 0.4em 0.4em;
+    padding: 0.4em;
     border-radius: 0.6em;
     margin-top: -16em;
     margin-left: 0;
