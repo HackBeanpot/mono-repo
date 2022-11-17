@@ -12,8 +12,8 @@ const MeetTheTeamSection: React.FC = () => {
     <div id="team">
       <StyledMeetTheTeamSection>
         <H2>Meet the Team</H2>
-        <TeamColumn listOfColumnInfo={teamColumnsInfo} />
         <MeetAllCore />
+        <TeamColumn listOfColumnInfo={teamColumnsInfo} />
       </StyledMeetTheTeamSection>
     </div>
   );
