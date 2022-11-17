@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { max } from '../../../lib/responsive';
-import { StyledTeamLabelProps } from '../../../lib/types';
-import { colors } from '../../../style/colors';
-import { P } from '../../../style/typography';
+import { max } from '../../../../lib/responsive';
+import { StyledTeamLabelProps } from '../../../../lib/types';
+import { colors } from '../../../../style/colors';
+import { P } from '../../../../style/typography';
 
 const StyledTeamColumn = styled.div`
   flex-direction: column;

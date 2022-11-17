@@ -1,30 +1,24 @@
 import React from 'react';
-import { TeamColumnProps } from '../../../lib/types';
-import {
-  StyledTeamColumn,
-  StyledLabel,
-  StyledHeadshot,
-  ImageContainer,
-  StyledImageRow
-} from './TeamColumn.styles';
+import useMatchMedia from 'react-use-match-media';
+import { min } from '../../../lib/responsive';
+import { MobileTeamColumnProps, TeamColumnInfo } from '../../../lib/types';
+import { StyledImageContainer } from '../MeetTheTeamSection.styles';
+import DesktopTeamColumn from './desktop-team-column/DesktopTeamColumn';
+import MobileTeamColumn from './mobile-team-column/MobileTeamColumn';
 
-const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
-  const listOfPictures: string[][] = columnInfo.listOfPictures;
+const TeamColumn: React.FC<MobileTeamColumnProps> = ({ listOfColumnInfo }) => {
+  const isDesktop = useMatchMedia(min.tablet);
   return (
-    <StyledTeamColumn>
-      <StyledLabel twoLines={columnInfo.teamLabel == 'Social Outreach'}>
-        {columnInfo.teamLabel}
-      </StyledLabel>
-      <ImageContainer>
-        {listOfPictures.map((rowPics: string[]) => (
-          <StyledImageRow>
-            {rowPics.map((pic: string) => (
-              <StyledHeadshot src={pic} />
-            ))}
-          </StyledImageRow>
-        ))}
-      </ImageContainer>
-    </StyledTeamColumn>
+    <div id="teamColumnInfo">
+      {isDesktop && (
+        <StyledImageContainer>
+          {listOfColumnInfo.map((teamColumn: TeamColumnInfo) => (
+            <DesktopTeamColumn columnInfo={teamColumn} />
+          ))}
+        </StyledImageContainer>
+      )}
+      {!isDesktop && <MobileTeamColumn listOfColumnInfo={listOfColumnInfo} />}
+    </div>
   );
 };
 
