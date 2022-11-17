@@ -25,6 +25,7 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
         alt="White HackBeanpot Logo"
         width={190}
       />
+
       {!isDesktop && !isOpen && (
         <StyledHamburgerIcon
           src={Hamburger}
@@ -32,6 +33,7 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           onClick={(): void => setIsOpen(true)}
         />
       )}
+
       {!isDesktop && isOpen && (
         <StyledXIcon
           src={XIcon}
@@ -39,10 +41,15 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           alt="Close"
         />
       )}
+
       {(isDesktop || (!isDesktop && isOpen)) && (
         <StyledTabsContainer>
           {tabs.map((tab: TabInfo) => (
-            <StyledLink href={tab.link} key={tab.name}>
+            <StyledLink
+              onClick={(): void => setIsOpen(false)}
+              href={tab.link}
+              key={tab.name}
+            >
               <StyledTab>{tab.name}</StyledTab>
             </StyledLink>
           ))}
