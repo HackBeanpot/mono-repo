@@ -39,6 +39,7 @@ const StyledImageCore = styled.img`
   @media ${max.tabletSm} {
     width: 60%;
     padding: 5em;
+    display: block;
   }
   @media ${max.mobile} {
     width: 50%;
