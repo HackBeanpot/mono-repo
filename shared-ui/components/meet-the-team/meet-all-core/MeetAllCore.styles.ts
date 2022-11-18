@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { P, H3 } from '../../../style/typography';
 import { colors } from '../../../style/colors';
-import { max } from '../../../lib/responsive';
+import { max, min } from '../../../lib/responsive';
 
 const StyledMeetCoreContainer = styled.div`
   display: flex;
@@ -32,14 +32,14 @@ const StyledImageCore = styled.img`
   right: 5em;
   margin: auto;
   width: 100%;
+  @media ${min.tabletLg} {
+    padding-left: 4em;
+  }
   @media ${max.tabletLg} {
     width: 85%;
   }
   @media ${max.tabletSm} {
     width: 70%;
-  }
-  @media ${max.mobile} {
-    width: 60%;
   }
 `;
 
