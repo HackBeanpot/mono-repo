@@ -1,0 +1,36 @@
+.day-background-desktop {
+  background-image: url(./images/day-background-desktop.svg);
+  background-size: cover;
+}
+
+.dark-background-desktop {
+  background-image: url(./images/dark-background-desktop.svg);
+  background-size: cover;
+}
+
+.mobile-light-background {
+  background-image: url(./images/mobile-light-background.svg);
+  background-size: cover;
+}
+
+.mobile-dark-background {
+  background-image: url(./images/mobile-dark-background.svg);
+  background-size: cover;
+}
+
+.error-background-desktop {
+  background-image: url(./images/error-desktop-background.svg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.error-background-mobile {
+  background-image: url(./images/error-mobile-background.svg);
+  background-size: cover;
+  height: 100vh;
+}
+
+html,
+body {
+  max-width: 1920px;
+}

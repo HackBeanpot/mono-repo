@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../pageStyles/globals.css';
+import '../../../shared-ui/globals.css';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/index.css';
 import '../../../shared-ui/style/global.css';
