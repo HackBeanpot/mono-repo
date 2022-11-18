@@ -22,6 +22,7 @@ const IndexPage: React.FC = () => {
     <div>
       <Header tabs={liveSiteTabInfo} isDay={true} />
       <Background isDay={true} />
+      <Footer tabs={liveSiteTabInfo} isDay />
     </div>
   );
 };
