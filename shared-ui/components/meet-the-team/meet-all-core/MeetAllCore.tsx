@@ -28,7 +28,13 @@ const MeetAllCore: React.FC = () => {
           interested!
         </StyledDescriptionTeamCore>
       </div>
-      <StyledImageCore src={isDesktop ? GroupDesktop : GroupMobile} />
+      {isDesktop && <StyledImageCore src={GroupDesktop} />}
+      {!isDesktop && (
+        <div>
+          {' '}
+          <StyledImageCore src={GroupMobile} />{' '}
+        </div>
+      )}
     </StyledMeetCoreContainer>
   );
 };
