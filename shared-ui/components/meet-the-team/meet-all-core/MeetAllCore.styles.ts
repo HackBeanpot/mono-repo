@@ -32,7 +32,6 @@ const StyledImageCore = styled.img`
   right: 5em;
   margin: auto;
   position: absolute;
-  display: none;
   @media ${max.tabletLg} {
     width: 90%;
   }
