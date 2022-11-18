@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
 import Header from '../../../shared-ui/components/header/Header';
 import liveSiteTabInfo from '../../lib/data';
-import '../../../shared-ui/globals.css';
+import '../../../shared-ui/style/globals.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 
 const IndexPage: React.FC = () => {
