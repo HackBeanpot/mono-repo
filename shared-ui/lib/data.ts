@@ -23,7 +23,6 @@ import Wendi from '../../shared-ui/images/meet-the-team/wendi.png';
 import Ally from '../../shared-ui/images/meet-the-team/ally.png';
 import Jasmine from '../../shared-ui/images/meet-the-team/jasmine.png';
 
-
 const team: Team = {
   directors: 'Directors',
   tech: 'Tech',

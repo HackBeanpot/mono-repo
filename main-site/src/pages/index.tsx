@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import '../../../shared-ui/globals.css';
 import type { HeadFC } from 'gatsby';
-import '../../../shared-ui/index.css';
-import '../../../shared-ui/style/global.css';
+import '../../../shared-ui/style/globals.css';
+import '../../../shared-ui/style/globals.css';
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';

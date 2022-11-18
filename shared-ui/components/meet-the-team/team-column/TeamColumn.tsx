@@ -4,7 +4,7 @@ import ToolTip from '../tooltip/ToolTip';
 import {
   StyledTeamColumn,
   StyledLabel,
-  StyledHeadshot,
+  StyledHeadshot
 } from './TeamColumn.styles';
 
 const TeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {

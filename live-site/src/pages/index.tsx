@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
-import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import liveSiteTabInfo from '../../lib/data';
-import '../../../shared-ui/index.css';
+import '../../../shared-ui/globals.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 
 const IndexPage: React.FC = () => {
