@@ -39,11 +39,13 @@ const StyledImageCore = styled.img`
   @media ${max.tabletSm} {
     width: 60%;
     padding: 5em;
-    display: block;
+    position: absolute;
+    display: none;
+    right: 1em;
   }
   @media ${max.mobile} {
     width: 50%;
-    padding: 4em;
+    padding: 1em;
   }
 `;
 
