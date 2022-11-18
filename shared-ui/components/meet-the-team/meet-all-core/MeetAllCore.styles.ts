@@ -31,14 +31,15 @@ const StyledDescriptionTeamCore = styled(P)`
 const StyledImageCore = styled.img`
   right: 5em;
   margin: auto;
+  width: 100%;
   @media ${max.tabletLg} {
-    width: 90%;
+    width: 85%;
   }
   @media ${max.tabletSm} {
-    width: 75%;
+    width: 70%;
   }
   @media ${max.mobile} {
-    width: 100%;
+    width: 60%;
   }
 `;
 
