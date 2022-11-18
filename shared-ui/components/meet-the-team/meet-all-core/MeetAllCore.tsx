@@ -12,7 +12,7 @@ import GroupDesktop from '../../../images/meet-the-team/groupDesktop.png';
 import GroupMobile from '../../../images/meet-the-team/groupMobile.png';
 
 const MeetAllCore: React.FC = () => {
-  const isDesktop = useMatchMedia(min.tablet);
+  const isDesktop = useMatchMedia(min.desktop);
   return (
     <StyledMeetCoreContainer id="meetAllCore">
       <div>

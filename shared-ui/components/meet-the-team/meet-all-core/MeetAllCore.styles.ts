@@ -39,7 +39,7 @@ const StyledImageCore = styled.img`
     padding-left: 3em;
   }
   @media ${max.tabletLg} {
-    width: 70%;
+    width: 65%;
   }
   @media ${max.mobile} {
     width: 85%;
