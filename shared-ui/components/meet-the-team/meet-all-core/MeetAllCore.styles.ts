@@ -35,11 +35,14 @@ const StyledImageCore = styled.img`
   @media ${min.tabletLg} {
     padding-left: 4em;
   }
-  @media ${max.tabletLg} {
-    width: 85%;
+  @media ${min.tabletSm} {
+    padding-left: 3em;
   }
-  @media ${max.tabletSm} {
+  @media ${max.tabletLg} {
     width: 70%;
+  }
+  @media ${max.mobile} {
+    width: 85%;
   }
 `;
 
