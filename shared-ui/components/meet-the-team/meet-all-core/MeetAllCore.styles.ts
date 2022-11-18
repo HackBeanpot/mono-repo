@@ -31,13 +31,11 @@ const StyledDescriptionTeamCore = styled(P)`
 const StyledImageCore = styled.img`
   right: 5em;
   margin: auto;
-  position: absolute;
   @media ${max.tabletLg} {
     width: 90%;
   }
   @media ${max.tabletSm} {
     width: 75%;
-    position: relative;
   }
   @media ${max.mobile} {
     width: 100%;
