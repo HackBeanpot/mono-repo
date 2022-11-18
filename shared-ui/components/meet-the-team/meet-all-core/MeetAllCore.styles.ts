@@ -31,21 +31,20 @@ const StyledDescriptionTeamCore = styled(P)`
 const StyledImageCore = styled.img`
   right: 5em;
   padding-top: 2em;
-  width: 100%;
   @media ${max.tabletLg} {
-    width: 80%;
+    width: 90%;
     padding: 7em;
   }
   @media ${max.tabletSm} {
-    width: 60%;
+    width: 75%;
     padding: 5em;
     position: absolute;
     display: none;
     right: 1em;
   }
   @media ${max.mobile} {
-    width: 50%;
     padding: 1em;
+    width: 100%;
   }
 `;
 
