@@ -30,20 +30,17 @@ const StyledDescriptionTeamCore = styled(P)`
 
 const StyledImageCore = styled.img`
   right: 5em;
-  padding-top: 2em;
+  margin: auto;
+  position: absolute;
+  display: none;
   @media ${max.tabletLg} {
     width: 90%;
-    padding: 7em;
   }
   @media ${max.tabletSm} {
     width: 75%;
-    padding: 5em;
-    position: absolute;
-    display: none;
-    right: 1em;
+    position: relative;
   }
   @media ${max.mobile} {
-    padding: 1em;
     width: 100%;
   }
 `;
