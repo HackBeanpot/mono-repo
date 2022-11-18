@@ -23,13 +23,10 @@ const StyledLabel = styled(P)<StyledTeamLabelProps>`
   }
 `;
 
-const ImageContainer = styled.div``;
-
-const StyledImageRow = styled.div``;
-
 const StyledHeadshot = styled.img`
   padding-top: 2em;
   width: 8.5em;
+
   @media ${max.tabletLg} {
     width: 6.5em;
     margin: 0;
@@ -45,10 +42,4 @@ const StyledHeadshot = styled.img`
   }
 `;
 
-export {
-  StyledTeamColumn,
-  StyledLabel,
-  StyledHeadshot,
-  ImageContainer,
-  StyledImageRow
-};
+export { StyledTeamColumn, StyledLabel, StyledHeadshot };
