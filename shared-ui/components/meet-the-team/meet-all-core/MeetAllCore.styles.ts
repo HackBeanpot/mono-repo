@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import { P, H3 } from '../../../style/typography';
 import { colors } from '../../../style/colors';
-import { max } from '../../../lib/responsive';
+import { max, min } from '../../../lib/responsive';
 
 const StyledMeetCoreContainer = styled.div`
   display: flex;
   margin: auto;
   padding: 8em;
+  @media ${max.desktop} {
+    padding: 3em;
+  }
   @media ${max.tabletLg} {
     padding: 4em;
   }
@@ -15,7 +18,9 @@ const StyledMeetCoreContainer = styled.div`
 const StyledOurTeamCore = styled(P)`
   color: ${colors.WHITE};
   text-align: left;
-  padding-top: 3.5em;
+  @media ${min.desktop} {
+    padding-top: 3.5em;
+  }
 `;
 
 const StyledHeaderCore = styled(H3)`
@@ -35,13 +40,10 @@ const StyledImageCore = styled.img`
   right: 5em;
   margin: auto;
   width: 100%;
-  @media ${max.tabletLg} {
-    width: 55%;
+  @media ${min.tablet} {
+    width: 90%;
   }
-  @media ${max.tabletLg} {
-    width: 70%;
-  }
-  @media ${max.tabletSm} {
+  @media ${min.tabletLg} {
     width: 100%;
   }
 `;
