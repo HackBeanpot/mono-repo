@@ -15,9 +15,5 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "gatsby": "^4.20.0",
-    "react-media-match": "^1.14.2"
-  },
-  "devDependencies": {}
+  "dependencies": {}
 }
