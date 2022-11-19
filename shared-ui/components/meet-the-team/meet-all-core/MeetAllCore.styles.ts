@@ -36,9 +36,9 @@ const StyledImageCore = styled.img`
     width: 55%;
   }
   @media ${max.tabletLg} {
-    width: 65%;
+    width: 70%;
   }
-  @media ${max.mobile} {
+  @media ${max.tabletSm} {
     width: 100%;
   }
 `;
