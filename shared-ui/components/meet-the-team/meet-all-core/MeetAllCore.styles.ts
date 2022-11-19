@@ -39,7 +39,7 @@ const StyledImageCore = styled.img`
     width: 65%;
   }
   @media ${max.mobile} {
-    width: 85%;
+    width: 100%;
   }
 `;
 

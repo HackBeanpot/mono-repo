@@ -8,11 +8,10 @@ import {
   StyledDescriptionTeamCore,
   StyledImageCore
 } from './MeetAllCore.styles';
-import GroupDesktop from '../../../images/meet-the-team/groupDesktop.png';
-import GroupMobile from '../../../images/meet-the-team/groupMobile.png';
+import GroupPhoto from '../../../images/meet-the-team/group.png';
 
 const MeetAllCore: React.FC = () => {
-  const isDesktop = useMatchMedia(min.desktop);
+  const isDesktop = useMatchMedia(min.tabletLg);
   return (
     <StyledMeetCoreContainer id="meetAllCore">
       <div>
@@ -27,9 +26,9 @@ const MeetAllCore: React.FC = () => {
           technical experience and knowledge accessible to anyone who is
           interested!
         </StyledDescriptionTeamCore>
-        {!isDesktop && <StyledImageCore src={GroupMobile} />}
+        {!isDesktop && <StyledImageCore src={GroupPhoto} />}
       </div>
-      {isDesktop && <StyledImageCore src={GroupDesktop} />}
+      {isDesktop && <StyledImageCore src={GroupPhoto} />}
     </StyledMeetCoreContainer>
   );
 };
