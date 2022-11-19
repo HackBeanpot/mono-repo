@@ -26,6 +26,9 @@ const StyledDescriptionTeamCore = styled(P)`
   color: ${colors.TEXT_BROWN};
   text-align: left;
   padding-top: 1em;
+  @media ${max.tabletLg} {
+    padding-bottom: 1em;
+  }
 `;
 
 const StyledImageCore = styled.img`
@@ -37,7 +40,6 @@ const StyledImageCore = styled.img`
   }
   @media ${max.tabletLg} {
     width: 70%;
-    padding-bottom: 1em;
   }
   @media ${max.tabletSm} {
     width: 100%;
