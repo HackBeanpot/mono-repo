@@ -32,10 +32,10 @@ const team: Team = {
 };
 
 const mainSiteTabInfo: TabInfo[] = [
-  { name: 'About', link: '#about' },
-  { name: 'Calendar', link: '#calendar' },
-  { name: 'FAQ', link: '#faq' },
-  { name: 'Team', link: '#team' }
+  { name: 'About', link: '/#about' },
+  { name: 'Calendar', link: '/#calendar' },
+  { name: 'FAQ', link: '/#faq' },
+  { name: 'Team', link: '/#team' }
 ];
 
 const sreyaToolTip: ToolTipInfo = {
