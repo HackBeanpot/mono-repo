@@ -37,6 +37,7 @@ const StyledImageCore = styled.img`
   }
   @media ${max.tabletLg} {
     width: 70%;
+    padding-bottom: 1em;
   }
   @media ${max.tabletSm} {
     width: 100%;
