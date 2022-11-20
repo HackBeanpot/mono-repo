@@ -3,9 +3,10 @@ import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import liveSiteTabInfo from '../../lib/data';
-import Footer from '../../../shared-ui/components/footer/Footer';
+// import Footer from '../../../shared-ui/components/footer/Footer';
 import '../../../shared-ui/index.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
+import ResourcesSection from '../../components/resources-section/ResourcesSection';
 
 const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -22,6 +23,7 @@ const IndexPage: React.FC = () => {
     <div>
       <Header tabs={liveSiteTabInfo} isDay={true} />
       <Background isDay={true} />
+      <ResourcesSection/>
     </div>
   );
 };

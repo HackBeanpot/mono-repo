@@ -25,9 +25,8 @@ const colors = {
   TECH_BLUE: '#2F80ED', 
   DESIGN_PINK: '#BB6BD9', 
   SOORANGE: '#F2A32B', 
-  SPONSIBGREEN: '#27AE60'
-
-
+  SPONSIBGREEN: '#27AE60',
+  PURPLE: '#A0B2EF'
 };
 
 export { colors };
