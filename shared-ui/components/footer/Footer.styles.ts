@@ -75,11 +75,12 @@ const StyledTabContainer = styled.div`
   @media ${max.tablet} {
     display: none;
   }
-  @media ${max.desktop} {
+  @media ${max.tabletLg} {
+    padding: 8em 0;
   }
+  padding: 4em 0;
   gap: 0 3em;
   height: 100%;
-  padding: 8em 0em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
