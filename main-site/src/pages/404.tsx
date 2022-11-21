@@ -5,6 +5,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import '../pageStyles/globals.css';
 import { StyledH1, StyledH4, ButtonContainer } from '../page-styles/404.styles';
+import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 
 const NotFoundPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
@@ -24,7 +25,7 @@ const NotFoundPage: React.FC = () => {
   }
 
   return (
-    <div className={getBackgroundClassName()}>
+    <StyledPageContainer className={getBackgroundClassName()}>
       <StyledH1>
         Uh oh, how did we end <br /> up here?
       </StyledH1>
@@ -32,7 +33,7 @@ const NotFoundPage: React.FC = () => {
       <ButtonContainer>
         <PrimaryButton btnText="return home" btnLink="/"></PrimaryButton>
       </ButtonContainer>
-    </div>
+    </StyledPageContainer>
   );
 };
 
