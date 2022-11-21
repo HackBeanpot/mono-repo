@@ -6,6 +6,7 @@ import liveSiteTabInfo from '../../lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import '../../../shared-ui/index.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
+import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 
 const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -22,6 +23,7 @@ const IndexPage: React.FC = () => {
     <div>
       <Header tabs={liveSiteTabInfo} isDay={true} />
       <Background isDay={true} />
+      <TimeRemaining/>
     </div>
   );
 };
