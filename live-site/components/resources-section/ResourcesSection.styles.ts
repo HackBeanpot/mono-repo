@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { max } from '../../../shared-ui/lib/responsive';
 import { fonts, H3 } from '../../../shared-ui/style/typography';
 
 const StyledResourcesSection = styled.div`
@@ -19,9 +20,12 @@ const StyledHeader = styled(H3)`
 const BoxesContainer = styled.div`
    {
     display: flex;
-    padding-left: 3.5em;
+    padding-left: 5%;
 
-
+    @media ${max.tabletSm} {
+      flex-wrap: wrap;
+      padding-left: 3%;
+    }
     
   }
 `;
