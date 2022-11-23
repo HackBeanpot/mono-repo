@@ -60,7 +60,7 @@ const DesktopTexts: React.FC = () => {
 
       <StyledEventsBox>
         <StyledTextContainer>
-          <EventsHeader>Go Workshop - December</EventsHeader>
+          <EventsHeader>Go Workshop - January</EventsHeader>
         </StyledTextContainer>
       </StyledEventsBox>
     </StyledDesktopTextsContainer>
