@@ -72,19 +72,22 @@ const StyledFooterContentContainer = styled.div`
 
 const StyledTabContainer = styled.div`
   box-sizing: border-box;
-  @media ${max.tablet} {
-    display: none;
-  }
-  @media ${max.tabletLg} {
-    padding: 8em 0;
-  }
-  padding: 4em 0;
+  padding: 8em 0;
   gap: 0 3em;
   height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-self: center;
+  @media ${max.desktop} {
+    padding: 4em 0;
+  }
+  @media ${max.tabletLg} {
+    padding: 8em 0;
+  }
+  @media ${max.tablet} {
+    display: none;
+  }
 `;
 
 const StyledTab = styled(P)`
