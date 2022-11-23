@@ -18,7 +18,8 @@
   "dependencies": {
     "gatsby": "^4.20.0",
     "gatsby-plugin-mailchimp": "^5.2.2",
-    "react-media-match": "^1.14.2"
+    "gatsby-plugin-styled-components": "^5.24.0",
+    "babel-plugin-styled-components": "^2.0.7"
   },
   "devDependencies": {}
 }
