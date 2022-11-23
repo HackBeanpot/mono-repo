@@ -14,8 +14,8 @@ import {
   StyledFooterTextLink
 } from './Footer.styles';
 import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.svg';
-import MailingListSignup from '../../../main-site/components/mailing-list-signup/MailingListSignup';
 import { StyledLink } from '../../style/typography';
+import MailingListSignup from '../mailing-list-signup/MailingListSignup';
 
 const Footer: React.FC<FooterProps> = ({ tabs, isDay }) => {
   return (

@@ -18,6 +18,7 @@ import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/Meet
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
+import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -45,7 +46,7 @@ const IndexPage: React.FC = () => {
   }
 
   return (
-    <div className={getBackgroundClassName()}>
+    <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={mainSiteTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
@@ -59,7 +60,7 @@ const IndexPage: React.FC = () => {
       <MeetTheTeamSection />
       <AdventureAheadSection />
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
-    </div>
+    </StyledPageContainer>
   );
 };
 

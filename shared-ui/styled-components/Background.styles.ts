@@ -6,4 +6,8 @@ const StyledBackgrounds = styled.img`
   z-index: -1;
 `;
 
-export { StyledBackgrounds };
+const StyledPageContainer = styled.div`
+  width: 100vw;
+`;
+
+export { StyledBackgrounds, StyledPageContainer };

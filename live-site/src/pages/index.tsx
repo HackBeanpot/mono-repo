@@ -5,6 +5,7 @@ import liveSiteTabInfo from '../../lib/data';
 import '../../../shared-ui/style/globals.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
+import Footer from '../../../shared-ui/components/footer/Footer';
 
 const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -22,6 +23,7 @@ const IndexPage: React.FC = () => {
       <Header tabs={liveSiteTabInfo} isDay={true} />
       <Background isDay={true} />
       <MeetTheTeamSection />
+      <Footer tabs={liveSiteTabInfo} isDay />
     </div>
   );
 };
