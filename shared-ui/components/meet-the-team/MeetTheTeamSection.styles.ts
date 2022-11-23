@@ -7,6 +7,8 @@ const StyledMeetTheTeamSection = styled.div`
 
 const StyledImageContainer = styled.div`
   display: flex;
+  width: 100%;
+  object-fit: cover;
   padding-top: 3.5em;
   justify-content: center;
 `;
