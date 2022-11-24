@@ -4,7 +4,7 @@ import { StyledLabel, StyledResourceBox } from './ResourceBox.styles';
 
 const ResourceBox: React.FC<ResourceBoxProps> = ({ label }) => {
   return (
-<StyledResourceBox>
+<StyledResourceBox href='https://www.google.com/' target='_blank'>
   <StyledLabel>
     {label}
     </StyledLabel>
