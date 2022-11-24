@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
-import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import liveSiteTabInfo from '../../lib/data';
-import '../../../shared-ui/index.css';
+import '../../../shared-ui/style/globals.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
+import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
+import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
 
 const IndexPage: React.FC = () => {
@@ -23,6 +24,8 @@ const IndexPage: React.FC = () => {
       <Header tabs={liveSiteTabInfo} isDay={true} />
       <Background isDay={true} />
       <ResourcesSection/>
+      <MeetTheTeamSection />
+      <Footer tabs={liveSiteTabInfo} isDay />
     </div>
   );
 };

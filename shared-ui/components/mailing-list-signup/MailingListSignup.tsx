@@ -4,8 +4,8 @@ import {
   StyledButtonRow,
   StyledEmailInput,
   StyledSocialMediaButtons
-} from '../../../shared-ui/components/footer/Footer.styles';
-import { StyledPrimaryButton } from '../../../shared-ui/components/primary-button/PrimaryButton.styles';
+} from '../footer/Footer.styles';
+import { StyledPrimaryButton } from '../primary-button/PrimaryButton.styles';
 import { StyledMailingMessage } from './MailingListSignup.styles';
 import Instagram from '../../../shared-ui/images/social-icons/instagram.svg';
 import Facebook from '../../../shared-ui/images/social-icons/facebook.svg';

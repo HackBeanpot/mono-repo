@@ -23,7 +23,6 @@ import Wendi from '../../shared-ui/images/meet-the-team/wendi.png';
 import Ally from '../../shared-ui/images/meet-the-team/ally.png';
 import Jasmine from '../../shared-ui/images/meet-the-team/jasmine.png';
 
-
 const team: Team = {
   directors: 'Directors',
   tech: 'Tech',
@@ -33,10 +32,10 @@ const team: Team = {
 };
 
 const mainSiteTabInfo: TabInfo[] = [
-  { name: 'About', link: '#about' },
-  { name: 'Calendar', link: '#calendar' },
-  { name: 'FAQ', link: '#faq' },
-  { name: 'Team', link: '#team' }
+  { name: 'About', link: '/#about' },
+  { name: 'Calendar', link: '/#calendar' },
+  { name: 'FAQ', link: '/#faq' },
+  { name: 'Team', link: '/#team' }
 ];
 
 const sreyaToolTip: ToolTipInfo = {

@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import Arrow from '../../arrow/Arrow';
-import { MobileTeamColumnProps, Person, TeamColumnInfo } from '../../../lib/types';
-import { getLeftOrRight } from '../../../../main-site/lib/utils';
+import Arrow from '../../../arrow/Arrow';
+import {
+  MobileTeamColumnProps,
+  Person,
+  TeamColumnInfo
+} from '../../../../lib/types';
+import { getLeftOrRight } from '../../../../../main-site/lib/utils';
 import {
   StyledMobileTeamColumn,
   LabelArrowContainer,
