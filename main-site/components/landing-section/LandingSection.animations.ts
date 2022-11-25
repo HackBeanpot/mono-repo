@@ -1,9 +1,9 @@
 export const sunRays = {
     animate: {
-        scale : [0.9,1.3,0.9],
-        rotate:[10,20,10,20,10],
+        scale : [0.9,1.2,0.9],
+        rotate:[10,25,10,25,10],
         transition: { 
-            repeat: Infinity, duration: 10 , ease: "linear"
+            repeat: Infinity, duration: 14 
         }
 
     }

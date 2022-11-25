@@ -137,7 +137,7 @@ const StyledFennecFox = styled.img`
   position: absolute;
   right: 0;
   padding-top: 51em;
-  z-index: 5;
+  z-index: 1;
   height: 20em;
   width: 20em;
 
@@ -149,6 +149,7 @@ const StyledFennecFox = styled.img`
 const StyledCamel = styled(motion.img)`
   position: absolute;
   right: 0;
+  overflow: hidden;
   z-index: 1;
   padding-top: 10em;
 
