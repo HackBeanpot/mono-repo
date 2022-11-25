@@ -137,7 +137,7 @@ const StyledFennecFox = styled.img`
   position: absolute;
   right: 0;
   padding-top: 51em;
-  z-index: 1;
+  z-index: 5;
   height: 20em;
   width: 20em;
 
