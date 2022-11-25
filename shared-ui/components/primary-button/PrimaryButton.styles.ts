@@ -8,6 +8,11 @@ const StyledPrimaryButton = styled.button`
   background-color: ${colors.BUTTON_GREEN};
   border-color: ${colors.HEADER_FOOTER_BLUE};
   font-family: ${fonts.nunitoSansSemibold};
+  &:hover{
+    color: ${colors.BUTTON_GREEN};
+    background-color: ${colors.HEADER_FOOTER_BLUE};
+    border-color: ${colors.BUTTON_GREEN};
+    };
   padding: 1em;
   border-radius: 2em;
   border: 0.1em solid;
