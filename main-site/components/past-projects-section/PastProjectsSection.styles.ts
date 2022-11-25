@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, P } from '../../../shared-ui/style/typography';
 import { max } from '../../../shared-ui/lib/responsive';
+import { motion } from 'framer-motion';
 
 const StyledArrowContainer = styled.div`
   display: flex;
@@ -145,7 +146,7 @@ const StyledFennecFox = styled.img`
   }
 `;
 
-const StyledCamel = styled.img`
+const StyledCamel = styled(motion.img)`
   position: absolute;
   right: 0;
   z-index: 1;
