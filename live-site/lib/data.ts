@@ -7,4 +7,10 @@ const liveSiteTabInfo: TabInfo[] = [
   { name: 'Resources', link: '#resources' },
   { name: 'Team', link: '#team' }
 ];
-export default liveSiteTabInfo;
+
+interface TimeLeft {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+export { liveSiteTabInfo, TimeLeft };

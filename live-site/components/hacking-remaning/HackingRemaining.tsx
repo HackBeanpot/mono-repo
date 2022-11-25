@@ -1,32 +1,27 @@
 import React, { useEffect, useState } from 'react';
+import { TimeLeft } from '../../lib/data';
 import {
   StyledHackingRemainingContainer,
   StyledHackingRemainingHeader,
   StyledTime
 } from './HackingRemaining.styles';
 
-const HackingRemaining: React.FC = () => {
-  interface TimeLeft {
-    hours: number;
-    minutes: number;
-    seconds: number;
+const calculateTimeLeft = (): TimeLeft => {
+  const difference = +new Date('2023-02-28T18:20:00+05:30') - +new Date();
+  let timeLeft = { hours: 0, minutes: 0, seconds: 0 };
+
+  if (difference > 0) {
+    timeLeft = {
+      hours: Math.floor(difference / (1000 * 60 * 60)),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60)
+    };
   }
 
-  const calculateTimeLeft = (): TimeLeft => {
-    const difference = +new Date('2023-02-28T18:20:00+05:30') - +new Date();
-    let timeLeft = { hours: 0, minutes: 0, seconds: 0 };
+  return timeLeft;
+};
 
-    if (difference > 0) {
-      timeLeft = {
-        hours: Math.floor(difference / (1000 * 60 * 60)),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
-      };
-    }
-
-    return timeLeft;
-  };
-
+const HackingRemaining: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
