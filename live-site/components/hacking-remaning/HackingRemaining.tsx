@@ -7,7 +7,8 @@ import {
 } from './HackingRemaining.styles';
 
 const calculateTimeLeft = (): TimeLeft => {
-  const difference = +new Date('2023-02-28T18:20:00+05:30') - +new Date();
+  const difference =
+    +new Date('2023-02-12T12:00:00-05:00') - +new Date('20230210T170000-0500');
   let timeLeft = { hours: 0, minutes: 0, seconds: 0 };
 
   if (difference > 0) {

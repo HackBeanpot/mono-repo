@@ -22,7 +22,7 @@ const IndexPage: React.FC = () => {
   return (
     <div>
       <Header tabs={liveSiteTabInfo} isDay={true} />
-      {!isMobile && Date.now() && <HackingRemaining />}
+      {!isMobile && Date('20230210T170000-0500') && <HackingRemaining />}
       <Background isDay={true} />
     </div>
   );

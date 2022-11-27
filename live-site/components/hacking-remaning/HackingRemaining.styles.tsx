@@ -8,17 +8,13 @@ const StyledHackingRemainingContainer = styled.div`
   position: fixed;
   right: 0;
   top: 4em;
-
-  width: 133px;
-  height: 139px;
-
+  width: 8.3125em;
   text-align: center;
-
+  padding-top: 1em;
   border-radius: 1em 0em 0em 1em;
   border: 0.3em solid ${colors.BUTTON_DARK_GREEN};
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
   margin: 2em 0em;
 `;
 
