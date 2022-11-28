@@ -3,11 +3,14 @@ import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import '../../../shared-ui/index.css';
+import useMatchMedia from 'react-use-match-media';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import HackingRemaining from '../../components/hacking-remaning/HackingRemaining';
 import { liveSiteTabInfo } from '../../lib/data';
+import { min } from '../../../shared-ui/lib/responsive';
 
 const IndexPage: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tablet);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -21,7 +24,7 @@ const IndexPage: React.FC = () => {
   return (
     <div>
       <Header tabs={liveSiteTabInfo} isDay={true} />
-      {new Date() > new Date('2023-02-10T17:00:00-05:00') && (
+      {isDesktop && new Date() > new Date('2021-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
       <Background isDay={true} />
