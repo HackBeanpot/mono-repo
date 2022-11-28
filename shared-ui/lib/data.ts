@@ -244,8 +244,8 @@ const sanjana: Person = {
 
 const aarushiToolTip: ToolTipInfo = {
   name: 'name: Aarushi Basmatkar',
-  year: 'year: 3rd',
-  major: 'major: CS + Design',
+  year: 'year: 2nd',
+  major: 'major: CYS + Business',
   pronouns: 'pronouns: she/her'
 };
 
