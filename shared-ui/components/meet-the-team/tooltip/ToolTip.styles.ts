@@ -54,11 +54,11 @@ const StyledToolTip = styled.div<StyledToolTipProps>`
       transparent transparent transparent;
   }
   @media ${max.tabletLg} {
-    width: 9.07em;
+    width: 9.4em;
     padding: 0.4em;
     border-radius: 0.6em;
     margin-top: -16em;
-    margin-left: 0;
+    margin-left: -0.3em;
     text-align: left;
   }
 `;
