@@ -5,7 +5,6 @@ import Header from '../../../shared-ui/components/header/Header';
 import '../../../shared-ui/index.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import HackingRemaining from '../../components/hacking-remaning/HackingRemaining';
-import { isMobile } from 'react-device-detect';
 import { liveSiteTabInfo } from '../../lib/data';
 
 const IndexPage: React.FC = () => {
@@ -22,7 +21,9 @@ const IndexPage: React.FC = () => {
   return (
     <div>
       <Header tabs={liveSiteTabInfo} isDay={true} />
-      {!isMobile && Date('20230210T170000-0500') && <HackingRemaining />}
+      {new Date() > new Date('2023-02-10T17:00:00-05:00') && (
+        <HackingRemaining />
+      )}
       <Background isDay={true} />
     </div>
   );

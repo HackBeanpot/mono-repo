@@ -8,7 +8,8 @@ import {
 
 const calculateTimeLeft = (): TimeLeft => {
   const difference =
-    +new Date('2023-02-12T12:00:00-05:00') - +new Date('20230210T170000-0500');
+    +new Date('2023-02-12T12:00:00-05:00') -
+    +new Date('2023-02-10T17:00:00-05:00');
   let timeLeft = { hours: 0, minutes: 0, seconds: 0 };
 
   if (difference > 0) {
