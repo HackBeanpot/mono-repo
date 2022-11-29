@@ -24,7 +24,7 @@ const IndexPage: React.FC = () => {
   return (
     <div>
       <Header tabs={liveSiteTabInfo} isDay={true} />
-      {isDesktop && new Date() > new Date('2021-02-10T17:00:00-05:00') && (
+      {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
       <Background isDay={true} />
