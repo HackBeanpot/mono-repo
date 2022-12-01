@@ -7,6 +7,7 @@ import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
+import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 
 const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -20,13 +21,13 @@ const IndexPage: React.FC = () => {
   }
 
   return (
-    <div>
+    <StyledPageContainer className={'day-background-desktop'}>
       <Header tabs={liveSiteTabInfo} isDay={true} />
       <Background isDay={true} />
-      <ResourcesSection/>
+      <ResourcesSection />
       <MeetTheTeamSection />
       <Footer tabs={liveSiteTabInfo} isDay />
-    </div>
+    </StyledPageContainer>
   );
 };
 
