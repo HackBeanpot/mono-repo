@@ -6,18 +6,22 @@ import {
   StyledTime
 } from './HackingRemaining.styles';
 
-const calculateTimeLeft = (): TimeLeft => {
+const calculateTimeLeft = (): TimeLeft[] => {
   const difference =
     +new Date('2023-02-12T12:00:00-05:00') -
     +new Date('2023-02-10T17:00:00-05:00');
-  let timeLeft = { hours: 0, minutes: 0, seconds: 0 };
+  let timeLeft = [
+    { timeType: 'hours', value: 0 },
+    { timeType: 'minutes', value: 0 },
+    { timeType: 'seconds', value: 0 }
+  ];
 
   if (difference > 0) {
-    timeLeft = {
-      hours: Math.floor(difference / (1000 * 60 * 60)),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60)
-    };
+    timeLeft = [
+      { timeType: 'hours', value: Math.floor(difference / (1000 * 60 * 60)) },
+      { timeType: 'minutes', value: Math.floor((difference / 1000 / 60) % 60) },
+      { timeType: 'seconds', value: Math.floor((difference / 1000) % 60) }
+    ];
   }
 
   return timeLeft;
@@ -38,11 +42,12 @@ const HackingRemaining: React.FC = () => {
         HACKING REMAINING
       </StyledHackingRemainingHeader>
       <StyledTime>
-        <span>{timeLeft.hours}</span>
-        <span>:</span>
-        <span>{timeLeft.minutes}</span>
-        <span>:</span>
-        <span>{timeLeft.seconds}</span>
+        {timeLeft.map((time) => (
+          <>
+            <span>{time.value}</span>
+            {time.timeType !== 'seconds' && <span>:</span>}
+          </>
+        ))}
       </StyledTime>
     </StyledHackingRemainingContainer>
   );

@@ -9,8 +9,7 @@ const liveSiteTabInfo: TabInfo[] = [
 ];
 
 interface TimeLeft {
-  hours: number;
-  minutes: number;
-  seconds: number;
+  timeType: string;
+  value: number;
 }
 export { liveSiteTabInfo, TimeLeft };
