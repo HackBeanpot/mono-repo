@@ -5,11 +5,16 @@ const BASEURL = 'https://airtable.hackbeanpot.com';
 export const useAirtableApi = (baseName: string, tableName: string) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  console.log(data);
   useEffect(() => {
     const url = new URL(`${BASEURL}/${baseName}/${tableName}`);
     try {
-      fetch(url)
+      fetch(url, {
+        mode: 'cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
         .then((data) => data.json())
         .then((responseJson) => {
           setIsLoading(false);
