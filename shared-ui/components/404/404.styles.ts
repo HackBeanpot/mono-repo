@@ -46,6 +46,7 @@ const ButtonContainer = styled.div`
   padding-top: 2%;
   float: right;
   padding-right: 14em;
+  position: relative;
   @media ${max.tabletLg} {
     padding-top: 3em;
     padding-right: 10em;
@@ -57,22 +58,22 @@ const ButtonContainer = styled.div`
 `;
 
 const WaveContainer = styled.div`
-
-  position: relative;
+  overflow:hidden;
+  position: absolute;
 
 `;
 
 const StyledWave1 = styled(motion.img)`
 
-  padding-top: 20em;
+  padding-top: 25em;
   display:flex;
-  padding-left: 5em;
+
 
 `;
 
 const StyledWave2 = styled(motion.img)`
   padding-top :4em;
-  padding-left: 62em;
+  padding-left: 30em;
 
 `;
 
@@ -83,15 +84,15 @@ const StyledWave3 = styled(motion.img)`
 `;
 
 const StyledWave4 = styled(motion.img)`
-  padding-top :em;
+  padding-top :0em;
   padding-left: 70em;
 
 `;
 
 const PenguinBoatContainer = styled.div`
 
-  overflow:hidden;
-  float:right;
+  
+
 `
 
 const Penguin = styled.img`
@@ -100,13 +101,88 @@ const Penguin = styled.img`
  position: fixed;
  overflow:hidden;
 
+ @media ${max.tablet} {
+  scale:0.7;
+  left: -22em;
+  bottom : -7.5em;
+}
 `
 
 const Boat = styled.img`
- bottom : 17em;
+ top: 10em;
+ bottom:30em;
+ float: right;
+ left: 80em;
+ position: fixed;
+ padding : 0;
+ clear: both;
+ overflow:hidden;
+ @media (max-width: 1670px) {
+  left: 70em;
+}
+@media (max-width: 1550px) {
+  left: 65em;
+}
+@media ${max.desktopLg} {
+  left: 60em;
+}
+@media (max-width: 1370px) {
+  left: 55em;
+}
+@media ${max.desktop} {
+  left: 50em;
+}
+@media (max-width: 1370px) {
+  left: 55em;
+}
 
- left: 85em;
- position: absolute;
+@media (max-width: 1280px) {
+  left: 50em;
+}
+
+@media (max-width: 1190px) {
+  left: 45em;
+}
+
+@media (max-width: 1100px) {
+  left: 40em;
+}
+
+@media ${max.tabletLg} {
+  left: 35em;
+  top:2em;
+}
+
+@media (max-width: 940px) {
+  left: 30em;
+}
+@media (max-width: 870px) {
+  left: 25em;
+}
+
+@media ${max.tablet} {
+  scale:0.7;
+  left: 23em;
+  top:15em;
+}
+@media (max-width: 750px) {
+  left: 18em;
+}
+
+@media (max-width: 678px) {
+  left: 18em;
+}
+
+@media (max-width: 630px) {
+  left: 15em;
+}
+
+
+
+
+
+ 
+ 
  
 `;
 

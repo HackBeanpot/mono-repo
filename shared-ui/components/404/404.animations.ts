@@ -1,6 +1,6 @@
 export const wave1Animations = {
     animate :{
-        x: [0,800,0],
+        x: [0,500,0],
         transition: {
             repeat: Infinity,
             duration: 40
@@ -10,7 +10,7 @@ export const wave1Animations = {
 
 export const wave2Animations = {
     animate :{
-        x: [0,-500,0],
+        x: [0,-100,0,50,0],
         transition: {
             repeat: Infinity,
             duration: 30
