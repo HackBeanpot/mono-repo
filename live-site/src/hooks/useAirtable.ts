@@ -10,7 +10,7 @@ export const useAirtableApi = (baseName: string, tableName: string) => {
     const url = new URL(`${BASEURL}/${baseName}/${tableName}`);
     try {
       fetch(url, {
-        mode: 'cors',
+        mode: 'no-cors',
         headers: {
           'Access-Control-Allow-Origin': '*'
         }
