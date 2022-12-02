@@ -8,9 +8,19 @@ import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/Meet
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
+import useMatchMedia from 'react-use-match-media';
+import { min } from '../../../shared-ui/lib/responsive';
 
 const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const isDesktop = useMatchMedia(min.tablet);
+
+  const getBackgroundClassName = (): string => {
+    if (isDesktop) {
+      return 'day-background-desktop';
+    }
+    return 'mobile-light-background';
+  };
 
   useEffect(() => {
     setIsLoading(false);
@@ -21,7 +31,7 @@ const IndexPage: React.FC = () => {
   }
 
   return (
-    <StyledPageContainer className={'day-background-desktop'}>
+    <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={liveSiteTabInfo} isDay={true} />
       <Background isDay={true} />
       <ResourcesSection />
