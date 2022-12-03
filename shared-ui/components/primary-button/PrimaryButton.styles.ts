@@ -8,6 +8,7 @@ const StyledPrimaryButton = styled.button`
   background-color: ${colors.BUTTON_GREEN};
   border-color: ${colors.HEADER_FOOTER_BLUE};
   font-family: ${fonts.nunitoSansSemibold};
+  transition-duration: 0.5s;
   &:hover{
     color: ${colors.BUTTON_GREEN};
     background-color: ${colors.HEADER_FOOTER_BLUE};

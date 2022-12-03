@@ -8,7 +8,7 @@ import  boat  from '../../../shared-ui/images/boat.png';
 import useMatchMedia from 'react-use-match-media';
 import '../../style/globals.css';
 import { StyledH1, StyledH4, ButtonContainer, StyledWave1, StyledWave2, StyledWave3, StyledWave4, WaveContainer, Penguin, Boat, PenguinBoatContainer } from './404.styles';
-import { wave1Animations } from './404.animations';
+import { wave1Animations, wave2Animations, wave3Animations, wave4Animations } from './404.animations';
 import { StyledPageContainer } from '../../styled-components/Background.styles';
 
 const NotFound: React.FC = () => {
@@ -42,9 +42,9 @@ const NotFound: React.FC = () => {
       
       <WaveContainer>
       <StyledWave1 src={wave} animate="animate" variants={wave1Animations}/>
-      <StyledWave2 src={wave} />
-      <StyledWave3 src={wave} />
-      <StyledWave4 src={wave} />
+      <StyledWave2 src={wave} animate="animate" variants={wave2Animations}/>
+      <StyledWave3 src={wave} animate="animate" variants={wave3Animations}/>
+      <StyledWave4 src={wave} animate="animate" variants={wave4Animations}/>
       </WaveContainer>
       <PenguinBoatContainer>
       <Penguin src = {penguin}/>

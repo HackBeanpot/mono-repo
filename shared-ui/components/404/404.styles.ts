@@ -84,7 +84,7 @@ const StyledWave3 = styled(motion.img)`
 `;
 
 const StyledWave4 = styled(motion.img)`
-  padding-top :0em;
+  padding-top :2em;
   padding-left: 70em;
 
 `;
