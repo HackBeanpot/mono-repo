@@ -16,7 +16,6 @@ export const wave2Animations = {
             duration: 30
         }
     }
-    
 }
 
 export const wave3Animations = {
