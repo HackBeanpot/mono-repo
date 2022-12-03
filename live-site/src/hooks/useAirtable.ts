@@ -7,15 +7,13 @@ export const useAirtableApi = (baseName: string, tableName: string) => {
   const [isLoading, setIsLoading] = useState(true);
   console.log(data);
   useEffect(() => {
-    const url = new URL(`${BASEURL}/${baseName}/${tableName}`);
+    const url = `${BASEURL}/${baseName}/${tableName}`;
     try {
-      fetch(url, {
-        mode: 'no-cors',
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
-      })
-        .then((data) => data.json())
+      fetch(url)
+        .then((data) => {
+          console.log(data);
+          return data.json();
+        })
         .then((responseJson) => {
           setIsLoading(false);
           setData(responseJson.records);
