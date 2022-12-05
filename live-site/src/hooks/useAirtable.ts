@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 
 const BASEURL = 'https://airtable.hackbeanpot.com';
 
 interface AirtableData {
-  data: never[];
+  data: any[];
   isLoading: boolean;
 }
 
@@ -13,13 +14,11 @@ export const useAirtableApi = (
 ): AirtableData => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  console.log(data);
   useEffect(() => {
     const url = `${BASEURL}/${baseName}/${tableName}`;
     try {
       fetch(url)
         .then((data) => {
-          console.log(data);
           return data.json();
         })
         .then((responseJson) => {
@@ -28,7 +27,6 @@ export const useAirtableApi = (
         });
     } catch (err) {
       setIsLoading(false);
-      console.log(err);
     }
   }, [baseName, tableName]);
 
@@ -45,7 +43,7 @@ export const useAirtableApiWithPagination = (
   useEffect(() => {
     const url = `${BASEURL}/${baseName}/${tableName}`;
     let offset = '';
-    const records = [];
+    const records: any[] = [];
     const getData = async (): Promise<void> => {
       do {
         const urlWithOffset = new URL(url);
@@ -64,7 +62,6 @@ export const useAirtableApiWithPagination = (
       getData();
     } catch (err) {
       setIsLoading(false);
-      console.log(err);
     }
   }, [baseName, tableName]);
 
