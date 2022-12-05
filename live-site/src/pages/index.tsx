@@ -3,7 +3,6 @@ import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import liveSiteTabInfo from '../../lib/data';
-import Footer from '../../../shared-ui/components/footer/Footer';
 import '../../../shared-ui/index.css';
 import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
