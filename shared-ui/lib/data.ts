@@ -135,7 +135,7 @@ const lisa: Person = {
 };
 
 const spencerToolTip: ToolTipInfo = {
-  name: 'name: Spencor Shao',
+  name: 'name: Spencer Shao',
   year: 'year: 3rd',
   major: 'major: CS + Music Tech',
   pronouns: 'pronouns: he/him'
@@ -244,8 +244,8 @@ const sanjana: Person = {
 
 const aarushiToolTip: ToolTipInfo = {
   name: 'name: Aarushi Basmatkar',
-  year: 'year: 3rd',
-  major: 'major: CS + Design',
+  year: 'year: 2nd',
+  major: 'major: CYS + Business',
   pronouns: 'pronouns: she/her'
 };
 

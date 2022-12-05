@@ -3,7 +3,6 @@ export interface TabInfo {
   link: string;
 }
 
-
 export interface ResourceBoxProps {
   label: string;
 }
