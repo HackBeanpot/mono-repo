@@ -5,6 +5,8 @@ import { fonts, H2, P } from "../../style/typography";
 
 const StyledTimeRemainingContainer = styled.div`
     text-align: center;
+    padding-top: 2em;
+
 `;
 
 const StyledTimeRemaing = styled.div`
