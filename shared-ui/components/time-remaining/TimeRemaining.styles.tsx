@@ -61,7 +61,8 @@ const StyledButtonContainer = styled.div`
   margin-top: 0.5em;
   justify-content: center;
   padding-top: 2em;
-  padding-bottom:3em;
+  padding-bottom:7em;
 `;
+
 
 export {StyledTimeRemainingLabel,  StyledTimeRemainingDivider,StyledTimerContainer,StyledTimeRemainingText, StyledTimeRemaing, StyledTimeRemainingHeader, StyledButtonContainer,StyledTimeRemainingContainer };

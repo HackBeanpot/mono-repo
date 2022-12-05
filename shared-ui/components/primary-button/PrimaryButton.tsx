@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, {  useState } from 'react';
 import { StyledPrimaryButton } from './PrimaryButton.styles';
 import { ButtonProps } from '../../lib/types';
 
