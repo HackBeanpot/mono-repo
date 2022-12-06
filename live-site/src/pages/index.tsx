@@ -10,10 +10,17 @@ import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
+import ComingUpSection from '../../components/coming-up/ComingUp';
+import { UpcomingEvent } from '../../lib/types';
 
 const IndexPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const events: UpcomingEvent[] = [{
+    header: 'Register your team',
+    time: 'Complete by 12:00am EST',
+    body: 'hello hello hello hello hello hello hello hello hi hi'
+  }];
 
   useEffect(() => {
     setIsLoading(false);
@@ -30,6 +37,7 @@ const IndexPage: React.FC = () => {
         <HackingRemaining />
       )}
       <Background isDay={true} />
+      <ComingUpSection eventsList={events} />
       <ResourcesSection />
       <MeetTheTeamSection />
       <Footer tabs={liveSiteTabInfo} isDay />

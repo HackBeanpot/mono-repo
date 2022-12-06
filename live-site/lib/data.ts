@@ -8,6 +8,9 @@ const liveSiteTabInfo: TabInfo[] = [
   { name: 'Team', link: '#team' }
 ];
 
+
+
+
 interface TimeLeft {
   timeType: string;
   value: number;
