@@ -5,6 +5,7 @@ import {
   EventsSubHeader,
   EventsP,
   StyledEventsBox,
+  StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
@@ -14,7 +15,7 @@ import {
 const DesktopTexts: React.FC = () => {
   return (
     <StyledDesktopTextsContainer>
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <TextLeftContainer>
             <EventsHeader>
@@ -39,16 +40,16 @@ const DesktopTexts: React.FC = () => {
             Shillman Hall 210
           </EventsLocationP>
         </StyledTextContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
 
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <EventsHeader>
             MiniHacks Workshop #2 -- 10/16 10am-12:30pm <br />
             Intro to React.js
           </EventsHeader>
         </StyledTextContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
 
       <StyledEventsBox>
         <StyledTextContainer>
