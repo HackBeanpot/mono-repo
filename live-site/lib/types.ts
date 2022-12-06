@@ -13,10 +13,6 @@ export interface UpcomingEvent {
   body: string;
 }
 
-export interface ComingUpProps {
-  eventsList: UpcomingEvent[];
-}
-
 export interface EventProps {
   eventInfo: UpcomingEvent;
 }
