@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import Arrow from '../../arrow/Arrow';
-import { MobileTeamColumnProps, TeamColumnInfo } from '../../../lib/types';
-import { getLeftOrRight } from '../../../../main-site/lib/utils';
+import Arrow from '../../../arrow/Arrow';
+import {
+  MobileTeamColumnProps,
+  Person,
+  TeamColumnInfo
+} from '../../../../lib/types';
+import { getLeftOrRight } from '../../../../../main-site/lib/utils';
 import {
   StyledMobileTeamColumn,
   LabelArrowContainer,
@@ -17,7 +21,7 @@ const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
   const [curColumn, setCurColumn] = useState<TeamColumnInfo>(
     listOfColumnInfo[0]
   );
-  const listOfPictures: string[][] = curColumn.listOfPictures;
+  const listOfPictures: Person[][] = curColumn.listOfPictures;
   return (
     <StyledMobileTeamColumn>
       <LabelArrowContainer>
@@ -50,10 +54,10 @@ const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
         />
       </LabelArrowContainer>
       <MobileImageContainer>
-        {listOfPictures.map((rowPics: string[]) => (
+        {listOfPictures.map((rowPics: Person[]) => (
           <StyledImageRow>
-            {rowPics.map((pic: string) => (
-              <StyledHeadshot src={pic} />
+            {rowPics.map((pic: Person) => (
+              <StyledHeadshot src={pic.picture} />
             ))}
           </StyledImageRow>
         ))}

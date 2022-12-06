@@ -1,7 +1,7 @@
 import Footer from '../../../shared-ui/components/footer/Footer';
 import React from 'react';
+import '../../../shared-ui/style/globals.css';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
-import '../../../shared-ui/style/global.css';
 import Header from '../../../shared-ui/components/header/Header';
 import {
   StyledParagraph,

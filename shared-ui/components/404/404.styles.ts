@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { fonts, H1, H4 } from '../../../shared-ui/style/typography';
-import { colors } from '../../../shared-ui/style/colors';
-import { max } from '../../../shared-ui/lib/responsive';
+import { fonts, H1, H4 } from '../../style/typography';
+import { colors } from '../../style/colors';
+import { max } from '../../lib/responsive';
 
 const StyledH1 = styled(H1)`
   padding-top: 1em;

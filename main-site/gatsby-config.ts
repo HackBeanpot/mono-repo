@@ -25,6 +25,9 @@ const config: GatsbyConfig = {
       options: {
         icon: './lib/favicon.png'
       }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`
     }
   ]
 };

@@ -55,6 +55,9 @@
     "react-countdown": "^2.3.4",
     "react-helmet": "^6.1.0",
     "react-media-match": "^1.14.2",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "gatsby-plugin-mailchimp": "^5.2.2",
+    "gatsby-plugin-styled-components": "^5.24.0",
+    "babel-plugin-styled-components": "^2.0.7"
   }
 }
