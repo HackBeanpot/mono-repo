@@ -57,12 +57,6 @@ const DesktopTexts: React.FC = () => {
           </EventsHeader>
         </StyledTextContainer>
       </StyledEventsBox>
-
-      <StyledEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>Go Workshop - January</EventsHeader>
-        </StyledTextContainer>
-      </StyledEventsBox>
     </StyledDesktopTextsContainer>
   );
 };
