@@ -4,6 +4,11 @@ export interface ButtonProps {
   newTab?: boolean;
 }
 
+export interface ButtonEventProps {
+  btnText: string;
+  btnOnClick: React.MouseEvent<HTMLButtonElement>;
+}
+
 export interface DropdownProps {
   options: string[];
 }
