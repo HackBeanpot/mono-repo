@@ -5,11 +5,17 @@ const liveSiteTabInfo: TabInfo[] = [
   { name: 'Mentors', link: '#mentors' },
   { name: 'Challenges', link: '#challenges' },
   { name: 'Resources', link: '#resources' },
-  { name: 'Team', link: '#team' }
+  { name: 'Team', link: '#team' },
+  { name: 'Judging', link: '#judging' }
 ];
 
 interface TimeLeft {
   timeType: string;
   value: number;
 }
-export { liveSiteTabInfo, TimeLeft };
+
+interface JudgingScheduleProps {
+  isPersonJudge: boolean;
+}
+
+export { liveSiteTabInfo, TimeLeft, JudgingScheduleProps };
