@@ -4,6 +4,10 @@ export interface ButtonProps {
   newTab?: boolean;
 }
 
+export interface DropdownProps {
+  options: string[];
+}
+
 export interface TabInfo {
   name: string;
   link: string;
