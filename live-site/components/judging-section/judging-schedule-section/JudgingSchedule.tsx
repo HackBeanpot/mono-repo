@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { JudgingScheduleProps } from '../../../lib/data';
 import { StyledWelcomePerson } from './JudgingSchedule.styles';
-import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 import { StyledSecondaryDropdown } from '../../../../shared-ui/components/secondary-dropdown/SecondaryDropdown.styles';
+import PrimaryEventButton from '../../../../shared-ui/components/primary-button/PrimaryEventButton';
 
-const JudgingSchedule: React.FC<JudgingScheduleProps> = ({ isPersonJudge }) => {
+const JudgingSchedule: React.FC<JudgingScheduleProps> = ({ isPersonJudge, retToJudgingSelection }) => {
   const [selectedOption, setSelectedOption] = useState<string>('Select your name');
   const options = [selectedOption];
   // todo: import judge and hacker lists in to this file
@@ -22,7 +22,7 @@ const JudgingSchedule: React.FC<JudgingScheduleProps> = ({ isPersonJudge }) => {
 
   return (
     <div>
-      <PrimaryButton btnText='back' btnLink='#judging' />
+      <PrimaryEventButton btnText='back' btnOnClick={retToJudgingSelection} />
       <StyledWelcomePerson> Welcome, {isPersonJudge ? 'Judge' : 'Hacker'}! </StyledWelcomePerson>
       <StyledSecondaryDropdown options={options} onChange={handleSelectionChange} />
     </div>

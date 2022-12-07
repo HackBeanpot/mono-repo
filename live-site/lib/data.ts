@@ -16,6 +16,13 @@ interface TimeLeft {
 
 interface JudgingScheduleProps {
   isPersonJudge: boolean;
+  retToJudgingSelection: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-export { liveSiteTabInfo, TimeLeft, JudgingScheduleProps };
+interface JudgingSelectionProps {
+  handleJudge: (event: React.MouseEvent<HTMLElement>) => void;
+  handleTeam: (event: React.MouseEvent<HTMLElement>) => void;
+}
+
+
+export { liveSiteTabInfo, TimeLeft, JudgingScheduleProps, JudgingSelectionProps };

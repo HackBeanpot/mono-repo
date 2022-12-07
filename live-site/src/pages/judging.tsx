@@ -26,16 +26,21 @@ const JudgingPage: React.FC = () => {
     return null;
   }
 
+  // when back is pressed on judgingSchedule, awaitingPersonType = true
   const handleResetJudgingSelection = (): void => {
-    // when back is pressed on judgingSchedule, awaitingPersonType = true
     setAwaitingPersonType(true);
   };
 
-  const handleJudgingScheduleUpdate = (isPersonIsJudge: boolean): void => {
-    // when JudingSelection selects, 
-    // personIsJudge val updates + awaitingPersonType = false
+  // when user selects that they are a judge in the JudgingSelection component
+  const handlePersonIsJudge = (): void => {
     setAwaitingPersonType(false);
-    setPersonIsJudge(isPersonIsJudge);
+    setPersonIsJudge(true);
+  };
+
+  // when user selects that they are a hacker in the JudgingSelection component
+  const handlePersonIsHacker = (): void => {
+    setAwaitingPersonType(false);
+    setPersonIsJudge(false);
   };
 
   return (
@@ -46,8 +51,8 @@ const JudgingPage: React.FC = () => {
       )}
       <Background isDay={true} />
       {awaitingPersonType ? 
-        <JudgingSelection /> :
-        <JudgingSchedule isPersonJudge={personIsJudge} /> }
+        <JudgingSelection handleJudge={handlePersonIsJudge} handleTeam={handlePersonIsHacker} /> :
+        <JudgingSchedule isPersonJudge={personIsJudge} retToJudgingSelection={handleResetJudgingSelection} /> }
       <Footer tabs={liveSiteTabInfo} isDay />
     </div>
   );
