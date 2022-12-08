@@ -8,6 +8,7 @@ export interface ResourceBoxProps {
 }
 
 export interface UpcomingEvent {
+  id: number;
   header: string;
   time: string;
   body: string;
