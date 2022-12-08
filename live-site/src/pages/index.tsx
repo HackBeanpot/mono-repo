@@ -10,11 +10,11 @@ import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
+import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 
 const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const isDesktop = useMatchMedia(min.tablet);
 
   const getBackgroundClassName = (): string => {
     if (isDesktop) {
@@ -40,6 +40,7 @@ const IndexPage: React.FC = () => {
       <Background isDay={true} />
       <ResourcesSection />
       <MeetTheTeamSection />
+      <MentorsSection />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );
