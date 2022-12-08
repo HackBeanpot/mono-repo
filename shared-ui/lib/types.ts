@@ -6,7 +6,7 @@ export interface ButtonProps {
 
 export interface ButtonEventProps {
   btnText: string;
-  btnOnClick: React.MouseEvent<HTMLButtonElement>;
+  btnOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export interface DropdownProps {
