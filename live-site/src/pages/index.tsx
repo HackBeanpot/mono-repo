@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
 import Header from '../../../shared-ui/components/header/Header';
-import useMatchMedia from 'react-use-match-media';
 import '../../../shared-ui/style/globals.css';
 import HackingRemaining from '../../components/hacking-remaning/HackingRemaining';
 import { liveSiteTabInfo } from '../../lib/data';
@@ -10,6 +9,8 @@ import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
+import ComingUpSection from '../../components/coming-up/ComingUp';
+import useMatchMedia from 'react-use-match-media';
 import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 
@@ -38,6 +39,7 @@ const IndexPage: React.FC = () => {
         <HackingRemaining />
       )}
       <Background isDay={true} />
+      <ComingUpSection />
       <ResourcesSection />
       <MeetTheTeamSection />
       <MentorsSection />
