@@ -11,11 +11,8 @@ import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/Meet
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
-import useMatchMedia from 'react-use-match-media';
-import { min } from '../../../shared-ui/lib/responsive';
 
 const IndexPage: React.FC = () => {
-  const isDesktop = useMatchMedia(min.tablet);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const isDesktop = useMatchMedia(min.tablet);
 
