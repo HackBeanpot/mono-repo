@@ -84,36 +84,42 @@ const StyledWave4 = styled(motion.img)`
 `;
 
 const Penguin = styled.img`
- bottom: -2em;
- left: -15em;
- position: fixed;
- overflow: hidden;
- @media ${max.tablet} {
-  scale: 0.7;
-  left: -22em;
-  bottom: -7.5em;
- }
+  bottom: -2em;
+  left: -15em;
+  position: fixed;
+  overflow: hidden;
+  @media ${max.tablet} {
+    scale: 0.7;
+    left: -22em;
+    bottom: -7.5em;
+  }
 `
 const Boat = styled.img`
- top: 8em;
- scale: 0.9;
- bottom: 30em;
- right: -5em;
- position: fixed;
- padding: 0;
- clear: both;
- overflow: hidden;
- @media ${max.tabletLg} {
-  right: -8em;
- }
- @media ${max.tablet} {
-  right: -14em;
-  scale: 0.7;
- }
- @media ${max.tabletSm} {
-  right:-14em;
-  scale:0.7;
- }
+  top: 8em;
+  scale: 0.9;
+  bottom: 30em;
+  right: -5em;
+  position: fixed;
+  padding: 0;
+  clear: both;
+  overflow: hidden;
+  @media ${max.tabletLg} {
+    right: -8em;
+  }
+  @media ${max.tablet} {
+    right: -14em;
+    scale: 0.7;
+  }
+  @media ${max.tabletSm} {
+    right: -14em;
+    scale: 0.7;
+  }
 `;
 
-export { ButtonContainer, StyledH4, StyledH1, StyledWave1, StyledWave2, StyledWave3, StyledWave4, WaveContainer, Penguin, Boat };
+const StyledStar404 = styled(motion.img)`
+  position: absolute;
+  right: 5em;
+  top: 2em;
+`;
+
+export { ButtonContainer, StyledH4, StyledH1, StyledWave1, StyledWave2, StyledWave3, StyledWave4, WaveContainer, Penguin, Boat, StyledStar404 };

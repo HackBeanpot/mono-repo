@@ -17,7 +17,8 @@ import {
   StyledWave4,
   WaveContainer,
   Penguin,
-  Boat
+  Boat,
+  StyledStar404
 } from './404.styles';
 import {
   wave1Animations,
@@ -26,6 +27,8 @@ import {
   wave4Animations
 } from './404.animations';
 import { StyledPageContainer } from '../../styled-components/Background.styles';
+import { sunRays } from '../../../main-site/components/landing-section/LandingSection.animations';
+import Sun from '../../../shared-ui/images/sun.svg';
 
 const NotFound: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
@@ -50,6 +53,7 @@ const NotFound: React.FC = () => {
         <StyledH1>
           Uh oh, how did we end <br /> up here?
         </StyledH1>
+        <StyledStar404 animate="animate" variants={sunRays} src={Sun} />
         <WaveContainer>
           <StyledWave1
             src={wave}
