@@ -13,15 +13,24 @@ import ComingUpSection from '../../components/coming-up/ComingUp';
 import useMatchMedia from 'react-use-match-media';
 import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
+import ToggleMode from '../../components/toggle-mode/ToggleMode';
 
 const IndexPage: React.FC = () => {
+  const [isDay, setIsDay] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const isDesktop = useMatchMedia(min.tablet);
 
   const getBackgroundClassName = (): string => {
-    if (isDesktop) {
+    if (isDay && isDesktop) {
       return 'day-background-desktop';
     }
-    return 'mobile-light-background';
+    if (isDay && !isDesktop) {
+      return 'mobile-light-background';
+    }
+    if (!isDay && isDesktop) {
+      return 'dark-background-desktop';
+    }
+    return 'mobile-dark-background';
   };
 
   useEffect(() => {
@@ -35,6 +44,7 @@ const IndexPage: React.FC = () => {
   return (
     <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={liveSiteTabInfo} isDay={true} />
+      <ToggleMode isDay={isDay} setIsDay={setIsDay} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
