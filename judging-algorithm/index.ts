@@ -7,23 +7,20 @@ type Judge = {
   inPerson: boolean,
   company: string
 }
-const judgeHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
+// const judgeHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
 
 type HackerTeam = {
-  name: string,
-  inPerson: boolean,
-  company: string
+  name: string;
+  liveDemo: boolean;
 }
-const hackerTeamHeaders: Array<keyof HackerTeam> = ['name', 'inPerson', 'company'];
+const hackerTeamHeaders: Array<string> = ['Project Title', 'Will You Be Able To Give A Live Demo Of Your Project To Judges?'];
 
-type Judge = {
-  name: string,
-  inPerson: boolean,
-  company: string
+type Room = {
+  name: string
 }
-const judgeHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
+// const roomHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
 
-function parseCsv<T> (csvFilePath: string, headers: string[]): T[] {
+function parseCsv<T> (csvFilePath: string, headers: string[] | boolean): T[] {
   const csvFileAbsolutePath = path.resolve(__dirname, csvFilePath);
 
   const fileContent = fs.readFileSync(csvFileAbsolutePath, { encoding: 'utf-8' });
@@ -36,13 +33,22 @@ function parseCsv<T> (csvFilePath: string, headers: string[]): T[] {
 };
 
 function parseJudgeCSV(judgeCsvFilePath: string) {
-  parseCsv<Judge>(judgeCsvFilePath, judgeHeaders);
+  return parseCsv<Judge>(judgeCsvFilePath, true);
 };
 
 function parseHackerTeamCSV(hackerTeamCsvFilePath: string) {
-  parseCsv<Judge>(hackerTeamCsvFilePath, judgeHeaders);
+  return parseCsv<HackerTeam>(hackerTeamCsvFilePath, hackerTeamHeaders);
 };
 
-function parseCSV(judgeCsvFilePath: string) {
-  parseCsv<Judge>(judgeCsvFilePath, judgeHeaders);
+function parseRoom(roomCsvFilePath: string) {
+  return parseCsv<Room>(roomCsvFilePath, true);
 };
+
+
+function main() {
+  const filePaths: string[] = process.argv.slice(2)
+  const judgeCsvFilePath: string = filePaths[0]
+  const judCsvFilePath: string = filePaths[0]
+  parseJudgeCSV(judgeCsvFilePath)
+  parseJudgeCSV(filePaths[0])
+}
