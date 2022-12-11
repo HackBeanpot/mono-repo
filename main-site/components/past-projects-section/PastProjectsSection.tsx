@@ -28,6 +28,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { pastProjectsData } from '../../lib/data';
 import { PastProjectData } from '../../lib/types';
 import { getLeftOrRight } from '../../lib/utils';
+import { camelBobbing } from './PastProjects.animations';
 
 const PastProjectsSection: React.FC = () => {
   function getImage(title: string): string {
@@ -47,7 +48,7 @@ const PastProjectsSection: React.FC = () => {
 
   return (
     <div>
-      <StyledCamel src={Camel} />
+      <StyledCamel src={Camel} animate = "animate" variants = {camelBobbing} />
       <StyledFennecFox src={FennecFox} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>
