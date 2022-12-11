@@ -135,7 +135,7 @@ const lisa: Person = {
 };
 
 const spencerToolTip: ToolTipInfo = {
-  name: 'name: Spencor Shao',
+  name: 'name: Spencer Shao',
   year: 'year: 3rd',
   major: 'major: CS + Music Tech',
   pronouns: 'pronouns: he/him'

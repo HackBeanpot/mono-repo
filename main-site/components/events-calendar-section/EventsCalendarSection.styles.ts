@@ -40,6 +40,10 @@ const StyledEventsBox = styled.div`
   }
 `;
 
+const StyledPastEventsBox = styled(StyledEventsBox)`
+  background-color: ${colors.TEXT_BROWN}
+`;
+
 const StyledTextContainer = styled.div`
   display: flex;
   margin: 2em;
@@ -173,6 +177,7 @@ export {
   EventsPBolded,
   EventsP,
   StyledEventsBox,
+  StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
