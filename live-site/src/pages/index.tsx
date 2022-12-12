@@ -40,6 +40,7 @@ const IndexPage: React.FC = () => {
         <HackingRemaining />
       )}
       <Background isDay={true} />
+      <ComingUpSection />
       <ResourcesSection />
       <MeetTheTeamSection />
       <MentorsSection />
