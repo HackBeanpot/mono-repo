@@ -17,4 +17,3 @@ export interface UpcomingEvent {
 export interface EventProps {
   eventInfo: UpcomingEvent;
 }
-
