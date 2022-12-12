@@ -5,7 +5,7 @@ export const breakpoints = {
   tablet: 768,
   tabletLg: 1024,
   desktop: 1280,
-  desktopLg: 1440,
+  desktopLg: 1440
 };
 
 export const min = {
@@ -25,6 +25,5 @@ export const max = {
   tablet: `(max-width: ${breakpoints.tablet}px)`,
   tabletLg: `(max-width: ${breakpoints.tabletLg}px)`,
   desktop: `(max-width: ${breakpoints.desktop}px)`,
-  desktopLg: `(max-width: ${breakpoints.desktopLg}px)`,
- 
+  desktopLg: `(max-width: ${breakpoints.desktopLg}px)`
 };

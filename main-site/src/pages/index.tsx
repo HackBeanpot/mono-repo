@@ -60,9 +60,8 @@ const IndexPage: React.FC = () => {
       <CovidSection />
       <MeetTheTeamSection />
       <AdventureAheadSection />
-      <TimeRemaining/>
+      <TimeRemaining />
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
-
     </StyledPageContainer>
   );
 };

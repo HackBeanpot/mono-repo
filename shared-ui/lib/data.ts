@@ -349,5 +349,4 @@ const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Sponsorship', listOfPictures: sponsorshipPictures }
 ];
 
-
 export { mainSiteTabInfo, teamInfo, team };

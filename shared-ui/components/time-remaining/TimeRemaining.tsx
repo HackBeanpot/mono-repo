@@ -10,8 +10,6 @@ import {
 } from './TimeRemaining.styles';
 import { TimeRemainingInfo } from '../../../shared-ui/lib/types';
 
-
-
 const TimeRemaining: React.FC = () => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
@@ -25,8 +23,6 @@ const TimeRemaining: React.FC = () => {
     { text: seconds, label: 'Seconds' }
   ];
 
-
-  
   useEffect(() => {
     const target = new Date('02/03/2023 23:59:59');
 
@@ -54,16 +50,15 @@ const TimeRemaining: React.FC = () => {
       <StyledTimerContainer>
         {timeUnit.map((curr) => (
           <div>
-            <StyledTimeRemainingText>{curr.text} {curr.label === 'Seconds' ? "" : ":"}</StyledTimeRemainingText>
+            <StyledTimeRemainingText>
+              {curr.text} {curr.label === 'Seconds' ? '' : ':'}
+            </StyledTimeRemainingText>
             <StyledTimeRemainingLabel>{curr.label}</StyledTimeRemainingLabel>
           </div>
         ))}
       </StyledTimerContainer>
       <StyledButtonContainer>
-        <PrimaryButton 
-          btnText="Share with friends!"
-          newTab
-        />
+        <PrimaryButton btnText="Share with friends!" newTab />
       </StyledButtonContainer>
     </StyledTimeRemainingContainer>
   );

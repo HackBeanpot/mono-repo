@@ -48,7 +48,7 @@ const PastProjectsSection: React.FC = () => {
 
   return (
     <div>
-      <StyledCamel src={Camel} animate = "animate" variants = {camelBobbing} />
+      <StyledCamel src={Camel} animate="animate" variants={camelBobbing} />
       <StyledFennecFox src={FennecFox} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>

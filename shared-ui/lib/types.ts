@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
 export interface ButtonProps {
   btnText: string;
@@ -50,13 +50,10 @@ export interface TeamColumnProps {
   columnInfo: TeamColumnInfo;
 }
 
-
-
 export interface TimeRemainingInfo {
-  text: number
-  label: string
+  text: number;
+  label: string;
 }
-
 
 export interface HeaderProps {
   tabs: TabInfo[];
@@ -86,7 +83,6 @@ export interface BackgroundProps {
   isDay: boolean;
 }
 
-
 export interface MobileTeamColumnProps {
   listOfColumnInfo: TeamColumnInfo[];
 }
@@ -94,5 +90,3 @@ export interface MobileTeamColumnProps {
 export interface StyledTeamLabelProps {
   twoLines: boolean;
 }
-
-

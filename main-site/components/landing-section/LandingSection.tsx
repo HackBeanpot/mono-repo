@@ -18,18 +18,24 @@ import { sunRays } from './LandingSection.animations';
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledLandingSectionContainer>
-      {isDay ?
-      <StyledToggle
-        src={ToggleDay}
-        alt="toggle-day"
-        onClick={(): void => setIsDay(!isDay)}
-      /> : 
-      <StyledToggle
-        src={Toggle}
-        alt="toggle-day-night"
-        onClick={(): void => setIsDay(!isDay)}
-      />}
-      {isDay ? <StyledStar animate="animate" variants={sunRays} src={Sun} /> : <StyledStar src={Moon} />}
+      {isDay ? (
+        <StyledToggle
+          src={ToggleDay}
+          alt="toggle-day"
+          onClick={(): void => setIsDay(!isDay)}
+        />
+      ) : (
+        <StyledToggle
+          src={Toggle}
+          alt="toggle-day-night"
+          onClick={(): void => setIsDay(!isDay)}
+        />
+      )}
+      {isDay ? (
+        <StyledStar animate="animate" variants={sunRays} src={Sun} />
+      ) : (
+        <StyledStar src={Moon} />
+      )}
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
         <StyledThemeText>Desert Exploration</StyledThemeText>
