@@ -9,11 +9,11 @@ const StyledPrimaryButton = styled.button`
   border-color: ${colors.HEADER_FOOTER_BLUE};
   font-family: ${fonts.nunitoSansSemibold};
   transition-duration: 0.5s;
-  &:hover{
+  &:hover {
     color: ${colors.BUTTON_GREEN};
     background-color: ${colors.HEADER_FOOTER_BLUE};
     border-color: ${colors.BUTTON_GREEN};
-    };
+  }
   padding: 1em;
   border-radius: 2em;
   border: 0.1em solid;

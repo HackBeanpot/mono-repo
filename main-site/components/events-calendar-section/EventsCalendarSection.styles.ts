@@ -41,7 +41,7 @@ const StyledEventsBox = styled.div`
 `;
 
 const StyledPastEventsBox = styled(StyledEventsBox)`
-  background-color: ${colors.TEXT_BROWN}
+  background-color: ${colors.TEXT_BROWN};
 `;
 
 const StyledTextContainer = styled.div`

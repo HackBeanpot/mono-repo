@@ -15,6 +15,7 @@ import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 
 const IndexPage: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tabletLg);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getBackgroundClassName = (): string => {

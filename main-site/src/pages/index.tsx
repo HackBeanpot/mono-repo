@@ -18,6 +18,7 @@ import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/Meet
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
+import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 
 const IndexPage: React.FC = () => {
@@ -59,6 +60,7 @@ const IndexPage: React.FC = () => {
       <CovidSection />
       <MeetTheTeamSection />
       <AdventureAheadSection />
+      <TimeRemaining />
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
     </StyledPageContainer>
   );

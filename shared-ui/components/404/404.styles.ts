@@ -93,7 +93,7 @@ const Penguin = styled.img`
     left: -22em;
     bottom: -7.5em;
   }
-`
+`;
 const Boat = styled.img`
   top: 8em;
   scale: 0.9;
@@ -122,4 +122,16 @@ const StyledStar404 = styled(motion.img)`
   top: 2em;
 `;
 
-export { ButtonContainer, StyledH4, StyledH1, StyledWave1, StyledWave2, StyledWave3, StyledWave4, WaveContainer, Penguin, Boat, StyledStar404 };
+export {
+  ButtonContainer,
+  StyledH4,
+  StyledH1,
+  StyledWave1,
+  StyledWave2,
+  StyledWave3,
+  StyledWave4,
+  WaveContainer,
+  Penguin,
+  Boat,
+  StyledStar404
+};
