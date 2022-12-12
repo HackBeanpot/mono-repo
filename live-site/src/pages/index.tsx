@@ -17,7 +17,6 @@ import ToggleMode from '../../components/toggle-mode/ToggleMode';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
-  console.log(currentHour);
   return 6 <= currentHour && currentHour < 18;
 };
 
