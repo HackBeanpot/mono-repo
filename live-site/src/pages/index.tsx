@@ -13,6 +13,7 @@ import ComingUpSection from '../../components/coming-up/ComingUp';
 import useMatchMedia from 'react-use-match-media';
 import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
+import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
 
 const IndexPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tabletLg);
@@ -41,6 +42,7 @@ const IndexPage: React.FC = () => {
       )}
       <Background isDay={true} />
       <ComingUpSection />
+      <EventScheduleSection />
       <ResourcesSection />
       <MeetTheTeamSection />
       <MentorsSection />
