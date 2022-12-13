@@ -55,6 +55,8 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
     margin: -0.1em;
     padding-right: 2em;
     box-shadow: none;
+    border-bottom:none;
+    padding-bottom: 0.12em;
   }
   @media (max-width: 338px) {
     padding-right: 1em;
