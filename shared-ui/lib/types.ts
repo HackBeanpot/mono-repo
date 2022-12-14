@@ -3,16 +3,9 @@ export interface ButtonProps {
   btnLink: string;
   newTab?: boolean;
 }
-
-export interface ButtonEventProps {
-  btnText: string;
-  btnOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
 export interface DropdownProps {
   options: string[];
 }
-
 export interface TabInfo {
   name: string;
   link: string;

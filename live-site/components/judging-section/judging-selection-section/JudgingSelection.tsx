@@ -1,16 +1,15 @@
 import React from 'react';
-import SecondaryEventButton from '../../../../shared-ui/components/secondary-button/SecondaryEventButton';
-import { JudgingSelectionProps } from '../../../lib/data';
+import SecondaryButton from '../../../../shared-ui/components/secondary-button/SecondaryButton';
 import { StyledSelection } from './JudgingSelection.styles';
 
-const JudgingSelection: React.FC<JudgingSelectionProps> = (handleJudge, handleTeam) => {
+const JudgingSelection: React.FC = () => {
   
   return (
     <div>
       <StyledSelection> Who are you? </StyledSelection>
       <span>
-        <SecondaryEventButton btnText='I am a judge' btnOnClick={handleJudge} />
-        <SecondaryEventButton btnText='I am a hacker' btnOnClick={handleTeam} />
+        <SecondaryButton btnText='I am a judge' btnLink={'/judging-schedule-judges'} />
+        <SecondaryButton btnText='I am a hacker' btnLink={'/judging-schedule-hackers'} />
       </span>
     </div>
   );
