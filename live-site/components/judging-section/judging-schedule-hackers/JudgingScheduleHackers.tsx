@@ -11,7 +11,7 @@ const JudgingScheduleHackers: React.FC = () => {
 
   return (
     <div>
-      <PrimaryButton btnText='back' btnLink='www.google.com' />
+      <PrimaryButton btnText='back' btnLink='../' />
       <StyledWelcomePerson> Welcome, Hacker! </StyledWelcomePerson>
       <StyledSecondaryDropdown options={options} />
     </div>
