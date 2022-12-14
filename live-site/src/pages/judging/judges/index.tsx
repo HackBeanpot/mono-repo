@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
-import Header from '../../../../shared-ui/components/header/Header';
+import Header from '../../../../../shared-ui/components/header/Header';
 import useMatchMedia from 'react-use-match-media';
 import '../../../../shared-ui/style/globals.css';
-import HackingRemaining from '../../../components/hacking-remaning/HackingRemaining';
-import { liveSiteTabInfo } from '../../../lib/data';
-import { min } from '../../../../shared-ui/lib/responsive';
-import Background from '../../../../shared-ui/components/backgrounds/Backgrounds';
-import Footer from '../../../../shared-ui/components/footer/Footer';
-import JudgingScheduleJudges from '../../../components/judging-section/judging-schedule-judges/JudgingScheduleJudges';
+import HackingRemaining from '../../../../components/hacking-remaning/HackingRemaining';
+import { liveSiteTabInfo } from '../../../../lib/data';
+import { min } from '../../../../../shared-ui/lib/responsive';
+import Background from '../../../../../shared-ui/components/backgrounds/Backgrounds';
+import Footer from '../../../../../shared-ui/components/footer/Footer';
+import JudgingScheduleJudges from '../../../../components/judging-section/judging-schedule-judges/JudgingScheduleJudges';
 
 const JudgingScheduleJudgesPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
