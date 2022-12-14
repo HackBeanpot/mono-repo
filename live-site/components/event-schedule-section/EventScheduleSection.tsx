@@ -30,7 +30,7 @@ const EventScheduleSection: React.FC = () => {
         </StyledEventScheduleSubText>
         <ButtonContainer>
           <PrimaryButton
-            btnText="Add to Calender +"
+            btnText="Add to Calendar +"
             btnLink=""
           ></PrimaryButton>
         </ButtonContainer>

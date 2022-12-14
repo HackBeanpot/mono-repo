@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H3, P } from '../../../shared-ui/style/typography';
@@ -53,8 +52,6 @@ const ButtonContainer = styled.div`
   } ;
 `;
 
-const StyledAddCalenderButton = styled(PrimaryButton)``;
-
 export {
   EventScheduleSectionContainer,
   EventScheduleTextButtonContainer,
@@ -62,5 +59,4 @@ export {
   StyledEventScheduleSubText,
   StyledBoldSubText,
   ButtonContainer,
-  StyledAddCalenderButton
 };
