@@ -6,7 +6,7 @@ const liveSiteTabInfo: TabInfo[] = [
   { name: 'Challenges', link: '#challenges' },
   { name: 'Resources', link: '#resources' },
   { name: 'Team', link: '#team' },
-  { name: 'Judging', link: '#judging' }
+  { name: 'Judging', link: 'judging' }
 ];
 
 interface TimeLeft {
