@@ -11,7 +11,7 @@ const JudgingScheduleJudges: React.FC = () => {
 
   return (
     <div>
-      <PrimaryButton btnText='back' btnLink='/judging' />
+      <PrimaryButton btnText='back' btnLink='www.google.com' />
       <StyledWelcomePerson> Welcome, Judge! </StyledWelcomePerson>
       <StyledSecondaryDropdown options={options} />
     </div>
