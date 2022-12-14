@@ -6,7 +6,7 @@ import { StyledTabTitleWrapperProps } from '../../lib/types';
 
 const StyledEventScheduleTabsContainer = styled.div`
   text-align: center;
-  margin: 5em;
+  margin-left: 5em;
   margin-right: 0em;
   border-radius: 0.75em;
   height: 35em;
@@ -86,7 +86,6 @@ const StyledTabContentContainer = styled.div`
     border-radius: 0em 0.75em 0em 0em;
   } ;
 `;
-const StyledTabTitleContainer = styled.div``;
 const StyledEventScheduleTabContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -99,7 +98,6 @@ export {
   StyledEventScheduleTabContainer,
   StyledTabTitleWrapper,
   StyledTabContentContainer,
-  StyledTabTitleContainer,
   StyledEventScheduleTabsContainer,
   StyledTabContent,
   StyledTabTitle

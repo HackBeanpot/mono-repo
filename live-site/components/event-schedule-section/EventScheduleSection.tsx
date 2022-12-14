@@ -1,4 +1,5 @@
 import React from 'react';
+import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { mockData } from './EventScheduleMockData';
 
 import {
@@ -6,7 +7,6 @@ import {
   EventScheduleSectionContainer,
   StyledEventScheduleHeader,
   StyledEventScheduleSubText,
-  StyledAddCalenderButton,
   ButtonContainer,
   EventScheduleTextButtonContainer
 } from './EventScheduleSection.styles';
@@ -29,10 +29,10 @@ const EventScheduleSection: React.FC = () => {
           </StyledBoldSubText>
         </StyledEventScheduleSubText>
         <ButtonContainer>
-          <StyledAddCalenderButton
+          <PrimaryButton
             btnText="Add to Calender +"
             btnLink=""
-          ></StyledAddCalenderButton>
+          ></PrimaryButton>
         </ButtonContainer>
       </EventScheduleTextButtonContainer>
       <EventScheduleTab tabs={mockData}></EventScheduleTab>
