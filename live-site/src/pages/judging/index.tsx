@@ -8,7 +8,7 @@ import { liveSiteTabInfo } from '../../../lib/data';
 import { min } from '../../../../shared-ui/lib/responsive';
 import Background from '../../../../shared-ui/components/backgrounds/Backgrounds';
 import Footer from '../../../../shared-ui/components/footer/Footer';
-import JudgingSelection from '../../../components/judging-section/judging-selection-section/JudgingSelection';
+import JudgingSelection from '../../../components/judging-section/judging-selection/JudgingSelection';
 
 const JudgingPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
