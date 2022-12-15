@@ -20,6 +20,7 @@ const StyledWelcomePerson = styled(H2)`
 `;
 
 const StyledCenteredDropdown = styled(H2)`
+  display: block;
   justify-content: center;
 `;
 

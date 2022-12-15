@@ -11,7 +11,7 @@ const StyledWhoAreYou = styled(H2)`
 `;
 
 const StyledPersonTypeSelect = styled.span`
-  display: inline-block;
+  display: block;
 `;
 
 export { 
