@@ -3,6 +3,7 @@ import { H2 } from '../../../../shared-ui/style/typography';
 
 const StyledJudgingSelection = styled.div`
   padding: 10em;
+  justify-content: center;
 `;
 
 const StyledWhoAreYou = styled(H2)`
@@ -12,7 +13,6 @@ const StyledWhoAreYou = styled(H2)`
 
 const StyledPersonTypeSelect = styled.div`
   display: inline-block;
-  justify-content: center;
 `;
 
 export { 
