@@ -12,6 +12,7 @@ const StyledJudgingScheduleSection = styled.div`
   padding-right: 10em;
   padding-bottom: 20em;
   justify-content: center;
+  flex: none;
 `;
 
 const StyledWelcomePerson = styled(H2)`
@@ -22,6 +23,7 @@ const StyledWelcomePerson = styled(H2)`
 const StyledCenteredDropdown = styled.div`
   display: block;
   justify-content: center;
+  flex: none;
 `;
 
 export { 
