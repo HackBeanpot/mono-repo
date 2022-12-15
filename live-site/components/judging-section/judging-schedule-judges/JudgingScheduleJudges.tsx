@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledWelcomePerson } from './JudgingScheduleJudges.styles';
+import { StyledJudgingScheduleSection, StyledWelcomePerson } from '../JudgingSchedule.styles';
 import { StyledSecondaryDropdown } from '../../../../shared-ui/components/secondary-dropdown/SecondaryDropdown.styles';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 
@@ -10,11 +10,11 @@ const JudgingScheduleJudges: React.FC = () => {
   options.push('judge names list');
 
   return (
-    <div>
+    <StyledJudgingScheduleSection>
       <PrimaryButton btnText='back' btnLink='../' />
       <StyledWelcomePerson> Welcome, Judge! </StyledWelcomePerson>
       <StyledSecondaryDropdown options={options} />
-    </div>
+    </StyledJudgingScheduleSection>
   );
 };
 
