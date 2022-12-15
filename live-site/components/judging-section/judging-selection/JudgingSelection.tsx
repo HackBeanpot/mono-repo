@@ -3,7 +3,6 @@ import SecondaryButton from '../../../../shared-ui/components/secondary-button/S
 import { StyledJudgingSelection, StyledWhoAreYou } from './JudgingSelection.styles';
 
 const JudgingSelection: React.FC = () => {
-  
   return (
     <StyledJudgingSelection>
       <StyledWhoAreYou> Who are you? </StyledWhoAreYou>
