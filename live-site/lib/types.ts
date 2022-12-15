@@ -6,3 +6,7 @@ export interface TabInfo {
 export interface ResourceBoxProps {
   label: string;
 }
+
+export interface JudgingScheduleWelcomeProps {
+  schedulePersonType: string;
+}

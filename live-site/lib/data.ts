@@ -1,6 +1,6 @@
 import { TabInfo } from './types';
 
-const liveSiteTabInfo: TabInfo[] = [
+export const liveSiteTabInfo: TabInfo[] = [
   { name: 'Schedule', link: '/#schedule' },
   { name: 'Mentors', link: '/#mentors' },
   { name: 'Challenges', link: '/#challenges' },
@@ -9,9 +9,7 @@ const liveSiteTabInfo: TabInfo[] = [
   { name: 'Judging', link: '/judging' }
 ];
 
-interface TimeLeft {
+export interface TimeLeft {
   timeType: string;
   value: number;
 }
-
-export { liveSiteTabInfo, TimeLeft };

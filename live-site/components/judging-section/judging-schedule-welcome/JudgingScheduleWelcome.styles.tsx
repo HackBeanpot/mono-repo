@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { H2 } from '../../../shared-ui/style/typography';
+import { H2 } from '../../../../shared-ui/style/typography';
 
 const StyledBackButton = styled.div`
   padding-top: 7em;
