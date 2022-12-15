@@ -7,7 +7,7 @@ const StyledBackButton = styled.div`
 `;
 
 const StyledJudgingScheduleSection = styled.div`
-  padding-top: 2em;
+  padding-top: 3em;
   padding-left: 10em;
   padding-right: 10em;
   padding-bottom: 10em;
@@ -15,7 +15,6 @@ const StyledJudgingScheduleSection = styled.div`
 
 const StyledWelcomePerson = styled(H2)`
   text-align: center;
-  padding-bottom: 2em;
 `;
 
 export { 

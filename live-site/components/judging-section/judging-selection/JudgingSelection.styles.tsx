@@ -10,7 +10,13 @@ const StyledWhoAreYou = styled(H2)`
   padding-bottom: 4em;
 `;
 
+const StyledPersonTypeSelect = styled.span`
+  display: flex;
+  justify-content: center;
+`;
+
 export { 
   StyledJudgingSelection,
-  StyledWhoAreYou
+  StyledWhoAreYou,
+  StyledPersonTypeSelect
 }
