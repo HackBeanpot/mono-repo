@@ -13,7 +13,8 @@ const StyledWhoAreYou = styled(H2)`
 const StyledPersonTypeSelect = styled.span`
   display: inline-block;
   justify-content: center;
-  padding: 0 10em;
+  padding-left: 15em;
+  padding-right: 15em;
 `;
 
 export { 

@@ -19,8 +19,13 @@ const StyledWelcomePerson = styled(H2)`
   padding-bottom: 0.5em;
 `;
 
+const StyledCenteredDropdown = styled(H2)`
+  justify-content: center;
+`;
+
 export { 
   StyledBackButton,
   StyledJudgingScheduleSection,
-  StyledWelcomePerson
+  StyledWelcomePerson,
+  StyledCenteredDropdown
 };

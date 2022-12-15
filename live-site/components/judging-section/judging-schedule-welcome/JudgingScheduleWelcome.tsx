@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledBackButton, StyledJudgingScheduleSection, StyledWelcomePerson } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
+import { StyledBackButton, StyledCenteredDropdown, StyledJudgingScheduleSection, StyledWelcomePerson } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
 import { StyledSecondaryDropdown } from '../../../../shared-ui/components/secondary-dropdown/SecondaryDropdown.styles';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 import { JudgingScheduleWelcomeProps } from '../../../lib/types';
@@ -12,9 +12,11 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({ schedul
       </StyledBackButton>
       <StyledJudgingScheduleSection>
         <StyledWelcomePerson> Welcome, {schedulePersonType}! </StyledWelcomePerson>
-        <StyledSecondaryDropdown> 
-          <option value="select your name">Select your name</option>
-        </StyledSecondaryDropdown>
+        <StyledCenteredDropdown>
+          <StyledSecondaryDropdown> 
+              <option value="select your name">Select your name</option>
+          </StyledSecondaryDropdown>
+        </StyledCenteredDropdown>
       </StyledJudgingScheduleSection>
     </div>
   );
