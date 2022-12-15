@@ -7,6 +7,7 @@ const StyledJudgingSelection = styled.div`
 
 const StyledWhoAreYou = styled(H2)`
   text-align: center;
+  padding-bottom: 10em;
 `;
 
 export { 
