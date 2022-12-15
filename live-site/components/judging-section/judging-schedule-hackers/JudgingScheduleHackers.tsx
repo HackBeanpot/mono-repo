@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledJudgingScheduleSection, StyledWelcomePerson } from '../JudgingSchedule.styles';
+import { StyledBackButton, StyledJudgingScheduleSection, StyledWelcomePerson } from '../JudgingSchedule.styles';
 import { StyledSecondaryDropdown } from '../../../../shared-ui/components/secondary-dropdown/SecondaryDropdown.styles';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 
@@ -10,11 +10,15 @@ const JudgingScheduleHackers: React.FC = () => {
   options.push('hacker team names list');
 
   return (
-    <StyledJudgingScheduleSection>
-      <PrimaryButton btnText='back' btnLink='../' />
-      <StyledWelcomePerson> Welcome, Hacker! </StyledWelcomePerson>
-      <StyledSecondaryDropdown options={options} />
-    </StyledJudgingScheduleSection>
+    <div>
+      <StyledBackButton> 
+        <PrimaryButton btnText='back' btnLink='../' /> 
+      </StyledBackButton>
+      <StyledJudgingScheduleSection>
+        <StyledWelcomePerson> Welcome, Hacker! </StyledWelcomePerson>
+        <StyledSecondaryDropdown options={options} />
+      </StyledJudgingScheduleSection>
+    </div>
   );
 };
 
