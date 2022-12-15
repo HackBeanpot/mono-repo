@@ -11,7 +11,7 @@ const StyledWhoAreYou = styled(H2)`
 `;
 
 const StyledPersonTypeSelect = styled.span`
-  display: flex;
+  display: inline-block;
   justify-content: center;
   padding: 0 10em;
 `;
