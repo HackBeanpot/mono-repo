@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { max } from '../../lib/responsive';
 import { colors } from '../../style/colors';
-import Select from 'react-select';
 
-const StyledSecondaryDropdown = styled(Select)`
+const StyledSecondaryDropdown = styled.select`
   color: ${colors.BUTTON_GREEN};
   background-color: ${colors.BUTTON_DARK_GREEN};
   border-color: ${colors.BUTTON_GREEN};
