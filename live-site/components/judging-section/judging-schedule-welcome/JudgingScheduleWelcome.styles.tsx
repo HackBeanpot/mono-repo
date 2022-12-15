@@ -10,7 +10,8 @@ const StyledJudgingScheduleSection = styled.div`
   padding-top: 3em;
   padding-left: 10em;
   padding-right: 10em;
-  padding-bottom: 18em;
+  padding-bottom: 20em;
+  justify-content: center;
 `;
 
 const StyledWelcomePerson = styled(H2)`
