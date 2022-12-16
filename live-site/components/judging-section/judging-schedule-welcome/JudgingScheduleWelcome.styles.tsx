@@ -21,7 +21,7 @@ const StyledWelcomePerson = styled(H2)`
 `;
 
 const StyledCenteredDropdown = styled.div`
-  display: block;
+  display: flex;
   justify-content: center;
   flex: none;
 `;
