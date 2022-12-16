@@ -14,6 +14,7 @@ import useMatchMedia from 'react-use-match-media';
 import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import ToggleMode from '../../components/toggle-mode/ToggleMode';
+import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
@@ -22,8 +23,8 @@ const handleMode = (): boolean => {
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(handleMode());
+  const isDesktop = useMatchMedia(min.tabletLg);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const isDesktop = useMatchMedia(min.tablet);
 
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
@@ -55,6 +56,7 @@ const IndexPage: React.FC = () => {
       )}
       <Background isDay={true} />
       <ComingUpSection />
+      <EventScheduleSection />
       <ResourcesSection />
       <MeetTheTeamSection />
       <MentorsSection />

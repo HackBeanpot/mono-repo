@@ -1,3 +1,5 @@
+import { EventMockData } from '../components/event-schedule-section/EventScheduleMockData';
+
 export interface TabInfo {
   name: string;
   link: string;
@@ -16,4 +18,12 @@ export interface UpcomingEvent {
 
 export interface EventProps {
   eventInfo: UpcomingEvent;
+}
+
+export interface EventScheduleTabProps {
+  tabs: EventMockData[];
+}
+
+export interface StyledTabTitleWrapperProps {
+  isSelected: boolean;
 }

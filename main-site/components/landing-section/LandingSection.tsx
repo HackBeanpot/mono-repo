@@ -13,6 +13,7 @@ import ToggleDay from '../../../shared-ui/images/toggle-day-light.svg';
 import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
+import { sunRays } from './LandingSection.animations';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
@@ -30,7 +31,11 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
           onClick={(): void => setIsDay(!isDay)}
         />
       )}
-      {isDay ? <StyledStar src={Sun} /> : <StyledStar src={Moon} />}
+      {isDay ? (
+        <StyledStar animate="animate" variants={sunRays} src={Sun} />
+      ) : (
+        <StyledStar src={Moon} />
+      )}
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
         <StyledThemeText>Desert Exploration</StyledThemeText>

@@ -1,7 +1,10 @@
+import { MouseEventHandler } from 'react';
+
 export interface ButtonProps {
   btnText: string;
-  btnLink: string;
+  btnLink?: string;
   newTab?: boolean;
+  onClick?: MouseEventHandler;
 }
 
 export interface TabInfo {
@@ -43,6 +46,15 @@ export interface StyledToolTipProps {
   team: string;
 }
 
+export interface TeamColumnProps {
+  columnInfo: TeamColumnInfo;
+}
+
+export interface TimeRemainingInfo {
+  text: number;
+  label: string;
+}
+
 export interface HeaderProps {
   tabs: TabInfo[];
   isDay: boolean;
@@ -69,10 +81,6 @@ export interface StyledFooterProps {
 
 export interface BackgroundProps {
   isDay: boolean;
-}
-
-export interface TeamColumnProps {
-  columnInfo: TeamColumnInfo;
 }
 
 export interface MobileTeamColumnProps {
