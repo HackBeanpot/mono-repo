@@ -7,8 +7,8 @@ const JudgingSelection: React.FC = () => {
     <StyledJudgingSelection>
       <StyledWhoAreYou> Who are you? </StyledWhoAreYou>
       <StyledPersonTypeSelect>
-        <SecondaryButton btnText='I am a judge' btnLink='judges' />
-        <SecondaryButton btnText='I am a hacker' btnLink='hackers' />
+        <SecondaryButton btnText='I am a judge' btnLink='/judging/judges' />
+        <SecondaryButton btnText='I am a hacker' btnLink='/judging/hackers' />
       </StyledPersonTypeSelect>
     </StyledJudgingSelection>
   );
