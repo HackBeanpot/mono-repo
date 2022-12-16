@@ -12,7 +12,8 @@ const StyledWhoAreYou = styled(H2)`
 `;
 
 const StyledPersonTypeSelect = styled.div`
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 `;
 
 export { 
