@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import { max } from '../../../shared-ui/lib/responsive';
 
+const ToggleContainer = styled.div`
+  @media ${max.tablet} {
+    float: right;
+  }
+  float: left;
+`;
+
 const StyledStar = styled.img`
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   width: 12%;
   top: 9em;
   right: 13em;
@@ -34,4 +41,4 @@ const StyledToggle = styled.img`
   }
 `;
 
-export { StyledStar, StyledToggle };
+export { StyledStar, StyledToggle, ToggleContainer };

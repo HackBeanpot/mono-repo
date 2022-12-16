@@ -1,9 +1,7 @@
 import React from 'react';
 import Toggle from '../../../shared-ui/images/toggle-day-dark.svg';
 import ToggleDay from '../../../shared-ui/images/toggle-day-light.svg';
-import Sun from '../../../shared-ui/images/sun.svg';
-import Moon from '../../../shared-ui/images/moon.svg';
-import { StyledToggle, StyledStar } from './ToggleMode.styles';
+import { StyledToggle, ToggleContainer } from './ToggleMode.styles';
 
 interface ToggleModeProps {
   isDay: boolean;
@@ -12,7 +10,7 @@ interface ToggleModeProps {
 
 const ToggleMode: React.FC<ToggleModeProps> = ({ isDay, setIsDay }) => {
   return (
-    <div>
+    <ToggleContainer>
       {isDay ? (
         <StyledToggle
           src={ToggleDay}
@@ -26,8 +24,7 @@ const ToggleMode: React.FC<ToggleModeProps> = ({ isDay, setIsDay }) => {
           onClick={(): void => setIsDay(!isDay)}
         />
       )}
-      {isDay ? <StyledStar src={Sun} /> : <StyledStar src={Moon} />}
-    </div>
+    </ToggleContainer>
   );
 };
 
