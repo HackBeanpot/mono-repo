@@ -8,3 +8,13 @@ export const sunRays = {
     }
   }
 };
+
+export const moonRock = {
+  animate: {
+    rotate: [-13, 20, -13],
+    transition: {
+      repeat: Infinity,
+      duration: 10
+    }
+  }
+};
