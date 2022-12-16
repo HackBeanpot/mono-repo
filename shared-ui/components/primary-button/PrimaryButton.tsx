@@ -32,7 +32,12 @@ const PrimaryButton: React.FC<ButtonProps> = ({
 
   return (
     <a href={btnLink} target={newTab ? '_blank' : '_self'}>
-      <StyledPrimaryButton>{btnText}</StyledPrimaryButton>
+      <StyledPrimaryButton
+        whileHover={{ scale: 1.07 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        {btnText}
+      </StyledPrimaryButton>
     </a>
   );
 };
