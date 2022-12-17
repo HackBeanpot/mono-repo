@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H2 } from '../../../../shared-ui/style/typography';
+import SecondaryButton from '../../../../shared-ui/components/secondary-button/SecondaryButton';
 
 const StyledJudgingSelection = styled.div`
   padding: 10em;
@@ -13,13 +14,18 @@ const StyledJudgingWelcomeHeader = styled(H2)`
   color: ${colors.TEXT_BROWN};
 `;
 
-const StyledPersonTypeSelect = styled.div`
+const StyledPersonTypeSelectSection = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const StyledPersonTypeSelectButton = styled(SecondaryButton)`
+  width: 25%;
 `;
 
 export { 
   StyledJudgingSelection,
   StyledJudgingWelcomeHeader,
-  StyledPersonTypeSelect
+  StyledPersonTypeSelectSection,
+  StyledPersonTypeSelectButton
 }
