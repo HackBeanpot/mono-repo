@@ -14,6 +14,7 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({ schedul
         <StyledWelcomePerson> Welcome, {schedulePersonType}! </StyledWelcomePerson>
         <StyledCenteredDropdown>
           <StyledPersonDropdown options={personDropdown} > 
+            <option value="select your name">Select your name</option>
           </StyledPersonDropdown>
         </StyledCenteredDropdown>
       </StyledJudgingScheduleSection>
