@@ -1,7 +1,15 @@
 import styled from 'styled-components';
+import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 import { H2 } from '../../../../shared-ui/style/typography';
+import { colors } from '../../../../shared-ui/style/colors';
 
-const StyledBackButton = styled.div`
+const StyledBackButtonContainer = styled.div`
+  padding-top: 7em;
+  padding-left: 2em;
+`;
+
+// modify this to be sleeker
+const StyledBackButton = styled(PrimaryButton)`
   padding-top: 7em;
   padding-left: 2em;
 `;
@@ -18,6 +26,7 @@ const StyledJudgingScheduleSection = styled.div`
 const StyledWelcomePerson = styled(H2)`
   text-align: center;
   padding-bottom: 0.5em;
+  color: ${colors.TEXT_BROWN};
 `;
 
 const StyledCenteredDropdown = styled.div`
@@ -27,6 +36,7 @@ const StyledCenteredDropdown = styled.div`
 `;
 
 export { 
+  StyledBackButtonContainer,
   StyledBackButton,
   StyledJudgingScheduleSection,
   StyledWelcomePerson,

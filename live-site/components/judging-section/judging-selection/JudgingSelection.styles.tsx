@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../../shared-ui/style/colors';
 import { H2 } from '../../../../shared-ui/style/typography';
 
 const StyledJudgingSelection = styled.div`
@@ -6,9 +7,10 @@ const StyledJudgingSelection = styled.div`
   justify-content: center;
 `;
 
-const StyledWhoAreYou = styled(H2)`
+const StyledJudgingWelcomeHeader = styled(H2)`
   text-align: center;
   padding-bottom: 2em;
+  color: ${colors.TEXT_BROWN};
 `;
 
 const StyledPersonTypeSelect = styled.div`
@@ -18,6 +20,6 @@ const StyledPersonTypeSelect = styled.div`
 
 export { 
   StyledJudgingSelection,
-  StyledWhoAreYou,
+  StyledJudgingWelcomeHeader,
   StyledPersonTypeSelect
 }
