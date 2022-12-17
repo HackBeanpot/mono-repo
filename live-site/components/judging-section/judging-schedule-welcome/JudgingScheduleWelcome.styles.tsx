@@ -9,9 +9,7 @@ const StyledBackButtonContainer = styled.div`
 `;
 
 const StyledBackButton = styled(PrimaryButton)`
-  padding-top: 7em;
-  padding-left: 2em;
-  height: 5em;
+  padding: 0.5em;
 `;
 
 const StyledJudgingScheduleSection = styled.div`
