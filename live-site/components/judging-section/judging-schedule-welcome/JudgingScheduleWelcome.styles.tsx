@@ -31,7 +31,7 @@ const StyledCenteredDropdown = styled.div`
   display: flex;
   justify-content: center;
   flex: none;
-  width: 25em%;
+  width: 25em;
   color: ${colors.WHITE};
   border-color: ${colors.BUTTON_GREEN}
 `;
