@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyledBackButtonContainer, StyledBackButton, StyledCenteredDropdown, StyledJudgingScheduleSection, StyledWelcomePerson } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
-import { StyledSecondaryDropdown } from '../../../../shared-ui/components/secondary-dropdown/SecondaryDropdown.styles';
+import { StyledBackButtonContainer, StyledBackButton, StyledCenteredDropdown, StyledPersonDropdown, StyledJudgingScheduleSection, StyledWelcomePerson } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
 import { JudgingScheduleWelcomeProps } from '../../../lib/types';
 
 const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({ schedulePersonType }) => {
+  const personDropdown = ['Select your name'];
+
   return (
     <div>
       <StyledBackButtonContainer> 
@@ -12,9 +13,8 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({ schedul
       <StyledJudgingScheduleSection>
         <StyledWelcomePerson> Welcome, {schedulePersonType}! </StyledWelcomePerson>
         <StyledCenteredDropdown>
-          <StyledSecondaryDropdown> 
-              <option value="select your name">Select your name</option>
-          </StyledSecondaryDropdown>
+          <StyledPersonDropdown options={personDropdown} > 
+          </StyledPersonDropdown>
         </StyledCenteredDropdown>
       </StyledJudgingScheduleSection>
     </div>

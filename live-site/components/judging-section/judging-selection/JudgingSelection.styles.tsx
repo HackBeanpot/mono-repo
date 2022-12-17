@@ -20,8 +20,10 @@ const StyledPersonTypeSelectSection = styled.div`
 `;
 
 const StyledPersonTypeSelectButton = styled(SecondaryButton)`
-  padding-left: 8em;
-  padding-right: 8em;
+  width: 100%;
+  overflow: auto;
+  color: ${colors.WHITE};
+  border-color: ${colors.BUTTON_GREEN};
 `;
 
 export { 
