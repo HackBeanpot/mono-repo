@@ -11,6 +11,7 @@ const StyledBackButtonContainer = styled.div`
 const StyledBackButton = styled(PrimaryButton)`
   padding: 0.5em;
   height: 0.5em;
+  width: 4em;
 `;
 
 const StyledJudgingScheduleSection = styled.div`
@@ -32,7 +33,6 @@ const StyledCenteredDropdown = styled.div`
   display: flex;
   justify-content: center;
   flex: none;
-  width: 25em;
   color: ${colors.WHITE};
   border-color: ${colors.BUTTON_GREEN}
 `;
