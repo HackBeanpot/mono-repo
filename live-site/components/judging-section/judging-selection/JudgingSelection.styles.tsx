@@ -20,7 +20,8 @@ const StyledPersonTypeSelectSection = styled.div`
 `;
 
 const StyledPersonTypeSelectButton = styled(SecondaryButton)`
-  width: 25%;
+  padding-left: 8em;
+  padding-right: 8em;
 `;
 
 export { 
