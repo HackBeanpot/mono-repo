@@ -3,23 +3,26 @@ import { colors } from "../../../../shared-ui/style/colors";
 import { H3, P } from "../../../../shared-ui/style/typography";
 
 const StyledEventItemContainer = styled.div`
-  padding-left: 2em;
-  padding-bottom: 4em;
-  padding-top: 1em;
+  margin: 1em;
+  border-radius: 2em;
+  height: 8em;
   display: flex;
   background-color: ${colors.WHITE}
- 
 `;
 
 const StyledEventItemHeader = styled(H3)`
-  padding-left: 2.4em;
-
+  padding-left: 2em;
+  padding-top: 1em;
 `;
+
+const StyledEventTimeTopicContainer = styled.div`
+  padding: 2em;
+  
+`
 
 const StyledEventItemTime = styled(P) `
 display: flex;
 color: ${colors.BLACK}
-
 `
 
 const StyledEventItemTopic = styled(P) `
@@ -34,7 +37,8 @@ export {
     StyledEventItemContainer,
     StyledEventItemHeader,
     StyledEventItemTime,
-    StyledEventItemTopic
+    StyledEventItemTopic,
+    StyledEventTimeTopicContainer
   
   };
   
