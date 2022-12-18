@@ -6,11 +6,16 @@ import { StyledToggle, ToggleContainer } from './ToggleMode.styles';
 interface ToggleModeProps {
   isDay: boolean;
   setIsDay: (isDay: boolean) => void;
+  location: string;
 }
 
-const ToggleMode: React.FC<ToggleModeProps> = ({ isDay, setIsDay }) => {
+const ToggleMode: React.FC<ToggleModeProps> = ({
+  isDay,
+  setIsDay,
+  location
+}) => {
   return (
-    <ToggleContainer>
+    <ToggleContainer location={location === 'main-site' ? 'right' : 'left'}>
       {isDay ? (
         <StyledToggle
           src={ToggleDay}

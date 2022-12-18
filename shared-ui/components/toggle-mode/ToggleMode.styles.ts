@@ -1,11 +1,13 @@
 import styled from 'styled-components';
-import { max } from '../../../shared-ui/lib/responsive';
+import { max } from '../../lib/responsive';
 
-const ToggleContainer = styled.div`
+const ToggleContainer = styled.div.attrs(
+  (props: { location: string }) => props
+)`
   @media ${max.tablet} {
     float: right;
   }
-  float: left;
+  float: ${(props): string => props.location};
 `;
 
 const StyledStar = styled.img`
