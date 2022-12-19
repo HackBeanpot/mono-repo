@@ -25,6 +25,10 @@ const StyledFilterWrapper = styled.div`
   height: 3em;
   position: relative;
 
+  border-color: ${colors.WHITE};
+  background-color: ${colors.BUTTON_DARK_GREEN};
+  color: ${colors.WHITE};
+
   @media ${min.mobile} {
     font-size: 1.2em;
   }
@@ -45,18 +49,11 @@ const StyledFilterWrapper = styled.div`
 `;
 
 const StyledFilterLabel = styled(P)`
-  border-color: ${colors.WHITE};
-  background-color: ${colors.BUTTON_DARK_GREEN};
-  color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   display: inline-block;
-  position: absolute;
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
-  border-color: ${colors.WHITE};
-  background-color: ${colors.BUTTON_DARK_GREEN};
-  color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   display: inline-block;
 `;
