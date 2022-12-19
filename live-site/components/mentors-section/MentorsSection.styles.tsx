@@ -4,12 +4,14 @@ import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
 
 const StyledMentorsSection= styled.div`
-  margin-top: 2.4em;
-  margin-left: 2.4em;
+  padding-top: 2.4em;
+  padding-left: 2.4em;
+  padding-bottom: 1em;
 
   @media ${max.tablet} {
-    margin-top: 0.8em;
-    margin-left: 0.8em;
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+    padding-bottom: 0.8em;
   }
 `;
 
@@ -18,9 +20,14 @@ const StyledMentorsFilterDropdown = styled.select`
   background-color: ${colors.BUTTON_DARK_GREEN};
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
-
+  margin-bottom: 1.5em;
+  
   @media ${min.tablet} {
-    margin-right: 0.8em;
+    margin-right: 1.5em;
+  }
+
+  @media ${max.tablet} {
+    margin-bottom: 1em;
   }
 `;
 
