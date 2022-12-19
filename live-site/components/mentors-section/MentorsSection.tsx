@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
-import { StyledMentorsHeader, StyledMentorsFilter } from './MentorsSection.styles';
+import { StyledMentorsSection, StyledMentorsHeader, StyledMentorsFilter } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
   const { data } = useAirtableApi('Mentors', 'mentors');
@@ -8,7 +8,7 @@ const MentorsSection: React.FC = () => {
   const companiesArr = Array.from(new Set(data.map(mentor => mentor.fields.company)));
 
   return (
-    <div>
+    <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
       <select id="position-filter">
         {positionsArr.map((currPosition: string) => (
@@ -33,7 +33,7 @@ const MentorsSection: React.FC = () => {
           <p>{currMentor.fields.position}</p>
         </>
       ))}
-    </div>
+    </StyledMentorsSection>
   );
 };
 
