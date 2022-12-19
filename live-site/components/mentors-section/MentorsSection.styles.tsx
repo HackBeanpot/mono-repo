@@ -23,7 +23,7 @@ const StyledMentorsFilterDropdown = styled.select`
   margin-bottom: 1.5em;
   border-radius: 0.3em;
   width: 25%; 
-  
+
   @media ${min.mobile} {
     font-size: 1.2em;
   }
@@ -34,6 +34,9 @@ const StyledMentorsFilterDropdown = styled.select`
   @media ${max.tablet} {
     margin-bottom: 1em;
     width: 75%;
+  }
+  @media ${min.desktop} {
+    display: inline-block;
   }
 `;
 
@@ -46,6 +49,9 @@ const StyledMentorsFilterRadio = styled.div`
   }
   @media ${min.tablet} {
     font-size: 1.25em;
+  }
+  @media ${min.desktop} {
+    display: inline-block;
   }
 `;
 
