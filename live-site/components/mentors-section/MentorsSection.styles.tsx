@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max } from '../../../shared-ui/lib/responsive';
+import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
 
@@ -15,8 +15,13 @@ const StyledMentorsSection= styled.div`
 
 const StyledMentorsFilterDropdown = styled.select`
   outline-color: ${colors.WHITE};
-  color: ${colors.BUTTON_GREEN};
+  background-color: ${colors.BUTTON_GREEN};
+  color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
+
+  @media ${min.tablet} {
+    margin-right: 0.8em;
+  }
 `;
 
 const StyledMentorsFilterRadio = styled.div`
