@@ -43,19 +43,15 @@ const StyledFilterWrapper = styled.div`
   @media ${max.mobile} {
     width: 75%;
   }
-  @media ${min.desktop} {
-    display: inline-block;
-  }
 `;
 
 const StyledFilterLabel = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
-  display: inline-block;
+  position: absolute;
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
   font-family: ${fonts.nunitoSansSemibold};
-  display: inline-block;
 `;
 
 const StyledMentorsFilterRadio = styled.div`
