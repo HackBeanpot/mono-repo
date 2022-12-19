@@ -23,6 +23,7 @@ const StyledFilterWrapper = styled.div`
   border-radius: 0.3em;
   width: 25%; 
   height: 3em;
+  position: relative;
 
   @media ${min.mobile} {
     font-size: 1.2em;
@@ -48,7 +49,8 @@ const StyledFilterLabel = styled(P)`
   background-color: ${colors.BUTTON_DARK_GREEN};
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
-
+  display: inline-block;
+  position: absolute;
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
@@ -56,6 +58,7 @@ const StyledMentorsFilterDropdown = styled.select`
   background-color: ${colors.BUTTON_DARK_GREEN};
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
+  display: inline-block;
 `;
 
 const StyledMentorsFilterRadio = styled.div`
