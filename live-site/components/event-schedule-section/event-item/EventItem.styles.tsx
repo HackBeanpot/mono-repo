@@ -9,6 +9,19 @@ const StyledEventItemContainer = styled.div`
   display: flex;
   background-color: ${colors.WHITE};
 `;
+
+
+const StyledEventItemNameLocationContainer = styled.div`
+  display: block;
+`;
+
+
+const StyledPinpointLocationContainer = styled.div`
+  display: flex;
+
+`;
+
+
 const StyledEventTimeTopicContainer = styled.div`
   padding: 2em;
 `;
@@ -41,6 +54,14 @@ const StyledPinpoint = styled.img`
 
 `;
 
+const StyledArrow = styled.img`
+  padding-left: 45em;
+  padding-top: 3em;
+  height: 20%;
+
+
+`;
+
 export {
   StyledEventItemContainer,
   StyledEventItemHeader,
@@ -48,5 +69,8 @@ export {
   StyledEventItemTopic,
   StyledEventTimeTopicContainer,
   StyledPinpoint,
-  StyledEventitemLocation
+  StyledEventitemLocation,
+  StyledEventItemNameLocationContainer,
+  StyledPinpointLocationContainer,
+  StyledArrow
 };

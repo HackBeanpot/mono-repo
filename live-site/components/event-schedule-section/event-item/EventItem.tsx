@@ -1,5 +1,8 @@
 import React from 'react';
-import Pinpoint from '../../../lib/pinpoint.svg';
+import pinpoint from '../../../lib/pinpoint.svg';
+import arrow from '../../../lib/arrow.svg';
+
+
 
 import {
   StyledEventItemContainer,
@@ -9,6 +12,9 @@ import {
   StyledEventTimeTopicContainer,
   StyledPinpoint,
   StyledEventitemLocation,
+  StyledEventItemNameLocationContainer,
+  StyledPinpointLocationContainer,
+  StyledArrow
 } from './EventItem.styles';
 
 const EventItem: React.FC = () => {
@@ -18,15 +24,15 @@ const EventItem: React.FC = () => {
         <StyledEventItemTime>5:00 - 6:00 pm</StyledEventItemTime>
         <StyledEventItemTopic>launch event</StyledEventItemTopic>
       </StyledEventTimeTopicContainer>
-
-
-        
-      <StyledEventItemHeader>Opening Ceremony!!!!</StyledEventItemHeader>
-      <StyledPinpoint src={Pinpoint}/>
-      <StyledEventitemLocation>The Hub</StyledEventitemLocation>
-   
-      </StyledEventItemContainer>
-
+      <StyledEventItemNameLocationContainer>
+        <StyledEventItemHeader>Opening Ceremony!!!!</StyledEventItemHeader>
+        <StyledPinpointLocationContainer>
+          <StyledPinpoint src={pinpoint} />
+          <StyledEventitemLocation>The Hub</StyledEventitemLocation>
+        </StyledPinpointLocationContainer>
+      </StyledEventItemNameLocationContainer>
+      <StyledArrow src={arrow}/>
+    </StyledEventItemContainer>
   );
 };
 export default EventItem;
