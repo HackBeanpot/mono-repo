@@ -39,6 +39,13 @@ const StyledMentorsFilterDropdown = styled.select`
 const StyledMentorsFilterRadio = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
+
+  @media ${min.mobile} {
+    font-size: 1.2em;
+  }
+  @media ${min.tablet} {
+    font-size: 1.25em;
+  }
 `;
 
 export {
