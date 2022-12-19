@@ -14,8 +14,8 @@ const StyledMentorsSection= styled.div`
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
-  outline-color: ${colors.WHITE};
-  background-color: ${colors.BUTTON_GREEN};
+  border-color: ${colors.WHITE};
+  background-color: ${colors.BUTTON_DARK_GREEN};
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
 

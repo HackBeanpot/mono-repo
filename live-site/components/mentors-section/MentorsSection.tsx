@@ -1,9 +1,13 @@
 import React from 'react';
+import useMatchMedia from 'react-use-match-media';
+import { max } from '../../../shared-ui/lib/responsive';
 import { H3 } from '../../../shared-ui/style/typography';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
+  const isMobile = useMatchMedia(max.tablet);
+
   const { data } = useAirtableApi('Mentors', 'mentors');
   const positionsArr = Array.from(new Set(data.map(mentor => mentor.fields.position)));
   const companiesArr = Array.from(new Set(data.map(mentor => mentor.fields.company)));
@@ -16,6 +20,7 @@ const MentorsSection: React.FC = () => {
           <option value={currPosition}>{currPosition}</option>
         ))}
       </StyledMentorsFilterDropdown>
+      {isMobile && <br />}
       <StyledMentorsFilterDropdown id="company-filter">
         {companiesArr.map((currCompany: string) => (
           <option value={currCompany}>{currCompany}</option>
