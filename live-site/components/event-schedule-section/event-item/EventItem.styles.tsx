@@ -28,7 +28,7 @@ const StyledEventTimeTopicContainer = styled.div`
 
 const StyledEventItemHeader = styled(H3)`
   padding-left: 2em;
-  padding-top: 1em;
+  padding-top: 0.7em;
 `;
 
 const StyledEventitemLocation = styled(P)`

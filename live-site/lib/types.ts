@@ -28,6 +28,14 @@ export interface StyledTabTitleWrapperProps {
   isSelected: boolean
 }
 
+export interface StyledEventItemProps {
+  time: string;
+  eventType: string;
+  eventName: string;
+  eventLocation: string;
+
+}
+
 
 
 
