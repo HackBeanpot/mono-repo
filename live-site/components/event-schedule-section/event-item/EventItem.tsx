@@ -1,7 +1,7 @@
 import React from 'react';
 import pinpoint from '../../../lib/pinpoint.svg';
 import arrow from '../../../lib/arrow.svg';
-import StyledEventItemProps from '../../../lib/types.ts';
+import StyledEventItemProps from '../../../lib/types';
 
 
 import {
