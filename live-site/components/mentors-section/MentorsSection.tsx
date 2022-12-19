@@ -18,11 +18,14 @@ const MentorsSection: React.FC = () => {
   return (
     <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-      <StyledMentorsFilterDropdown id="position-filter">
-        {positionsArr.map((currPosition: string) => (
-          <option value={currPosition}>{currPosition}</option>
-        ))}
-      </StyledMentorsFilterDropdown>
+      <div>
+        <label> Position: </label>
+        <StyledMentorsFilterDropdown id="position-filter">
+          {positionsArr.map((currPosition: string) => (
+            <option value={currPosition}>{currPosition}</option>
+          ))}
+        </StyledMentorsFilterDropdown> 
+      </div>
       {isMobile && <br />}
       <div>
       <StyledMentorsFilterDropdown id="company-filter">
