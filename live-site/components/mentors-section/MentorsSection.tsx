@@ -1,7 +1,7 @@
 import React from 'react';
 import { H3 } from '../../../shared-ui/style/typography';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
-import { StyledMentorsSection, StyledMentorsFilter } from './MentorsSection.styles';
+import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
   const { data } = useAirtableApi('Mentors', 'mentors');
@@ -11,22 +11,22 @@ const MentorsSection: React.FC = () => {
   return (
     <StyledMentorsSection>
       <H3> Mentors </H3>
-      <select id="position-filter">
+      <StyledMentorsFilterDropdown id="position-filter">
         {positionsArr.map((currPosition: string) => (
           <option value={currPosition}>{currPosition}</option>
         ))}
-      </select>
-      <select id="company-filter">
+      </StyledMentorsFilterDropdown>
+      <StyledMentorsFilterDropdown id="company-filter">
         {companiesArr.map((currCompany: string) => (
           <option value={currCompany}>{currCompany}</option>
         ))}
-      </select>
-      <StyledMentorsFilter>
+      </StyledMentorsFilterDropdown>
+      <StyledMentorsFilterRadio>
         <input type="radio" id="onShiftMentors" name="mentors_filter" value="Mentors on shift now" />
         <label htmlFor="onShiftMentors">Mentors on shift now</label><br />
         <input type="radio" id="allMentors" name="mentors_filter" value="All mentors" />
         <label htmlFor="allMentors">All mentors</label><br />
-      </StyledMentorsFilter>
+      </StyledMentorsFilterRadio>
       {data.map((currMentor) => (
         <>
           <p>{currMentor.fields.company}</p>

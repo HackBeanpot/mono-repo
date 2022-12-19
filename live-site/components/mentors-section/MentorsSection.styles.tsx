@@ -13,12 +13,19 @@ const StyledMentorsSection= styled.div`
   }
 `;
 
-const StyledMentorsFilter= styled.div`
+const StyledMentorsFilterDropdown = styled.select`
+  outline-color: ${colors.WHITE};
+  color: ${colors.BUTTON_GREEN};
+  font-family: ${fonts.nunitoSansSemibold};
+`;
+
+const StyledMentorsFilterRadio = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
 `;
 
 export {
+  StyledMentorsFilterDropdown,
   StyledMentorsSection,
-  StyledMentorsFilter
+  StyledMentorsFilterRadio
 };
