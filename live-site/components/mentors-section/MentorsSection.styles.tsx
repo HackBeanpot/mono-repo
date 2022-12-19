@@ -52,9 +52,8 @@ const StyledMentorsFilterRadio = styled.div`
   }
   @media ${min.tablet} {
     font-size: 1.25em;
-  }
-  @media ${min.desktop} {
     display: inline-block;
+    margin-top: 0.5em;
   }
 `;
 
