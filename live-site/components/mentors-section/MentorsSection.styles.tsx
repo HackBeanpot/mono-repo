@@ -6,12 +6,12 @@ import { fonts } from '../../../shared-ui/style/typography';
 const StyledMentorsSection= styled.div`
   padding-top: 2.4em;
   padding-left: 2.4em;
-  padding-bottom: 1em;
+  margin-bottom: 2em;
 
   @media ${max.tablet} {
     padding-top: 0.8em;
     padding-left: 0.8em;
-    padding-bottom: 0.8em;
+    margin-bottom: 0.8em;
   }
 `;
 
@@ -22,7 +22,8 @@ const StyledMentorsFilterDropdown = styled.select`
   font-family: ${fonts.nunitoSansSemibold};
   margin-bottom: 1.5em;
   border-radius: 0.3em;
-
+  width: 25%; 
+  
   @media ${min.mobile} {
     font-size: 1.2em;
   }
@@ -32,7 +33,7 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tablet} {
     margin-bottom: 1em;
-    width: 100%;
+    width: 75%;
   }
 `;
 
