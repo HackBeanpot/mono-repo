@@ -21,13 +21,18 @@ const StyledMentorsFilterDropdown = styled.select`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   margin-bottom: 1.5em;
-  
+  border-radius: 0.3em;
+
+  @media ${min.mobile} {
+    font-size: 1.2em;
+  }
   @media ${min.tablet} {
+    font-size: 1.25em;
     margin-right: 1.5em;
   }
-
   @media ${max.tablet} {
     margin-bottom: 1em;
+    width: 100%;
   }
 `;
 
