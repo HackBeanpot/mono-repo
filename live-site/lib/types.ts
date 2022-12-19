@@ -18,3 +18,7 @@ export interface EventProps {
   eventInfo: UpcomingEvent;
 }
 
+export interface DesktopMultiEventsProps {
+  events: UpcomingEvent[];
+}
+
