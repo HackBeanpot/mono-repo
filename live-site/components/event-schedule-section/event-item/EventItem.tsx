@@ -1,7 +1,7 @@
 import React from 'react';
 import pinpoint from '../../../lib/pinpoint.svg';
 import arrow from '../../../lib/arrow.svg';
-import StyledEventItemProps from '../../../lib/types';
+import StyledEventItemProps from '../../../lib/types.ts';
 
 
 import {
@@ -17,22 +17,28 @@ import {
   StyledArrow
 } from './EventItem.styles';
 
-const EventItem:  React.FC<StyledEventItemProps> = () => {
+const EventItem:  React.FC<StyledEventItemProps> = (eventItem) => {
   return (
     <StyledEventItemContainer>
-      <StyledEventTimeTopicContainer>
-        <StyledEventItemTime>{}</StyledEventItemTime>
-        <StyledEventItemTopic>launch event</StyledEventItemTopic>
-      </StyledEventTimeTopicContainer>
+      {eventItem.map((item) => (
+        <>
+        <StyledEventTimeTopicContainer>
+            <StyledEventItemTime>{item.time}</StyledEventItemTime>
+        <StyledEventItemTopic>{item.eventType}</StyledEventItemTopic>
+        </StyledEventTimeTopicContainer>
       <StyledEventItemNameLocationContainer>
-        <StyledEventItemHeader>{}</StyledEventItemHeader>
+        <StyledEventItemHeader>{item.eventName}</StyledEventItemHeader>
         <StyledPinpointLocationContainer>
           <StyledPinpoint src={pinpoint} />
-          <StyledEventitemLocation>The Hub</StyledEventitemLocation>
+          <StyledEventitemLocation>{item.eventLocation}</StyledEventitemLocation>
         </StyledPinpointLocationContainer>
       </StyledEventItemNameLocationContainer>
       <StyledArrow src={arrow}/>
-    </StyledEventItemContainer>
+      </>
+        ))}
+ </StyledEventItemContainer>
+
+
   );
 };
 export default EventItem;
