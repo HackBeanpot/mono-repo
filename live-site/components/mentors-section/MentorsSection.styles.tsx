@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { fonts, H3 } from '../../../shared-ui/style/typography';
+import { fonts } from '../../../shared-ui/style/typography';
 
 const StyledMentorsSection= styled.div`
-  padding-left: 2.4em;
-`;
+  margin-top: 2.4em;
+  margin-left: 2.4em;
 
-const StyledMentorsHeader = styled(H3)`
   @media ${max.tablet} {
-    padding-left: 0.8em;
+    margin-top: 0.8em;
+    margin-left: 0.8em;
   }
 `;
 
@@ -20,6 +20,5 @@ const StyledMentorsFilter= styled.div`
 
 export {
   StyledMentorsSection,
-  StyledMentorsHeader,
   StyledMentorsFilter
 };

@@ -1,6 +1,7 @@
 import React from 'react';
+import { H3 } from '../../../shared-ui/style/typography';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
-import { StyledMentorsSection, StyledMentorsHeader, StyledMentorsFilter } from './MentorsSection.styles';
+import { StyledMentorsSection, StyledMentorsFilter } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
   const { data } = useAirtableApi('Mentors', 'mentors');
@@ -9,7 +10,7 @@ const MentorsSection: React.FC = () => {
 
   return (
     <StyledMentorsSection>
-      <StyledMentorsHeader> Mentors </StyledMentorsHeader>
+      <H3> Mentors </H3>
       <select id="position-filter">
         {positionsArr.map((currPosition: string) => (
           <option value={currPosition}>{currPosition}</option>
