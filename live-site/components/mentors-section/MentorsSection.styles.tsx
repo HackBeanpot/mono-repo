@@ -1,18 +1,21 @@
 import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
+import { H3 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
 
-const StyledMentorsSection= styled.div`
+const StyledMentorsSection = styled.div`
   padding-top: 2.4em;
   padding-left: 2.4em;
-  margin-bottom: 2em;
 
   @media ${max.tablet} {
     padding-top: 0.8em;
     padding-left: 0.8em;
-    margin-bottom: 0.8em;
   }
+`;
+
+const StyledMentorsHeader = styled(H3)`
+  padding-bottom: 1.5em;
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
@@ -53,12 +56,12 @@ const StyledMentorsFilterRadio = styled.div`
   @media ${min.tablet} {
     font-size: 1.25em;
     display: inline-block;
-    margin-top: 0.5em;
   }
 `;
 
 export {
-  StyledMentorsFilterDropdown,
   StyledMentorsSection,
+  StyledMentorsHeader,
+  StyledMentorsFilterDropdown,
   StyledMentorsFilterRadio
 };
