@@ -5,8 +5,8 @@ import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
 
 const StyledMentorsSection = styled.div`
-  padding-top: 6em;
-  padding-left: 6em;
+  padding-top: 5.5em;
+  padding-left: 5.5em;
 
   @media ${max.tablet} {
     padding-top: 2.4em;
