@@ -11,6 +11,10 @@ const MentorsSection: React.FC = () => {
   const positionsArr = Array.from(new Set(data.map(mentor => mentor.fields.position)));
   const companiesArr = Array.from(new Set(data.map(mentor => mentor.fields.company)));
 
+  // const handlePositionFilterChange(x) {
+  //   x.options[x.selectedIndex].innerHTML = 'Position: ' + x.value
+  // };
+
   return (
     <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>

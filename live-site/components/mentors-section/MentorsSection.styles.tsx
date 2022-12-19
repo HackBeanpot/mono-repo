@@ -5,17 +5,17 @@ import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
 
 const StyledMentorsSection = styled.div`
-  padding-top: 2.4em;
-  padding-left: 2.4em;
+  padding-top: 3.5em;
+  padding-left: 3.5em;
 
   @media ${max.tablet} {
-    padding-top: 0.8em;
-    padding-left: 0.8em;
+    padding-top: 2.4em;
+    padding-left: 2.4em;
   }
 `;
 
 const StyledMentorsHeader = styled(H3)`
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
@@ -56,6 +56,7 @@ const StyledMentorsFilterRadio = styled.div`
   @media ${min.tablet} {
     font-size: 1.25em;
     display: inline-block;
+    padding-top: 0.25em;
   }
 `;
 
