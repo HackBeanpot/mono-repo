@@ -28,3 +28,6 @@ export interface StyledTabTitleWrapperProps {
   isSelected: boolean
 }
 
+
+
+

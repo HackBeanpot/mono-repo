@@ -8,7 +8,8 @@ import {
   StyledTabTitle,
   StyledTabContent,
   StyledTabContentContainer,
-  StyledEventScheduleTabContainer
+  StyledEventScheduleTabContainer,
+  
 } from './EventScheduleTab.styles';
 
 const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
@@ -39,7 +40,6 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
         <EventItem/>
         <EventItem/>
         <EventItem/>
-
       </StyledTabContentContainer>
     </StyledEventScheduleTabContainer>
   );
