@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
-import { H3 } from '../../../shared-ui/style/typography';
+import { H3, P } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
 
@@ -18,11 +18,7 @@ const StyledMentorsHeader = styled(H3)`
   padding-bottom: 1em;
 `;
 
-const StyledMentorsFilterDropdown = styled.select`
-  border-color: ${colors.WHITE};
-  background-color: ${colors.BUTTON_DARK_GREEN};
-  color: ${colors.WHITE};
-  font-family: ${fonts.nunitoSansSemibold};
+const StyledFilterWrapper = styled.div`
   margin-bottom: 1.5em;
   border-radius: 0.3em;
   width: 25%; 
@@ -47,6 +43,21 @@ const StyledMentorsFilterDropdown = styled.select`
   }
 `;
 
+const StyledFilterLabel = styled(P)`
+  border-color: ${colors.WHITE};
+  background-color: ${colors.BUTTON_DARK_GREEN};
+  color: ${colors.WHITE};
+  font-family: ${fonts.nunitoSansSemibold};
+
+`;
+
+const StyledMentorsFilterDropdown = styled.select`
+  border-color: ${colors.WHITE};
+  background-color: ${colors.BUTTON_DARK_GREEN};
+  color: ${colors.WHITE};
+  font-family: ${fonts.nunitoSansSemibold};
+`;
+
 const StyledMentorsFilterRadio = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
@@ -63,6 +74,8 @@ const StyledMentorsFilterRadio = styled.div`
 export {
   StyledMentorsSection,
   StyledMentorsHeader,
+  StyledFilterWrapper,
+  StyledFilterLabel,
   StyledMentorsFilterDropdown,
   StyledMentorsFilterRadio
 };

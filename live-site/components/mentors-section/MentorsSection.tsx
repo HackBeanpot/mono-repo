@@ -2,7 +2,7 @@ import React from 'react';
 import useMatchMedia from 'react-use-match-media';
 import { max } from '../../../shared-ui/lib/responsive';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
-import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader } from './MentorsSection.styles';
+import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader, StyledFilterLabel, StyledFilterWrapper } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tablet);
@@ -11,21 +11,17 @@ const MentorsSection: React.FC = () => {
   const positionsArr = Array.from(new Set(data.map(mentor => mentor.fields.position)));
   const companiesArr = Array.from(new Set(data.map(mentor => mentor.fields.company)));
 
-  // const handlePositionFilterChange(x) {
-  //   x.options[x.selectedIndex].innerHTML = 'Position: ' + x.value
-  // };
-
   return (
     <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-      <div>
-        <label> Position: </label>
+      <StyledFilterWrapper>
+        <StyledFilterLabel> Position: </StyledFilterLabel>
         <StyledMentorsFilterDropdown id="position-filter">
           {positionsArr.map((currPosition: string) => (
             <option value={currPosition}>{currPosition}</option>
           ))}
         </StyledMentorsFilterDropdown> 
-      </div>
+      </StyledFilterWrapper>
       {isMobile && <br />}
       <div>
       <StyledMentorsFilterDropdown id="company-filter">
