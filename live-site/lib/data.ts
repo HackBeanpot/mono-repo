@@ -1,4 +1,4 @@
-import { TabInfo, StyledEventItemProps } from './types';
+import { TabInfo, EventItemProps } from './types';
 
 
 const liveSiteTabInfo: TabInfo[] = [
@@ -15,7 +15,7 @@ interface TimeLeft {
 }
 
 
-const eventItemInfo: StyledEventItemProps[] = [
+const eventItemInfo: EventItemProps[] = [
   { time: '5:00 - 6:00 pm',
     eventType: 'launch event',
     eventName: 'Opening Ceremony',
