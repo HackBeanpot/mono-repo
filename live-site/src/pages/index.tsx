@@ -5,7 +5,6 @@ import '../../../shared-ui/style/globals.css';
 import HackingRemaining from '../../components/hacking-remaning/HackingRemaining';
 import { liveSiteTabInfo } from '../../lib/data';
 import { min } from '../../../shared-ui/lib/responsive';
-import Background from '../../../shared-ui/components/backgrounds/Backgrounds';
 import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/MeetTheTeamSection';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ResourcesSection from '../../components/resources-section/ResourcesSection';
@@ -40,7 +39,6 @@ const IndexPage: React.FC = () => {
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
-      <Background isDay={true} />
       <ComingUpSection />
       <EventScheduleSection />
       <ResourcesSection />
