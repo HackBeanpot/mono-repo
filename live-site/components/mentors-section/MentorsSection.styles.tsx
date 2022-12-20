@@ -20,7 +20,7 @@ const StyledMentorsHeader = styled(H3)`
 
 const StyledFiltersContainer = styled.div`
   display: inline-block;
-  width: 40%;
+  width: 60%;
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
@@ -31,7 +31,7 @@ const StyledMentorsFilterDropdown = styled.select`
   margin-bottom: 1.5em;
   border-radius: 0.3em;
   height: 3em;
-  width: 75%;
+  width: 55%;
 
   @media ${min.mobile} {
     font-size: 1.2em;
@@ -42,6 +42,10 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tablet} {
     margin-bottom: 1em;
+    width: 60%;
+  }
+  @media ${max.mobile} {
+    width: 75%;
   }
 `;
 
