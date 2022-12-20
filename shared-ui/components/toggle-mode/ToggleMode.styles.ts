@@ -32,14 +32,13 @@ const StyledToggle = styled.img`
   float: right;
   padding-top: 5.5em;
   padding-right: 0.5em;
+  padding-left: 0.5em;
   cursor: pointer;
   @media ${max.mobile} {
     padding-top: 19em;
-    width: 15%;
   }
   @media ${max.tablet} {
     padding-top: 5.5em;
-    width: 20%;
   }
 `;
 
