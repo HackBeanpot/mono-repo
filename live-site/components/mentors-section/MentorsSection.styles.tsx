@@ -64,6 +64,7 @@ const StyledMentorsFilterRadio = styled.div`
   @media ${min.tablet} {
     font-size: 1.25em;
     display: inline-block;
+    padding-top: 0.3em;
   }
 `;
 
