@@ -1,4 +1,4 @@
-import { EventMockData } from "../components/event-schedule-section/EventScheduleMockData";
+import { EventMockData } from '../components/event-schedule-section/EventScheduleMockData';
 
 export interface TabInfo {
   name: string;
@@ -21,10 +21,9 @@ export interface EventProps {
 }
 
 export interface EventScheduleTabProps {
-  tabs: EventMockData[]
+  tabs: EventMockData[];
 }
 
 export interface StyledTabTitleWrapperProps {
-  isSelected: boolean
+  isSelected: boolean;
 }
-
