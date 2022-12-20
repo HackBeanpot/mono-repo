@@ -10,12 +10,14 @@ const StyledSectionContainer = styled.div`
 const StyledTextContainer = styled.div`
   margin: 2em;
   @media ${max.tablet} {
-    width: 14em;
-    height: 14.5em;
+    margin: 1.5em;
+    width: 12em;
+    height: 12.5em;
   }
   @media ${max.tabletSm} {
-    // width: 129%;
-    height: 14.5em;
+    margin: 0.9em;
+    width: 8.5em;
+    height: 10em;
   }
 `;
 
@@ -25,17 +27,21 @@ const StyledEvent = styled.div`
   height: 14em;
   border-radius: 1.5em;
   margin: 1.3em;
+  justify-content: center;
   @media ${max.tabletLg} {
     height: 17em;
   }
   @media ${max.tablet} {
+    margin: 0.7em;
+    width: 14em;
     height: 14em;
   }
   @media ${max.tabletSm} {
-    height: 14em;
+    border-radius: 1em;
+    margin: 0.5em;
+    width: 9.8em;
+    height: 11em;
   }
- 
-  
 `;
 
 const StyledEvents = styled.div`
@@ -43,17 +49,28 @@ const StyledEvents = styled.div`
   justify-content: center;
   @media ${max.tablet} {
     overflow-x: scroll;
-    padding-left: 38em;
+    padding-left: 25em;
   }
   @media ${max.tabletSm} {
-    
+    padding-left: 20em;
   }
+`;
+
+const StyledOneEventContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const StyledHeader = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.5em;
+  @media ${max.tablet} {
+    font-size: 1.3em;
+  }
+  @media ${max.tabletSm} {
+    font-size: 0.95em;
+  }
 `;
 
 const StyledSectionHeader = styled(H3)`
@@ -74,6 +91,12 @@ const StyledTime = styled.div`
   font-size: 1em;
   font-family: ${fonts.nunitoSansRegular};
   color: ${colors.BUTTON_GREEN};
+  @media ${max.tablet} {
+    font-size: 0.9em;
+  }
+  @media ${max.tabletSm} {
+    font-size: 0.75em;
+  }
 `;
 
 const StyledBody = styled.div`
@@ -81,6 +104,12 @@ const StyledBody = styled.div`
   line-height: 1.3em;
   color: WHITE;
   font-family: ${fonts.nunitoSansRegular};
+  @media ${max.tablet} {
+    font-size: 0.9em;
+  }
+  @media ${max.tabletSm} {
+    font-size: 0.75em;
+  }
 `;
 
 export {
@@ -91,5 +120,6 @@ export {
   StyledSectionContainer,
   StyledEvents,
   StyledTextContainer,
-  StyledSectionHeader
+  StyledSectionHeader, 
+  StyledOneEventContainer
 };

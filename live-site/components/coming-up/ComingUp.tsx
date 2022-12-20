@@ -9,7 +9,8 @@ import {
   StyledSectionContainer,
   StyledTextContainer,
   StyledSectionHeader,
-  StyledEvents
+  StyledEvents,
+  StyledOneEventContainer
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
@@ -21,26 +22,31 @@ const ComingUpSection: React.FC = () => {
     time: 'Complete by 12:00am EST',
     body: 'hello hello hello hello hello hello hello hello hi hi hello hello hello hi hi'
   };
-  const events: UpcomingEvent[] = [event, event, event];
+  const events: UpcomingEvent[] = [];
   const isDesktop = useMatchMedia(min.tablet);
   if (events.length === 0) {
     return <NoUpcoming />;
   }
   if (events.length === 1 && !isDesktop) {
     return (
-      <StyledEvent key={event.id}>
-        <StyledTextContainer>
-          <StyledHeader>{event.header}</StyledHeader>
-          <StyledTime>{event.time}</StyledTime>
-          <StyledBody>{event.body}</StyledBody>
-        </StyledTextContainer>
-      </StyledEvent>
+      <StyledSectionContainer>
+        <StyledSectionHeader>Coming up...</StyledSectionHeader>
+        <StyledOneEventContainer>
+          <StyledEvent key={event.id}>
+            <StyledTextContainer>
+              <StyledHeader>{event.header}</StyledHeader>
+              <StyledTime>{event.time}</StyledTime>
+              <StyledBody>{event.body}</StyledBody>
+            </StyledTextContainer>
+          </StyledEvent>
+        </StyledOneEventContainer>
+      </StyledSectionContainer>
     );
   } else {
     return (
       <StyledSectionContainer>
         <StyledSectionHeader>Coming up...</StyledSectionHeader>
-        <StyledEvents> 
+        <StyledEvents>
           {events.map((event: UpcomingEvent) => (
             <StyledEvent key={event.id}>
               <StyledTextContainer>
