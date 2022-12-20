@@ -19,8 +19,11 @@ const StyledMentorsHeader = styled(H3)`
 `;
 
 const StyledFiltersContainer = styled.div`
-  display: inline-block;
   width: 60%;
+
+  @media ${min.tablet} {
+    display: inline-block;
+  }
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
