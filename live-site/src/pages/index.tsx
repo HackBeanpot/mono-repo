@@ -46,7 +46,7 @@ const IndexPage: React.FC = () => {
       <ResourcesSection />
       <MeetTheTeamSection />
       <MentorsSection />
-      <Footer tabs={liveSiteTabInfo} isDay />
+      <Footer tabs={liveSiteTabInfo} isDay={true} />
     </StyledPageContainer>
   );
 };

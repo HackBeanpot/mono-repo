@@ -4,7 +4,7 @@ import { useAirtableApi } from '../../src/hooks/useAirtable';
 const MentorsSection: React.FC = () => {
   const { data } = useAirtableApi('Mentors', 'mentors');
   return (
-    <div>
+    <div id="mentors">
       <h1> Mentors section</h1>
       {data.map((currMentor) => (
         <>
