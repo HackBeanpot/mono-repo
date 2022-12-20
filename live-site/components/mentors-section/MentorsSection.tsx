@@ -2,7 +2,7 @@ import React from 'react';
 import useMatchMedia from 'react-use-match-media';
 import { max } from '../../../shared-ui/lib/responsive';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
-import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader, StyledFilterLabel, StyledFilterWrapper } from './MentorsSection.styles';
+import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tablet);
@@ -14,14 +14,11 @@ const MentorsSection: React.FC = () => {
   return (
     <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-      <StyledFilterWrapper>
-        <StyledFilterLabel> Position: </StyledFilterLabel>
-        <StyledMentorsFilterDropdown id="position-filter">
-          {positionsArr.map((currPosition: string) => (
-            <option value={currPosition}>{currPosition}</option>
-          ))}
-        </StyledMentorsFilterDropdown> 
-      </StyledFilterWrapper>
+      <StyledMentorsFilterDropdown id="position-filter">
+        {positionsArr.map((currPosition: string) => (
+          <option value={currPosition}>{currPosition}</option>
+        ))}
+      </StyledMentorsFilterDropdown>
       {isMobile && <br />}
       <div>
       <StyledMentorsFilterDropdown id="company-filter">
