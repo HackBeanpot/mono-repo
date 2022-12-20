@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H3, P } from '../../../../shared-ui/style/typography';
 
@@ -23,6 +24,12 @@ const StyledEventItemArrowContainer = styled.div`
 
 const StyledEventItemNameLocationContainer = styled.div`
   display: block;
+  @media ${max.tablet} {
+    padding-top: 1.6em;
+  } ;
+
+ 
+
 `;
 
 const StyledPinpointLocationContainer = styled.div`
@@ -36,32 +43,84 @@ const StyledEventTimeTopicContainer = styled.div`
 const StyledEventItemHeader = styled(H3)`
   padding-left: 2em;
   padding-top: 0.7em;
+
+  @media ${max.tablet} {
+    font-size: 1.5em;
+    padding: 0;
+  } ;
+
+
+
+  @media ${max.mobile} {
+    font-size: 1em;
+  } ;
+
 `;
 
 const StyledEventitemLocation = styled(P)`
   color: ${colors.HEADER_FOOTER_BLUE};
   padding-left: 0.7em;
+
+  @media ${max.tablet} {
+    font-size: 1em;
+  } ;
+
+  @media ${max.tabletSm} {
+    padding-left: 0;
+  } ;
+
+  @media ${max.mobile} {
+    font-size: 0.7em;
+  } ;
 `;
 
 const StyledEventItemTime = styled(P)`
   display: flex;
   color: ${colors.BLACK};
+
+  @media ${max.mobile} {
+    font-size: 0.7em;
+  } ;
 `;
 
 const StyledEventItemTopic = styled(P)`
   display: flex;
   color: ${colors.CAMEL_ORANGE};
+
+  @media ${max.mobile} {
+    font-size: 0.7em;
+  } ;
 `;
 
 const StyledPinpoint = styled.img`
   padding-left: 4.5em;
   height: 20%;
+
+  @media ${max.tablet} {
+    padding: 0;
+  } ;
+
+  @media ${max.mobile} {
+    height: 1em;
+  } ;
 `;
 
 const StyledArrow = styled.img`
   padding-top: 3em;
   padding-right: 3em;
   float: right;
+
+
+   @media ${max.tablet} {
+    padding-top: 3em;
+    padding-right: 0.7em;
+  } ;
+
+  @media ${max.tabletSm} {
+    display: none;
+  } ;
+
+ 
 `;
 
 export {
