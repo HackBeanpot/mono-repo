@@ -29,7 +29,7 @@ const StyledMentorsFilterDropdown = styled.select`
   font-family: ${fonts.nunitoSansSemibold};
   margin-bottom: 1.5em;
   border-radius: 0.3em;
-  width: 25%; 
+  height: 2em;
 
   @media ${min.mobile} {
     font-size: 1.2em;
