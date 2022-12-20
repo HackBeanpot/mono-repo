@@ -18,14 +18,6 @@ const StyledMentorsHeader = styled(H3)`
   padding-bottom: 1em;
 `;
 
-const StyledFiltersContainer = styled.div`
-  width: 60%;
-
-  @media ${min.tablet} {
-    display: inline-block;
-  }
-`;
-
 const StyledMentorsFilterDropdown = styled.select`
   border-color: ${colors.WHITE};
   background-color: ${colors.BUTTON_DARK_GREEN};
@@ -45,7 +37,7 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tablet} {
     margin-bottom: 1em;
-    width: 60%;
+    width: 50%;
   }
   @media ${max.mobile} {
     width: 75%;
@@ -62,14 +54,13 @@ const StyledMentorsFilterRadio = styled.div`
   @media ${min.tablet} {
     font-size: 1.25em;
     display: inline-block;
-    padding-top: 0.3em;
+    padding-top: 1em;
   }
 `;
 
 export {
   StyledMentorsSection,
   StyledMentorsHeader,
-  StyledFiltersContainer,
   StyledMentorsFilterDropdown,
   StyledMentorsFilterRadio
 };

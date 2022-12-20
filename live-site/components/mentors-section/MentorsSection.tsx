@@ -2,7 +2,7 @@ import React from 'react';
 import useMatchMedia from 'react-use-match-media';
 import { max } from '../../../shared-ui/lib/responsive';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
-import { StyledMentorsSection, StyledFiltersContainer, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader } from './MentorsSection.styles';
+import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tabletLg);
@@ -15,19 +15,17 @@ const MentorsSection: React.FC = () => {
     <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
       <div>
-        <StyledFiltersContainer>
-          <StyledMentorsFilterDropdown id="position-filter">
-            {positionsArr.map((currPosition: string) => (
-              <option value={currPosition}>{currPosition}</option>
-            ))}
-          </StyledMentorsFilterDropdown>
-          {isMobile && <br />}
-          <StyledMentorsFilterDropdown id="company-filter">
-            {companiesArr.map((currCompany: string) => (
-              <option value={currCompany}>{currCompany}</option>
-            ))}
-          </StyledMentorsFilterDropdown>
-        </StyledFiltersContainer>
+        <StyledMentorsFilterDropdown id="position-filter">
+          {positionsArr.map((currPosition: string) => (
+            <option value={currPosition}>{currPosition}</option>
+          ))}
+        </StyledMentorsFilterDropdown>
+        {isMobile && <br />}
+        <StyledMentorsFilterDropdown id="company-filter">
+          {companiesArr.map((currCompany: string) => (
+            <option value={currCompany}>{currCompany}</option>
+          ))}
+        </StyledMentorsFilterDropdown>
         <StyledMentorsFilterRadio>
           <input type="radio" id="onShiftMentors" name="mentors_filter" value="Mentors on shift now" />
           <label htmlFor="onShiftMentors">Mentors on shift now</label><br />
