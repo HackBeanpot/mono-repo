@@ -29,7 +29,8 @@ const StyledMentorsFilterDropdown = styled.select`
   font-family: ${fonts.nunitoSansSemibold};
   margin-bottom: 1.5em;
   border-radius: 0.3em;
-  height: 2em;
+  height: 4em;
+  width: 8em;
 
   @media ${min.mobile} {
     font-size: 1.2em;
@@ -40,10 +41,6 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tablet} {
     margin-bottom: 1em;
-    width: 50%;
-  }
-  @media ${max.mobile} {
-    width: 75%;
   }
 `;
 
