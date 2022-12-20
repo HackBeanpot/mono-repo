@@ -18,6 +18,10 @@ const StyledMentorsHeader = styled(H3)`
   padding-bottom: 1em;
 `;
 
+const StyledFiltersContainer = styled.div`
+  display: inline-block;
+`;
+
 const StyledMentorsFilterDropdown = styled.select`
   border-color: ${colors.WHITE};
   background-color: ${colors.BUTTON_DARK_GREEN};
@@ -26,7 +30,6 @@ const StyledMentorsFilterDropdown = styled.select`
   margin-bottom: 1.5em;
   border-radius: 0.3em;
   width: 25%; 
-  display: inline-block;
 
   @media ${min.mobile} {
     font-size: 1.2em;
@@ -61,6 +64,7 @@ const StyledMentorsFilterRadio = styled.div`
 export {
   StyledMentorsSection,
   StyledMentorsHeader,
+  StyledFiltersContainer,
   StyledMentorsFilterDropdown,
   StyledMentorsFilterRadio
 };
