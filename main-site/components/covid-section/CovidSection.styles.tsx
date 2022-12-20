@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { P } from '../../../shared-ui/style/typography';
 import { min } from '../../../shared-ui/lib/responsive';
 import { H2 } from '../../../shared-ui/style/typography';
+import { motion } from 'framer-motion';
 
 const StyledCovidSectionContainer = styled.div`
   display: flex;
@@ -61,10 +62,32 @@ const StyledTitle = styled(H2)`
   }
 `;
 
+const StyledExhaustLg = styled(motion.img)`
+  padding: 1em;
+  scale:1.5;
+`;
+const StyledExhaustSm = styled(motion.img)`
+  padding: 2em;
+  scale:2;
+`;
+const StyledExhaustSm2 = styled(motion.img)`
+  padding: 1em;
+  scale:2;
+`;
+const ExhaustContainer = styled(motion.div)`
+  margin-left: -8em;
+  margin-top: 4em;
+  margin-bottom: 0em;
+`;
+
 export {
   StyledCovidSectionContainer,
   StyledDesertVan,
   StyledCovidTitleAndInformation,
   StyledCovidSectionInformation,
-  StyledTitle
+  StyledTitle,
+  StyledExhaustLg,
+  StyledExhaustSm,
+  StyledExhaustSm2,
+  ExhaustContainer
 };
