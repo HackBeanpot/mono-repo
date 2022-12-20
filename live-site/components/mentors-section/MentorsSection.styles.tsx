@@ -20,7 +20,7 @@ const StyledMentorsHeader = styled(H3)`
 
 const StyledFiltersContainer = styled.div`
   display: inline-block;
-  width: 60%;
+  width: 40%;
 `;
 
 const StyledMentorsFilterDropdown = styled.select`
