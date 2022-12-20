@@ -10,7 +10,6 @@ import {
   StyledTabContent,
   StyledTabContentContainer,
   StyledEventScheduleTabContainer,
-  
 } from './EventScheduleTab.styles';
 
 const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
