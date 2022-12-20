@@ -2,8 +2,6 @@ import React from 'react';
 import pinpoint from '../../../lib/pinpoint.svg';
 import arrow from '../../../lib/arrow.svg';
 
-
-
 import {
   StyledEventItemContainer,
   StyledEventItemHeader,
@@ -15,30 +13,50 @@ import {
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,
-  StyledEventItemArrowContainer
+  StyledEventItemArrowContainer,
+  StyledEventItemLeftSideContainer
 } from './EventItem.styles';
 import { EventItemProps } from '../../../lib/types';
 
-const EventItem:  React.FC<EventItemProps> = (eventItem) => {
+const EventItem: React.FC<EventItemProps> = (eventItem) => {
   console.log(eventItem);
   return (
     <StyledEventItemContainer>
+
+
+      <StyledEventItemLeftSideContainer>
+
         <StyledEventTimeTopicContainer>
-            <StyledEventItemTime>{eventItem.eventItem.time}</StyledEventItemTime>
-        <StyledEventItemTopic>{eventItem.eventItem.eventType}</StyledEventItemTopic>
+          <StyledEventItemTime>{eventItem.eventItem.time}</StyledEventItemTime>
+          <StyledEventItemTopic>
+            {eventItem.eventItem.eventType}
+          </StyledEventItemTopic>
         </StyledEventTimeTopicContainer>
-      <StyledEventItemNameLocationContainer>
-        <StyledEventItemHeader>{eventItem.eventItem.eventName}</StyledEventItemHeader>
-        <StyledPinpointLocationContainer>
-          <StyledPinpoint src={pinpoint} />
-          <StyledEventitemLocation>{eventItem.eventItem.eventLocation}</StyledEventitemLocation>
-        </StyledPinpointLocationContainer>
-      </StyledEventItemNameLocationContainer>
+
+
+        <StyledEventItemNameLocationContainer>
+          <StyledEventItemHeader>
+            {eventItem.eventItem.eventName}
+          </StyledEventItemHeader>
+          <StyledPinpointLocationContainer>
+            <StyledPinpoint src={pinpoint} />
+            <StyledEventitemLocation>
+              {eventItem.eventItem.eventLocation}
+            </StyledEventitemLocation>
+          </StyledPinpointLocationContainer>
+        </StyledEventItemNameLocationContainer>
+
+        
+      </StyledEventItemLeftSideContainer>
+
+
+
 
       <StyledEventItemArrowContainer>
-      <StyledArrow src={arrow}/>
+        <StyledArrow src={arrow} />
       </StyledEventItemArrowContainer>
- </StyledEventItemContainer>
+
+    </StyledEventItemContainer>
   );
 };
 export default EventItem;

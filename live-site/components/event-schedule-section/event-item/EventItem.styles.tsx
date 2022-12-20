@@ -6,12 +6,19 @@ const StyledEventItemContainer = styled.div`
   margin: 1em;
   border-radius: 2em;
   height: 8em;
-  display: flex;
   background-color: ${colors.WHITE};
+`;
+
+const StyledEventItemLeftSideContainer = styled.div`
+  display: flex;
+  float: left;
+
 `;
 
 const StyledEventItemArrowContainer = styled.div`
   text-align: right;
+  display: block;
+  padding-top: -30px;
 `;
 
 const StyledEventItemNameLocationContainer = styled.div`
@@ -53,7 +60,8 @@ const StyledPinpoint = styled.img`
 
 const StyledArrow = styled.img`
   padding-top: 3em;
-  height: 20%;
+  padding-right: 3em;
+  float: right;
 `;
 
 export {
@@ -67,5 +75,6 @@ export {
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,
-  StyledEventItemArrowContainer
+  StyledEventItemArrowContainer,
+  StyledEventItemLeftSideContainer
 };
