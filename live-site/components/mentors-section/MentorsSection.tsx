@@ -16,13 +16,13 @@ const MentorsSection: React.FC = () => {
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
       <StyledMentorsFilterDropdown id="position-filter">
         {positionsArr.map((currPosition: string) => (
-          <option value={currPosition}>Position: {currPosition}</option>
+          <option value={currPosition}>Position:          {currPosition}</option>
         ))}
       </StyledMentorsFilterDropdown>
       {isMobile && <br />}
       <StyledMentorsFilterDropdown id="company-filter">
         {companiesArr.map((currCompany: string) => (
-          <option value={currCompany}>Company: {currCompany}</option>
+          <option value={currCompany}>Company:          {currCompany}</option>
         ))}
       </StyledMentorsFilterDropdown>
       <StyledMentorsFilterRadio>

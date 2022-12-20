@@ -29,11 +29,14 @@ const StyledMentorsFilterDropdown = styled.select`
   height: 3em;
 
   @media ${min.mobile} {
-    font-size: 1.2em;
+    font-size: 0.4em;
   }
   @media ${min.tablet} {
-    font-size: 1.25em;
+    font-size: 0.8em;
     margin-right: 1.5em;
+  }
+  @media ${min.desktop} {
+    font-size: 1.25em;
   }
   @media ${max.tablet} {
     margin-bottom: 1em;
