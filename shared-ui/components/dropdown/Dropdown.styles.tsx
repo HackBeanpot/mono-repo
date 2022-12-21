@@ -15,7 +15,7 @@ const StyledDropdown = styled.select`
 
   -webkit-appearance: none;
   appearance: none;
-  background-image: url("/GoogleDropdown.png");
+  background-image: url("./GoogleDropdown.png");
   background-repeat: no-repeat;
   background-position: calc(100% - 0.5em) center;
   background-size: 1.5em;
