@@ -33,13 +33,11 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${min.tablet} {
     font-size: 1.25em;
+    margin-right: 1.5em;
   }
   @media ${max.tablet} {
     margin-bottom: 1em;
-    width: 50%;
-  }
-  @media ${max.mobile} {
-    width: 85%;
+    width: 100%;
   }
   @media ${min.desktop} {
     display: inline-block;
