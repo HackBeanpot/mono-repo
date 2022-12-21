@@ -28,8 +28,9 @@ const StyledMentorsFilterDropdown = styled.select`
   width: 25%; 
   height: 3em;
   padding-left: 0.5em;
-  border-right: 0.5em;
-
+  -webkit-appearance: none;
+  appearance: none;
+  
   @media ${min.mobile} {
     font-size: 1.2em;
   }
