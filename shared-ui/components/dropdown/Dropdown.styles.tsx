@@ -20,7 +20,6 @@ const StyledDropdown = styled.select`
     font-size: 1.25em;
   }
   @media ${max.tabletLg} {
-    margin-bottom: 1em;
     width: 55%;
   }
   @media ${max.tablet} {
