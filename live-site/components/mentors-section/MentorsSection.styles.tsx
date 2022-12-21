@@ -25,12 +25,12 @@ const StyledMentorsFilterDropdown = styled.select`
   font-family: ${fonts.nunitoSansSemibold};
   margin-bottom: 1.5em;
   border-radius: 0.3em;
-  width: 25%; 
+  width: 35%; 
   height: 3em;
   padding-left: 0.5em;
   -webkit-appearance: none;
   appearance: none;
-  
+
   @media ${min.mobile} {
     font-size: 1.2em;
   }
@@ -40,10 +40,10 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tabletLg} {
     margin-bottom: 1em;
-    width: 45%;
+    width: 55%;
   }
   @media ${max.tablet} {
-    width: 75%;
+    width: 65%;
   }
   @media ${max.mobile} {
     width: 85%;
