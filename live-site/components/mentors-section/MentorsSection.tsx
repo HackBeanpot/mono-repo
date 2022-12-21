@@ -5,7 +5,7 @@ import { useAirtableApi } from '../../src/hooks/useAirtable';
 import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
-  const isMobile = useMatchMedia(max.tablet);
+  const isMobile = useMatchMedia(max.tabletLg);
 
   const { data } = useAirtableApi('Mentors', 'mentors');
   const positionsArr = Array.from(new Set(data.map(mentor => mentor.fields.position)));
