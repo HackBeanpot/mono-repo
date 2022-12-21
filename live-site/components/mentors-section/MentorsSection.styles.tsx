@@ -33,13 +33,13 @@ const StyledMentorsDropdownContainer = styled.div`
 `;
 
 const StyledMentorsDropdownWrapper = styled(StyledDropdown)`
-  width: 14em;
+  width: 19em;
 
   @media ${max.tabletLg} {
-    width: 55%;
+    width: 50%;
   }
   @media ${max.tablet} {
-    width: 65%;
+    width: 60%;
   }
   @media ${max.mobile} {
     width: 85%;
