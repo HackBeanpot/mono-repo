@@ -3,6 +3,7 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 import { H3 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
+import Dropdown from '../../../shared-ui/components/dropdown/Dropdown';
 
 const StyledMentorsSection = styled.div`
   padding-top: 5.5em;
@@ -18,7 +19,7 @@ const StyledMentorsHeader = styled(H3)`
   margin-bottom: 1em;
 `;
 
-const StyledMentorsDropdown = styled.div`
+const StyledMentorsDropdownContainer = styled.div`
   margin-bottom: 1.5em;
 
   @media ${min.tablet} {
@@ -29,6 +30,20 @@ const StyledMentorsDropdown = styled.div`
   }
   @media ${min.desktop} {
     display: inline-block;
+  }
+`;
+
+const StyledMentorsDropdownWrapper = styled(Dropdown)`
+  width: 35%; 
+
+  @media ${max.tabletLg} {
+    width: 55%;
+  }
+  @media ${max.tablet} {
+    width: 65%;
+  }
+  @media ${max.mobile} {
+    width: 85%;
   }
 `;
 
@@ -51,6 +66,7 @@ const StyledMentorsFilterRadio = styled.div`
 export {
   StyledMentorsSection,
   StyledMentorsHeader,
-  StyledMentorsDropdown,
+  StyledMentorsDropdownContainer,
+  StyledMentorsDropdownWrapper,
   StyledMentorsFilterRadio
 };
