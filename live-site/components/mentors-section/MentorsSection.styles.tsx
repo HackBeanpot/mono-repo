@@ -27,6 +27,8 @@ const StyledMentorsFilterDropdown = styled.select`
   border-radius: 0.3em;
   width: 25%; 
   height: 3em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
 
   @media ${min.mobile} {
     font-size: 1.2em;
