@@ -11,12 +11,23 @@ const StyledDropdown = styled.select`
   border-radius: 0.3em;
   height: 3em;
   padding-left: 0.5em;
+  padding-right: 0.5em;
 
   @media ${min.mobile} {
     font-size: 1.2em;
   }
   @media ${min.tablet} {
     font-size: 1.25em;
+  }
+  @media ${max.tabletLg} {
+    margin-bottom: 1em;
+    width: 55%;
+  }
+  @media ${max.tablet} {
+    width: 65%;
+  }
+  @media ${max.mobile} {
+    width: 85%;
   }
 `;
 

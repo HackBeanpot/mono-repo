@@ -27,13 +27,6 @@ const StyledMentorsDropdown = styled.div`
   }
   @media ${max.tabletLg} {
     margin-bottom: 1em;
-    width: 55%;
-  }
-  @media ${max.tablet} {
-    width: 65%;
-  }
-  @media ${max.mobile} {
-    width: 85%;
   }
   @media ${min.desktop} {
     display: inline-block;
