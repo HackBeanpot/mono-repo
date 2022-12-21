@@ -14,10 +14,19 @@ const MentorsSection: React.FC = () => {
   return (
     <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-      <StyledMentorsDropdownContainer> <StyledMentorsDropdownWrapper options={positionsArr} /> </StyledMentorsDropdownContainer>
+      <StyledMentorsDropdownContainer> 
+        <StyledMentorsDropdownWrapper id="position-filter" /> 
+        {positionsArr.map((currPosition: string) => (
+          <option value={currPosition}>{currPosition}</option>
+        ))}
+      </StyledMentorsDropdownContainer>
       {isMobile && <br />}
-      <StyledMentorsDropdownContainer> <StyledMentorsDropdownWrapper options={companiesArr} /> </StyledMentorsDropdownContainer>
-      <StyledMentorsFilterRadio>
+      <StyledMentorsDropdownContainer>
+        <StyledMentorsDropdownWrapper id="company-filter" /> 
+        {companiesArr.map((currCompany: string) => (
+          <option value={currCompany}>{currCompany}</option>
+        ))}
+      </StyledMentorsDropdownContainer>      <StyledMentorsFilterRadio>
         <input type="radio" id="onShiftMentors" name="mentors_filter" value="Mentors on shift now" />
         <label htmlFor="onShiftMentors">Mentors on shift now</label><br />
         <input type="radio" id="allMentors" name="mentors_filter" value="All mentors" />
