@@ -31,7 +31,7 @@ const StyledMentorsFilterDropdown = styled.select`
 
   -webkit-appearance: none;
   appearance: none;
-  background-image: url("GoogleDropdown.png");
+  background-image: url("./GoogleDropdown.png");
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: calc(100% - 8px) center;
