@@ -1,32 +1,22 @@
 import React from 'react';
 import useMatchMedia from 'react-use-match-media';
-import Dropdown from '../../../shared-ui/components/dropdown/Dropdown';
 import { max } from '../../../shared-ui/lib/responsive';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
-import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader } from './MentorsSection.styles';
+import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsDropdown, StyledMentorsHeader } from './MentorsSection.styles';
 
 const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tabletLg);
 
   const { data } = useAirtableApi('Mentors', 'mentors');
-  const positionsArr = Array.from(new Set(data.map(mentor => mentor.fields.position)));
-  const companiesArr = Array.from(new Set(data.map(mentor => mentor.fields.company)));
+  const positionsArr = Array.from(new Set(data.map(mentor => (`Position: ${mentor.fields.position}`))));
+  const companiesArr = Array.from(new Set(data.map(mentor => (`Company: ${mentor.fields.company}`))));
 
   return (
     <StyledMentorsSection>
-      <Dropdown options={positionsArr} />
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-      <StyledMentorsFilterDropdown id="position-filter">
-        {positionsArr.map((currPosition: string) => (
-          <option value={currPosition}>Position: {currPosition}</option>
-        ))}
-      </StyledMentorsFilterDropdown>
+      <StyledMentorsDropdown options={positionsArr} />
       {isMobile && <br />}
-      <StyledMentorsFilterDropdown id="company-filter">
-        {companiesArr.map((currCompany: string) => (
-          <option value={currCompany}>Company: {currCompany}</option>
-        ))}
-      </StyledMentorsFilterDropdown>
+      <StyledMentorsDropdown options={companiesArr} />
       <StyledMentorsFilterRadio>
         <input type="radio" id="onShiftMentors" name="mentors_filter" value="Mentors on shift now" />
         <label htmlFor="onShiftMentors">Mentors on shift now</label><br />

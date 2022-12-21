@@ -8,7 +8,7 @@ export interface ButtonProps {
 }
 
 export interface DropdownProps {
-  options: string[];
+  options: Array<string>;
 }
 
 export interface TabInfo {

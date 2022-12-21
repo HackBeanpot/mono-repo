@@ -3,6 +3,7 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 import { H3 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
+import Dropdown from '../../../shared-ui/components/dropdown/Dropdown';
 
 const StyledMentorsSection = styled.div`
   padding-top: 5.5em;
@@ -18,29 +19,12 @@ const StyledMentorsHeader = styled(H3)`
   margin-bottom: 1em;
 `;
 
-const StyledMentorsFilterDropdown = styled.select`
-  border-color: ${colors.WHITE};
-  background-color: ${colors.BUTTON_DARK_GREEN};
-  color: ${colors.WHITE};
-  font-family: ${fonts.nunitoSansSemibold};
+const StyledMentorsDropdown = styled(Dropdown)`
   margin-bottom: 1.5em;
-  border-radius: 0.3em;
   width: 35%; 
-  height: 3em;
   padding-left: 0.5em;
 
-  -webkit-appearance: none;
-  appearance: none;
-  background-image: url("../mentors-section/GoogleDropdown.png");
-  background-size: 24px;
-  background-repeat: no-repeat;
-  background-position: calc(100% - 8px) center;
-
-  @media ${min.mobile} {
-    font-size: 1.2em;
-  }
   @media ${min.tablet} {
-    font-size: 1.25em;
     margin-right: 1.5em;
   }
   @media ${max.tabletLg} {
@@ -77,6 +61,6 @@ const StyledMentorsFilterRadio = styled.div`
 export {
   StyledMentorsSection,
   StyledMentorsHeader,
-  StyledMentorsFilterDropdown,
+  StyledMentorsDropdown,
   StyledMentorsFilterRadio
 };
