@@ -28,8 +28,13 @@ const StyledMentorsFilterDropdown = styled.select`
   width: 35%; 
   height: 3em;
   padding-left: 0.5em;
+
   -webkit-appearance: none;
   appearance: none;
+  background-image: url("GoogleDropdown.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) center;
 
   @media ${min.mobile} {
     font-size: 1.2em;
