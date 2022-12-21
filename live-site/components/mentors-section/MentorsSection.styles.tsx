@@ -37,7 +37,7 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tablet} {
     margin-bottom: 1em;
-    width: 100%;
+    width: 85%;
   }
   @media ${min.desktop} {
     display: inline-block;
@@ -54,6 +54,7 @@ const StyledMentorsFilterRadio = styled.div`
   @media ${min.tablet} {
     font-size: 1.25em;
     display: inline-block;
+    vertical-align: middle;
   }
 `;
 
