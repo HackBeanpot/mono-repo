@@ -16,8 +16,8 @@ const StyledTextContainer = styled.div`
   }
   @media ${max.tabletSm} {
     margin: 0.9em;
-    width: 8.5em;
-    height: 10em;
+    width: 7.6em;
+    height: 11em;
   }
 `;
 
@@ -39,8 +39,11 @@ const StyledEvent = styled.div`
   @media ${max.tabletSm} {
     border-radius: 1em;
     margin: 0.5em;
-    width: 9.8em;
+    width: 9em;
     height: 11em;
+  }
+  @media ${max.mobile} {
+    width: 4em;
   }
 `;
 
@@ -86,8 +89,7 @@ const StyledSectionHeader = styled(H3)`
 `;
 
 const StyledTime = styled.div`
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em, 0;
   font-size: 1em;
   font-family: ${fonts.nunitoSansRegular};
   color: ${colors.BUTTON_GREEN};

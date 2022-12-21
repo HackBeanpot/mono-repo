@@ -22,7 +22,7 @@ const ComingUpSection: React.FC = () => {
     time: 'Complete by 12:00am EST',
     body: 'hello hello hello hello hello hello hello hello hi hi hello hello hello hi hi'
   };
-  const events: UpcomingEvent[] = [];
+  const events: UpcomingEvent[] = [event, event, event];
   const isDesktop = useMatchMedia(min.tablet);
   if (events.length === 0) {
     return <NoUpcoming />;
