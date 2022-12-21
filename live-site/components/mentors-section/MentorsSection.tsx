@@ -1,5 +1,6 @@
 import React from 'react';
 import useMatchMedia from 'react-use-match-media';
+import Dropdown from '../../../shared-ui/components/dropdown/Dropdown';
 import { max } from '../../../shared-ui/lib/responsive';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsFilterDropdown, StyledMentorsHeader } from './MentorsSection.styles';
@@ -13,6 +14,7 @@ const MentorsSection: React.FC = () => {
 
   return (
     <StyledMentorsSection>
+      <Dropdown options={positionsArr} />
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
       <StyledMentorsFilterDropdown id="position-filter">
         {positionsArr.map((currPosition: string) => (

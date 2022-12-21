@@ -7,6 +7,10 @@ export interface ButtonProps {
   onClick?: MouseEventHandler;
 }
 
+export interface DropdownProps {
+  options: string[];
+}
+
 export interface TabInfo {
   name: string;
   link: string;
