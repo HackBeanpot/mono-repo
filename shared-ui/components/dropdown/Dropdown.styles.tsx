@@ -12,6 +12,7 @@ const StyledDropdown = styled.select`
   height: 3em;
   padding-left: 0.5em;
   padding-right: 0.5em;
+  width: 35%; 
 
   @media ${min.mobile} {
     font-size: 1.2em;

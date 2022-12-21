@@ -20,7 +20,6 @@ const StyledMentorsHeader = styled(H3)`
 
 const StyledMentorsDropdown = styled.div`
   margin-bottom: 1.5em;
-  width: 35%; 
 
   @media ${min.tablet} {
     margin-right: 1.5em;
