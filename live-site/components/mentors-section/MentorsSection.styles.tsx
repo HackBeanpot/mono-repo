@@ -3,7 +3,6 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 import { H3 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
-import Dropdown from '../../../shared-ui/components/dropdown/Dropdown';
 
 const StyledMentorsSection = styled.div`
   padding-top: 5.5em;
@@ -19,10 +18,9 @@ const StyledMentorsHeader = styled(H3)`
   margin-bottom: 1em;
 `;
 
-const StyledMentorsDropdown = styled(Dropdown)`
+const StyledMentorsDropdown = styled.div`
   margin-bottom: 1.5em;
   width: 35%; 
-  padding-left: 0.5em;
 
   @media ${min.tablet} {
     margin-right: 1.5em;

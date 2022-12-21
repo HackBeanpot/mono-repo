@@ -3,6 +3,7 @@ import useMatchMedia from 'react-use-match-media';
 import { max } from '../../../shared-ui/lib/responsive';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 import { StyledMentorsSection, StyledMentorsFilterRadio, StyledMentorsDropdown, StyledMentorsHeader } from './MentorsSection.styles';
+import Dropdown from '../../../shared-ui/components/dropdown/Dropdown';
 
 const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tabletLg);
@@ -14,9 +15,9 @@ const MentorsSection: React.FC = () => {
   return (
     <StyledMentorsSection>
       <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-      <StyledMentorsDropdown options={positionsArr} />
+      <StyledMentorsDropdown> <Dropdown options={positionsArr} /> </StyledMentorsDropdown>
       {isMobile && <br />}
-      <StyledMentorsDropdown options={companiesArr} />
+      <StyledMentorsDropdown> <Dropdown options={companiesArr} /> </StyledMentorsDropdown>
       <StyledMentorsFilterRadio>
         <input type="radio" id="onShiftMentors" name="mentors_filter" value="Mentors on shift now" />
         <label htmlFor="onShiftMentors">Mentors on shift now</label><br />
