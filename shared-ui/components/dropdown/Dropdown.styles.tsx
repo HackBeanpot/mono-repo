@@ -13,6 +13,13 @@ const StyledDropdown = styled.select`
   padding-left: 0.5em;
   padding-right: 0.5em;
 
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("/GoogleDropdown.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.5em) center;
+  background-size: 1.5em;
+
   @media ${min.mobile} {
     font-size: 1.2em;
   }
