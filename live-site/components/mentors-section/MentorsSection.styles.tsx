@@ -28,6 +28,7 @@ const StyledMentorsFilterDropdown = styled.select`
   width: 25%; 
   height: 3em;
   padding-left: 0.5em;
+  border-right: 0.5em;
 
   @media ${min.mobile} {
     font-size: 1.2em;
@@ -38,10 +39,12 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tabletLg} {
     margin-bottom: 1em;
-    width: 55%;
+    width: 65%;
   }
   @media ${max.tablet} {
-    margin-bottom: 1em;
+    width: 75%;
+  }
+  @media ${max.mobile} {
     width: 85%;
   }
   @media ${min.desktop} {
@@ -58,6 +61,8 @@ const StyledMentorsFilterRadio = styled.div`
   }
   @media ${min.tablet} {
     font-size: 1.25em;
+  }
+  @media ${min.desktop} {
     display: inline-block;
     vertical-align: middle;
   }
