@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
-import { min } from '../../lib/responsive';
+import { max, min } from '../../lib/responsive';
 
 const StyledDropdown = styled.select`
   border-color: ${colors.WHITE};
