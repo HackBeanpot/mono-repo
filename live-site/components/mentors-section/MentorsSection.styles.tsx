@@ -39,7 +39,7 @@ const StyledMentorsFilterDropdown = styled.select`
   }
   @media ${max.tabletLg} {
     margin-bottom: 1em;
-    width: 65%;
+    width: 45%;
   }
   @media ${max.tablet} {
     width: 75%;
