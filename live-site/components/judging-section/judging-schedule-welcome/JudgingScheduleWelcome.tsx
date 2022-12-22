@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyledBackButtonContainer, StyledBackButton, StyledCenteredDropdown, StyledPersonDropdown, StyledJudgingScheduleSection, StyledWelcomePerson } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
+import { StyledBackButtonContainer, StyledBackButton, StyledJudgesDropdownContainer, StyledJudgesDropdownWrapper, StyledJudgingScheduleSection, StyledWelcomePerson } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
 import { JudgingScheduleWelcomeProps } from '../../../lib/types';
 
 const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({ schedulePersonType }) => {
-  const personDropdown = ['Select your name'];
+  const personOptions = ['Select your name'];
 
   return (
     <div>
@@ -12,11 +12,13 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({ schedul
       </StyledBackButtonContainer>
       <StyledJudgingScheduleSection>
         <StyledWelcomePerson> Welcome, {schedulePersonType}! </StyledWelcomePerson>
-        <StyledCenteredDropdown>
-          <StyledPersonDropdown options={personDropdown} > 
-            <option value="select your name">Select your name</option>
-          </StyledPersonDropdown>
-        </StyledCenteredDropdown>
+        <StyledJudgesDropdownContainer> 
+          <StyledJudgesDropdownWrapper id="position-filter"> 
+            {personOptions.map((currPerson: string) => (
+              <option value={currPerson}>{currPerson}</option>
+            ))}
+          </StyledJudgesDropdownWrapper> 
+      </StyledJudgesDropdownContainer>
       </StyledJudgingScheduleSection>
     </div>
   );

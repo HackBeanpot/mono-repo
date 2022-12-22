@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
-import { H2 } from '../../../../shared-ui/style/typography';
+import { H2, StyledDropdown } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
-import SecondaryDropdown from '../../../../shared-ui/components/secondary-dropdown/SecondaryDropdown';
+import { min, max } from '../../../../shared-ui/lib/responsive';
 
 const StyledBackButtonContainer = styled.div`
   padding-top: 7em;
@@ -29,15 +29,32 @@ const StyledWelcomePerson = styled(H2)`
   color: ${colors.TEXT_BROWN};
 `;
 
-const StyledCenteredDropdown = styled.div`
-  display: flex;
-  justify-content: center;
+const StyledJudgesDropdownContainer = styled.div`
+  margin-bottom: 1.5em;
+
+  @media ${min.tablet} {
+    margin-right: 1.5em;
+  }
+  @media ${max.tabletLg} {
+    margin-bottom: 1em;
+  }
+  @media ${min.desktop} {
+    display: inline-block;
+  }
 `;
 
-const StyledPersonDropdown = styled(SecondaryDropdown)`
-  width: 25%;
-  color: ${colors.WHITE};
-  border-color: ${colors.BUTTON_GREEN};
+const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
+  width: 19em;
+
+  @media ${max.tabletLg} {
+    width: 50%;
+  }
+  @media ${max.tablet} {
+    width: 60%;
+  }
+  @media ${max.mobile} {
+    width: 85%;
+  }
 `;
 
 export { 
@@ -45,6 +62,6 @@ export {
   StyledBackButton,
   StyledJudgingScheduleSection,
   StyledWelcomePerson,
-  StyledCenteredDropdown,
-  StyledPersonDropdown
+  StyledJudgesDropdownContainer, 
+  StyledJudgesDropdownWrapper
 };
