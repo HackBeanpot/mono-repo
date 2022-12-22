@@ -19,43 +19,28 @@ import {
 } from './EventItem.styles';
 import { EventItemProps } from '../../../lib/types';
 
-const EventItem: React.FC<EventItemProps> = ({eventItem}) => {
+const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
   return (
     <StyledEventItemContainer>
       <StyledEventItemMobileContainer>
-
-
-      <StyledEventItemLeftSideContainer>
-
-        <StyledEventTimeTopicContainer>
-          <StyledEventItemTime>{eventItem.time}</StyledEventItemTime>
-          <StyledEventItemTopic>
-            {eventItem.eventType}
-          </StyledEventItemTopic>
-        </StyledEventTimeTopicContainer>
-
-
-        <StyledEventItemNameLocationContainer>
-          <StyledEventItemHeader>
-            {eventItem.eventName}
-          </StyledEventItemHeader>
-          <StyledPinpointLocationContainer>
-            <StyledPinpoint src={pinpoint} />
-            <StyledEventitemLocation>
-              {eventItem.eventLocation}
-            </StyledEventitemLocation>
-          </StyledPinpointLocationContainer>
-        </StyledEventItemNameLocationContainer>
-
-
-      </StyledEventItemLeftSideContainer>
-
-
-
-
-      <StyledEventItemArrowContainer>
-        <StyledArrow src={arrow} />
-      </StyledEventItemArrowContainer>
+        <StyledEventItemLeftSideContainer>
+          <StyledEventTimeTopicContainer>
+            <StyledEventItemTime>{eventItem.time}</StyledEventItemTime>
+            <StyledEventItemTopic>{eventItem.eventType}</StyledEventItemTopic>
+          </StyledEventTimeTopicContainer>
+          <StyledEventItemNameLocationContainer>
+            <StyledEventItemHeader>{eventItem.eventName}</StyledEventItemHeader>
+            <StyledPinpointLocationContainer>
+              <StyledPinpoint src={pinpoint} />
+              <StyledEventitemLocation>
+                {eventItem.eventLocation}
+              </StyledEventitemLocation>
+            </StyledPinpointLocationContainer>
+          </StyledEventItemNameLocationContainer>
+        </StyledEventItemLeftSideContainer>
+        <StyledEventItemArrowContainer>
+          <StyledArrow src={arrow} />
+        </StyledEventItemArrowContainer>
       </StyledEventItemMobileContainer>
     </StyledEventItemContainer>
   );

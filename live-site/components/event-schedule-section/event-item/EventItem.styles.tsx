@@ -3,14 +3,11 @@ import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H3, P } from '../../../../shared-ui/style/typography';
 
-
-
 const StyledEventItemMobileContainer = styled.div`
-@media ${max.mobile} {
-  display: flex;
-} ;
-
-`
+  @media ${max.mobile} {
+    display: flex;
+  } ;
+`;
 const StyledEventItemContainer = styled.div`
   margin-left: 1em;
   margin-right: 2em;
@@ -18,17 +15,15 @@ const StyledEventItemContainer = styled.div`
   border-radius: 2em;
   height: 8em;
   background-color: ${colors.WHITE};
-
-
 `;
 
 const StyledEventItemLeftSideContainer = styled.div`
   display: flex;
   float: left;
 
-  @media ${max.tablet} {
+  @media ${max.mobile} {
+    display: block;
   } ;
-
 `;
 
 const StyledEventItemArrowContainer = styled.div`
@@ -38,24 +33,44 @@ const StyledEventItemArrowContainer = styled.div`
 
 const StyledEventItemNameLocationContainer = styled.div`
   display: block;
+
+  @media ${max.tabletLg} {
+    padding-top: 0em;
+    padding-left: 1em;
+  }
+
   @media ${max.tablet} {
-    padding-top: 1.6em;
+    padding-top: 2em;
+    padding-left: 1em;
+  }
+
+  @media ${max.mobile} {
+    padding-top: 0;
+    padding-left: 1em;
   } ;
-
-  
- 
-
 `;
 
 const StyledPinpointLocationContainer = styled.div`
   display: flex;
-   
- 
 `;
 
 const StyledEventTimeTopicContainer = styled.div`
   padding: 2em;
-  
+
+  @media ${max.tablet} {
+    padding-left: 0.2em;
+  }
+
+  @media ${max.tabletXs} {
+    padding-left: 1em;
+  }
+
+  @media ${max.mobile} {
+    display: flex;
+    padding-left: 1em;
+    padding-right: 0;
+    padding-bottom: 0.5em;
+  } ;
 `;
 
 const StyledEventItemHeader = styled(H3)`
@@ -64,16 +79,9 @@ const StyledEventItemHeader = styled(H3)`
   font-size: 1.7em;
 
   @media ${max.tablet} {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0;
   } ;
-
-  @media ${max.mobile} {
-    font-size: 1em;
-  } ;
-
-  
-
 `;
 
 const StyledEventitemLocation = styled(P)`
@@ -82,32 +90,41 @@ const StyledEventitemLocation = styled(P)`
 
   @media ${max.tablet} {
     font-size: 1em;
-  } ;
+  }
 
   @media ${max.tabletSm} {
     padding-left: 0;
-  } ;
+  }
 
   @media ${max.mobile} {
     font-size: 0.7em;
+    padding-left: 0.5em;
   } ;
 `;
 
 const StyledEventItemTime = styled(P)`
-  display: flex;
   color: ${colors.BLACK};
 
+  @media ${max.tabletSm} {
+    font-size: 1em;
+  }
+
   @media ${max.mobile} {
-    font-size: 0.7em;
+    font-size: 0.8em;
+    display: flex;
   } ;
 `;
 
 const StyledEventItemTopic = styled(P)`
-  display: flex;
   color: ${colors.CAMEL_ORANGE};
+
+  @media ${max.tabletSm} {
+    font-size: 1em;
+  }
 
   @media ${max.mobile} {
     font-size: 0.7em;
+    padding-left: 0.5em;
   } ;
 `;
 
@@ -117,7 +134,7 @@ const StyledPinpoint = styled.img`
 
   @media ${max.tablet} {
     padding: 0;
-  } ;
+  }
 
   @media ${max.mobile} {
     height: 1em;
@@ -129,17 +146,20 @@ const StyledArrow = styled.img`
   padding-right: 3em;
   float: right;
 
-
-   @media ${max.tablet} {
+  @media ${max.tabletLg} {
     padding-top: 3em;
     padding-right: 0.7em;
-  } ;
+    width: 2em;
+  }
+
+  @media ${max.tablet} {
+    padding-right: 0.7em;
+    width: 2em;
+  }
 
   @media ${max.tabletSm} {
     display: none;
   } ;
-
- 
 `;
 
 export {
