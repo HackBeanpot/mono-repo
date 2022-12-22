@@ -3,23 +3,37 @@ import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H3, P } from '../../../../shared-ui/style/typography';
 
+
+
+const StyledEventItemMobileContainer = styled.div`
+@media ${max.mobile} {
+  display: flex;
+} ;
+
+`
 const StyledEventItemContainer = styled.div`
-  margin: 1em;
+  margin-left: 1em;
+  margin-right: 2em;
+  margin-top: 1em;
   border-radius: 2em;
   height: 8em;
   background-color: ${colors.WHITE};
+
+
 `;
 
 const StyledEventItemLeftSideContainer = styled.div`
   display: flex;
   float: left;
 
+  @media ${max.tablet} {
+  } ;
+
 `;
 
 const StyledEventItemArrowContainer = styled.div`
   text-align: right;
   display: block;
-  padding-top: -30px;
 `;
 
 const StyledEventItemNameLocationContainer = styled.div`
@@ -28,32 +42,37 @@ const StyledEventItemNameLocationContainer = styled.div`
     padding-top: 1.6em;
   } ;
 
+  
  
 
 `;
 
 const StyledPinpointLocationContainer = styled.div`
   display: flex;
+   
+ 
 `;
 
 const StyledEventTimeTopicContainer = styled.div`
   padding: 2em;
+  
 `;
 
 const StyledEventItemHeader = styled(H3)`
   padding-left: 2em;
-  padding-top: 0.7em;
+  padding-top: 1em;
+  font-size: 1.7em;
 
   @media ${max.tablet} {
     font-size: 1.5em;
     padding: 0;
   } ;
 
-
-
   @media ${max.mobile} {
     font-size: 1em;
   } ;
+
+  
 
 `;
 
@@ -93,7 +112,7 @@ const StyledEventItemTopic = styled(P)`
 `;
 
 const StyledPinpoint = styled.img`
-  padding-left: 4.5em;
+  padding-left: 3.5em;
   height: 20%;
 
   @media ${max.tablet} {
@@ -135,5 +154,6 @@ export {
   StyledPinpointLocationContainer,
   StyledArrow,
   StyledEventItemArrowContainer,
-  StyledEventItemLeftSideContainer
+  StyledEventItemLeftSideContainer,
+  StyledEventItemMobileContainer
 };

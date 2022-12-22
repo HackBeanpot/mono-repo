@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { eventItemInfo } from '../../lib/data';
-import { EventScheduleTabProps } from '../../lib/types';
-import EventItem from './event-item/EventItem';
+import { eventItemInfo } from '../../../lib/data';
+import { EventScheduleTabProps } from '../../../lib/types';
+import EventItem from '../event-item/EventItem';
 
 import {
   StyledTabTitleWrapper,

@@ -14,39 +14,40 @@ import {
   StyledPinpointLocationContainer,
   StyledArrow,
   StyledEventItemArrowContainer,
-  StyledEventItemLeftSideContainer
+  StyledEventItemLeftSideContainer,
+  StyledEventItemMobileContainer
 } from './EventItem.styles';
 import { EventItemProps } from '../../../lib/types';
 
-const EventItem: React.FC<EventItemProps> = (eventItem) => {
-  console.log(eventItem);
+const EventItem: React.FC<EventItemProps> = ({eventItem}) => {
   return (
     <StyledEventItemContainer>
+      <StyledEventItemMobileContainer>
 
 
       <StyledEventItemLeftSideContainer>
 
         <StyledEventTimeTopicContainer>
-          <StyledEventItemTime>{eventItem.eventItem.time}</StyledEventItemTime>
+          <StyledEventItemTime>{eventItem.time}</StyledEventItemTime>
           <StyledEventItemTopic>
-            {eventItem.eventItem.eventType}
+            {eventItem.eventType}
           </StyledEventItemTopic>
         </StyledEventTimeTopicContainer>
 
 
         <StyledEventItemNameLocationContainer>
           <StyledEventItemHeader>
-            {eventItem.eventItem.eventName}
+            {eventItem.eventName}
           </StyledEventItemHeader>
           <StyledPinpointLocationContainer>
             <StyledPinpoint src={pinpoint} />
             <StyledEventitemLocation>
-              {eventItem.eventItem.eventLocation}
+              {eventItem.eventLocation}
             </StyledEventitemLocation>
           </StyledPinpointLocationContainer>
         </StyledEventItemNameLocationContainer>
 
-        
+
       </StyledEventItemLeftSideContainer>
 
 
@@ -55,7 +56,7 @@ const EventItem: React.FC<EventItemProps> = (eventItem) => {
       <StyledEventItemArrowContainer>
         <StyledArrow src={arrow} />
       </StyledEventItemArrowContainer>
-
+      </StyledEventItemMobileContainer>
     </StyledEventItemContainer>
   );
 };

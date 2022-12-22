@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { max } from '../../../shared-ui/lib/responsive';
-import { colors } from '../../../shared-ui/style/colors';
-import { P } from '../../../shared-ui/style/typography';
-import { StyledTabTitleWrapperProps } from '../../lib/types';
+import { max } from '../../../../shared-ui/lib/responsive';
+import { colors } from '../../../../shared-ui/style/colors';
+import { P } from '../../../../shared-ui/style/typography';
+import { StyledTabTitleWrapperProps } from '../../../lib/types';
 
 const StyledEventScheduleTabsContainer = styled.div`
   text-align: center;

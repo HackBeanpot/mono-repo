@@ -10,7 +10,7 @@ import {
   ButtonContainer,
   EventScheduleTextButtonContainer
 } from './EventScheduleSection.styles';
-import EventScheduleTab from './EventScheduleTab';
+import EventScheduleTab from './event-schedule-tab/EventScheduleTab';
 
 const EventScheduleSection: React.FC = () => {
   return (
