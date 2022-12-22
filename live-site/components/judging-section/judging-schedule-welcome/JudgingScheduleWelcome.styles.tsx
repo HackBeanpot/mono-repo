@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 import { H2, StyledDropdown } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
-import { min, max } from '../../../../shared-ui/lib/responsive';
+import { max } from '../../../../shared-ui/lib/responsive';
 
 const StyledBackButtonContainer = styled.div`
   padding-top: 7em;
