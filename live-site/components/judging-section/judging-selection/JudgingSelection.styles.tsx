@@ -24,6 +24,8 @@ const StyledPersonTypeSelectButton = styled(SecondaryButton)`
   overflow: auto;
   color: ${colors.WHITE};
   border-color: ${colors.BUTTON_GREEN};
+  padding-right: 2em;
+  padding-left: 2em;
 `;
 
 export { 
