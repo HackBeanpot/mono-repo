@@ -30,7 +30,7 @@ const StyledWelcomePerson = styled(H2)`
 `;
 
 const StyledJudgesDropdownContainer = styled.div`
-  margin: auto;
+  text-align: center;
 `;
 
 const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
