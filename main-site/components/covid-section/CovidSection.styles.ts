@@ -64,15 +64,15 @@ const StyledTitle = styled(H2)`
 
 const StyledExhaustLg = styled(motion.img)`
   padding: 1em;
-  scale:1.5;
+  scale: 1.5;
 `;
 const StyledExhaustSm = styled(motion.img)`
   padding: 2em;
-  scale:2;
+  scale: 2;
 `;
 const StyledExhaustSm2 = styled(motion.img)`
   padding: 1em;
-  scale:2;
+  scale: 2;
 `;
 const ExhaustContainer = styled(motion.div)`
   margin-left: -8em;
