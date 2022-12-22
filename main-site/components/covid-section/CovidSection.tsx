@@ -15,12 +15,14 @@ import exhaustLg from '../../../shared-ui/images/exhaustLg.svg';
 import exhaustSm from '../../../shared-ui/images/exhaustSm.svg';
 import { colors } from '../../../shared-ui/style/colors';
 import { bigPuff, smallPuff, smallPuff2 } from './CovidSection.animations';
-
+import { min } from '../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
 const CovidSection: React.FC = () => {
+  const isDesktop = useMatchMedia(min.tabletLg);
   return (
     <StyledCovidSectionContainer>
       <StyledDesertVan src={DesertVan} />
-      <img src = {exhaustLg}/>
+      <img src={exhaustLg} />
       <StyledCovidTitleAndInformation>
         <StyledTitle color={colors.BLACK}>Safety first!</StyledTitle>
         <StyledCovidSectionInformation color={colors.TEXT_BROWN}>
@@ -32,14 +34,29 @@ const CovidSection: React.FC = () => {
           asked after registration and encourage everyone to wear masks during
           the event as it is indoors.
         </StyledCovidSectionInformation>
-        <ExhaustContainer>
-        <StyledExhaustSm initial= "initial" animate = 'animate' variants={smallPuff}src = {exhaustSm}/>
-        <StyledExhaustSm2 initial= "initial" animate = 'animate' variants={smallPuff2}src = {exhaustSm}/>
-        <StyledExhaustLg initial= "initial" animate = 'animate' variants={bigPuff}src = {exhaustLg}/>
-        </ExhaustContainer>
-
+        {isDesktop && (
+          <ExhaustContainer>
+            <StyledExhaustSm
+              initial="initial"
+              animate="animate"
+              variants={smallPuff}
+              src={exhaustSm}
+            />
+            <StyledExhaustSm2
+              initial="initial"
+              animate="animate"
+              variants={smallPuff2}
+              src={exhaustSm}
+            />
+            <StyledExhaustLg
+              initial="initial"
+              animate="animate"
+              variants={bigPuff}
+              src={exhaustLg}
+            />
+          </ExhaustContainer>
+        )}
       </StyledCovidTitleAndInformation>
-      
     </StyledCovidSectionContainer>
   );
 };
