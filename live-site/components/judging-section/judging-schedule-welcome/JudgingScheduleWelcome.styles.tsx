@@ -30,30 +30,15 @@ const StyledWelcomePerson = styled(H2)`
 `;
 
 const StyledJudgesDropdownContainer = styled.div`
-  margin-bottom: 1.5em;
-
-  @media ${min.tablet} {
-    margin-right: 1.5em;
-  }
-  @media ${max.tabletLg} {
-    margin-bottom: 1em;
-  }
-  @media ${min.desktop} {
-    display: inline-block;
-  }
+  margin: auto;
+  width: 50%;
 `;
 
 const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
   width: 19em;
 
-  @media ${max.tabletLg} {
-    width: 50%;
-  }
-  @media ${max.tablet} {
-    width: 60%;
-  }
   @media ${max.mobile} {
-    width: 85%;
+    width: 16em;
   }
 `;
 
