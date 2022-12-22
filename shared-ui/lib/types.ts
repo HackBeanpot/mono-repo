@@ -6,9 +6,11 @@ export interface ButtonProps {
   newTab?: boolean;
   onClick?: MouseEventHandler;
 }
+
 export interface DropdownProps {
-  options: string[];
+  options: Array<string>;
 }
+
 export interface TabInfo {
   name: string;
   link: string;
