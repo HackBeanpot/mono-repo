@@ -31,14 +31,17 @@ const StyledWelcomePerson = styled(H2)`
 
 const StyledJudgesDropdownContainer = styled.div`
   margin: auto;
-  width: 50%;
 `;
 
 const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
   width: 19em;
 
+  @media ${max.tabletSm} {
+    width: 15em;
+  }
+
   @media ${max.mobile} {
-    width: 16em;
+    width: 12em;
   }
 `;
 
