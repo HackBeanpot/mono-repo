@@ -22,7 +22,6 @@ const CovidSection: React.FC = () => {
   return (
     <StyledCovidSectionContainer>
       <StyledDesertVan src={DesertVan} />
-      <img src={exhaustLg} />
       <StyledCovidTitleAndInformation>
         <StyledTitle color={colors.BLACK}>Safety first!</StyledTitle>
         <StyledCovidSectionInformation color={colors.TEXT_BROWN}>

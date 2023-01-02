@@ -75,7 +75,7 @@ const StyledExhaustSm2 = styled(motion.img)`
   scale: 2;
 `;
 const ExhaustContainer = styled(motion.div)`
-  margin-left: -8em;
+  margin-left: -4em;
   margin-top: 4em;
   margin-bottom: 0em;
 `;
