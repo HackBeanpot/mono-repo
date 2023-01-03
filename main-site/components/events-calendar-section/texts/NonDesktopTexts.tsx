@@ -46,12 +46,6 @@ const NonDesktopTexts: React.FC = () => {
           <EventsHeader>Security + Tech Discussion - mid November</EventsHeader>
         </StyledTextContainer>
       </StyledEventsBox>
-
-      <StyledEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>Go Workshop - mid January</EventsHeader>
-        </StyledTextContainer>
-      </StyledEventsBox>
     </>
   );
 };

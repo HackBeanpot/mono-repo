@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max } from '../../../shared-ui/lib/responsive';
@@ -18,7 +19,7 @@ const StyledHackathonText = styled(H3)`
   }
 `;
 
-const StyledStar = styled.img`
+const StyledStar = styled(motion.img)`
   position: absolute;
   z-index: 10;
   width: 12%;

@@ -25,7 +25,7 @@
 }
 
 .error-background-mobile {
-  background-image: url(../images/error-mobile-background.svg);
+  background-image: url(../images/error-mobile-background.png);
   background-size: cover;
   height: 100vh;
 }
