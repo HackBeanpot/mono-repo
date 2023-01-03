@@ -20,6 +20,11 @@ export interface EventProps {
   eventInfo: UpcomingEvent;
 }
 
+
+export interface DesktopMultiEventsProps {
+  events: UpcomingEvent[];
+}
+
 export interface EventScheduleTabProps {
   tabs: EventMockData[];
 }
@@ -27,3 +32,4 @@ export interface EventScheduleTabProps {
 export interface StyledTabTitleWrapperProps {
   isSelected: boolean;
 }
+
