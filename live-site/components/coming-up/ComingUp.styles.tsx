@@ -104,7 +104,7 @@ const StyledTime = styled.div`
 const StyledBody = styled.div`
   font-size: 1em;
   line-height: 1.3em;
-  color: WHITE;
+  color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansRegular};
   @media ${max.tablet} {
     font-size: 0.9em;

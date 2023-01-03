@@ -42,24 +42,23 @@ const ComingUpSection: React.FC = () => {
         </StyledOneEventContainer>
       </StyledSectionContainer>
     );
-  } else {
-    return (
-      <StyledSectionContainer>
-        <StyledSectionHeader>Coming up...</StyledSectionHeader>
-        <StyledEvents>
-          {events.map((event: UpcomingEvent) => (
-            <StyledEvent key={event.id}>
-              <StyledTextContainer>
-                <StyledHeader>{event.header}</StyledHeader>
-                <StyledTime>{event.time}</StyledTime>
-                <StyledBody>{event.body}</StyledBody>
-              </StyledTextContainer>
-            </StyledEvent>
-          ))}
-        </StyledEvents>
-      </StyledSectionContainer>
-    );
   }
+  return (
+    <StyledSectionContainer>
+      <StyledSectionHeader>Coming up...</StyledSectionHeader>
+      <StyledEvents>
+        {events.map((event: UpcomingEvent) => (
+          <StyledEvent key={event.id}>
+            <StyledTextContainer>
+              <StyledHeader>{event.header}</StyledHeader>
+              <StyledTime>{event.time}</StyledTime>
+              <StyledBody>{event.body}</StyledBody>
+            </StyledTextContainer>
+          </StyledEvent>
+        ))}
+      </StyledEvents>
+    </StyledSectionContainer>
+  );
 };
 
 export default ComingUpSection;
