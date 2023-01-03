@@ -21,22 +21,30 @@ const StyledEventItemLeftSideContainer = styled.div`
   display: flex;
   float: left;
 
+  @media ${max.tabletLg} {
+    padding-left: 2em;
+    display: flex;
+  } ;
+
   @media ${max.tablet} {
     display: block;
   } ;
+
+  @media ${max.tabletXs} {
+    display: block;
+    padding-left: 0.5em;
+  } ;
 `;
 
-const StyledEventItemArrowContainer = styled.div`
-  text-align: right;
-  display: block;
-`;
+
 
 const StyledEventItemNameLocationContainer = styled.div`
   display: block;
 
   @media ${max.tabletLg} {
     padding-top: 0em;
-    padding-left: 1em;
+    
+    
   }
 
   @media ${max.tablet} {
@@ -55,6 +63,10 @@ const StyledPinpointLocationContainer = styled.div`
 
 const StyledEventTimeTopicContainer = styled.div`
   padding: 2em;
+
+  @media ${max.tabletLg} {
+    padding-left: 0em;
+  }
 
   @media ${max.tablet} {
     display: flex;
@@ -80,6 +92,12 @@ const StyledEventItemHeader = styled(H3)`
   padding-top: 1em;
   font-size: 1.7em;
 
+  @media ${max.tabletLg} {
+    font-size: 1.4em;
+    padding-top: 1.5em;
+    padding-left: 1em;
+  } ;
+
   @media ${max.tablet} {
     font-size: 1.2em;
     padding: 0;
@@ -89,6 +107,12 @@ const StyledEventItemHeader = styled(H3)`
 const StyledEventitemLocation = styled(P)`
   color: ${colors.HEADER_FOOTER_BLUE};
   padding-left: 0.7em;
+
+
+  @media ${max.tabletLg} {
+    font-size: 1em;
+    padding-left: 0.5em;
+  }
 
   @media ${max.tablet} {
     font-size: 1em;
@@ -137,6 +161,10 @@ const StyledPinpoint = styled.img`
   padding-left: 3.5em;
   height: 20%;
 
+  @media ${max.tabletLg} {
+    padding-left: 1.2em;
+  }
+
   @media ${max.tablet} {
     padding: 0;
     height: 1.5em;
@@ -155,11 +183,11 @@ const StyledArrow = styled.img`
 
   @media ${max.tabletLg} {
     padding-top: 3em;
-    padding-right: 0.7em;
-    width: 2em;
+    padding-right: 2em;
   }
 
   @media ${max.tablet} {
+    display: none;
   }
 
   @media ${max.tabletSm} {
@@ -178,7 +206,6 @@ export {
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,
-  StyledEventItemArrowContainer,
   StyledEventItemLeftSideContainer,
   StyledEventItemMobileContainer
 };

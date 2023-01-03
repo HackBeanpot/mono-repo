@@ -13,7 +13,6 @@ import {
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,
-  StyledEventItemArrowContainer,
   StyledEventItemLeftSideContainer,
   StyledEventItemMobileContainer
 } from './EventItem.styles';
@@ -38,9 +37,7 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
             </StyledPinpointLocationContainer>
           </StyledEventItemNameLocationContainer>
         </StyledEventItemLeftSideContainer>
-        <StyledEventItemArrowContainer>
           <StyledArrow src={arrow} />
-        </StyledEventItemArrowContainer>
       </StyledEventItemMobileContainer>
     </StyledEventItemContainer>
   );
