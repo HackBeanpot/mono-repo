@@ -10,7 +10,7 @@ const StyledEventItemMobileContainer = styled.div`
 `;
 const StyledEventItemContainer = styled.div`
   margin-left: 1em;
-  margin-right: 2em;
+  margin-right: 1em;
   margin-top: 1em;
   border-radius: 2em;
   height: 8em;
@@ -23,7 +23,6 @@ const StyledEventItemLeftSideContainer = styled.div`
 
   @media ${max.tabletLg} {
     padding-left: 2em;
-    display: flex;
   } ;
 
   @media ${max.tablet} {
@@ -31,7 +30,6 @@ const StyledEventItemLeftSideContainer = styled.div`
   } ;
 
   @media ${max.tabletXs} {
-    display: block;
     padding-left: 0.5em;
   } ;
 `;
@@ -42,9 +40,7 @@ const StyledEventItemNameLocationContainer = styled.div`
   display: block;
 
   @media ${max.tabletLg} {
-    padding-top: 0em;
-    
-    
+    padding-top: 0;
   }
 
   @media ${max.tablet} {
@@ -52,7 +48,6 @@ const StyledEventItemNameLocationContainer = styled.div`
   }
 
   @media ${max.mobile} {
-    padding-top: 0;
     padding-left: 1em;
   } ;
 `;
@@ -65,23 +60,18 @@ const StyledEventTimeTopicContainer = styled.div`
   padding: 2em;
 
   @media ${max.tabletLg} {
-    padding-left: 0em;
+    padding-left: 0;
   }
 
   @media ${max.tablet} {
     display: flex;
-    padding-left: 1em;
+    padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
   }
 
-  @media ${max.tabletXs} {
-    padding-left: 1em;
-  }
-
   @media ${max.mobile} {
     display: flex;
-    padding-left: 1em;
     padding-right: 0;
     padding-bottom: 0.5em;
   } ;
@@ -114,9 +104,7 @@ const StyledEventitemLocation = styled(P)`
     padding-left: 0.5em;
   }
 
-  @media ${max.tablet} {
-    font-size: 1em;
-  }
+ 
 
   @media ${max.tabletSm} {
     padding-left: 0;
@@ -133,8 +121,6 @@ const StyledEventItemTime = styled(P)`
 
   @media ${max.tablet} {
     font-size: 1em;
-   
-
   }
 
   @media ${max.mobile} {
@@ -153,7 +139,6 @@ const StyledEventItemTopic = styled(P)`
 
   @media ${max.mobile} {
     font-size: 0.7em;
-    padding-left: 0.5em;
   } ;
 `;
 
@@ -182,7 +167,6 @@ const StyledArrow = styled.img`
   float: right;
 
   @media ${max.tabletLg} {
-    padding-top: 3em;
     padding-right: 2em;
   }
 
@@ -190,9 +174,7 @@ const StyledArrow = styled.img`
     display: none;
   }
 
-  @media ${max.tabletSm} {
-    display: none;
-  } ;
+ 
 `;
 
 export {
