@@ -43,10 +43,7 @@ const StyledEventItemNameLocationContainer = styled.div`
     padding-top: 0;
   }
 
-  @media ${max.tablet} {
-    padding-top: 0;
-  }
-
+ 
   @media ${max.mobile} {
     padding-left: 1em;
   } ;
@@ -65,14 +62,12 @@ const StyledEventTimeTopicContainer = styled.div`
 
   @media ${max.tablet} {
     display: flex;
-    padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
   }
 
   @media ${max.mobile} {
     display: flex;
-    padding-right: 0;
     padding-bottom: 0.5em;
   } ;
 `;
