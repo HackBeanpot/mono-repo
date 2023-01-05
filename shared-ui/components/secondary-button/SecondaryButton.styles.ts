@@ -28,15 +28,13 @@ const StyledSecondaryButtonWhiteText = styled.button`
   padding-right: 3em;
   padding-left: 3em;
   border-radius: 2em;
-  border: 1em solid; 
+  border: 0.1em solid; 
   cursor: pointer;
   border: none;
   font-size: 1em;
 
   @media ${max.tablet} {
     font-size: 0.8em;
-    padding-right: 2em;
-    padding-left: 2em;
   } ;
 `;
 
