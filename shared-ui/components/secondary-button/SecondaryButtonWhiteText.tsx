@@ -6,7 +6,7 @@ const SecondaryButtonWhiteText: React.FC<ButtonProps> = ({ btnText, btnLink }) =
   return (
     <a href={btnLink}>
       <StyledSecondaryButtonWhiteText>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {btnText} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        {btnText}
       </StyledSecondaryButtonWhiteText>
     </a>
   );
