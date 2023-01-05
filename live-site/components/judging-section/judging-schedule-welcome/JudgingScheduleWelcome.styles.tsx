@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
+import PrimaryButtonWide from '../../../../shared-ui/components/primary-button/PrimaryButtonWide';
 import { H2 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import { max } from '../../../../shared-ui/lib/responsive';
@@ -10,11 +10,8 @@ const StyledBackButtonContainer = styled.div`
   padding-left: 2em;
 `;
 
-const StyledBackButton = styled(PrimaryButton)`
+const StyledBackButton = styled(PrimaryButtonWide)`
   padding: 0.5em;
-  height: 5em;
-  font-size: 3em;
-  width: 4em;
 `;
 
 const StyledJudgingScheduleSection = styled.div`
