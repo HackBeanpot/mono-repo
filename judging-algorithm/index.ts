@@ -16,7 +16,8 @@ type HackerTeam = {
 const hackerTeamHeaders: Array<string> = ['Project Title', 'Will You Be Able To Give A Live Demo Of Your Project To Judges?'];
 
 type Room = {
-  name: string
+  name: string,
+  capacity: number;
 }
 // const roomHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
 
@@ -40,15 +41,38 @@ function parseHackerTeamCSV(hackerTeamCsvFilePath: string) {
   return parseCsv<HackerTeam>(hackerTeamCsvFilePath, hackerTeamHeaders);
 };
 
-function parseRoom(roomCsvFilePath: string) {
+function parseRoomsCSV(roomCsvFilePath: string) {
   return parseCsv<Room>(roomCsvFilePath, true);
 };
 
+function putJudgesInRooms() {
+  // in person judge count
+  // room count  
+  // randomly stick (room count / in person count) in to rooms
+}
+
+function putJudgesInRooms() {
+  // in person judge count
+  // room count  
+  // randomly stick (room count / in person count) in to rooms
+}
+
+// filters out any teams with submissions that they will not demo
+function getLiveDemoHackerTeams(allTeams: HackerTeam[]): HackerTeam[] {
+  return allTeams.filter(team => team.liveDemo);
+}
 
 function main() {
-  const filePaths: string[] = process.argv.slice(2)
-  const judgeCsvFilePath: string = filePaths[0]
-  const judCsvFilePath: string = filePaths[0]
-  parseJudgeCSV(judgeCsvFilePath)
-  parseJudgeCSV(filePaths[0])
+  const filePaths: string[] = process.argv.slice(2) 
+  const judgeCsvFilePath: string = filePaths[0];
+  const roomsCsvFilePath: string = filePaths[1];
+  const teamsCsvFilePath: string = filePaths[2];
+  
+  const allJudges = parseJudgeCSV(judgeCsvFilePath);
+  const allRooms = parseRoomsCSV(roomsCsvFilePath);
+  const allHackers = parseHackerTeamCSV(judgeCsvFilePath);
+
+  // filter out hacker teams doing live demo
+  getLiveDemoHackerTeams(allHackers);
+
 }
