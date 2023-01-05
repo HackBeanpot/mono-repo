@@ -40,7 +40,9 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
   transition-duration: 0.2s;
   transition-timing-function: linear;
   color: ${(StyledTabTitleWrapperProps): string =>
-    StyledTabTitleWrapperProps.isSelected ? `${colors.BLACK}` : `${colors.WHITE}`};
+    StyledTabTitleWrapperProps.isSelected
+      ? `${colors.BLACK}`
+      : `${colors.WHITE}`};
   background-color: ${(StyledTabTitleWrapperProps): string =>
     StyledTabTitleWrapperProps.isSelected
       ? `${colors.BUTTON_GREEN}`
@@ -55,7 +57,7 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
     margin: -0.1em;
     padding-right: 2em;
     box-shadow: none;
-    border-bottom:none;
+    border-bottom: none;
     padding-bottom: 0.12em;
   }
   @media (max-width: 338px) {

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { colors } from '../../style/colors';
 import { fonts } from '../../style/typography';
 import { min } from '../../lib/responsive';
+import { motion } from 'framer-motion';
 
-const StyledPrimaryButton = styled.button`
+const StyledPrimaryButton = styled(motion.button)`
   color: ${colors.HEADER_FOOTER_BLUE};
   background-color: ${colors.BUTTON_GREEN};
   border-color: ${colors.HEADER_FOOTER_BLUE};

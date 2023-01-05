@@ -58,5 +58,5 @@ export {
   StyledEventScheduleHeader,
   StyledEventScheduleSubText,
   StyledBoldSubText,
-  ButtonContainer,
+  ButtonContainer
 };
