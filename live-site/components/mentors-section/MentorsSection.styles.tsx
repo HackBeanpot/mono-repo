@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
-import { H3, StyledDropdown } from '../../../shared-ui/style/typography';
+import { H3 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
+import { StyledDropdown } from '../../styled-components/SecondarySelect.styles';
 
 const StyledMentorsSection = styled.div`
   padding-top: 5.5em;
