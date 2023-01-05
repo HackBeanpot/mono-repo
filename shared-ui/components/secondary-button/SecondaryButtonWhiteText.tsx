@@ -5,7 +5,9 @@ import { ButtonProps } from '../../lib/types';
 const SecondaryButtonWhiteText: React.FC<ButtonProps> = ({ btnText, btnLink }) => {
   return (
     <a href={btnLink}>
-      <StyledSecondaryButtonWhiteText>{btnText}</StyledSecondaryButtonWhiteText>
+      <StyledSecondaryButtonWhiteText>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {btnText} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      </StyledSecondaryButtonWhiteText>
     </a>
   );
 };
