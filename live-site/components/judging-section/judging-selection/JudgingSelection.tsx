@@ -6,8 +6,8 @@ const JudgingSelection: React.FC = () => {
     <StyledJudgingSelection>
       <StyledJudgingWelcomeHeader> Who are you? </StyledJudgingWelcomeHeader>
       <StyledPersonTypeSelectSection>
-        <StyledPersonTypeSelectButton btnText='       I am a judge       ' btnLink='/judging/judges' />
-        <StyledPersonTypeSelectButton btnText='       I am a hacker       ' btnLink='/judging/hackers' />
+        <StyledPersonTypeSelectButton btnText='I am a judge' btnLink='/judging/judges' />
+        <StyledPersonTypeSelectButton btnText='I am a hacker' btnLink='/judging/hackers' />
       </StyledPersonTypeSelectSection>
     </StyledJudgingSelection>
   );
