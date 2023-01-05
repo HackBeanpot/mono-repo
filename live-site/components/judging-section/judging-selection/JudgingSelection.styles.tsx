@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H2 } from '../../../../shared-ui/style/typography';
-import SecondaryButton from '../../../../shared-ui/components/secondary-button/SecondaryButton';
+import SecondaryButtonWhiteText from '../../../../shared-ui/components/secondary-button/SecondaryButtonWhiteText';
 
 const StyledJudgingSelection = styled.div`
   padding: 10em;
@@ -19,13 +19,9 @@ const StyledPersonTypeSelectSection = styled.div`
   justify-content: center;
 `;
 
-const StyledPersonTypeSelectButton = styled(SecondaryButton)`
-  width: 100%;
-  overflow: auto;
-  color: ${colors.WHITE};
-  border-color: ${colors.BUTTON_GREEN};
-  padding-right: 2em;
-  padding-left: 2em;
+const StyledPersonTypeSelectButton = styled(SecondaryButtonWhiteText)`
+  padding-right: 10em;
+  padding-left: 10em;
 `;
 
 export { 
