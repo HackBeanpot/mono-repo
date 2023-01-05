@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { EventScheduleTabProps } from '../../lib/types';
+import { eventItemInfo } from '../../../lib/data';
+import { EventScheduleTabProps } from '../../../lib/types';
+import EventItem from '../event-item/EventItem';
 
 import {
   StyledTabTitleWrapper,
@@ -7,7 +9,7 @@ import {
   StyledTabTitle,
   StyledTabContent,
   StyledTabContentContainer,
-  StyledEventScheduleTabContainer
+  StyledEventScheduleTabContainer,
 } from './EventScheduleTab.styles';
 
 const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
@@ -34,6 +36,7 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
       </StyledEventScheduleTabsContainer>
       <StyledTabContentContainer>
         <StyledTabContent>{tabs.tabs[activeTab].content}</StyledTabContent>
+        {eventItemInfo.map(curr => <EventItem eventItem={curr} />)}
       </StyledTabContentContainer>
     </StyledEventScheduleTabContainer>
   );

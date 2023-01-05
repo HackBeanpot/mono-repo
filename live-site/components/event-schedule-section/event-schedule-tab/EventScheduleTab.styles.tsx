@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { max } from '../../../shared-ui/lib/responsive';
-import { colors } from '../../../shared-ui/style/colors';
-import { P } from '../../../shared-ui/style/typography';
-import { StyledTabTitleWrapperProps } from '../../lib/types';
+import { max } from '../../../../shared-ui/lib/responsive';
+import { colors } from '../../../../shared-ui/style/colors';
+import { P } from '../../../../shared-ui/style/typography';
+import { StyledTabTitleWrapperProps } from '../../../lib/types';
 
 const StyledEventScheduleTabsContainer = styled.div`
   text-align: center;
   margin-left: 5em;
   margin-right: 0em;
   border-radius: 0.75em;
-  height: 35em;
+  height: 50em;
   margin-top: 0em;
   border-left: none;
   @media ${max.tablet} {
@@ -47,7 +47,7 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
     StyledTabTitleWrapperProps.isSelected
       ? `${colors.BUTTON_GREEN}`
       : `${colors.BUTTON_DARK_GREEN}`};
-  height: 12.42em;
+  height: 16em;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media ${max.tablet} {
@@ -71,22 +71,27 @@ const StyledTabContent = styled(P)`
   padding-left: 1em;
   padding-top: 0.5em;
   color: ${colors.BLACK};
+  
 `;
 const StyledTabContentContainer = styled.div`
   background-color: ${colors.BUTTON_GREEN};
-  height: 37em;
+  height: 47.7em;
   width: 100%;
   margin-right: 5em;
   border: 2px solid ${colors.HEADER_FOOTER_BLUE};
   border-left: none;
   border-radius: 0px 0.75em 0.75em 0em;
+
   @media ${max.tablet} {
     margin-left: 2em;
     width: auto;
     border-left: 2px solid ${colors.HEADER_FOOTER_BLUE};
     margin-right: 2em;
     border-radius: 0em 0.75em 0em 0em;
+    
   } ;
+  overflow: scroll
+
 `;
 const StyledEventScheduleTabContainer = styled.div`
   display: flex;
