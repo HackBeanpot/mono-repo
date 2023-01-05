@@ -6,8 +6,10 @@ import { P } from '../../../shared-ui/style/typography';
 const StyledWelcomeSectionContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-conetnt: center;
   @media ${max.tablet} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -18,7 +20,7 @@ const StyledRaceContainer = styled.div`
   border-radius: 1.5em;
   margin: 1.3em;
   @media ${max.tablet} {
-    width: 22em;
+    width: 90%;
   }
 `;
 
@@ -27,18 +29,17 @@ const StyledWelcomeSectionContent = styled.div`
   flex-direction: column;
   width: 35.5em;
   @media ${max.tablet} {
-    width: 22em;
+    width: 90%;
   }
 `;
 
 const StyledWelcomeText = styled(P)`
   color: ${colors.TEXT_BROWN};
-  margin-left: 4.25em;
   white-space: pre-wrap;
 `;
 
 const StyledButtonContainer = styled.div`
-  margin: 2em 0 0 4.75em;
+  margin: 2em 0 0 0;
 `;
 
 export {
