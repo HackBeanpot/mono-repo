@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyledPrimaryButton } from './PrimaryButton.styles';
 import { ButtonProps } from '../../lib/types';
+import { buttonAnimations } from './PrimaryButton.animations';
 
 const PrimaryButton: React.FC<ButtonProps> = ({
   btnText,
@@ -32,7 +33,13 @@ const PrimaryButton: React.FC<ButtonProps> = ({
 
   return (
     <a href={btnLink} target={newTab ? '_blank' : '_self'}>
-      <StyledPrimaryButton>{btnText}</StyledPrimaryButton>
+      <StyledPrimaryButton
+        whileHover="hover"
+        whileTap="tap"
+        variants={buttonAnimations}
+      >
+        {btnText}
+      </StyledPrimaryButton>
     </a>
   );
 };
