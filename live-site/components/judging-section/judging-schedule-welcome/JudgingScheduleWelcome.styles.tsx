@@ -12,6 +12,8 @@ const StyledBackButtonContainer = styled.div`
 const StyledBackButton = styled(PrimaryButton)`
   padding: 0.5em;
   height: 5em;
+  font-size: 3em;
+  width: 4em;
 `;
 
 const StyledJudgingScheduleSection = styled.div`
