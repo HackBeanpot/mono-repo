@@ -6,7 +6,8 @@ import { P } from '../../../shared-ui/style/typography';
 const StyledWelcomeSectionContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-conetnt: center;
+  justify-content: center;
+  margin: 1.3em;
   @media ${max.tablet} {
     flex-direction: column;
     align-items: center;
@@ -18,8 +19,9 @@ const StyledRaceContainer = styled.div`
   width: 40em;
   height: 28.5em;
   border-radius: 1.5em;
-  margin: 1.3em;
+  margin: 1.3em 0 1.3em 1.3em;
   @media ${max.tablet} {
+    margin: 1.3em 0 0 0;
     width: 90%;
   }
 `;
@@ -40,6 +42,9 @@ const StyledWelcomeText = styled(P)`
 
 const StyledButtonContainer = styled.div`
   margin: 2em 0 0 0;
+  @media ${max.tablet} {
+    align-self: center;
+  }
 `;
 
 export {
