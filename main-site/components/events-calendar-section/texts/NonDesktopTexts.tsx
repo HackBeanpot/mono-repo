@@ -3,6 +3,7 @@ import {
   EventsHeader,
   EventsSubHeader,
   StyledEventsBox,
+  StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer
@@ -11,7 +12,7 @@ import {
 const NonDesktopTexts: React.FC = () => {
   return (
     <>
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <TextLeftContainer>
             <EventsHeader>
@@ -29,9 +30,9 @@ const NonDesktopTexts: React.FC = () => {
             Shillman Hall 210
           </EventsLocationP>
         </StyledTextContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
 
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <EventsHeader>
             MiniHacks Workshop #2 <br />
@@ -39,7 +40,7 @@ const NonDesktopTexts: React.FC = () => {
             Intro to React.js
           </EventsHeader>
         </StyledTextContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
 
       <StyledEventsBox>
         <StyledTextContainer>
