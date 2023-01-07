@@ -42,7 +42,7 @@ export const FaqSectionData: FaqData[] = [
     id: 3,
     question: 'When and where is HackBeanpot 2023?',
     answer:
-      'The location of HackBeanpot 2023 will be announced by the time registration is opened on November 22nd. The venue will be in Boston and we ask that all hackers review and abide by the Code of Conduct during the event.'
+      'HackBeanpot 2023 will take place on February 10th-12th at the Wood Mackenzie (formerly known as Power Advocate) office building at 179 Lincoln St, Boston, MA, 02111!  We are so excited to be back in person for the first time since 2020, and we ask that all hackers review and abide by the Code of Conduct during the event.'
   },
   {
     id: 4,
