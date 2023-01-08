@@ -22,49 +22,51 @@ const MentorsSection: React.FC = () => {
   );
 
   return (
-    <StyledMentorsSection>
-      <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-      <StyledMentorsDropdownContainer>
-        <StyledMentorsDropdownWrapper id="position-filter">
-          {positionsArr.map((currPosition: string) => (
-            <option value={currPosition}>{currPosition}</option>
-          ))}
-        </StyledMentorsDropdownWrapper>
-      </StyledMentorsDropdownContainer>
-      {isMobile && <br />}
-      <StyledMentorsDropdownContainer>
-        <StyledMentorsDropdownWrapper id="company-filter">
-          {companiesArr.map((currCompany: string) => (
-            <option value={currCompany}>{currCompany}</option>
-          ))}
-        </StyledMentorsDropdownWrapper>
-      </StyledMentorsDropdownContainer>
-      <StyledMentorsFilterRadio>
-        <input
-          type="radio"
-          id="onShiftMentors"
-          name="mentors_filter"
-          value="Mentors on shift now"
-        />
-        <label htmlFor="onShiftMentors">Mentors on shift now</label>
-        <br />
-        <input
-          type="radio"
-          id="allMentors"
-          name="mentors_filter"
-          value="All mentors"
-        />
-        <label htmlFor="allMentors">All mentors</label>
-        <br />
-      </StyledMentorsFilterRadio>
-      {data.map((currMentor) => (
-        <>
-          <p>{currMentor.fields.company}</p>
-          <p>{currMentor.fields.name}</p>
-          <p>{currMentor.fields.position}</p>
-        </>
-      ))}
-    </StyledMentorsSection>
+    <div id='mentors'>
+      <StyledMentorsSection>
+        <StyledMentorsHeader> Mentors </StyledMentorsHeader>
+        <StyledMentorsDropdownContainer>
+          <StyledMentorsDropdownWrapper id="position-filter">
+            {positionsArr.map((currPosition: string) => (
+              <option value={currPosition}>{currPosition}</option>
+            ))}
+          </StyledMentorsDropdownWrapper>
+        </StyledMentorsDropdownContainer>
+        {isMobile && <br />}
+        <StyledMentorsDropdownContainer>
+          <StyledMentorsDropdownWrapper id="company-filter">
+            {companiesArr.map((currCompany: string) => (
+              <option value={currCompany}>{currCompany}</option>
+            ))}
+          </StyledMentorsDropdownWrapper>
+        </StyledMentorsDropdownContainer>
+        <StyledMentorsFilterRadio>
+          <input
+            type="radio"
+            id="onShiftMentors"
+            name="mentors_filter"
+            value="Mentors on shift now"
+          />
+          <label htmlFor="onShiftMentors">Mentors on shift now</label>
+          <br />
+          <input
+            type="radio"
+            id="allMentors"
+            name="mentors_filter"
+            value="All mentors"
+          />
+          <label htmlFor="allMentors">All mentors</label>
+          <br />
+        </StyledMentorsFilterRadio>
+        {data.map((currMentor) => (
+          <>
+            <p>{currMentor.fields.company}</p>
+            <p>{currMentor.fields.name}</p>
+            <p>{currMentor.fields.position}</p>
+          </>
+        ))}
+      </StyledMentorsSection>
+    </div>
   );
 };
 

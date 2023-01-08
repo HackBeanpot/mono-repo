@@ -20,11 +20,13 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <StyledHeader isOpen={isOpen} isDay={isDay}>
-      <StyledHackBeanpotLogo
-        src={HackBeanpotWhiteLogo}
-        alt="White HackBeanpot Logo"
-        width={190}
-      />
+      <a href="/">
+        <StyledHackBeanpotLogo
+          src={HackBeanpotWhiteLogo}
+          alt="White HackBeanpot Logo"
+          width={190}
+        />
+      </a>
 
       {!isDesktop && !isOpen && (
         <StyledHamburgerIcon
