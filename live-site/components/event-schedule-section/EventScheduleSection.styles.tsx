@@ -47,7 +47,6 @@ const ButtonContainer = styled.div`
   margin-left: auto;
   margin-right: 0;
   @media ${max.tablet} {
-    scale: 0.7;
     padding-bottom: 4em;
   } ;
 `;
@@ -58,5 +57,5 @@ export {
   StyledEventScheduleHeader,
   StyledEventScheduleSubText,
   StyledBoldSubText,
-  ButtonContainer,
+  ButtonContainer
 };

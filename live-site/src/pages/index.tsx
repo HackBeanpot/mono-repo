@@ -12,17 +12,31 @@ import ComingUpSection from '../../components/coming-up/ComingUp';
 import useMatchMedia from 'react-use-match-media';
 import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
+import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
+import WelcomeSection from '../../components/welcome-section/WelcomeSection';
+
+const handleMode = (): boolean => {
+  const currentHour = new Date().getHours();
+  return 6 <= currentHour && currentHour < 18;
+};
 
 const IndexPage: React.FC = () => {
+  const [isDay, setIsDay] = useState<boolean>(handleMode());
   const isDesktop = useMatchMedia(min.tabletLg);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getBackgroundClassName = (): string => {
-    if (isDesktop) {
+    if (isDay && isDesktop) {
       return 'day-background-desktop';
     }
-    return 'mobile-light-background';
+    if (isDay && !isDesktop) {
+      return 'mobile-light-background';
+    }
+    if (!isDay && isDesktop) {
+      return 'dark-background-desktop';
+    }
+    return 'mobile-dark-background';
   };
 
   useEffect(() => {
@@ -36,10 +50,12 @@ const IndexPage: React.FC = () => {
   return (
     <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={liveSiteTabInfo} isDay={true} />
+      <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
       <ComingUpSection />
+      <WelcomeSection />
       <EventScheduleSection />
       <ResourcesSection />
       <MeetTheTeamSection />

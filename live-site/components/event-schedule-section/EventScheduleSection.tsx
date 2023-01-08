@@ -10,7 +10,7 @@ import {
   ButtonContainer,
   EventScheduleTextButtonContainer
 } from './EventScheduleSection.styles';
-import EventScheduleTab from './EventScheduleTab';
+import EventScheduleTab from './event-schedule-tab/EventScheduleTab';
 
 const EventScheduleSection: React.FC = () => {
   return (
@@ -30,13 +30,11 @@ const EventScheduleSection: React.FC = () => {
           </StyledBoldSubText>
         </StyledEventScheduleSubText>
         <ButtonContainer>
-          <PrimaryButton
-            btnText="Add to Calendar +"
-            btnLink=""
-          ></PrimaryButton>
+          <PrimaryButton btnText="Add to Calendar +" btnLink=""></PrimaryButton>
         </ButtonContainer>
       </EventScheduleTextButtonContainer>
       <EventScheduleTab tabs={mockData}></EventScheduleTab>
+      
     </EventScheduleSectionContainer>
     </div>
   );

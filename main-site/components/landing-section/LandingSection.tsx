@@ -4,37 +4,23 @@ import {
   StyledThemeText,
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
-  StyledToggle,
   StyledLandingTextContainer,
   StyledStar
 } from './LandingSection.styles';
-import Toggle from '../../../shared-ui/images/toggle-day-dark.svg';
-import ToggleDay from '../../../shared-ui/images/toggle-day-light.svg';
+import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
-import { sunRays } from './LandingSection.animations';
+import { moonRock, sunRays } from './LandingSection.animations';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledLandingSectionContainer>
-      {isDay ? (
-        <StyledToggle
-          src={ToggleDay}
-          alt="toggle-day"
-          onClick={(): void => setIsDay(!isDay)}
-        />
-      ) : (
-        <StyledToggle
-          src={Toggle}
-          alt="toggle-day-night"
-          onClick={(): void => setIsDay(!isDay)}
-        />
-      )}
+      <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
       {isDay ? (
         <StyledStar animate="animate" variants={sunRays} src={Sun} />
       ) : (
-        <StyledStar src={Moon} />
+        <StyledStar animate="animate" variants={moonRock} src={Moon} />
       )}
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
