@@ -22,7 +22,7 @@ const MentorsSection: React.FC = () => {
   );
 
   return (
-    <div>
+    <div id='mentors'>
       <StyledMentorsSection>
         <StyledMentorsHeader> Mentors </StyledMentorsHeader>
         <StyledMentorsDropdownContainer>
