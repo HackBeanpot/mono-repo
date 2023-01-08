@@ -15,6 +15,7 @@ import MentorsSection from '../../components/mentors-section/MentorsSection';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
+import WelcomeSection from '../../components/welcome-section/WelcomeSection';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
@@ -56,6 +57,7 @@ const IndexPage: React.FC = () => {
       )}
       <Background isDay={true} />
       <ComingUpSection />
+      <WelcomeSection />
       <EventScheduleSection />
       <ResourcesSection />
       <MeetTheTeamSection />
