@@ -4,7 +4,7 @@ import { colors } from '../../../../shared-ui/style/colors';
 import { H2 } from '../../../../shared-ui/style/typography';
 
 const StyledJudgingSelection = styled.div`
-  padding: 10em;
+  padding: 10em 0;
   justify-content: center;
 `;
 
@@ -21,7 +21,6 @@ const StyledPersonTypeSelectSection = styled.div`
 
 const StyledJudgeButton = styled.div`
   padding-right: 6em;
-
   @media ${max.tabletSm} {
     padding-right: 3em;
   }
@@ -29,7 +28,6 @@ const StyledJudgeButton = styled.div`
 
 const StyledHackerButton = styled.div`
   padding-left: 6em;
-
   @media ${max.tabletSm} {
     padding-left: 3em;
   }

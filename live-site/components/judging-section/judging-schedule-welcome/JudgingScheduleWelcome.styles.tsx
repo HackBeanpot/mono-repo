@@ -16,8 +16,6 @@ const StyledBackButton = styled(PrimaryButtonWide)`
 
 const StyledJudgingScheduleSection = styled.div`
   padding-top: 3em;
-  padding-left: 10em;
-  padding-right: 10em;
   padding-bottom: 20em;
   justify-content: center;
   flex: none;
@@ -35,11 +33,9 @@ const StyledJudgesDropdownContainer = styled.div`
 
 const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
   width: 19em;
-
   @media ${max.tabletSm} {
     width: 15em;
   }
-
   @media ${max.mobile} {
     width: 12em;
   }
