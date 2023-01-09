@@ -5,6 +5,8 @@ export interface ButtonProps {
   btnLink?: string;
   newTab?: boolean;
   onClick?: MouseEventHandler;
+  isSmallPrimary?: boolean;
+  isJudgingSecondary?: boolean;
 }
 
 export interface DropdownProps {
