@@ -1,5 +1,5 @@
 import React from 'react';
-import SecondaryButtonWhiteText from '../../../../shared-ui/components/secondary-button/SecondaryButtonWhiteText';
+import SecondaryButton from '../../../../shared-ui/components/secondary-button/SecondaryButton';
 import { StyledJudgingSelection, StyledJudgingWelcomeHeader, StyledJudgeButton, StyledHackerButton, StyledPersonTypeSelectSection } from './JudgingSelection.styles';
 
 const JudgingSelection: React.FC = () => {
@@ -8,10 +8,10 @@ const JudgingSelection: React.FC = () => {
       <StyledJudgingWelcomeHeader> Who are you? </StyledJudgingWelcomeHeader>
       <StyledPersonTypeSelectSection>
         <StyledJudgeButton>
-          <SecondaryButtonWhiteText btnText='I am a judge' btnLink='/judging/judges' />
+          <SecondaryButton btnText='I am a judge' btnLink='/judging/judges' />
         </StyledJudgeButton>
         <StyledHackerButton>
-          <SecondaryButtonWhiteText btnText='I am a hacker' btnLink='/judging/hackers' />
+          <SecondaryButton btnText='I am a hacker' btnLink='/judging/hackers' />
         </StyledHackerButton>        
       </StyledPersonTypeSelectSection>
     </StyledJudgingSelection>

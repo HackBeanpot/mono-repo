@@ -2,10 +2,12 @@ import React from 'react';
 import { StyledSecondaryButton } from './SecondaryButton.styles';
 import { ButtonProps } from '../../lib/types';
 
-const SecondaryButton: React.FC<ButtonProps> = ({ btnText, btnLink, isJudgingSecondary? }) => {
+const SecondaryButton: React.FC<ButtonProps> = ({ btnText, btnLink, isJudgingSecondary = false, }) => {
   return (
     <a href={btnLink}>
-      <StyledSecondaryButton isJudgingSecondary={isJudgingSecondary}>{btnText}</StyledSecondaryButton>
+      <StyledSecondaryButton isJudgingSecondary={isJudgingSecondary}>
+        {btnText}
+      </StyledSecondaryButton>
     </a>
   );
 };

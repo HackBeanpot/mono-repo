@@ -1,5 +1,13 @@
 import { MouseEventHandler } from 'react';
 
+export interface StyledPrimaryButtonProps {
+  isSmall: boolean | undefined;
+}
+
+export interface StyledSecondaryButtonProps {
+  isJudgingSecondary: boolean | undefined;
+}
+
 export interface ButtonProps {
   btnText: string;
   btnLink?: string;
