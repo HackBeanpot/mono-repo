@@ -8,7 +8,7 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({ schedul
   return (
     <div>
       <StyledBackButtonContainer> 
-        <StyledBackButton btnText='back' btnLink='../' /> 
+        <StyledBackButton btnText='back' btnLink='../judging' /> 
       </StyledBackButtonContainer>
       <StyledJudgingScheduleSection>
         <StyledWelcomePerson> Welcome, {schedulePersonType}! </StyledWelcomePerson>
