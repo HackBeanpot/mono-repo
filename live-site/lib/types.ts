@@ -43,3 +43,10 @@ export interface EventItem {
 export interface EventItemProps {
   eventItem : EventItem;
 }
+
+export interface MentorInfo {
+  name: string;
+  company: string;
+  position: string;
+  imageUrl: string;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useMatchMedia from 'react-use-match-media';
 import { max } from '../../../shared-ui/lib/responsive';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
@@ -9,16 +9,25 @@ import {
   StyledMentorsDropdownWrapper,
   StyledMentorsHeader
 } from './MentorsSection.styles';
+import { MentorInfo } from '../../lib/types';
 
 const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tabletLg);
 
   const { data } = useAirtableApi('Mentors', 'mentors');
+  const [mentors, setMentors] = useState<MentorInfo[]>(data.map((mentor) => {
+    return {
+      name: mentor.fields.name,
+      company: mentor.fields.company,
+      position: mentor.fields.position,
+      imageUrl: mentor.fields.image[0].url
+    }
+  }))
   const positionsArr = Array.from(
-    new Set(data.map((mentor) => `Position: ${mentor.fields.position}`))
+    new Set(mentors.map((mentor) => `Position: ${mentor.position}`))
   );
   const companiesArr = Array.from(
-    new Set(data.map((mentor) => `Company: ${mentor.fields.company}`))
+    new Set(mentors.map((mentor) => `Company: ${mentor.company}`))
   );
 
   return (
@@ -45,6 +54,9 @@ const MentorsSection: React.FC = () => {
           id="onShiftMentors"
           name="mentors_filter"
           value="Mentors on shift now"
+          onClick={(e): void => {
+            console.log(e)
+          }}
         />
         <label htmlFor="onShiftMentors">Mentors on shift now</label>
         <br />
@@ -57,11 +69,12 @@ const MentorsSection: React.FC = () => {
         <label htmlFor="allMentors">All mentors</label>
         <br />
       </StyledMentorsFilterRadio>
-      {data.map((currMentor) => (
+      {mentors.map((currMentor) => (
         <>
-          <p>{currMentor.fields.company}</p>
-          <p>{currMentor.fields.name}</p>
-          <p>{currMentor.fields.position}</p>
+          <p>{currMentor.company}</p>
+          <p>{currMentor.name}</p>
+          <p>{currMentor.position}</p>
+          <img width="140" height="140" alt={`Image of ${currMentor.name}`} src={currMentor.imageUrl}></img>
         </>
       ))}
     </StyledMentorsSection>
