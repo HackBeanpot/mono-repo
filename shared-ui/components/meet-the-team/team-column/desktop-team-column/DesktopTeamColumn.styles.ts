@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import { max } from '../../../../lib/responsive';
-import { StyledTeamLabelProps } from '../../../../lib/types';
-import { colors } from '../../../../style/colors';
-import { P } from '../../../../style/typography';
 
 const StyledTeamColumn = styled.div`
   flex-direction: column;
@@ -11,18 +8,6 @@ const StyledTeamColumn = styled.div`
     width: 9.5em;
   }
 `;
-
-const StyledLabel = styled(P)<StyledTeamLabelProps>`
-  padding-left: 0.5em;
-  width: 8em;
-  margin-bottom: ${(props): string => (props.twoLines ? '-1.2em' : '0')};
-  color: ${colors.TEXT_BROWN};
-  letter-spacing: 0.1em;
-  @media ${max.tabletLg} {
-    padding-left: 0;
-  }
-`;
-
 const StyledHeadshot = styled.img`
   padding-top: 2em;
   width: 8.5em;
@@ -41,4 +26,4 @@ const StyledHeadshot = styled.img`
   }
 `;
 
-export { StyledTeamColumn, StyledLabel, StyledHeadshot };
+export { StyledTeamColumn, StyledHeadshot };
