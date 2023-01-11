@@ -3,7 +3,10 @@ import { max } from '../../../../lib/responsive';
 
 const StyledTeamColumn = styled.div`
   flex-direction: column;
-  width: 11em;
+  width: 14em;
+  @media ${max.desktop} {
+    width: 11em;
+  }
   @media ${max.tabletLg} {
     width: 9.5em;
   }
