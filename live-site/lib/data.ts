@@ -1,16 +1,13 @@
 import { TabInfo, EventItem } from './types';
 
-
 const liveSiteTabInfo: TabInfo[] = [
-  { name: 'Schedule', link: '#schedule' },
-  { name: 'Mentors', link: '#mentors' },
-  { name: 'Challenges', link: '#challenges' },
-  { name: 'Resources', link: '#resources' },
-  { name: 'Team', link: '#team' }
+  { name: 'Schedule', link: '/#schedule' },
+  { name: 'Mentors', link: '/#mentors' },
+  { name: 'Challenges', link: '/#challenges' },
+  { name: 'Resources', link: '/#resources' },
+  { name: 'Team', link: '/#team' },
+  { name: 'Judging', link: '/judging' }
 ];
-
-
-
 
 interface TimeLeft {
   timeType: string;
@@ -40,15 +37,4 @@ const eventItemInfo: EventItem[] = [
     eventLocation: 'Workshop Zone B'},
 ];
 
-
-
-
-
-
-
-
-
-
-
 export { liveSiteTabInfo, TimeLeft,eventItemInfo };
-

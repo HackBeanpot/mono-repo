@@ -1,10 +1,20 @@
 import { MouseEventHandler } from 'react';
 
+export interface StyledPrimaryButtonProps {
+  isSmall: boolean | undefined;
+}
+
+export interface StyledSecondaryButtonProps {
+  isJudgingSecondary: boolean | undefined;
+}
+
 export interface ButtonProps {
   btnText: string;
   btnLink?: string;
   newTab?: boolean;
   onClick?: MouseEventHandler;
+  isSmallPrimary?: boolean;
+  isJudgingSecondary?: boolean;
 }
 
 export interface DropdownProps {
