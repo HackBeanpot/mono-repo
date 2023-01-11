@@ -8,7 +8,6 @@ const StyledMobileTeamColumn = styled.div`
 const LabelArrowContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-right: 0.5em;
 `;
 
 const MobileImageContainer = styled.div`
@@ -32,10 +31,18 @@ const StyledImageRow = styled.div`
   justify-content: center;
 `;
 
+const StyledSecondaryButtonWrapper = styled.div`
+  margin: 0 2em;
+  @media ${max.tabletSm} {
+    margin: 0 1em;
+  }
+`;
+
 export {
   LabelArrowContainer,
   MobileImageContainer,
   StyledMobileTeamColumn,
   StyledImageRow,
-  StyledHeadshot
+  StyledHeadshot,
+  StyledSecondaryButtonWrapper
 };
