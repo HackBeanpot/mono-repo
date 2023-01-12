@@ -15,23 +15,23 @@ const StyledJudgingWelcomeHeader = styled(H2)`
 `;
 
 const StyledPersonTypeSelectSection = styled.div`
-  justify-content: center;
   @media ${min.tablet} {
     display: flex;  
+    justify-content: center;
   }
 `;
 
 const StyledJudgeButton = styled.div`
   padding-right: 6em;
   @media ${max.tabletSm} {
-    padding-right: 3em;
+    margin: auto;
   }
 `;
 
 const StyledHackerButton = styled.div`
   padding-left: 6em;
   @media ${max.tabletSm} {
-    padding-left: 3em;
+    margin: auto;
   }
 `;
 
