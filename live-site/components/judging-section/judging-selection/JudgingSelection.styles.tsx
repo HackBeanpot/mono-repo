@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max } from '../../../../shared-ui/lib/responsive';
+import { min, max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H2 } from '../../../../shared-ui/style/typography';
 
@@ -15,8 +15,10 @@ const StyledJudgingWelcomeHeader = styled(H2)`
 `;
 
 const StyledPersonTypeSelectSection = styled.div`
-  display: flex;
   justify-content: center;
+  @media ${min.tablet} {
+    display: flex;  
+  }
 `;
 
 const StyledJudgeButton = styled.div`
