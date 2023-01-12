@@ -9,10 +9,21 @@ export type HackerTeam = {
   name: string;
   liveDemo: boolean;
 }
-const hackerTeamHeaders: Array<string> = ['Project Title', 'Will You Be Able To Give A Live Demo Of Your Project To Judges?'];
+export const hackerTeamHeaders: Array<string> = ['Project Title', 'Will You Be Able To Give A Live Demo Of Your Project To Judges?'];
 
 export type Room = {
   name: string,
   capacity: number;
 }
+
+export type JudgeOutput = {
+  judge: string, 
+  time: string,
+  project: string, 
+  devPostLink: string, 
+  inPersonDemo: boolean, 
+  room: string
+}
+
+
 // const roomHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];

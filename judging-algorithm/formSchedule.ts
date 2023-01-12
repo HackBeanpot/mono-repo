@@ -1,7 +1,14 @@
-import { HackerTeam, Judge, Room } from "./types";
+import { HackerTeam, Judge, JudgeOutput, Room } from "./types";
 
 // driver code, takes parsed values and creates random assignments 
-function sortJudgesAndPeople(allTimes: string[], allJudgingRooms: Room[], unassignedTeams: HackerTeam[], unassignedJudges: Judge[]) {
+// the judges and hacker teams it take in have already been filtered, and rooms have been filtered for capacity
+
+function sortJudgesAndPeople(allTimes: string[], rooms: Room[], unassignedTeams: HackerTeam[], judges: Judge[]) {
+  let judgesTable: JudgeOutput[] = []
+  // Judge -> judge name
+  let unassignedJudges: string[] = judges.map(judge=>judge.name)
+  let allJudgingRooms: string[] = rooms.map(room=>room.name)
+  
 
   // judges assignment
   judgesPerRoom: int = unassignedJudges.length / allJudgingRooms.length;
@@ -14,7 +21,8 @@ function sortJudgesAndPeople(allTimes: string[], allJudgingRooms: Room[], unassi
       judgeToAssign = unassignedJudges.pop(judgeToAssignIdx);
       judgesInCurRoom++;
 
-      assignJudgeToRoom(judgeToAssign, roomIdx);
+      const newJudge: JudgeOutput = assignJudgeToRoom(judgeToAssign, roomIdx);
+      judgesTable.push(newJudge)
     }
   }
 
@@ -22,15 +30,23 @@ function sortJudgesAndPeople(allTimes: string[], allJudgingRooms: Room[], unassi
   while (unassignedTeams.length > 0) {
     const timeSlot: string = getNextTime();
     availableRooms = this.deepArrayCopy(allJudgingRooms);
-    while (availableRooms.length() > 0 && unassignedTeams.length > 0) {
-      const teamToAssignIdx = Math.floor(Math.random() * unassignedTeams.length + 1);
-      const teamToAssign = unassignedTeams.pop(teamToAssignIdx);
-
-      const roomToAssignToIdx = Math.floor(Math.random() * availableRooms.length() + 1);
-      const roomToAssignTo = availableRooms.pop(roomToAssignToIdx);
-
+    for (int i = 0; i < numRoomsPerSlot; i++) {
+      if (unassignedTeams.length == 0) {
+        break;
+      }
+      teamToAssign = unassignedTeams.pop()
+      roomToAssignTo = availableRooms.pop(i);
       assignTeamToTime(timeSlot, teamsToAssign, roomToAssignTo);
-    }
+    }  
+    // while (availableRooms.length() > 0 && unassignedTeams.length() > 0) {
+    //   teamToAssignIdx = Math.floor(Math.random() * unassignedTeams.length() + 1);
+    //   teamToAssign = unassignedTeams.pop(teamToAssignIdx);
+
+    //   roomToAssignToIdx = Math.floor(Math.random() * availableRooms.length() + 1);
+    //   roomToAssignTo = availableRooms.pop(roomToAssignToIdx);
+
+    //   assignTeamToTime(timeSlot, teamsToAssign, roomToAssignTo);
+    // }
   }
 }
 
@@ -42,8 +58,14 @@ assignTeamToTime(timeSlot: string, teamToAssign: Team, roomToAssignTo: Room) {
 
 }
 
-assignJudgeToRoom(timeSlot: string, teamsToAssign, roomToAssignTo) {
-
+function assignJudgeToRoom(judge: string, room: string) {
+  const newJudge: JudgeOutput = {
+    room: room,
+    judge: judge,
+    time: "",
+    project: "",
+    devPostLink: "",
+    inPersonDemo: false
+  }
+  return newJudge
 }
-
-
