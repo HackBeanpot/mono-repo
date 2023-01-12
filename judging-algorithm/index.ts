@@ -1,49 +1,24 @@
 import * as fs from "fs";
 import * as path from "path";
-import { parse } from 'csv-parse/sync';
+import { parseHackerTeamCSV, parseJudgeCSV, parseRoomsCSV } from "./parser";
 import { HackerTeam, Judge, Room } from "./types";
 
-function parseCsv<T> (csvFilePath: string, headers: string[] | boolean): T[] {
-  const csvFileAbsolutePath = path.resolve(__dirname, csvFilePath);
-
-  const fileContent = fs.readFileSync(csvFileAbsolutePath, { encoding: 'utf-8' });
-
-  const options = {
-    delimiter: ',',
-    columns: headers,
-  };
-  return parse(fileContent, options);
-};
-
-function parseJudgeCSV(judgeCsvFilePath: string) {
-  return parseCsv<Judge>(judgeCsvFilePath, true);
-};
-
-function parseHackerTeamCSV(hackerTeamCsvFilePath: string) {
-  return parseCsv<HackerTeam>(hackerTeamCsvFilePath, true);
-};
-
-function parseRoomsCSV(roomCsvFilePath: string) {
-  return parseCsv<Room>(roomCsvFilePath, true);
-};
-
-// filters out any teams with submissions that they will not demo
-function getLiveDemoHackerTeams(allTeams: HackerTeam[]): HackerTeam[] {
-  return allTeams.filter(team => team.liveDemo);
-}
-
-function main() {
+function main(): void {
+  // get 3 CSV's as arguments
   const filePaths: string[] = process.argv.slice(2) 
   const judgeCsvFilePath: string = filePaths[0];
   const roomsCsvFilePath: string = filePaths[1];
   const teamsCsvFilePath: string = filePaths[2];
   
-  const allJudges = parseJudgeCSV(judgeCsvFilePath);
-  const allRooms = parseRoomsCSV(roomsCsvFilePath);
-  const allHackers = parseHackerTeamCSV(judgeCsvFilePath);
-
+  // parse the input CSVs in to TS objects
+  const allJudges: Judge[] = parseJudgeCSV(judgeCsvFilePath);
+  const allRooms: Room[] = parseRoomsCSV(roomsCsvFilePath);
+  const allHackers: HackerTeam[] = parseHackerTeamCSV(teamsCsvFilePath);
+  
   // filter out hacker teams doing live demo
-  getLiveDemoHackerTeams(allHackers);
+  allHackers.filter(team => team.liveDemo);
 
+  // may have to change based on hackathon needs
+  const allTimes: string[] = ['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45'];
   sortJudgesAndPeople(allTimes, allRooms, allHackers, allJudges);
 }

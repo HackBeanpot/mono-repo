@@ -1,23 +1,16 @@
-
-// hardcode based on hackathon needs
-let allTimes: string[] = ['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45'];
-
-// obtained by CSV parsing
-const allJudgingRooms: Room[] = [];
-let unassignedTeams: HackerTeam[] = [];
-let unassignedJudges: HackerTeam[] = [];
+import { HackerTeam, Judge, Room } from "./types";
 
 // driver code, takes parsed values and creates random assignments 
 function sortJudgesAndPeople(allTimes: string[], allJudgingRooms: Room[], unassignedTeams: HackerTeam[], unassignedJudges: Judge[]) {
 
   // judges assignment
-  judgesPerRoom: int = unassignedJudges.length() / allJudgingRooms.length();
+  judgesPerRoom: int = unassignedJudges.length / allJudgingRooms.length;
   roomIdx: int = -1;
   while (unassignedJudges.length > 0) {
     roomIdx++;
     judgesInCurRoom: int = 0;
     while (judgesInCurRoom < judgesPerRoom) {
-      judgeToAssignIdx = Math.floor(Math.random() * unassignedJudges.length() + 1);
+      judgeToAssignIdx = Math.floor(Math.random() * unassignedJudges.length + 1);
       judgeToAssign = unassignedJudges.pop(judgeToAssignIdx);
       judgesInCurRoom++;
 
@@ -27,21 +20,21 @@ function sortJudgesAndPeople(allTimes: string[], allJudgingRooms: Room[], unassi
 
   // people assignment
   while (unassignedTeams.length > 0) {
-    timeSlot = getNextTime();
+    const timeSlot: string = getNextTime();
     availableRooms = this.deepArrayCopy(allJudgingRooms);
-    while (availableRooms.length() > 0 && unassignedTeams.length() > 0) {
-      teamToAssignIdx = Math.floor(Math.random() * unassignedTeams.length() + 1);
-      teamToAssign = unassignedTeams.pop(teamToAssignIdx);
+    while (availableRooms.length() > 0 && unassignedTeams.length > 0) {
+      const teamToAssignIdx = Math.floor(Math.random() * unassignedTeams.length + 1);
+      const teamToAssign = unassignedTeams.pop(teamToAssignIdx);
 
-      roomToAssignToIdx = Math.floor(Math.random() * availableRooms.length() + 1);
-      roomToAssignTo = availableRooms.pop(roomToAssignToIdx);
+      const roomToAssignToIdx = Math.floor(Math.random() * availableRooms.length() + 1);
+      const roomToAssignTo = availableRooms.pop(roomToAssignToIdx);
 
       assignTeamToTime(timeSlot, teamsToAssign, roomToAssignTo);
     }
   }
 }
 
-getNextTime() {
+function getNextTime() {
   return allTimes.pop();
 }
 
