@@ -27,7 +27,7 @@ const StyledPersonTypeSelectSection = styled.div`
 const StyledJudgeButton = styled.div`
   padding-right: 6em;
   @media ${max.tabletSm} {
-    padding-right: 0em;
+    padding-right: auto;
     justify-content: center;
   }
 `;
@@ -36,7 +36,7 @@ const StyledHackerButton = styled.div`
   padding-left: 6em;
   @media ${max.tabletSm} {
     padding-top: 2em;
-    padding-left: 0em;
+    padding-left: auto;
     justify-content: center;
   }
 `;
