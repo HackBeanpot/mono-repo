@@ -1,25 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { parse } from 'csv-parse/sync';
-
-type Judge = {
-  name: string,
-  inPerson: boolean,
-  company: string
-}
-// const judgeHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
-
-type HackerTeam = {
-  name: string;
-  liveDemo: boolean;
-}
-const hackerTeamHeaders: Array<string> = ['Project Title', 'Will You Be Able To Give A Live Demo Of Your Project To Judges?'];
-
-type Room = {
-  name: string,
-  capacity: number;
-}
-// const roomHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
+import { HackerTeam, Judge, Room } from "./types";
 
 function parseCsv<T> (csvFilePath: string, headers: string[] | boolean): T[] {
   const csvFileAbsolutePath = path.resolve(__dirname, csvFilePath);
@@ -38,24 +20,12 @@ function parseJudgeCSV(judgeCsvFilePath: string) {
 };
 
 function parseHackerTeamCSV(hackerTeamCsvFilePath: string) {
-  return parseCsv<HackerTeam>(hackerTeamCsvFilePath, hackerTeamHeaders);
+  return parseCsv<HackerTeam>(hackerTeamCsvFilePath, true);
 };
 
 function parseRoomsCSV(roomCsvFilePath: string) {
   return parseCsv<Room>(roomCsvFilePath, true);
 };
-
-function putJudgesInRooms() {
-  // in person judge count
-  // room count  
-  // randomly stick (room count / in person count) in to rooms
-}
-
-function putJudgesInRooms() {
-  // in person judge count
-  // room count  
-  // randomly stick (room count / in person count) in to rooms
-}
 
 // filters out any teams with submissions that they will not demo
 function getLiveDemoHackerTeams(allTeams: HackerTeam[]): HackerTeam[] {
@@ -75,4 +45,5 @@ function main() {
   // filter out hacker teams doing live demo
   getLiveDemoHackerTeams(allHackers);
 
+  sortJudgesAndPeople(allTimes, allRooms, allHackers, allJudges);
 }

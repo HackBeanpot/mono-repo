@@ -22,7 +22,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true
   },
-  "include": ["main-site", "live-site", "shared-ui"],
+  "include": ["main-site", "live-site", "shared-ui", "judging-algorithm"],
   "exclude": [
     "node_modules",
     "public",
