@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react';
 
 export interface StyledPrimaryButtonProps {
-  isSmall: boolean | undefined;
+  isSmallPrimary: boolean | undefined;
 }
 
 export interface StyledSecondaryButtonProps {
