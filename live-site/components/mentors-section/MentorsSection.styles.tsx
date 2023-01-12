@@ -62,10 +62,49 @@ const StyledMentorsFilterRadio = styled.div`
   }
 `;
 
+const StyledMentorsListContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 95%;
+  padding-bottom: 20px;
+`
+
+const StyledMentorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+`
+
+const StyledMentorName = styled.div`
+  color: ${colors.WHITE};
+  font-family: ${fonts.nunitoSansSemibold};
+  font-size: 22px;
+`
+
+const StyledMentorCompany = styled.div`
+  color: ${colors.WHITE};
+  font-family: ${fonts.nunitoSansSemibold};
+  font-size: 16px;
+`
+
+const StyledMentorPosition = styled.div`
+  color: ${colors.TEXT_BROWN};
+  font-family: ${fonts.nunitoSansLight};
+  font-size: 14px;
+  font-style: italic;
+`
+
 export {
   StyledMentorsSection,
   StyledMentorsHeader,
   StyledMentorsDropdownContainer,
   StyledMentorsDropdownWrapper,
-  StyledMentorsFilterRadio
+  StyledMentorsFilterRadio,
+  StyledMentorsListContainer,
+  StyledMentorContainer,
+  StyledMentorName,
+  StyledMentorCompany,
+  StyledMentorPosition
 };
