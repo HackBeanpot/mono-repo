@@ -8,6 +8,7 @@ export type Judge = {
 export type HackerTeam = {
   name: string;
   liveDemo: boolean;
+  devpostLink: string;
 }
 export const hackerTeamHeaders: Array<string> = ['Project Title', 'Will You Be Able To Give A Live Demo Of Your Project To Judges?'];
 
@@ -23,6 +24,11 @@ export type JudgeOutput = {
   devPostLink: string, 
   inPersonDemo: boolean, 
   room: string
+}
+
+export type FinalOutputTables = {
+  judgeOutput: JudgeOutput;
+  hackerOutput: HackerOutput;
 }
 
 
