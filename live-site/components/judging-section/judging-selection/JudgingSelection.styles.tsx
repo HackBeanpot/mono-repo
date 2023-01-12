@@ -19,19 +19,25 @@ const StyledPersonTypeSelectSection = styled.div`
     display: flex;  
     justify-content: center;
   }
+  @media ${max.tabletSm} {
+    padding: 0em;
+  }
 `;
 
 const StyledJudgeButton = styled.div`
   padding-right: 6em;
   @media ${max.tabletSm} {
-    margin: auto;
+    padding-right: 0em;
+    justify-content: center;
   }
 `;
 
 const StyledHackerButton = styled.div`
   padding-left: 6em;
   @media ${max.tabletSm} {
-    margin: auto;
+    padding-top: 2em;
+    padding-left: 0em;
+    justify-content: center;
   }
 `;
 
