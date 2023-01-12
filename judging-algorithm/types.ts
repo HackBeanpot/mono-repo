@@ -31,5 +31,12 @@ export type FinalOutputTables = {
   hackerOutput: HackerOutput;
 }
 
+export type HackerOutput = {
+  project: string, 
+  time: string, 
+  judges: string[], 
+  room: string
+}
+
 
 // const roomHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
