@@ -2,7 +2,7 @@ import { HackerTeam, Judge, JudgeOutput, Room } from "./types";
 
 // driver code, takes parsed values and creates random assignments 
 // the judges and hacker teams it take in have already been filtered, and rooms have been filtered for capacity
-function sortJudgesAndPeople(allTimes: string[], rooms: Room[], unassignedTeams: HackerTeam[], judges: Judge[]) {
+export function sortJudgesAndPeople(allTimes: string[], rooms: Room[], unassignedTeams: HackerTeam[], judges: Judge[]) {
   let judgesTable: JudgeOutput[] = []
   // Judge -> judge name
   let unassignedJudges: string[] = judges.map(judge => judge.name)
