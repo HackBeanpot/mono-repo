@@ -50,3 +50,7 @@ export interface MentorInfo {
   position: string;
   imageUrl: string;
 }
+
+export interface StyledCactusButtonsProps {
+  isToggled: boolean;
+}
