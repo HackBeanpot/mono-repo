@@ -14,6 +14,7 @@ import EventScheduleTab from './event-schedule-tab/EventScheduleTab';
 
 const EventScheduleSection: React.FC = () => {
   return (
+    <div id="schedule">
     <EventScheduleSectionContainer>
       <StyledEventScheduleHeader>Event Schedule</StyledEventScheduleHeader>
       <EventScheduleTextButtonContainer>
@@ -34,6 +35,7 @@ const EventScheduleSection: React.FC = () => {
       </EventScheduleTextButtonContainer>
       <EventScheduleTab tabs={mockData}></EventScheduleTab>
     </EventScheduleSectionContainer>
+    </div>
   );
 };
 

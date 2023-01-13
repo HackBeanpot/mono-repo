@@ -14,14 +14,17 @@ const ResourcesSection: React.FC = () => {
     'Beginner Resource Guide'
   ];
   return (
-    <StyledResourcesSection>
-      <StyledHeader>Resources</StyledHeader>
-      <BoxesContainer>
-        {labels.map((label: string) => (
-          <ResourceBox label={label} />
-        ))}
-      </BoxesContainer>
-    </StyledResourcesSection>
+    <div id='resources'>
+      <StyledResourcesSection>
+        <StyledHeader>Resources</StyledHeader>
+        <BoxesContainer>
+          {labels.map((label: string) => (
+            <ResourceBox label={label} />
+          ))}
+        </BoxesContainer>
+      </StyledResourcesSection>
+    </div>
+
   );
 };
 
