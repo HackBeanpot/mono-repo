@@ -49,7 +49,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={liveSiteTabInfo} isDay={true} />
+      <Header tabs={liveSiteTabInfo} isDay />
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
@@ -60,7 +60,7 @@ const IndexPage: React.FC = () => {
       <ResourcesSection />
       <MeetTheTeamSection />
       <MentorsSection />
-      <Footer tabs={liveSiteTabInfo} isDay={true} />
+      <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );
 };
