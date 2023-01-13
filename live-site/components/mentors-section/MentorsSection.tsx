@@ -36,41 +36,50 @@ const MentorsSection: React.FC = () => {
   const companiesArr = Array.from(
     new Set(mentors.map((mentor) => `Company: ${mentor.company}`))
   );
-  const [paginatedMentors, setPaginatedMentors] = useState<MentorInfo[][]>([])
-  const [currentPage, setCurrentPage] = useState(0)
+  const [paginatedMentors, setPaginatedMentors] = useState<MentorInfo[][]>([]);
+  const [currentPage, setCurrentPage] = useState(0);
 
-  const pageSize = isSmallMobile ? 9 : 12
+  const pageSize = isSmallMobile ? 9 : 12;
   const imageSize = isMobile ? 100 : 160;
-  const mentorsToDisplay = isMobile ? (paginatedMentors[currentPage] ?? []) : mentors
+  const mentorsToDisplay = isMobile
+    ? paginatedMentors[currentPage] ?? []
+    : mentors;
 
   useEffect(() => {
-    setMentors(data.map((mentor) => {
-      return {
-        name: mentor.fields.name,
-        company: mentor.fields.company,
-        position: mentor.fields.position,
-        imageUrl: mentor.fields.image[0].url
-      }
-    }))
+    setMentors(
+      data.map((mentor) => {
+        return {
+          name: mentor.fields.name,
+          company: mentor.fields.company,
+          position: mentor.fields.position,
+          imageUrl: mentor.fields.image[0].url
+        };
+      })
+    );
   }, [data, setMentors]);
 
   useEffect(() => {
-    const pages: MentorInfo[][] = []
+    const pages: MentorInfo[][] = [];
     for (let i = 0; i < mentors.length; i += pageSize) {
-      const mentorsForPage = mentors.slice(i, i + pageSize)
-      pages.push(mentorsForPage)
+      const mentorsForPage = mentors.slice(i, i + pageSize);
+      pages.push(mentorsForPage);
     }
-    setPaginatedMentors(pages)
-  }, [mentors, pageSize, setPaginatedMentors])
+    setPaginatedMentors(pages);
+  }, [mentors, pageSize, setPaginatedMentors]);
 
   const displayMentor = (mentor: MentorInfo): React.ReactElement => (
     <StyledMentorContainer>
-      <img width={imageSize} height={imageSize} alt={`Image of ${mentor.name}`} src={mentor.imageUrl}></img>
+      <img
+        width={imageSize}
+        height={imageSize}
+        alt={`Image of ${mentor.name}`}
+        src={mentor.imageUrl}
+      ></img>
       <StyledMentorName>{mentor.name}</StyledMentorName>
       <StyledMentorCompany>{mentor.company}</StyledMentorCompany>
       <StyledMentorPosition>{mentor.position}</StyledMentorPosition>
     </StyledMentorContainer>
-  )
+  );
 
   const getCactus = (index: number): string => {
     if (index % 4 === 0) {
@@ -83,61 +92,63 @@ const MentorsSection: React.FC = () => {
       return cactus3;
     }
     return cactus4;
-  }
+  };
 
   return (
-    <StyledMentorsSection>
-      <StyledMentorsFilterSection>
-        <StyledMentorsHeader> Mentors </StyledMentorsHeader>
-        <StyledMentorsDropdownContainer>
-          <StyledMentorsDropdownWrapper id="position-filter">
-            {positionsArr.map((currPosition: string) => (
-              <option value={currPosition}>{currPosition}</option>
-            ))}
-          </StyledMentorsDropdownWrapper>
-        </StyledMentorsDropdownContainer>
-        {isMobile && <br />}
-        <StyledMentorsDropdownContainer>
-          <StyledMentorsDropdownWrapper id="company-filter">
-            {companiesArr.map((currCompany: string) => (
-              <option value={currCompany}>{currCompany}</option>
-            ))}
-          </StyledMentorsDropdownWrapper>
-        </StyledMentorsDropdownContainer>
-        <StyledMentorsFilterRadio>
-          <input
-            type="radio"
-            id="onShiftMentors"
-            name="mentors_filter"
-            value="Mentors on shift now"
-          />
-          <label htmlFor="onShiftMentors">Mentors on shift now</label>
-          <br />
-          <input
-            type="radio"
-            id="allMentors"
-            name="mentors_filter"
-            value="All mentors"
-          />
-          <label htmlFor="allMentors">All mentors</label>
-          <br />
-        </StyledMentorsFilterRadio>
-      </StyledMentorsFilterSection>
-      <StyledMentorsListContainer>
-        {mentorsToDisplay.map((currMentor) => displayMentor(currMentor))}
-      </StyledMentorsListContainer>
-      {isMobile && (
-        <StyledMentorsPaginationContainer>
-          {paginatedMentors.map((_, index) => (
-            <StyledCactusButtons
-              src={getCactus(index)}
-              onClick={(): void => setCurrentPage(index)}
-              isToggled={index == currentPage}
+    <div id="mentors">
+      <StyledMentorsSection>
+        <StyledMentorsFilterSection>
+          <StyledMentorsHeader> Mentors </StyledMentorsHeader>
+          <StyledMentorsDropdownContainer>
+            <StyledMentorsDropdownWrapper id="position-filter">
+              {positionsArr.map((currPosition: string) => (
+                <option value={currPosition}>{currPosition}</option>
+              ))}
+            </StyledMentorsDropdownWrapper>
+          </StyledMentorsDropdownContainer>
+          {isMobile && <br />}
+          <StyledMentorsDropdownContainer>
+            <StyledMentorsDropdownWrapper id="company-filter">
+              {companiesArr.map((currCompany: string) => (
+                <option value={currCompany}>{currCompany}</option>
+              ))}
+            </StyledMentorsDropdownWrapper>
+          </StyledMentorsDropdownContainer>
+          <StyledMentorsFilterRadio>
+            <input
+              type="radio"
+              id="onShiftMentors"
+              name="mentors_filter"
+              value="Mentors on shift now"
             />
-          ))}
-        </StyledMentorsPaginationContainer>
-      )}
-    </StyledMentorsSection>
+            <label htmlFor="onShiftMentors">Mentors on shift now</label>
+            <br />
+            <input
+              type="radio"
+              id="allMentors"
+              name="mentors_filter"
+              value="All mentors"
+            />
+            <label htmlFor="allMentors">All mentors</label>
+            <br />
+          </StyledMentorsFilterRadio>
+        </StyledMentorsFilterSection>
+        <StyledMentorsListContainer>
+          {mentorsToDisplay.map((currMentor) => displayMentor(currMentor))}
+        </StyledMentorsListContainer>
+        {isMobile && (
+          <StyledMentorsPaginationContainer>
+            {paginatedMentors.map((_, index) => (
+              <StyledCactusButtons
+                src={getCactus(index)}
+                onClick={(): void => setCurrentPage(index)}
+                isToggled={index == currentPage}
+              />
+            ))}
+          </StyledMentorsPaginationContainer>
+        )}
+      </StyledMentorsSection>
+    </div>
   );
 };
 
