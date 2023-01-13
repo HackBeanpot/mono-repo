@@ -6,7 +6,8 @@ import {
   StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
-  TextLeftContainer
+  TextLeftContainer,
+  StyledCybersecurityLocationContainer
 } from '../EventsCalendarSection.styles';
 
 const NonDesktopTexts: React.FC = () => {
@@ -44,8 +45,16 @@ const NonDesktopTexts: React.FC = () => {
 
       <StyledEventsBox>
         <StyledTextContainer>
-          <EventsHeader>Security + Tech Discussion - mid November</EventsHeader>
+          <EventsHeader>
+            Cybersecurity Workshop + Minihack -- 1/15 12pm-3pm
+          </EventsHeader>
         </StyledTextContainer>
+        <StyledCybersecurityLocationContainer>
+          <EventsLocationP>
+            Northeastern University <br />
+            West Village H 366
+          </EventsLocationP>
+        </StyledCybersecurityLocationContainer>
       </StyledEventsBox>
     </>
   );

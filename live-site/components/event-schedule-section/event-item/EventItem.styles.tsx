@@ -23,18 +23,16 @@ const StyledEventItemLeftSideContainer = styled.div`
 
   @media ${max.tabletLg} {
     padding-left: 2em;
-  } ;
+  }
 
   @media ${max.tablet} {
     display: block;
-  } ;
+  }
 
   @media ${max.tabletXs} {
     padding-left: 0.5em;
   } ;
 `;
-
-
 
 const StyledEventItemNameLocationContainer = styled.div`
   display: block;
@@ -43,7 +41,6 @@ const StyledEventItemNameLocationContainer = styled.div`
     padding-top: 0;
   }
 
- 
   @media ${max.mobile} {
     padding-left: 1em;
   } ;
@@ -81,7 +78,7 @@ const StyledEventItemHeader = styled(H3)`
     font-size: 1.4em;
     padding-top: 1.5em;
     padding-left: 1em;
-  } ;
+  }
 
   @media ${max.tablet} {
     font-size: 1.2em;
@@ -93,13 +90,10 @@ const StyledEventitemLocation = styled(P)`
   color: ${colors.HEADER_FOOTER_BLUE};
   padding-left: 0.7em;
 
-
   @media ${max.tabletLg} {
     font-size: 1em;
     padding-left: 0.5em;
   }
-
- 
 
   @media ${max.tabletSm} {
     padding-left: 0;
@@ -168,8 +162,6 @@ const StyledArrow = styled.img`
   @media ${max.tablet} {
     display: none;
   }
-
- 
 `;
 
 export {
