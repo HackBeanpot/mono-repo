@@ -66,6 +66,13 @@ const TextLeftContainer = styled.div`
   }
 `;
 
+const StyledCybersecurityLocationContainer = styled.div`
+  padding-top: 4em;
+  @media ${max.tabletSm} {
+    padding-top: 1em;
+  }
+`;
+
 const StyledEventsCalendar = styled.div`
   border-radius: 2em;
   width: 60%;
@@ -98,7 +105,7 @@ const StyledEventsCactus = styled.img`
   }
   @media ${min.desktopLg} {
     right: 10em;
-    top: 35em;
+    top: 45em;
     height: 25em;
   }
 `;
@@ -182,5 +189,6 @@ export {
   EventsLocationP,
   TextLeftContainer,
   StyledH2,
-  StyledDesktopTextsContainer
+  StyledDesktopTextsContainer,
+  StyledCybersecurityLocationContainer
 };

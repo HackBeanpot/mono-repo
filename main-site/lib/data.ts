@@ -28,7 +28,7 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'How do I apply to HackBeanpot?',
     answer:
-      'Pre-registration begins November 6th, but applications will be open on November 22nd. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
+      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 20th, 2023.'
   },
 
   {
@@ -153,7 +153,8 @@ export const pastProjectsData: PastProjectData[] = [
 
   {
     title: 'Oh Duck!, 2022',
-    members: 'by Joyce Fang, Samantha Merlino, Victoria Bowen, Sufi Kaur, and Karyna Yen',
+    members:
+      'by Joyce Fang, Samantha Merlino, Victoria Bowen, Sufi Kaur, and Karyna Yen',
     description:
       "'Oh, Duck!' is a chrome extension that replaces profane words with a duck emoji.",
     btnLink: 'https://devpost.com/software/oh-duck'
