@@ -1,13 +1,14 @@
 import React from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { H3 } from '../../../shared-ui/style/typography';
+import TeamRace from './team-race/TeamRace';
 import {
   StyledButtonContainer,
-  StyledRaceContainer,
   StyledWelcomeSectionContainer,
   StyledWelcomeSectionContent,
   StyledWelcomeText
 } from './WelcomeSection.styles';
+import { TeamInfo } from '../../lib/data';
 
 const WelcomeSection: React.FC = () => {
   return (
@@ -23,8 +24,7 @@ const WelcomeSection: React.FC = () => {
           <PrimaryButton btnText="Join our Slack" btnLink=""></PrimaryButton>
         </StyledButtonContainer>
       </StyledWelcomeSectionContent>
-
-      <StyledRaceContainer></StyledRaceContainer>
+      <TeamRace teams={TeamInfo} />
     </StyledWelcomeSectionContainer>
   );
 };

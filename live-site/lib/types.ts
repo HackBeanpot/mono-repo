@@ -20,7 +20,6 @@ export interface EventProps {
   eventInfo: UpcomingEvent;
 }
 
-
 export interface DesktopMultiEventsProps {
   events: UpcomingEvent[];
 }
@@ -41,5 +40,18 @@ export interface EventItem {
 }
 
 export interface EventItemProps {
-  eventItem : EventItem;
+  eventItem: EventItem;
+}
+
+export interface TeamProps {
+  points: number;
+  name: string;
+}
+
+export interface TeamRaceProps {
+  teams: TeamProps[];
+}
+
+export interface TeamCarProps {
+  points: number;
 }
