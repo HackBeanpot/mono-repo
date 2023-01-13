@@ -8,12 +8,13 @@ const StyledTeamColumn = styled.div`
     width: 11em;
   }
   @media ${max.tabletLg} {
-    width: 9.5em;
+    width: clamp(9.5em, 20vw, 11em);
   }
 `;
+
 const StyledHeadshot = styled.img`
   padding-top: 2em;
-  width: 8.5em;
+  width: 9em;
   @media ${max.tabletLg} {
     width: 6.5em;
     margin: 0;
