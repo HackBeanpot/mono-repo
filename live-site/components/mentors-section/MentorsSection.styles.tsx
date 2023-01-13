@@ -73,17 +73,17 @@ const StyledMentorsListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 20px;
+  padding: 2em 0em;
   justify-content: center;
   max-width: 95%;
   margin: auto;
 
   @media ${max.tabletLg} {
-    max-width: 500px;
+    max-width: 50em;
   }
 
   @media ${max.tabletSm} {
-    max-width: 375px;
+    max-width: 25em;
   }
 `
 
@@ -92,10 +92,14 @@ const StyledMentorContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 10px;
+  padding: 0.75em;
+
+  @media ${min.tabletSm} {
+    padding: 1.25em;
+  }
 
   @media ${min.desktop} {
-    padding: 20px 40px;
+    padding: 1.75em 3.5em;
   }
 `
 
@@ -133,7 +137,7 @@ const StyledMentorPosition = styled.div`
 const StyledMentorsPaginationContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 1em;
   @media ${min.desktop} {
     max-width: 95%;
   }

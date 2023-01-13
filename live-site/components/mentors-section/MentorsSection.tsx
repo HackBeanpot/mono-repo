@@ -25,6 +25,7 @@ import { MentorInfo } from '../../lib/types';
 
 const MentorsSection: React.FC = () => {
   const isSmallMobile = useMatchMedia(max.tabletSm);
+  const isSmallTablet = useMatchMedia(max.tablet);
   const isMobile = useMatchMedia(max.tabletLg);
 
   const { data } = useAirtableApi('Mentors', 'mentors');
@@ -39,7 +40,7 @@ const MentorsSection: React.FC = () => {
   const [paginatedMentors, setPaginatedMentors] = useState<MentorInfo[][]>([]);
   const [currentPage, setCurrentPage] = useState(0);
 
-  const pageSize = isSmallMobile ? 9 : 12;
+  const pageSize = isSmallMobile ? 9 : isSmallTablet ? 12 : 15;
   const imageSize = isMobile ? 100 : 160;
   const mentorsToDisplay = isMobile
     ? paginatedMentors[currentPage] ?? []
