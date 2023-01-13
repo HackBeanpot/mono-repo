@@ -9,21 +9,23 @@ const StyledDesktopTextsContainer = styled.div`
 
 const StyledSectionContainer = styled.div`
   padding-top: 5em;
-  padding-bottom: 20em;
-  @media ${max.tabletSm} {
+  padding-bottom: 30em;
+  @media ${max.tablet} {
     padding-top: 0.6em;
+    padding-bottom: 10em;
   }
 `;
 
 const StyledEventsContainer = styled.div`
   top: 3em;
   position: relative;
+  display: flex;
+  justify-content: center;
 `;
 
 const StyledEventsBox = styled.div`
   border-radius: 2em;
   background-color: ${colors.BUTTON_DARK_GREEN};
-  width: 95%;
   position: relative;
   flex-direction: column;
   display: flex;
@@ -32,7 +34,6 @@ const StyledEventsBox = styled.div`
     margin: 2em 1em;
   }
   @media ${max.tabletLg} {
-    margin: 2em 1em;
     border-radius: 1.7em;
   }
   @media ${max.tablet} {
@@ -77,16 +78,13 @@ const StyledEventsCalendar = styled.div`
   border-radius: 2em;
   width: 60%;
   background-color: ${colors.BUTTON_GREEN};
-  margin-left: 21%;
   position: relative;
   @media ${max.tabletLg} {
     width: 80%;
-    margin-left: 10%;
     padding: 0.5em;
   }
   @media ${max.tablet} {
     border-radius: 1.3em;
-    margin-left: 3.5%;
     width: 90%;
   }
 `;
