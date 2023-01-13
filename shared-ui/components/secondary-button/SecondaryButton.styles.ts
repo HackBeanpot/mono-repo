@@ -4,21 +4,27 @@ import { StyledSecondaryButtonProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 
 const StyledSecondaryButton = styled.button<StyledSecondaryButtonProps>`
-  color: ${(props): string => props.isJudgingSecondary ? colors.WHITE : colors.BUTTON_GREEN};
+  color: ${colors.WHITE};
   background-color: ${colors.BUTTON_DARK_GREEN};
-  border-color: ${colors.BUTTON_GREEN};
-  letter-spacing: ${(props): string => props.isJudgingSecondary ? '0.2em' : '0.1em'};
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
-  padding-right: ${(props): string => props.isJudgingSecondary ? '3em' : '0.7em'};
-  padding-left: ${(props): string => props.isJudgingSecondary ? '3em' : '0.7em'};
+  border-color: ${colors.BUTTON_DARK_GREEN};
+  letter-spacing: 0.1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 13em;
   border-radius: 2em;
-  border: 0.1em solid; 
-  cursor: pointer;
+  border: 2em;
+  cursor: ${(props): string => (props.isClickable ? 'pointer' : 'cursor')};
   font-size: 1em;
+  @media ${max.desktop} {
+    width: 10.4em;
+  }
+  @media ${max.tabletLg} {
+    width: 9.4em;
+  }
   @media ${max.tablet} {
-    font-size: 0.8em;
-  } ;
+    font-size: 1.1em;
+    width: 13em;
+  }
 `;
 
 export { StyledSecondaryButton };
