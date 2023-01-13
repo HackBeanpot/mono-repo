@@ -3,16 +3,18 @@ import { TeamProps } from '../../../lib/types';
 import {
   StyledTeamContainer,
   StyledTeamName,
-  StyledTeamPoint
+  StyledTeamPoint,
+  StyledTeamPosition
 } from './Team.styles';
 import TeamCar from './TeamCar';
 
-const Team: React.FC<TeamProps> = ({ name, points }) => {
+const Team: React.FC<TeamProps> = ({ name, points, position }) => {
   return (
     <StyledTeamContainer>
-      <StyledTeamName>{name}</StyledTeamName>
+      <StyledTeamPosition>{position}:</StyledTeamPosition>
+      <StyledTeamName> {name}</StyledTeamName>
       <TeamCar points={points} />
-      <StyledTeamPoint>{points}</StyledTeamPoint>
+      <StyledTeamPoint>{points} PTS</StyledTeamPoint>
     </StyledTeamContainer>
   );
 };

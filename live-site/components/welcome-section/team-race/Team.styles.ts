@@ -4,6 +4,7 @@ import { P } from '../../../../shared-ui/style/typography';
 const StyledTeamContainer = styled.div`
   display: flex;
   flex-direction: row;
+  padding: 1em 2em;
 `;
 
 const StyledTeamName = styled(P)`
@@ -18,9 +19,17 @@ const StyledTeamPoint = styled(P)`
   font-size: 20px;
 `;
 
+const StyledTeamPosition = styled(P)`
+  text-transform: uppercase;
+  color: #bed9aa;
+  font-size: 20px;
+  margin-right: 0.1em;
+`;
+
 const StyledTeamCarContainer = styled.div`
   border-bottom: 2px solid #ffe799;
   width: 15em;
+  margin-left: 1.5em;
 `;
 
 const StyledTeamCar = styled.img<{ margin: number }>`
@@ -32,5 +41,6 @@ export {
   StyledTeamName,
   StyledTeamPoint,
   StyledTeamCarContainer,
-  StyledTeamCar
+  StyledTeamCar,
+  StyledTeamPosition
 };

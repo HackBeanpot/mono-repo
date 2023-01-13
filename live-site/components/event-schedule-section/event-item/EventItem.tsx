@@ -37,7 +37,7 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
             </StyledPinpointLocationContainer>
           </StyledEventItemNameLocationContainer>
         </StyledEventItemLeftSideContainer>
-          <StyledArrow src={arrow} />
+        <StyledArrow src={arrow} />
       </StyledEventItemMobileContainer>
     </StyledEventItemContainer>
   );

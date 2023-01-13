@@ -122,6 +122,6 @@ export {
   StyledSectionContainer,
   StyledEvents,
   StyledTextContainer,
-  StyledSectionHeader, 
+  StyledSectionHeader,
   StyledOneEventContainer
 };

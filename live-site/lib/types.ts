@@ -46,6 +46,7 @@ export interface EventItemProps {
 export interface TeamProps {
   points: number;
   name: string;
+  position?: number;
 }
 
 export interface TeamRaceProps {

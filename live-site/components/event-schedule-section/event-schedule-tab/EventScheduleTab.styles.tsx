@@ -71,7 +71,6 @@ const StyledTabContent = styled(P)`
   padding-left: 1em;
   padding-top: 0.5em;
   color: ${colors.BLACK};
-  
 `;
 const StyledTabContentContainer = styled.div`
   background-color: ${colors.BUTTON_GREEN};
@@ -88,10 +87,8 @@ const StyledTabContentContainer = styled.div`
     border-left: 2px solid ${colors.HEADER_FOOTER_BLUE};
     margin-right: 2em;
     border-radius: 0em 0.75em 0em 0em;
-    
-  } ;
-  overflow: scroll
-
+  }
+  overflow: scroll;
 `;
 const StyledEventScheduleTabContainer = styled.div`
   display: flex;

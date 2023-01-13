@@ -8,7 +8,11 @@ const liveSiteTabInfo: TabInfo[] = [
   { name: 'Team', link: '#team' }
 ];
 
-const TeamInfo: TeamProps[] = [{ name: 'Dhivas', points: 30 }];
+const TeamInfo: TeamProps[] = [
+  { name: 'Dhivas', points: 75 },
+  { name: 'Shoosh', points: 23 },
+  { name: 'Shlosh', points: 1 }
+];
 
 interface TimeLeft {
   timeType: string;

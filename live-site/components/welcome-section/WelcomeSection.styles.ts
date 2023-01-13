@@ -26,6 +26,11 @@ const StyledRaceContainer = styled.div`
   }
 `;
 
+const StyledRaceContent = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const StyledWelcomeSectionContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,5 +57,6 @@ export {
   StyledRaceContainer,
   StyledWelcomeSectionContent,
   StyledWelcomeText,
-  StyledButtonContainer
+  StyledButtonContainer,
+  StyledRaceContent
 };
