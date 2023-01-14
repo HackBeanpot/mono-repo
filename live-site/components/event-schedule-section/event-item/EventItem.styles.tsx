@@ -3,11 +3,6 @@ import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H3, P } from '../../../../shared-ui/style/typography';
 
-const StyledEventItemMobileContainer = styled.div`
-  @media ${max.tablet} {
-    display: flex;
-  } ;
-`;
 const StyledEventItemContainer = styled.div`
   margin-left: 1em;
   margin-right: 1em;
@@ -15,6 +10,11 @@ const StyledEventItemContainer = styled.div`
   border-radius: 2em;
   height: 8em;
   background-color: ${colors.WHITE};
+  @media (max-width: 460px) {
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+  } ;
 `;
 
 const StyledEventItemLeftSideContainer = styled.div`
@@ -23,18 +23,16 @@ const StyledEventItemLeftSideContainer = styled.div`
 
   @media ${max.tabletLg} {
     padding-left: 2em;
-  } ;
+  }
 
   @media ${max.tablet} {
     display: block;
-  } ;
+  }
 
   @media ${max.tabletXs} {
     padding-left: 0.5em;
   } ;
 `;
-
-
 
 const StyledEventItemNameLocationContainer = styled.div`
   display: block;
@@ -43,7 +41,6 @@ const StyledEventItemNameLocationContainer = styled.div`
     padding-top: 0;
   }
 
- 
   @media ${max.mobile} {
     padding-left: 1em;
   } ;
@@ -81,7 +78,7 @@ const StyledEventItemHeader = styled(H3)`
     font-size: 1.4em;
     padding-top: 1.5em;
     padding-left: 1em;
-  } ;
+  }
 
   @media ${max.tablet} {
     font-size: 1.2em;
@@ -93,13 +90,10 @@ const StyledEventitemLocation = styled(P)`
   color: ${colors.HEADER_FOOTER_BLUE};
   padding-left: 0.7em;
 
-
   @media ${max.tabletLg} {
     font-size: 1em;
     padding-left: 0.5em;
   }
-
- 
 
   @media ${max.tabletSm} {
     padding-left: 0;
@@ -164,12 +158,70 @@ const StyledArrow = styled.img`
   @media ${max.tabletLg} {
     padding-right: 2em;
   }
+`;
 
-  @media ${max.tablet} {
-    display: none;
+const StyledTagsContainer = styled.div`
+  display: flex;
+  float: right;
+  padding-top: 3em;
+  gap: 0.6em;
+  padding-right: 1em;
+  @media (max-width: 1040px) {
+    gap: 0.3em;
   }
+  @media (max-width: 890px) {
+    padding-top: 2.8em;
+    flex-direction: column;
+  }
+  @media ${max.tablet} {
+    flex-direction: row;
+  }
+  @media (max-width: 460px) {
+    flex-direction: column;
+    align-self: start;
+    padding-left: 0.5em;
+    padding-top: 1em;
+  } ;
+`;
 
- 
+const StyledTag = styled.div`
+  background-color: white;
+  border-color: blue;
+  border-style: solid;
+  border-radius: 2em;
+  height: 2em;
+`;
+
+const StyledTagText = styled(P)`
+  color: blue;
+  text-align: center;
+  margin-top: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.1em;
+  @media (max-width: 1335px) {
+    font-size: 0.9em;
+    padding-top: 0.4em;
+  }
+  @media (max-width: 1200px) {
+    font-size: 0.7em;
+    padding-top: 0.7em;
+  }
+  @media (max-width: 1120px) {
+    font-size: 0.2em;
+    padding-top: 4.2em;
+  }
+  @media ${max.tablet} {
+    font-size: 0.5em;
+    padding-top: 1.33em;
+  }
+  @media (max-width: 471px) {
+    font-size: 0.32em;
+  }
+  @media (max-width: 460px) {
+    font-size: 0.9em;
+    padding-top: 0.4em;
+  } ;
 `;
 
 export {
@@ -184,5 +236,7 @@ export {
   StyledPinpointLocationContainer,
   StyledArrow,
   StyledEventItemLeftSideContainer,
-  StyledEventItemMobileContainer
+  StyledTag,
+  StyledTagsContainer,
+  StyledTagText
 };
