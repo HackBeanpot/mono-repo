@@ -33,7 +33,6 @@ const EventScheduleSection: React.FC = () => {
         </ButtonContainer>
       </EventScheduleTextButtonContainer>
       <EventScheduleTab tabs={mockData}></EventScheduleTab>
-      
     </EventScheduleSectionContainer>
   );
 };

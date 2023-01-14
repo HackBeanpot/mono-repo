@@ -165,7 +165,7 @@ const StyledTagsContainer = styled.div`
   float: right;
   padding-top: 3em;
   gap: 0.6em;
-  padding-right: 1em;
+  padding-right: 0.7em;
   @media (max-width: 1040px) {
     gap: 0.3em;
   }
@@ -183,45 +183,16 @@ const StyledTagsContainer = styled.div`
     padding-top: 1em;
   } ;
 `;
-
-const StyledTag = styled.div`
+const StyledEventItemDescription = styled.div`
   background-color: white;
-  border-color: blue;
-  border-style: solid;
   border-radius: 2em;
-  height: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: -4em;
 `;
-
-const StyledTagText = styled(P)`
-  color: blue;
-  text-align: center;
-  margin-top: auto;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.1em;
-  @media (max-width: 1335px) {
-    font-size: 0.9em;
-    padding-top: 0.4em;
-  }
-  @media (max-width: 1200px) {
-    font-size: 0.7em;
-    padding-top: 0.7em;
-  }
-  @media (max-width: 1120px) {
-    font-size: 0.2em;
-    padding-top: 4.2em;
-  }
-  @media ${max.tablet} {
-    font-size: 0.5em;
-    padding-top: 1.33em;
-  }
-  @media (max-width: 471px) {
-    font-size: 0.32em;
-  }
-  @media (max-width: 460px) {
-    font-size: 0.9em;
-    padding-top: 0.4em;
-  } ;
+const StyledEventItemDescriptionText = styled(P)`
+  color: black;
+  padding:3em;
 `;
 
 export {
@@ -236,7 +207,7 @@ export {
   StyledPinpointLocationContainer,
   StyledArrow,
   StyledEventItemLeftSideContainer,
-  StyledTag,
   StyledTagsContainer,
-  StyledTagText
+  StyledEventItemDescription,
+  StyledEventItemDescriptionText
 };

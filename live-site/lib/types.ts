@@ -32,11 +32,16 @@ export interface EventScheduleTabProps {
 export interface StyledTabTitleWrapperProps {
   isSelected: boolean;
 }
-export interface StyledTagProps{
+export interface EventItemTagProps{
+  type:string
+}
+
+export interface StyledTagAndTagTextProps{
   type:string
 }
 
 export interface EventItem {
+  id: number
   time: string;
   eventType: string;
   eventName: string;
@@ -44,17 +49,13 @@ export interface EventItem {
   meal?: boolean;
   beginner?: boolean;
   workshop? : boolean;
+  actionItem?:boolean;
+  everyone?: boolean;
+  sponsor?: boolean;
+  social?: boolean;
+  description: string;
 }
 
 export interface EventItemProps {
   eventItem : EventItem;
-}
-
-export interface TagsProps{
-  tags: Tag[]
-}
-
-export interface Tag {
-  name: string
-  type: "beginner" | "sponsor"
 }
