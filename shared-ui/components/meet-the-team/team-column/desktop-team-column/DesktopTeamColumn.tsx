@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { Person, TeamColumnProps } from '../../../../lib/types';
+import SecondaryButton from '../../../secondary-button/SecondaryButton';
 import ToolTip from '../../tooltip/ToolTip';
-import {
-  StyledTeamColumn,
-  StyledLabel,
-  StyledHeadshot
-} from './DesktopTeamColumn.styles';
+import { StyledTeamColumn, StyledHeadshot } from './DesktopTeamColumn.styles';
 
 const DesktopTeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
   const listOfPictures: Person[][] = columnInfo.listOfPictures; // data for each team
   const [curPerson, setCurPerson] = useState<Person | null>(null); // initialized as nothing
   return (
     <StyledTeamColumn>
-      <StyledLabel twoLines={columnInfo.teamLabel == 'Social Outreach'}>
-        {columnInfo.teamLabel}
-      </StyledLabel>
+      <SecondaryButton btnText={columnInfo.teamLabel} isClickable={false} />
       <div>
         {listOfPictures.map((rowPics: Person[]) => (
           <div>

@@ -12,8 +12,9 @@ import {
   MobileImageContainer,
   StyledImageRow,
   StyledHeadshot,
-  StyledLabel
+  StyledSecondaryButtonWrapper
 } from './MobileTeamColumn.styles';
+import SecondaryButton from '../../../secondary-button/SecondaryButton';
 
 const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
   listOfColumnInfo
@@ -37,9 +38,9 @@ const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
             )
           }
         />
-        <StyledLabel twoLines={curColumn.teamLabel == 'Social Outreach'}>
-          {curColumn.teamLabel}
-        </StyledLabel>
+        <StyledSecondaryButtonWrapper>
+          <SecondaryButton btnText={curColumn.teamLabel} isClickable={false} />
+        </StyledSecondaryButtonWrapper>
         <Arrow
           left={false}
           onClick={(): void =>
