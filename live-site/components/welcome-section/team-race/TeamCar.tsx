@@ -1,7 +1,7 @@
 import React from 'react';
 import { TeamCarProps } from '../../../lib/types';
 import { StyledTeamCar, StyledTeamCarContainer } from './Team.styles';
-import car from '../../../public/van.svg';
+import car from '/home/dhivas/mono-repo/shared-ui/images/van.svg';
 
 const TeamCar: React.FC<TeamCarProps> = ({ points }) => {
   const calculateDistance = (): number => {
