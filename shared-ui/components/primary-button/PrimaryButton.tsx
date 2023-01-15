@@ -7,7 +7,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
   btnText,
   btnLink,
   newTab = false,
-  isSmallPrimary = false,
+  isSmallPrimary = false
 }) => {
   const [isClicked, setIsClicked] = useState(false);
   if (!btnLink) {

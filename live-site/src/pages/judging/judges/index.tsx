@@ -37,4 +37,6 @@ const JudgingScheduleJudgesPage: React.FC = () => {
 
 export default JudgingScheduleJudgesPage;
 
-export const JudgingJudgesTitle: HeadFC = () => <title>Judging Schedule Judges</title>;
+export const JudgingJudgesTitle: HeadFC = () => (
+  <title>Judging Schedule Judges</title>
+);

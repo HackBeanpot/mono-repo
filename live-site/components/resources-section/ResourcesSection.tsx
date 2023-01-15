@@ -14,7 +14,7 @@ const ResourcesSection: React.FC = () => {
     'Beginner Resource Guide'
   ];
   return (
-    <div id='resources'>
+    <div id="resources">
       <StyledResourcesSection>
         <StyledHeader>Resources</StyledHeader>
         <BoxesContainer>
@@ -24,7 +24,6 @@ const ResourcesSection: React.FC = () => {
         </BoxesContainer>
       </StyledResourcesSection>
     </div>
-
   );
 };
 

@@ -37,4 +37,6 @@ const JudgingScheduleHackersPage: React.FC = () => {
 
 export default JudgingScheduleHackersPage;
 
-export const JudgingHackersTitle: HeadFC = () => <title>Judging Schedule Hackers</title>;
+export const JudgingHackersTitle: HeadFC = () => (
+  <title>Judging Schedule Hackers</title>
+);

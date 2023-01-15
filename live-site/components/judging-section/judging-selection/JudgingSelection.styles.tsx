@@ -16,7 +16,7 @@ const StyledJudgingWelcomeHeader = styled(H2)`
 
 const StyledPersonTypeSelectSection = styled.div`
   @media ${min.tablet} {
-    display: flex;  
+    display: flex;
     justify-content: center;
   }
   @media ${max.tabletSm} {
@@ -41,10 +41,10 @@ const StyledHackerButton = styled.div`
   }
 `;
 
-export { 
+export {
   StyledJudgingSelection,
   StyledJudgingWelcomeHeader,
   StyledPersonTypeSelectSection,
   StyledJudgeButton,
   StyledHackerButton
-}
+};

@@ -16,10 +16,11 @@ const StyledPrimaryButton = styled(motion.button)<StyledPrimaryButtonProps>`
     background-color: ${colors.HEADER_FOOTER_BLUE};
     border-color: ${colors.BUTTON_GREEN};
   }
-  padding-right: ${(props): string => props.isSmallPrimary ? '1.5em' : '1em'};
-  padding-left: ${(props): string => props.isSmallPrimary ? '1.5em' : '1em'};
-  padding-top: ${(props): string => props.isSmallPrimary ? '0.5em' : '1em'};
-  padding-bottom: ${(props): string => props.isSmallPrimary ? '0.5em' : '1em'};
+  padding-right: ${(props): string => (props.isSmallPrimary ? '1.5em' : '1em')};
+  padding-left: ${(props): string => (props.isSmallPrimary ? '1.5em' : '1em')};
+  padding-top: ${(props): string => (props.isSmallPrimary ? '0.5em' : '1em')};
+  padding-bottom: ${(props): string =>
+    props.isSmallPrimary ? '0.5em' : '1em'};
   border-radius: 2em;
   border: 0.1em solid;
   cursor: pointer;

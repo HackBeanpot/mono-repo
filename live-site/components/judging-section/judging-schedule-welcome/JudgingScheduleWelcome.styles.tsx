@@ -41,11 +41,11 @@ const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
   }
 `;
 
-export { 
+export {
   StyledBackButtonContainer,
   StyledBackButton,
   StyledJudgingScheduleSection,
   StyledWelcomePerson,
-  StyledJudgesDropdownContainer, 
+  StyledJudgesDropdownContainer,
   StyledJudgesDropdownWrapper
 };

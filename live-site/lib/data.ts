@@ -44,4 +44,4 @@ const eventItemInfo: EventItem[] = [
   }
 ];
 
-export { liveSiteTabInfo, TimeLeft,eventItemInfo };
+export { liveSiteTabInfo, TimeLeft, eventItemInfo };
