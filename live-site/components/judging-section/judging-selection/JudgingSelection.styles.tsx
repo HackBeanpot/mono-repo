@@ -28,10 +28,10 @@ const StyledJudgeButton = styled.div`
   @media ${min.tablet} {
     padding-right: 6em;
   }
-  @media ${max.tabletSm} {
+  @media ${max.tablet} {
     position: absolute;
-    top: 30%;
-    left: 45%;
+    top: 35%;
+    left: 35%;
   }
 `;
 
@@ -39,10 +39,10 @@ const StyledHackerButton = styled.div`
   @media ${min.tablet} {
     padding-left: 6em;
   }
-  @media ${max.tabletSm} {
+  @media ${max.tablet} {
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 35%;
   }
 `;
 
