@@ -40,6 +40,10 @@ export interface StyledTagAndTagTextProps{
   type:string
 }
 
+export interface StyledArrowProps{
+  isOpen?: boolean
+}
+
 export interface EventItem {
   id: number
   time: string;

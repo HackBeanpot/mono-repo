@@ -53,6 +53,7 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
           <StyledArrow
             src={arrow}
             onClick={(): void => openEventItem(eventItem.id)}
+            isOpen={isOpen}
           />
         )}
         <StyledTagsContainer>

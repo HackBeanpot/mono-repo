@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H3, P } from '../../../../shared-ui/style/typography';
+import { StyledArrowProps } from '../../../lib/types';
 
 const StyledEventItemContainer = styled.div`
   margin-left: 1em;
@@ -150,11 +151,13 @@ const StyledPinpoint = styled.img`
   } ;
 `;
 
-const StyledArrow = styled.img`
+const StyledArrow = styled.img<StyledArrowProps>`
   padding-top: 3em;
   padding-right: 3em;
   float: right;
-
+  transform: scaleY(${(StyledArrowProps): string => {
+    return StyledArrowProps.isOpen ? '-1' : '0'
+  }});
   @media ${max.tabletLg} {
     padding-right: 2em;
   }
