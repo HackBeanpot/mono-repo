@@ -153,7 +153,8 @@ export const pastProjectsData: PastProjectData[] = [
 
   {
     title: 'Oh Duck!, 2022',
-    members: 'by Joyce Fang, Samantha Merlino, Victoria Bowen, Sufi Kaur, and Karyna Yen',
+    members:
+      'by Joyce Fang, Samantha Merlino, Victoria Bowen, Sufi Kaur, and Karyna Yen',
     description:
       "'Oh, Duck!' is a chrome extension that replaces profane words with a duck emoji.",
     btnLink: 'https://devpost.com/software/oh-duck'

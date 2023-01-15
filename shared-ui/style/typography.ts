@@ -78,7 +78,7 @@ const StyledDropdown = styled.select`
 
   -webkit-appearance: none;
   appearance: none;
-  background-image: url("../GoogleDropdown.png");
+  background-image: url('../GoogleDropdown.png');
   background-repeat: no-repeat;
   background-position: calc(100% - 0.5em) center;
   background-size: 1.5em;
@@ -90,6 +90,5 @@ const StyledDropdown = styled.select`
     font-size: 1.25em;
   }
 `;
-
 
 export { H1, H2, H3, H4, P, fonts, StyledLink, StyledDropdown };
