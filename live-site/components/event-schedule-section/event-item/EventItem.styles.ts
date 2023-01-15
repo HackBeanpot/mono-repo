@@ -192,7 +192,7 @@ const StyledEventItemDescription = styled.div`
 `;
 const StyledEventItemDescriptionText = styled(P)`
   color: black;
-  padding:3em;
+  padding: 3em;
 `;
 
 export {

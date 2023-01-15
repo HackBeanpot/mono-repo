@@ -11,7 +11,7 @@ const StyledTag = styled.div<StyledTagAndTagTextProps>`
         return 'firebrick';
         break;
       case 'Beginner-Friendly':
-        return 'springgreen';
+        return 'purple';
         break;
       case 'Workshop':
         return 'green';
@@ -44,7 +44,7 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
         return 'firebrick';
         break;
       case 'Beginner-Friendly':
-        return 'springgreen';
+        return 'purple';
         break;
       case 'Workshop':
         return 'green';

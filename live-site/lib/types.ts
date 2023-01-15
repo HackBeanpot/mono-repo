@@ -46,6 +46,7 @@ export interface EventItem {
   eventType: string;
   eventName: string;
   eventLocation: string;
+  description: string;
   meal?: boolean;
   beginner?: boolean;
   workshop? : boolean;
@@ -53,7 +54,6 @@ export interface EventItem {
   everyone?: boolean;
   sponsor?: boolean;
   social?: boolean;
-  description: string;
 }
 
 export interface EventItemProps {
