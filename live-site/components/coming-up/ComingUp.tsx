@@ -14,20 +14,27 @@ import {
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
+import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const ComingUpSection: React.FC = () => {
-  const event: UpcomingEvent = {
-    id: 0,
-    header: 'Register your team',
-    time: 'Complete by 12:00am EST',
-    body: 'hello hello hello hello hello hello hello hello hi hi hello hello hello hi hi'
-  };
-  const events: UpcomingEvent[] = [event, event, event];
+  const { data } = useAirtableApi('Schedule', 'schedule');
+  const events: UpcomingEvent[]= Array.from(
+    new Set(
+    data.map((event) => {
+      return {
+        id: event.fields.id,
+        header: event.fields.title,
+        time: event.fields.time,
+        body: event.fields.notes,
+      }
+    }))
+  )
   const isDesktop = useMatchMedia(min.tablet);
   if (events.length === 0) {
     return <NoUpcoming />;
   }
   if (events.length === 1 && !isDesktop) {
+    const event: UpcomingEvent = events[0];
     return (
       <StyledSectionContainer>
         <StyledSectionHeader>Coming up...</StyledSectionHeader>
