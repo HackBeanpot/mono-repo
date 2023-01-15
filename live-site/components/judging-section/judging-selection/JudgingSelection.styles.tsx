@@ -31,13 +31,13 @@ const StyledJudgeButton = styled.div`
   @media ${max.tablet} {
     position: absolute;
     top: 35%;
-    left: 35%;
+    left: 32%;
   }
   @media ${max.tabletSm} {
-    left: 30%;
+    left: 25%;
   }
   @media ${max.mobile} {
-    left: 25%;
+    left: 20%;
   }
 `;
 
@@ -48,13 +48,13 @@ const StyledHackerButton = styled.div`
   @media ${max.tablet} {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 32%;
   }
   @media ${max.tabletSm} {
-    left: 30%;
+    left: 25%;
   }
   @media ${max.mobile} {
-    left: 25%;
+    left: 20%;
   }
 `;
 
