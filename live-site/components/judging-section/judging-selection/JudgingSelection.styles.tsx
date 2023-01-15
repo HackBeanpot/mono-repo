@@ -30,7 +30,7 @@ const StyledJudgeButton = styled.div`
   }
   @media ${max.tabletSm} {
     position: absolute;
-    top: 50%;
+    top: 10%;
   }
 `;
 
@@ -40,7 +40,7 @@ const StyledHackerButton = styled.div`
   }
   @media ${max.tabletSm} {
     position: absolute;
-    top: 50%;
+    top: 60%;
   }
 `;
 
