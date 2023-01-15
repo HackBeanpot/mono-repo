@@ -24,7 +24,6 @@ export interface EventProps {
   eventInfo: UpcomingEvent;
 }
 
-
 export interface DesktopMultiEventsProps {
   events: UpcomingEvent[];
 }
@@ -45,5 +44,5 @@ export interface EventItem {
 }
 
 export interface EventItemProps {
-  eventItem : EventItem;
+  eventItem: EventItem;
 }

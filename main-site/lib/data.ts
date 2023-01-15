@@ -28,7 +28,7 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'How do I apply to HackBeanpot?',
     answer:
-      'Pre-registration begins November 6th, but applications will be open on November 22nd. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
+      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 20th, 2023.'
   },
 
   {
@@ -42,7 +42,7 @@ export const FaqSectionData: FaqData[] = [
     id: 3,
     question: 'When and where is HackBeanpot 2023?',
     answer:
-      'The location of HackBeanpot 2023 will be announced by the time registration is opened on November 22nd. The venue will be in Boston and we ask that all hackers review and abide by the Code of Conduct during the event.'
+      'HackBeanpot 2023 will take place on February 10th-12th at the Wood Mackenzie (formerly known as Power Advocate) office building at 179 Lincoln St, Boston, MA, 02111!  We are so excited to be back in person for the first time since 2020, and we ask that all hackers review and abide by the Code of Conduct during the event.'
   },
   {
     id: 4,
@@ -153,7 +153,8 @@ export const pastProjectsData: PastProjectData[] = [
 
   {
     title: 'Oh Duck!, 2022',
-    members: 'by Joyce Fang, Samantha Merlino, Victoria Bowen, Sufi Kaur, and Karyna Yen',
+    members:
+      'by Joyce Fang, Samantha Merlino, Victoria Bowen, Sufi Kaur, and Karyna Yen',
     description:
       "'Oh, Duck!' is a chrome extension that replaces profane words with a duck emoji.",
     btnLink: 'https://devpost.com/software/oh-duck'

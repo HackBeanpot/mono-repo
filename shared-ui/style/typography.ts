@@ -66,4 +66,29 @@ const StyledLink = styled.a`
   }
 `;
 
-export { H1, H2, H3, H4, P, fonts, StyledLink };
+const StyledDropdown = styled.select`
+  border-color: ${colors.WHITE};
+  background-color: ${colors.BUTTON_DARK_GREEN};
+  color: ${colors.WHITE};
+  font-family: ${fonts.nunitoSansSemibold};
+  border-radius: 0.3em;
+  height: 3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('../GoogleDropdown.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.5em) center;
+  background-size: 1.5em;
+
+  @media ${min.mobile} {
+    font-size: 1.2em;
+  }
+  @media ${min.tablet} {
+    font-size: 1.25em;
+  }
+`;
+
+export { H1, H2, H3, H4, P, fonts, StyledLink, StyledDropdown };
