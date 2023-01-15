@@ -17,12 +17,12 @@ import useMatchMedia from 'react-use-match-media';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const ComingUpSection: React.FC = () => {
-  const { data } = useAirtableApi('Schedule', 'schedule');
+  const { data } = useAirtableApi('Relevant', 'relevant');
   const events: UpcomingEvent[]= Array.from(
     new Set(
     data.map((event) => {
       return {
-        id: event.fields.id,
+        id: 0,
         header: event.fields.title,
         time: event.fields.time,
         body: event.fields.notes,
