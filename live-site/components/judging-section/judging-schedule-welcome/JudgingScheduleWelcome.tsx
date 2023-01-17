@@ -21,8 +21,7 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
       </StyledBackButtonContainer>
       <StyledJudgingScheduleSection>
         <StyledWelcomePerson>
-          {' '}
-          Welcome, {schedulePersonType}!{' '}
+          Welcome, {schedulePersonType}!s
         </StyledWelcomePerson>
         <StyledJudgesDropdownContainer>
           <StyledJudgesDropdownWrapper id="position-filter">

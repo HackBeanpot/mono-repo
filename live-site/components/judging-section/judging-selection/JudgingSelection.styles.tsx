@@ -25,36 +25,19 @@ const StyledPersonTypeSelectSection = styled.div`
 `;
 
 const StyledJudgeButton = styled.div`
-  @media ${min.tablet} {
-    padding-right: 6em;
-  }
   @media ${max.tablet} {
-    position: absolute;
-    top: 35%;
-    left: 32%;
-  }
-  @media ${max.tabletSm} {
-    left: 25%;
-  }
-  @media ${max.mobile} {
-    left: 20%;
+    margin-bottom: 2em;
+    justify-content: center;
+    display: flex;
   }
 `;
 
 const StyledHackerButton = styled.div`
-  @media ${min.tablet} {
-    padding-left: 6em;
-  }
+  margin-left: 2em;
   @media ${max.tablet} {
-    position: absolute;
-    top: 50%;
-    left: 32%;
-  }
-  @media ${max.tabletSm} {
-    left: 25%;
-  }
-  @media ${max.mobile} {
-    left: 20%;
+    margin-left: 0;
+    justify-content: center;
+    display: flex;
   }
 `;
 
