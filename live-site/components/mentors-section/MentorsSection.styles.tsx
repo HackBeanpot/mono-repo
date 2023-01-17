@@ -106,31 +106,31 @@ const StyledMentorContainer = styled.div`
 const StyledMentorName = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
-  font-size: 16px;
+  font-size: 1.25em;
 
   @media ${min.desktop} {
-    font-size: 22px;
+    font-size: 1.7em;
   }
 `
 
 const StyledMentorCompany = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
-  font-size: 14px;
+  font-size: 0.75em;
 
   @media ${min.desktop} {
-    font-size: 16px;
+    font-size: 1em;
   }
 `
 
 const StyledMentorPosition = styled.div`
   color: ${colors.TEXT_BROWN};
   font-family: ${fonts.nunitoSansLight};
-  font-size: 12px;
+  font-size: 0.75em;
   font-style: italic;
 
   @media ${min.desktop} {
-    font-size: 14px;
+    font-size: 1em;
   }
 `
 
