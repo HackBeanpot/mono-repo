@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import { max } from '../../../../lib/responsive';
-import { StyledTeamLabelProps } from '../../../../lib/types';
-import { colors } from '../../../../style/colors';
-import { P } from '../../../../style/typography';
 
 const StyledMobileTeamColumn = styled.div`
   padding-top: 2.5em;
@@ -11,7 +8,6 @@ const StyledMobileTeamColumn = styled.div`
 const LabelArrowContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-right: 0.5em;
 `;
 
 const MobileImageContainer = styled.div`
@@ -35,18 +31,10 @@ const StyledImageRow = styled.div`
   justify-content: center;
 `;
 
-const StyledLabel = styled(P)<StyledTeamLabelProps>`
-  padding-left: 0.8em;
-  width: 8em;
-  margin-bottom: ${(props): string => (props.twoLines ? '-1.2em' : '0')};
-  font-size: 1.9em;
-  color: ${colors.TEXT_BROWN};
-  letter-spacing: 0.1em;
-  @media ${max.tabletLg} {
-    padding-left: 0;
-  }
+const StyledSecondaryButtonWrapper = styled.div`
+  margin: 0 2em;
   @media ${max.tabletSm} {
-    font-size: 1.6em;
+    margin: 0 1em;
   }
 `;
 
@@ -56,5 +44,5 @@ export {
   StyledMobileTeamColumn,
   StyledImageRow,
   StyledHeadshot,
-  StyledLabel
+  StyledSecondaryButtonWrapper
 };

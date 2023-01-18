@@ -9,6 +9,10 @@ export interface ResourceBoxProps {
   label: string;
 }
 
+export interface JudgingScheduleWelcomeProps {
+  schedulePersonType: string;
+}
+
 export interface UpcomingEvent {
   id: number;
   header: string;

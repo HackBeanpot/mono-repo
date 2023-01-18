@@ -1,10 +1,16 @@
 import { MouseEventHandler } from 'react';
 
+export interface StyledPrimaryButtonProps {
+  isSmallPrimary: boolean | undefined;
+}
+
 export interface ButtonProps {
   btnText: string;
   btnLink?: string;
   newTab?: boolean;
   onClick?: MouseEventHandler;
+  isSmallPrimary?: boolean;
+  isClickable?: boolean;
 }
 
 export interface DropdownProps {
@@ -90,7 +96,6 @@ export interface BackgroundProps {
 export interface MobileTeamColumnProps {
   listOfColumnInfo: TeamColumnInfo[];
 }
-
-export interface StyledTeamLabelProps {
-  twoLines: boolean;
+export interface StyledSecondaryButtonProps {
+  isClickable: boolean;
 }
