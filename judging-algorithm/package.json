@@ -1,0 +1,14 @@
+{
+  "name": "judging-algorithm",
+  "version": "1.0.0",
+  "description": "Judging schedule for HackBeanpot",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "surbhi gulati, lisa jiang",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.3"
+  }
+}
