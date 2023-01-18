@@ -12,6 +12,7 @@ import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
 import { moonRock, sunRays } from './LandingSection.animations';
+import LocationTimeSection from '../location-time-section/LocationDateSection';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
@@ -25,6 +26,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
         <StyledThemeText>Desert Exploration</StyledThemeText>
+        <LocationTimeSection/>
         <StyledLandingButtonContainer
           btnText="Apply here!"
           btnLink="https://apply.hackbeanpot.com/"
