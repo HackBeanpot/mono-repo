@@ -6,8 +6,6 @@ import { H1, P } from '../../../shared-ui/style/typography';
 
 const StyledLocationDateSectionContainer = styled.div`
     padding-bottom: 1.5em;
-
-
 `;
 
 const StyledDateHeader = styled(H1)<StyledLocationSectionProps>`

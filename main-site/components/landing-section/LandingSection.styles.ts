@@ -45,8 +45,7 @@ const StyledThemeText = styled(H1)`
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 0.2em;
-      padding-top: 0.2em;
+      padding: 0.2em, 0;
     }
   }
 `;

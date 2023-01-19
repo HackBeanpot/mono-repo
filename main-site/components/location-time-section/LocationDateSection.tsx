@@ -5,7 +5,6 @@ import { StyledDateHeader, StyledLocationDateSectionContainer, StyledLocationTex
 
 const LocationTimeSection: React.FC<LocationSectionProps> = ({ isDay }) => {
     return (
-
        <StyledLocationDateSectionContainer>
         <StyledDateHeader isDay={isDay}>February 10-12, 2023</StyledDateHeader>
         <StyledLocationText isDay={isDay}>@Wood Mackenzie (Formerly known as PowerAdvocate)</StyledLocationText>
