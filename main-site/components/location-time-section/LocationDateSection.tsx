@@ -12,5 +12,4 @@ const LocationTimeSection: React.FC<LocationSectionProps> = ({ isDay }) => {
        </StyledLocationDateSectionContainer>
     );
 }
-
 export default LocationTimeSection;
