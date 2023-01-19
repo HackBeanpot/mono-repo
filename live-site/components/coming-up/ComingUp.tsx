@@ -19,18 +19,19 @@ import { useAirtableApi } from '../../src/hooks/useAirtable';
 const ComingUpSection: React.FC = () => {
   const { data } = useAirtableApi('Relevant', 'relevant');
   let count = 0; 
-  const events: UpcomingEvent[]= Array.from(
+  let events: UpcomingEvent[]= Array.from(
     new Set(
     data.map((event) => {
       count = count + 1;
-      return {
-        id: count,
-        header: event.fields.title,
-        time: event.fields.time + count,
-        body: event.fields.notes,
-      }
+        return {
+          id: count,
+          header: event.fields.title,
+          time: event.fields.time,
+          body: event.fields.notes,
+        } 
     }))
   )
+  events = events.slice(0, 3); 
   const isDesktop = useMatchMedia(min.tablet);
   if (events.length === 0) {
     return <NoUpcoming />;
