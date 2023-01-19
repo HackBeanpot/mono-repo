@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H1, P } from '../../../shared-ui/style/typography';
 
@@ -12,11 +13,20 @@ const StyledDateHeader = styled(H1)`
   color: ${colors.TEXT_BROWN};
   font-size: 3em;
 
+  @media ${max.tablet} {
+    font-size: 1.8em;
+  }
+
 `;
 
 
 const StyledLocationText = styled(P)`
   color: ${colors.TEXT_BROWN};
+
+  @media ${max.tablet} {
+    font-size: 1em;
+  }
+
 `;
 
 export { StyledLocationDateSectionContainer, StyledDateHeader,StyledLocationText };
