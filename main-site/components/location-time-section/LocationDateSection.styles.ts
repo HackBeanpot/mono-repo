@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { max } from '../../../shared-ui/lib/responsive';
+import { StyledLocationSectionProps } from '../../../shared-ui/lib/types';
 import { colors } from '../../../shared-ui/style/colors';
 import { H1, P } from '../../../shared-ui/style/typography';
 
@@ -9,10 +10,10 @@ const StyledLocationDateSectionContainer = styled.div`
 
 `;
 
-const StyledDateHeader = styled(H1)`
-  color: ${colors.TEXT_BROWN};
+const StyledDateHeader = styled(H1)<StyledLocationSectionProps>`
+  color: ${(props): string =>
+    props.isDay ? colors.TEXT_BROWN : colors.YELLOW};
   font-size: 3em;
-
   @media ${max.tablet} {
     font-size: 1.8em;
   }
@@ -20,8 +21,9 @@ const StyledDateHeader = styled(H1)`
 `;
 
 
-const StyledLocationText = styled(P)`
-  color: ${colors.TEXT_BROWN};
+const StyledLocationText = styled(P)<StyledLocationSectionProps>`
+  color:   ${(props): string =>
+    props.isDay ? colors.TEXT_BROWN : colors.YELLOW};
 
   @media ${max.tablet} {
     font-size: 1em;

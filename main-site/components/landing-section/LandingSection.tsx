@@ -26,7 +26,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
         <StyledThemeText>Desert Exploration</StyledThemeText>
-        <LocationTimeSection/>
+        <LocationTimeSection isDay={isDay}/>
         <StyledLandingButtonContainer
           btnText="Apply here!"
           btnLink="https://apply.hackbeanpot.com/"
