@@ -23,7 +23,12 @@ const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
           <P>{`Earn points for yourself and your cabin by participating in events! Let’s see which cabin wins the 2023 Desert Race!`}</P>
         </StyledRaceContent>
         {orderTeams(teams).map((team: TeamProps, position: number) => (
-          <Team name={team.name} points={team.points} position={position + 1} />
+          <Team
+            name={team.name}
+            points={team.points}
+            position={position + 1}
+            index={team.index}
+          />
         ))}
       </StyledRaceContainer>
     </>
