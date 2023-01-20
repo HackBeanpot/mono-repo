@@ -20,12 +20,12 @@ function main(): FinalOutputTables {
 
   // apply constraints to parsed data
   const allAwardEligibleHackers = allHackers.filter(team => team.liveDemo);  
-  const capacityAvailableRooms = allRooms.filter(room => room.capacity >= minCapacityRequired);
 
   // extract string names for: judges, hackers and teams
   const judgeStrings = allJudges.map(judge => judge.name);
-  const roomStrings = capacityAvailableRooms.map(room => room.name);
 
   // handles randomized placement and outputs a judge table and a hacker table for front-end
-  return sortJudgesAndPeople(allTimes, roomStrings, allAwardEligibleHackers, judgeStrings);
+  return sortJudgesAndPeople(allTimes, allRooms, allAwardEligibleHackers, judgeStrings);
 }
+
+main()

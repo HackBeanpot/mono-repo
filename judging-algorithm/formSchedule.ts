@@ -2,14 +2,15 @@ import {
   FinalOutputTables,
   HackerOutput,
   HackerTeam,
-  JudgeOutput
+  JudgeOutput,
+  Room
 } from './types';
 
 // driver code, takes parsed values and creates random assignments
 // the judges and hacker teams it take in have already been filtered, and rooms have been filtered for capacity
 export function sortJudgesAndPeople(
   allTimes: string[],
-  allJudgingRooms: string[],
+  allJudgingRooms: Room[],
   unassignedTeams: HackerTeam[],
   unassignedJudges: string[]
 ): FinalOutputTables {
@@ -22,9 +23,13 @@ export function sortJudgesAndPeople(
   };
   // judges assignment
   const judgesPerRoom = Math.ceil(
-    unassignedJudges.length / allJudgingRooms.length
+    unassignedJudges.length / allJudgingRooms.length 
   );
-  for (const room of allJudgingRooms) {
+  // filter out rooms with less capacity than judgesPerRoom
+  const goodRooms: Room[] = allJudgingRooms.filter(room=>room.capacity >= judgesPerRoom)
+  const goodRoomsName: string[] = goodRooms.map(room=>room.name)
+
+  for (const room of goodRoomsName) {
     for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
       if (unassignedJudges.length > 0) {
         const judgeToAssignIdx = Math.floor(
