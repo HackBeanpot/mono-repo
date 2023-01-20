@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { P } from '../../../../shared-ui/style/typography';
+import { H3, P } from '../../../../shared-ui/style/typography';
+import { colors } from '../../../../shared-ui/style/colors.ts';
 
 const StyledTeamContainer = styled.div`
   display: flex;
@@ -7,27 +8,31 @@ const StyledTeamContainer = styled.div`
   padding: 1em 2em;
 `;
 
+const StyledTeamHeader = styled(H3)`
+  color: ${colors.WHITE};
+`;
+
 const StyledTeamName = styled(P)`
   text-transform: uppercase;
-  color: #bed9aa;
-  font-size: 20px;
+  color: ${colors.BUTTON_GREEN};
+  font-size: 1.5em;
 `;
 
 const StyledTeamPoint = styled(P)`
   text-transform: uppercase;
-  color: #ffe799;
-  font-size: 20px;
+  color: ${colors.RACE};
+  font-size: 1.5em;
 `;
 
 const StyledTeamPosition = styled(P)`
   text-transform: uppercase;
-  color: #bed9aa;
-  font-size: 20px;
+  color: ${colors.BUTTON_GREEN};
+  font-size: 1.5em;
   margin-right: 0.1em;
 `;
 
 const StyledTeamCarContainer = styled.div`
-  border-bottom: 2px solid #ffe799;
+  border-bottom: 2px solid ${colors.RACE};
   width: 15em;
   margin-left: 1.5em;
 `;
@@ -42,5 +47,6 @@ export {
   StyledTeamPoint,
   StyledTeamCarContainer,
   StyledTeamCar,
-  StyledTeamPosition
+  StyledTeamPosition,
+  StyledTeamHeader
 };

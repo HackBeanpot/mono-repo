@@ -47,6 +47,7 @@ export interface TeamProps {
   points: number;
   name: string;
   position?: number;
+  index: number;
 }
 
 export interface TeamRaceProps {
@@ -55,4 +56,5 @@ export interface TeamRaceProps {
 
 export interface TeamCarProps {
   points: number;
+  index: number;
 }

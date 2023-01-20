@@ -8,12 +8,12 @@ import {
 } from './Team.styles';
 import TeamCar from './TeamCar';
 
-const Team: React.FC<TeamProps> = ({ name, points, position }) => {
+const Team: React.FC<TeamProps> = ({ name, points, position, index }) => {
   return (
     <StyledTeamContainer>
       <StyledTeamPosition>{position}:</StyledTeamPosition>
       <StyledTeamName> {name}</StyledTeamName>
-      <TeamCar points={points} />
+      <TeamCar points={points} index={index} />
       <StyledTeamPoint>{points} PTS</StyledTeamPoint>
     </StyledTeamContainer>
   );

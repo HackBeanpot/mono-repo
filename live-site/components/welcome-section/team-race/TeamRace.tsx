@@ -1,11 +1,12 @@
 import React from 'react';
-import { H3, P } from '../../../../shared-ui/style/typography';
+import { P } from '../../../../shared-ui/style/typography';
 import { TeamProps, TeamRaceProps } from '../../../lib/types';
 import {
   StyledRaceContainer,
   StyledRaceContent
 } from '../WelcomeSection.styles';
 import Team from './Team';
+import { StyledTeamHeader } from './Team.styles';
 
 const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
   const orderTeams = (teams: TeamProps[]): TeamProps[] => {
@@ -18,7 +19,7 @@ const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
     <>
       <StyledRaceContainer>
         <StyledRaceContent>
-          <H3>DesertRace</H3>
+          <StyledTeamHeader>DesertRace</StyledTeamHeader>
           <P>{`Earn points for yourself and your cabin by participating in events! Let’s see which cabin wins the 2023 Desert Race!`}</P>
         </StyledRaceContent>
         {orderTeams(teams).map((team: TeamProps, position: number) => (

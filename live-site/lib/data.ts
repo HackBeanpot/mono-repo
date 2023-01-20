@@ -9,9 +9,11 @@ const liveSiteTabInfo: TabInfo[] = [
 ];
 
 const TeamInfo: TeamProps[] = [
-  { name: 'Dhivas', points: 75 },
-  { name: 'Shoosh', points: 23 },
-  { name: 'Shlosh', points: 1 }
+  { name: 'TEAM TATOOINE', points: 100, index: 0 },
+  { name: 'TEAM ESSOS', points: 82, index: 1 },
+  { name: 'TEAM SI WONG', points: 66, index: 2 },
+  { name: 'TEAM ARRAKIS', points: 33, index: 3 },
+  { name: 'TEAM DESSERT BIOME', points: 0, index: 4 }
 ];
 
 interface TimeLeft {
