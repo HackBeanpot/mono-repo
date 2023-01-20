@@ -10,12 +10,16 @@ interface AirtableData {
 
 export const useAirtableApi = (
   baseName: string,
-  tableName: string
+  tableName: string,
+  isDev = false
 ): AirtableData => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    const url = `${BASEURL}/${baseName}/${tableName}`;
+    let url = `${BASEURL}/${baseName}/${tableName}`;
+    if (isDev) {
+      url = url + '?isDev=true';
+    }
     try {
       fetch(url)
         .then((data) => {
