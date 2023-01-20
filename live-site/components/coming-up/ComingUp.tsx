@@ -26,11 +26,13 @@ const ComingUpSection: React.FC = () => {
         return {
           id: count,
           header: event.fields.title,
-          time: event.fields.time,
+          time: event.fields.start_time,
+          display_start_time: event.fields.display_start_time,
           body: event.fields.notes,
         } 
     }))
   )
+  events.sort((event1: UpcomingEvent, event2: UpcomingEvent) => (event1.time > event2.time) ? 1 : -1);
   events = events.slice(0, 3); 
   const isDesktop = useMatchMedia(min.tablet);
   if (events.length === 0) {
@@ -45,7 +47,7 @@ const ComingUpSection: React.FC = () => {
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.time}</StyledTime>
+              <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
             </StyledTextContainer>
           </StyledEvent>
@@ -61,7 +63,7 @@ const ComingUpSection: React.FC = () => {
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.time}</StyledTime>
+              <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
             </StyledTextContainer>
           </StyledEvent>

@@ -13,6 +13,7 @@ export interface UpcomingEvent {
   id: number;
   header: string;
   time: string;
+  display_start_time: string; 
   body: string;
 }
 
