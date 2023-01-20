@@ -16,10 +16,9 @@ export const useAirtableApi = (
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    let url = `${BASEURL}/${baseName}/${tableName}`;
-    if (isDev) {
-      url = url + '?isDev=true';
-    }
+    const url = `${BASEURL}/${baseName}/${tableName}${
+      isDev ? '?isDev=true' : ''
+    }`;
     try {
       fetch(url)
         .then((data) => {
