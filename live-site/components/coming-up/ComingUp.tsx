@@ -24,6 +24,7 @@ const ComingUpSection: React.FC = () => {
   };
   const events: UpcomingEvent[] = [event, event, event];
   const isDesktop = useMatchMedia(min.tablet);
+
   if (events.length === 0) {
     return <NoUpcoming />;
   }

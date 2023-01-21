@@ -99,3 +99,11 @@ export interface MobileTeamColumnProps {
 export interface StyledSecondaryButtonProps {
   isClickable: boolean;
 }
+
+export interface StyledLocationSectionProps {
+  isDay: boolean;
+}
+
+export interface LocationSectionProps {
+  isDay: boolean;
+}
