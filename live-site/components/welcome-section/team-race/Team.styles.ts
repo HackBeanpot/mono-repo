@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { H3, P } from '../../../../shared-ui/style/typography';
-import { colors } from '../../../../shared-ui/style/colors.ts';
+import { colors } from '../../../../shared-ui/style/colors';
 
 const StyledTeamContainer = styled.div`
   display: flex;
