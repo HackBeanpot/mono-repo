@@ -15,13 +15,15 @@ import {
   StyledMentorCompany,
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
-  StyledCactusButtons
+  StyledCactusButtons,
+  StyledNoMentorsContainer
 } from './MentorsSection.styles';
 import cactus1 from '../../../shared-ui/images/cactus1.png';
 import cactus2 from '../../../shared-ui/images/cactus2.png';
 import cactus3 from '../../../shared-ui/images/cactus3.png';
 import cactus4 from '../../../shared-ui/images/cactus4.png';
 import { MentorInfo } from '../../lib/types';
+import { StyledSecondaryButton } from '../../../shared-ui/components/secondary-button/SecondaryButton.styles';
 
 const MentorsSection: React.FC = () => {
   const isSmallMobile = useMatchMedia(max.tabletSm);
@@ -30,25 +32,24 @@ const MentorsSection: React.FC = () => {
 
   const { data } = useAirtableApi('Mentors', 'mentors');
   const [mentorData, setMentorData] = useState<MentorInfo[]>([]);
-  const [mentors, setMentors] = useState<MentorInfo[]>([])
-  const [expertiseFilter, setExpertiseFilter] = useState('');
-  const [companyFilter, setCompanyFilter] = useState('');
+  const [mentors, setMentors] = useState<MentorInfo[]>([]);
+  const [expertiseFilter, setExpertiseFilter] = useState('All');
+  const [companyFilter, setCompanyFilter] = useState('All');
   const [virtualFilter, setVirtualFilter] = useState(false);
 
   const companiesArr = Array.from(
-    new Set(mentorData.map((mentor) => mentor.company))
+    new Set(['All'].concat(mentorData.map((mentor) => mentor.company)))
   );
 
-  const getExpertiseArr = (mentors: MentorInfo[]) : string[] => {
+  const getExpertiseArr = (mentors: MentorInfo[]): string[] => {
     const expertises: string[] = [];
-    mentors.forEach(mentor => {
-      mentor.expertise.forEach(expertise => {
-        expertises.push(expertise)
-      })
-    })
-    console.log(expertises)
-    return Array.from(new Set(expertises))
-  }
+    mentors.forEach((mentor) => {
+      mentor.expertise.forEach((expertise) => {
+        expertises.push(expertise);
+      });
+    });
+    return Array.from(new Set(['All'].concat(expertises)));
+  };
 
   const [paginatedMentors, setPaginatedMentors] = useState<MentorInfo[][]>([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -58,8 +59,9 @@ const MentorsSection: React.FC = () => {
   const mentorsToDisplay = isMobile
     ? paginatedMentors[currentPage] ?? []
     : mentors;
-  
+
   useEffect(() => {
+    console.log(data);
     setMentorData(
       data.map((mentor) => {
         return {
@@ -68,7 +70,7 @@ const MentorsSection: React.FC = () => {
           position: mentor.fields.position,
           imageUrl: mentor.fields.image[0].url,
           expertise: mentor.fields.expertise ?? [],
-          virtual: mentor.virtual ?? false
+          virtual: mentor.fields.virtual ?? false
         };
       })
     );
@@ -77,25 +79,35 @@ const MentorsSection: React.FC = () => {
   useEffect(() => {
     let filteredMentors = mentorData;
     if (virtualFilter) {
-      filteredMentors = filteredMentors.filter(mentor => mentor.virtual)
+      filteredMentors = filteredMentors.filter((mentor) => mentor.virtual);
     }
-    if (expertiseFilter) {
-      filteredMentors = filteredMentors.filter(mentor => mentor.expertise.includes(expertiseFilter))
+    if (expertiseFilter !== 'All') {
+      filteredMentors = filteredMentors.filter((mentor) =>
+        mentor.expertise.includes(expertiseFilter)
+      );
     }
-    if (companyFilter) {
-      filteredMentors = filteredMentors.filter(mentor => mentor.company === companyFilter)
+    if (companyFilter !== 'All') {
+      filteredMentors = filteredMentors.filter(
+        (mentor) => mentor.company === companyFilter
+      );
     }
-
 
     const pages: MentorInfo[][] = [];
     for (let i = 0; i < filteredMentors.length; i += pageSize) {
       const mentorsForPage = filteredMentors.slice(i, i + pageSize);
       pages.push(mentorsForPage);
     }
-    setMentors(filteredMentors)
+    setMentors(filteredMentors);
     setPaginatedMentors(pages);
-    
-  }, [mentorData, virtualFilter, expertiseFilter, companyFilter, pageSize, setPaginatedMentors]);
+  }, [
+    mentorData,
+    virtualFilter,
+    expertiseFilter,
+    companyFilter,
+    pageSize,
+    setMentors,
+    setPaginatedMentors
+  ]);
 
   const displayMentor = (mentor: MentorInfo): React.ReactElement => (
     <StyledMentorContainer>
@@ -132,7 +144,12 @@ const MentorsSection: React.FC = () => {
           <StyledMentorsDropdownContainer>
             <StyledMentorsDropdownWrapper id="expertise-filter">
               {getExpertiseArr(mentorData).map((expertise: string) => (
-                <option value={expertise} onClick={(): void => setExpertiseFilter(expertise)}>Expertise: {expertise}</option>
+                <option
+                  value={expertise}
+                  onClick={(): void => setExpertiseFilter(expertise)}
+                >
+                  Expertise: {expertise}
+                </option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -140,7 +157,12 @@ const MentorsSection: React.FC = () => {
           <StyledMentorsDropdownContainer>
             <StyledMentorsDropdownWrapper id="company-filter">
               {companiesArr.map((currCompany: string) => (
-                <option value={currCompany} onClick={(): void => setCompanyFilter(currCompany)}>Company: {currCompany}</option>
+                <option
+                  value={currCompany}
+                  onClick={(): void => setCompanyFilter(currCompany)}
+                >
+                  Company: {currCompany}
+                </option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -158,7 +180,9 @@ const MentorsSection: React.FC = () => {
               id="virtualMentors"
               name="virtual_mentors_filter"
               value="Virtual mentors"
-              onClick={(): void => setVirtualFilter(virtualFilter => !virtualFilter)}
+              onClick={(): void =>
+                setVirtualFilter((virtualFilter) => !virtualFilter)
+              }
             />
             <label htmlFor="virtualMentors">Virtual</label>
             <br />
@@ -166,6 +190,23 @@ const MentorsSection: React.FC = () => {
         </StyledMentorsFilterSection>
         <StyledMentorsListContainer>
           {mentorsToDisplay.map((currMentor) => displayMentor(currMentor))}
+          {mentorsToDisplay.length === 0 && (
+            <StyledNoMentorsContainer>
+              <StyledMentorName>
+                No mentors with selected filters
+              </StyledMentorName>
+              <StyledSecondaryButton
+                isClickable={true}
+                onClick={(): void => {
+                  setCompanyFilter('All');
+                  setExpertiseFilter('All');
+                  setVirtualFilter(false);
+                }}
+              >
+                Clear filters
+              </StyledSecondaryButton>
+            </StyledNoMentorsContainer>
+          )}
         </StyledMentorsListContainer>
         {isMobile && (
           <StyledMentorsPaginationContainer>

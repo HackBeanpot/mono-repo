@@ -20,7 +20,7 @@ const StyledMentorsFilterSection = styled.div`
   @media ${max.tablet} {
     padding-left: 2.4em;
   }
-`
+`;
 
 const StyledMentorsHeader = styled(H3)`
   margin-bottom: 1em;
@@ -86,7 +86,7 @@ const StyledMentorsListContainer = styled.div`
   @media ${max.tabletSm} {
     max-width: 25em;
   }
-`
+`;
 
 const StyledMentorContainer = styled.div`
   display: flex;
@@ -105,7 +105,7 @@ const StyledMentorContainer = styled.div`
     padding: 1.75em 0em;
     width: 12em;
   }
-`
+`;
 
 const StyledMentorName = styled.div`
   color: ${colors.WHITE};
@@ -116,7 +116,7 @@ const StyledMentorName = styled.div`
   @media ${min.tabletLg} {
     font-size: 1.7em;
   }
-`
+`;
 
 const StyledMentorCompany = styled.div`
   color: ${colors.WHITE};
@@ -126,7 +126,7 @@ const StyledMentorCompany = styled.div`
   @media ${min.tabletLg} {
     font-size: 1em;
   }
-`
+`;
 
 const StyledMentorPosition = styled.div`
   color: ${colors.TEXT_BROWN};
@@ -137,7 +137,7 @@ const StyledMentorPosition = styled.div`
   @media ${min.desktop} {
     font-size: 1em;
   }
-`
+`;
 
 const StyledMentorsPaginationContainer = styled.div`
   display: flex;
@@ -146,7 +146,15 @@ const StyledMentorsPaginationContainer = styled.div`
   @media ${min.desktop} {
     max-width: 95%;
   }
-`
+`;
+
+const StyledNoMentorsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+`;
+
 const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
   width: ${(StyledCactusButtonsProps): string =>
     StyledCactusButtonsProps.isToggled ? '3em' : '2em'};
@@ -169,5 +177,6 @@ export {
   StyledMentorCompany,
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
+  StyledNoMentorsContainer,
   StyledCactusButtons
 };
