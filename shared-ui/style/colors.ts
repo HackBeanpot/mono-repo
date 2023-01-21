@@ -27,7 +27,8 @@ const colors = {
   SOORANGE: '#F2A32B',
   SPONSIBGREEN: '#27AE60',
   PURPLE: '#A0B2EF',
-  RACE: '#ffe799'
+  RACE: '#ffe799',
+  YELLOW: '#FFE090'
 };
 
 export { colors };

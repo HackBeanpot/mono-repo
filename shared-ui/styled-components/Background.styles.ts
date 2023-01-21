@@ -7,7 +7,7 @@ const StyledBackgrounds = styled.img`
 `;
 
 const StyledPageContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   position: absolute;
   overflow: hidden;
 `;

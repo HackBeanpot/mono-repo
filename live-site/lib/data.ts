@@ -1,11 +1,12 @@
 import { TabInfo, EventItem, TeamProps } from './types';
 
 const liveSiteTabInfo: TabInfo[] = [
-  { name: 'Schedule', link: '#schedule' },
-  { name: 'Mentors', link: '#mentors' },
-  { name: 'Challenges', link: '#challenges' },
-  { name: 'Resources', link: '#resources' },
-  { name: 'Team', link: '#team' }
+  { name: 'Schedule', link: '/#schedule' },
+  { name: 'Mentors', link: '/#mentors' },
+  { name: 'Challenges', link: '/#challenges' },
+  { name: 'Resources', link: '/#resources' },
+  { name: 'Team', link: '/#team' },
+  { name: 'Judging', link: '/judging' }
 ];
 
 const TeamInfo: TeamProps[] = [

@@ -28,7 +28,7 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'How do I apply to HackBeanpot?',
     answer:
-      'Pre-registration begins November 6th, but applications will be open on November 22nd. Apply through our registration portal here! Keep an eye in your inbox for acceptance details in mid-January.'
+      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 20th, 2023.'
   },
 
   {
