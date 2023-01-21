@@ -16,10 +16,10 @@ const StyledWelcomeSectionContainer = styled.div`
 
 const StyledRaceContainer = styled.div`
   background-color: ${colors.TEXT_BOX};
-  width: 40em;
+  width: 45em;
   height: 28.5em;
   border-radius: 1.5em;
-  margin: 1.3em 0 1.3em 1.3em;
+  padding: 1em 1em;
   @media ${max.tablet} {
     margin: 1.3em 0 0 0;
     width: 90%;
@@ -29,6 +29,7 @@ const StyledRaceContainer = styled.div`
 const StyledRaceContent = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 1em 1em;
 `;
 
 const StyledWelcomeSectionContent = styled.div`

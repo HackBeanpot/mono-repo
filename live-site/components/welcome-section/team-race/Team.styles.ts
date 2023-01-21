@@ -5,7 +5,6 @@ import { colors } from '../../../../shared-ui/style/colors';
 const StyledTeamContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 1em 2em;
 `;
 
 const StyledTeamHeader = styled(H3)`
@@ -34,7 +33,6 @@ const StyledTeamPosition = styled(P)`
 const StyledTeamCarContainer = styled.div`
   border-bottom: 2px solid ${colors.RACE};
   width: 15em;
-  margin-left: 1.5em;
 `;
 
 const StyledTeamCar = styled.img<{ margin: number }>`
