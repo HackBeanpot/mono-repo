@@ -54,6 +54,8 @@ export interface MentorInfo {
   imageUrl: string;
   expertise: string[];
   virtual: boolean;
+  shiftStart: string[];
+  shiftEnd: string[];
 }
 
 export interface StyledCactusButtonsProps {

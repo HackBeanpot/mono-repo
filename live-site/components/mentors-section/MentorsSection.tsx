@@ -30,12 +30,13 @@ const MentorsSection: React.FC = () => {
   const isSmallTablet = useMatchMedia(max.tablet);
   const isMobile = useMatchMedia(max.tabletLg);
 
-  const { data } = useAirtableApi('Mentors', 'mentors');
+  const { data } = useAirtableApi('Mentors', 'mentors', true);
   const [mentorData, setMentorData] = useState<MentorInfo[]>([]);
   const [mentors, setMentors] = useState<MentorInfo[]>([]);
   const [expertiseFilter, setExpertiseFilter] = useState('All');
   const [companyFilter, setCompanyFilter] = useState('All');
   const [virtualFilter, setVirtualFilter] = useState(false);
+  const [onShiftFilter, setOnShiftFilter] = useState(true);
 
   const companiesArr = Array.from(
     new Set(['All'].concat(mentorData.map((mentor) => mentor.company)))
@@ -70,7 +71,9 @@ const MentorsSection: React.FC = () => {
           position: mentor.fields.position,
           imageUrl: mentor.fields.image[0].url,
           expertise: mentor.fields.expertise ?? [],
-          virtual: mentor.fields.virtual ?? false
+          virtual: mentor.fields.virtual ?? false,
+          shiftStart: mentor.fields.shift_start ?? '',
+          shiftEnd: mentor.fields.shift_end ?? ''
         };
       })
     );
@@ -78,6 +81,19 @@ const MentorsSection: React.FC = () => {
 
   useEffect(() => {
     let filteredMentors = mentorData;
+    if (onShiftFilter) {
+      filteredMentors = filteredMentors.filter((mentor) => {
+        const now = Date.now();
+        for (let i = 0; i < mentor.shiftStart.length; i++) {
+          const shiftStart = Date.parse(mentor.shiftStart[i]);
+          const shiftEnd = Date.parse(mentor.shiftEnd[i]);
+          if (shiftStart <= now && shiftEnd >= now) {
+            return true;
+          }
+        }
+        return false;
+      });
+    }
     if (virtualFilter) {
       filteredMentors = filteredMentors.filter((mentor) => mentor.virtual);
     }
@@ -172,6 +188,9 @@ const MentorsSection: React.FC = () => {
               id="onShiftMentors"
               name="onshift_mentors_filter"
               value="Mentors on shift now"
+              onClick={(): void =>
+                setOnShiftFilter((onShiftFilter) => !onShiftFilter)
+              }
             />
             <label htmlFor="onShiftMentors">Mentors on shift now</label>
             <br />
