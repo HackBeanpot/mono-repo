@@ -52,6 +52,8 @@ export interface MentorInfo {
   company: string;
   position: string;
   imageUrl: string;
+  expertise: string[];
+  virtual: boolean;
 }
 
 export interface StyledCactusButtonsProps {

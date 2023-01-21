@@ -93,14 +93,17 @@ const StyledMentorContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 0.75em;
+  padding: 0.75em 0em;
+  width: 7.75em;
 
   @media ${min.tabletSm} {
-    padding: 1.25em;
+    padding: 1.25em 0em;
+    width: 9em;
   }
 
-  @media ${min.desktop} {
-    padding: 1.75em 3.5em;
+  @media ${min.tabletLg} {
+    padding: 1.75em 0em;
+    width: 12em;
   }
 `
 
@@ -108,8 +111,9 @@ const StyledMentorName = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.25em;
+  text-align: center;
 
-  @media ${min.desktop} {
+  @media ${min.tabletLg} {
     font-size: 1.7em;
   }
 `
@@ -119,7 +123,7 @@ const StyledMentorCompany = styled.div`
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 0.75em;
 
-  @media ${min.desktop} {
+  @media ${min.tabletLg} {
     font-size: 1em;
   }
 `
