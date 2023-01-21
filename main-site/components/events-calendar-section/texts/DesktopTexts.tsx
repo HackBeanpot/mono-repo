@@ -4,7 +4,6 @@ import {
   EventsPBolded,
   EventsSubHeader,
   EventsP,
-  StyledEventsBox,
   StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
@@ -52,7 +51,7 @@ const DesktopTexts: React.FC = () => {
         </StyledTextContainer>
       </StyledPastEventsBox>
 
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <EventsHeader>
             Cybersecurity Workshop + Minihack -- 1/15 12pm-3pm
@@ -64,7 +63,7 @@ const DesktopTexts: React.FC = () => {
             West Village H 366
           </EventsLocationP>
         </StyledCybersecurityLocationContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
     </StyledDesktopTextsContainer>
   );
 };
