@@ -44,7 +44,7 @@ export interface EventItem {
 }
 
 export interface EventItemProps {
-  eventItem : EventItem;
+  eventItem: EventItem;
 }
 
 export interface MentorInfo {

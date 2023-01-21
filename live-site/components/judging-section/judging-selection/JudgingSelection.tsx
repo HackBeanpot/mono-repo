@@ -14,16 +14,10 @@ const JudgingSelection: React.FC = () => {
       <StyledJudgingWelcomeHeader> Who are you? </StyledJudgingWelcomeHeader>
       <StyledPersonTypeSelectSection>
         <StyledJudgeButton>
-          <SecondaryButton
-            btnText="I am a judge"
-            btnLink="/judging/judges"
-          />
+          <SecondaryButton btnText="I am a judge" btnLink="/judging/judges" />
         </StyledJudgeButton>
         <StyledHackerButton>
-          <SecondaryButton
-            btnText="I am a hacker"
-            btnLink="/judging/hackers"
-          />
+          <SecondaryButton btnText="I am a hacker" btnLink="/judging/hackers" />
         </StyledHackerButton>
       </StyledPersonTypeSelectSection>
     </StyledJudgingSelection>
