@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max } from '../../../shared-ui/lib/responsive';
+import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { P } from '../../../shared-ui/style/typography';
 
@@ -23,6 +23,7 @@ const StyledRaceContainer = styled.div`
   @media ${max.tablet} {
     margin: 1.3em 0 0 0;
     width: 90%;
+    height: 40em;
   }
 `;
 
@@ -53,11 +54,19 @@ const StyledButtonContainer = styled.div`
   }
 `;
 
+const StyledTeamTextContainer = styled.div`
+  display: flex;
+  @media ${min.tablet} {
+    width: 45%;
+  }
+`;
+
 export {
   StyledWelcomeSectionContainer,
   StyledRaceContainer,
   StyledWelcomeSectionContent,
   StyledWelcomeText,
   StyledButtonContainer,
-  StyledRaceContent
+  StyledRaceContent,
+  StyledTeamTextContainer
 };

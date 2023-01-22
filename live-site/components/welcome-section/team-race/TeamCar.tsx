@@ -9,7 +9,7 @@ import car5 from '../../../../shared-ui/images/van-purple.svg';
 
 const TeamCar: React.FC<TeamCarProps> = ({ points, index }) => {
   const calculateDistance = (): number => {
-    return points * 0.14;
+    return points * 0.8;
   };
   const retrieveCar = (index: number): string => {
     return [car1, car2, car3, car4, car5][index];

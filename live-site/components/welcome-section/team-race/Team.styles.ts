@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 import { H3, P } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
+import { max } from '../../../../shared-ui/lib/responsive';
 
 const StyledTeamContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media ${max.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const StyledTeamHeader = styled(H3)`
@@ -35,8 +39,12 @@ const StyledTeamCarContainer = styled.div`
   width: 15em;
 `;
 
+const StyledCarContainer = styled.div`
+  display: flex;
+`;
+
 const StyledTeamCar = styled.img<{ margin: number }>`
-  margin-left: ${(props): number => props.margin}em;
+  margin-left: ${(props): number => props.margin}%;
 `;
 
 export {
@@ -46,5 +54,6 @@ export {
   StyledTeamCarContainer,
   StyledTeamCar,
   StyledTeamPosition,
-  StyledTeamHeader
+  StyledTeamHeader,
+  StyledCarContainer
 };
