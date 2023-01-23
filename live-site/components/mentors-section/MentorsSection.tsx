@@ -116,6 +116,7 @@ const MentorsSection: React.FC = () => {
     setPaginatedMentors(pages);
   }, [
     mentorData,
+    onShiftFilter,
     virtualFilter,
     expertiseFilter,
     companyFilter,
@@ -187,7 +188,7 @@ const MentorsSection: React.FC = () => {
               id="onShiftMentors"
               name="onshift_mentors_filter"
               value="Mentors on shift now"
-              checked
+              checked={onShiftFilter}
               onClick={(): void =>
                 setOnShiftFilter((onShiftFilter) => !onShiftFilter)
               }
