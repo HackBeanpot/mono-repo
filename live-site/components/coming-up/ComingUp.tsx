@@ -17,7 +17,7 @@ import useMatchMedia from 'react-use-match-media';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const ComingUpSection: React.FC = () => {
-  const { data } = useAirtableApi('Relevant', 'relevant');
+  const { data } = useAirtableApi('Relevant', 'relevant', true);
   let count = 0; 
   let events: UpcomingEvent[]= Array.from(
     new Set(
