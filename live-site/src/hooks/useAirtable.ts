@@ -67,6 +67,5 @@ export const useAirtableApiWithPagination = (
       setIsLoading(false);
     }
   }, [baseName, tableName]);
-
   return { data, isLoading };
 };
