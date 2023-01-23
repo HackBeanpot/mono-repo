@@ -35,7 +35,7 @@ const StyledTeamPosition = styled(P)`
 `;
 
 const StyledTeamCarContainer = styled.div`
-  border-bottom: 2px solid ${colors.RACE};
+  border-bottom: 0.125em solid ${colors.RACE};
   width: 15em;
 `;
 
@@ -45,6 +45,7 @@ const StyledCarContainer = styled.div`
 
 const StyledTeamCar = styled.img<{ margin: number }>`
   margin-left: ${(props): number => props.margin}%;
+  margin-bottom: -0.6em;
 `;
 
 export {
