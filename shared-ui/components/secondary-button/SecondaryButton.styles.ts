@@ -1,21 +1,30 @@
 import styled from 'styled-components';
 import { max } from '../../lib/responsive';
+import { StyledSecondaryButtonProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 
-const StyledSecondaryButton = styled.button`
-  color: ${colors.BUTTON_GREEN};
+const StyledSecondaryButton = styled.button<StyledSecondaryButtonProps>`
+  color: ${colors.WHITE};
   background-color: ${colors.BUTTON_DARK_GREEN};
-  border-color: ${colors.BUTTON_GREEN};
-  padding: 0.7em;
+  border-color: ${colors.BUTTON_DARK_GREEN};
+  letter-spacing: 0.1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 13em;
   border-radius: 2em;
-  cursor: pointer;
-  border: none;
+  border: 2em;
+  cursor: ${(props): string => (props.isClickable ? 'pointer' : 'cursor')};
   font-size: 1em;
-
+  @media ${max.desktop} {
+    width: 10.4em;
+  }
+  @media ${max.tabletLg} {
+    width: 9.4em;
+  }
   @media ${max.tablet} {
-    font-size: 0.8em;
-    padding: 1em;
-  } ;
+    font-size: 1.1em;
+    width: 13em;
+  }
 `;
 
 export { StyledSecondaryButton };

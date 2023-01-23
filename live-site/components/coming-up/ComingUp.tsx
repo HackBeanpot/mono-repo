@@ -35,6 +35,7 @@ const ComingUpSection: React.FC = () => {
   events.sort((event1: UpcomingEvent, event2: UpcomingEvent) => (event1.time > event2.time) ? 1 : -1);
   events = events.slice(0, 3); 
   const isDesktop = useMatchMedia(min.tablet);
+
   if (events.length === 0) {
     return <NoUpcoming />;
   }

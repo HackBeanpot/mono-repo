@@ -26,7 +26,8 @@ const colors = {
   DESIGN_PINK: '#BB6BD9',
   SOORANGE: '#F2A32B',
   SPONSIBGREEN: '#27AE60',
-  PURPLE: '#A0B2EF'
+  PURPLE: '#A0B2EF',
+  YELLOW: '#FFE090'
 };
 
 export { colors };
