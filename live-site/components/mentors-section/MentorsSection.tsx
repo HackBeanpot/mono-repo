@@ -158,7 +158,10 @@ const MentorsSection: React.FC = () => {
         <StyledMentorsFilterSection>
           <StyledMentorsHeader> Mentors </StyledMentorsHeader>
           <StyledMentorsDropdownContainer>
-            <StyledMentorsDropdownWrapper id="expertise-filter">
+            <StyledMentorsDropdownWrapper
+              id="expertise-filter"
+              value={expertiseFilter}
+            >
               {getExpertiseArr(mentorData).map((expertise: string) => (
                 <option
                   value={expertise}
@@ -171,7 +174,10 @@ const MentorsSection: React.FC = () => {
           </StyledMentorsDropdownContainer>
           {isMobile && <br />}
           <StyledMentorsDropdownContainer>
-            <StyledMentorsDropdownWrapper id="company-filter">
+            <StyledMentorsDropdownWrapper
+              id="company-filter"
+              value={companyFilter}
+            >
               {companiesArr.map((currCompany: string) => (
                 <option
                   value={currCompany}
@@ -200,6 +206,7 @@ const MentorsSection: React.FC = () => {
               id="virtualMentors"
               name="virtual_mentors_filter"
               value="Virtual mentors"
+              checked={virtualFilter}
               onClick={(): void =>
                 setVirtualFilter((virtualFilter) => !virtualFilter)
               }
@@ -220,6 +227,7 @@ const MentorsSection: React.FC = () => {
                 onClick={(): void => {
                   setCompanyFilter('All');
                   setExpertiseFilter('All');
+                  setOnShiftFilter(false);
                   setVirtualFilter(false);
                 }}
               >
