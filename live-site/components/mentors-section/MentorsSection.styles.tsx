@@ -152,7 +152,7 @@ const StyledNoMentorsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 0.75em;
 `;
 
 const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`

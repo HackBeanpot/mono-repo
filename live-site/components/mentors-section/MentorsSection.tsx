@@ -62,7 +62,6 @@ const MentorsSection: React.FC = () => {
     : mentors;
 
   useEffect(() => {
-    console.log(data);
     setMentorData(
       data.map((mentor) => {
         return {
@@ -188,6 +187,7 @@ const MentorsSection: React.FC = () => {
               id="onShiftMentors"
               name="onshift_mentors_filter"
               value="Mentors on shift now"
+              checked
               onClick={(): void =>
                 setOnShiftFilter((onShiftFilter) => !onShiftFilter)
               }
