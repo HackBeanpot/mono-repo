@@ -74,7 +74,7 @@ const StyledMentorsListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 2em 0em;
+  padding: 2em 0;
   justify-content: center;
   max-width: 95%;
   margin: auto;
@@ -93,16 +93,16 @@ const StyledMentorContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 0.75em 0em;
+  padding: 0.75em 0;
   width: 7.75em;
 
   @media ${min.tabletSm} {
-    padding: 1.25em 0em;
+    padding: 1.25em 0;
     width: 9em;
   }
 
   @media ${min.tabletLg} {
-    padding: 1.75em 0em;
+    padding: 1.75em 0;
     width: 12em;
   }
 `;

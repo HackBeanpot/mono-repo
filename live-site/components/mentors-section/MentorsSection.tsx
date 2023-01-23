@@ -161,14 +161,12 @@ const MentorsSection: React.FC = () => {
             <StyledMentorsDropdownWrapper
               id="expertise-filter"
               value={expertiseFilter}
+              onChange={(e): void => {
+                setExpertiseFilter(e.target.value);
+              }}
             >
               {getExpertiseArr(mentorData).map((expertise: string) => (
-                <option
-                  value={expertise}
-                  onClick={(): void => setExpertiseFilter(expertise)}
-                >
-                  Expertise: {expertise}
-                </option>
+                <option value={expertise}>Expertise: {expertise}</option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -177,14 +175,12 @@ const MentorsSection: React.FC = () => {
             <StyledMentorsDropdownWrapper
               id="company-filter"
               value={companyFilter}
+              onChange={(e): void => {
+                setCompanyFilter(e.target.value);
+              }}
             >
               {companiesArr.map((currCompany: string) => (
-                <option
-                  value={currCompany}
-                  onClick={(): void => setCompanyFilter(currCompany)}
-                >
-                  Company: {currCompany}
-                </option>
+                <option value={currCompany}>Company: {currCompany}</option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -195,7 +191,7 @@ const MentorsSection: React.FC = () => {
               name="onshift_mentors_filter"
               value="Mentors on shift now"
               checked={onShiftFilter}
-              onChange={(): void =>
+              onClick={(): void =>
                 setOnShiftFilter((onShiftFilter) => !onShiftFilter)
               }
             />
@@ -207,7 +203,7 @@ const MentorsSection: React.FC = () => {
               name="virtual_mentors_filter"
               value="Virtual mentors"
               checked={virtualFilter}
-              onChange={(): void =>
+              onClick={(): void =>
                 setVirtualFilter((virtualFilter) => !virtualFilter)
               }
             />
