@@ -18,6 +18,7 @@ const StyledRaceContainer = styled.div`
   background-color: ${colors.TEXT_BOX};
   width: 45em;
   border-radius: 1.5em;
+  padding: 3em 2em;
   @media ${max.tablet} {
     margin: 1.3em 0 0 0;
     width: 90%;
