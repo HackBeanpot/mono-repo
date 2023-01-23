@@ -195,7 +195,7 @@ const MentorsSection: React.FC = () => {
               name="onshift_mentors_filter"
               value="Mentors on shift now"
               checked={onShiftFilter}
-              onClick={(): void =>
+              onChange={(): void =>
                 setOnShiftFilter((onShiftFilter) => !onShiftFilter)
               }
             />
@@ -207,7 +207,7 @@ const MentorsSection: React.FC = () => {
               name="virtual_mentors_filter"
               value="Virtual mentors"
               checked={virtualFilter}
-              onClick={(): void =>
+              onChange={(): void =>
                 setVirtualFilter((virtualFilter) => !virtualFilter)
               }
             />
