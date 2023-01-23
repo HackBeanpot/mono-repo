@@ -45,7 +45,7 @@ export interface EventItem {
 }
 
 export interface EventItemProps {
-  eventItem : EventItem;
+  eventItem: EventItem;
 }
 
 export interface MentorInfo {
@@ -53,6 +53,10 @@ export interface MentorInfo {
   company: string;
   position: string;
   imageUrl: string;
+  expertise: string[];
+  virtual: boolean;
+  shiftStart: string[];
+  shiftEnd: string[];
 }
 
 export interface StyledCactusButtonsProps {
