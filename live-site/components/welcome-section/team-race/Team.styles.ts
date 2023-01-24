@@ -23,14 +23,20 @@ const StyledTeamName = styled(P)`
   @media ${min.tablet} {
     font-size: 1em;
   }
+  @media ${min.mobile} {
+    font-size: 0.5em;
+  }
 `;
 
 const StyledTeamPoint = styled(P)`
   text-transform: uppercase;
-  color: ${colors.RACE};
+  color: ${colors.RACE_LINE};
   font-size: 1.5em;
   @media ${min.tablet} {
     font-size: 1em;
+  }
+  @media ${min.mobile} {
+    font-size: 0.5em;
   }
 `;
 
@@ -41,10 +47,13 @@ const StyledTeamPosition = styled(P)`
   @media ${min.tablet} {
     font-size: 1em;
   }
+  @media ${min.mobile} {
+    font-size: 0.5em;
+  }
 `;
 
 const StyledTeamCarContainer = styled.div`
-  border-bottom: 0.125em solid ${colors.RACE};
+  border-bottom: 0.125em solid ${colors.RACE_LINE};
   width: 15em;
   margin-right: 2em;
 `;

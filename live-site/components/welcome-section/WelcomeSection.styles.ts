@@ -11,6 +11,7 @@ const StyledWelcomeSectionContainer = styled.div`
   @media ${max.tabletLg} {
     flex-direction: column;
     align-items: center;
+    width: 40em;
   }
 `;
 
@@ -34,7 +35,10 @@ const StyledWelcomeSectionContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 35.5em;
-  @media ${max.tablet} {
+  margin-right: 2em;
+  @media ${max.tabletLg} {
+    margin-right: 0;
+    margin-bottom: 2em;
     width: 90%;
   }
 `;
