@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { H3, P } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
-import { max, min } from '../../../../shared-ui/lib/responsive';
+import { max } from '../../../../shared-ui/lib/responsive';
 
 const StyledTeamContainer = styled.div`
   display: flex;
@@ -20,10 +20,10 @@ const StyledTeamName = styled(P)`
   text-transform: uppercase;
   color: ${colors.BUTTON_GREEN};
   font-size: 1.5em;
-  @media ${min.tablet} {
-    font-size: 1em;
+  @media ${max.tabletLg} {
+    font-size: 0.7em;
   }
-  @media ${min.mobile} {
+  @media ${max.mobile} {
     font-size: 0.5em;
   }
 `;
@@ -32,10 +32,10 @@ const StyledTeamPoint = styled(P)`
   text-transform: uppercase;
   color: ${colors.RACE_LINE};
   font-size: 1.5em;
-  @media ${min.tablet} {
-    font-size: 1em;
+  @media ${max.tabletLg} {
+    font-size: 0.7em;
   }
-  @media ${min.mobile} {
+  @media ${max.mobile} {
     font-size: 0.5em;
   }
 `;
@@ -44,10 +44,10 @@ const StyledTeamPosition = styled(P)`
   text-transform: uppercase;
   color: ${colors.BUTTON_GREEN};
   font-size: 1.5em;
-  @media ${min.tablet} {
-    font-size: 1em;
+  @media ${max.tabletLg} {
+    font-size: 0.7em;
   }
-  @media ${min.mobile} {
+  @media ${max.mobile} {
     font-size: 0.5em;
   }
 `;

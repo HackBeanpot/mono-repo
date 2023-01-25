@@ -8,10 +8,10 @@ const StyledWelcomeSectionContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 1.3em;
-  @media ${max.tabletLg} {
+  @media ${max.tablet} {
     flex-direction: column;
     align-items: center;
-    width: 40em;
+    width: 80%;
   }
 `;
 
