@@ -1,4 +1,4 @@
-import { TabInfo, EventItem } from './types';
+import { TabInfo, EventItem, Tag } from './types';
 
 const liveSiteTabInfo: TabInfo[] = [
   { name: 'Schedule', link: '#schedule' },
@@ -20,8 +20,7 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Launch Event',
     eventName: 'Opening Ceremony',
     eventLocation: 'The Hub',
-    beginner: true,
-    workshop: true,
+    tags:[ Tag.beginner,Tag.workshop],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   },
@@ -32,7 +31,7 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Tech Talk',
     eventName: 'Intro to React',
     eventLocation: 'Workshop Zone A',
-    beginner: true,
+    tags: [Tag.beginner],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   },
@@ -43,7 +42,7 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Dinner',
     eventName: 'Dinner Pizza Party',
     eventLocation: 'Canteen',
-    workshop: true,
+    tags: [Tag.workshop],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   },
@@ -54,7 +53,7 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Workshop',
     eventName: 'Intro to Figma',
     eventLocation: 'Workshop Zone B',
-    meal: true,
+    tags: [Tag.meal],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   }

@@ -1,36 +1,42 @@
 import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
+import { colors } from '../../../../shared-ui/style/colors';
 import { P } from '../../../../shared-ui/style/typography';
 import { StyledTagAndTagTextProps } from '../../../lib/types';
 
+
+const tagColor = (tagType : string) : string => {
+  switch (tagType) {
+    case 'Meal':
+      return colors.FIREBRICK;
+      break;
+    case 'Beginner-Friendly':
+      return colors.PURPLE_TAG;
+      break;
+    case 'Workshop':
+      return colors.GREEN;
+      break;
+    case 'Action Item':
+      return colors.RED;
+      break;
+    case 'Everyone':
+      return colors.DARK_SALMON;
+      break;
+    case 'Sponsor Event':
+      return colors.ORANGE;
+      break;
+    case 'Social/Fun Event':
+      return colors.LIGHT_BLUE;
+      break;
+    default:
+      return colors.BLACK;
+  }
+}
+
 const StyledTag = styled.div<StyledTagAndTagTextProps>`
   background-color: white;
-  border-color: ${(StyledTagAndTagTextProps): string => {
-    switch (StyledTagAndTagTextProps.type) {
-      case 'Meal':
-        return 'firebrick';
-        break;
-      case 'Beginner-Friendly':
-        return 'purple';
-        break;
-      case 'Workshop':
-        return 'green';
-        break;
-      case 'Action Item':
-        return 'red';
-        break;
-      case 'Everyone':
-        return 'darksalmon';
-        break;
-      case 'Sponsor Event':
-        return 'orange';
-        break;
-      case 'Social/Fun Event':
-        return 'lightblue';
-        break;
-      default:
-        return 'black';
-    }
+  border-color:${(StyledTagAndTagTextProps): string => {
+    return tagColor(StyledTagAndTagTextProps.tagType)
   }};
   border-style: solid;
   border-radius: 2em;
@@ -39,31 +45,8 @@ const StyledTag = styled.div<StyledTagAndTagTextProps>`
 
 const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   color: ${(StyledTagAndTagTextProps): string => {
-    switch (StyledTagAndTagTextProps.type) {
-      case 'Meal':
-        return 'firebrick';
-        break;
-      case 'Beginner-Friendly':
-        return 'purple';
-        break;
-      case 'Workshop':
-        return 'green';
-        break;
-      case 'Action Item':
-        return 'red';
-        break;
-      case 'Everyone':
-        return 'darksalmon';
-        break;
-      case 'Sponsor Event':
-        return 'orange';
-        break;
-      case 'Social/Fun Event':
-        return 'lightblue';
-        break;
-      default:
-        return 'black';
-    }
+    return tagColor(StyledTagAndTagTextProps.tagType)
+  }};
   }};
   text-align: center;
   margin-top: auto;
@@ -93,7 +76,7 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   @media (max-width: 460px) {
     font-size: 0.9em;
     padding-top: 0.4em;
-  } ;
+  };
 `;
 
 export { StyledTag, StyledTagText };

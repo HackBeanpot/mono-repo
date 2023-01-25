@@ -33,17 +33,26 @@ export interface StyledTabTitleWrapperProps {
   isSelected: boolean;
 }
 export interface EventItemTagProps{
-  type:string
+  tagType:string
 }
 
 export interface StyledTagAndTagTextProps{
-  type:string
+  tagType:string
 }
 
-export interface StyledArrowProps{
+export interface styledArrowProps{
   isOpen?: boolean
 }
 
+export enum Tag{
+  meal = "Meal",
+  beginner = "Beginner-Friendly",
+  workshop = "Workshop",
+  actionItem = "Action Item",
+  everyone = "Everyone",
+  sponsor = "Sponsor Event",
+  social = "Social/Fun Event"
+}
 export interface EventItem {
   id: number
   time: string;
@@ -51,13 +60,7 @@ export interface EventItem {
   eventName: string;
   eventLocation: string;
   description: string;
-  meal?: boolean;
-  beginner?: boolean;
-  workshop? : boolean;
-  actionItem?:boolean;
-  everyone?: boolean;
-  sponsor?: boolean;
-  social?: boolean;
+  tags: Tag[];
 }
 
 export interface EventItemProps {

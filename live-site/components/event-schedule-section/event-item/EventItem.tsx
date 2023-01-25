@@ -9,7 +9,7 @@ import {
   StyledEventItemTopic,
   StyledEventTimeTopicContainer,
   StyledPinpoint,
-  StyledEventitemLocation,
+  StyledEventItemLocation,
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,
@@ -43,9 +43,9 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
             <StyledEventItemHeader>{eventItem.eventName}</StyledEventItemHeader>
             <StyledPinpointLocationContainer>
               <StyledPinpoint src={pinpoint} />
-              <StyledEventitemLocation>
+              <StyledEventItemLocation>
                 {eventItem.eventLocation}
-              </StyledEventitemLocation>
+              </StyledEventItemLocation>
             </StyledPinpointLocationContainer>
           </StyledEventItemNameLocationContainer>
         </StyledEventItemLeftSideContainer>
@@ -57,13 +57,7 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
           />
         )}
         <StyledTagsContainer>
-          {eventItem.meal && <EventItemTag type={'Meal'} />}
-          {eventItem.beginner && <EventItemTag type={'Beginner-Friendly'} />}
-          {eventItem.workshop && <EventItemTag type={'Workshop'} />}
-          {eventItem.actionItem && <EventItemTag type={'Action Item'} />}
-          {eventItem.everyone && <EventItemTag type={'Everyone'} />}
-          {eventItem.sponsor && <EventItemTag type={'Sponsor Event'} />}
-          {eventItem.social && <EventItemTag type={'Social/Fun Event'} />}
+        {eventItem.tags.map( (tag) => (<EventItemTag tagType={tag} />))}
         </StyledTagsContainer>
       </StyledEventItemContainer>
       {isOpen && (

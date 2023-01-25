@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H3, P } from '../../../../shared-ui/style/typography';
-import { StyledArrowProps } from '../../../lib/types';
+import { styledArrowProps } from '../../../lib/types';
 
 const StyledEventItemContainer = styled.div`
   margin-left: 1em;
@@ -87,7 +87,7 @@ const StyledEventItemHeader = styled(H3)`
   } ;
 `;
 
-const StyledEventitemLocation = styled(P)`
+const StyledEventItemLocation = styled(P)`
   color: ${colors.HEADER_FOOTER_BLUE};
   padding-left: 0.7em;
 
@@ -151,16 +151,19 @@ const StyledPinpoint = styled.img`
   } ;
 `;
 
-const StyledArrow = styled.img<StyledArrowProps>`
-  padding-top: 3em;
-  padding-right: 3em;
+const StyledArrow = styled.img<styledArrowProps>`
+  cursor: pointer;
+  padding-top: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `0` : `3em`};
+  padding-right: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `0` : `3em`};
+  padding-bottom: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `3em` : `0`};
+  padding-left: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `3em` : `0`};
   float: right;
-  transform: scaleY(${(StyledArrowProps): string => {
-    return StyledArrowProps.isOpen ? '-1' : '0'
-  }});
-  @media ${max.tabletLg} {
-    padding-right: 2em;
-  }
+  transform: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `rotate(180deg)` : `rotate(0deg)`};
 `;
 
 const StyledTagsContainer = styled.div`
@@ -192,6 +195,7 @@ const StyledEventItemDescription = styled.div`
   margin-left: 1em;
   margin-right: 1em;
   margin-top: -4em;
+  transition: 0.5s;
 `;
 const StyledEventItemDescriptionText = styled(P)`
   color: black;
@@ -205,7 +209,7 @@ export {
   StyledEventItemTopic,
   StyledEventTimeTopicContainer,
   StyledPinpoint,
-  StyledEventitemLocation,
+  StyledEventItemLocation,
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,

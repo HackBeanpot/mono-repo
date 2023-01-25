@@ -26,7 +26,14 @@ const colors = {
   DESIGN_PINK: '#BB6BD9',
   SOORANGE: '#F2A32B',
   SPONSIBGREEN: '#27AE60',
-  PURPLE: '#A0B2EF'
+  PURPLE: '#A0B2EF',
+  RED: '#FF0000',
+  FIREBRICK: '#B22222',
+  GREEN: '#008000',
+  DARK_SALMON: '#E9967A',
+  ORANGE: '#FFA500',
+  LIGHT_BLUE: '#ADD8E6',
+  PURPLE_TAG: '#800080',
 };
 
 export { colors };
