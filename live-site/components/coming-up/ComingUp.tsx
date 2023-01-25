@@ -10,14 +10,17 @@ import {
   StyledTextContainer,
   StyledSectionHeader,
   StyledEvents,
-  StyledOneEventContainer
+  StyledOneEventContainer,
+  StyledLoadingText
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const ComingUpSection: React.FC = () => {
-  const { data } = useAirtableApi('Relevant', 'relevant', true);
+  const { data, isLoading } = useAirtableApi('Relevant', 'relevant', true);
+  const isDesktop = useMatchMedia(min.tablet);
+  
   let count = 0;
   let events: UpcomingEvent[] = data.map((event) => {
     count = count + 1;
@@ -35,7 +38,10 @@ const ComingUpSection: React.FC = () => {
     event1.time > event2.time ? 1 : -1
   );
   events = events.slice(0, 3);
-  const isDesktop = useMatchMedia(min.tablet);
+
+  if (isLoading) {
+    return <StyledLoadingText>Loading...</StyledLoadingText>;
+  }
 
   if (events.length === 0) {
     return <NoUpcoming />;
@@ -44,7 +50,7 @@ const ComingUpSection: React.FC = () => {
     const event: UpcomingEvent = events[0];
     return (
       <StyledSectionContainer>
-        <StyledSectionHeader>Coming up...</StyledSectionHeader>
+        <StyledSectionHeader>{'Coming up...'}</StyledSectionHeader>
         <StyledOneEventContainer>
           <StyledEvent key={event.id}>
             <StyledTextContainer>
