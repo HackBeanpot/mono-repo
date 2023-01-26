@@ -32,7 +32,7 @@ const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tabletLg);
 
   const { data } = useAirtableApi('Mentors', 'mentors', true);
-  //const { data: shiftData } = useAirtableApi('Mentors', 'shifts', true);
+  const { data: shiftData } = useAirtableApi('Mentors', 'shifts', true);
   const [mentorData, setMentorData] = useState<MentorInfo[]>([]);
   const [mentors, setMentors] = useState<MentorInfo[]>([]);
   const [expertiseFilter, setExpertiseFilter] = useState('All');
@@ -70,6 +70,25 @@ const MentorsSection: React.FC = () => {
   useEffect(() => {
     setMentorData(
       data.map((mentor) => {
+        let shifts = [];
+        if (mentor.fields.shift && shiftData.length > 0) {
+          shifts = mentor.fields.shift.map((shiftId: unknown) => {
+            const shift = shiftData.find((shift) => shift.id === shiftId);
+            const shiftStart = new Date(shift.fields.shift_start);
+            const shiftEnd = new Date(shift.fields.shift_end);
+            return `${new Intl.DateTimeFormat('en-US', {
+              weekday: 'short'
+            }).format(shiftStart)}: ${new Intl.DateTimeFormat('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: true
+            }).format(shiftStart)}-${new Intl.DateTimeFormat('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: true
+            }).format(shiftEnd)}`;
+          });
+        }
         return {
           name: mentor.fields.name,
           company: mentor.fields.company,
@@ -79,11 +98,11 @@ const MentorsSection: React.FC = () => {
           virtual: mentor.fields.virtual ?? false,
           shiftStart: mentor.fields.shift_start ?? '',
           shiftEnd: mentor.fields.shift_end ?? '',
-          shifts: mentor.fields.shift ?? []
+          shifts: shifts
         };
       })
     );
-  }, [data, setMentorData]);
+  }, [data, setMentorData, shiftData]);
 
   useEffect(() => {
     let filteredMentors = mentorData;
