@@ -48,6 +48,23 @@ export interface EventItemProps {
   eventItem: EventItem;
 }
 
+export interface TeamProps {
+  points: number;
+  name: string;
+  position?: number;
+  index: number;
+}
+
+export interface TeamRaceProps {
+  teams: TeamProps[];
+}
+
+export interface TeamCarProps {
+  points: number;
+  index: number;
+  eventItem: EventItem;
+}
+
 export interface MentorInfo {
   name: string;
   company: string;
