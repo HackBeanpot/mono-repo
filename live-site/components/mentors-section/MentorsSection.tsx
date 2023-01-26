@@ -93,11 +93,14 @@ const MentorsSection: React.FC = () => {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true
-            }).format(shiftStart)}-${endDay}${new Intl.DateTimeFormat('en-US', {
-              hour: 'numeric',
-              minute: 'numeric',
-              hour12: true
-            }).format(shiftEnd)}`;
+            }).format(shiftStart)} - ${endDay}${new Intl.DateTimeFormat(
+              'en-US',
+              {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true
+              }
+            ).format(shiftEnd)}`;
           });
         }
         return {
