@@ -33,8 +33,7 @@ const StyledEventScheduleSubText = styled(P)`
   @media ${max.tablet} {
     text-align: left;
     font-size: 1em;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    margin: 0 1.5em;
   }
 `;
 
@@ -45,8 +44,7 @@ const StyledBoldSubText = styled(P)`
   @media ${max.tablet} {
     text-align: left;
     font-size: 1em;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    margin: 0 1.5em;
   }
 `;
 

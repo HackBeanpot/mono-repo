@@ -76,13 +76,24 @@ const MentorsSection: React.FC = () => {
             const shift = shiftData.find((shift) => shift.id === shiftId);
             const shiftStart = new Date(shift.fields.shift_start);
             const shiftEnd = new Date(shift.fields.shift_end);
-            return `${new Intl.DateTimeFormat('en-US', {
+            const startDay = new Intl.DateTimeFormat('en-US', {
               weekday: 'short'
-            }).format(shiftStart)}: ${new Intl.DateTimeFormat('en-US', {
+            }).format(shiftStart);
+
+            let endDay = new Intl.DateTimeFormat('en-US', {
+              weekday: 'short'
+            }).format(shiftEnd);
+
+            if (startDay === endDay) {
+              endDay = '';
+            } else {
+              endDay = endDay + ': ';
+            }
+            return `${startDay}: ${new Intl.DateTimeFormat('en-US', {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true
-            }).format(shiftStart)}-${new Intl.DateTimeFormat('en-US', {
+            }).format(shiftStart)}-${endDay}${new Intl.DateTimeFormat('en-US', {
               hour: 'numeric',
               minute: 'numeric',
               hour12: true
