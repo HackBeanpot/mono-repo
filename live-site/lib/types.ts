@@ -57,6 +57,7 @@ export interface MentorInfo {
   virtual: boolean;
   shiftStart: string[];
   shiftEnd: string[];
+  shifts: string[];
 }
 
 export interface StyledCactusButtonsProps {

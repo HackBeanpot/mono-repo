@@ -32,6 +32,7 @@ const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tabletLg);
 
   const { data } = useAirtableApi('Mentors', 'mentors', true);
+  //const { data: shiftData } = useAirtableApi('Mentors', 'shifts', true);
   const [mentorData, setMentorData] = useState<MentorInfo[]>([]);
   const [mentors, setMentors] = useState<MentorInfo[]>([]);
   const [expertiseFilter, setExpertiseFilter] = useState('All');
@@ -63,6 +64,7 @@ const MentorsSection: React.FC = () => {
     : mentors;
 
   useEffect(() => {
+    console.log(data);
     setMentorData(
       data.map((mentor) => {
         return {
@@ -73,7 +75,8 @@ const MentorsSection: React.FC = () => {
           expertise: mentor.fields.expertise ?? [],
           virtual: mentor.fields.virtual ?? false,
           shiftStart: mentor.fields.shift_start ?? '',
-          shiftEnd: mentor.fields.shift_end ?? ''
+          shiftEnd: mentor.fields.shift_end ?? '',
+          shifts: mentor.fields.shift ?? []
         };
       })
     );
@@ -156,7 +159,7 @@ const MentorsSection: React.FC = () => {
   return (
     <div id="mentors">
       <StyledMentorsSection>
-        <MentorPopup mentor={mentors[0]} />
+        <MentorPopup mentor={mentors[2]} />
         <StyledMentorsFilterSection>
           <StyledMentorsHeader> Mentors </StyledMentorsHeader>
           <StyledMentorsDropdownContainer>
