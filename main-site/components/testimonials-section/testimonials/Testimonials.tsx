@@ -109,8 +109,9 @@ const Testimonials: React.FC = () => {
       </StyledTestimonialsContainer>
       {isDesktop && (
         <StyledTestimonialButtons>
-          {testimonialSectionData.map((testimonial, testimonialIndex) => (
+          {testimonialSectionData.map((_, testimonialIndex) => (
             <StyledCactusButtons
+              key={`cactus-${testimonialIndex}`}
               src={getCactus(testimonialIndex)}
               onClick={(): void => goToTestimonial(testimonialIndex)}
               isToggled={testimonialIndex == currentIndex}

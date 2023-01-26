@@ -48,8 +48,8 @@ const TimeRemaining: React.FC = () => {
     <StyledTimeRemainingContainer>
       <StyledTimeRemainingHeader>Time Remaining</StyledTimeRemainingHeader>
       <StyledTimerContainer>
-        {timeUnit.map((curr) => (
-          <div>
+        {timeUnit.map((curr, index) => (
+          <div key={`${curr.text}-${index}`}>
             <StyledTimeRemainingText>
               {curr.text} {curr.label === 'Seconds' ? '' : ':'}
             </StyledTimeRemainingText>
