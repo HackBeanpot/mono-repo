@@ -68,7 +68,6 @@ const MentorsSection: React.FC = () => {
     : mentors;
 
   useEffect(() => {
-    console.log(data);
     setMentorData(
       data.map((mentor) => {
         return {

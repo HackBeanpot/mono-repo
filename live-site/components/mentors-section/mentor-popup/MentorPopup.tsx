@@ -19,7 +19,6 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
 
   const mentorImageSize = 420;
 
-  console.log(mentor);
   return (
     <StyledModal>
       <StyledContainer>
