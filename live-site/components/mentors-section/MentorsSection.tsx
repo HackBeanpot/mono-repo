@@ -24,6 +24,7 @@ import cactus3 from '../../../shared-ui/images/cactus3.png';
 import cactus4 from '../../../shared-ui/images/cactus4.png';
 import { MentorInfo } from '../../lib/types';
 import { StyledSecondaryButton } from '../../../shared-ui/components/secondary-button/SecondaryButton.styles';
+import MentorPopup from './mentor-popup/MentorPopup';
 
 const MentorsSection: React.FC = () => {
   const isSmallMobile = useMatchMedia(max.tabletSm);
@@ -155,6 +156,7 @@ const MentorsSection: React.FC = () => {
   return (
     <div id="mentors">
       <StyledMentorsSection>
+        <MentorPopup mentor={mentors[0]} />
         <StyledMentorsFilterSection>
           <StyledMentorsHeader> Mentors </StyledMentorsHeader>
           <StyledMentorsDropdownContainer>
@@ -166,7 +168,9 @@ const MentorsSection: React.FC = () => {
               }}
             >
               {getExpertiseArr(mentorData).map((expertise: string) => (
-                <option value={expertise}>Expertise: {expertise}</option>
+                <option value={expertise} key={expertise}>
+                  Expertise: {expertise}
+                </option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -180,7 +184,9 @@ const MentorsSection: React.FC = () => {
               }}
             >
               {companiesArr.map((currCompany: string) => (
-                <option value={currCompany}>Company: {currCompany}</option>
+                <option value={currCompany} key={currCompany}>
+                  Company: {currCompany}
+                </option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -191,7 +197,7 @@ const MentorsSection: React.FC = () => {
               name="onshift_mentors_filter"
               value="Mentors on shift now"
               checked={onShiftFilter}
-              onClick={(): void =>
+              onChange={(): void =>
                 setOnShiftFilter((onShiftFilter) => !onShiftFilter)
               }
             />
@@ -203,7 +209,7 @@ const MentorsSection: React.FC = () => {
               name="virtual_mentors_filter"
               value="Virtual mentors"
               checked={virtualFilter}
-              onClick={(): void =>
+              onChange={(): void =>
                 setVirtualFilter((virtualFilter) => !virtualFilter)
               }
             />
@@ -212,7 +218,9 @@ const MentorsSection: React.FC = () => {
           </StyledMentorsFilterRadio>
         </StyledMentorsFilterSection>
         <StyledMentorsListContainer>
-          {mentorsToDisplay.map((currMentor) => displayMentor(currMentor))}
+          {mentorsToDisplay.map((currMentor, index) => (
+            <div key={`mentor-${index}`}>{displayMentor(currMentor)}</div>
+          ))}
           {mentorsToDisplay.length === 0 && (
             <StyledNoMentorsContainer>
               <StyledMentorName>
@@ -236,6 +244,7 @@ const MentorsSection: React.FC = () => {
           <StyledMentorsPaginationContainer>
             {paginatedMentors.map((_, index) => (
               <StyledCactusButtons
+                key={index}
                 src={getCactus(index)}
                 onClick={(): void => setCurrentPage(index)}
                 isToggled={index == currentPage}

@@ -17,7 +17,7 @@ export interface UpcomingEvent {
   id: number;
   header: string;
   time: string;
-  display_start_time: string; 
+  display_start_time: string;
   body: string;
 }
 
@@ -61,4 +61,8 @@ export interface MentorInfo {
 
 export interface StyledCactusButtonsProps {
   isToggled: boolean;
+}
+
+export interface MentorPopupProps {
+  mentor?: MentorInfo;
 }

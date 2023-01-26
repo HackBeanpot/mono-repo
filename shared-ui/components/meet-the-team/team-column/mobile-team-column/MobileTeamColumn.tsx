@@ -55,10 +55,10 @@ const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
         />
       </LabelArrowContainer>
       <MobileImageContainer>
-        {listOfPictures.map((rowPics: Person[]) => (
-          <StyledImageRow>
+        {listOfPictures.map((rowPics: Person[], index) => (
+          <StyledImageRow key={`mobile-column-${index}`}>
             {rowPics.map((pic: Person) => (
-              <StyledHeadshot src={pic.picture} />
+              <StyledHeadshot src={pic.picture} key={pic.picture} />
             ))}
           </StyledImageRow>
         ))}
