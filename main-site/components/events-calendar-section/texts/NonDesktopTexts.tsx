@@ -2,16 +2,17 @@ import React from 'react';
 import {
   EventsHeader,
   EventsSubHeader,
-  StyledEventsBox,
+  StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
-  TextLeftContainer
+  TextLeftContainer,
+  StyledCybersecurityLocationContainer
 } from '../EventsCalendarSection.styles';
 
 const NonDesktopTexts: React.FC = () => {
   return (
     <>
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <TextLeftContainer>
             <EventsHeader>
@@ -29,9 +30,9 @@ const NonDesktopTexts: React.FC = () => {
             Shillman Hall 210
           </EventsLocationP>
         </StyledTextContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
 
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <EventsHeader>
             MiniHacks Workshop #2 <br />
@@ -39,13 +40,21 @@ const NonDesktopTexts: React.FC = () => {
             Intro to React.js
           </EventsHeader>
         </StyledTextContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
 
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
-          <EventsHeader>Security + Tech Discussion - mid November</EventsHeader>
+          <EventsHeader>
+            Cybersecurity Workshop + Minihack -- 1/15 12pm-3pm
+          </EventsHeader>
         </StyledTextContainer>
-      </StyledEventsBox>
+        <StyledCybersecurityLocationContainer>
+          <EventsLocationP>
+            Northeastern University <br />
+            West Village H 366
+          </EventsLocationP>
+        </StyledCybersecurityLocationContainer>
+      </StyledPastEventsBox>
     </>
   );
 };

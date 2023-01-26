@@ -9,7 +9,7 @@ import {
   StyledTabTitle,
   StyledTabContent,
   StyledTabContentContainer,
-  StyledEventScheduleTabContainer,
+  StyledEventScheduleTabContainer
 } from './EventScheduleTab.styles';
 
 const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
@@ -36,7 +36,9 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
       </StyledEventScheduleTabsContainer>
       <StyledTabContentContainer>
         <StyledTabContent>{tabs.tabs[activeTab].content}</StyledTabContent>
-        {eventItemInfo.map(curr => <EventItem eventItem={curr} />)}
+        {eventItemInfo.map((curr) => (
+          <EventItem eventItem={curr} />
+        ))}
       </StyledTabContentContainer>
     </StyledEventScheduleTabContainer>
   );

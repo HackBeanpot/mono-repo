@@ -2,10 +2,16 @@ import React from 'react';
 import { StyledSecondaryButton } from './SecondaryButton.styles';
 import { ButtonProps } from '../../lib/types';
 
-const SecondaryButton: React.FC<ButtonProps> = ({ btnText, btnLink }) => {
+const SecondaryButton: React.FC<ButtonProps> = ({
+  btnText,
+  btnLink,
+  isClickable = true
+}) => {
   return (
     <a href={btnLink}>
-      <StyledSecondaryButton>{btnText}</StyledSecondaryButton>
+      <StyledSecondaryButton isClickable={isClickable}>
+        {btnText}
+      </StyledSecondaryButton>
     </a>
   );
 };

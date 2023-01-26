@@ -4,12 +4,12 @@ import {
   EventsPBolded,
   EventsSubHeader,
   EventsP,
-  StyledEventsBox,
   StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
-  StyledDesktopTextsContainer
+  StyledDesktopTextsContainer,
+  StyledCybersecurityLocationContainer
 } from '../EventsCalendarSection.styles';
 
 const DesktopTexts: React.FC = () => {
@@ -51,13 +51,19 @@ const DesktopTexts: React.FC = () => {
         </StyledTextContainer>
       </StyledPastEventsBox>
 
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <EventsHeader>
-            Cybersecurity Workshop + Minihack - January
+            Cybersecurity Workshop + Minihack -- 1/15 12pm-3pm
           </EventsHeader>
         </StyledTextContainer>
-      </StyledEventsBox>
+        <StyledCybersecurityLocationContainer>
+          <EventsLocationP>
+            Northeastern University <br />
+            West Village H 366
+          </EventsLocationP>
+        </StyledCybersecurityLocationContainer>
+      </StyledPastEventsBox>
     </StyledDesktopTextsContainer>
   );
 };

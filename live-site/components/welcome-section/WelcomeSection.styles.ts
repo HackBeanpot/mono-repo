@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max } from '../../../shared-ui/lib/responsive';
+import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { P } from '../../../shared-ui/style/typography';
 
@@ -16,28 +16,34 @@ const StyledWelcomeSectionContainer = styled.div`
 
 const StyledRaceContainer = styled.div`
   background-color: ${colors.TEXT_BOX};
-  width: 40em;
-  height: 28.5em;
+  width: 45em;
   border-radius: 1.5em;
-  margin: 1.3em 0 1.3em 1.3em;
+  padding: 3em 2em;
   @media ${max.tablet} {
     margin: 1.3em 0 0 0;
     width: 90%;
   }
 `;
 
+const StyledRaceContent = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const StyledWelcomeSectionContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 35.5em;
-  @media ${max.tablet} {
+  margin-right: 2em;
+  @media ${max.tabletLg} {
+    margin-right: 0;
+    margin-bottom: 2em;
     width: 90%;
   }
 `;
 
 const StyledWelcomeText = styled(P)`
   color: ${colors.TEXT_BROWN};
-  white-space: pre-wrap;
 `;
 
 const StyledButtonContainer = styled.div`
@@ -47,10 +53,19 @@ const StyledButtonContainer = styled.div`
   }
 `;
 
+const StyledTeamTextContainer = styled.div`
+  display: flex;
+  @media ${min.tablet} {
+    width: 45%;
+  }
+`;
+
 export {
   StyledWelcomeSectionContainer,
   StyledRaceContainer,
   StyledWelcomeSectionContent,
   StyledWelcomeText,
-  StyledButtonContainer
+  StyledButtonContainer,
+  StyledRaceContent,
+  StyledTeamTextContainer
 };

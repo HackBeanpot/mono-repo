@@ -1,11 +1,21 @@
-import { TabInfo, EventItem, Tag } from './types';
+import { TabInfo, EventItem, Tag, TeamProps } from './types';
+
 
 const liveSiteTabInfo: TabInfo[] = [
-  { name: 'Schedule', link: '#schedule' },
-  { name: 'Mentors', link: '#mentors' },
-  { name: 'Challenges', link: '#challenges' },
-  { name: 'Resources', link: '#resources' },
-  { name: 'Team', link: '#team' }
+  { name: 'Schedule', link: '/#schedule' },
+  { name: 'Mentors', link: '/#mentors' },
+  { name: 'Challenges', link: '/#challenges' },
+  { name: 'Resources', link: '/#resources' },
+  { name: 'Team', link: '/#team' },
+  { name: 'Judging', link: '/judging' }
+];
+
+const TeamInfo: TeamProps[] = [
+  { name: 'TEAM TATOOINE', points: 100, index: 0 },
+  { name: 'TEAM ESSOS', points: 82, index: 1 },
+  { name: 'TEAM SI WONG', points: 66, index: 2 },
+  { name: 'TEAM ARRAKIS', points: 33, index: 3 },
+  { name: 'TEAM DESSERT BIOME', points: 0, index: 4 }
 ];
 
 interface TimeLeft {
@@ -59,4 +69,5 @@ const eventItemInfo: EventItem[] = [
   }
 ];
 
-export { liveSiteTabInfo, TimeLeft, eventItemInfo };
+
+export { liveSiteTabInfo, TimeLeft, eventItemInfo, TeamInfo };
