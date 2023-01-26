@@ -2,12 +2,8 @@ import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H3, P } from '../../../../shared-ui/style/typography';
+import { styledArrowProps } from '../../../lib/types';
 
-const StyledEventItemMobileContainer = styled.div`
-  @media ${max.tablet} {
-    display: flex;
-  } ;
-`;
 const StyledEventItemContainer = styled.div`
   margin-left: 1em;
   margin-right: 1em;
@@ -15,6 +11,11 @@ const StyledEventItemContainer = styled.div`
   border-radius: 2em;
   height: 8em;
   background-color: ${colors.WHITE};
+  @media (max-width: 460px) {
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+  } ;
 `;
 
 const StyledEventItemLeftSideContainer = styled.div`
@@ -86,7 +87,7 @@ const StyledEventItemHeader = styled(H3)`
   } ;
 `;
 
-const StyledEventitemLocation = styled(P)`
+const StyledEventItemLocation = styled(P)`
   color: ${colors.HEADER_FOOTER_BLUE};
   padding-left: 0.7em;
 
@@ -150,18 +151,55 @@ const StyledPinpoint = styled.img`
   } ;
 `;
 
-const StyledArrow = styled.img`
-  padding-top: 3em;
-  padding-right: 3em;
+const StyledArrow = styled.img<styledArrowProps>`
+  cursor: pointer;
+  padding-top: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `0` : `3em`};
+  padding-right: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `0` : `3em`};
+  padding-bottom: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `3em` : `0`};
+  padding-left: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `3em` : `0`};
   float: right;
+  transform: ${(styledArrowProps): string =>
+    styledArrowProps.isOpen ? `rotate(180deg)` : `rotate(0deg)`};
+`;
 
-  @media ${max.tabletLg} {
-    padding-right: 2em;
+const StyledTagsContainer = styled.div`
+  display: flex;
+  float: right;
+  padding-top: 3em;
+  gap: 0.6em;
+  padding-right: 0.7em;
+  @media (max-width: 1040px) {
+    gap: 0.3em;
   }
-
+  @media (max-width: 890px) {
+    padding-top: 2.8em;
+    flex-direction: column;
+  }
   @media ${max.tablet} {
-    display: none;
+    flex-direction: row;
   }
+  @media (max-width: 460px) {
+    flex-direction: column;
+    align-self: start;
+    padding-left: 0.5em;
+    padding-top: 1em;
+  } ;
+`;
+const StyledEventItemDescription = styled.div`
+  background-color: white;
+  border-radius: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: -4em;
+  transition: 0.5s;
+`;
+const StyledEventItemDescriptionText = styled(P)`
+  color: black;
+  padding: 3em;
 `;
 
 export {
@@ -171,10 +209,12 @@ export {
   StyledEventItemTopic,
   StyledEventTimeTopicContainer,
   StyledPinpoint,
-  StyledEventitemLocation,
+  StyledEventItemLocation,
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,
   StyledEventItemLeftSideContainer,
-  StyledEventItemMobileContainer
+  StyledTagsContainer,
+  StyledEventItemDescription,
+  StyledEventItemDescriptionText
 };

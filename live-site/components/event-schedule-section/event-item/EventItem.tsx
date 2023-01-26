@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import pinpoint from '../../../lib/pinpoint.svg';
 import arrow from '../../../lib/arrow.svg';
 
@@ -9,19 +9,31 @@ import {
   StyledEventItemTopic,
   StyledEventTimeTopicContainer,
   StyledPinpoint,
-  StyledEventitemLocation,
+  StyledEventItemLocation,
   StyledEventItemNameLocationContainer,
   StyledPinpointLocationContainer,
   StyledArrow,
   StyledEventItemLeftSideContainer,
-  StyledEventItemMobileContainer
+  StyledTagsContainer,
+  StyledEventItemDescription,
+  StyledEventItemDescriptionText
 } from './EventItem.styles';
 import { EventItemProps } from '../../../lib/types';
+import useMatchMedia from 'react-use-match-media';
+import EventItemTag from '../event-item-tag/EventItemTag';
 
 const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
+  const arrowPresent = useMatchMedia('(min-width: 835px)');
+  const [activeEventItem, setEventItem] = useState<number>(0);
+  const openEventItem = (index: number): void => {
+    isOpen ? setEventItem(0) : setEventItem(index);
+  };
+  const isOpen = activeEventItem == { eventItem }.eventItem.id;
   return (
-    <StyledEventItemContainer>
-      <StyledEventItemMobileContainer>
+    <div>
+      <StyledEventItemContainer
+        onClick={(): void => openEventItem(eventItem.id)}
+      >
         <StyledEventItemLeftSideContainer>
           <StyledEventTimeTopicContainer>
             <StyledEventItemTime>{eventItem.time}</StyledEventItemTime>
@@ -31,15 +43,31 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
             <StyledEventItemHeader>{eventItem.eventName}</StyledEventItemHeader>
             <StyledPinpointLocationContainer>
               <StyledPinpoint src={pinpoint} />
-              <StyledEventitemLocation>
+              <StyledEventItemLocation>
                 {eventItem.eventLocation}
-              </StyledEventitemLocation>
+              </StyledEventItemLocation>
             </StyledPinpointLocationContainer>
           </StyledEventItemNameLocationContainer>
         </StyledEventItemLeftSideContainer>
-        <StyledArrow src={arrow} />
-      </StyledEventItemMobileContainer>
-    </StyledEventItemContainer>
+        {arrowPresent && (
+          <StyledArrow
+            src={arrow}
+            onClick={(): void => openEventItem(eventItem.id)}
+            isOpen={isOpen}
+          />
+        )}
+        <StyledTagsContainer>
+        {eventItem.tags.map((tag) => (<EventItemTag key = {eventItem.id} tagType={tag} />))}
+        </StyledTagsContainer>
+      </StyledEventItemContainer>
+      {isOpen && (
+        <StyledEventItemDescription>
+          <StyledEventItemDescriptionText>
+            {eventItem.description}
+          </StyledEventItemDescriptionText>
+        </StyledEventItemDescription>
+      )}
+    </div>
   );
 };
 export default EventItem;
