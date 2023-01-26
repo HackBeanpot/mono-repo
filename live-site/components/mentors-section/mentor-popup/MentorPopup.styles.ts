@@ -23,7 +23,7 @@ const StyledContainer = styled.div`
   width: 55em;
   display: flex;
   flex-direction: row;
-  gap: 2em;
+  gap: 3em;
 `;
 
 const StyledMentorName = styled.div`
@@ -39,21 +39,23 @@ const StyledText = styled.div`
 const StyledHeader = styled.div`
   font-size: 1.5em;
   color: ${colors.TEXT_LIGHT_GREY};
-  margin: 0.75em 0;
+  margin: 1em 0 0.75em 0;
 `;
 
 const StyledCloseButtonContainer = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  padding: 4em 4em 0 0;
+  margin: 4em 4em 0 0;
+  cursor: pointer;
 `;
 
 const StyledContactButtonContainer = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 0 4em 2em 0;
+  margin: 0 4em 2em 0;
+  cursor: pointer;
 `;
 
 export {

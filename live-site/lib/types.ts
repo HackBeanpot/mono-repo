@@ -66,4 +66,5 @@ export interface StyledCactusButtonsProps {
 
 export interface MentorPopupProps {
   mentor?: MentorInfo;
+  onClose: () => void;
 }

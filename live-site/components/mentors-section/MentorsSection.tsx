@@ -39,6 +39,10 @@ const MentorsSection: React.FC = () => {
   const [companyFilter, setCompanyFilter] = useState('All');
   const [virtualFilter, setVirtualFilter] = useState(false);
   const [onShiftFilter, setOnShiftFilter] = useState(true);
+  const [displayMentorModal, setDisplayMentorPopup] = useState(false);
+  const [modalMentor, setPopupMentor] = useState<MentorInfo | undefined>(
+    undefined
+  );
 
   const companiesArr = Array.from(
     new Set(['All'].concat(mentorData.map((mentor) => mentor.company)))
@@ -130,7 +134,11 @@ const MentorsSection: React.FC = () => {
   ]);
 
   const displayMentor = (mentor: MentorInfo): React.ReactElement => (
-    <StyledMentorContainer>
+    <StyledMentorContainer
+      onClick={(): void => {
+        openMentorPopup(mentor);
+      }}
+    >
       <img
         width={imageSize}
         height={imageSize}
@@ -142,6 +150,16 @@ const MentorsSection: React.FC = () => {
       <StyledMentorPosition>{mentor.position}</StyledMentorPosition>
     </StyledMentorContainer>
   );
+
+  const openMentorPopup = (mentor: MentorInfo): void => {
+    setPopupMentor(mentor);
+    setDisplayMentorPopup(true);
+  };
+
+  const closeMentorPopup = (): void => {
+    setDisplayMentorPopup(false);
+    setPopupMentor(undefined);
+  };
 
   const getCactus = (index: number): string => {
     if (index % 4 === 0) {
@@ -159,7 +177,9 @@ const MentorsSection: React.FC = () => {
   return (
     <div id="mentors">
       <StyledMentorsSection>
-        <MentorPopup mentor={mentors[2]} />
+        {displayMentorModal && (
+          <MentorPopup mentor={modalMentor} onClose={closeMentorPopup} />
+        )}
         <StyledMentorsFilterSection>
           <StyledMentorsHeader> Mentors </StyledMentorsHeader>
           <StyledMentorsDropdownContainer>

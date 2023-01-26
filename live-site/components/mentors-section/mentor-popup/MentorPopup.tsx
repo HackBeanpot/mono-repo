@@ -12,7 +12,7 @@ import {
 } from './MentorPopup.styles';
 import PopupCloseButton from '../../../../shared-ui/images/popup-close-icon.png';
 
-const MentorPopup: React.FC<MentorPopupProps> = ({ mentor }) => {
+const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
   if (!mentor) {
     return <></>;
   }
@@ -38,7 +38,13 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor }) => {
         </div>
         <div>
           <StyledCloseButtonContainer>
-            <img width={32} height={36} alt={`Close`} src={PopupCloseButton} />
+            <img
+              width={32}
+              height={36}
+              alt={`Close`}
+              src={PopupCloseButton}
+              onClick={onClose}
+            />
           </StyledCloseButtonContainer>
           {mentor.shifts.length > 0 && (
             <>
@@ -48,6 +54,9 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor }) => {
               ))}
             </>
           )}
+          <br />
+          <br />
+          <br />
           {mentor.expertise.length > 0 && (
             <>
               <StyledHeader>EXPERTISE</StyledHeader>
