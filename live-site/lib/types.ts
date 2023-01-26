@@ -17,6 +17,7 @@ export interface UpcomingEvent {
   id: number;
   header: string;
   time: string;
+  display_start_time: string; 
   body: string;
 }
 
@@ -69,6 +70,10 @@ export interface MentorInfo {
   company: string;
   position: string;
   imageUrl: string;
+  expertise: string[];
+  virtual: boolean;
+  shiftStart: string[];
+  shiftEnd: string[];
 }
 
 export interface StyledCactusButtonsProps {

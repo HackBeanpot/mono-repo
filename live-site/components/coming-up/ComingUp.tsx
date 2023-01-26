@@ -14,21 +14,33 @@ import {
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
+import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const ComingUpSection: React.FC = () => {
-  const event: UpcomingEvent = {
-    id: 0,
-    header: 'Register your team',
-    time: 'Complete by 12:00am EST',
-    body: 'hello hello hello hello hello hello hello hello hi hi hello hello hello hi hi'
-  };
-  const events: UpcomingEvent[] = [event, event, event];
+  const { data } = useAirtableApi('Relevant', 'relevant', true);
+  let count = 0; 
+  let events: UpcomingEvent[]= Array.from(
+    new Set(
+    data.map((event) => {
+      count = count + 1;
+        return {
+          id: count,
+          header: event.fields.title,
+          time: event.fields.start_time,
+          display_start_time: event.fields.display_start_time,
+          body: event.fields.notes,
+        } 
+    }))
+  )
+  events.sort((event1: UpcomingEvent, event2: UpcomingEvent) => (event1.time > event2.time) ? 1 : -1);
+  events = events.slice(0, 3); 
   const isDesktop = useMatchMedia(min.tablet);
 
   if (events.length === 0) {
     return <NoUpcoming />;
   }
   if (events.length === 1 && !isDesktop) {
+    const event: UpcomingEvent = events[0];
     return (
       <StyledSectionContainer>
         <StyledSectionHeader>Coming up...</StyledSectionHeader>
@@ -36,7 +48,7 @@ const ComingUpSection: React.FC = () => {
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.time}</StyledTime>
+              <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
             </StyledTextContainer>
           </StyledEvent>
@@ -52,7 +64,7 @@ const ComingUpSection: React.FC = () => {
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.time}</StyledTime>
+              <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
             </StyledTextContainer>
           </StyledEvent>

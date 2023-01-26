@@ -2,7 +2,6 @@ import React from 'react';
 import {
   EventsHeader,
   EventsSubHeader,
-  StyledEventsBox,
   StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
@@ -43,7 +42,7 @@ const NonDesktopTexts: React.FC = () => {
         </StyledTextContainer>
       </StyledPastEventsBox>
 
-      <StyledEventsBox>
+      <StyledPastEventsBox>
         <StyledTextContainer>
           <EventsHeader>
             Cybersecurity Workshop + Minihack -- 1/15 12pm-3pm
@@ -55,7 +54,7 @@ const NonDesktopTexts: React.FC = () => {
             West Village H 366
           </EventsLocationP>
         </StyledCybersecurityLocationContainer>
-      </StyledEventsBox>
+      </StyledPastEventsBox>
     </>
   );
 };
