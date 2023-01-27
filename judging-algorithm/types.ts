@@ -27,8 +27,8 @@ export type JudgeOutput = {
 }
 
 export type FinalOutputTables = {
-  judgeOutput: JudgeOutput;
-  hackerOutput: HackerOutput;
+  judgeOutput: JudgeOutput[];
+  hackerOutput: HackerOutput[];
 }
 
 export type HackerOutput = {

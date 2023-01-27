@@ -26,8 +26,8 @@ export function sortJudgesAndPeople(
     unassignedJudges.length / allJudgingRooms.length 
   );
   // filter out rooms with less capacity than judgesPerRoom
-  const goodRooms: Room[] = allJudgingRooms.filter(room=>room.capacity >= judgesPerRoom)
-  const goodRoomsName: string[] = goodRooms.map(room=>room.name)
+  const goodRooms: Room[] = allJudgingRooms.filter(room => room.capacity >= judgesPerRoom)
+  const goodRoomsName: string[] = goodRooms.map(room => room.name)
 
   for (const room of goodRoomsName) {
     for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
@@ -43,7 +43,7 @@ export function sortJudgesAndPeople(
         judgesTable.push(newJudge); // we mutate this later
         // add to the mapping of room number to judges
         if (roomsToJudgeOutputs.has(room)) {
-          roomsToJudgeOutputs.get(room).push(newJudge);
+          roomsToJudgeOutputs.get(room)!.push(newJudge);
         } else {
           roomsToJudgeOutputs.set(room, [newJudge]);
         }
@@ -69,7 +69,7 @@ export function sortJudgesAndPeople(
       const hackerOutput: HackerOutput = assignTeamToTime(
         timeSlot,
         teamToAssign,
-        room,
+        room.name,
         roomsToJudgeOutputs
       );
       hackerTable.push(hackerOutput);
@@ -89,7 +89,7 @@ function assignTeamToTime(
   room: string,
   roomToJudgeOutput: Map<string, JudgeOutput[]>
 ): HackerOutput {
-  const judgeGroup: JudgeOutput[] = roomToJudgeOutput.get(room);
+  const judgeGroup: JudgeOutput[] = roomToJudgeOutput.get(room)!;
   for (const judge of judgeGroup) {
     judge.project = hackerTeam.name;
     judge.devPostLink = hackerTeam.devpostLink;

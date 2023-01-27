@@ -6,12 +6,10 @@ import { parseHackerTeamCSV, parseJudgeCSV, parseRoomsCSV } from "./parser";
 const allTimes: string[] = ['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45'];
 
 function main(): FinalOutputTables {
-  // read the CSV and capacity arguments from CLI
-  const filePaths: string[] = process.argv.slice(2) 
-  const judgeCsvFilePath: string = filePaths[0];
-  const roomsCsvFilePath: string = filePaths[1];
-  const teamsCsvFilePath: string = filePaths[2];
-  const minCapacityRequired: number = parseInt(filePaths[3]);
+  // read the CSV files with judge / hacker / room data
+  const judgeCsvFilePath = 'judges.csv';
+  const roomsCsvFilePath = 'rooms.csv';
+  const teamsCsvFilePath = 'hackers.csv';
 
   // parse the hacker CSV in to TS objects
   const allJudges: Judge[] = parseJudgeCSV(judgeCsvFilePath);
