@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { UpcomingEvent } from '../../lib/types';
 import NoUpcoming from './no-upcoming/NoUpcoming';
 import {
@@ -19,35 +19,39 @@ import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const ComingUpSection: React.FC = () => {
   const { data, isLoading } = useAirtableApi('Relevant', 'relevant', true);
+  const [comingUpEvents, setComingUpEvents] = useState<UpcomingEvent[]>([]);
   const isDesktop = useMatchMedia(min.tablet);
-  
-  let count = 0;
-  let events: UpcomingEvent[] = data.map((event) => {
-    count = count + 1;
-    return {
-      id: count,
-      header: event.fields.title,
-      time: event.fields.start_time,
-      display_start_time: event.fields.display_start_time,
-      body: event.fields.notes
-    };
-  });
+  let events: UpcomingEvent[] = [];
+  useEffect(() => {
+    let count = 0;
+    events = data.map((event) => {
+      count = count + 1;
+      return {
+        id: count,
+        header: event.fields.title,
+        time: event.fields.start_time,
+        display_start_time: event.fields.display_start_time,
+        body: event.fields.notes
+      };
+    });
 
-  events = events.filter((e) => Date.now() < Date.parse(e.time));
-  events.sort((event1: UpcomingEvent, event2: UpcomingEvent) =>
-    event1.time > event2.time ? 1 : -1
-  );
-  events = events.slice(0, 3);
+    events = events.filter((e) => Date.now() < Date.parse(e.time));
+    events.sort((event1: UpcomingEvent, event2: UpcomingEvent) =>
+      event1.time > event2.time ? 1 : -1
+    );
+    events = events.slice(0, 3);
+    setComingUpEvents(events);
+  }, [data, setComingUpEvents]);
 
   if (isLoading) {
     return <StyledLoadingText>Loading...</StyledLoadingText>;
   }
 
-  if (events.length === 0) {
+  if (comingUpEvents.length === 0) {
     return <NoUpcoming />;
   }
-  if (events.length === 1 && !isDesktop) {
-    const event: UpcomingEvent = events[0];
+  if (comingUpEvents.length === 1 && !isDesktop) {
+    const event: UpcomingEvent = comingUpEvents[0];
     return (
       <StyledSectionContainer>
         <StyledSectionHeader>{'Coming up...'}</StyledSectionHeader>
@@ -67,7 +71,7 @@ const ComingUpSection: React.FC = () => {
     <StyledSectionContainer>
       <StyledSectionHeader>Coming up...</StyledSectionHeader>
       <StyledEvents>
-        {events.map((event: UpcomingEvent) => (
+        {comingUpEvents.map((event: UpcomingEvent) => (
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
