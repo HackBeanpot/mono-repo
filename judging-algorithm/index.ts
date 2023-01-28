@@ -23,7 +23,11 @@ function main(): FinalOutputTables {
   const judgeStrings = allJudges.map(judge => judge.name);
 
   // handles randomized placement and outputs a judge table and a hacker table for front-end
-  return sortJudgesAndPeople(allTimes, allRooms, allAwardEligibleHackers, judgeStrings);
+  const allPeopleSorted = sortJudgesAndPeople(allTimes, allRooms, allAwardEligibleHackers, judgeStrings);
+
+  console.log(allPeopleSorted);
+  
+  return allPeopleSorted;
 }
 
 main()

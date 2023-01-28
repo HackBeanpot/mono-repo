@@ -9,6 +9,8 @@
   "author": "surbhi gulati, lisa jiang",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^18.11.18",
     "csv-parse": "^5.3.3"
-  }
+  },
+  "type": "module"
 }
