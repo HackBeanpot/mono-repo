@@ -1,0 +1,29 @@
+import React from 'react';
+import { TeamCarProps } from '../../../lib/types';
+import { StyledTeamCar, StyledTeamCarContainer } from './Team.styles';
+import car1 from '../../../../shared-ui/images/van.svg';
+import car2 from '../../../../shared-ui/images/van-orange.svg';
+import car3 from '../../../../shared-ui/images/van-light-green.svg';
+import car4 from '../../../../shared-ui/images/van-blue.svg';
+import car5 from '../../../../shared-ui/images/van-purple.svg';
+
+const TeamCar: React.FC<TeamCarProps> = ({ points, index }) => {
+  const calculateDistance = (): number => {
+    return points * 0.8;
+  };
+  const retrieveCar = (index: number): string => {
+    return [car1, car2, car3, car4, car5][index];
+  };
+
+  return (
+    <StyledTeamCarContainer>
+      <StyledTeamCar
+        src={retrieveCar(index)}
+        alt="Team Car"
+        margin={calculateDistance()}
+      />
+    </StyledTeamCarContainer>
+  );
+};
+
+export default TeamCar;
