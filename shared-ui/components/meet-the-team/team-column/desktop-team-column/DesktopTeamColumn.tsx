@@ -11,14 +11,13 @@ const DesktopTeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
     <StyledTeamColumn>
       <SecondaryButton btnText={columnInfo.teamLabel} isClickable={false} />
       <div>
-        {listOfPictures.map((rowPics: Person[]) => (
-          <div>
+        {listOfPictures.map((rowPics: Person[], index) => (
+          <div key={`desktop-column-${index}`}>
             {rowPics.map((person: Person) => (
-              <>
+              <div key={person.picture}>
                 <StyledHeadshot
                   onMouseEnter={(): void => setCurPerson(person)}
                   src={person.picture}
-                  key={person.picture}
                   onMouseLeave={(): void => setCurPerson(null)}
                 />
                 {curPerson !== null && curPerson.picture === person.picture && (
@@ -27,7 +26,7 @@ const DesktopTeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
                     team={columnInfo.teamLabel}
                   />
                 )}
-              </>
+              </div>
             ))}
           </div>
         ))}

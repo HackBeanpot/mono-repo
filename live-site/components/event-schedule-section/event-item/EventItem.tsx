@@ -57,7 +57,9 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
           />
         )}
         <StyledTagsContainer>
-        {eventItem.tags.map((tag) => (<EventItemTag key = {eventItem.id} tagType={tag} />))}
+          {eventItem.tags.map((tag) => (
+            <EventItemTag key={eventItem.id} tagType={tag} />
+          ))}
         </StyledTagsContainer>
       </StyledEventItemContainer>
       {isOpen && (

@@ -1,6 +1,5 @@
 import { TabInfo, EventItem, Tag, TeamProps } from './types';
 
-
 const liveSiteTabInfo: TabInfo[] = [
   { name: 'Schedule', link: '/#schedule' },
   { name: 'Mentors', link: '/#mentors' },
@@ -30,7 +29,7 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Launch Event',
     eventName: 'Opening Ceremony',
     eventLocation: 'The Hub',
-    tags:[ Tag.beginner,Tag.workshop],
+    tags: [Tag.beginner, Tag.workshop],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   },
@@ -68,6 +67,5 @@ const eventItemInfo: EventItem[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   }
 ];
-
 
 export { liveSiteTabInfo, TimeLeft, eventItemInfo, TeamInfo };

@@ -37,7 +37,7 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
       <StyledTabContentContainer>
         <StyledTabContent>{tabs.tabs[activeTab].content}</StyledTabContent>
         {eventItemInfo.map((curr) => (
-          <EventItem eventItem={curr} />
+          <EventItem eventItem={curr} key={curr.eventName} />
         ))}
       </StyledTabContentContainer>
     </StyledEventScheduleTabContainer>

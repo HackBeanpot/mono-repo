@@ -17,7 +17,7 @@ export interface UpcomingEvent {
   id: number;
   header: string;
   time: string;
-  display_start_time: string; 
+  display_start_time: string;
   body: string;
 }
 
@@ -36,29 +36,29 @@ export interface EventScheduleTabProps {
 export interface StyledTabTitleWrapperProps {
   isSelected: boolean;
 }
-export interface EventItemTagProps{
-  tagType:string
+export interface EventItemTagProps {
+  tagType: string;
 }
 
-export interface StyledTagAndTagTextProps{
-  tagType:string
+export interface StyledTagAndTagTextProps {
+  tagType: string;
 }
 
-export interface styledArrowProps{
-  isOpen?: boolean
+export interface styledArrowProps {
+  isOpen?: boolean;
 }
 
-export enum Tag{
-  meal = "Meal",
-  beginner = "Beginner-Friendly",
-  workshop = "Workshop",
-  actionItem = "Action Item",
-  everyone = "Everyone",
-  sponsor = "Sponsor Event",
-  social = "Social/Fun Event"
+export enum Tag {
+  meal = 'Meal',
+  beginner = 'Beginner-Friendly',
+  workshop = 'Workshop',
+  actionItem = 'Action Item',
+  everyone = 'Everyone',
+  sponsor = 'Sponsor Event',
+  social = 'Social/Fun Event'
 }
 export interface EventItem {
-  id: number
+  id: number;
   time: string;
   eventType: string;
   eventName: string;
@@ -97,8 +97,14 @@ export interface MentorInfo {
   virtual: boolean;
   shiftStart: string[];
   shiftEnd: string[];
+  shifts: string[];
 }
 
 export interface StyledCactusButtonsProps {
   isToggled: boolean;
+}
+
+export interface MentorPopupProps {
+  mentor?: MentorInfo;
+  onClose: () => void;
 }

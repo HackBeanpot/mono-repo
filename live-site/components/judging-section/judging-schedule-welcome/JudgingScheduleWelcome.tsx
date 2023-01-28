@@ -26,7 +26,9 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
         <StyledJudgesDropdownContainer>
           <StyledJudgesDropdownWrapper id="position-filter">
             {personOptions.map((currPerson: string) => (
-              <option value={currPerson}>{currPerson}</option>
+              <option value={currPerson} key={currPerson}>
+                {currPerson}
+              </option>
             ))}
           </StyledJudgesDropdownWrapper>
         </StyledJudgesDropdownContainer>

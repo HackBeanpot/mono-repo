@@ -27,7 +27,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
     };
     return (
       <a onClick={onClick}>
-        <StyledPrimaryButton isSmallPrimary={isSmallPrimary}>
+        <StyledPrimaryButton $isSmallPrimary={isSmallPrimary}>
           {ctaText}
         </StyledPrimaryButton>
       </a>
@@ -40,7 +40,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
         whileHover="hover"
         whileTap="tap"
         variants={buttonAnimations}
-        isSmallPrimary={isSmallPrimary}
+        $isSmallPrimary={isSmallPrimary}
       >
         {btnText}
       </StyledPrimaryButton>

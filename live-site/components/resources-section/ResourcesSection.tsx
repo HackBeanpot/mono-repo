@@ -19,7 +19,7 @@ const ResourcesSection: React.FC = () => {
         <StyledHeader>Resources</StyledHeader>
         <BoxesContainer>
           {labels.map((label: string) => (
-            <ResourceBox label={label} />
+            <ResourceBox key={label} label={label} />
           ))}
         </BoxesContainer>
       </StyledResourcesSection>

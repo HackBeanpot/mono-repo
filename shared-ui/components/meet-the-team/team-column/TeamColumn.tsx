@@ -13,7 +13,10 @@ const TeamColumn: React.FC<MobileTeamColumnProps> = ({ listOfColumnInfo }) => {
       {isDesktop && (
         <StyledImageContainer>
           {listOfColumnInfo.map((teamColumn: TeamColumnInfo) => (
-            <DesktopTeamColumn columnInfo={teamColumn} />
+            <DesktopTeamColumn
+              columnInfo={teamColumn}
+              key={teamColumn.teamLabel}
+            />
           ))}
         </StyledImageContainer>
       )}

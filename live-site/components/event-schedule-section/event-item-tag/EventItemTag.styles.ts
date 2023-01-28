@@ -4,8 +4,7 @@ import { colors } from '../../../../shared-ui/style/colors';
 import { P } from '../../../../shared-ui/style/typography';
 import { StyledTagAndTagTextProps } from '../../../lib/types';
 
-
-const tagColor = (tagType : string) : string => {
+const tagColor = (tagType: string): string => {
   switch (tagType) {
     case 'Meal':
       return colors.FIREBRICK;
@@ -31,12 +30,12 @@ const tagColor = (tagType : string) : string => {
     default:
       return colors.BLACK;
   }
-}
+};
 
 const StyledTag = styled.div<StyledTagAndTagTextProps>`
   background-color: white;
-  border-color:${(StyledTagAndTagTextProps): string => {
-    return tagColor(StyledTagAndTagTextProps.tagType)
+  border-color: ${(StyledTagAndTagTextProps): string => {
+    return tagColor(StyledTagAndTagTextProps.tagType);
   }};
   border-style: solid;
   border-radius: 2em;
@@ -45,7 +44,7 @@ const StyledTag = styled.div<StyledTagAndTagTextProps>`
 
 const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   color: ${(StyledTagAndTagTextProps): string => {
-    return tagColor(StyledTagAndTagTextProps.tagType)
+    return tagColor(StyledTagAndTagTextProps.tagType);
   }};
   }};
   text-align: center;
