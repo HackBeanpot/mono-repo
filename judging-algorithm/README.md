@@ -20,6 +20,6 @@ You can access templates to create these CSVs under the `/csv-templates` folder.
 Run our script that splits our judges and hackers in to the inputted rooms
 by executing the following command:
 
-`ts-node index.ts`
+`ts-node --experimental-specifier-resolution=node index.ts`
 
 This outputs our results in to a JSON file which the site will read and upload!
