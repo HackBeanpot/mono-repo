@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import pinpoint from '../../../lib/pinpoint.svg';
-import arrow from '../../../lib/arrow.svg';
+import pinpoint from '../../../images/pinpoint.svg';
+import arrow from '../../../images/arrow.svg';
 
 import {
   StyledEventItemContainer,

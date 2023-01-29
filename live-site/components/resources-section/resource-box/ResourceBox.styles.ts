@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
-import { fonts } from '../../../../shared-ui/lib/typography';
+import { fonts } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 
 const StyledResourceBox = styled.a`

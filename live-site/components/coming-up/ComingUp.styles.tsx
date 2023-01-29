@@ -7,6 +7,12 @@ const StyledSectionContainer = styled.div`
   padding-top: 10em;
 `;
 
+const StyledLoadingText = styled(H3)`
+  justify-content: center;
+  display: flex;
+  margin: 10em 0;
+`;
+
 const StyledTextContainer = styled.div`
   margin: 2em;
   @media ${max.tablet} {
@@ -123,5 +129,6 @@ export {
   StyledEvents,
   StyledTextContainer,
   StyledSectionHeader,
-  StyledOneEventContainer
+  StyledOneEventContainer,
+  StyledLoadingText
 };
