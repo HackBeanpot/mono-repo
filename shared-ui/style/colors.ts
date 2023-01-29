@@ -27,6 +27,8 @@ const colors = {
   SOORANGE: '#F2A32B',
   SPONSIBGREEN: '#27AE60',
   PURPLE: '#A0B2EF',
+  YELLOW: '#FFE090',
+  TEXT_LIGHT_GREY: '#C4C4C4',
   RED: '#FF0000',
   FIREBRICK: '#B22222',
   GREEN: '#008000',
@@ -34,8 +36,7 @@ const colors = {
   ORANGE: '#FFA500',
   LIGHT_BLUE: '#ADD8E6',
   PURPLE_TAG: '#800080',
-  RACE_LINE: '#ffe799',
-  YELLOW: '#FFE090'
+  RACE_LINE: '#ffe799'
 };
 
 export { colors };

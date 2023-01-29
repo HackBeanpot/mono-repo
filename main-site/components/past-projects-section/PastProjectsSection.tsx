@@ -54,7 +54,7 @@ const PastProjectsSection: React.FC = () => {
       <StyledPastProjectsSection>
         {isDesktop &&
           pastProjectsData.map((project) => (
-            <StyledPastProjectsContainer>
+            <StyledPastProjectsContainer key={project.title}>
               <StyledPastProjectsPhotos src={getImage(project.title)} />
               <StyledPastProjectsInfo>
                 <StyledPastProjectsTitle>

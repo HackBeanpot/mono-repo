@@ -24,6 +24,7 @@ import cactus3 from '../../../shared-ui/images/cactus3.png';
 import cactus4 from '../../../shared-ui/images/cactus4.png';
 import { MentorInfo } from '../../lib/types';
 import { StyledSecondaryButton } from '../../../shared-ui/components/secondary-button/SecondaryButton.styles';
+import MentorPopup from './mentor-popup/MentorPopup';
 
 const MentorsSection: React.FC = () => {
   const isSmallMobile = useMatchMedia(max.tabletSm);
@@ -31,12 +32,17 @@ const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tabletLg);
 
   const { data } = useAirtableApi('Mentors', 'mentors', true);
+  const { data: shiftData } = useAirtableApi('Mentors', 'shifts', true);
   const [mentorData, setMentorData] = useState<MentorInfo[]>([]);
   const [mentors, setMentors] = useState<MentorInfo[]>([]);
   const [expertiseFilter, setExpertiseFilter] = useState('All');
   const [companyFilter, setCompanyFilter] = useState('All');
   const [virtualFilter, setVirtualFilter] = useState(false);
   const [onShiftFilter, setOnShiftFilter] = useState(true);
+  const [displayMentorModal, setDisplayMentorPopup] = useState(false);
+  const [modalMentor, setPopupMentor] = useState<MentorInfo | undefined>(
+    undefined
+  );
 
   const companiesArr = Array.from(
     new Set(['All'].concat(mentorData.map((mentor) => mentor.company)))
@@ -64,6 +70,39 @@ const MentorsSection: React.FC = () => {
   useEffect(() => {
     setMentorData(
       data.map((mentor) => {
+        let shifts = [];
+        if (mentor.fields.shift && shiftData.length > 0) {
+          shifts = mentor.fields.shift.map((shiftId: unknown) => {
+            const shift = shiftData.find((shift) => shift.id === shiftId);
+            const shiftStart = new Date(shift.fields.shift_start);
+            const shiftEnd = new Date(shift.fields.shift_end);
+            const startDay = new Intl.DateTimeFormat('en-US', {
+              weekday: 'short'
+            }).format(shiftStart);
+
+            let endDay = new Intl.DateTimeFormat('en-US', {
+              weekday: 'short'
+            }).format(shiftEnd);
+
+            if (startDay === endDay) {
+              endDay = '';
+            } else {
+              endDay = endDay + ': ';
+            }
+            return `${startDay}: ${new Intl.DateTimeFormat('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: true
+            }).format(shiftStart)} - ${endDay}${new Intl.DateTimeFormat(
+              'en-US',
+              {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true
+              }
+            ).format(shiftEnd)}`;
+          });
+        }
         return {
           name: mentor.fields.name,
           company: mentor.fields.company,
@@ -72,11 +111,12 @@ const MentorsSection: React.FC = () => {
           expertise: mentor.fields.expertise ?? [],
           virtual: mentor.fields.virtual ?? false,
           shiftStart: mentor.fields.shift_start ?? '',
-          shiftEnd: mentor.fields.shift_end ?? ''
+          shiftEnd: mentor.fields.shift_end ?? '',
+          shifts: shifts
         };
       })
     );
-  }, [data, setMentorData]);
+  }, [data, setMentorData, shiftData]);
 
   useEffect(() => {
     let filteredMentors = mentorData;
@@ -126,7 +166,11 @@ const MentorsSection: React.FC = () => {
   ]);
 
   const displayMentor = (mentor: MentorInfo): React.ReactElement => (
-    <StyledMentorContainer>
+    <StyledMentorContainer
+      onClick={(): void => {
+        openMentorPopup(mentor);
+      }}
+    >
       <img
         width={imageSize}
         height={imageSize}
@@ -138,6 +182,16 @@ const MentorsSection: React.FC = () => {
       <StyledMentorPosition>{mentor.position}</StyledMentorPosition>
     </StyledMentorContainer>
   );
+
+  const openMentorPopup = (mentor: MentorInfo): void => {
+    setPopupMentor(mentor);
+    setDisplayMentorPopup(true);
+  };
+
+  const closeMentorPopup = (): void => {
+    setDisplayMentorPopup(false);
+    setPopupMentor(undefined);
+  };
 
   const getCactus = (index: number): string => {
     if (index % 4 === 0) {
@@ -155,6 +209,9 @@ const MentorsSection: React.FC = () => {
   return (
     <div id="mentors">
       <StyledMentorsSection>
+        {displayMentorModal && (
+          <MentorPopup mentor={modalMentor} onClose={closeMentorPopup} />
+        )}
         <StyledMentorsFilterSection>
           <StyledMentorsHeader> Mentors </StyledMentorsHeader>
           <StyledMentorsDropdownContainer>
@@ -166,7 +223,9 @@ const MentorsSection: React.FC = () => {
               }}
             >
               {getExpertiseArr(mentorData).map((expertise: string) => (
-                <option value={expertise}>Expertise: {expertise}</option>
+                <option value={expertise} key={expertise}>
+                  Expertise: {expertise}
+                </option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -180,7 +239,9 @@ const MentorsSection: React.FC = () => {
               }}
             >
               {companiesArr.map((currCompany: string) => (
-                <option value={currCompany}>Company: {currCompany}</option>
+                <option value={currCompany} key={currCompany}>
+                  Company: {currCompany}
+                </option>
               ))}
             </StyledMentorsDropdownWrapper>
           </StyledMentorsDropdownContainer>
@@ -191,7 +252,7 @@ const MentorsSection: React.FC = () => {
               name="onshift_mentors_filter"
               value="Mentors on shift now"
               checked={onShiftFilter}
-              onClick={(): void =>
+              onChange={(): void =>
                 setOnShiftFilter((onShiftFilter) => !onShiftFilter)
               }
             />
@@ -203,7 +264,7 @@ const MentorsSection: React.FC = () => {
               name="virtual_mentors_filter"
               value="Virtual mentors"
               checked={virtualFilter}
-              onClick={(): void =>
+              onChange={(): void =>
                 setVirtualFilter((virtualFilter) => !virtualFilter)
               }
             />
@@ -212,7 +273,9 @@ const MentorsSection: React.FC = () => {
           </StyledMentorsFilterRadio>
         </StyledMentorsFilterSection>
         <StyledMentorsListContainer>
-          {mentorsToDisplay.map((currMentor) => displayMentor(currMentor))}
+          {mentorsToDisplay.map((currMentor, index) => (
+            <div key={`mentor-${index}`}>{displayMentor(currMentor)}</div>
+          ))}
           {mentorsToDisplay.length === 0 && (
             <StyledNoMentorsContainer>
               <StyledMentorName>
@@ -236,6 +299,7 @@ const MentorsSection: React.FC = () => {
           <StyledMentorsPaginationContainer>
             {paginatedMentors.map((_, index) => (
               <StyledCactusButtons
+                key={index}
                 src={getCactus(index)}
                 onClick={(): void => setCurrentPage(index)}
                 isToggled={index == currentPage}
