@@ -22,7 +22,6 @@ export interface RowProps {
 }
 
 export interface JudgingTableProps {
-  colNames: string[];
   rows: string[][];
 }
 
