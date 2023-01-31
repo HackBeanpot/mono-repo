@@ -74,6 +74,7 @@ export interface EventItemProps {
 export interface RaffleEntry {
   name: string;
   cabin: string;
+  eventCode: string;
 }
 
 export interface TeamProps {

@@ -8,7 +8,11 @@ import {
   StyledWelcomeSectionContent,
   StyledWelcomeText
 } from './WelcomeSection.styles';
-import { TeamInfo as defaultTeamInfo } from '../../lib/data';
+import {
+  TeamInfo as defaultTeamInfo,
+  onePointCodes,
+  twoPointCodes
+} from '../../lib/data';
 import { RaffleEntry, TeamProps } from '../../lib/types';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 
@@ -23,7 +27,8 @@ const WelcomeSection: React.FC = () => {
       data.map((entry) => {
         return {
           name: entry.fields.Name ?? '',
-          cabin: entry.fields.Cabin ?? ''
+          cabin: entry.fields.Cabin ?? '',
+          eventCode: entry.fields['Event Code'] ?? ''
         };
       })
     );
@@ -33,10 +38,22 @@ const WelcomeSection: React.FC = () => {
     const newTeamInfo = defaultTeamInfo.map((team) => {
       return { ...team };
     });
+
+    // make sure we don't double count a entry with the same name and event code
+    const seenEntries = new Set<string>();
+
     raffleEntries.forEach((entry) => {
       newTeamInfo.forEach((team) => {
-        if (team.name === entry.cabin) {
-          team.points += 1;
+        if (
+          team.name === entry.cabin &&
+          !seenEntries.has(entry.name + entry.eventCode)
+        ) {
+          if (onePointCodes.includes(entry.eventCode)) {
+            team.points += 1;
+          } else if (twoPointCodes.includes(entry.eventCode)) {
+            team.points += 2;
+          }
+          seenEntries.add(entry.name + entry.eventCode);
         }
       });
       setTeamInfo(newTeamInfo);

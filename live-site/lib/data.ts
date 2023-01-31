@@ -17,6 +17,11 @@ const TeamInfo: TeamProps[] = [
   { name: 'Team Desert Biome', points: 0, index: 4 }
 ];
 
+// TODO: replace with actual event codes
+const onePointCodes = ['WORKSHOP', 'SOCIAL'];
+
+const twoPointCodes = ['EXCURSION', 'ACTIVITY'];
+
 interface TimeLeft {
   timeType: string;
   value: number;
@@ -68,4 +73,11 @@ const eventItemInfo: EventItem[] = [
   }
 ];
 
-export { liveSiteTabInfo, TimeLeft, eventItemInfo, TeamInfo };
+export {
+  liveSiteTabInfo,
+  TimeLeft,
+  eventItemInfo,
+  TeamInfo,
+  onePointCodes,
+  twoPointCodes
+};
