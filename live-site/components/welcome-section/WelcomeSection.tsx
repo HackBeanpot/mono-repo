@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { H3 } from '../../../shared-ui/style/typography';
 import TeamRace from './team-race/TeamRace';
@@ -8,9 +8,41 @@ import {
   StyledWelcomeSectionContent,
   StyledWelcomeText
 } from './WelcomeSection.styles';
-import { TeamInfo } from '../../lib/data';
+import { TeamInfo as defaultTeamInfo } from '../../lib/data';
+import { RaffleEntry, TeamProps } from '../../lib/types';
+import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const WelcomeSection: React.FC = () => {
+  const { data } = useAirtableApi('Raffle', 'raffle', true);
+
+  const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
+  const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
+
+  useEffect(() => {
+    setRaffleEntries(
+      data.map((entry) => {
+        return {
+          name: entry.fields.Name ?? '',
+          cabin: entry.fields.Cabin ?? ''
+        };
+      })
+    );
+  }, [data, setRaffleEntries]);
+
+  useEffect(() => {
+    const newTeamInfo = defaultTeamInfo.map((team) => {
+      return { ...team };
+    });
+    raffleEntries.forEach((entry) => {
+      newTeamInfo.forEach((team) => {
+        if (team.name === entry.cabin) {
+          team.points += 1;
+        }
+      });
+      setTeamInfo(newTeamInfo);
+    });
+  }, [raffleEntries, defaultTeamInfo, setTeamInfo]);
+
   return (
     <StyledWelcomeSectionContainer>
       <StyledWelcomeSectionContent>
@@ -29,7 +61,7 @@ const WelcomeSection: React.FC = () => {
           <PrimaryButton btnText="Join our Slack" btnLink=""></PrimaryButton>
         </StyledButtonContainer>
       </StyledWelcomeSectionContent>
-      <TeamRace teams={TeamInfo} />
+      <TeamRace teams={teamInfo} />
     </StyledWelcomeSectionContainer>
   );
 };
