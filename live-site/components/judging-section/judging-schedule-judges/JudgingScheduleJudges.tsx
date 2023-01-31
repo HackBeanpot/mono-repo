@@ -3,7 +3,6 @@ import { JudgingTableProps } from '../../../lib/types';
 import JudgingScheduleWelcome from '../judging-schedule-welcome/JudgingScheduleWelcome';
 import { Table, JudgingTableSection } from './JudgingScheduleJudges.styles';
 import Row from './row/Row';
-// the first row is the column names
 const JudgingScheduleJudges: React.FC<JudgingTableProps> = ({ rows }) => {
   return (
     <>
