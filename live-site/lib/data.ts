@@ -16,16 +16,16 @@ interface TimeLeft {
 
 const eventItemInfo: EventItem[] = [
   {
-    time: '5:00 - 6:00 pm',
+    time: '7:00 - 8:00 pm',
     eventType: 'Launch Event',
     eventName: 'Opening Ceremony',
     eventLocation: 'The Hub'
   },
 
   {
-    time: '6:00 - 7:00 pm',
-    eventType: 'Tech Talk',
-    eventName: 'Intro to React',
+    time: '8:00 - 9:00 pm',
+    eventType: 'Dinner',
+    eventName: 'Food',
     eventLocation: 'Workshop Zone A'
   },
 
