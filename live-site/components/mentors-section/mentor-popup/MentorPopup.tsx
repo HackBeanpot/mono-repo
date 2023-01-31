@@ -11,13 +11,20 @@ import {
   StyledCloseButtonContainer
 } from './MentorPopup.styles';
 import PopupCloseButton from '../../../../shared-ui/images/popup-close-icon.png';
+import { max, } from '../../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
 
 const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
   if (!mentor) {
     return <></>;
   }
+  const notDesktop = useMatchMedia(max.tablet);
 
-  const mentorImageSize = 420;
+  let mentorImageSize = 420;
+  if(notDesktop) {
+    console.log("HEY");
+    mentorImageSize = 275;
+  }
 
   return (
     <StyledModal>
@@ -53,9 +60,6 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
               ))}
             </>
           )}
-          <br />
-          <br />
-          <br />
           {mentor.expertise.length > 0 && (
             <>
               <StyledHeader>EXPERTISE</StyledHeader>
