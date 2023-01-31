@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { max } from '../../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../../shared-ui/style/colors';
 import { fonts } from '../../../../../shared-ui/style/typography';
 
@@ -11,6 +12,18 @@ text-align: center;
 font-family: ${fonts.nunitoSansRegular};
 font-size: 1.8em;
 padding: 0.3em;
+
+@media ${max.tabletLg} {
+    width: 3em;
+  }
+@media ${max.tablet} {
+    width: 2em;
+}
+@media ${max.tabletSm} {
+    width: 1em;
+}
+
+
 `;
 
 export {

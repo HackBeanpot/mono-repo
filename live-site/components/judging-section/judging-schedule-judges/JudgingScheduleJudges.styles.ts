@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 const Table = styled.div`
-padding: 0 18em 2em;
+padding-bottom: 5em;
 display: vertical;
-align-items: center;
+
+`;
+
+const JudgingTableSection = styled.div`
+justify-content: center;
+display: flex; 
 
 `;
 
 export {
-    Table
+    Table, 
+    JudgingTableSection
 }

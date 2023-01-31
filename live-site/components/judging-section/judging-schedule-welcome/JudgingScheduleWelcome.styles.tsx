@@ -16,7 +16,7 @@ const StyledBackButton = styled(PrimaryButton)`
 
 const StyledJudgingScheduleSection = styled.div`
   padding-top: 3em;
-  padding-bottom: 20em;
+  padding-bottom: 2em;
   justify-content: center;
   flex: none;
 `;
