@@ -20,6 +20,7 @@ import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
+import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -56,6 +57,7 @@ const IndexPage: React.FC = () => {
       <TestimonialsSection />
       <PastProjectsSection />
       <FaqSection />
+      <SponsorsSection />
       <PastPhotosSection />
       <CovidSection />
       <MeetTheTeamSection />
