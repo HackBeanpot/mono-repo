@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { min } from '../../lib/responsive';
+import { max, min } from '../../lib/responsive';
 import { StyledHeaderProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
@@ -42,6 +42,10 @@ const StyledTabsContainer = styled.div`
       float: right;
       padding-top: 0;
       text-align: left;
+    }
+    @media ${min.tablet} and ${max.tabletLg} {
+      font-size: 0.8em;
+      padding-top: 0.9em;
     }
     @media ${min.tabletLg} {
       padding-right: 3em;
