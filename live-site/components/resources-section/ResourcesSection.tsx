@@ -15,7 +15,7 @@ const ResourcesSection: React.FC = () => {
     },
     {
       label: 'Beginner Resource Guide',
-      link: '#'
+      link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/'
     },
     {
       label: 'Hacker Guide',
