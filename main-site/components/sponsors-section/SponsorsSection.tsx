@@ -39,7 +39,11 @@ const SponsorsSection: React.FC = () => {
         Interested in joining the HackBeanpot universe? <br /> <br /> Reach out
         to us at team@hackbeanpot.com or check out our sponsorship packet!
       </StyledContactText>
-      <PrimaryButton btnText="View packet" />
+      <PrimaryButton
+        btnText="View packet"
+        newTab
+        btnLink="https://drive.google.com/file/d/1J5JWo_ST-0UnxBLkK-eGDnc9lX3tCS2D/view"
+      />
     </StyledSponsorsSectionContainer>
   );
 };
