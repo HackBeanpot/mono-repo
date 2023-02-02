@@ -206,6 +206,14 @@ const MentorsSection: React.FC = () => {
     return cactus4;
   };
 
+  useEffect(() => {
+    if(modalMentor) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [modalMentor ]);
+
   return (
     <div id="mentors">
       <StyledMentorsSection>
