@@ -36,7 +36,7 @@ const SponsorsSection: React.FC = () => {
         <StyledSilverLogos src={SilverLogosDesktop} alt="silver level logos" />
       </div>
       <StyledContactText>
-        Interested in joining the HackBeanpot universe? <br /> <br /> Reach out
+        Interested in joining the HackBeanpot desert exploration? <br /> <br /> Reach out
         to us at team@hackbeanpot.com or check out our sponsorship packet!
       </StyledContactText>
       <PrimaryButton
