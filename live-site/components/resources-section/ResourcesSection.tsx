@@ -1,4 +1,5 @@
 import React from 'react';
+import { resources } from '../../lib/data';
 import { ResourceBoxProps } from '../../lib/types';
 import ResourceBox from './resource-box/ResourceBox';
 import {
@@ -8,20 +9,6 @@ import {
 } from './ResourcesSection.styles';
 
 const ResourcesSection: React.FC = () => {
-  const resources: ResourceBoxProps[] = [
-    {
-      label: 'Project Guide',
-      link: '#'
-    },
-    {
-      label: 'Beginner Resource Guide',
-      link: '#'
-    },
-    {
-      label: 'Hacker Guide',
-      link: '#'
-    }
-  ];
   return (
     <div id="resources">
       <StyledResourcesSection>
