@@ -18,7 +18,7 @@ const Team: React.FC<TeamProps> = ({ name, points, position, index }) => {
         <StyledTeamName> {name}</StyledTeamName>
       </StyledTeamTextContainer>
       <StyledCarContainer>
-        <TeamCar points={points} index={index} eventItem={undefined} />
+        <TeamCar points={points} index={index} />
         <StyledTeamPoint>{points} PTS</StyledTeamPoint>
       </StyledCarContainer>
     </StyledTeamContainer>
