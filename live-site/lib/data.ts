@@ -1,12 +1,26 @@
-import { TabInfo, EventItem, Tag, TeamProps } from './types';
+import { TabInfo, EventItem, Tag, TeamProps, ResourceBoxProps } from './types';
 
 const liveSiteTabInfo: TabInfo[] = [
   { name: 'Schedule', link: '/#schedule' },
   { name: 'Mentors', link: '/#mentors' },
-  { name: 'Challenges', link: '/#challenges' },
   { name: 'Resources', link: '/#resources' },
   { name: 'Team', link: '/#team' },
   { name: 'Judging', link: '/judging' }
+];
+
+const resources: ResourceBoxProps[] = [
+  {
+    label: 'Project Guide',
+    link: '#'
+  },
+  {
+    label: 'Beginner Resource Guide',
+    link: '#'
+  },
+  {
+    label: 'Hacker Guide',
+    link: '#'
+  }
 ];
 
 const TeamInfo: TeamProps[] = [
@@ -73,11 +87,13 @@ const eventItemInfo: EventItem[] = [
   }
 ];
 
+
 export {
   liveSiteTabInfo,
   TimeLeft,
   eventItemInfo,
   TeamInfo,
+  resources,
   onePointCodes,
   twoPointCodes
 };

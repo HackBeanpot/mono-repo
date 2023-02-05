@@ -58,8 +58,8 @@ const IndexPage: React.FC = () => {
       <WelcomeSection />
       <EventScheduleSection />
       <ResourcesSection />
-      <MeetTheTeamSection />
       <MentorsSection />
+      <MeetTheTeamSection />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );

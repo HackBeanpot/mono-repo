@@ -1,4 +1,6 @@
 import React from 'react';
+import { resources } from '../../lib/data';
+import { ResourceBoxProps } from '../../lib/types';
 import ResourceBox from './resource-box/ResourceBox';
 import {
   BoxesContainer,
@@ -7,19 +9,13 @@ import {
 } from './ResourcesSection.styles';
 
 const ResourcesSection: React.FC = () => {
-  const labels: string[] = [
-    'Project Guide',
-    'Judging Process Guide',
-    'Project Demo Guide',
-    'Beginner Resource Guide'
-  ];
   return (
     <div id="resources">
       <StyledResourcesSection>
         <StyledHeader>Resources</StyledHeader>
         <BoxesContainer>
-          {labels.map((label: string) => (
-            <ResourceBox key={label} label={label} />
+          {resources.map((resource: ResourceBoxProps) => (
+            <ResourceBox link={resource.link} label={resource.label} />
           ))}
         </BoxesContainer>
       </StyledResourcesSection>

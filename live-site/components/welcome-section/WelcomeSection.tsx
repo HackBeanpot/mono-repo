@@ -75,7 +75,10 @@ const WelcomeSection: React.FC = () => {
           <u>www.hackbeanpot.com</u>
         </StyledWelcomeText>
         <StyledButtonContainer>
-          <PrimaryButton btnText="Join our Slack" btnLink=""></PrimaryButton>
+          <PrimaryButton
+            btnText="Join our Slack"
+            btnLink="https://join.slack.com/t/hackbeanpot2023/shared_invite/zt-1oo7nuvoh-l2~oR7Ba_HI_92ONG9WrPw"
+          ></PrimaryButton>
         </StyledButtonContainer>
       </StyledWelcomeSectionContent>
       <TeamRace teams={teamInfo} />

@@ -7,6 +7,7 @@ export interface TabInfo {
 
 export interface ResourceBoxProps {
   label: string;
+  link: string;
 }
 
 export interface JudgingScheduleWelcomeProps {
