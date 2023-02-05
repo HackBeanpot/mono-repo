@@ -1,18 +1,26 @@
 import React from 'react';
 import { JudgingTableProps } from '../../../lib/types';
 import JudgingScheduleWelcome from '../judging-schedule-welcome/JudgingScheduleWelcome';
-import { Table, JudgingTableSection } from './JudgingScheduleJudges.styles';
-import Row from './row/Row';
-const JudgingScheduleJudges: React.FC<JudgingTableProps> = ({ rows }) => {
+import { StyledTable, JudgingTableSection, Styledtd } from './JudgingScheduleJudges.styles';
+const JudgingScheduleJudges: React.FC<JudgingTableProps> = ({ headers, rows }) => {
   return (
     <>
     <JudgingScheduleWelcome schedulePersonType={'Judge'} />;
     <JudgingTableSection>
-    <Table>
-    {rows.map((row) => (
-      <Row row={row} />
+    <StyledTable>
+      <tr>
+    {headers.map((header) => (
+      <Styledtd>{header}</Styledtd>
     ))}
-    </Table>
+    </tr>
+    {rows.map((row: string[]) => (
+      <tr>
+      {row.map((cell: string) => (
+        <Styledtd>{cell}</Styledtd>
+      ))}
+      </tr>
+    ))}
+    </StyledTable>
     </JudgingTableSection>
     </>
 

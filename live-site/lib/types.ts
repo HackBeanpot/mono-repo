@@ -22,6 +22,7 @@ export interface RowProps {
 }
 
 export interface JudgingTableProps {
+  headers: string[]
   rows: string[][];
 }
 
