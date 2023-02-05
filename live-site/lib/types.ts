@@ -14,6 +14,19 @@ export interface JudgingScheduleWelcomeProps {
   schedulePersonType: string;
 }
 
+export interface CellProps {
+  content: string;
+}
+
+export interface RowProps {
+  row: string[];
+}
+
+export interface JudgingTableProps {
+  headers: string[]
+  rows: string[][];
+}
+
 export interface UpcomingEvent {
   id: number;
   header: string;
