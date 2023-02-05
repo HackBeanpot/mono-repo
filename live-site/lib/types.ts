@@ -72,6 +72,12 @@ export interface EventItemProps {
   eventItem: EventItem;
 }
 
+export interface RaffleEntry {
+  name: string;
+  cabin: string;
+  eventCode: string;
+}
+
 export interface TeamProps {
   points: number;
   name: string;
@@ -86,7 +92,6 @@ export interface TeamRaceProps {
 export interface TeamCarProps {
   points: number;
   index: number;
-  eventItem: EventItem;
 }
 
 export interface MentorInfo {

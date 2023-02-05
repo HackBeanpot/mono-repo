@@ -24,12 +24,17 @@ const resources: ResourceBoxProps[] = [
 ];
 
 const TeamInfo: TeamProps[] = [
-  { name: 'TEAM TATOOINE', points: 100, index: 0 },
-  { name: 'TEAM ESSOS', points: 82, index: 1 },
-  { name: 'TEAM SI WONG', points: 66, index: 2 },
-  { name: 'TEAM ARRAKIS', points: 33, index: 3 },
-  { name: 'TEAM DESSERT BIOME', points: 0, index: 4 }
+  { name: 'Team Tatooine', points: 0, index: 0 },
+  { name: 'Team Essos', points: 0, index: 1 },
+  { name: 'Team SI Wong', points: 0, index: 2 },
+  { name: 'Team Arrakis', points: 0, index: 3 },
+  { name: 'Team Desert Biome', points: 0, index: 4 }
 ];
+
+// TODO: replace with actual event codes
+const onePointCodes = ['WORKSHOP', 'SOCIAL'];
+
+const twoPointCodes = ['EXCURSION', 'ACTIVITY'];
 
 interface TimeLeft {
   timeType: string;
@@ -82,4 +87,13 @@ const eventItemInfo: EventItem[] = [
   }
 ];
 
-export { liveSiteTabInfo, TimeLeft, eventItemInfo, TeamInfo, resources };
+
+export {
+  liveSiteTabInfo,
+  TimeLeft,
+  eventItemInfo,
+  TeamInfo,
+  resources,
+  onePointCodes,
+  twoPointCodes
+};
