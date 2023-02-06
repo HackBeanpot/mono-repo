@@ -12,7 +12,6 @@ function parseCsv<T> (csvFilePath: string, headers: string[] | boolean): T[] {
   const csvFileAbsolutePath = path.resolve(__dirname, csvFilePath);
 
   const fileContent = fs.readFileSync(csvFileAbsolutePath, { encoding: 'utf-8' });
-  console.log(fileContent);
   const options = {
     delimiter: ',',
     columns: headers,

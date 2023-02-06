@@ -3,14 +3,15 @@ export type Judge = {
   inPerson: boolean,
   company: string
 }
-// const judgeHeaders: Array<keyof Judge> = ['name', 'inPerson', 'company'];
 
+/* For some reason this parses name as 'name' so dummy is included to avoid strange key.
+   Low priority TODO is to fix this later */
 export type HackerTeam = {
+  dummy: string,
   name: string;
-  liveDemo: boolean;
+  liveDemo: string;
   devpostLink: string;
 }
-export const hackerTeamHeaders: Array<string> = ['Project Title', 'Will You Be Able To Give A Live Demo Of Your Project To Judges?'];
 
 export type Room = {
   name: string,

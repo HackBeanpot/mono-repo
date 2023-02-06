@@ -22,12 +22,14 @@ export function sortJudgesAndPeople(
     hackerOutput: hackerTable
   };
   // judges assignment
-  const judgesPerRoom = Math.ceil(
-    unassignedJudges.length / allJudgingRooms.length 
-  );
+  const judgesPerRoom = Math.ceil(unassignedJudges.length / allJudgingRooms.length);
+
   // filter out rooms with less capacity than judgesPerRoom
   const goodRooms: Room[] = allJudgingRooms.filter(room => room.capacity >= judgesPerRoom)
   const goodRoomsName: string[] = goodRooms.map(room => room.name)
+
+  // populate keys for roomsToJudge outputs
+  allJudgingRooms.map(room => roomsToJudgeOutputs.set(room.name, []));
 
   for (const room of goodRoomsName) {
     for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
@@ -52,29 +54,29 @@ export function sortJudgesAndPeople(
   }
 
   // people assignment
-  let curTimeSlotIdx = 0;
-  while (unassignedTeams.length > 0) {
-    const timeSlot = allTimes[curTimeSlotIdx];
-    for (
-      const room of allJudgingRooms
-    ) {
-      if (unassignedTeams.length == 0) {
+  // iterates through each time slot and assigns to all rooms before proceeding to next time
+  while (unassignedTeams.length > 1) {
+    for (let curTimeSlotIdx = 0; curTimeSlotIdx < allTimes.length; curTimeSlotIdx++) {
+      const timeSlot = allTimes[curTimeSlotIdx];
+      for (const room of allJudgingRooms) {
+        if (unassignedTeams.length == 1) {
+          break;
+        }
+        // select a random team to sort to current room
+        const teamToAssignIdx = Math.floor(Math.random() * unassignedJudges.length + 1);
+        const teamToAssign = unassignedTeams.splice(teamToAssignIdx, 1).at(0)!;
+        const hackerOutput: HackerOutput = assignTeamToTime(
+          timeSlot,
+          teamToAssign,
+          room.name,
+          roomsToJudgeOutputs
+        );
+        hackerTable.push(hackerOutput);
+      }
+      if (unassignedTeams.length == 1) {
         break;
       }
-      const teamToAssignIndx = Math.floor(
-        Math.random() * unassignedJudges.length + 1
-      );
-      const teamToAssign = unassignedTeams[teamToAssignIndx] // select a random team from the unassigned teams
-      unassignedTeams.splice(teamToAssignIndx, 1);
-      const hackerOutput: HackerOutput = assignTeamToTime(
-        timeSlot,
-        teamToAssign,
-        room.name,
-        roomsToJudgeOutputs
-      );
-      hackerTable.push(hackerOutput);
     }
-    curTimeSlotIdx++;
   }
 
   return finalOutput;
@@ -89,14 +91,14 @@ function assignTeamToTime(
   room: string,
   roomToJudgeOutput: Map<string, JudgeOutput[]>
 ): HackerOutput {
-  const judgeGroup: JudgeOutput[] = roomToJudgeOutput.get(room)!;
-  for (const judge of judgeGroup) {
-    judge.project = hackerTeam.name;
-    judge.devPostLink = hackerTeam.devpostLink;
+  console.log("Hacker team is defined: " + hackerTeam !== undefined);
+  const judgesInRoom: JudgeOutput[] = roomToJudgeOutput.get(room)!;
+  for (const judgeOutput of judgesInRoom) {
+    judgeOutput.time = timeSlot;
+    judgeOutput.project = hackerTeam.name;
+    judgeOutput.devPostLink = hackerTeam.devpostLink;
   }
-  const judgeNames: string[] = judgeGroup.map(
-    (judgeOutput) => judgeOutput.judge
-  );
+  const judgeNames: string[] = judgesInRoom.map(judgeOutput => judgeOutput.judge);
   const hackerOutput: HackerOutput = {
     project: hackerTeam.name,
     time: timeSlot,
