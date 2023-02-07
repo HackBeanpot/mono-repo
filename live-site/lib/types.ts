@@ -62,6 +62,14 @@ export interface styledArrowProps {
   isOpen?: boolean;
 }
 
+export interface WelcomeSectionProps {
+  isDay: boolean;
+}
+
+export interface StyledWelcomeTextProps {
+  useWhiteText: boolean;
+}
+
 export enum Tag {
   meal = 'Meal',
   beginner = 'Beginner-Friendly',
