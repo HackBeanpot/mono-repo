@@ -8,7 +8,7 @@ const StyledWelcomeSectionContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 1.3em;
-  @media ${max.tablet} {
+  @media ${max.tabletLg} {
     flex-direction: column;
     align-items: center;
   }
@@ -19,7 +19,7 @@ const StyledRaceContainer = styled.div`
   width: 45em;
   border-radius: 1.5em;
   padding: 3em 2em;
-  @media ${max.tablet} {
+  @media ${max.tabletLg} {
     margin: 1.3em 0 0 0;
     width: 90%;
   }
@@ -34,6 +34,7 @@ const StyledWelcomeSectionContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 35.5em;
+  margin-top: 4em;
   margin-right: 2em;
   @media ${max.tabletLg} {
     margin-right: 0;
