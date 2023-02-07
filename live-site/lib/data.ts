@@ -30,7 +30,11 @@ const onePointCodes = [
   'ITSBETTERTOGETHER',
   'BIGBRAINTIME',
   'RISEANDSHINE',
-  'SUCCULENT'
+  'SUCCULENT',
+  'DESERTDAWN',
+  'REFRESHER',
+  'GAMINGINTHEDUNES',
+  'COOLBEANS'
 ];
 
 const twoPointCodes = ['EXCURSION', 'ACTIVITY'];
