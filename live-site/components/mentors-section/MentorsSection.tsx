@@ -16,7 +16,8 @@ import {
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
   StyledCactusButtons,
-  StyledNoMentorsContainer
+  StyledNoMentorsContainer, 
+  StyledImage
 } from './MentorsSection.styles';
 import cactus1 from '../../../shared-ui/images/cactus1.png';
 import cactus2 from '../../../shared-ui/images/cactus2.png';
@@ -171,12 +172,12 @@ const MentorsSection: React.FC = () => {
         openMentorPopup(mentor);
       }}
     >
-      <img
+      <StyledImage
         width={imageSize}
         height={imageSize}
         alt={`Image of ${mentor.name}`}
         src={mentor.imageUrl}
-      ></img>
+      ></StyledImage>
       <StyledMentorName>{mentor.name}</StyledMentorName>
       <StyledMentorCompany>{mentor.company}</StyledMentorCompany>
       <StyledMentorPosition>{mentor.position}</StyledMentorPosition>

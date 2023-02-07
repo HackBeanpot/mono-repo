@@ -31,10 +31,10 @@ const StyledContainer = styled.div`
     margin-top: 5em;
     padding: 2.5em; 
   }
-  @media ${max.tabletXs} {
-    margin-top: 5em;
-  }
-  
+`;
+
+const StyledImage = styled.img`
+  border-radius: 50%;
 `;
 
 const StyledMentorName = styled.div`
@@ -67,7 +67,6 @@ const StyledHeader = styled.div`
     font-size: 1em; 
   }
   @media ${max.tabletXs} {
-    font-size: 1em;
     margin: 0.5em 0 0.25em 0;
   }
 `;
@@ -99,6 +98,7 @@ const StyledContactButtonContainer = styled.div`
 export {
   StyledModal,
   StyledContainer,
+  StyledImage,
   StyledMentorName,
   StyledText,
   StyledHeader,

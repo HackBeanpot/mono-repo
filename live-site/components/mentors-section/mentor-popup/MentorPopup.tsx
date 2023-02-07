@@ -5,6 +5,7 @@ import {
   StyledContainer,
   StyledHeader,
   StyledModal,
+  StyledImage,
   StyledMentorName,
   StyledText,
   StyledContactButtonContainer,
@@ -29,7 +30,7 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
     <StyledModal>
       <StyledContainer>
         <div>
-          <img
+          <StyledImage
             width={mentorImageSize}
             height={mentorImageSize}
             alt={`Image of ${mentor.name}`}
