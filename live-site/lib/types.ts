@@ -100,11 +100,6 @@ export interface MentorInfo {
   shifts: string[];
 }
 
-export interface SponsorInfo {
-  level: string;
-  imageUrl: any;
-}
-
 export interface StyledCactusButtonsProps {
   isToggled: boolean;
 }

@@ -53,12 +53,6 @@ export interface PastProjectData {
   btnLink: string;
 }
 
-export const sponsorLevels = {
-  diamond: 'diamond',
-  gold: 'gold',
-  silver: 'silver'
-};
-
 export interface StyledSponsorsImageProps {
   level: string;
 }

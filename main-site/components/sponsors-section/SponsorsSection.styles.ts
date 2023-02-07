@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import SecondaryButton from '../../../shared-ui/components/secondary-button/SecondaryButton';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H4 } from '../../../shared-ui/style/typography';
@@ -52,6 +53,15 @@ const StyledMobileLogo = styled.img<StyledSponsorsImageProps>`
       : '0'};
 `;
 
+const StyledSecondaryButtonWrapper = styled.div`
+  margin: 0 2em;
+`;
+
+const StyledArrowWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export {
   StyledSponsorsSectionContainer,
   StyledDiamondLogo,
@@ -60,5 +70,7 @@ export {
   StyledSponsorsHeader,
   StyledContactText,
   StyledTreasureChest,
-  StyledMobileLogo
+  StyledMobileLogo,
+  StyledSecondaryButtonWrapper,
+  StyledArrowWrapper
 };

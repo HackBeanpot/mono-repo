@@ -8,7 +8,9 @@ import {
   StyledSponsorsHeader,
   StyledContactText,
   StyledTreasureChest,
-  StyledMobileLogo
+  StyledMobileLogo,
+  StyledSecondaryButtonWrapper,
+  StyledArrowWrapper
 } from './SponsorsSection.styles';
 import DiamondLogoDesktop from '../../images/diamond-level-logo-desktop.png';
 import GoldLogosDesktop from '../../images/gold-level-logos-desktop.png';
@@ -20,38 +22,51 @@ import TreasureChest from '../../images/treasure-chest.svg';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
-import { sponsorLevels } from '../../lib/types';
-import { SponsorInfo } from '../../../live-site/lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
+import { getLeftOrRight } from '../../lib/utils';
 
 const SponsorsSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tabletLg);
-  const sponsorLevelsInfo = [
-    {
-      level: 'Diamond Level',
-      image: DiamondLogoMobile
-    },
-    {
-      level: 'Gold Level',
-      image: GoldLogosMobile
-    },
-    {
-      level: 'Silver Level',
-      image: SilverLogosMobile
-    }
-  ];
+  const sponsorLevelsInfo = ['Diamond Level', 'Gold Level', 'Silver Level'];
   const [currLevel, setCurrLevel] = useState(sponsorLevelsInfo[0]);
+
+  function getImage(title: string): string {
+    if (title === 'Diamond Level') {
+      return DiamondLogoMobile;
+    }
+    if (title === 'Gold Level') {
+      return GoldLogosMobile;
+    }
+    return SilverLogosMobile;
+  }
 
   return (
     <StyledSponsorsSectionContainer>
       <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
       {!isDesktop && (
         <>
-          <Arrow />
-          <SecondaryButton btnText={currLevel.level} isClickable={false} />
-          <Arrow left={false} />
+          <StyledArrowWrapper>
+            <Arrow
+              onClick={(): void =>
+                setCurrLevel(
+                  getLeftOrRight('left', sponsorLevelsInfo, currLevel)
+                )
+              }
+            />
+            <StyledSecondaryButtonWrapper>
+              <SecondaryButton btnText={currLevel} isClickable={false} />
+            </StyledSecondaryButtonWrapper>
+            <Arrow
+              left={false}
+              onClick={(): void =>
+                setCurrLevel(
+                  getLeftOrRight('right', sponsorLevelsInfo, currLevel)
+                )
+              }
+            />
+          </StyledArrowWrapper>
           <br />
-          <StyledMobileLogo src={currLevel.image} level={currLevel.level} />
+          <StyledMobileLogo src={getImage(currLevel)} level={currLevel} />
         </>
       )}
 

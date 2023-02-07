@@ -52,12 +52,12 @@ const IndexPage: React.FC = () => {
       <Header tabs={mainSiteTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
+      <SponsorsSection />
       <AboutSection />
       <EventsCalendarSection />
       <TestimonialsSection />
       <PastProjectsSection />
       <FaqSection />
-      <SponsorsSection />
       <PastPhotosSection />
       <CovidSection />
       <MeetTheTeamSection />
