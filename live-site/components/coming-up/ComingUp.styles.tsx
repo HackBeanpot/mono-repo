@@ -34,6 +34,7 @@ const StyledEvent = styled.div`
   border-radius: 1.5em;
   margin: 1.3em;
   justify-content: center;
+  position: relative;
   @media ${max.tablet} {
     margin: 0.7em;
     width: 14em;
@@ -116,6 +117,12 @@ const StyledBody = styled.div`
   }
 `;
 
+const StyledHappeningNow = styled.p`
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+`;
+
 export {
   StyledEvent,
   StyledHeader,
@@ -126,5 +133,6 @@ export {
   StyledTextContainer,
   StyledSectionHeader,
   StyledOneEventContainer,
-  StyledLoadingText
+  StyledLoadingText,
+  StyledHappeningNow
 };

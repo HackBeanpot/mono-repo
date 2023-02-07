@@ -11,7 +11,8 @@ import {
   StyledSectionHeader,
   StyledEvents,
   StyledOneEventContainer,
-  StyledLoadingText
+  StyledLoadingText,
+  StyledHappeningNow
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
@@ -77,6 +78,7 @@ const ComingUpSection: React.FC = () => {
               <StyledHeader>{event.header}</StyledHeader>
               <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
+              <StyledHappeningNow>Happening now!</StyledHappeningNow>
             </StyledTextContainer>
           </StyledEvent>
         ))}
