@@ -37,6 +37,7 @@ const StyledTeamPoint = styled(P)`
 const StyledTeamPosition = styled(P)`
   text-transform: uppercase;
   color: ${colors.BUTTON_GREEN};
+  margin-right: 0.5em;
   font-size: 1.5em;
   @media ${max.tablet} {
     font-size: 1em;

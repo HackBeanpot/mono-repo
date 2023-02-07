@@ -4,7 +4,7 @@ import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H3 } from '../../../shared-ui/style/typography';
 
 const StyledSectionContainer = styled.div`
-  padding-top: 10em;
+  margin: 12em 0;
 `;
 
 const StyledLoadingText = styled(H3)`
@@ -30,13 +30,10 @@ const StyledTextContainer = styled.div`
 const StyledEvent = styled.div`
   background-color: ${colors.TEXT_BOX};
   width: 25em;
-  height: 14em;
+  height: 17em;
   border-radius: 1.5em;
   margin: 1.3em;
   justify-content: center;
-  @media ${max.tabletLg} {
-    height: 17em;
-  }
   @media ${max.tablet} {
     margin: 0.7em;
     width: 14em;
@@ -85,8 +82,7 @@ const StyledHeader = styled.div`
 const StyledSectionHeader = styled(H3)`
    {
     font-family: ${fonts.nunitoSansSemibold};
-    padding-bottom: 2em;
-    padding-left: 2.4em;
+    padding-left: 3em;
     @media ${max.tablet} {
       padding-left: 1em;
       padding-bottom: 1em;

@@ -7,10 +7,22 @@ const StyledWelcomeSectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 1.3em;
+  margin-left 1.3em;
+  margin-right: 1.3em;
+  margin-top: 45%;
   @media ${max.tabletLg} {
+    margin-top: 100%;
     flex-direction: column;
     align-items: center;
+  }
+  @media ${max.tablet} {
+    margin-top: 80%;
+  }
+  @media ${max.tabletSm} {
+    margin-top: 60%;
+  }
+  @media ${max.mobile} {
+    margin-top: 50%;
   }
 `;
 
