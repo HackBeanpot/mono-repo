@@ -58,3 +58,7 @@ export const sponsorLevels = {
   gold: 'gold',
   silver: 'silver'
 };
+
+export interface StyledSponsorsImageProps {
+  level: string;
+}

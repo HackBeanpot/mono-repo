@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H4 } from '../../../shared-ui/style/typography';
+import { StyledSponsorsImageProps } from '../../lib/types';
 
 const StyledSponsorsSectionContainer = styled.div`
   text-align: center;
@@ -44,6 +45,13 @@ const StyledTreasureChest = styled.img`
   }
 `;
 
+const StyledMobileLogo = styled.img<StyledSponsorsImageProps>`
+  margin-top: ${(props): string =>
+    props.level === 'Diamond Level' || props.level === 'Silver Level'
+      ? '4em'
+      : '0'};
+`;
+
 export {
   StyledSponsorsSectionContainer,
   StyledDiamondLogo,
@@ -51,5 +59,6 @@ export {
   StyledSilverLogos,
   StyledSponsorsHeader,
   StyledContactText,
-  StyledTreasureChest
+  StyledTreasureChest,
+  StyledMobileLogo
 };

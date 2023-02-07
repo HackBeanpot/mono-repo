@@ -7,30 +7,54 @@ import {
   StyledSilverLogos,
   StyledSponsorsHeader,
   StyledContactText,
-  StyledTreasureChest
+  StyledTreasureChest,
+  StyledMobileLogo
 } from './SponsorsSection.styles';
 import DiamondLogoDesktop from '../../images/diamond-level-logo-desktop.png';
 import GoldLogosDesktop from '../../images/gold-level-logos-desktop.png';
 import SilverLogosDesktop from '../../images/silver-level-logos-desktop.png';
+import DiamondLogoMobile from '../../images/diamond-level-logo-mobile.png';
+import GoldLogosMobile from '../../images/gold-level-logos-mobile.png';
+import SilverLogosMobile from '../../images/silver-level-logos-mobile.png';
 import TreasureChest from '../../images/treasure-chest.svg';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import { sponsorLevels } from '../../lib/types';
+import { SponsorInfo } from '../../../live-site/lib/types';
+import Arrow from '../../../shared-ui/components/arrow/Arrow';
 
 const SponsorsSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tabletLg);
-  const currLevel = useState(sponsorLevels.diamond);
-
-  const sponsorsData = [
+  const sponsorLevelsInfo = [
     {
-      
+      level: 'Diamond Level',
+      image: DiamondLogoMobile
+    },
+    {
+      level: 'Gold Level',
+      image: GoldLogosMobile
+    },
+    {
+      level: 'Silver Level',
+      image: SilverLogosMobile
     }
-  ]
+  ];
+  const [currLevel, setCurrLevel] = useState(sponsorLevelsInfo[0]);
+
   return (
     <StyledSponsorsSectionContainer>
       <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
-      {!isDesktop && <></>}
+      {!isDesktop && (
+        <>
+          <Arrow />
+          <SecondaryButton btnText={currLevel.level} isClickable={false} />
+          <Arrow left={false} />
+          <br />
+          <StyledMobileLogo src={currLevel.image} level={currLevel.level} />
+        </>
+      )}
+
       {isDesktop && (
         <>
           <StyledTreasureChest src={TreasureChest} alt="treasure chest" />
