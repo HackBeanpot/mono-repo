@@ -37,7 +37,7 @@ const onePointCodes = [
   'COOLBEANS'
 ];
 
-const twoPointCodes = ['EXCURSION', 'ACTIVITY'];
+const twoPointCodes = ['ECREWINTRO'];
 
 interface TimeLeft {
   timeType: string;
