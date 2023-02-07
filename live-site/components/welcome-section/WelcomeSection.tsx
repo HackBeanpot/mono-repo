@@ -71,7 +71,7 @@ const WelcomeSection: React.FC = () => {
           test during their hacking missions. Whether you’re a seasoned
           hackathon-goer, an ‘I-have-never-written-a-line-of-code beginner, or
           someone in between, we’re excited for you to embark on this adventure
-          with us!\n \nLearn more at`}
+          with us!\n \nLearn more at `}
           <u>www.hackbeanpot.com</u>
         </StyledWelcomeText>
         <StyledButtonContainer>
