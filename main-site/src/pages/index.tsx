@@ -62,7 +62,7 @@ const IndexPage: React.FC = () => {
       <CovidSection />
       <MeetTheTeamSection />
       <AdventureAheadSection />
-      <TimeRemaining />
+      <TimeRemaining target={new Date('02/10/2023 18:00:00')} />
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
     </StyledPageContainer>
   );
