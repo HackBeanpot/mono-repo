@@ -31,6 +31,7 @@ const colors = {
   TEXT_LIGHT_GREY: '#C4C4C4',
   RED: '#FF0000',
   FIREBRICK: '#B22222',
+  OFF_BLACK: '#121212',
   GREEN: '#008000',
   DARK_SALMON: '#E9967A',
   ORANGE: '#FFA500',

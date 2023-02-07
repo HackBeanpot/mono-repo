@@ -15,6 +15,7 @@ import { StyledPageContainer } from '../../../shared-ui/styled-components/Backgr
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
 import WelcomeSection from '../../components/welcome-section/WelcomeSection';
+import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
@@ -23,7 +24,7 @@ const handleMode = (): boolean => {
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(handleMode());
-  const isDesktop = useMatchMedia(min.tabletLg);
+  const isDesktop = useMatchMedia(min.tabletSm);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getBackgroundClassName = (): string => {
@@ -60,6 +61,7 @@ const IndexPage: React.FC = () => {
       <ResourcesSection />
       <MentorsSection />
       <MeetTheTeamSection />
+      <FeedbackJoinCoreSection />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );
