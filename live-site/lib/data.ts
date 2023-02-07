@@ -87,7 +87,6 @@ const eventItemInfo: EventItem[] = [
   }
 ];
 
-
 export {
   liveSiteTabInfo,
   TimeLeft,
