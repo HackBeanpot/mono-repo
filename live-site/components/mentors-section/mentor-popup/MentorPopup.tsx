@@ -69,7 +69,7 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
             </>
           )}
           <StyledContactButtonContainer>
-            <PrimaryButton btnText="Contact" btnLink={mentor.slack}/>
+            <PrimaryButton btnText="Contact" btnLink={mentor.slack} newTab={true}/>
           </StyledContactButtonContainer>
         </div>
       </StyledContainer>
