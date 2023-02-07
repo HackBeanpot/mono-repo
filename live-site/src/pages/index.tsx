@@ -24,7 +24,7 @@ const handleMode = (): boolean => {
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(handleMode());
-  const isDesktop = useMatchMedia(min.tabletSm);
+  const isDesktop = useMatchMedia(min.tabletXs);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getBackgroundClassName = (): string => {
@@ -56,7 +56,7 @@ const IndexPage: React.FC = () => {
         <HackingRemaining />
       )}
       <ComingUpSection />
-      <WelcomeSection />
+      <WelcomeSection isDay={isDay} />
       <EventScheduleSection />
       <ResourcesSection />
       <MentorsSection />

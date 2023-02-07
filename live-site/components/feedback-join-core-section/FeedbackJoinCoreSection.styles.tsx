@@ -27,7 +27,7 @@ const StyledColumn = styled.div`
 `;
 
 const StyledColumnTitle = styled.div`
-  font-size: 36px;
+  font-size: 2em;
   font-family: ${fonts.nunitoSansSemibold};
   color: ${colors.OFF_BLACK};
 `;

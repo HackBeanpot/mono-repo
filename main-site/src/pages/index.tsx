@@ -23,7 +23,7 @@ import { StyledPageContainer } from '../../../shared-ui/styled-components/Backgr
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
-  const isDesktop = useMatchMedia(min.tabletSm);
+  const isDesktop = useMatchMedia(min.tabletXs);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
