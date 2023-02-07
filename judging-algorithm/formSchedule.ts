@@ -23,25 +23,18 @@ export function sortJudgesAndPeople(
   };
   // judges assignment
   const judgesPerRoom = Math.ceil(unassignedJudges.length / allJudgingRooms.length);
-
   // filter out rooms with less capacity than judgesPerRoom
-  const goodRooms: Room[] = allJudgingRooms.filter(room => room.capacity >= judgesPerRoom)
-  const goodRoomsName: string[] = goodRooms.map(room => room.name)
-
+  const goodRoomsName: string[] = allJudgingRooms.map(room => room.name)
   // populate keys for roomsToJudge outputs
   allJudgingRooms.map(room => roomsToJudgeOutputs.set(room.name, []));
-
   for (const room of goodRoomsName) {
-    for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
+    for (let judgeCount = 0; judgeCount < unassignedJudges.length; judgeCount++) {
       if (unassignedJudges.length > 0) {
-        const judgeToAssignIdx = Math.floor(
-          Math.random() * unassignedJudges.length + 1
-        );
         const newJudge: JudgeOutput = assignJudgeToRoom(
-          unassignedJudges[judgeToAssignIdx],
+          unassignedJudges[0],
           room
         );
-        unassignedJudges.splice(judgeToAssignIdx, 1);
+        unassignedJudges.splice(0, 1);
         judgesTable.push(newJudge); // we mutate this later
         // add to the mapping of room number to judges
         if (roomsToJudgeOutputs.has(room)) {
@@ -49,22 +42,24 @@ export function sortJudgesAndPeople(
         } else {
           roomsToJudgeOutputs.set(room, [newJudge]);
         }
+       // console.log('judges Table')
+       // console.log(judgesTable)
       }
     }
   }
 
   // people assignment
   // iterates through each time slot and assigns to all rooms before proceeding to next time
-  while (unassignedTeams.length > 1) {
+  while (unassignedTeams.length > 0) {
     for (let curTimeSlotIdx = 0; curTimeSlotIdx < allTimes.length; curTimeSlotIdx++) {
       const timeSlot = allTimes[curTimeSlotIdx];
       for (const room of allJudgingRooms) {
-        if (unassignedTeams.length == 1) {
+        if (unassignedTeams.length === 0) {
           break;
         }
         // select a random team to sort to current room
-        const teamToAssignIdx = Math.floor(Math.random() * unassignedJudges.length + 1);
-        const teamToAssign = unassignedTeams.splice(teamToAssignIdx, 1).at(0)!;
+       // const teamToAssignIdx = Math.floor(Math.random() * unassignedJudges.length + 1);
+        const teamToAssign = unassignedTeams.splice(0, 1).at(0)!;
         const hackerOutput: HackerOutput = assignTeamToTime(
           timeSlot,
           teamToAssign,
@@ -73,7 +68,7 @@ export function sortJudgesAndPeople(
         );
         hackerTable.push(hackerOutput);
       }
-      if (unassignedTeams.length == 1) {
+      if (unassignedTeams.length === 0) {
         break;
       }
     }
@@ -81,7 +76,25 @@ export function sortJudgesAndPeople(
 
   return finalOutput;
 }
-
+/*
+const example =   {
+  room: 'hidden figures',
+  judge: 'lisa',
+  projects: [{
+    project: '',
+    devPostLink: '',
+    inPersonDemo: true,
+    time: ''
+  },
+  {
+    project: '',
+    devPostLink: '',
+    inPersonDemo: true,
+    time: ''
+  },
+]
+}
+*/
 // returns one hackertable entry
 // mutates every single JudgeOutput the map maps to
 // return HackerOutput object, mutates the judge passed in
@@ -91,7 +104,6 @@ function assignTeamToTime(
   room: string,
   roomToJudgeOutput: Map<string, JudgeOutput[]>
 ): HackerOutput {
-  console.log("Hacker team is defined: " + hackerTeam !== undefined);
   const judgesInRoom: JudgeOutput[] = roomToJudgeOutput.get(room)!;
   for (const judgeOutput of judgesInRoom) {
     judgeOutput.time = timeSlot;
@@ -99,6 +111,8 @@ function assignTeamToTime(
     judgeOutput.devPostLink = hackerTeam.devpostLink;
   }
   const judgeNames: string[] = judgesInRoom.map(judgeOutput => judgeOutput.judge);
+ // console.log('judgeNames')
+ // console.log(judgeNames)
   const hackerOutput: HackerOutput = {
     project: hackerTeam.name,
     time: timeSlot,
@@ -116,7 +130,7 @@ function assignJudgeToRoom(judge: string, room: string): JudgeOutput {
     judge: judge,
     project: '',
     devPostLink: '',
-    inPersonDemo: false,
+    inPersonDemo: true,
     time: ''
   };
   return newJudge;
