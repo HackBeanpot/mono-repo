@@ -113,7 +113,8 @@ const MentorsSection: React.FC = () => {
           virtual: mentor.fields.virtual ?? false,
           shiftStart: mentor.fields.shift_start ?? '',
           shiftEnd: mentor.fields.shift_end ?? '',
-          shifts: shifts
+          shifts: shifts,
+          slack: mentor.fields.slack
         };
       })
     );

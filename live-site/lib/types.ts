@@ -98,6 +98,7 @@ export interface MentorInfo {
   shiftStart: string[];
   shiftEnd: string[];
   shifts: string[];
+  slack: string;
 }
 
 export interface StyledCactusButtonsProps {
