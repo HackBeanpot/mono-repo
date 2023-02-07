@@ -36,17 +36,23 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
       >
         <StyledEventItemLeftSideContainer>
           <StyledEventTimeTopicContainer>
-            <StyledEventItemTime>{eventItem.time}</StyledEventItemTime>
+            <StyledEventItemTime>
+              {eventItem.time.toLocaleTimeString('en-US', {
+                timeStyle: 'short'
+              })}
+            </StyledEventItemTime>
             <StyledEventItemTopic>{eventItem.eventType}</StyledEventItemTopic>
           </StyledEventTimeTopicContainer>
           <StyledEventItemNameLocationContainer>
             <StyledEventItemHeader>{eventItem.eventName}</StyledEventItemHeader>
-            <StyledPinpointLocationContainer>
-              <StyledPinpoint src={pinpoint} />
-              <StyledEventItemLocation>
-                {eventItem.eventLocation}
-              </StyledEventItemLocation>
-            </StyledPinpointLocationContainer>
+            {eventItem.eventLocation && (
+              <StyledPinpointLocationContainer>
+                <StyledPinpoint src={pinpoint} />
+                <StyledEventItemLocation>
+                  {eventItem.eventLocation}
+                </StyledEventItemLocation>
+              </StyledPinpointLocationContainer>
+            )}
           </StyledEventItemNameLocationContainer>
         </StyledEventItemLeftSideContainer>
         {arrowPresent && (
@@ -57,9 +63,12 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
           />
         )}
         <StyledTagsContainer>
-          {eventItem.tags.map((tag) => (
-            <EventItemTag key={eventItem.id} tagType={tag} />
-          ))}
+          {eventItem.tags && (
+            <EventItemTag key={eventItem.id} tag={eventItem.tags} />
+          )}
+          {eventItem.difficulty && (
+            <EventItemTag key={eventItem.id} tag={eventItem.difficulty} />
+          )}
         </StyledTagsContainer>
       </StyledEventItemContainer>
       {isOpen && (

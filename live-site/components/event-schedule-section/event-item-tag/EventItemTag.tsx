@@ -2,10 +2,10 @@ import React from 'react';
 import { EventItemTagProps } from '../../../lib/types';
 import { StyledTag, StyledTagText } from './EventItemTag.styles';
 
-const EventItemTag: React.FC<EventItemTagProps> = ({ tagType }) => {
+const EventItemTag: React.FC<EventItemTagProps> = ({ tag }) => {
   return (
-    <StyledTag tagType={tagType}>
-      <StyledTagText tagType={tagType}>{tagType}</StyledTagText>
+    <StyledTag tag={tag}>
+      <StyledTagText tag={tag}>{tag}</StyledTagText>
     </StyledTag>
   );
 };
