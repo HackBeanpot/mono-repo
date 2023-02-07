@@ -31,10 +31,27 @@ const TeamInfo: TeamProps[] = [
   { name: 'Team Desert Biome', points: 0, index: 4 }
 ];
 
-// TODO: replace with actual event codes
-const onePointCodes = ['WORKSHOP', 'SOCIAL'];
+const onePointCodes = [
+  'FIGMAAZING',
+  'GITREADYTOPARTY',
+  'SCIENCEOFDATA',
+  'GIVEMEAJOB',
+  'COREPARTY',
+  'THREEJSFUN',
+  'LIVEONWEB',
+  'BETTERTHANGPT',
+  'NAMASTEAWAYFROMME',
+  'ITSBETTERTOGETHER',
+  'BIGBRAINTIME',
+  'RISEANDSHINE',
+  'SUCCULENT',
+  'DESERTDAWN',
+  'REFRESHER',
+  'GAMINGINTHEDUNES',
+  'COOLBEANS'
+];
 
-const twoPointCodes = ['EXCURSION', 'ACTIVITY'];
+const twoPointCodes = ['ECREWINTRO'];
 
 interface TimeLeft {
   timeType: string;
