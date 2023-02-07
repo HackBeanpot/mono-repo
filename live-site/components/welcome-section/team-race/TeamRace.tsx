@@ -10,8 +10,8 @@ import { StyledTeamHeader } from './Team.styles';
 
 const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
   const orderTeams = (teams: TeamProps[]): TeamProps[] => {
-    return teams.sort((team1: TeamProps, team2: TeamProps) =>
-      team1.points > team2.points ? -1 : -1
+    return teams.sort(
+      (team1: TeamProps, team2: TeamProps) => team2.points - team1.points
     );
   };
 
@@ -24,6 +24,7 @@ const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
         </StyledRaceContent>
         {orderTeams(teams).map((team: TeamProps, position: number) => (
           <Team
+            key={team.index}
             name={team.name}
             points={team.points}
             position={position + 1}

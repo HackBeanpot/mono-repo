@@ -7,10 +7,24 @@ export interface TabInfo {
 
 export interface ResourceBoxProps {
   label: string;
+  link: string;
 }
 
 export interface JudgingScheduleWelcomeProps {
   schedulePersonType: string;
+}
+
+export interface CellProps {
+  content: string;
+}
+
+export interface RowProps {
+  row: string[];
+}
+
+export interface JudgingTableProps {
+  headers: string[]
+  rows: string[][];
 }
 
 export interface UpcomingEvent {
@@ -71,6 +85,12 @@ export interface EventItemProps {
   eventItem: EventItem;
 }
 
+export interface RaffleEntry {
+  name: string;
+  cabin: string;
+  eventCode: string;
+}
+
 export interface TeamProps {
   points: number;
   name: string;
@@ -85,7 +105,6 @@ export interface TeamRaceProps {
 export interface TeamCarProps {
   points: number;
   index: number;
-  eventItem: EventItem;
 }
 
 export interface MentorInfo {

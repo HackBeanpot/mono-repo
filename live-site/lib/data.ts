@@ -1,21 +1,40 @@
-import { TabInfo, EventItem, Tag, TeamProps } from './types';
+import { TabInfo, EventItem, Tag, TeamProps, ResourceBoxProps } from './types';
 
 const liveSiteTabInfo: TabInfo[] = [
   { name: 'Schedule', link: '/#schedule' },
   { name: 'Mentors', link: '/#mentors' },
-  { name: 'Challenges', link: '/#challenges' },
   { name: 'Resources', link: '/#resources' },
   { name: 'Team', link: '/#team' },
   { name: 'Judging', link: '/judging' }
 ];
 
-const TeamInfo: TeamProps[] = [
-  { name: 'TEAM TATOOINE', points: 100, index: 0 },
-  { name: 'TEAM ESSOS', points: 82, index: 1 },
-  { name: 'TEAM SI WONG', points: 66, index: 2 },
-  { name: 'TEAM ARRAKIS', points: 33, index: 3 },
-  { name: 'TEAM DESSERT BIOME', points: 0, index: 4 }
+const resources: ResourceBoxProps[] = [
+  {
+    label: 'Project Guide',
+    link: '#'
+  },
+  {
+    label: 'Beginner Resource Guide',
+    link: '#'
+  },
+  {
+    label: 'Hacker Guide',
+    link: '#'
+  }
 ];
+
+const TeamInfo: TeamProps[] = [
+  { name: 'Team Tatooine', points: 0, index: 0 },
+  { name: 'Team Essos', points: 0, index: 1 },
+  { name: 'Team SI Wong', points: 0, index: 2 },
+  { name: 'Team Arrakis', points: 0, index: 3 },
+  { name: 'Team Desert Biome', points: 0, index: 4 }
+];
+
+// TODO: replace with actual event codes
+const onePointCodes = ['WORKSHOP', 'SOCIAL'];
+
+const twoPointCodes = ['EXCURSION', 'ACTIVITY'];
 
 interface TimeLeft {
   timeType: string;
@@ -68,4 +87,13 @@ const eventItemInfo: EventItem[] = [
   }
 ];
 
-export { liveSiteTabInfo, TimeLeft, eventItemInfo, TeamInfo };
+
+export {
+  liveSiteTabInfo,
+  TimeLeft,
+  eventItemInfo,
+  TeamInfo,
+  resources,
+  onePointCodes,
+  twoPointCodes
+};
