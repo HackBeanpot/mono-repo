@@ -9,13 +9,25 @@ import {
 } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
 import { JudgingScheduleWelcomeProps } from '../../../lib/types';
 import JudgingScheduleTable from '../judging-schedule-table/JudgingScheduleTable';
+import judgesList from '../../../../judging-algorithm/judges.json';
+import hackersList from '../../../../judging-algorithm/judges.json';
+
+// abstract this for both hackers and judges
+function getColumnHeaders({object}, tableType: string): string[] {
+  return ['hi']
+}
+function getRows(): string[][] {
+  
+}
 
 const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
   schedulePersonType
 }) => {
-  const personOptions = ['Select your name', 'Lisa', 'Surbhs']; // inside judges.json => only do the keys
+  
+  const personOptions = ['Select your name', ...judgesList.map((obj) => (obj["judge"]))]; // inside judges.json => only do the keys
   const [personSelected, setPersonSelected] =
     useState<string>('Select your name');
+
   return (
     <div>
       <StyledBackButtonContainer>
@@ -41,7 +53,7 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
             ))}
           </StyledJudgesDropdownWrapper>
         </StyledJudgesDropdownContainer>
-        {personSelected != 'Select your name' && <JudgingScheduleTable headers={['hi', 'hi', 'hi', 'hi']} rows={[['lol', 'lol', 'lol', 'lol']]}/>}
+        {personSelected != 'Select your name' && <JudgingScheduleTable headers={judgeList} rows={[['lol', 'lol', 'lol', 'lol']]}/>}
       </StyledJudgingScheduleSection>
     </div>
   );
