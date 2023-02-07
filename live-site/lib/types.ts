@@ -1,4 +1,4 @@
-import { EventMockData } from '../components/event-schedule-section/EventScheduleMockData';
+import { EventDate } from '../components/event-schedule-section/EventScheduleMockData';
 
 export interface TabInfo {
   name: string;
@@ -23,7 +23,7 @@ export interface RowProps {
 }
 
 export interface JudgingTableProps {
-  headers: string[]
+  headers: string[];
   rows: string[][];
 }
 
@@ -44,7 +44,7 @@ export interface DesktopMultiEventsProps {
 }
 
 export interface EventScheduleTabProps {
-  tabs: EventMockData[];
+  tabs: EventDate[];
 }
 
 export interface StyledTabTitleWrapperProps {

@@ -1,10 +1,10 @@
-export interface EventMockData {
+export interface EventDate {
   id: number;
   title: string;
   content: string;
 }
 
-export const mockData: EventMockData[] = [
+export const mockData: EventDate[] = [
   {
     id: 0,
     title: 'FRI 11',
