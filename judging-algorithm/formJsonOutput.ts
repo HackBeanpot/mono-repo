@@ -1,12 +1,12 @@
 import { FinalOutputTables, JudgeOutput, JudgeOutputLiveSite, JudgeOutputProjectsLiveSite } from "./types";
-import {writeJsonFile} from 'write-json-file';
+import fs from "fs";
 
 /* Creates JSON file for the front-end hackers page to consume for judging assignments */
-export async function convertHackersTablesToJson(
+export function convertHackersTablesToJson(
     finalOutputTables: FinalOutputTables,
-  ): Promise<void> {
+  ): void {
     const hackerTables = JSON.stringify(finalOutputTables.hackerOutput);
-    await writeJsonFile('hackerResults.json', hackerTables);
+    fs.writeFileSync('hackerResults.json', hackerTables);
 }
 
 /* Creates JSON files for the front-end judges page to consume for judging assignments */
@@ -15,7 +15,7 @@ export async function convertJudgesTablesToJson(
     finalOutputTables: FinalOutputTables,
   ): Promise<void> {
     const judgeTables = JSON.stringify(judgeDataLiveSite(judgeStrings, finalOutputTables.judgeOutput));
-    await writeJsonFile('judgeResults.json', judgeTables);
+    fs.writeFileSync('judgeResults.json', judgeTables);
 }
   
 /* Massage JudgeOutput structure data in to the live site structure */
