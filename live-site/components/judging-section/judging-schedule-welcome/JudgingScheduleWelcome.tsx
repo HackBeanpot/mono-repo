@@ -18,16 +18,49 @@ function getJudge() {
 
 
 // abstract this for both hackers and judges
-function getColumnHeaders(entryObject: JudgeEntryType | HackerEntryType, tableType: string): string[] {
+function getColumnHeaders(listOfEntries: JudgeEntryType[] | HackerEntryType[], tableType: string): string[] {
   const tableHeaders = [];
   const rows = [[]];
 
-  for (const key of Object.keys(entryObject)) {
-    if (type of entryObject[key] != "string") {
+  for (let i = 0; i < listOfEntries.length; i++) {
+    const entry = listOfEntries[i];
+    const curRow = []
+    let deletecurRow = false;
+    for (const key of Object.keys(entry)) {
+      if (typeof entry[key] != "string") { // value is an array
+        if (typeof entry[key][0] == "string") { 
+          // not sure what's supposed to happen for hackers
 
+
+        } else { // first value of array is an object
+          const subList = entry[key];
+          for (let j = 0; j < subList.length; j++) {
+            const curNewRow = [...curRow];
+            for (const subKey of subList[j]) {
+              if (j==0) {
+                tableHeaders.push(subKey);
+              }
+              curNewRow.push(subList[j][subKey]);
+              
+            }
+            rows.push(curNewRow);
+            
+          }
+          curRow = []; // only works if there's nothing after the objects
+        }
+  
+  
+      } else {
+        if (i==0) {
+          tableHeaders.push(key);
+        }
+        curRow.push(entry[key]);
+      }
+  
     }
 
   }
+  
 }
 
 function getRows(): string[][] {
