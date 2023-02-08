@@ -69,7 +69,7 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
             </>
           )}
           <StyledContactButtonContainer>
-            <PrimaryButton btnText="Contact" btnLink={mentor.slack} newTab={true}/>
+            <PrimaryButton btnText="Contact" btnLink={'https://hackbeanpot2023.slack.com/app_redirect?channel=' + mentor.slack} newTab={true}/>
           </StyledContactButtonContainer>
         </div>
       </StyledContainer>
