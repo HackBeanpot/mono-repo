@@ -1,7 +1,7 @@
 import { FinalOutputTables, HackerTeam, Judge, Room } from "./types";
 import { sortJudgesAndPeople } from "./formSchedule";
 import { parseHackerTeamCSV, parseJudgeCSV, parseRoomsCSV } from "./parser";
-import { convertTablesToJson } from "./formJsonOutput";
+import { convertHackersTablesToJson, convertJudgesTablesToJson } from "./formJsonOutput";
 
 // hardcode based on hackathon needs
 const allTimes: string[] = ['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45'];
@@ -21,14 +21,20 @@ function main(): FinalOutputTables {
   const allAwardEligibleHackers = allHackers.filter(team => team.liveDemo === 'TRUE');  
 
   // extract string names for: judges, hackers and teams
-  const judgeStrings = allJudges.map(judge => judge.name);
+  const judgeStringsForSorting = allJudges.map(judge => judge.name);
+
+  // make a judgeStrings copy because the sorting version is mutable
+  const judgeStringsForJSON  = Object.assign([], judgeStringsForSorting);
+
+  console.log("Judge strings for sorting: " + judgeStringsForSorting);
 
   // handles randomized placement and outputs a judge table and a hacker table for front-end
-  const allPeopleSorted = sortJudgesAndPeople(allTimes, allRooms, allAwardEligibleHackers, judgeStrings);
+  const allPeopleSorted = sortJudgesAndPeople(allTimes, allRooms, allAwardEligibleHackers, judgeStringsForSorting);
 
-  console.log(allPeopleSorted);
-  
-  convertTablesToJson(allPeopleSorted);
+  // parse the judgeOutput and place in JSON files for the front-end to consume
+  convertHackersTablesToJson(allPeopleSorted);
+  convertJudgesTablesToJson(judgeStringsForJSON, allPeopleSorted);
+
   return allPeopleSorted;
 }
 

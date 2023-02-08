@@ -27,6 +27,17 @@ export type JudgeOutput = {
   room: string
 }
 
+export type JudgeOutputLiveSite = {
+  judge: string, 
+  room: string,
+  projects: JudgeOutputProjectsLiveSite[]
+}
+
+export type JudgeOutputProjectsLiveSite = {
+  project: string,
+  time: string
+}
+
 export type FinalOutputTables = {
   judgeOutput: JudgeOutput[];
   hackerOutput: HackerOutput[];
