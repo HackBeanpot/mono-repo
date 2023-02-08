@@ -23,15 +23,16 @@ export interface RowProps {
 }
 
 export interface JudgingTableProps {
-  headers: string[]
+  headers: string[];
   rows: string[][];
 }
 
 export interface UpcomingEvent {
   id: number;
   header: string;
-  time: string;
-  display_start_time: string;
+  startTime: string;
+  endTime: string;
+  displayStartTime: string;
   body: string;
 }
 
