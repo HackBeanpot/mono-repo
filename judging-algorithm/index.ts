@@ -1,6 +1,7 @@
 import { FinalOutputTables, HackerTeam, Judge, Room } from "./types";
 import { sortJudgesAndPeople } from "./formSchedule";
 import { parseHackerTeamCSV, parseJudgeCSV, parseRoomsCSV } from "./parser";
+import { convertTablesToJson } from "./formJsonOutput";
 
 // hardcode based on hackathon needs
 const allTimes: string[] = ['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45'];
@@ -27,10 +28,8 @@ function main(): FinalOutputTables {
 
   console.log(allPeopleSorted);
   
+  convertTablesToJson(allPeopleSorted);
   return allPeopleSorted;
 }
 
 main()
-
-// team 31, 28, 25, 21, 18, 15, 12, 5, 
-// 

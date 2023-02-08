@@ -42,7 +42,7 @@ export function sortJudgesAndPeople(
         } else {
           roomsToJudgeOutputs.set(room, [newJudge]);
         }
-       // console.log('judges Table')
+        console.log('judges Table')
        // console.log(judgesTable)
       }
     }
