@@ -19,7 +19,7 @@ const resources: ResourceBoxProps[] = [
   },
   {
     label: 'Hacker Guide',
-    link: '#'
+    link: 'https://drive.google.com/file/d/1FOmiCwMnxFlNil_SoRdNoAOujGcWwrtq/view?usp=sharing'
   }
 ];
 
