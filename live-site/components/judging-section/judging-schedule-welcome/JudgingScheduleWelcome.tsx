@@ -7,15 +7,29 @@ import {
   StyledJudgingScheduleSection,
   StyledWelcomePerson
 } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
-import { JudgingScheduleWelcomeProps } from '../../../lib/types';
+import { HackerEntryType, JudgeEntryType, JudgingScheduleWelcomeProps } from '../../../lib/types';
 import JudgingScheduleTable from '../judging-schedule-table/JudgingScheduleTable';
 import judgesList from '../../../../judging-algorithm/judges.json';
 import hackersList from '../../../../judging-algorithm/judges.json';
 
-// abstract this for both hackers and judges
-function getColumnHeaders({object}, tableType: string): string[] {
-  return ['hi']
+function getJudge() {
+
 }
+
+
+// abstract this for both hackers and judges
+function getColumnHeaders(entryObject: JudgeEntryType | HackerEntryType, tableType: string): string[] {
+  const tableHeaders = [];
+  const rows = [[]];
+
+  for (const key of Object.keys(entryObject)) {
+    if (type of entryObject[key] != "string") {
+
+    }
+
+  }
+}
+
 function getRows(): string[][] {
   
 }
@@ -23,7 +37,7 @@ function getRows(): string[][] {
 const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
   schedulePersonType
 }) => {
-  
+  console.log(judgesList);
   const personOptions = ['Select your name', ...judgesList.map((obj) => (obj["judge"]))]; // inside judges.json => only do the keys
   const [personSelected, setPersonSelected] =
     useState<string>('Select your name');

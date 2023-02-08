@@ -23,6 +23,13 @@
     "strictPropertyInitialization": true, 
     "resolveJsonModule": true,
   },
+  "include": [
+    "main-site", 
+    "live-site", 
+    "shared-ui", 
+    "judging-algorithm", 
+    "*.json"
+  ],
   "exclude": [
     "node_modules",
     "public",

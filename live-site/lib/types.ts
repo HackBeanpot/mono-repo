@@ -10,6 +10,24 @@ export interface ResourceBoxProps {
   link: string;
 }
 
+export interface JudgeEntryType {
+  "judge": string;
+  "room": string;
+  "projects": ProjectEntryType[];
+}
+
+export interface ProjectEntryType {
+  "project": string, 
+  "time": string
+}
+
+export interface HackerEntryType {
+  "project": string, 
+  "time": string, 
+  "judges": string[], 
+  "room": string
+}
+
 export interface JudgingScheduleWelcomeProps {
   schedulePersonType: string;
 }
