@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { fonts, H3 } from '../../../shared-ui/style/typography';
+import { fonts, H3, P } from '../../../shared-ui/style/typography';
 
 const StyledSectionContainer = styled.div`
   margin: 12em 0;
@@ -117,10 +117,15 @@ const StyledBody = styled.div`
   }
 `;
 
-const StyledHappeningNow = styled.p`
+const StyledHappeningNow = styled(P)`
   position: absolute;
+  color: ${colors.BUTTON_GREEN};
   right: 1em;
-  bottom: 0;
+  bottom: 0.8em;
+  font-weight: bold;
+  @media ${max.tabletSm} {
+    display: none;
+  }
 `;
 
 export {

@@ -62,6 +62,7 @@ const ComingUpSection: React.FC = () => {
               <StyledHeader>{event.header}</StyledHeader>
               <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
+              <StyledHappeningNow>happening now!</StyledHappeningNow>
             </StyledTextContainer>
           </StyledEvent>
         </StyledOneEventContainer>
@@ -78,7 +79,7 @@ const ComingUpSection: React.FC = () => {
               <StyledHeader>{event.header}</StyledHeader>
               <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
-              <StyledHappeningNow>Happening now!</StyledHappeningNow>
+              <StyledHappeningNow>happening now!</StyledHappeningNow>
             </StyledTextContainer>
           </StyledEvent>
         ))}
