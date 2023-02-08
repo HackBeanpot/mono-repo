@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { P, H3 } from '../../../shared-ui/style/typography';
-import { StyledWelcomeTextProps } from '../../lib/types';
 
 const StyledWelcomeSectionContainer = styled.div`
   display: flex;
@@ -43,15 +42,13 @@ const StyledWelcomeSectionContent = styled.div`
   }
 `;
 
-const StyledWelcomeHeader = styled(H3)<StyledWelcomeTextProps>`
+const StyledWelcomeHeader = styled(H3)`
   margin-bottom: 1em;
-  color: ${(StyledWelcomeTextProps): string =>
-    StyledWelcomeTextProps.useWhiteText ? colors.WHITE : colors.BLACK};
+  color: ${colors.BLACK};
 `;
 
-const StyledWelcomeText = styled(P)<StyledWelcomeTextProps>`
-  color: ${(StyledWelcomeTextProps): string =>
-    StyledWelcomeTextProps.useWhiteText ? colors.WHITE : colors.TEXT_BROWN};
+const StyledWelcomeText = styled(P)`
+  color: ${colors.TEXT_BROWN};
 `;
 
 const StyledButtonContainer = styled.div`

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import useMatchMedia from 'react-use-match-media';
-import { min } from '../../../shared-ui/lib/responsive';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import TeamRace from './team-race/TeamRace';
 import {
@@ -15,15 +13,11 @@ import {
   onePointCodes,
   twoPointCodes
 } from '../../lib/data';
-import { RaffleEntry, TeamProps, WelcomeSectionProps } from '../../lib/types';
+import { RaffleEntry, TeamProps } from '../../lib/types';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 
-const WelcomeSection: React.FC<WelcomeSectionProps> = ({
-  isDay
-}: WelcomeSectionProps) => {
+const WelcomeSection: React.FC = () => {
   const { data } = useAirtableApi('Raffle', 'raffle', true);
-
-  const isDesktop = useMatchMedia(min.desktop);
 
   const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
   const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
@@ -69,10 +63,8 @@ const WelcomeSection: React.FC<WelcomeSectionProps> = ({
   return (
     <StyledWelcomeSectionContainer>
       <StyledWelcomeSectionContent>
-        <StyledWelcomeHeader useWhiteText={isDesktop && !isDay}>
-          Welcome to Hackbeanpot 2023!
-        </StyledWelcomeHeader>
-        <StyledWelcomeText useWhiteText={isDesktop && !isDay}>
+        <StyledWelcomeHeader>Welcome to Hackbeanpot 2023!</StyledWelcomeHeader>
+        <StyledWelcomeText>
           {`At HackBeanpot 2023, we aim to create a welcoming environment of
           ‘explorers’ focused on creativity, learning, and community
           connection.\n\nHackers can expect to put their resourcefulness to the
