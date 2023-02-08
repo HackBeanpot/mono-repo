@@ -21,7 +21,6 @@ export async function convertJudgesTablesToJson(
 /* Massage JudgeOutput structure data in to the live site structure */
 function judgeDataLiveSite(judgeStrings: string[], judgeOutputs: JudgeOutput[]): JudgeOutputLiveSite[] {
     let judges: JudgeOutputLiveSite[] = [];
-    console.log("Judge strings for JSON: " + judgeStrings);
     for (var judge of judgeStrings) {
         const curLiveSiteOutput: JudgeOutputLiveSite = {room: '', judge: judge, projects: []};
         const projects = judgeOutputs.filter(judgeOutput => judgeOutput.judge === judge);

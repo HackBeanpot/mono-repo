@@ -26,8 +26,6 @@ function main(): FinalOutputTables {
   // make a judgeStrings copy because the sorting version is mutable
   const judgeStringsForJSON  = Object.assign([], judgeStringsForSorting);
 
-  console.log("Judge strings for sorting: " + judgeStringsForSorting);
-
   // handles randomized placement and outputs a judge table and a hacker table for front-end
   const allPeopleSorted = sortJudgesAndPeople(allTimes, allRooms, allAwardEligibleHackers, judgeStringsForSorting);
 

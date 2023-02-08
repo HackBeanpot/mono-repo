@@ -91,8 +91,6 @@ function assignTeamToTime(
     judgeOutput.devPostLink = hackerTeam.devpostLink;
   }
   const judgeNames: string[] = judgesInRoom.map(judgeOutput => judgeOutput.judge);
- // console.log('judgeNames')
- // console.log(judgeNames)
   const hackerOutput: HackerOutput = {
     project: hackerTeam.name,
     time: timeSlot,
