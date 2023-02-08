@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { UpcomingEvent } from '../../lib/types';
 import NoUpcoming from './no-upcoming/NoUpcoming';
 import {
@@ -10,32 +10,56 @@ import {
   StyledTextContainer,
   StyledSectionHeader,
   StyledEvents,
-  StyledOneEventContainer
+  StyledOneEventContainer,
+  StyledLoadingText
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
+import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const ComingUpSection: React.FC = () => {
-  const event: UpcomingEvent = {
-    id: 0,
-    header: 'Register your team',
-    time: 'Complete by 12:00am EST',
-    body: 'hello hello hello hello hello hello hello hello hi hi hello hello hello hi hi'
-  };
-  const events: UpcomingEvent[] = [event, event, event];
+  const { data, isLoading } = useAirtableApi('Relevant', 'relevant', true);
+  const [comingUpEvents, setComingUpEvents] = useState<UpcomingEvent[]>([]);
   const isDesktop = useMatchMedia(min.tablet);
-  if (events.length === 0) {
+  let events: UpcomingEvent[] = [];
+  useEffect(() => {
+    let count = 0;
+    events = data.map((event) => {
+      count = count + 1;
+      return {
+        id: count,
+        header: event.fields.title,
+        time: event.fields.start_time,
+        display_start_time: event.fields.display_start_time,
+        body: event.fields.notes
+      };
+    });
+
+    events = events.filter((e) => Date.now() < Date.parse(e.time));
+    events.sort((event1: UpcomingEvent, event2: UpcomingEvent) =>
+      event1.time > event2.time ? 1 : -1
+    );
+    events = events.slice(0, 3);
+    setComingUpEvents(events);
+  }, [data, setComingUpEvents]);
+
+  if (isLoading) {
+    return <StyledLoadingText>Loading...</StyledLoadingText>;
+  }
+
+  if (comingUpEvents.length === 0) {
     return <NoUpcoming />;
   }
-  if (events.length === 1 && !isDesktop) {
+  if (comingUpEvents.length === 1 && !isDesktop) {
+    const event: UpcomingEvent = comingUpEvents[0];
     return (
       <StyledSectionContainer>
-        <StyledSectionHeader>Coming up...</StyledSectionHeader>
+        <StyledSectionHeader>{'Coming up...'}</StyledSectionHeader>
         <StyledOneEventContainer>
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.time}</StyledTime>
+              <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
             </StyledTextContainer>
           </StyledEvent>
@@ -47,11 +71,11 @@ const ComingUpSection: React.FC = () => {
     <StyledSectionContainer>
       <StyledSectionHeader>Coming up...</StyledSectionHeader>
       <StyledEvents>
-        {events.map((event: UpcomingEvent) => (
+        {comingUpEvents.map((event: UpcomingEvent) => (
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.time}</StyledTime>
+              <StyledTime>{event.display_start_time}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
             </StyledTextContainer>
           </StyledEvent>

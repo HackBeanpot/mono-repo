@@ -10,12 +10,15 @@ interface AirtableData {
 
 export const useAirtableApi = (
   baseName: string,
-  tableName: string
+  tableName: string,
+  isDev = false
 ): AirtableData => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    const url = `${BASEURL}/${baseName}/${tableName}`;
+    const url = `${BASEURL}/${baseName}/${tableName}${
+      isDev ? '?isDev=true' : ''
+    }`;
     try {
       fetch(url)
         .then((data) => {
@@ -64,6 +67,5 @@ export const useAirtableApiWithPagination = (
       setIsLoading(false);
     }
   }, [baseName, tableName]);
-
   return { data, isLoading };
 };

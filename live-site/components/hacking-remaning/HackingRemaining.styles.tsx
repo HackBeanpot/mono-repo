@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { P } from '../../../shared-ui/lib/typography';
+import { P } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 
 const StyledHackingRemainingContainer = styled.div`

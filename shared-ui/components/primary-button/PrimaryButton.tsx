@@ -6,12 +6,13 @@ import { buttonAnimations } from './PrimaryButton.animations';
 const PrimaryButton: React.FC<ButtonProps> = ({
   btnText,
   btnLink,
-  newTab = false
+  newTab = false,
+  isSmallPrimary = false
 }) => {
   const [isClicked, setIsClicked] = useState(false);
   if (!btnLink) {
     const ctaText = isClicked ? 'Copied to clipboard!' : btnText;
-    const onClick = async (): void => {
+    const onClick = async (): Promise<void> => {
       setIsClicked(true);
       // second argument is in milliseconds, so 3 * 1000 = 3 seconds
       // after 3 seconds, setTimeout will call the function you provide
@@ -26,7 +27,9 @@ const PrimaryButton: React.FC<ButtonProps> = ({
     };
     return (
       <a onClick={onClick}>
-        <StyledPrimaryButton>{ctaText}</StyledPrimaryButton>
+        <StyledPrimaryButton $isSmallPrimary={isSmallPrimary}>
+          {ctaText}
+        </StyledPrimaryButton>
       </a>
     );
   }
@@ -37,6 +40,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
         whileHover="hover"
         whileTap="tap"
         variants={buttonAnimations}
+        $isSmallPrimary={isSmallPrimary}
       >
         {btnText}
       </StyledPrimaryButton>

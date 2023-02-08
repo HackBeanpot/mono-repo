@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { min } from '../../lib/responsive';
+import { max, min } from '../../lib/responsive';
 import { StyledHeaderProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
 
 const StyledHeader = styled.div<StyledHeaderProps>`
    {
-    height: ${(props): string => (props.isOpen ? '40em' : '4.8em')};
+    height: ${(props): string => (props.isOpen ? '45em' : '4.8em')};
     background-color: ${(props): string =>
       props.isDay ? colors.HEADER_FOOTER_BLUE : colors.NIGHT_HEADER_COLOR};
     width: 100%;
@@ -42,6 +42,10 @@ const StyledTabsContainer = styled.div`
       float: right;
       padding-top: 0;
       text-align: left;
+    }
+    @media ${min.tablet} and ${max.tabletLg} {
+      font-size: 0.8em;
+      padding-top: 0.9em;
     }
     @media ${min.tabletLg} {
       padding-right: 3em;

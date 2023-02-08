@@ -8,7 +8,7 @@ import { H1, H3 } from '../../../shared-ui/style/typography';
 const StyledHackathonText = styled(H3)`
    {
     color: ${colors.WHITE};
-    padding-bottom: 1em;
+    padding-bottom: 0.2em;
     @media ${max.tablet} {
       display: flex;
       justify-content: center;
@@ -40,13 +40,12 @@ const StyledStar = styled(motion.img)`
 const StyledThemeText = styled(H1)`
    {
     color: ${colors.WHITE};
-    padding-bottom: 0.5em;
+    padding-bottom: 0.1em;
     @media ${max.tablet} {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 1em;
-      padding-top: 0.2em;
+      padding: 0.2em, 0;
     }
   }
 `;

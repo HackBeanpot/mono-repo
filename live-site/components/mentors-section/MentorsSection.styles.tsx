@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
-import { H3, StyledDropdown } from '../../../shared-ui/style/typography';
+import { H3 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts } from '../../../shared-ui/style/typography';
+import { StyledDropdown } from '../../styled-components/SecondarySelect.styles';
 import { StyledCactusButtonsProps } from '../../lib/types';
 
 const StyledMentorsSection = styled.div`
@@ -19,7 +20,7 @@ const StyledMentorsFilterSection = styled.div`
   @media ${max.tablet} {
     padding-left: 2.4em;
   }
-`
+`;
 
 const StyledMentorsHeader = styled(H3)`
   margin-bottom: 1em;
@@ -73,7 +74,7 @@ const StyledMentorsListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 2em 0em;
+  padding: 2em 0;
   justify-content: center;
   max-width: 95%;
   margin: auto;
@@ -85,43 +86,49 @@ const StyledMentorsListContainer = styled.div`
   @media ${max.tabletSm} {
     max-width: 25em;
   }
-`
+`;
 
 const StyledMentorContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 0.75em;
+  margin: 0.75em 0;
+  width: 7.75em;
+
+  cursor: pointer;
 
   @media ${min.tabletSm} {
-    padding: 1.25em;
+    margin: 1.25em 0;
+    width: 9em;
   }
 
-  @media ${min.desktop} {
-    padding: 1.75em 3.5em;
+  @media ${min.tabletLg} {
+    margin: 1.75em 0;
+    width: 12em;
   }
-`
+`;
 
 const StyledMentorName = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.25em;
+  text-align: center;
 
-  @media ${min.desktop} {
+  @media ${min.tabletLg} {
     font-size: 1.7em;
   }
-`
+`;
 
 const StyledMentorCompany = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 0.75em;
 
-  @media ${min.desktop} {
+  @media ${min.tabletLg} {
     font-size: 1em;
   }
-`
+`;
 
 const StyledMentorPosition = styled.div`
   color: ${colors.TEXT_BROWN};
@@ -132,7 +139,7 @@ const StyledMentorPosition = styled.div`
   @media ${min.desktop} {
     font-size: 1em;
   }
-`
+`;
 
 const StyledMentorsPaginationContainer = styled.div`
   display: flex;
@@ -141,7 +148,15 @@ const StyledMentorsPaginationContainer = styled.div`
   @media ${min.desktop} {
     max-width: 95%;
   }
-`
+`;
+
+const StyledNoMentorsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75em;
+`;
+
 const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
   width: ${(StyledCactusButtonsProps): string =>
     StyledCactusButtonsProps.isToggled ? '3em' : '2em'};
@@ -164,5 +179,6 @@ export {
   StyledMentorCompany,
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
+  StyledNoMentorsContainer,
   StyledCactusButtons
 };

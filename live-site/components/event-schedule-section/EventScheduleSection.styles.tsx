@@ -33,14 +33,19 @@ const StyledEventScheduleSubText = styled(P)`
   @media ${max.tablet} {
     text-align: left;
     font-size: 1em;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    margin: 0 1.5em;
   }
 `;
 
-const StyledBoldSubText = styled.p`
+const StyledBoldSubText = styled(P)`
+  color: ${colors.TEXT_BROWN};
   font-weight: bold;
   margin: 0;
+  @media ${max.tablet} {
+    text-align: left;
+    font-size: 1em;
+    margin: 0 1.5em;
+  }
 `;
 
 const ButtonContainer = styled.div`

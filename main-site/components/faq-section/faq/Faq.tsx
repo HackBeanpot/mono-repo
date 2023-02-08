@@ -9,6 +9,7 @@ const Faq: React.FC = () => {
     <StyledFaqContainer>
       {FaqSectionData.map((data) => (
         <FaqItem
+          key={`faq-${data.id}`}
           id={data.id}
           question={data.question}
           answer={data.answer}
