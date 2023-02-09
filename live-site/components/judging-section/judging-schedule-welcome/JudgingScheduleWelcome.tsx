@@ -5,73 +5,41 @@ import {
   StyledJudgesDropdownContainer,
   StyledJudgesDropdownWrapper,
   StyledJudgingScheduleSection,
-  StyledWelcomePerson
+  StyledWelcomePerson,
+  StyledP
 } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
-import { HackerEntryType, JudgeEntryType, JudgingScheduleWelcomeProps } from '../../../lib/types';
+import { HackerEntryType, JudgeEntryType, JudgeOutputType, JudgingScheduleWelcomeProps } from '../../../lib/types';
 import JudgingScheduleTable from '../judging-schedule-table/JudgingScheduleTable';
 import judgesList from '../../../../judging-algorithm/judges.json';
 import hackersList from '../../../../judging-algorithm/judges.json';
 
-function getJudge() {
-
-}
 
 
-// abstract this for both hackers and judges
-function getColumnHeaders(listOfEntries: JudgeEntryType[] | HackerEntryType[], tableType: string): string[] {
-  const tableHeaders = [];
-  const rows = [[]];
 
-  for (let i = 0; i < listOfEntries.length; i++) {
-    const entry = listOfEntries[i];
-    const curRow = []
-    let deletecurRow = false;
-    for (const key of Object.keys(entry)) {
-      if (typeof entry[key] != "string") { // value is an array
-        if (typeof entry[key][0] == "string") { 
-          // not sure what's supposed to happen for hackers
+function getRowsAndRoomForJudge(curJudge: string, headers: string[]): JudgeOutputType {
+  const judgeData = judgesList.filter((judge: JudgeEntryType) => judge.judge === curJudge)
+  const rows = [];
 
-
-        } else { // first value of array is an object
-          const subList = entry[key];
-          for (let j = 0; j < subList.length; j++) {
-            const curNewRow = [...curRow];
-            for (const subKey of subList[j]) {
-              if (j==0) {
-                tableHeaders.push(subKey);
-              }
-              curNewRow.push(subList[j][subKey]);
-              
-            }
-            rows.push(curNewRow);
-            
-          }
-          curRow = []; // only works if there's nothing after the objects
-        }
-  
-  
-      } else {
-        if (i==0) {
-          tableHeaders.push(key);
-        }
-        curRow.push(entry[key]);
-      }
-  
+  for (const project of judgeData[0].projects) {
+    const curRow = [];
+    for (const key of headers) {
+      curRow.push(project[key]);
     }
-
+    rows.push(curRow);
   }
-  
-}
-
-function getRows(): string[][] {
-  
+  return {rows: rows, room: judgeData[0].room};
 }
 
 const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
   schedulePersonType
 }) => {
-  console.log(judgesList);
+
   const personOptions = ['Select your name', ...judgesList.map((obj) => (obj["judge"]))]; // inside judges.json => only do the keys
+  const headers = ["time", "project"];
+  const [curRows, setCurRows] =
+  useState<string[][]>([[]]);
+  const [room, setRoom] =
+  useState<string>('');
   const [personSelected, setPersonSelected] =
     useState<string>('Select your name');
 
@@ -89,6 +57,8 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
             id="position-filter"
             onChange={(e): void => {
               setPersonSelected(e.target.value);
+              setCurRows(getRowsAndRoomForJudge(e.target.value, headers).rows)
+              setRoom(getRowsAndRoomForJudge(e.target.value, headers).room)
             }}
           >
             {/* this -- above-- is a select */}
@@ -100,7 +70,8 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
             ))}
           </StyledJudgesDropdownWrapper>
         </StyledJudgesDropdownContainer>
-        {personSelected != 'Select your name' && <JudgingScheduleTable headers={judgeList} rows={[['lol', 'lol', 'lol', 'lol']]}/>}
+        {personSelected != 'Select your name' && <StyledP>{room}</StyledP> }
+        {personSelected != 'Select your name' && <JudgingScheduleTable headers={headers} rows={curRows}/>}
       </StyledJudgingScheduleSection>
     </div>
   );

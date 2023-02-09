@@ -4,6 +4,7 @@ import { colors } from '../../../../shared-ui/style/colors';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { StyledDropdown } from '../../../styled-components/SecondarySelect.styles';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
+import { P } from '../../../../shared-ui/style/typography';
 
 const StyledBackButtonContainer = styled.div`
   padding-top: 7em;
@@ -30,6 +31,11 @@ const StyledJudgesDropdownContainer = styled.div`
   text-align: center;
 `;
 
+const StyledP = styled(P)`
+  text-align: center;
+  color: ${colors.BLACK};
+`;
+
 const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
   width: 19em;
   @media ${max.tabletSm} {
@@ -42,6 +48,7 @@ const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
 
 export {
   StyledBackButtonContainer,
+  StyledP,
   StyledBackButton,
   StyledJudgingScheduleSection,
   StyledWelcomePerson,
