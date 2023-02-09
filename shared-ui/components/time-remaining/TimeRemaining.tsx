@@ -8,9 +8,12 @@ import {
   StyledTimerContainer,
   StyledTimeRemainingLabel
 } from './TimeRemaining.styles';
-import { TimeRemainingInfo } from '../../../shared-ui/lib/types';
+import {
+  TimeRemainingInfo,
+  TimeRemainingProps
+} from '../../../shared-ui/lib/types';
 
-const TimeRemaining: React.FC = () => {
+const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -24,8 +27,6 @@ const TimeRemaining: React.FC = () => {
   ];
 
   useEffect(() => {
-    const target = new Date('02/09/2023 23:59:59');
-
     const interval = setInterval(() => {
       const now = new Date();
       const difference = target.getTime() - now.getTime();

@@ -13,6 +13,10 @@ export interface ButtonProps {
   isClickable?: boolean;
 }
 
+export interface TimeRemainingProps {
+  target: Date;
+}
+
 export interface DropdownProps {
   options: Array<string>;
 }
