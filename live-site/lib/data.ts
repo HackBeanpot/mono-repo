@@ -51,7 +51,8 @@ const onePointCodes = [
   'REFRESHER',
   'GAMINGINTHEDUNES',
   'COOLBEANS',
-  'BEENTHEREDUNETHAT'
+  'BEENTHEREDUNETHAT',
+  'STRETCHTHESC'
 ];
 
 const twoPointCodes = ['ECREWINTRO'];
