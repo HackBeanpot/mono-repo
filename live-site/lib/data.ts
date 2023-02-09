@@ -34,6 +34,7 @@ const TeamInfo: TeamProps[] = [
 const onePointCodes = [
   'FIGMAAZING',
   'GITREADYTOPARTY',
+  'WEBDEVISFUN',
   'SCIENCEOFDATA',
   'GIVEMEAJOB',
   'COREPARTY',
@@ -44,11 +45,13 @@ const onePointCodes = [
   'ITSBETTERTOGETHER',
   'BIGBRAINTIME',
   'RISEANDSHINE',
+  'BRAINSHOPS',
   'SUCCULENT',
   'DESERTDAWN',
   'REFRESHER',
   'GAMINGINTHEDUNES',
-  'COOLBEANS'
+  'COOLBEANS',
+  'BEENTHEREDUNETHAT'
 ];
 
 const twoPointCodes = ['ECREWINTRO'];
@@ -103,7 +106,6 @@ const eventItemInfo: EventItem[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   }
 ];
-
 
 export {
   liveSiteTabInfo,
