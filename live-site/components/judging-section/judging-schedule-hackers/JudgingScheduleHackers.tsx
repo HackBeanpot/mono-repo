@@ -26,13 +26,12 @@ const JudgingScheduleHackers: React.FC = () => {
     const hackerObj = hackerList.filter(
       (hackerObj: HackerEntryType) => hackerObj.project === projectName
     );
-    hackerObj[0].judges = commaSeparatedJudges(hackerObj[0].judges)
     return hackerObj[0];
   }
 
   function commaSeparatedJudges(judgeList: string[]): string[] {
     for (let i = 0; i < judgeList.length; i++) {
-      if (i != judgeList.length-1) {
+      if (i != judgeList.length-1 && !judgeList[i].includes(',')) {
         judgeList[i] = judgeList[i].concat(', ');
       }
     }
@@ -64,7 +63,7 @@ const JudgingScheduleHackers: React.FC = () => {
         {projectSelected != 'Select your project' && 
         <>
         <StyledP>{hackerSelected.time}</StyledP>
-        <StyledP>{hackerSelected.judges}</StyledP>
+        <StyledP>{commaSeparatedJudges(hackerSelected.judges)}</StyledP>
         <StyledP>{hackerSelected.room}</StyledP>
         </>}
       </StyledJudgingScheduleSection>
