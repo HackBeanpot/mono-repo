@@ -17,19 +17,14 @@ const EventScheduleSection: React.FC = () => {
     <EventScheduleSectionContainer>
       <StyledEventScheduleHeader>Event Schedule</StyledEventScheduleHeader>
       <EventScheduleTextButtonContainer>
-        <div>
-          <StyledEventScheduleSubText>
-            Dates and times are displayed in your local timezone. Schedule in
-            EST can be found here.
-            <br />
-            The password for all Zoom meetings can be found pinned in the
-            #announcements Slack channel.
-            <br />
-          </StyledEventScheduleSubText>
+        <StyledEventScheduleSubText>
+          Dates and times are displayed in your local timezone. Schedule in EST
+          can be found here.
+          <br />
           <StyledBoldSubText>
             Please be sure to attend all events labeled "Everyone".
           </StyledBoldSubText>
-        </div>
+        </StyledEventScheduleSubText>
         <ButtonContainer>
           <PrimaryButton
             btnText="Add to Calendar +"

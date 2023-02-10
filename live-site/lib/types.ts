@@ -1,4 +1,4 @@
-import { EventMockData } from '../components/event-schedule-section/EventScheduleMockData';
+import { EventDate } from '../components/event-schedule-section/EventScheduleMockData';
 
 export interface TabInfo {
   name: string;
@@ -45,18 +45,18 @@ export interface DesktopMultiEventsProps {
 }
 
 export interface EventScheduleTabProps {
-  tabs: EventMockData[];
+  tabs: EventDate[];
 }
 
 export interface StyledTabTitleWrapperProps {
   isSelected: boolean;
 }
 export interface EventItemTagProps {
-  tagType: string;
+  tag: string;
 }
 
 export interface StyledTagAndTagTextProps {
-  tagType: string;
+  tag: string;
 }
 
 export interface styledArrowProps {
@@ -74,12 +74,13 @@ export enum Tag {
 }
 export interface EventItem {
   id: number;
-  time: string;
+  time: Date;
   eventType: string;
   eventName: string;
   eventLocation: string;
   description: string;
-  tags: Tag[];
+  tags: string;
+  difficulty?: string;
 }
 
 export interface EventItemProps {
