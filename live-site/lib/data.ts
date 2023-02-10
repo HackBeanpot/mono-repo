@@ -11,15 +11,15 @@ const liveSiteTabInfo: TabInfo[] = [
 const resources: ResourceBoxProps[] = [
   {
     label: 'Project Guide',
-    link: '#'
+    link: '  https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing'
   },
   {
     label: 'Beginner Resource Guide',
-    link: '#'
+    link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/edit?usp=sharing'
   },
   {
     label: 'Hacker Guide',
-    link: '#'
+    link: 'https://drive.google.com/file/d/1FOmiCwMnxFlNil_SoRdNoAOujGcWwrtq/view?usp=sharing'
   }
 ];
 

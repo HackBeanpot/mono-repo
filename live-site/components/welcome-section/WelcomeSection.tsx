@@ -63,7 +63,7 @@ const WelcomeSection: React.FC = () => {
   return (
     <StyledWelcomeSectionContainer>
       <StyledWelcomeSectionContent>
-        <StyledWelcomeHeader>Welcome to Hackbeanpot 2023!</StyledWelcomeHeader>
+        <StyledWelcomeHeader>Welcome to HackBeanpot 2023!</StyledWelcomeHeader>
         <StyledWelcomeText>
           {`At HackBeanpot 2023, we aim to create a welcoming environment of
           ‘explorers’ focused on creativity, learning, and community
