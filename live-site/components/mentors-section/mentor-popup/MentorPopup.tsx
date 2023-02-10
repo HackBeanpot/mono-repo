@@ -21,7 +21,7 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
   }
   const notMobile = useMatchMedia(max.tabletLg);
 
-  let mentorImageSize = 420;
+  let mentorImageSize = 330;
   if(notMobile) {
     mentorImageSize = 256;
   }
