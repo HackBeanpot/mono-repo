@@ -11,11 +11,13 @@ import {
   StyledSectionHeader,
   StyledEvents,
   StyledOneEventContainer,
-  StyledLoadingText
+  StyledLoadingText,
+  StyledHappeningNow
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
+import { isHappeningNow } from '../../lib/utils';
 
 const ComingUpSection: React.FC = () => {
   const { data, isLoading } = useAirtableApi('Relevant', 'relevant', true);
@@ -29,15 +31,15 @@ const ComingUpSection: React.FC = () => {
       return {
         id: count,
         header: event.fields.title,
-        time: event.fields.start_time,
-        display_start_time: event.fields.display_start_time,
+        startTime: event.fields.start_time,
+        endTime: event.fields.end_time,
+        displayStartTime: event.fields.display_start_time,
         body: event.fields.notes
       };
     });
-
-    events = events.filter((e) => Date.now() < Date.parse(e.time));
+    events = events.filter((e) => Date.now() < Date.parse(e.endTime));
     events.sort((event1: UpcomingEvent, event2: UpcomingEvent) =>
-      event1.time > event2.time ? 1 : -1
+      event1.startTime > event2.startTime ? 1 : -1
     );
     events = events.slice(0, 3);
     setComingUpEvents(events);
@@ -59,8 +61,11 @@ const ComingUpSection: React.FC = () => {
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.display_start_time}</StyledTime>
+              <StyledTime>{event.displayStartTime}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
+              {isHappeningNow(event.startTime, event.endTime) && (
+                <StyledHappeningNow>happening now!</StyledHappeningNow>
+              )}
             </StyledTextContainer>
           </StyledEvent>
         </StyledOneEventContainer>
@@ -75,8 +80,11 @@ const ComingUpSection: React.FC = () => {
           <StyledEvent key={event.id}>
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.display_start_time}</StyledTime>
+              <StyledTime>{event.displayStartTime}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
+              {isHappeningNow(event.startTime, event.endTime) && (
+                <StyledHappeningNow>happening now!</StyledHappeningNow>
+              )}
             </StyledTextContainer>
           </StyledEvent>
         ))}

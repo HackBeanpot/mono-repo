@@ -16,6 +16,7 @@ import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
 import WelcomeSection from '../../components/welcome-section/WelcomeSection';
 import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
+import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
@@ -58,10 +59,11 @@ const IndexPage: React.FC = () => {
       <ComingUpSection />
       <WelcomeSection />
       <EventScheduleSection />
-      <ResourcesSection />
       <MentorsSection />
+      <ResourcesSection />
       <MeetTheTeamSection />
       <FeedbackJoinCoreSection />
+      <TimeRemaining target={new Date('02/12/2023 14:00:00')} />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );

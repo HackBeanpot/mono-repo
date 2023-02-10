@@ -52,3 +52,7 @@ export interface PastProjectData {
   description: string;
   btnLink: string;
 }
+
+export interface StyledSponsorsImageProps {
+  level: string;
+}
