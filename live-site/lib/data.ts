@@ -11,7 +11,7 @@ const liveSiteTabInfo: TabInfo[] = [
 const resources: ResourceBoxProps[] = [
   {
     label: 'Project Guide',
-    link: 'https://docs.google.com/document/d/1xhgMtE5XmauOgewQ4M9_rqQd4JQUZQ1TgBW2z-pZfa8/edit?usp=sharing'
+    link: '  https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing'
   },
   {
     label: 'Beginner Resource Guide',
