@@ -7,9 +7,9 @@ import {
   StyledJudgesDropdownContainer,
   StyledJudgesDropdownWrapper,
   StyledJudgingScheduleSection,
-  StyledP,
   StyledWelcomePerson
 } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
+import { StyledHackerP, StyledInfoSection } from './JudgingScheduleHackers.styles';
 
 const JudgingScheduleHackers: React.FC = () => {
   const projectOptions = [
@@ -60,12 +60,12 @@ const JudgingScheduleHackers: React.FC = () => {
             ))}
           </StyledJudgesDropdownWrapper>
         </StyledJudgesDropdownContainer>
-        {projectSelected != 'Select your project' && 
-        <>
-        <StyledP>{hackerSelected.time}</StyledP>
-        <StyledP>{commaSeparatedJudges(hackerSelected.judges)}</StyledP>
-        <StyledP>{hackerSelected.room}</StyledP>
-        </>}
+        {projectSelected !== 'Select your project' && 
+        <StyledInfoSection>
+        <StyledHackerP>Time: {hackerSelected.time}</StyledHackerP>
+        <StyledHackerP>Judges: {commaSeparatedJudges(hackerSelected.judges)}</StyledHackerP>
+        <StyledHackerP>Room: {hackerSelected.room}</StyledHackerP>
+        </StyledInfoSection>}
       </StyledJudgingScheduleSection>
     </div>
   );

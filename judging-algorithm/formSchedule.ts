@@ -76,25 +76,8 @@ export function sortJudgesAndPeople(
 
   return finalOutput;
 }
-/*
-const example =   {
-  room: 'hidden figures',
-  judge: 'lisa',
-  projects: [{
-    project: '',
-    devPostLink: '',
-    inPersonDemo: true,
-    time: ''
-  },
-  {
-    project: '',
-    devPostLink: '',
-    inPersonDemo: true,
-    time: ''
-  },
-]
-}
-*/
+
+
 // returns one hackertable entry
 // mutates every single JudgeOutput the map maps to
 // return HackerOutput object, mutates the judge passed in

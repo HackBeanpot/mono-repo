@@ -9,12 +9,14 @@ const StyledTable = styled.table`
   border: 0.08em solid ${colors.TEXT_BROWN};
   background-color: ${colors.WHITE};
   border-collapse: collapse;
+ 
 `;
 
 const JudgingTableSection = styled.div`
   justify-content: center;
   display: flex;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
+  padding-top: 1em;
 `;
 
 const Styledtd = styled.td`

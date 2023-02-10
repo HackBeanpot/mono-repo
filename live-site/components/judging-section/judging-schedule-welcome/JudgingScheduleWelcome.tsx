@@ -6,7 +6,7 @@ import {
   StyledJudgesDropdownWrapper,
   StyledJudgingScheduleSection,
   StyledWelcomePerson,
-  StyledP
+  StyledJudgeP
 } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
 import { JudgeEntryType, JudgeOutputType, JudgingScheduleWelcomeProps } from '../../../lib/types';
 import JudgingScheduleTable from '../judging-schedule-table/JudgingScheduleTable';
@@ -65,7 +65,7 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
             ))}
           </StyledJudgesDropdownWrapper>
         </StyledJudgesDropdownContainer>
-        {personSelected != 'Select your name' && <StyledP>{room}</StyledP> }
+        {personSelected != 'Select your name' && <StyledJudgeP>Room: {room}</StyledJudgeP>}
         {personSelected != 'Select your name' && <JudgingScheduleTable headers={headers} rows={curRows}/>}
       </StyledJudgingScheduleSection>
     </div>

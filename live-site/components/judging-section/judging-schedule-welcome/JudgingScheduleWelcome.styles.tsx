@@ -31,9 +31,15 @@ const StyledJudgesDropdownContainer = styled.div`
   text-align: center;
 `;
 
-const StyledP = styled(P)`
+const StyledInfoContainer = styled.div`
+  padding-top: 2em;
+`;
+
+const StyledJudgeP = styled(P)`
   text-align: center;
-  color: ${colors.BLACK};
+  color: ${colors.TEXT_BROWN};
+  font-size: 1.5em;
+  padding-top: 1.7em;
 `;
 
 const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
@@ -48,10 +54,11 @@ const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
 
 export {
   StyledBackButtonContainer,
-  StyledP,
+  StyledJudgeP,
   StyledBackButton,
   StyledJudgingScheduleSection,
   StyledWelcomePerson,
   StyledJudgesDropdownContainer,
-  StyledJudgesDropdownWrapper
+  StyledJudgesDropdownWrapper, 
+  StyledInfoContainer
 };
