@@ -6,7 +6,7 @@ import {
   Room
 } from './types';
 
-// driver code, takes parsed values and creates random assignments
+// driver code, takes parsed values and creates room and time assignments
 // the judges and hacker teams it take in have already been filtered, and rooms have been filtered for capacity
 export function sortJudgesAndPeople(
   allTimes: string[],
@@ -26,7 +26,7 @@ export function sortJudgesAndPeople(
   // filter out rooms with less capacity than judgesPerRoom
   const goodRoomsName: string[] = allJudgingRooms.map(room => room.name)
   // populate keys for roomsToJudge outputs
-  allJudgingRooms.map(room => roomsToJudgeOutputs.set(room.name, []));
+  allJudgingRooms.forEach(room => roomsToJudgeOutputs.set(room.name, []));
   for (const room of goodRoomsName) {
     for (let judgeCount = 0; judgeCount < unassignedJudges.length; judgeCount++) {
       if (unassignedJudges.length > 0) {
@@ -55,8 +55,6 @@ export function sortJudgesAndPeople(
         if (unassignedTeams.length === 0) {
           break;
         }
-        // select a random team to sort to current room
-       // const teamToAssignIdx = Math.floor(Math.random() * unassignedJudges.length + 1);
         const teamToAssign = unassignedTeams.splice(0, 1).at(0)!;
         const hackerOutput: HackerOutput = assignTeamToTime(
           timeSlot,

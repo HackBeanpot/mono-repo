@@ -27,5 +27,3 @@ public
 gatsby-types.d.ts
 
 .env
-
-package-lock.json
