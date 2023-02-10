@@ -4,12 +4,12 @@
       "room": "hidden figures",
       "projects": [
         {
-          "project": "",
-          "time": ""
+          "project": "a",
+          "time": "b"
         },
         {
-          "project": "",
-          "time": ""
+          "project": "c",
+          "time": "d"
         }
       ]
     },
@@ -29,6 +29,4 @@
     }
   ]
 
-  // get all the keys. key in the object => if array, is array[0] a string?
-  // keep grabbing until no keys have array values
   

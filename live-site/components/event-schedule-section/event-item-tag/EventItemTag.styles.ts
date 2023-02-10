@@ -46,7 +46,6 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   color: ${(StyledTagAndTagTextProps): string => {
     return tagColor(StyledTagAndTagTextProps.tagType);
   }};
-  }};
   text-align: center;
   margin-top: auto;
   padding-left: 1em;
@@ -75,7 +74,7 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   @media (max-width: 460px) {
     font-size: 0.9em;
     padding-top: 0.4em;
-  };
+  } ;
 `;
 
 export { StyledTag, StyledTagText };

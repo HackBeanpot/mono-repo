@@ -7,10 +7,22 @@ const StyledWelcomeSectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 1.3em;
-  @media ${max.tablet} {
+  margin-left 1.3em;
+  margin-right: 1.3em;
+  margin-top: 45%;
+  @media ${max.tabletLg} {
+    margin-top: 100%;
     flex-direction: column;
     align-items: center;
+  }
+  @media ${max.tablet} {
+    margin-top: 80%;
+  }
+  @media ${max.tabletSm} {
+    margin-top: 60%;
+  }
+  @media ${max.mobile} {
+    margin-top: 50%;
   }
 `;
 
@@ -19,7 +31,7 @@ const StyledRaceContainer = styled.div`
   width: 45em;
   border-radius: 1.5em;
   padding: 3em 2em;
-  @media ${max.tablet} {
+  @media ${max.tabletLg} {
     margin: 1.3em 0 0 0;
     width: 90%;
   }
@@ -34,6 +46,7 @@ const StyledWelcomeSectionContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 35.5em;
+  margin-top: 4em;
   margin-right: 2em;
   @media ${max.tabletLg} {
     margin-right: 0;

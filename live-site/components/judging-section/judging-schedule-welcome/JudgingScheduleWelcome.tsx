@@ -8,12 +8,9 @@ import {
   StyledWelcomePerson,
   StyledP
 } from '../judging-schedule-welcome/JudgingScheduleWelcome.styles';
-import { HackerEntryType, JudgeEntryType, JudgeOutputType, JudgingScheduleWelcomeProps } from '../../../lib/types';
+import { JudgeEntryType, JudgeOutputType, JudgingScheduleWelcomeProps } from '../../../lib/types';
 import JudgingScheduleTable from '../judging-schedule-table/JudgingScheduleTable';
 import judgesList from '../../../../judging-algorithm/judges.json';
-import hackersList from '../../../../judging-algorithm/judges.json';
-
-
 
 
 function getRowsAndRoomForJudge(curJudge: string, headers: string[]): JudgeOutputType {
@@ -61,9 +58,7 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
               setRoom(getRowsAndRoomForJudge(e.target.value, headers).room)
             }}
           >
-            {/* this -- above-- is a select */}
             {personOptions.map((currPerson: string) => (
-              // on change, then we want to set the person differently
               <option value={currPerson} key={currPerson}>
                 {currPerson}
               </option>
