@@ -17,7 +17,7 @@ import { RaffleEntry, TeamProps } from '../../lib/types';
 import { useAirtableApi } from '../../src/hooks/useAirtable';
 
 const WelcomeSection: React.FC = () => {
-  const { data } = useAirtableApi('Raffle', 'raffle', true);
+  const { data } = useAirtableApi('Raffle', 'raffle');
 
   const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
   const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
