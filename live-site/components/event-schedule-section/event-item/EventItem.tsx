@@ -32,7 +32,11 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
   return (
     <div>
       <StyledEventItemContainer
-        onClick={(): void => openEventItem(eventItem.id)}
+        onClick={
+          eventItem.description
+            ? (): void => openEventItem(eventItem.id)
+            : undefined
+        }
       >
         <StyledEventItemLeftSideContainer>
           <StyledEventTimeTopicContainer>
@@ -55,7 +59,7 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
             )}
           </StyledEventItemNameLocationContainer>
         </StyledEventItemLeftSideContainer>
-        {arrowPresent && (
+        {arrowPresent && eventItem.description && (
           <StyledArrow
             src={arrow}
             onClick={(): void => openEventItem(eventItem.id)}

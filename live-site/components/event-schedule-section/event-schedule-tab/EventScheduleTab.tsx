@@ -26,8 +26,10 @@ const renderEventData = (events: any[], activeTab: number): JSX.Element[] => {
     return { id: event.id, ...event.fields };
   };
   const convertStringToDate = (event: EventItemType): EventItemType => {
-    console.log(event.time);
-    return { ...event, time: new Date(Date.parse(event.time as string)) };
+    return {
+      ...event,
+      time: new Date(Date.parse(event.time as unknown as string))
+    };
   };
   const filterByDate = (event: EventItemType): boolean => {
     switch (activeTab) {
@@ -45,7 +47,6 @@ const renderEventData = (events: any[], activeTab: number): JSX.Element[] => {
     return event1.time.getTime() - event2.time.getTime();
   };
   const toJSX = (event: EventItemType): JSX.Element => {
-    console.log(event);
     return <EventItem eventItem={event} key={event.id} />;
   };
 
@@ -64,8 +65,7 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
   };
   const { data: eventData, isLoading } = useAirtableApi(
     AIRTABLE_BASE_NAME,
-    AIRTABLE_SCHEDULE_TABLE_NAME,
-    true
+    AIRTABLE_SCHEDULE_TABLE_NAME
   );
 
   return (
