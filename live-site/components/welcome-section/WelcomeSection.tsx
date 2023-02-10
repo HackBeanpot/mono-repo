@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import { H3 } from '../../../shared-ui/style/typography';
 import TeamRace from './team-race/TeamRace';
 import {
   StyledButtonContainer,
   StyledWelcomeSectionContainer,
   StyledWelcomeSectionContent,
+  StyledWelcomeHeader,
   StyledWelcomeText
 } from './WelcomeSection.styles';
 import {
@@ -63,7 +63,7 @@ const WelcomeSection: React.FC = () => {
   return (
     <StyledWelcomeSectionContainer>
       <StyledWelcomeSectionContent>
-        <H3>Welcome to HackBeanpot 2023!</H3>
+        <StyledWelcomeHeader>Welcome to HackBeanpot 2023!</StyledWelcomeHeader>
         <StyledWelcomeText>
           {`At HackBeanpot 2023, we aim to create a welcoming environment of
           ‘explorers’ focused on creativity, learning, and community

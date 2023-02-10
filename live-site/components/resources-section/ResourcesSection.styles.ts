@@ -4,14 +4,14 @@ import { fonts, H3 } from '../../../shared-ui/style/typography';
 
 const StyledResourcesSection = styled.div`
    {
-    padding-top: 10em;
+    margin: 10em 0;
   }
 `;
 
 const StyledHeader = styled(H3)`
    {
     font-family: ${fonts.nunitoSansSemibold};
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     padding-left: 2.4em;
     @media ${max.tablet} {
       padding-left: 1em;

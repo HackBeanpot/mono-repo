@@ -25,7 +25,7 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
             {tabs.tabs.map((tab, index) => (
               <StyledTabTitleWrapper
                 isSelected={activeTab === index}
-                key={index}
+                key={`event-tab-${index}`}
                 onClick={(): void => setActiveTabIndex(index)}
               >
                 {tab.title}
@@ -36,8 +36,11 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
       </StyledEventScheduleTabsContainer>
       <StyledTabContentContainer>
         <StyledTabContent>{tabs.tabs[activeTab].content}</StyledTabContent>
-        {eventItemInfo.map((curr) => (
-          <EventItem eventItem={curr} key={curr.eventName} />
+        {eventItemInfo.map((curr, index) => (
+          <EventItem
+            eventItem={curr}
+            key={'event-item-' + curr.eventName + index}
+          />
         ))}
       </StyledTabContentContainer>
     </StyledEventScheduleTabContainer>

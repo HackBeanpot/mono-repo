@@ -20,10 +20,11 @@ import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
+import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
-  const isDesktop = useMatchMedia(min.tablet);
+  const isDesktop = useMatchMedia(min.tabletXs);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
@@ -59,8 +60,9 @@ const IndexPage: React.FC = () => {
       <PastPhotosSection />
       <CovidSection />
       <MeetTheTeamSection />
+      <SponsorsSection />
       <AdventureAheadSection />
-      <TimeRemaining />
+      <TimeRemaining target={new Date('02/10/2023 18:00:00')} />
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
     </StyledPageContainer>
   );
