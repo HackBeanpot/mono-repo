@@ -8,9 +8,9 @@ const allTimes: string[] = ['10:00', '10:09', '10:18', '10:27', '10:36', '10:45'
 
 function main(): FinalOutputTables {
   // read the CSV files with judge / hacker / room data
-  const judgeCsvFilePath = '../data/csv_inputs/judges.csv';
-  const roomsCsvFilePath = '../data/csv_inputs/rooms.csv';
-  const teamsCsvFilePath = '../data/csv_inputs/hackers.csv';
+  const judgeCsvFilePath = '../judging-algorithm/data/csv_inputs/judges.csv';
+  const roomsCsvFilePath = '../judging-algorithm//data/csv_inputs/rooms.csv';
+  const teamsCsvFilePath = '../judging-algorithm/data/csv_inputs/hackers.csv';
 
   // parse the hacker CSV in to TS objects
   const allJudges: Judge[] = parseJudgeCSV(judgeCsvFilePath);
