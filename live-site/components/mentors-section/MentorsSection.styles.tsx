@@ -166,6 +166,10 @@ const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
   align-self: center;
 `;
 
+const StyledImage = styled.img`
+  border-radius: 50%;
+`;
+
 export {
   StyledMentorsSection,
   StyledMentorsFilterSection,
@@ -180,5 +184,6 @@ export {
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
   StyledNoMentorsContainer,
-  StyledCactusButtons
+  StyledCactusButtons, 
+  StyledImage
 };
