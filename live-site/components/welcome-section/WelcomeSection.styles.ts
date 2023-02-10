@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { P } from '../../../shared-ui/style/typography';
+import { P, H3 } from '../../../shared-ui/style/typography';
 
 const StyledWelcomeSectionContainer = styled.div`
   display: flex;
@@ -55,6 +55,11 @@ const StyledWelcomeSectionContent = styled.div`
   }
 `;
 
+const StyledWelcomeHeader = styled(H3)`
+  margin-bottom: 1em;
+  color: ${colors.BLACK};
+`;
+
 const StyledWelcomeText = styled(P)`
   color: ${colors.TEXT_BROWN};
 `;
@@ -77,6 +82,7 @@ export {
   StyledWelcomeSectionContainer,
   StyledRaceContainer,
   StyledWelcomeSectionContent,
+  StyledWelcomeHeader,
   StyledWelcomeText,
   StyledButtonContainer,
   StyledRaceContent,

@@ -15,6 +15,7 @@ import { StyledPageContainer } from '../../../shared-ui/styled-components/Backgr
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
 import WelcomeSection from '../../components/welcome-section/WelcomeSection';
+import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 
 const handleMode = (): boolean => {
@@ -24,7 +25,7 @@ const handleMode = (): boolean => {
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(handleMode());
-  const isDesktop = useMatchMedia(min.tabletLg);
+  const isDesktop = useMatchMedia(min.tabletXs);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getBackgroundClassName = (): string => {
@@ -61,6 +62,7 @@ const IndexPage: React.FC = () => {
       <MentorsSection />
       <ResourcesSection />
       <MeetTheTeamSection />
+      <FeedbackJoinCoreSection />
       <TimeRemaining target={new Date('02/12/2023 14:00:00')} />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>

@@ -24,7 +24,7 @@ import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
-  const isDesktop = useMatchMedia(min.tablet);
+  const isDesktop = useMatchMedia(min.tabletXs);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
