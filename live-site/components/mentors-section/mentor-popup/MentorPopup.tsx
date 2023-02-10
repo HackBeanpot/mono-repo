@@ -22,7 +22,7 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
   const notMobile = useMatchMedia(max.tabletLg);
 
   let mentorImageSize = 330;
-  if(notMobile) {
+  if (notMobile) {
     mentorImageSize = 256;
   }
 
@@ -69,7 +69,14 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
             </>
           )}
           <StyledContactButtonContainer>
-            <PrimaryButton btnText="Contact" btnLink={'https://hackbeanpot2023.slack.com/app_redirect?channel=' + mentor.slack} newTab={true}/>
+            <PrimaryButton
+              btnText="Contact"
+              btnLink={
+                'https://hackbeanpot2023.slack.com/app_redirect?channel=' +
+                mentor.slack
+              }
+              newTab={true}
+            />
           </StyledContactButtonContainer>
         </div>
       </StyledContainer>

@@ -29,7 +29,7 @@ const StyledContainer = styled.div`
     display: block;
     width: 16em;
     margin-top: 5em;
-    padding: 2.5em; 
+    padding: 2.5em;
   }
 `;
 
@@ -42,17 +42,17 @@ const StyledMentorName = styled.div`
   font-weight: bold;
   margin-top: 0.75em;
   @media ${max.tabletLg} {
-    font-size: 1.5em; 
+    font-size: 1.5em;
   }
   @media ${max.tabletXs} {
-    font-size: 1.25em; 
+    font-size: 1.25em;
   }
 `;
 
 const StyledText = styled.div`
   font-size: 1.5em;
   @media ${max.tablet} {
-    font-size: 1em; 
+    font-size: 1em;
   }
   @media ${max.tabletXs} {
     font-size: 0.95em;
@@ -64,7 +64,7 @@ const StyledHeader = styled.div`
   color: ${colors.TEXT_LIGHT_GREY};
   margin: 1em 0 0.75em 0;
   @media ${max.tabletLg} {
-    font-size: 1em; 
+    font-size: 1em;
   }
   @media ${max.tabletXs} {
     margin: 0.5em 0 0.25em 0;
@@ -91,7 +91,6 @@ const StyledContactButtonContainer = styled.div`
   @media ${max.tabletLg} {
     position: absolute;
     margin-right: 1.5em;
-   
   }
 `;
 

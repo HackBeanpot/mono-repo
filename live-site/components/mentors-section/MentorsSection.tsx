@@ -16,7 +16,7 @@ import {
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
   StyledCactusButtons,
-  StyledNoMentorsContainer, 
+  StyledNoMentorsContainer,
   StyledImage
 } from './MentorsSection.styles';
 import cactus1 from '../../../shared-ui/images/cactus1.png';
@@ -209,12 +209,12 @@ const MentorsSection: React.FC = () => {
   };
 
   useEffect(() => {
-    if(modalMentor) {
+    if (modalMentor) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-  }, [modalMentor ]);
+  }, [modalMentor]);
 
   return (
     <div id="mentors">

@@ -184,6 +184,6 @@ export {
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
   StyledNoMentorsContainer,
-  StyledCactusButtons, 
+  StyledCactusButtons,
   StyledImage
 };
