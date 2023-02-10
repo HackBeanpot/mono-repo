@@ -30,8 +30,9 @@ export interface JudgingTableProps {
 export interface UpcomingEvent {
   id: number;
   header: string;
-  time: string;
-  display_start_time: string;
+  startTime: string;
+  endTime: string;
+  displayStartTime: string;
   body: string;
 }
 
@@ -118,6 +119,7 @@ export interface MentorInfo {
   shiftStart: string[];
   shiftEnd: string[];
   shifts: string[];
+  slack: string;
 }
 
 export interface StyledCactusButtonsProps {

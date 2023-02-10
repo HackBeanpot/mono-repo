@@ -46,8 +46,13 @@ const renderEventData = (events: any[], activeTab: number): JSX.Element[] => {
   const sortByTime = (event1: EventItemType, event2: EventItemType): number => {
     return event1.time.getTime() - event2.time.getTime();
   };
-  const toJSX = (event: EventItemType): JSX.Element => {
-    return <EventItem eventItem={event} key={event.id} />;
+  const toJSX = (event: EventItemType, index: number): JSX.Element => {
+    return (
+      <EventItem
+        eventItem={event}
+        key={'event-item-' + event.eventName + index}
+      />
+    );
   };
 
   return events
@@ -76,7 +81,7 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
             {tabs.tabs.map((tab, index) => (
               <StyledTabTitleWrapper
                 isSelected={activeTab === index}
-                key={index}
+                key={`event-tab-${index}`}
                 onClick={(): void => setActiveTabIndex(index)}
               >
                 {tab.title}

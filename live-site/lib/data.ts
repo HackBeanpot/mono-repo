@@ -11,15 +11,15 @@ const liveSiteTabInfo: TabInfo[] = [
 const resources: ResourceBoxProps[] = [
   {
     label: 'Project Guide',
-    link: '#'
+    link: '  https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing'
   },
   {
     label: 'Beginner Resource Guide',
-    link: '#'
+    link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/edit?usp=sharing'
   },
   {
     label: 'Hacker Guide',
-    link: '#'
+    link: 'https://drive.google.com/file/d/1FOmiCwMnxFlNil_SoRdNoAOujGcWwrtq/view?usp=sharing'
   }
 ];
 
@@ -31,10 +31,31 @@ const TeamInfo: TeamProps[] = [
   { name: 'Team Desert Biome', points: 0, index: 4 }
 ];
 
-// TODO: replace with actual event codes
-const onePointCodes = ['WORKSHOP', 'SOCIAL'];
+const onePointCodes = [
+  'FIGMAAZING',
+  'GITREADYTOPARTY',
+  'WEBDEVISFUN',
+  'LSINTODS',
+  'GIVEMEAJOB',
+  'COREPARTY',
+  'THREEJSFUN',
+  'LIVEONWEB',
+  'BETTERTHANCHATGPT',
+  'NAMASTEAWAYFROMME',
+  'ITSBETTERTOGETHER',
+  'BIGBRAINTIME',
+  'RISEANDSHINE',
+  'BRAINSHOPS',
+  'SUCCULENT',
+  'DESERTDAWN',
+  'REFRESHER',
+  'GAMINGINTHEDUNES',
+  'COOLBEANS',
+  'BEENTHEREDUNETHAT',
+  'STRETCHTHESC'
+];
 
-const twoPointCodes = ['EXCURSION', 'ACTIVITY'];
+const twoPointCodes = ['ECREWINTRO'];
 
 interface TimeLeft {
   timeType: string;
@@ -86,7 +107,6 @@ const eventItemInfo: EventItem[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   }
 ];
-
 
 export {
   liveSiteTabInfo,

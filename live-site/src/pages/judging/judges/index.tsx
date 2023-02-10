@@ -29,7 +29,14 @@ const JudgingScheduleJudgesPage: React.FC = () => {
         <HackingRemaining />
       )}
       <Background isDay={true} />
-      <JudgingScheduleJudges headers = {['company', 'room', 'stuff', 'other stuff', 'age']}rows = {[['hi', 'hi','hi','hi','hi'],['hi', 'hi','hi','hi','hi'], ['hi', 'hi','hi','hi','hi']]}/>
+      <JudgingScheduleJudges
+        headers={['company', 'room', 'stuff', 'other stuff', 'age']}
+        rows={[
+          ['hi', 'hi', 'hi', 'hi', 'hi'],
+          ['hi', 'hi', 'hi', 'hi', 'hi'],
+          ['hi', 'hi', 'hi', 'hi', 'hi']
+        ]}
+      />
       <Footer tabs={liveSiteTabInfo} isDay />
     </div>
   );

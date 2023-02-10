@@ -68,10 +68,16 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
         )}
         <StyledTagsContainer>
           {eventItem.tags && (
-            <EventItemTag key={eventItem.id} tag={eventItem.tags} />
+            <EventItemTag
+              key={`event-item-tab-${eventItem.id}-${eventItem.tags}`}
+              tag={eventItem.tags}
+            />
           )}
           {eventItem.difficulty && (
-            <EventItemTag key={eventItem.id} tag={eventItem.difficulty} />
+            <EventItemTag
+              key={`event-item-tab-${eventItem.id}-${eventItem.difficulty}`}
+              tag={eventItem.difficulty}
+            />
           )}
         </StyledTagsContainer>
       </StyledEventItemContainer>

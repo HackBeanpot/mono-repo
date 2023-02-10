@@ -6,7 +6,7 @@ import { colors } from '../../../../shared-ui/style/colors';
 const StyledResourceBox = styled.a`
    {
     text-decoration: none;
-    width: 20%;
+    width: 20em;
     height: 22em;
     background-color: ${colors.BUTTON_DARK_GREEN};
     margin: 1em;
@@ -14,7 +14,6 @@ const StyledResourceBox = styled.a`
     border: 0.3em solid ${colors.PURPLE};
     cursor: pointer;
     @media ${max.tabletLg} {
-      width: 19%;
       height: 18em;
     }
     @media ${max.tablet} {

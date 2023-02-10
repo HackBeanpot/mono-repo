@@ -46,7 +46,6 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   color: ${(StyledTagAndTagTextProps): string => {
     return tagColor(StyledTagAndTagTextProps.tag);
   }};
-  }};
   text-align: center;
   margin-top: auto;
   padding-left: 1em;
@@ -60,9 +59,9 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
     font-size: 0.7em;
     padding-top: 0.7em;
   }
-  @media (max-width: 1120px) {
-    font-size: 0.2em;
-    padding-top: 4.2em;
+  @media (max-width: 900px) {
+    font-size: 0.7em;
+    padding-top: 0.2em;
   }
   @media ${max.tablet} {
     font-size: 0.5em;
@@ -75,7 +74,7 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   @media (max-width: 460px) {
     font-size: 0.9em;
     padding-top: 0.4em;
-  };
+  } ;
 `;
 
 export { StyledTag, StyledTagText };

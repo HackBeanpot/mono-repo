@@ -14,8 +14,12 @@ const ResourcesSection: React.FC = () => {
       <StyledResourcesSection>
         <StyledHeader>Resources</StyledHeader>
         <BoxesContainer>
-          {resources.map((resource: ResourceBoxProps) => (
-            <ResourceBox link={resource.link} label={resource.label} />
+          {resources.map((resource: ResourceBoxProps, index) => (
+            <ResourceBox
+              key={`${resource.link}-${index}`}
+              link={resource.link}
+              label={resource.label}
+            />
           ))}
         </BoxesContainer>
       </StyledResourcesSection>
