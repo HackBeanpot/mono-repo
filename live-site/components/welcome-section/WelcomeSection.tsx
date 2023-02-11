@@ -23,7 +23,6 @@ const WelcomeSection: React.FC = () => {
   const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
 
   useEffect(() => {
-    console.log(data);
     setRaffleEntries(
       data.map((entry) => {
         return {
