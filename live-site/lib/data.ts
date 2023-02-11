@@ -52,7 +52,8 @@ const onePointCodes = [
   'GAMINGINTHEDUNES',
   'COOLBEANS',
   'LETSGETTHISDUNE',
-  'STRETCHTHESC'
+  'STRETCHTHESC',
+  'BRAINOFTHEPROJECT'
 ];
 
 const twoPointCodes = ['ECREWINTRO'];
