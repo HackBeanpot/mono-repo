@@ -28,7 +28,7 @@ const WelcomeSection: React.FC = () => {
         return {
           name: entry.fields.Name ?? '',
           cabin: entry.fields.Cabin ?? '',
-          eventCode: entry.fields['Event Code'] ?? ''
+          eventCode: (entry.fields['Event Code'] ?? '').toUpperCase()
         };
       })
     );
