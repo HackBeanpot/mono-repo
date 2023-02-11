@@ -49,7 +49,7 @@ const WelcomeSection: React.FC = () => {
           team.name === entry.cabin &&
           !seenEntries.has(entry.name + entry.eventCode)
         ) {
-          if (onePointCodes.includes(entry.eventCode)) {
+          if (onePointCodes.includes(entry.eventCode.toUpperCase())) {
             team.points += 1;
           } else if (twoPointCodes.includes(entry.eventCode)) {
             team.points += 2;
