@@ -14,21 +14,22 @@ import {
   twoPointCodes
 } from '../../lib/data';
 import { RaffleEntry, TeamProps } from '../../lib/types';
-import { useAirtableApi } from '../../src/hooks/useAirtable';
+import { useAirtableApiWithPagination } from '../../src/hooks/useAirtable';
 
 const WelcomeSection: React.FC = () => {
-  const { data } = useAirtableApi('Raffle', 'raffle');
+  const { data } = useAirtableApiWithPagination('Raffle', 'raffle');
 
   const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
   const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
 
   useEffect(() => {
+    console.log(data);
     setRaffleEntries(
       data.map((entry) => {
         return {
           name: entry.fields.Name ?? '',
           cabin: entry.fields.Cabin ?? '',
-          eventCode: (entry.fields['Event Code'] ?? '').toUpperCase()
+          eventCode: entry.fields['Event Code'] ?? ''
         };
       })
     );
@@ -56,8 +57,8 @@ const WelcomeSection: React.FC = () => {
           seenEntries.add(entry.name + entry.eventCode);
         }
       });
-      setTeamInfo(newTeamInfo);
     });
+    setTeamInfo(newTeamInfo);
   }, [raffleEntries, defaultTeamInfo, setTeamInfo]);
 
   return (
