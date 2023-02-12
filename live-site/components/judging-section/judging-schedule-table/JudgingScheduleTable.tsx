@@ -1,11 +1,8 @@
 import React from 'react';
 import { JudgingTableProps } from '../../../lib/types';
-import JudgingScheduleWelcome from '../judging-schedule-welcome/JudgingScheduleWelcome';
-import { StyledTable, JudgingTableSection, Styledtd } from './JudgingScheduleJudges.styles';
-const JudgingScheduleJudges: React.FC<JudgingTableProps> = ({ headers, rows }) => {
+import { StyledTable, JudgingTableSection, Styledtd } from './JudgingScheduleTable.styles';
+const JudgingScheduleTable: React.FC<JudgingTableProps> = ({ headers, rows }) => {
   return (
-    <>
-    <JudgingScheduleWelcome schedulePersonType={'Judge'} />;
     <JudgingTableSection>
     <StyledTable>
       <tr>
@@ -22,9 +19,8 @@ const JudgingScheduleJudges: React.FC<JudgingTableProps> = ({ headers, rows }) =
     ))}
     </StyledTable>
     </JudgingTableSection>
-    </>
 
   );
 };
 
-export default JudgingScheduleJudges;
+export default JudgingScheduleTable;

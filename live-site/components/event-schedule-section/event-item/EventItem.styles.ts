@@ -153,6 +153,12 @@ const StyledPinpoint = styled.img`
 
 const StyledArrow = styled.img<styledArrowProps>`
   cursor: pointer;
+  @media (max-width: 1200px) {
+    width: 30px;
+  }
+  @media (max-width: 1000px) {
+    width: 20px;
+  }
   padding-top: ${(styledArrowProps): string =>
     styledArrowProps.isOpen ? `0` : `3em`};
   padding-right: ${(styledArrowProps): string =>

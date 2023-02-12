@@ -6,14 +6,12 @@ In your terminal, `cd` in to `/judging-algorithm` within this `mono-repo` reposi
 
 Run `yarn install` so that you can run the script.
 
-2) UPLOAD YOUR CSV FILES
+2) UPLOAD YOUR CSV FILE FOR HACKERS
 
-Upload the following 3 CSV files in to the `/judging-algorithm/data/csv_inputs` folder:
-a. judges.csv
-b. hackers.csv
-c. rooms.csv
-
-You can access templates to create these CSVs under the `/judging-algorithm/csv-templates` folder.
+a. Download Devpost hackers CSV
+b. Delete all columns except for `Project Title` and `Will you Demo` questions
+c. Rename these columns to `name` and `
+c. Download and save as `hackers.csv` within `/judging-algorithm/data/csv_inputs` folder
 
 3) KICK OFF THE SORTING SCRIPT
 

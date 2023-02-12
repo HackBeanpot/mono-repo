@@ -1,4 +1,4 @@
-import { EventMockData } from '../components/event-schedule-section/EventScheduleMockData';
+import { EventDate } from '../components/event-schedule-section/EventScheduleMockData';
 
 export interface TabInfo {
   name: string;
@@ -8,6 +8,29 @@ export interface TabInfo {
 export interface ResourceBoxProps {
   label: string;
   link: string;
+}
+
+export interface JudgeOutputType {
+  rows: string[][];
+  room: string;
+}
+
+export interface JudgeEntryType {
+  judge: string;
+  room: string;
+  projects: ProjectEntryType[];
+}
+
+export interface HackerEntryType {
+  project: string;
+  time: string;
+  judges: string[];
+  room: string;
+}
+
+export interface ProjectEntryType {
+  project: string;
+  time: string;
 }
 
 export interface JudgingScheduleWelcomeProps {
@@ -23,15 +46,16 @@ export interface RowProps {
 }
 
 export interface JudgingTableProps {
-  headers: string[]
+  headers: string[];
   rows: string[][];
 }
 
 export interface UpcomingEvent {
   id: number;
   header: string;
-  time: string;
-  display_start_time: string;
+  startTime: string;
+  endTime: string;
+  displayStartTime: string;
   body: string;
 }
 
@@ -44,18 +68,18 @@ export interface DesktopMultiEventsProps {
 }
 
 export interface EventScheduleTabProps {
-  tabs: EventMockData[];
+  tabs: EventDate[];
 }
 
 export interface StyledTabTitleWrapperProps {
   isSelected: boolean;
 }
 export interface EventItemTagProps {
-  tagType: string;
+  tag: string;
 }
 
 export interface StyledTagAndTagTextProps {
-  tagType: string;
+  tag: string;
 }
 
 export interface styledArrowProps {
@@ -73,12 +97,13 @@ export enum Tag {
 }
 export interface EventItem {
   id: number;
-  time: string;
+  time: Date;
   eventType: string;
   eventName: string;
   eventLocation: string;
   description: string;
-  tags: Tag[];
+  tags: string;
+  difficulty?: string;
 }
 
 export interface EventItemProps {
@@ -117,6 +142,7 @@ export interface MentorInfo {
   shiftStart: string[];
   shiftEnd: string[];
   shifts: string[];
+  slack: string;
 }
 
 export interface StyledCactusButtonsProps {

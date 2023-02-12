@@ -88,7 +88,7 @@ const StyledTabContentContainer = styled.div`
     margin-right: 2em;
     border-radius: 0em 0.75em 0em 0em;
   }
-  overflow: scroll;
+  overflow-y: scroll;
 `;
 const StyledEventScheduleTabContainer = styled.div`
   display: flex;

@@ -6,14 +6,14 @@ import { StyledTagAndTagTextProps } from '../../../lib/types';
 
 const tagColor = (tagType: string): string => {
   switch (tagType) {
-    case 'Meal':
+    case 'Food':
       return colors.FIREBRICK;
       break;
     case 'Beginner-Friendly':
-      return colors.PURPLE_TAG;
+      return colors.GREEN;
       break;
     case 'Workshop':
-      return colors.GREEN;
+      return colors.PURPLE_TAG;
       break;
     case 'Action Item':
       return colors.RED;
@@ -24,8 +24,8 @@ const tagColor = (tagType: string): string => {
     case 'Sponsor Event':
       return colors.ORANGE;
       break;
-    case 'Social/Fun Event':
-      return colors.LIGHT_BLUE;
+    case 'Social/Fun Activity':
+      return colors.TECH_BLUE;
       break;
     default:
       return colors.BLACK;
@@ -35,7 +35,7 @@ const tagColor = (tagType: string): string => {
 const StyledTag = styled.div<StyledTagAndTagTextProps>`
   background-color: white;
   border-color: ${(StyledTagAndTagTextProps): string => {
-    return tagColor(StyledTagAndTagTextProps.tagType);
+    return tagColor(StyledTagAndTagTextProps.tag);
   }};
   border-style: solid;
   border-radius: 2em;
@@ -44,8 +44,7 @@ const StyledTag = styled.div<StyledTagAndTagTextProps>`
 
 const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   color: ${(StyledTagAndTagTextProps): string => {
-    return tagColor(StyledTagAndTagTextProps.tagType);
-  }};
+    return tagColor(StyledTagAndTagTextProps.tag);
   }};
   text-align: center;
   margin-top: auto;
@@ -60,9 +59,9 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
     font-size: 0.7em;
     padding-top: 0.7em;
   }
-  @media (max-width: 1120px) {
-    font-size: 0.2em;
-    padding-top: 4.2em;
+  @media (max-width: 900px) {
+    font-size: 0.7em;
+    padding-top: 0.2em;
   }
   @media ${max.tablet} {
     font-size: 0.5em;
@@ -75,7 +74,7 @@ const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
   @media (max-width: 460px) {
     font-size: 0.9em;
     padding-top: 0.4em;
-  };
+  } ;
 `;
 
 export { StyledTag, StyledTagText };

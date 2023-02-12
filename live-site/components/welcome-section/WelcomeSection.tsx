@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import { H3 } from '../../../shared-ui/style/typography';
 import TeamRace from './team-race/TeamRace';
 import {
   StyledButtonContainer,
   StyledWelcomeSectionContainer,
   StyledWelcomeSectionContent,
+  StyledWelcomeHeader,
   StyledWelcomeText
 } from './WelcomeSection.styles';
 import {
@@ -14,10 +14,10 @@ import {
   twoPointCodes
 } from '../../lib/data';
 import { RaffleEntry, TeamProps } from '../../lib/types';
-import { useAirtableApi } from '../../src/hooks/useAirtable';
+import { useAirtableApiWithPagination } from '../../src/hooks/useAirtable';
 
 const WelcomeSection: React.FC = () => {
-  const { data } = useAirtableApi('Raffle', 'raffle', true);
+  const { data } = useAirtableApiWithPagination('Raffle', 'raffle');
 
   const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
   const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
@@ -48,7 +48,7 @@ const WelcomeSection: React.FC = () => {
           team.name === entry.cabin &&
           !seenEntries.has(entry.name + entry.eventCode)
         ) {
-          if (onePointCodes.includes(entry.eventCode)) {
+          if (onePointCodes.includes(entry.eventCode.toUpperCase())) {
             team.points += 1;
           } else if (twoPointCodes.includes(entry.eventCode)) {
             team.points += 2;
@@ -56,14 +56,14 @@ const WelcomeSection: React.FC = () => {
           seenEntries.add(entry.name + entry.eventCode);
         }
       });
-      setTeamInfo(newTeamInfo);
     });
+    setTeamInfo(newTeamInfo);
   }, [raffleEntries, defaultTeamInfo, setTeamInfo]);
 
   return (
     <StyledWelcomeSectionContainer>
       <StyledWelcomeSectionContent>
-        <H3>Welcome to Hackbeanpot 2023!</H3>
+        <StyledWelcomeHeader>Welcome to HackBeanpot 2023!</StyledWelcomeHeader>
         <StyledWelcomeText>
           {`At HackBeanpot 2023, we aim to create a welcoming environment of
           ‘explorers’ focused on creativity, learning, and community
@@ -71,7 +71,7 @@ const WelcomeSection: React.FC = () => {
           test during their hacking missions. Whether you’re a seasoned
           hackathon-goer, an ‘I-have-never-written-a-line-of-code beginner, or
           someone in between, we’re excited for you to embark on this adventure
-          with us!\n \nLearn more at`}
+          with us!\n \nLearn more at `}
           <u>www.hackbeanpot.com</u>
         </StyledWelcomeText>
         <StyledButtonContainer>

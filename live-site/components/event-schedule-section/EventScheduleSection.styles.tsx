@@ -44,13 +44,13 @@ const StyledBoldSubText = styled(P)`
   @media ${max.tablet} {
     text-align: left;
     font-size: 1em;
-    margin: 0 1.5em;
   }
 `;
 
 const ButtonContainer = styled.div`
   margin-left: auto;
   margin-right: 0;
+  margin-top: 2em;
   @media ${max.tablet} {
     padding-bottom: 4em;
   } ;

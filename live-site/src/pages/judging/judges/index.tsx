@@ -6,13 +6,20 @@ import '../../../../../shared-ui/style/globals.css';
 import HackingRemaining from '../../../../components/hacking-remaning/HackingRemaining';
 import { liveSiteTabInfo } from '../../../../lib/data';
 import { min } from '../../../../../shared-ui/lib/responsive';
-import Background from '../../../../../shared-ui/components/backgrounds/Backgrounds';
 import Footer from '../../../../../shared-ui/components/footer/Footer';
-import JudgingScheduleJudges from '../../../../components/judging-section/judging-schedule-judges/JudgingScheduleJudges';
+import JudgingScheduleWelcome from '../../../../components/judging-section/judging-schedule-welcome/JudgingScheduleWelcome';
+import { StyledPageContainer } from '../../../../../shared-ui/styled-components/Background.styles';
 
 const JudgingScheduleJudgesPage: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const getBackgroundClassName = (): string => {
+    if (isDesktop) {
+      return 'day-background-desktop';
+    }
+    return 'mobile-light-background';
+  };
 
   useEffect(() => {
     setIsLoading(false);
@@ -23,15 +30,14 @@ const JudgingScheduleJudgesPage: React.FC = () => {
   }
 
   return (
-    <div>
+    <StyledPageContainer className = {getBackgroundClassName()}>
       <Header tabs={liveSiteTabInfo} isDay={true} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
-      <Background isDay={true} />
-      <JudgingScheduleJudges headers = {['company', 'room', 'stuff', 'other stuff', 'age']}rows = {[['hi', 'hi','hi','hi','hi'],['hi', 'hi','hi','hi','hi'], ['hi', 'hi','hi','hi','hi']]}/>
-      <Footer tabs={liveSiteTabInfo} isDay />
-    </div>
+      <JudgingScheduleWelcome schedulePersonType={'Judge'} />;
+      <Footer tabs={liveSiteTabInfo} isDay/>
+    </StyledPageContainer>
   );
 };
 

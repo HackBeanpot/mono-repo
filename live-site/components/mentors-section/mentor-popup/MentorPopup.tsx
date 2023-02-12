@@ -5,25 +5,32 @@ import {
   StyledContainer,
   StyledHeader,
   StyledModal,
+  StyledImage,
   StyledMentorName,
   StyledText,
   StyledContactButtonContainer,
   StyledCloseButtonContainer
 } from './MentorPopup.styles';
 import PopupCloseButton from '../../../../shared-ui/images/popup-close-icon.png';
+import { max } from '../../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
 
 const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
   if (!mentor) {
     return <></>;
   }
+  const notMobile = useMatchMedia(max.tabletLg);
 
-  const mentorImageSize = 420;
+  let mentorImageSize = 330;
+  if (notMobile) {
+    mentorImageSize = 256;
+  }
 
   return (
     <StyledModal>
       <StyledContainer>
         <div>
-          <img
+          <StyledImage
             width={mentorImageSize}
             height={mentorImageSize}
             alt={`Image of ${mentor.name}`}
@@ -53,9 +60,6 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
               ))}
             </>
           )}
-          <br />
-          <br />
-          <br />
           {mentor.expertise.length > 0 && (
             <>
               <StyledHeader>EXPERTISE</StyledHeader>
@@ -65,7 +69,14 @@ const MentorPopup: React.FC<MentorPopupProps> = ({ mentor, onClose }) => {
             </>
           )}
           <StyledContactButtonContainer>
-            <PrimaryButton btnText="Contact" />
+            <PrimaryButton
+              btnText="Contact"
+              btnLink={
+                'https://hackbeanpot2023.slack.com/app_redirect?channel=' +
+                mentor.slack
+              }
+              newTab={true}
+            />
           </StyledContactButtonContainer>
         </div>
       </StyledContainer>
