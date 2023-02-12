@@ -8,14 +8,12 @@ export type Judge = {
    Low priority TODO is to fix this later */
 export type HackerTeam = {
   dummy: string,
-  name: string;
-  liveDemo: string;
-  devpostLink: string;
+  name: string,
+  liveDemo: string
 }
 
 export type Room = {
-  name: string,
-  capacity: number;
+  name: string
 }
 
 export type JudgeOutput = {

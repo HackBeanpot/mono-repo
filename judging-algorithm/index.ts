@@ -18,7 +18,7 @@ function main(): FinalOutputTables {
   const allHackers: HackerTeam[] = parseHackerTeamCSV(teamsCsvFilePath);
 
   // apply constraints to parsed data
-  const allAwardEligibleHackers = allHackers.filter(team => team.liveDemo === 'TRUE');  
+  const allAwardEligibleHackers = allHackers.filter(team => team.liveDemo === 'yes');  
 
   // extract string names for: judges, hackers and teams
   const judgeStringsForSorting = allJudges.map(judge => judge.name);
