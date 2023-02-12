@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const StyledBackgrounds = styled.img`
   width: 100%;
-  height: 150%;
   position: absolute;
   overflow-x: hidden;
   z-index: -1;
