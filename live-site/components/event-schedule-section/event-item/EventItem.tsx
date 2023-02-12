@@ -32,24 +32,34 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
   return (
     <div>
       <StyledEventItemContainer
-        onClick={(): void => openEventItem(eventItem.id)}
+        onClick={
+          eventItem.description
+            ? (): void => openEventItem(eventItem.id)
+            : undefined
+        }
       >
         <StyledEventItemLeftSideContainer>
           <StyledEventTimeTopicContainer>
-            <StyledEventItemTime>{eventItem.time}</StyledEventItemTime>
+            <StyledEventItemTime>
+              {eventItem.time.toLocaleTimeString('en-US', {
+                timeStyle: 'short'
+              })}
+            </StyledEventItemTime>
             <StyledEventItemTopic>{eventItem.eventType}</StyledEventItemTopic>
           </StyledEventTimeTopicContainer>
           <StyledEventItemNameLocationContainer>
             <StyledEventItemHeader>{eventItem.eventName}</StyledEventItemHeader>
-            <StyledPinpointLocationContainer>
-              <StyledPinpoint src={pinpoint} />
-              <StyledEventItemLocation>
-                {eventItem.eventLocation}
-              </StyledEventItemLocation>
-            </StyledPinpointLocationContainer>
+            {eventItem.eventLocation && (
+              <StyledPinpointLocationContainer>
+                <StyledPinpoint src={pinpoint} />
+                <StyledEventItemLocation>
+                  {eventItem.eventLocation}
+                </StyledEventItemLocation>
+              </StyledPinpointLocationContainer>
+            )}
           </StyledEventItemNameLocationContainer>
         </StyledEventItemLeftSideContainer>
-        {arrowPresent && (
+        {arrowPresent && eventItem.description && (
           <StyledArrow
             src={arrow}
             onClick={(): void => openEventItem(eventItem.id)}
@@ -57,9 +67,18 @@ const EventItem: React.FC<EventItemProps> = ({ eventItem }) => {
           />
         )}
         <StyledTagsContainer>
-          {eventItem.tags.map((tag) => (
-            <EventItemTag key={eventItem.id} tagType={tag} />
-          ))}
+          {eventItem.tags && (
+            <EventItemTag
+              key={`event-item-tab-${eventItem.id}-${eventItem.tags}`}
+              tag={eventItem.tags}
+            />
+          )}
+          {eventItem.difficulty && (
+            <EventItemTag
+              key={`event-item-tab-${eventItem.id}-${eventItem.difficulty}`}
+              tag={eventItem.difficulty}
+            />
+          )}
         </StyledTagsContainer>
       </StyledEventItemContainer>
       {isOpen && (
