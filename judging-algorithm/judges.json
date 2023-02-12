@@ -1,0 +1,44 @@
+[
+    {
+      "judge": "lisa",
+      "room": "hidden figures",
+      "projects": [
+        {
+          "project": "a",
+          "time": "b"
+        },
+        {
+          "project": "c",
+          "time": "d"
+        },
+        {
+          "project": "c",
+          "time": "d"
+        },
+        {
+          "project": "c",
+          "time": "d"
+        },
+        {
+          "project": "c",
+          "time": "d"
+        }
+      ]
+    },
+    {
+      "judge": "surbhi",
+      "room": "teehee",
+      "projects": [
+        {
+          "project": "",
+          "time": ""
+        },
+        {
+          "project": "",
+          "time": ""
+        }
+      ]
+    }
+  ]
+
+  
