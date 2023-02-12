@@ -14,7 +14,7 @@ import {
   JudgingScheduleWelcomeProps
 } from '../../../lib/types';
 import JudgingScheduleTable from '../judging-schedule-table/JudgingScheduleTable';
-import judgesList from '../../../../judging-algorithm/judges.json';
+import judgesList from '../../../../judging-algorithm/data/json_outputs/judgeResults.json';
 
 function getRowsAndRoomForJudge(
   curJudge: string,

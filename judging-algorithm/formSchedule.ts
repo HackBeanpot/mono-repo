@@ -22,13 +22,31 @@ export function sortJudgesAndPeople(
     hackerOutput: hackerTable
   };
   // judges assignment
-  const judgesPerRoom = Math.ceil(unassignedJudges.length / allJudgingRooms.length);
+  const judgesPerRoom = Math.floor(unassignedJudges.length / allJudgingRooms.length);
   // filter out rooms with less capacity than judgesPerRoom
   const goodRoomsName: string[] = allJudgingRooms.map(room => room.name)
   // populate keys for roomsToJudge outputs
   allJudgingRooms.forEach(room => roomsToJudgeOutputs.set(room.name, []));
   for (const room of goodRoomsName) {
-    for (let judgeCount = 0; judgeCount < unassignedJudges.length; judgeCount++) {
+    for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
+      if (unassignedJudges.length > 0) {
+        const newJudge: JudgeOutput = assignJudgeToRoom(
+          unassignedJudges[0],
+          room
+        );
+        unassignedJudges.splice(0, 1);
+        judgesTable.push(newJudge); // we mutate this later
+        // add to the mapping of room number to judges
+        if (roomsToJudgeOutputs.has(room)) {
+          roomsToJudgeOutputs.get(room)!.push(newJudge);
+        } else {
+          roomsToJudgeOutputs.set(room, [newJudge]);
+        }
+      }
+    }
+  }
+  for (const room of goodRoomsName) {
+    for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
       if (unassignedJudges.length > 0) {
         const newJudge: JudgeOutput = assignJudgeToRoom(
           unassignedJudges[0],

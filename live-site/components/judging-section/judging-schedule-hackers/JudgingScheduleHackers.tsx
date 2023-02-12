@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import hackerList from '../../../../judging-algorithm/hackers.json';
+import hackerList from '../../../../judging-algorithm/data/json_outputs/hackerResults.json'
 import { HackerEntryType } from '../../../lib/types';
 import {
   StyledBackButton,
