@@ -43,6 +43,7 @@ const StyledJudgeP = styled(P)`
 `;
 
 const StyledJudgesDropdownWrapper = styled(StyledDropdown)`
+  margin-bottom: 3.4em;
   width: 19em;
   @media ${max.tabletSm} {
     width: 15em;

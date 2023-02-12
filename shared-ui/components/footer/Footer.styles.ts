@@ -5,7 +5,7 @@ import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
 
 const StyledFooter = styled.div<StyledFooterProps>`
-  top: 200em;
+  
   width: 100%;
   background-color: ${(props): string =>
     props.isDay ? colors.HEADER_FOOTER_BLUE : colors.NIGHT_HEADER_COLOR};
