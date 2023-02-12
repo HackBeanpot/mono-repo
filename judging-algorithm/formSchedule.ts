@@ -6,7 +6,7 @@ import {
   Room
 } from './types';
 
-// driver code, takes parsed values and creates random assignments
+// driver code, takes parsed values and creates room and time assignments
 // the judges and hacker teams it take in have already been filtered, and rooms have been filtered for capacity
 export function sortJudgesAndPeople(
   allTimes: string[],
@@ -22,13 +22,13 @@ export function sortJudgesAndPeople(
     hackerOutput: hackerTable
   };
   // judges assignment
-  const judgesPerRoom = Math.ceil(unassignedJudges.length / allJudgingRooms.length);
+  const judgesPerRoom = Math.floor(unassignedJudges.length / allJudgingRooms.length);
   // filter out rooms with less capacity than judgesPerRoom
   const goodRoomsName: string[] = allJudgingRooms.map(room => room.name)
   // populate keys for roomsToJudge outputs
-  allJudgingRooms.map(room => roomsToJudgeOutputs.set(room.name, []));
+  allJudgingRooms.forEach(room => roomsToJudgeOutputs.set(room.name, []));
   for (const room of goodRoomsName) {
-    for (let judgeCount = 0; judgeCount < unassignedJudges.length; judgeCount++) {
+    for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
       if (unassignedJudges.length > 0) {
         const newJudge: JudgeOutput = assignJudgeToRoom(
           unassignedJudges[0],
@@ -42,8 +42,24 @@ export function sortJudgesAndPeople(
         } else {
           roomsToJudgeOutputs.set(room, [newJudge]);
         }
-       // console.log('judges Table')
-       // console.log(judgesTable)
+      }
+    }
+  }
+  for (const room of goodRoomsName) {
+    for (let judgeCount = 0; judgeCount < judgesPerRoom; judgeCount++) {
+      if (unassignedJudges.length > 0) {
+        const newJudge: JudgeOutput = assignJudgeToRoom(
+          unassignedJudges[0],
+          room
+        );
+        unassignedJudges.splice(0, 1);
+        judgesTable.push(newJudge); // we mutate this later
+        // add to the mapping of room number to judges
+        if (roomsToJudgeOutputs.has(room)) {
+          roomsToJudgeOutputs.get(room)!.push(newJudge);
+        } else {
+          roomsToJudgeOutputs.set(room, [newJudge]);
+        }
       }
     }
   }
@@ -57,8 +73,6 @@ export function sortJudgesAndPeople(
         if (unassignedTeams.length === 0) {
           break;
         }
-        // select a random team to sort to current room
-       // const teamToAssignIdx = Math.floor(Math.random() * unassignedJudges.length + 1);
         const teamToAssign = unassignedTeams.splice(0, 1).at(0)!;
         const hackerOutput: HackerOutput = assignTeamToTime(
           timeSlot,
@@ -77,7 +91,6 @@ export function sortJudgesAndPeople(
   return finalOutput;
 }
 
-
 // returns one hackertable entry
 // mutates every single JudgeOutput the map maps to
 // return HackerOutput object, mutates the judge passed in
@@ -91,11 +104,8 @@ function assignTeamToTime(
   for (const judgeOutput of judgesInRoom) {
     judgeOutput.time = timeSlot;
     judgeOutput.project = hackerTeam.name;
-    judgeOutput.devPostLink = hackerTeam.devpostLink;
   }
   const judgeNames: string[] = judgesInRoom.map(judgeOutput => judgeOutput.judge);
- // console.log('judgeNames')
- // console.log(judgeNames)
   const hackerOutput: HackerOutput = {
     project: hackerTeam.name,
     time: timeSlot,
@@ -112,8 +122,6 @@ function assignJudgeToRoom(judge: string, room: string): JudgeOutput {
     room: room,
     judge: judge,
     project: '',
-    devPostLink: '',
-    inPersonDemo: true,
     time: ''
   };
   return newJudge;
