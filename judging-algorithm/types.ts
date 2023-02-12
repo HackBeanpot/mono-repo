@@ -22,8 +22,6 @@ export type JudgeOutput = {
   judge: string, 
   time: string,
   project: string, 
-  devPostLink: string, 
-  inPersonDemo: boolean, 
   room: string
 }
 

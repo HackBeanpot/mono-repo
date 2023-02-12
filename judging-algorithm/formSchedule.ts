@@ -86,7 +86,6 @@ function assignTeamToTime(
   for (const judgeOutput of judgesInRoom) {
     judgeOutput.time = timeSlot;
     judgeOutput.project = hackerTeam.name;
-    judgeOutput.devPostLink = hackerTeam.devpostLink;
   }
   const judgeNames: string[] = judgesInRoom.map(judgeOutput => judgeOutput.judge);
   const hackerOutput: HackerOutput = {
@@ -105,8 +104,6 @@ function assignJudgeToRoom(judge: string, room: string): JudgeOutput {
     room: room,
     judge: judge,
     project: '',
-    devPostLink: '',
-    inPersonDemo: true,
     time: ''
   };
   return newJudge;
