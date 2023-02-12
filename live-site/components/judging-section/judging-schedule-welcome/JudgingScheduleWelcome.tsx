@@ -78,9 +78,6 @@ const JudgingScheduleWelcome: React.FC<JudgingScheduleWelcomeProps> = ({
         {personSelected !== 'Select your name' && (
           <StyledJudgeP>Room: {room}</StyledJudgeP>
         )}
-        {personSelected !== 'Select your name' && (
-          <JudgingScheduleTable headers={headers} rows={curRows} />
-        )}
       </StyledJudgingScheduleSection>
     </div>
   );
