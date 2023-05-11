@@ -55,6 +55,14 @@ const NonDesktopTexts: React.FC = () => {
           </EventsLocationP>
         </StyledCybersecurityLocationContainer>
       </StyledPastEventsBox>
+
+      <StyledPastEventsBox>
+        <StyledTextContainer>
+          <EventsHeader>
+            No events to display
+          </EventsHeader>
+        </StyledTextContainer>
+      </StyledPastEventsBox>
     </>
   );
 };
