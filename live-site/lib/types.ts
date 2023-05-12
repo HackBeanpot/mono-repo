@@ -73,6 +73,7 @@ export interface EventScheduleTabProps {
 
 export interface StyledTabTitleWrapperProps {
   isSelected: boolean;
+  isLastIndex?: boolean;
 }
 export interface EventItemTagProps {
   tag: string;

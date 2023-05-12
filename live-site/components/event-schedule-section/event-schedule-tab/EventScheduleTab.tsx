@@ -6,6 +6,7 @@ import {
 } from '../../../lib/types';
 import { useAirtableApi } from '../../../src/hooks/useAirtable';
 import EventItem from '../event-item/EventItem';
+import { EventDate } from '../EventScheduleMockData';
 
 import {
   StyledTabTitleWrapper,
@@ -82,6 +83,7 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
             {tabs.tabs.map((tab, index) => (
               <StyledTabTitleWrapper
                 isSelected={activeTab === index}
+                isLastIndex={index === tabs.tabs.length - 1}
                 key={`event-tab-${index}`}
                 onClick={(): void => setActiveTabIndex(index)}
               >
