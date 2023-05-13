@@ -4,7 +4,8 @@ import {
   EventsPBolded,
   EventsSubHeader,
   EventsP,
-  StyledPastEventsBox,
+  // StyledPastEventsBox,
+  StyledEventsBox,
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
@@ -15,7 +16,7 @@ import {
 const DesktopTexts: React.FC = () => {
   return (
     <StyledDesktopTextsContainer>
-      <StyledPastEventsBox>
+      {/* <StyledPastEventsBox>
         <StyledTextContainer>
           <TextLeftContainer>
             <EventsHeader>
@@ -63,15 +64,15 @@ const DesktopTexts: React.FC = () => {
             West Village H 366
           </EventsLocationP>
         </StyledCybersecurityLocationContainer>
-      </StyledPastEventsBox>
+      </StyledPastEventsBox> */}
 
-      <StyledPastEventsBox>
+      <StyledEventsBox>
         <StyledTextContainer>
           <EventsHeader>
             No events to display
           </EventsHeader>
         </StyledTextContainer>
-      </StyledPastEventsBox>
+      </StyledEventsBox>
     </StyledDesktopTextsContainer>
   );
 };
