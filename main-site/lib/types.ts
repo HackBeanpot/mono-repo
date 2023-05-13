@@ -38,6 +38,10 @@ export interface TestimonialCardProps {
   currentIndex: number;
 }
 
+export interface StyledTestimonialCardQuoteProps {
+  quote: string;
+}
+
 export interface LeftOrRightTestimonialCardProps {
   testimonial: TestimonialData;
 }

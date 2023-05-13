@@ -50,11 +50,11 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
       : `${colors.BUTTON_DARK_GREEN}`};
   height: 16em;
   cursor: pointer;
-  box-shadow: ${(StyledTabTitleWrapperProps): any =>
+  box-shadow: ${(StyledTabTitleWrapperProps): string =>
     StyledTabTitleWrapperProps.isLastIndex
       ? ``
       : `0px 4px 4px rgba(0, 0, 0, 0.25);`};
-      
+
   @media ${max.tablet} {
     padding-top: 0em;
     width: 50em;

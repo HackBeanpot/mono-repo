@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P } from '../../../../shared-ui/style/typography';
+import { StyledTestimonialCardQuoteProps } from '../../../lib/types';
 
 const StyledTestimonialCardContainer = styled.div`
   overflow: hidden;
@@ -54,8 +55,12 @@ const StyledTestimonialCardYear = styled(P)`
   margin-bottom: 0.4em;
 `;
 
-const StyledTestimonialCardQuote = styled(P)`
-  font-size: 0.85em;
+const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
+  font-size: ${(StyledTestimonialCardQuoteProps): string => 
+    StyledTestimonialCardQuoteProps.quote ?
+    `calc(${StyledTestimonialCardQuoteProps.quote.length}/102em)` : `0.85em`}
+    ;
+
   letter-spacing: 0.05em;
 
   @media ${max.tablet} {
