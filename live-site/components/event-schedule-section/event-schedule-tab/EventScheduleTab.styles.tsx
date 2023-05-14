@@ -3,6 +3,7 @@ import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { P } from '../../../../shared-ui/style/typography';
 import { StyledTabTitleWrapperProps } from '../../../lib/types';
+import { EventScheduleTabProps } from '../../../lib/types';
 
 const StyledEventScheduleTabsContainer = styled.div`
   text-align: center;
@@ -49,7 +50,11 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
       : `${colors.BUTTON_DARK_GREEN}`};
   height: 16em;
   cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: ${(StyledTabTitleWrapperProps): string =>
+    StyledTabTitleWrapperProps.isLastIndex
+      ? ``
+      : `0px 4px 4px rgba(0, 0, 0, 0.25);`};
+
   @media ${max.tablet} {
     padding-top: 0em;
     width: 50em;

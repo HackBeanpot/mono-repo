@@ -26,7 +26,7 @@ const LeftOrRightTestimonialCard: React.FC<LeftOrRightTestimonialCardProps> = ({
           {testimonial.year}
         </StyledTestimonialCardYear>
 
-        <StyledTestimonialCardQuote>
+        <StyledTestimonialCardQuote quote={testimonial.quote}>
           {testimonial.quote}
         </StyledTestimonialCardQuote>
       </StyledTestimonialCardBox>

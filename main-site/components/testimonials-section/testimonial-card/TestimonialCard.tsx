@@ -18,18 +18,23 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   currentIndex
 }) => {
   const isSelected = currentIndex == id;
-  return (
-    isSelected && (
+
+  if (isSelected) {
+    return (
       <StyledTestimonialCardContainer>
         <StyledTestimonialCardBox>
           <StyledTestimonialCardImage src={getImage(author)} />
           <StyledTestimonialCardAuthor>{author}</StyledTestimonialCardAuthor>
           <StyledTestimonialCardYear>{year}</StyledTestimonialCardYear>
-          <StyledTestimonialCardQuote>{quote}</StyledTestimonialCardQuote>
+          <StyledTestimonialCardQuote quote={quote} >{quote}</StyledTestimonialCardQuote>
         </StyledTestimonialCardBox>
       </StyledTestimonialCardContainer>
     )
-  );
+  } else {
+    return null;
+  };
+
 };
+
 
 export default TestimonialCard;

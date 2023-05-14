@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P } from '../../../../shared-ui/style/typography';
+import { StyledTestimonialCardQuoteProps } from '../../../lib/types';
 
 const StyledTestimonialCardContainer = styled.div`
   overflow: hidden;
@@ -54,16 +55,44 @@ const StyledTestimonialCardYear = styled(P)`
   margin-bottom: 0.4em;
 `;
 
-const StyledTestimonialCardQuote = styled(P)`
-  font-size: 0.85em;
+const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
+  font-size: ${(StyledTestimonialCardQuoteProps): string => 
+    StyledTestimonialCardQuoteProps.quote 
+      ? StyledTestimonialCardQuoteProps.quote.length < 230
+          ? `calc(${StyledTestimonialCardQuoteProps.quote.length/105}em)` // raisa
+          : StyledTestimonialCardQuoteProps.quote.length < 300
+              ? `calc(${StyledTestimonialCardQuoteProps.quote.length/220}em)` // karyna
+              : StyledTestimonialCardQuoteProps.quote.length < 370
+                ? `calc(${StyledTestimonialCardQuoteProps.quote.length/440}em)` //spencer
+                : `calc(${StyledTestimonialCardQuoteProps.quote.length/460}em)` //jimin
+      : `0.85em`};
+
   letter-spacing: 0.05em;
 
   @media ${max.tablet} {
-    font-size: 0.8em;
+    font-size: ${(StyledTestimonialCardQuoteProps): string => 
+      StyledTestimonialCardQuoteProps.quote 
+        ? StyledTestimonialCardQuoteProps.quote.length < 230
+            ? `calc(${StyledTestimonialCardQuoteProps.quote.length/105}em)` // raisa
+            : StyledTestimonialCardQuoteProps.quote.length < 300
+                ? `calc(${StyledTestimonialCardQuoteProps.quote.length/226}em)` // karyna
+                : StyledTestimonialCardQuoteProps.quote.length < 370
+                  ? `calc(${StyledTestimonialCardQuoteProps.quote.length/415}em)` //spencer
+                  : `calc(${StyledTestimonialCardQuoteProps.quote.length/473}em)` //jimin
+        : `0.85em`};
   }
 
   @media ${max.tabletXs} {
-    font-size: 0.65em;
+    font-size: ${(StyledTestimonialCardQuoteProps): string => 
+    StyledTestimonialCardQuoteProps.quote 
+      ? StyledTestimonialCardQuoteProps.quote.length < 230
+          ? `calc(${StyledTestimonialCardQuoteProps.quote.length/125}em)` // raisa
+          : StyledTestimonialCardQuoteProps.quote.length < 300
+              ? `calc(${StyledTestimonialCardQuoteProps.quote.length/256}em)` // karyna
+              : StyledTestimonialCardQuoteProps.quote.length < 370
+                ? `calc(${StyledTestimonialCardQuoteProps.quote.length/488}em)` //spencer
+                : `calc(${StyledTestimonialCardQuoteProps.quote.length/520}em)` //jimin
+      : `0.85em`};
   }
 `;
 
