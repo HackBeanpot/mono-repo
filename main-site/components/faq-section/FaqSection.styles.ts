@@ -15,7 +15,7 @@ const StyledCactus = styled.img`
   top: 0.1em;
   left: 1em;
 
-  @media ${max.tablet} {
+  @media ${max.desktop} {
     width: 13em;
     top: -1em;
     display: none;
