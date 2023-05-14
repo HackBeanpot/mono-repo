@@ -1,16 +1,16 @@
 import React from 'react';
 import {
   EventsHeader,
-  EventsPBolded,
-  EventsSubHeader,
-  EventsP,
+  // EventsPBolded,
+  // EventsSubHeader,
+  // EventsP,
   // StyledPastEventsBox,
   StyledEventsBox,
   StyledTextContainer,
-  EventsLocationP,
-  TextLeftContainer,
+  // EventsLocationP,
+  // TextLeftContainer,
   StyledDesktopTextsContainer,
-  StyledCybersecurityLocationContainer
+  // StyledCybersecurityLocationContainer
 } from '../EventsCalendarSection.styles';
 
 const DesktopTexts: React.FC = () => {
