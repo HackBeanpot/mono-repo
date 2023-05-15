@@ -1,21 +1,22 @@
 import React from 'react';
 import {
   EventsHeader,
-  EventsPBolded,
-  EventsSubHeader,
-  EventsP,
-  StyledPastEventsBox,
+  // EventsPBolded,
+  // EventsSubHeader,
+  // EventsP,
+  // StyledPastEventsBox,
+  StyledEventsBox,
   StyledTextContainer,
-  EventsLocationP,
-  TextLeftContainer,
+  // EventsLocationP,
+  // TextLeftContainer,
   StyledDesktopTextsContainer,
-  StyledCybersecurityLocationContainer
+  // StyledCybersecurityLocationContainer
 } from '../EventsCalendarSection.styles';
 
 const DesktopTexts: React.FC = () => {
   return (
     <StyledDesktopTextsContainer>
-      <StyledPastEventsBox>
+      {/* <StyledPastEventsBox>
         <StyledTextContainer>
           <TextLeftContainer>
             <EventsHeader>
@@ -63,7 +64,15 @@ const DesktopTexts: React.FC = () => {
             West Village H 366
           </EventsLocationP>
         </StyledCybersecurityLocationContainer>
-      </StyledPastEventsBox>
+      </StyledPastEventsBox> */}
+
+      <StyledEventsBox>
+        <StyledTextContainer>
+          <EventsHeader>
+            No events to display
+          </EventsHeader>
+        </StyledTextContainer>
+      </StyledEventsBox>
     </StyledDesktopTextsContainer>
   );
 };
