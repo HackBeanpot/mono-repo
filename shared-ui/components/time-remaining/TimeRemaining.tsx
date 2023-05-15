@@ -30,16 +30,24 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
     const interval = setInterval(() => {
       const now = new Date();
       const difference = target.getTime() - now.getTime();
-      const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-      setDays(d);
-      const h = Math.floor(
-        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      setHours(h);
-      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      setMinutes(m);
-      const s = Math.floor((difference % (1000 * 60)) / 1000);
-      setSeconds(s);
+
+      if (difference <= 0) {
+        setDays(0);
+        setHours(0);
+        setMinutes(0);
+        setSeconds(0);
+      } else {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        setDays(days);
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        setHours(hours);
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        setMinutes(minutes);
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        setSeconds(seconds);
+      }  
     }, 1000);
 
     return () => clearInterval(interval);
@@ -52,7 +60,7 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
         {timeUnit.map((curr, index) => (
           <div key={`${curr.text}-${index}`}>
             <StyledTimeRemainingText>
-              {curr.text} {curr.label === 'Seconds' ? '' : ':'}
+              {curr.text === 0 ? '00' : curr.text} {curr.label === 'Seconds' ? '' : ':'}
             </StyledTimeRemainingText>
             <StyledTimeRemainingLabel>{curr.label}</StyledTimeRemainingLabel>
           </div>
