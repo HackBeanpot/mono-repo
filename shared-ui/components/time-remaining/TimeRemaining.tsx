@@ -37,16 +37,16 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
         setMinutes(0);
         setSeconds(0);
       } else {
-        const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-        setDays(d);
-        const h = Math.floor(
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        setDays(days);
+        const hours = Math.floor(
           (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
-        setHours(h);
-        const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        setMinutes(m);
-        const s = Math.floor((difference % (1000 * 60)) / 1000);
-        setSeconds(s);
+        setHours(hours);
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        setMinutes(minutes);
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        setSeconds(seconds);
       }  
     }, 1000);
 
