@@ -13,7 +13,7 @@ const FeedbackJoinCoreSection: React.FC = () => {
       <StyledColumn>
         <StyledColumnTitle>Send us your feedback</StyledColumnTitle>
         <StyledColumnText>
-          We hope you{"'"}re having an awesome time at Camp HackBeanpot! We{"'"}
+          We hope you{"'"}re having an awesome time at HackBeanpot Desert Exploration! We{"'"}
           d really appreciate it if you could share your thoughts in our Event
           Feedback Form below so we can continue to make HackBeanpot a great
           experience for all attendees.

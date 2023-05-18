@@ -25,6 +25,7 @@ const StyledEventsContainer = styled.div`
 
 const StyledEventsBox = styled.div`
   border-radius: 2em;
+  
   background-color: ${colors.BUTTON_DARK_GREEN};
   position: relative;
   flex-direction: column;
@@ -48,8 +49,15 @@ const StyledPastEventsBox = styled(StyledEventsBox)`
 const StyledTextContainer = styled.div`
   display: flex;
   margin: 2em;
+  margin: auto;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  
+  
+  
+  
   @media ${max.tablet} {
-    margin: 1.5em;
+    margin: auto;
   }
   @media ${max.tabletSm} {
     padding-left: 1em;
@@ -77,6 +85,7 @@ const StyledCybersecurityLocationContainer = styled.div`
 const StyledEventsCalendar = styled.div`
   border-radius: 2em;
   width: 60%;
+  
   background-color: ${colors.BUTTON_GREEN};
   position: relative;
   @media ${max.tabletLg} {
@@ -126,9 +135,11 @@ const EventsHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   line-height: 1.2em;
   letter-spacing: 0.08em;
+    
   font-size: 1.7em;
   @media ${max.tabletSm} {
     font-size: 1em;
+
   }
   @media ${max.mobile} {
     font-size: 0.6em;
@@ -170,6 +181,9 @@ const EventsLocationP = styled(P)`
     bottom: 1.5em;
   }
 `;
+
+
+
 
 export {
   StyledSectionContainer,
