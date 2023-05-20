@@ -2,69 +2,46 @@ import React from 'react';
 import {
   EventsHeader,
   EventsSubHeader,
-  // StyledPastEventsBox,
   StyledEventsBox,
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
-  StyledCybersecurityLocationContainer
+  StyledCybersecurityLocationContainer,
+  EventsPBolded,
+  EventsP,
+  StyledDesktopTextsContainer
 } from '../EventsCalendarSection.styles';
+import { eventsCalendarData } from '../../../lib/data';
+import { EventsCalendarData } from '../../../lib/types';
 
 const NonDesktopTexts: React.FC = () => {
+  const events: EventsCalendarData[] = eventsCalendarData;
+  let CurrentDate = new Date();
+
   return (
-    <>
-      {/* <StyledPastEventsBox>
-        <StyledTextContainer>
-          <TextLeftContainer>
-            <EventsHeader>
-              MiniHacks Workshop #1 <br />
-              10/16 1:30pm-3pm
-            </EventsHeader>
-            <EventsSubHeader>
-              Intro to HTML, CSS, and JavaScript
-            </EventsSubHeader>
-            <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
-            <br />
-          </TextLeftContainer>
-          <EventsLocationP>
-            Northeastern University <br />
-            Shillman Hall 210
-          </EventsLocationP>
-        </StyledTextContainer>
-      </StyledPastEventsBox>
-
-      <StyledPastEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>
-            MiniHacks Workshop #2 <br />
-            10/16 10am-12:30pm <br />
-            Intro to React.js
-          </EventsHeader>
-        </StyledTextContainer>
-      </StyledPastEventsBox>
-
-      <StyledPastEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>
-            Cybersecurity Workshop + Minihack -- 1/15 12pm-3pm
-          </EventsHeader>
-        </StyledTextContainer>
-        <StyledCybersecurityLocationContainer>
-          <EventsLocationP>
-            Northeastern University <br />
-            West Village H 366
-          </EventsLocationP>
-        </StyledCybersecurityLocationContainer>
-      </StyledPastEventsBox> */}
-
-      <StyledEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>
-            No events to display
-          </EventsHeader>
-        </StyledTextContainer>
-      </StyledEventsBox>
-    </>
+    <StyledDesktopTextsContainer>
+      {events.map((event) => (
+        <StyledEventsBox elapsedEvent = {CurrentDate > event.date}>
+          <StyledTextContainer>
+            <TextLeftContainer>
+              <EventsHeader>
+                {event.title} -- {event.date.getMonth()}/{event.date.getDate()} {event.time}
+              </EventsHeader>
+              {event.subtitle && <EventsSubHeader>{event.subtitle}</EventsSubHeader>}
+              {event.punchline && <EventsPBolded>{event.punchline}</EventsPBolded>}
+              <br/>
+              {event.description && <EventsP>{event.description}</EventsP>}
+              {event.prerequisites && <EventsSubHeader>Prerequisites: {event.prerequisites}</EventsSubHeader>}
+            </TextLeftContainer>
+            <EventsLocationP>
+              {event.location}<br/>
+              {event.room}
+            </EventsLocationP>
+            
+          </StyledTextContainer>
+        </StyledEventsBox>
+      ))}
+    </StyledDesktopTextsContainer>
   );
 };
 

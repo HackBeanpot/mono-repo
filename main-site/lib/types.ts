@@ -62,9 +62,14 @@ export interface StyledSponsorsImageProps {
 }
 
 export interface EventsCalendarData {
-  events_header: string;
-  events_subheader: string;
-  events_p_bolded: string;
-  prerequisites: string;
+  title: string;
+  subtitle?: string;
+  punchline?: string;
+  description?: string;
+  prerequisites?: string;
+  date: Date;
+  time: string;
+  location?: string;
+  room?: string;
 }
 
