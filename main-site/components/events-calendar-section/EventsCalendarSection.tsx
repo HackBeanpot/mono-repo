@@ -12,7 +12,6 @@ import {
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import DesktopTexts from './texts/DesktopTexts';
-import NonDesktopTexts from './texts/NonDesktopTexts';
 
 const EventsCalendarSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
@@ -23,8 +22,7 @@ const EventsCalendarSection: React.FC = () => {
         <StyledEventsContainer>
           {isDesktop && <StyledEventsGrass src={EventsGrass} />}
           <StyledEventsCalendar>
-            {isDesktop && <DesktopTexts />}
-            {!isDesktop && <NonDesktopTexts />}
+            <DesktopTexts />
           </StyledEventsCalendar>
           {isDesktop && <StyledEventsCactus src={EventsCactus} />}
         </StyledEventsContainer>
