@@ -8,20 +8,18 @@ import {
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
-  StyledDesktopTextsContainer,
-  StyledCybersecurityLocationContainer
+  StyledDesktopTextsContainer
 } from '../EventsCalendarSection.styles';
 import { EventsCalendarData } from '../../../lib/types';
 import { eventsCalendarData } from '../../../lib/data';
 
 const DesktopTexts: React.FC = () => {
-  const events: EventsCalendarData[] = eventsCalendarData;
-  let CurrentDate = new Date();
+  const currentDate = new Date();
 
   return (
     <StyledDesktopTextsContainer>
-      {events.map((event) => (
-        <StyledEventsBox elapsedEvent = {CurrentDate > event.date}>
+      {eventsCalendarData.map((event) => (
+        <StyledEventsBox elapsedEvent = {currentDate > event.date}>
           <StyledTextContainer>
             <TextLeftContainer>
               <EventsHeader>

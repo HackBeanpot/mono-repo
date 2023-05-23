@@ -27,7 +27,7 @@ const StyledEventsContainer = styled.div`
 const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
   border-radius: 2em;
   
-  background-color: ${(props) => (props.elapsedEvent ? colors.TEXT_BROWN : colors.BUTTON_DARK_GREEN)};
+  background-color: ${(props): string => (props.elapsedEvent ? colors.TEXT_BROWN : colors.BUTTON_DARK_GREEN)};
   position: relative;
   flex-direction: column;
   display: flex;
@@ -68,13 +68,6 @@ const TextLeftContainer = styled.div`
   width: 95%;
   @media ${max.tabletSm} {
     width: 93%;
-  }
-`;
-
-const StyledCybersecurityLocationContainer = styled.div`
-  padding-top: 4em;
-  @media ${max.tabletSm} {
-    padding-top: 1em;
   }
 `;
 
@@ -196,6 +189,5 @@ export {
   EventsLocationP,
   TextLeftContainer,
   StyledH2,
-  StyledDesktopTextsContainer,
-  StyledCybersecurityLocationContainer
+  StyledDesktopTextsContainer
 };

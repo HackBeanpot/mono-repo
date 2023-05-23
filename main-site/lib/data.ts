@@ -169,7 +169,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: "Putting the FUN in Fundamentals of Web Development",
     description: "Create your very first website with HTML, CSS, and JavaScript. Perfect for beginners who are looking to get started on their web development journey!",
     prerequisites: "NONE",
-    date: new Date(2022, 10, 16),
+    date: new Date(2023, 10, 16),
     time: "1:30pm-3pm",
     location: "Northeastern University",
     room: "Shillman Hall 210",
