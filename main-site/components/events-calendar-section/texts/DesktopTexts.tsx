@@ -1,78 +1,44 @@
 import React from 'react';
 import {
   EventsHeader,
-  // EventsPBolded,
-  // EventsSubHeader,
-  // EventsP,
-  // StyledPastEventsBox,
+  EventsPBolded,
+  EventsSubHeader,
+  EventsP,
   StyledEventsBox,
   StyledTextContainer,
-  // EventsLocationP,
-  // TextLeftContainer,
-  StyledDesktopTextsContainer,
-  // StyledCybersecurityLocationContainer
+  EventsLocationP,
+  TextLeftContainer,
+  StyledDesktopTextsContainer
 } from '../EventsCalendarSection.styles';
+import { EventsCalendarData } from '../../../lib/types';
+import { eventsCalendarData } from '../../../lib/data';
 
 const DesktopTexts: React.FC = () => {
+  const currentDate = new Date();
+
   return (
     <StyledDesktopTextsContainer>
-      {/* <StyledPastEventsBox>
-        <StyledTextContainer>
-          <TextLeftContainer>
-            <EventsHeader>
-              MiniHacks Workshop #1 -- 10/16 1:30pm-3pm
-            </EventsHeader>
-            <EventsSubHeader>
-              Intro to HTML, CSS, and JavaScript
-            </EventsSubHeader>
-            <EventsPBolded>
-              Putting the FUN in Fundamentals of Web Development
-            </EventsPBolded>
-            <br />
-            <EventsP>
-              Create your very first website with HTML, CSS, and JavaScript.
-              Perfect for beginners who are looking to get started on their web
-              development journey!
-            </EventsP>
-            <EventsSubHeader>Prerequisites: NONE!</EventsSubHeader>
-          </TextLeftContainer>
-          <EventsLocationP>
-            Northeastern University <br />
-            Shillman Hall 210
-          </EventsLocationP>
-        </StyledTextContainer>
-      </StyledPastEventsBox>
-
-      <StyledPastEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>
-            MiniHacks Workshop #2 -- 10/16 10am-12:30pm <br />
-            Intro to React.js
-          </EventsHeader>
-        </StyledTextContainer>
-      </StyledPastEventsBox>
-
-      <StyledPastEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>
-            Cybersecurity Workshop + Minihack -- 1/15 12pm-3pm
-          </EventsHeader>
-        </StyledTextContainer>
-        <StyledCybersecurityLocationContainer>
-          <EventsLocationP>
-            Northeastern University <br />
-            West Village H 366
-          </EventsLocationP>
-        </StyledCybersecurityLocationContainer>
-      </StyledPastEventsBox> */}
-
-      <StyledEventsBox>
-        <StyledTextContainer>
-          <EventsHeader>
-            No events to display
-          </EventsHeader>
-        </StyledTextContainer>
-      </StyledEventsBox>
+      {eventsCalendarData.map((event) => (
+        <StyledEventsBox elapsedEvent = {currentDate > event.date}>
+          <StyledTextContainer>
+            <TextLeftContainer>
+              <EventsHeader>
+                {event.title} -- {event.date.getMonth()}/{event.date.getDate()} {event.time}
+              </EventsHeader>
+              {event.subtitle && <EventsSubHeader>{event.subtitle}</EventsSubHeader>}
+              {event.punchline && <EventsPBolded>{event.punchline}</EventsPBolded>}
+              <br/>
+              {event.description && <EventsP>{event.description}</EventsP>}
+              {event.prerequisites && <EventsSubHeader>Prerequisites: {event.prerequisites}</EventsSubHeader>}
+            </TextLeftContainer>
+            <EventsLocationP>
+              {event.location}<br/>
+              {event.room}
+            </EventsLocationP>
+            
+          </StyledTextContainer>
+        </StyledEventsBox>
+      ))}
     </StyledDesktopTextsContainer>
   );
 };

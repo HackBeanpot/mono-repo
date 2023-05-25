@@ -60,3 +60,16 @@ export interface PastProjectData {
 export interface StyledSponsorsImageProps {
   level: string;
 }
+
+export interface EventsCalendarData {
+  title: string;
+  subtitle?: string;
+  punchline?: string;
+  description?: string;
+  prerequisites?: string;
+  date: Date;
+  time: string;
+  location?: string;
+  room?: string;
+}
+

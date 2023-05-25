@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H2, P } from '../../../shared-ui/style/typography';
+import { eventsCalendarData } from '../../lib/data';
 
 const StyledDesktopTextsContainer = styled.div`
   padding: 1em 0;
@@ -23,10 +24,10 @@ const StyledEventsContainer = styled.div`
   justify-content: center;
 `;
 
-const StyledEventsBox = styled.div`
+const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
   border-radius: 2em;
   
-  background-color: ${colors.BUTTON_DARK_GREEN};
+  background-color: ${(props): string => (props.elapsedEvent ? colors.TEXT_BROWN : colors.BUTTON_DARK_GREEN)};
   position: relative;
   flex-direction: column;
   display: flex;
@@ -42,22 +43,17 @@ const StyledEventsBox = styled.div`
   }
 `;
 
-const StyledPastEventsBox = styled(StyledEventsBox)`
-  background-color: ${colors.TEXT_BROWN};
-`;
-
 const StyledTextContainer = styled.div`
   display: flex;
   margin: 2em;
-  margin: auto;
-  padding-top: 4em;
+  padding-top: 0.5em;
   padding-bottom: 4em;
   
   
   
   
   @media ${max.tablet} {
-    margin: auto;
+    margin: 1.5em;
   }
   @media ${max.tabletSm} {
     padding-left: 1em;
@@ -69,16 +65,9 @@ const StyledTextContainer = styled.div`
 `;
 
 const TextLeftContainer = styled.div`
-  width: 80%;
+  width: 95%;
   @media ${max.tabletSm} {
     width: 93%;
-  }
-`;
-
-const StyledCybersecurityLocationContainer = styled.div`
-  padding-top: 4em;
-  @media ${max.tabletSm} {
-    padding-top: 1em;
   }
 `;
 
@@ -196,11 +185,9 @@ export {
   EventsPBolded,
   EventsP,
   StyledEventsBox,
-  StyledPastEventsBox,
   StyledTextContainer,
   EventsLocationP,
   TextLeftContainer,
   StyledH2,
-  StyledDesktopTextsContainer,
-  StyledCybersecurityLocationContainer
+  StyledDesktopTextsContainer
 };
