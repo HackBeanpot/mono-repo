@@ -37,14 +37,14 @@ const StyledDescriptionTeamCore = styled(P)`
 `;
 
 const StyledImageCore = styled.img`
-  right: 5em;
+  margin-top: 2em;
+  right: 4em;
   margin: auto;
   width: 100%;
-  @media ${min.tablet} {
-    width: 90%;
-  }
   @media ${min.tabletLg} {
-    width: 100%;
+    width: 50%;
+    margin-top: 2.5em;
+    margin-left: 2em;
   }
 `;
 
