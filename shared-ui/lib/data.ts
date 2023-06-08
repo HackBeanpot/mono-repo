@@ -1,32 +1,30 @@
 import { Person, TabInfo, Team, TeamColumnInfo, ToolTipInfo } from './types';
-
-
-import Aaryan from "./images/meet-the-team/aaryan.png";
-import Amanda from "./images/meet-the-team/amanda.png";
-import Alyssa from "./images/meet-the-team/alyssa.png";
-import Aretha from "./images/meet-the-team/aretha.png";
-import Audrey from "./images/meet-the-team/audrey.png";
-import Bayden from "./images/meet-the-team/bayden.png";
-import Crystal from "./images/meet-the-team/crystal.png";
-import Dhivas from "./images/meet-the-team/dhivas.png";
-import Emma from "./images/meet-the-team/emma.png";
-import Helen from "./images/meet-the-team/helen.png";
-import JessSu from "./images/meet-the-team/jessSu.png";
-import JessYu from "./images/meet-the-team/jessYu.png";
-import John from "./images/meet-the-team/jess.png";
-import Karen from "./images/meet-the-team/karen.png";
-import Karyna from "./images/meet-the-team/karyna.png";
-import Katherine from "./images/meet-the-team/katherine.png";
-import Lisa from "./images/meet-the-team/lisa.png";
-import Lucas from "./images/meet-the-team/lucas.png";
-import Luke from "./images/meet-the-team/luke.png";
-import Mandy from "./images/meet-the-team/mandy.png";
-import Mike from "./images/meet-the-team/mike.png";
-import Nelson from "./images/meet-the-team/nelson.png";
-import Nidhi from "./images/meet-the-team/nidhi.png";
-import Onotina from "./images/meet-the-team/onotina.png";
-import Spencer from "./images/meet-the-team/spencer.png";
-import Surbhi from "./images/meet-the-team/surbhi.png";
+import Aaryan from "../../shared-ui/images/meet-the-team/aaryan.png"
+import Amanda from "../../shared-ui/images/meet-the-team/amanda.png";
+import Alyssa from "../../shared-ui/images/meet-the-team/alyssa.png";
+import Aretha from "../../shared-ui/images/meet-the-team/aretha.png";
+import Audrey from "../../shared-ui/images/meet-the-team/audrey.png";
+import Bayden from "../../shared-ui/images/meet-the-team/bayden.png";
+import Crystal from "../../shared-ui/images/meet-the-team/crystal.png";
+import Dhivas from "../../shared-ui/images/meet-the-team/dhivas.png";
+import Emma from "../../shared-ui/images/meet-the-team/emma.png";
+import Helen from "../../shared-ui/images/meet-the-team/helen.png";
+import JessSu from "../../shared-ui/images/meet-the-team/jessSu.png";
+import JessYu from "../../shared-ui/images/meet-the-team/jessYu.png";
+import John from "../../shared-ui/images/meet-the-team/john.png";
+import Karen from "../../shared-ui/images/meet-the-team/karen.png";
+import Karyna from "../../shared-ui/images/meet-the-team/karyna.png";
+import Katherine from "../../shared-ui/images/meet-the-team/katherine.png";
+import Lisa from "../../shared-ui/images/meet-the-team/lisa.png";
+import Lucas from "../../shared-ui/images/meet-the-team/lucas.png";
+import Luke from '../../shared-ui/images/meet-the-team/luke.png';
+import Mandy from "../../shared-ui/images/meet-the-team/mandy.png";
+import Mike from "../../shared-ui/images/meet-the-team/mike.png";
+import Nelson from "../../shared-ui/images/meet-the-team/nelson.png";
+import Nidhi from "../../shared-ui/images/meet-the-team/nidhi.png";
+import Onotina from "../../shared-ui/images/meet-the-team/onotina.png";
+import Spencer from "../../shared-ui/images/meet-the-team/spencer.png";
+import Surbhi from '../../shared-ui/images/meet-the-team/surbhi.png';
 
 
 const team: Team = {
@@ -342,7 +340,7 @@ const audreyToolTip: ToolTipInfo = {
   };
   
   const audrey: Person = {
-    picture: Karen,
+    picture: Audrey,
     toolTipInfo: audreyToolTip
   };
   
