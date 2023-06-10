@@ -78,13 +78,39 @@ const StyledPastProjectsTitle = styled(H2)`
   font-size: 1.5625em;
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
-  margin-left: 1.5em;
 
   @media ${max.tablet} {
     text-align: center;
     color: black;
   }
 `;
+
+const StyledPastProjectsAward = styled(H2)`
+  font-size: 1em;
+  text-align: right;
+  color: ${colors.YELLOW};
+  width: 100%;
+
+  @media ${max.tabletLg} {
+    text-align: left;
+    padding-bottom: 1em;
+  }
+
+  @media ${max.tablet} {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+`;
+
+const StyledPastProjectsTitleAwardContainer = styled.div`
+  display: flex;
+  margin: 0;
+
+  @media ${max.tabletLg} {
+    display: inline;
+  }
+`;
+
 const StyledPastProjectsMembers = styled(P)`
   font-size: 0.8125em;
   color: ${colors.WHITE};
@@ -131,8 +157,7 @@ const StyledPastProjectsPhotos = styled.img`
   }
 
   @media ${max.tabletLg} {
-    height: 12.5em;
-    width: 17.5em;
+    
     position: relative;
   }
 
@@ -141,6 +166,7 @@ const StyledPastProjectsPhotos = styled.img`
   width: 20em;
   height: 13.75em;
   padding-right: 1em;
+  object-fit: contain;
 `;
 
 const StyledFennecFox = styled.img`
@@ -183,5 +209,7 @@ export {
   StyledPastProjectsContainerBottom,
   StyledArrowContainer,
   StyledPastProjectsDiv,
-  StyledViewProjectButtonWrapper
+  StyledViewProjectButtonWrapper,
+  StyledPastProjectsAward,
+  StyledPastProjectsTitleAwardContainer
 };
