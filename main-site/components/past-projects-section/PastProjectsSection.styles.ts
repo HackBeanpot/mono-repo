@@ -3,6 +3,9 @@ import { colors } from '../../../shared-ui/style/colors';
 import { H2, P } from '../../../shared-ui/style/typography';
 import { max } from '../../../shared-ui/lib/responsive';
 import { motion } from 'framer-motion';
+import { ButtonProps } from '../../../shared-ui/lib/types';
+import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
+
 
 const StyledArrowContainer = styled.div`
   display: flex;
@@ -75,6 +78,7 @@ const StyledPastProjectsTitle = styled(H2)`
   font-size: 1.5625em;
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
+  margin-left: 1.5em;
 
   @media ${max.tablet} {
     text-align: center;
@@ -85,7 +89,7 @@ const StyledPastProjectsMembers = styled(P)`
   font-size: 0.8125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
-
+  margin-left: 2.8em;
   @media ${max.tablet} {
   }
 `;
@@ -94,9 +98,15 @@ const StyledPastProjectsDescription = styled(P)`
   font-size: 1.125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
+  margin-left: 2em;
   @media ${max.tablet} {
     color: ${colors.TEXT_BROWN};
+    margin-left: 0em;
   }
+`;
+
+const StyledViewProjectButtonWrapper = styled.div`
+  margin-left: 2em;
 `;
 
 const StyledPastProjectsViewText = styled(P)`
@@ -172,5 +182,6 @@ export {
   StyledPastProjectsInfoContainer,
   StyledPastProjectsContainerBottom,
   StyledArrowContainer,
-  StyledPastProjectsDiv
+  StyledPastProjectsDiv,
+  StyledViewProjectButtonWrapper
 };

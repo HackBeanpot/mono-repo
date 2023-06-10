@@ -137,28 +137,54 @@ export const testimonialSectionData: TestimonialData[] = [
 
 export const pastProjectsData: PastProjectData[] = [
   {
-    title: 'Inky the Black Hole Pet, 2022',
-    members: 'by Rachael Cheung, Euann Gu, Jessica Luo',
+    title: 'SNAPpy, 2023',
+    members: 'by Jacob Kline, Andrew Caplan, Daniel Ostapenko, Emery Jacobowitz',
     description:
-      'Inky is a desktop pet! He can perform different actions: be dragged around, sleep, eat, etc.',
-    btnLink: 'https://devpost.com/software/inky-the-black-hole-pet'
+      'Worked on a combination of front-end and backend features by creating API pipelines which connect to the user interface. In addition to Python, utilized JS, which was new for them.',
+    btnLink: 'https://devpost.com/software/snappy-rb81ku'
   },
 
   {
-    title: 'Swaple, 2022',
-    members: 'by Bob Zheng, Tze Zhe Brandon Lim, Nathan Kim, Daniel Ostapenko',
+    title: 'FreshFarm',
+    members: 'by Kat Dizon, Allen Lin, Julia Lee, Daniel Kamen, Kelly Lau',
     description:
-      'A parody of wordle, but you swap letters from a list of words instead! Try and complete the game in as few moves as possible.',
-    btnLink: 'https://brandonlim8890.github.io/wordle_variation/'
+      "We get really upset seeing so much food going to waste on campus. This got us to think about how food is being wasted all throughout our community, and not just on the table. This project, FreshFarm, focuses on minimizing food waste right at the source. Fresh produce doesn't grow perfectly, so when grocery stores, markets, and restaurants demand perfect produce, 33% of food goes to waste due to small imperfections.",
+    btnLink: 'https://devpost.com/software/freshfarm'
   },
-
+  
   {
-    title: 'Oh Duck!, 2022',
+    title: 'FormFusion',
+    members: 'by Aditya Boddepalli',
+    description:
+      "Our web app leverages the power of AI to analyze and improve your workout routine. Users upload recorded exercise videos, which are processed by the proprietary machine learning API that we wrote. This technology provides instant feedback on form, enabling users to optimize their workouts. The annotated videos, including information about joint angles, are then displayed within the app for easy review and tracking of progress.",
+    btnLink: 'https://devpost.com/software/formfusion'
+  },
+  
+  {
+    title: 'Page 14',
     members:
-      'by Joyce Fang, Samantha Merlino, Victoria Bowen, Sufi Kaur, and Karyna Yen',
+      'by Mandy Rodriques',
     description:
-      "'Oh, Duck!' is a chrome extension that replaces profane words with a duck emoji.",
-    btnLink: 'https://devpost.com/software/oh-duck'
+      'A novel dating app perfectly tailored for our literary-loving folk, focusing on the normalization of "gaga" over books, being blissfully queer, etc Page 14 gives users a safe space to smile.',
+    btnLink: 'https://devpost.com/software/page-14'
+  },
+
+  {
+    title: 'Feed the Desert',
+    members:
+      'by Euann Gu, Mallory Gilligan, Nelson Dong, Chris Wyatt, Danny Rollo, Rachael Cheung and Madeline Zhang',
+    description:
+      "Feed the Desert illustrates a clear, user-friendly data-map highlighting spaces in local communities that can be further developed to provide equitable infrastructure and access to necessary resources.",
+    btnLink: 'https://devpost.com/software/feed-the-desert'
+  },
+
+  {
+    title: 'WiseWallet',
+    members:
+      'by Alyssa Mui, Justin Pong, Nelson Dong, and Nelson Dong',
+    description:
+      "WiseWallet is a budgeting Chrome Extension designed to help you keep track of your expenses and stop making frivolous online purchases.",
+    btnLink: 'https://devpost.com/software/wisewallet-2iqrl8'
   }
 ];
 

@@ -21,7 +21,8 @@ import {
   StyledPastProjectsInfoContainer,
   StyledCamel,
   StyledArrowContainer,
-  StyledPastProjectsDiv
+  StyledPastProjectsDiv,
+  StyledViewProjectButtonWrapper
 } from './PastProjectsSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
@@ -66,11 +67,13 @@ const PastProjectsSection: React.FC = () => {
                 <StyledPastProjectsDescription>
                   {project.description}
                 </StyledPastProjectsDescription>
-                <PrimaryButton
-                  btnText="View Project"
-                  btnLink={project.btnLink}
-                  newTab
-                />
+                <StyledViewProjectButtonWrapper>
+                    <PrimaryButton
+                      btnText="View Project"
+                      btnLink={project.btnLink}
+                      newTab
+                    />
+                </StyledViewProjectButtonWrapper>
               </StyledPastProjectsInfo>
             </StyledPastProjectsContainer>
           ))}
