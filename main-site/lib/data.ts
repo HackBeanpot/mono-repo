@@ -183,7 +183,7 @@ export const pastProjectsData: PastProjectData[] = [
       'A novel dating app perfectly tailored for our literary-loving folk, focusing on the normalization of "gaga" over books, being blissfully queer, etc Page 14 gives users a safe space to smile.',
     btnLink: 'https://devpost.com/software/page-14',
     image: Page14,
-    award: '🏆  Fun in the Sun'
+    award: '🏆  Fun in the Sun Award'
   },
 
   {
@@ -194,7 +194,7 @@ export const pastProjectsData: PastProjectData[] = [
       "Feed the Desert illustrates a clear, user-friendly data-map highlighting spaces in local communities that can be further developed to provide equitable infrastructure and access to necessary resources.",
     btnLink: 'https://devpost.com/software/feed-the-desert',
     image: FeedTheDesert,
-    award: '🏆  Rookie of the Year'
+    award: '🏆  Rookie of the Year Award'
   },
 
   {
@@ -205,7 +205,7 @@ export const pastProjectsData: PastProjectData[] = [
       "WiseWallet is a budgeting Chrome Extension designed to help you keep track of your expenses and stop making frivolous online purchases.",
     btnLink: 'https://devpost.com/software/wisewallet-2iqrl8',
     image: WiseWallet,
-    award: '🏆  Most Likely to Quest'
+    award: '🏆  Most Likely to Quest Award'
   }
 ];
 

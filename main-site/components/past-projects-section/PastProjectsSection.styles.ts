@@ -3,9 +3,6 @@ import { colors } from '../../../shared-ui/style/colors';
 import { H2, P } from '../../../shared-ui/style/typography';
 import { max } from '../../../shared-ui/lib/responsive';
 import { motion } from 'framer-motion';
-import { ButtonProps } from '../../../shared-ui/lib/types';
-import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-
 
 const StyledArrowContainer = styled.div`
   display: flex;
@@ -78,7 +75,7 @@ const StyledPastProjectsTitle = styled(H2)`
   font-size: 1.5625em;
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
-
+  width: 100%;
   @media ${max.tablet} {
     text-align: center;
     color: black;
@@ -128,6 +125,9 @@ const StyledPastProjectsDescription = styled(P)`
   @media ${max.tablet} {
     color: ${colors.TEXT_BROWN};
     margin-left: 0em;
+    text-align: left;
+    padding-bottom: 2em;
+    letter-spacing: 0.5px;
   }
 `;
 
