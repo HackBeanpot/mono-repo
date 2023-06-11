@@ -7,7 +7,7 @@ import {
 } from './types';
 
 import WiseWallet from '../images/WiseWalletImage.jpg';
-import SNAPpy from '../images/SnaPpyImage.jpg';
+import SNAPpy from '../images/snappyImage.jpg';
 import Page14 from '../images/Page14Image.jpg';
 import FreshFarm from '../images/FreshFarmImage.jpg';
 import FormFusion from '../images/FormFusionImage.jpg';
