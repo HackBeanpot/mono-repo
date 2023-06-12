@@ -34,16 +34,6 @@ import { getLeftOrRight } from '../../lib/utils';
 import { camelBobbing } from './PastProjects.animations';
 
 const PastProjectsSection: React.FC = () => {
-//   function getImage(title: string): string {
-//     if (title === 'Inky the Black Hole Pet, 2022') {
-//       return Inky;
-//     }
-//     if (title === 'Swaple, 2022') {
-//       return Swaple;
-//     }
-//     return Duck;
-//   }
-
   const [currItem, setCurrItem] = useState<PastProjectData>(
     pastProjectsData[0]
   );
@@ -58,7 +48,7 @@ const PastProjectsSection: React.FC = () => {
         {isDesktop &&
           pastProjectsData.map((project) => (
             <StyledPastProjectsContainer key={project.title}>
-              <StyledPastProjectsPhotos src={project.image}/>
+              <StyledPastProjectsPhotos src={project.image} />
               <StyledPastProjectsInfo>
                 <StyledPastProjectsTitleAwardContainer>
                   <StyledPastProjectsTitle>
@@ -75,11 +65,11 @@ const PastProjectsSection: React.FC = () => {
                   {project.description}
                 </StyledPastProjectsDescription>
                 <StyledViewProjectButtonWrapper>
-                    <PrimaryButton
-                      btnText="View Project"
-                      btnLink={project.btnLink}
-                      newTab
-                    />
+                  <PrimaryButton
+                    btnText="View Project"
+                    btnLink={project.btnLink}
+                    newTab
+                  />
                 </StyledViewProjectButtonWrapper>
               </StyledPastProjectsInfo>
             </StyledPastProjectsContainer>
@@ -102,7 +92,7 @@ const PastProjectsSection: React.FC = () => {
               />
 
               <StyledPastProjectsDiv>
-              <StyledPastProjectsTitleAwardContainer>
+                <StyledPastProjectsTitleAwardContainer>
                   <StyledPastProjectsTitle>
                     {currItem.title}
                   </StyledPastProjectsTitle>

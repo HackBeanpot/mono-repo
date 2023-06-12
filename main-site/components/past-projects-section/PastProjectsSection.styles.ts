@@ -13,7 +13,6 @@ const StyledPastProjectsHeader = styled(H2)`
   color: ${colors.BLACK};
   padding-bottom: 0.5em;
   text-align: center;
-
   @media ${max.tablet} {
     padding-bottom: -10em;
   }
@@ -30,7 +29,6 @@ const StyledPastProjectsSection = styled.div`
   margin: auto;
   border-radius: 1.25em;
   height: 100%;
-
   @media ${max.tablet} {
     background-color: transparent;
     text-align: center;
@@ -41,7 +39,6 @@ const StyledPastProjectsContainer = styled.div`
   padding-top: 3em;
   padding-left: 3em;
   padding-bottom: 4em;
-
   @media ${max.tablet} {
     display: absolute;
     padding-left: 0;
@@ -76,6 +73,7 @@ const StyledPastProjectsTitle = styled(H2)`
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
   width: 100%;
+
   @media ${max.tablet} {
     text-align: center;
     color: black;
@@ -113,8 +111,6 @@ const StyledPastProjectsMembers = styled(P)`
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
   margin-left: 2.8em;
-  @media ${max.tablet} {
-  }
 `;
 
 const StyledPastProjectsDescription = styled(P)`
@@ -122,6 +118,7 @@ const StyledPastProjectsDescription = styled(P)`
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
   margin-left: 2em;
+
   @media ${max.tablet} {
     color: ${colors.TEXT_BROWN};
     margin-left: 0em;
@@ -147,6 +144,13 @@ const StyledPastProjectsViewText = styled(P)`
 `;
 
 const StyledPastProjectsPhotos = styled.img`
+  left: 0;
+  float: left;
+  width: 20em;
+  height: 13.75em;
+  padding-right: 1em;
+  object-fit: contain;
+
   @media ${max.tablet} {
     float: none;
     padding-bottom: 1em;
@@ -157,16 +161,8 @@ const StyledPastProjectsPhotos = styled.img`
   }
 
   @media ${max.tabletLg} {
-    
     position: relative;
   }
-
-  left: 0;
-  float: left;
-  width: 20em;
-  height: 13.75em;
-  padding-right: 1em;
-  object-fit: contain;
 `;
 
 const StyledFennecFox = styled.img`
