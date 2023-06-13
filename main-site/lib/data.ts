@@ -146,7 +146,7 @@ export const testimonialSectionData: TestimonialData[] = [
 export const pastProjectsData: PastProjectData[] = [
   {
     title: 'SNAPpy',
-    members: 'by Jacob Kline, Andrew Caplan, Daniel Ostapenko, Emery Jacobowitz',
+    members: 'by Jacob Kline, Andrew Caplan, Daniel Ostapenko, and Emery Jacobowitz',
     description:
       'Worked on a combination of front-end and backend features by creating API pipelines which connect to the user interface. In addition to Python, utilized JS, which was new for them.',
     btnLink: 'https://devpost.com/software/snappy-rb81ku',
@@ -156,7 +156,7 @@ export const pastProjectsData: PastProjectData[] = [
 
   {
     title: 'FreshFarm',
-    members: 'by Kat Dizon, Allen Lin, Julia Lee, Daniel Kamen, Kelly Lau',
+    members: 'by Kat Dizon, Allen Lin, Julia Lee, Daniel Kamen, and Kelly Lau',
     description:
       "We get really upset seeing so much food going to waste on campus. This got us to think about how food is being wasted all throughout our community, and not just on the table. This project, FreshFarm, focuses on minimizing food waste right at the source. Fresh produce doesn't grow perfectly, so when grocery stores, markets, and restaurants demand perfect produce, 33% of food goes to waste due to small imperfections.",
     btnLink: 'https://devpost.com/software/freshfarm',
@@ -189,7 +189,7 @@ export const pastProjectsData: PastProjectData[] = [
   {
     title: 'Feed the Desert',
     members:
-      'by Euann Gu, Mallory Gilligan, Nelson Dong, Chris Wyatt, Danny Rollo, Rachael Cheung and Madeline Zhang',
+      'by Euann Gu, Mallory Gilligan, Chris Wyatt, Danny Rollo, Rachael Cheung and Madeline Zhang',
     description:
       "Feed the Desert illustrates a clear, user-friendly data-map highlighting spaces in local communities that can be further developed to provide equitable infrastructure and access to necessary resources.",
     btnLink: 'https://devpost.com/software/feed-the-desert',
@@ -200,7 +200,7 @@ export const pastProjectsData: PastProjectData[] = [
   {
     title: 'WiseWallet',
     members:
-      'by Alyssa Mui, Justin Pong, Nelson Dong, and Nelson Dong',
+      'by Alyssa Mui, Justin Pong, and Nelson Dong',
     description:
       "WiseWallet is a budgeting Chrome Extension designed to help you keep track of your expenses and stop making frivolous online purchases.",
     btnLink: 'https://devpost.com/software/wisewallet-2iqrl8',
