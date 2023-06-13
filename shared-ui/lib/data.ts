@@ -1,27 +1,31 @@
 import { Person, TabInfo, Team, TeamColumnInfo, ToolTipInfo } from './types';
-import Judy from '../../shared-ui/images/meet-the-team/judy.png';
-import Dean from '../../shared-ui/images/meet-the-team/dean.png';
+import Aaryan from "../../shared-ui/images/meet-the-team/aaryan.png"
+import Amanda from "../../shared-ui/images/meet-the-team/amanda.png";
+import Alyssa from "../../shared-ui/images/meet-the-team/alyssa.png";
+import Aretha from "../../shared-ui/images/meet-the-team/aretha.png";
+import Audrey from "../../shared-ui/images/meet-the-team/audrey.png";
+import Bayden from "../../shared-ui/images/meet-the-team/bayden.png";
+import Crystal from "../../shared-ui/images/meet-the-team/crystal.png";
+import Dhivas from "../../shared-ui/images/meet-the-team/dhivas.png";
+import Emma from "../../shared-ui/images/meet-the-team/emma.png";
+import Helen from "../../shared-ui/images/meet-the-team/helen.png";
+import JessSu from "../../shared-ui/images/meet-the-team/jessSu.png";
+import JessYu from "../../shared-ui/images/meet-the-team/jessYu.png";
+import John from "../../shared-ui/images/meet-the-team/john.png";
+import Karen from "../../shared-ui/images/meet-the-team/karen.png";
+import Karyna from "../../shared-ui/images/meet-the-team/karyna.png";
+import Katherine from "../../shared-ui/images/meet-the-team/katherine.png";
+import Lisa from "../../shared-ui/images/meet-the-team/lisa.png";
+import Lucas from "../../shared-ui/images/meet-the-team/lucas.png";
+import Luke from '../../shared-ui/images/meet-the-team/luke.png';
+import Mandy from "../../shared-ui/images/meet-the-team/mandy.png";
+import Mike from "../../shared-ui/images/meet-the-team/mike.png";
+import Nelson from "../../shared-ui/images/meet-the-team/nelson.png";
+import Nidhi from "../../shared-ui/images/meet-the-team/nidhi.png";
+import Onotina from "../../shared-ui/images/meet-the-team/onotina.png";
+import Spencer from "../../shared-ui/images/meet-the-team/spencer.png";
 import Surbhi from '../../shared-ui/images/meet-the-team/surbhi.png';
-import Mike from '../../shared-ui/images/meet-the-team/mike.png';
-import Dhivas from '../../shared-ui/images/meet-the-team/dhivas.png';
-import Lisa from '../../shared-ui/images/meet-the-team/lisa.png';
-import Sreya from '../../shared-ui/images/meet-the-team/sreya.png';
-import David from '../../shared-ui/images/meet-the-team/david.png';
-import Spencer from '../../shared-ui/images/meet-the-team/spencer.png';
-import Sarah from '../../shared-ui/images/meet-the-team/sarah.png';
-import Julie from '../../shared-ui/images/meet-the-team/julie.png';
-import Amanda from '../../shared-ui/images/meet-the-team/amanda.png';
-import Onotina from '../../shared-ui/images/meet-the-team/onotina.png';
-import Bayden from '../../shared-ui/images/meet-the-team/bayden.png';
-import Jess from '../../shared-ui/images/meet-the-team/jess.png';
-import Karyna from '../../shared-ui/images/meet-the-team/karyna.png';
-import Sanjana from '../../shared-ui/images/meet-the-team/sanjana.png';
-import Aarushi from '../../shared-ui/images/meet-the-team/aarushi.png';
-import Karen from '../../shared-ui/images/meet-the-team/karen.png';
-import Rachel from '../../shared-ui/images/meet-the-team/rach.png';
-import Wendi from '../../shared-ui/images/meet-the-team/wendi.png';
-import Ally from '../../shared-ui/images/meet-the-team/ally.png';
-import Jasmine from '../../shared-ui/images/meet-the-team/jasmine.png';
+
 
 const team: Team = {
   directors: 'Directors',
@@ -38,57 +42,9 @@ const mainSiteTabInfo: TabInfo[] = [
   { name: 'Team', link: '/#team' }
 ];
 
-const sreyaToolTip: ToolTipInfo = {
-  name: 'name: Sreya Katabathuni',
-  year: 'year: 4th',
-  major: 'major: CS + Business',
-  pronouns: 'pronouns: she/her'
-};
-
-const sreya: Person = {
-  picture: Sreya,
-  toolTipInfo: sreyaToolTip
-};
-
-const davidToolTip: ToolTipInfo = {
-  name: 'name: David Yan',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: he/him'
-};
-
-const david: Person = {
-  picture: David,
-  toolTipInfo: davidToolTip
-};
-
-const judyToolTip: ToolTipInfo = {
-  name: 'name: Judy Zhang',
-  year: 'year: 5th',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
-};
-
-const judy: Person = {
-  picture: Judy,
-  toolTipInfo: judyToolTip
-};
-
-const deanToolTip: ToolTipInfo = {
-  name: 'name: Dean Frame',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: he/him'
-};
-
-const dean: Person = {
-  picture: Dean,
-  toolTipInfo: deanToolTip
-};
-
 const surbhiToolTip: ToolTipInfo = {
   name: 'name: Surbhi Gulati',
-  year: 'year: 3rd',
+  year: 'year: 4th',
   major: 'major: CS',
   pronouns: 'pronouns: she/her'
 };
@@ -100,7 +56,7 @@ const surbhi: Person = {
 
 const mikeToolTip: ToolTipInfo = {
   name: 'name: Mike Mundia',
-  year: 'year: 2nd',
+  year: 'year: 3rd',
   major: 'major: CS + Theater',
   pronouns: 'pronouns: he/him'
 };
@@ -112,7 +68,7 @@ const mike: Person = {
 
 const dhivasToolTip: ToolTipInfo = {
   name: 'name: Dhivas Sugumar',
-  year: 'year: 3rd',
+  year: 'year: 4th',
   major: 'major: CS',
   pronouns: 'pronouns: he/him'
 };
@@ -124,7 +80,7 @@ const dhivas: Person = {
 
 const lisaToolTip: ToolTipInfo = {
   name: 'name: Lisa Jiang',
-  year: 'year: 2nd',
+  year: 'year: 3rd',
   major: 'major: CS',
   pronouns: 'pronouns: she/her'
 };
@@ -136,7 +92,7 @@ const lisa: Person = {
 
 const spencerToolTip: ToolTipInfo = {
   name: 'name: Spencer Shao',
-  year: 'year: 3rd',
+  year: 'year: 4th',
   major: 'major: CS + Music Tech',
   pronouns: 'pronouns: he/him'
 };
@@ -146,33 +102,9 @@ const spencer: Person = {
   toolTipInfo: spencerToolTip
 };
 
-const julieToolTip: ToolTipInfo = {
-  name: 'name: Julie Wang',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
-};
-
-const julie: Person = {
-  picture: Julie,
-  toolTipInfo: julieToolTip
-};
-
-const sarahToolTip: ToolTipInfo = {
-  name: 'name: Sarah Zhang',
-  year: 'year: 3rd',
-  major: 'major: CS + Design',
-  pronouns: 'pronouns: she/her'
-};
-
-const sarah: Person = {
-  picture: Sarah,
-  toolTipInfo: sarahToolTip
-};
-
 const amandaToolTip: ToolTipInfo = {
   name: 'name: Amanda Lee',
-  year: 'year: 2nd',
+  year: 'year: 3rd',
   major: 'major: CS + Design',
   pronouns: 'pronouns: she/her'
 };
@@ -196,7 +128,7 @@ const onotina: Person = {
 
 const baydenToolTip: ToolTipInfo = {
   name: 'name: Bayden Ibrahim',
-  year: 'year: 4th',
+  year: 'year: 5th',
   major: 'major: CS + Cogn Psych',
   pronouns: 'pronouns: she/her'
 };
@@ -206,21 +138,21 @@ const bayden: Person = {
   toolTipInfo: baydenToolTip
 };
 
-const jessToolTip: ToolTipInfo = {
+const jessSuToolTip: ToolTipInfo = {
   name: 'name: Jessica Su',
-  year: 'year: 3rd',
+  year: 'year: 4th',
   major: 'major: CS',
   pronouns: 'pronouns: she/her'
 };
 
-const jess: Person = {
-  picture: Jess,
-  toolTipInfo: jessToolTip
+const jessSu: Person = {
+  picture: JessSu,
+  toolTipInfo: jessSuToolTip
 };
 
 const karynaToolTip: ToolTipInfo = {
   name: 'name: Karyna Yen',
-  year: 'year: 2nd',
+  year: 'year: 3rd',
   major: 'major: CS',
   pronouns: 'pronouns: she/her'
 };
@@ -230,33 +162,9 @@ const karyna: Person = {
   toolTipInfo: karynaToolTip
 };
 
-const sanjanaToolTip: ToolTipInfo = {
-  name: 'name: Sanjana Mishra',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
-};
-
-const sanjana: Person = {
-  picture: Sanjana,
-  toolTipInfo: sanjanaToolTip
-};
-
-const aarushiToolTip: ToolTipInfo = {
-  name: 'name: Aarushi Basmatkar',
-  year: 'year: 2nd',
-  major: 'major: CYS + Business',
-  pronouns: 'pronouns: she/her'
-};
-
-const aarushi: Person = {
-  picture: Aarushi,
-  toolTipInfo: aarushiToolTip
-};
-
 const karenToolTip: ToolTipInfo = {
   name: 'name: Karen Li',
-  year: 'year: 3rd',
+  year: 'year: 4th',
   major: 'major: CS',
   pronouns: 'pronouns: she/her'
 };
@@ -266,79 +174,218 @@ const karen: Person = {
   toolTipInfo: karenToolTip
 };
 
-const rachelToolTip: ToolTipInfo = {
-  name: 'name: Rachel Li',
+// NEW MEMBERS
+
+const nelsonToolTip: ToolTipInfo = {
+  name: 'name: Nelson Dong',
+  year: 'year: 3rd',
+  major: 'major: CS',
+  pronouns: 'pronouns: he/him'
+};
+
+const nelson: Person = {
+  picture: Nelson,
+  toolTipInfo: nelsonToolTip
+};
+
+const lucasToolTip: ToolTipInfo = {
+  name: 'name: Lucas Dunker',
+  year: 'year: 3rd',
+  major: 'major: CS',
+  pronouns: 'pronouns: he/him'
+};
+
+const lucas: Person = {
+  picture: Lucas,
+  toolTipInfo: lucasToolTip
+};
+
+const aaryanToolTip: ToolTipInfo = {
+  name: 'name: Aaryan Jain',
+  year: 'year: 2nd',
+  major: 'major: CS + Econ',
+  pronouns: 'pronouns: he/him'
+};
+
+const aaryan: Person = {
+  picture: Aaryan,
+  toolTipInfo: aaryanToolTip
+};
+
+const alyssaToolTip: ToolTipInfo = {
+  name: 'name: Alyssa Mui',
   year: 'year: 4th',
+  major: 'major: CS',
+  pronouns: 'pronouns: she/her'
+};
+
+const alyssa: Person = {
+  picture: Alyssa,
+  toolTipInfo: alyssaToolTip
+};
+
+const helenToolTip: ToolTipInfo = {
+  name: 'name: Helen Miao', 
+  year: 'year: 3rd',
+  major: 'major: CS + Design',
+  pronouns: 'pronouns: she/her'
+};
+
+const helen: Person = {
+  picture: Helen,
+  toolTipInfo: helenToolTip
+};
+
+const jessYuToolTip: ToolTipInfo = {
+  name: 'name: Jessica Yu',
+  year: 'year: 4th',
+  major: 'major: CS + Math',
+  pronouns: 'pronouns: she/her'
+};
+
+const jessYu: Person = {
+  picture: JessYu,
+  toolTipInfo: jessYuToolTip
+};
+
+const arethaToolTip: ToolTipInfo = {
+  name: 'name: Aretha Chen',
+  year: 'year: 3rd',
+  major: 'major: CS',
+  pronouns: 'pronouns: she/her'
+};
+
+const aretha: Person = {
+  picture: Aretha,
+  toolTipInfo: arethaToolTip
+};
+
+const katherineToolTip: ToolTipInfo = {
+  name: 'name: Katherine Zeng',
+  year: 'year: 4th',
+  major: 'major: CS + Business',
+  pronouns: 'pronouns: she/her'
+};
+
+const katherine: Person = {
+  picture: Katherine,
+  toolTipInfo: katherineToolTip
+};
+
+const crystalToolTip: ToolTipInfo = {
+  name: 'name: Crystal Zhang',
+  year: 'year: 3rd',
+  major: 'major: CS + Design',
+  pronouns: 'pronouns: she/her'
+};
+
+const crystal: Person = {
+  picture: Crystal,
+  toolTipInfo: crystalToolTip
+};
+
+const mandyToolTip: ToolTipInfo = {
+  name: 'name: Mandy Rodriques',
+  year: 'year: 2nd',
+  major: 'major: Cybersecurity',
+  pronouns: 'pronouns: she/her'
+};
+
+const mandy: Person = {
+  picture: Mandy,
+  toolTipInfo: mandyToolTip
+}; 
+  
+const emmaToolTip: ToolTipInfo = {
+  name: 'name: Emma Vonbuelow',
+  year: 'year: 2nd',
+  major: 'major: CS',
+  pronouns: 'pronouns: she/her'
+};
+
+const emma: Person = {
+  picture: Emma,
+  toolTipInfo: emmaToolTip
+};
+
+const nidhiToolTip: ToolTipInfo = {
+  name: 'name: Nidhi Pillai',
+  year: 'year: 3rd',
   major: 'major: DS',
   pronouns: 'pronouns: she/her'
 };
 
-const rachel: Person = {
-  picture: Rachel,
-  toolTipInfo: rachelToolTip
+const nidhi: Person = {
+  picture: Nidhi,
+  toolTipInfo: nidhiToolTip
 };
 
-const wendiToolTip: ToolTipInfo = {
-  name: 'name: Wendi Onwuakpa',
+const lukeToolTip: ToolTipInfo = {
+  name: 'name: Luke Steimel',
   year: 'year: 3rd',
-  major: 'major: CS + Business',
-  pronouns: 'pronouns: she/her'
+  major: 'major: CS',
+  pronouns: 'pronouns: he/him'
 };
 
-const wendi: Person = {
-  picture: Wendi,
-  toolTipInfo: wendiToolTip
+const luke: Person = {
+  picture: Luke,
+  toolTipInfo: lukeToolTip
 };
 
-const allyToolTip: ToolTipInfo = {
-  name: 'name: Ally Chao',
-  year: 'year: 3rd',
-  major: 'major: DS + Business',
-  pronouns: 'pronouns: she/her'
-};
-
-const ally: Person = {
-  picture: Ally,
-  toolTipInfo: allyToolTip
-};
-
-const jasmineToolTip: ToolTipInfo = {
-  name: 'name: Jasmine McCoy',
+const audreyToolTip: ToolTipInfo = {
+    name: 'name: Audrey Wong',
+    year: 'year: 2nd',
+    major: 'major: CS and Businss',
+    pronouns: 'pronouns: she/her'
+  };
+  
+  const audrey: Person = {
+    picture: Audrey,
+    toolTipInfo: audreyToolTip
+  };
+  
+const johnToolTip: ToolTipInfo = {
+  name: 'name: John Sargent',
   year: 'year: 2nd',
-  major: 'major: CS + Business',
-  pronouns: 'pronouns: she/her'
+  major: 'major: CS and Business',
+  pronouns: 'pronouns: he/him'
 };
 
-const jasmine: Person = {
-  picture: Jasmine,
-  toolTipInfo: jasmineToolTip
+const john: Person = {
+  picture: John,
+  toolTipInfo: johnToolTip
 };
 
-const directorsPictures: Person[][] = [[sreya, david]];
+
+
+
+const directorsPictures: Person[][] = [[spencer, dhivas]];
 
 const techPictures: Person[][] = [
-  [judy],
-  [dean, surbhi],
-  [mike, dhivas],
-  [lisa]
+  [mike],
+  [nelson, alyssa],
+  [mandy, john],
+  [aaryan, katherine]
 ];
 
 const designPictures: Person[][] = [
-  [spencer],
-  [sarah, julie],
-  [amanda, onotina]
+  [amanda],
+  [audrey, helen],
+  [aretha, onotina],
+  [crystal]
 ];
 
 const socialOutreachPictures: Person[][] = [
   [bayden],
-  [jess, karyna],
-  [sanjana, aarushi]
+  [jessYu, lucas],
+  [emma, nidhi]
 ];
 
 const sponsorshipPictures: Person[][] = [
-  [karen],
-  [rachel, wendi],
-  [ally, jasmine]
+  [jessSu],
+  [karyna, surbhi],
+  [karen, lisa],
+  [luke]
 ];
 
 const teamInfo: TeamColumnInfo[] = [
