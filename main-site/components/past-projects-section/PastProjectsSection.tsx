@@ -21,7 +21,10 @@ import {
   StyledPastProjectsInfoContainer,
   StyledCamel,
   StyledArrowContainer,
-  StyledPastProjectsDiv
+  StyledPastProjectsDiv,
+  StyledViewProjectButtonWrapper,
+  StyledPastProjectsAward,
+  StyledPastProjectsTitleAwardContainer
 } from './PastProjectsSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
@@ -31,16 +34,6 @@ import { getLeftOrRight } from '../../lib/utils';
 import { camelBobbing } from './PastProjects.animations';
 
 const PastProjectsSection: React.FC = () => {
-  function getImage(title: string): string {
-    if (title === 'Inky the Black Hole Pet, 2022') {
-      return Inky;
-    }
-    if (title === 'Swaple, 2022') {
-      return Swaple;
-    }
-    return Duck;
-  }
-
   const [currItem, setCurrItem] = useState<PastProjectData>(
     pastProjectsData[0]
   );
@@ -55,22 +48,29 @@ const PastProjectsSection: React.FC = () => {
         {isDesktop &&
           pastProjectsData.map((project) => (
             <StyledPastProjectsContainer key={project.title}>
-              <StyledPastProjectsPhotos src={getImage(project.title)} />
+              <StyledPastProjectsPhotos src={project.image} />
               <StyledPastProjectsInfo>
-                <StyledPastProjectsTitle>
-                  {project.title}
-                </StyledPastProjectsTitle>
+                <StyledPastProjectsTitleAwardContainer>
+                  <StyledPastProjectsTitle>
+                    {project.title}
+                  </StyledPastProjectsTitle>
+                  <StyledPastProjectsAward>
+                    {project.award}
+                  </StyledPastProjectsAward>
+                </StyledPastProjectsTitleAwardContainer>
                 <StyledPastProjectsMembers>
                   {project.members}
                 </StyledPastProjectsMembers>
                 <StyledPastProjectsDescription>
                   {project.description}
                 </StyledPastProjectsDescription>
-                <PrimaryButton
-                  btnText="View Project"
-                  btnLink={project.btnLink}
-                  newTab
-                />
+                <StyledViewProjectButtonWrapper>
+                  <PrimaryButton
+                    btnText="View Project"
+                    btnLink={project.btnLink}
+                    newTab
+                  />
+                </StyledViewProjectButtonWrapper>
               </StyledPastProjectsInfo>
             </StyledPastProjectsContainer>
           ))}
@@ -79,7 +79,7 @@ const PastProjectsSection: React.FC = () => {
       {!isDesktop && (
         <>
           <StyledPastProjectsSection>
-            <StyledPastProjectsPhotos src={getImage(currItem.title)} />
+            <StyledPastProjectsPhotos src={currItem.image} />
 
             <StyledArrowContainer>
               <Arrow
@@ -92,9 +92,14 @@ const PastProjectsSection: React.FC = () => {
               />
 
               <StyledPastProjectsDiv>
-                <StyledPastProjectsTitle>
-                  {currItem.title}
-                </StyledPastProjectsTitle>
+                <StyledPastProjectsTitleAwardContainer>
+                  <StyledPastProjectsTitle>
+                    {currItem.title}
+                  </StyledPastProjectsTitle>
+                  <StyledPastProjectsAward>
+                    {currItem.award}
+                  </StyledPastProjectsAward>
+                </StyledPastProjectsTitleAwardContainer>
                 <StyledPastProjectsMembers>
                   {currItem.members}
                 </StyledPastProjectsMembers>
