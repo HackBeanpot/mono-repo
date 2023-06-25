@@ -43,12 +43,14 @@ const StyledTestimonialsRightContainer = styled.div`
 
 const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
   width: ${(StyledCactusButtonsProps): string =>
-    StyledCactusButtonsProps.isToggled ? '4em' : '2.7em'};
+    StyledCactusButtonsProps.isToggled ? '4em' : '2.8em'};
   height: ${(StyledCactusButtonsProps): string =>
-    StyledCactusButtonsProps.isToggled ? '4em' : '2.7em'};
+    StyledCactusButtonsProps.isToggled ? '4em' : '2.8em'};
   padding: 1em;
   align-item: center;
-`;
+  margin-bottom: ${(StyledCactusButtonsProps): string =>
+    StyledCactusButtonsProps.isToggled ? '-0.5em' : '0'};
+ `;
 
 const StyledTestimonialNumbers = styled.div<StyledCactusButtonsProps>`
   font-family: ${fonts.nunitoSansRegular};
