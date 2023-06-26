@@ -9,7 +9,9 @@ import {
   StyledTestimonialsCenterContainer,
   StyledTestimonialsContainer,
   StyledTestimonialsLeftContainer,
-  StyledTestimonialsRightContainer
+  StyledTestimonialsRightContainer,
+  StyledTestimonialNumbers,
+  StyledButtonNumberContainer
 } from './Testimonials.styles';
 import cactus1 from '../../../../shared-ui/images/cactus1.png';
 import cactus2 from '../../../../shared-ui/images/cactus2.png';
@@ -110,14 +112,19 @@ const Testimonials: React.FC = () => {
       {isDesktop && (
         <StyledTestimonialButtons>
           {testimonialSectionData.map((_, testimonialIndex) => (
-            <StyledCactusButtons
-              key={`cactus-${testimonialIndex}`}
-              src={getCactus(testimonialIndex)}
-              onClick={(): void => goToTestimonial(testimonialIndex)}
-              isToggled={testimonialIndex == currentIndex}
-            />
+            <StyledButtonNumberContainer key={`testimonial-${testimonialIndex}`}>
+              <StyledCactusButtons
+                src={getCactus(testimonialIndex)}
+                onClick={(): void => goToTestimonial(testimonialIndex)}
+                isToggled={testimonialIndex === currentIndex}
+              />
+              <StyledTestimonialNumbers isToggled={testimonialIndex === currentIndex}>
+                {testimonialIndex + 1}
+              </StyledTestimonialNumbers>
+            </StyledButtonNumberContainer>
           ))}
         </StyledTestimonialButtons>
+
       )}
     </>
   );
