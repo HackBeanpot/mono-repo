@@ -11,8 +11,8 @@ import { StyledPageContainer } from '../../../shared-ui/styled-components/Backgr
 import AboutSection from '../../components/about-section/AboutSection';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
-import LandingSection from '../../components/landing-section/LandingSection';
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
+
 const SponsorUsPage: React.FC = () => {
     const [isDay, setIsDay] = useState<boolean>(true);
     const isDesktop = useMatchMedia(min.tabletXs);
