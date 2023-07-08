@@ -39,6 +39,7 @@ const mainSiteTabInfo: TabInfo[] = [
   { name: 'About', link: '/#about' },
   { name: 'Calendar', link: '/#calendar' },
   { name: 'FAQ', link: '/#faq' },
+  { name: 'Sponsor Us', link: '/sponsor-us' },
   { name: 'Team', link: '/#team' }
 ];
 
