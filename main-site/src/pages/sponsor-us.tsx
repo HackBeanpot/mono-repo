@@ -14,21 +14,21 @@ import EventsCalendarSection from '../../components/events-calendar-section/Even
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
 
 const SponsorUsPage: React.FC = () => {
-    const [isDay, setIsDay] = useState<boolean>(true);
-    const isDesktop = useMatchMedia(min.tabletXs);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const getBackgroundClassName = (): string => {
-      if (isDay && isDesktop) {
-        return 'day-background-desktop';
-      }
-      if (isDay && !isDesktop) {
-        return 'mobile-light-background';
-      }
-      if (!isDay && isDesktop) {
-        return 'dark-background-desktop';
-      }
-      return 'mobile-dark-background';
-    };
+  const [isDay, setIsDay] = useState<boolean>(true);
+  const isDesktop = useMatchMedia(min.tabletXs);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const getBackgroundClassName = (): string => {
+    if (isDay && isDesktop) {
+      return 'day-background-desktop';
+    }
+    if (isDay && !isDesktop) {
+      return 'mobile-light-background';
+    }
+    if (!isDay && isDesktop) {
+      return 'dark-background-desktop';
+    }
+    return 'mobile-dark-background';
+  };
   useEffect(() => {
     setIsLoading(false);
   }, []);
@@ -38,7 +38,7 @@ const SponsorUsPage: React.FC = () => {
   }
 
   return (
-    <StyledPageContainer className = {getBackgroundClassName()}>
+    <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={mainSiteTabInfo} isDay={true} />
       <ExploreSection />
       <AboutSection />
@@ -51,6 +51,4 @@ const SponsorUsPage: React.FC = () => {
 
 export default SponsorUsPage;
 
-export const SponsorUsTitle: HeadFC = () => (
-  <title>Sponsor Us</title>
-);
+export const SponsorUsTitle: HeadFC = () => <title>Sponsor Us</title>;
