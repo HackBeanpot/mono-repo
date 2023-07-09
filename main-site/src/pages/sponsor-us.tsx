@@ -40,7 +40,7 @@ const SponsorUsPage: React.FC = () => {
 
   return (
     <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={mainSiteTabInfo} isDay={true} />
+      <Header tabs={mainSiteTabInfo} isDay={isDay} />
       <ExploreSection />
       <AboutSection />
       <EventsCalendarSection />
