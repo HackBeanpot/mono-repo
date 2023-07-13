@@ -21,6 +21,7 @@ export interface AboutSectionData {
 export interface LandingSectionProps {
   isDay: boolean;
   setIsDay: (isDay: boolean) => void;
+  isSponsorPage?: boolean;
 }
 
 export interface TestimonialData {

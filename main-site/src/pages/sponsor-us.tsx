@@ -11,6 +11,7 @@ import AboutSection from '../../components/about-section/AboutSection';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
+import LandingSection from '../../components/landing-section/LandingSection';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -29,7 +30,7 @@ const SponsorUsPage: React.FC = () => {
     }
     return 'mobile-dark-background';
   };
-  
+
   useEffect(() => {
     setIsLoading(false);
   }, []);
@@ -39,14 +40,20 @@ const SponsorUsPage: React.FC = () => {
   }
 
   return (
-    <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={mainSiteTabInfo} isDay={true} />
-      <ExploreSection />
-      <AboutSection />
-      <EventsCalendarSection />
-      <TestimonialsSection />
-      <Footer tabs={mainSiteTabInfo} isDay={isDay} />
-    </StyledPageContainer>
+    <>
+      <StyledPageContainer className={getBackgroundClassName()}>
+        <Header tabs={mainSiteTabInfo} isDay={true} />
+        <LandingSection
+          isDay={isDay}
+          setIsDay={setIsDay}
+          isSponsorPage={true}
+        />
+
+        <ExploreSection />
+        <AboutSection />
+        <EventsCalendarSection />
+      </StyledPageContainer>
+    </>
   );
 };
 
