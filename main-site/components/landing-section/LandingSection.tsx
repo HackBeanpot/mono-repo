@@ -13,7 +13,7 @@ import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
 import { moonRock, sunRays } from './LandingSection.animations';
 import LocationTimeSection from '../location-time-section/LocationDateSection';
-import SponsorsHeader from '../sponsors-section/SponsorsHeader';
+import SponsorUsHeading from '../sponsor-us-section/sponsorUsHeading/SponsorUsHeading';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay, isSponsorPage }) => {
   return (
@@ -41,7 +41,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay, isSpon
           </>
         ) : (
           <>
-            <SponsorsHeader />
+            <SponsorUsHeading />
           </>
         )}
       </StyledLandingTextContainer>

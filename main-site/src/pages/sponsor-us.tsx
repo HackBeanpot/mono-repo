@@ -3,15 +3,11 @@ import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
 import Header from '../../../shared-ui/components/header/Header';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
-import Footer from '../../../shared-ui/components/footer/Footer';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
-import AboutSection from '../../components/about-section/AboutSection';
-import ExploreSection from '../../components/explore-section/ExploreSection';
-import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
-import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
 import LandingSection from '../../components/landing-section/LandingSection';
+import WhySponsor from '../../components/sponsor-us-section/whySponsor/WhySponsor';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -48,10 +44,7 @@ const SponsorUsPage: React.FC = () => {
           setIsDay={setIsDay}
           isSponsorPage={true}
         />
-
-        <ExploreSection />
-        <AboutSection />
-        <EventsCalendarSection />
+        <WhySponsor />
       </StyledPageContainer>
     </>
   );
