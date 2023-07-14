@@ -7,13 +7,26 @@ const StyledTextContainer = styled.div`
   padding: 3em;
   border-radius: 3em;
   margin-top: 5em;
+
+  @media ${min.tabletSm} {
+    width: 20em;
+    background-color: ${colors.TEXT_BOX};
+    margin-top: 0;
+  }
   @media ${min.tablet} {
-    width: 34em;
+    width: 38em;
     background-color: ${colors.TEXT_BOX};
     margin-top: 0;
   }
   @media ${min.tabletLg} {
-    width: 38em;
+    width: 52em;
+    background-color: ${colors.TEXT_BOX};
+    margin-top: 0;
+  }
+  @media ${min.desktop} {
+    width: 52em;
+    background-color: ${colors.TEXT_BOX};
+    margin-top: 0;
   }
 `;
 
@@ -23,6 +36,8 @@ const StyledWhySponsorContainer = styled.div`
   justify-content: center;
   margin-top: 8em;
   position: relative;
+  padding-bottom: 20em;
+
   @media ${min.mobile} {
     margin-top: 14em;
   }
@@ -44,8 +59,31 @@ const StyledParagraph = styled(P)`
   padding: 1.5em 0;
 `;
 
+const StyledFennecFox = styled.img`
+  height: 20em;
+  width: 20em;
+  position: absolute;
+
+  @media ${min.tabletSm} {
+    right: 2em;
+    top: 20em;
+    display: none;
+  }
+  @media ${min.desktop} {
+    right: 5em;
+    top: 15em;
+    display: block;
+  }
+  @media ${min.desktopLg} {
+    right: 13em;
+    top: 20em;
+    display: block;
+  }
+`;
+
 export {
   StyledTextContainer,
   StyledWhySponsorContainer,
   StyledParagraph,
+  StyledFennecFox
 };

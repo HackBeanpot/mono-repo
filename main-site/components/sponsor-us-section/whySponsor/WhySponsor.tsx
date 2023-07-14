@@ -5,32 +5,46 @@ import {
   StyledWhySponsorContainer
 } from './WhySponsor.styles';
 
-import { H4 } from '../../../../shared-ui/style/typography';
+import { P, H3, H4 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
-import { StyledFennecFox } from '../../past-projects-section/PastProjectsSection.styles';
+import { StyledFennecFox } from './WhySponsor.styles';
 import FennecFox from '../../../../shared-ui/images/fennec-fox.svg';
-// import useMatchMedia from 'react-use-match-media';
+import { Col, Row } from 'antd';
 
 const WnySponsor: React.FC = () => {
-//   const isDesktop = useMatchMedia(min.tablet);
   return (
     <StyledWhySponsorContainer>
-      <StyledFennecFox src={FennecFox} />
       <StyledTextContainer>
-        <H4 color={colors.BUTTON_GREEN}>
+        <H3 color={colors.BUTTON_GREEN}>
           How can sponsoring HackBeanpot help your company?
-        </H4>
-        <StyledParagraph color={colors.WHITE}>
-          HackBeanpot 2023 is gonna be a journey through the desert! Join our
-          community of adventurers for a weekend of exploration, collaboration,
-          and fun! (Oh, and did we mention free food and swag?) <br /> <br />
-          Hackers can expect to put their resourcefulness to the test, while
-          sharing stories, and learning new skills from peers. So whether you're
-          a seasoned hackathon-goer, an ‘I-have-never-written-a-line-of-code’
-          beginner, or someone in-between, we’re excited for you to embark on
-          this adventure with us!
+        </H3>
+        <StyledParagraph>
+          <Row gutter={20}>
+            <Col span={12} className="gutter-row">
+              <H4 color={colors.WHITE} style={{ marginBottom: '0.5em' }}>
+                Recruitment
+              </H4>
+              <P>
+                Scout the next generation of talent here. Sponsoring HackBeanpot
+                is a great way to expand and diversify your company’s
+                full-time,  internship, co-op program’s applicant pool! 
+              </P>
+            </Col>
+            <Col span={12} className="gutter-row">
+              <H4 color={colors.WHITE} style={{ marginBottom: '0.5em' }}>
+                Market your company and product
+              </H4>
+              <P>
+                Market your product and receive feedback by sponsoring a
+                company-specific prize, hosting a workshop, giving a product
+                demo, or mentoring hackers that are eager to hear your advice
+                and implement your technologies for their projects.
+              </P>
+            </Col>
+          </Row>
         </StyledParagraph>
       </StyledTextContainer>
+      <StyledFennecFox src={FennecFox} />
     </StyledWhySponsorContainer>
   );
 };

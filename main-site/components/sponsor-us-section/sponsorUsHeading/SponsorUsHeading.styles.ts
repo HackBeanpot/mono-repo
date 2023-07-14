@@ -20,7 +20,7 @@ const StyledSponsorUsSectionContainer = styled.div`
   border-radius: 3em;
 
   @media ${min.tabletLg} {
-    width: 46em;
+    width: 55em;
   }
 `;
 

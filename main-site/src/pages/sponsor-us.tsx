@@ -8,6 +8,8 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import LandingSection from '../../components/landing-section/LandingSection';
 import WhySponsor from '../../components/sponsor-us-section/whySponsor/WhySponsor';
+import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
+import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -45,6 +47,7 @@ const SponsorUsPage: React.FC = () => {
           isSponsorPage={true}
         />
         <WhySponsor />
+
       </StyledPageContainer>
     </>
   );
