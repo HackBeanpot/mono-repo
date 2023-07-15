@@ -28,7 +28,7 @@ const SponsorUsHeading: React.FC = () => {
         <StyledButtonContainer>
           <PrimaryButton
             btnText="View our sponsorship packet"
-            btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
+            btnLink="https://drive.google.com/file/d/1ttohaF5r457ymHIPI9Tx2jXkt9HLz8gn/view?usp=sharing"
             newTab
           />
         </StyledButtonContainer>
