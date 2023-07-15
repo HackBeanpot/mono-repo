@@ -81,9 +81,46 @@ const StyledFennecFox = styled.img`
   }
 `;
 
+const StyledItemContainer = styled.div`
+
+  display: flex;
+  justify-content: center;
+
+`;
+
+// @media ${min.mobile} {
+//     width: 24em;
+//   }
+//   @media ${min.tablet} {
+//     width: 14em;
+//   }
+//   @media ${min.tabletLg} {
+//     width: 19em;
+//   }
+//   @media ${min.desktop} {
+
+//   }
+
+// const StyledMobileImage = styled.img`
+
+//   @media ${min.tabletSm} {
+//     width: 23em;
+//   }
+// `;
+
+const StyledCenterImage = styled.img`
+
+  align-self: center;
+
+  width: 100%;
+  object-fit:cover;
+`;
+
 export {
   StyledTextContainer,
   StyledWhySponsorContainer,
   StyledParagraph,
-  StyledFennecFox
+  StyledFennecFox,
+  StyledItemContainer,
+  StyledCenterImage
 };

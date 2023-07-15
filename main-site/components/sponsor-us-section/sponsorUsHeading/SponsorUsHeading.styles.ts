@@ -7,10 +7,6 @@ const StyledSponsorUsHeader = styled(H2)`
   color: ${colors.TEXT_BROWN};
   padding-bottom: 0.5em;
   text-align: left;
-
-  @media ${max.tablet} {
-    padding-bottom: -10em;
-  }
 `;
 
 const StyledSponsorUsSectionContainer = styled.div`
