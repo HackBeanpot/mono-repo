@@ -15,9 +15,6 @@
         "clean": "gatsby clean",
         "typecheck": "tsc --noEmit"
     },
-    "engines": {
-        "node": "18.x"
-    },
     "dependencies": {
         "antd": "^5.7.0",
         "gatsby": "^4.20.0"
