@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
 import Header from '../../../shared-ui/components/header/Header';
@@ -8,8 +8,6 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import LandingSection from '../../components/landing-section/LandingSection';
 import WhySponsor from '../../components/sponsor-us-section/whySponsor/WhySponsor';
-import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
-import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);

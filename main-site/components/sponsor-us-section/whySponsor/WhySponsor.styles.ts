@@ -60,58 +60,43 @@ const StyledParagraph = styled(P)`
 `;
 
 const StyledFennecFox = styled.img`
-  height: 20em;
-  width: 20em;
+
   position: absolute;
 
   @media ${min.tabletSm} {
-    right: 2em;
-    top: 20em;
     display: none;
   }
-  @media ${min.desktop} {
-    right: 5em;
-    top: 15em;
+
+   @media ${min.tablet} {
+    right: 2em;
+    top: 25em;
+    height: 15em;
+    width: 15em;
+    display: block;
+  }
+
+ @media ${min.desktop} {
+    right: 0em;
+    top: 22em;
+    height: 20em;
+    width: 20em;
     display: block;
   }
   @media ${min.desktopLg} {
-    right: 13em;
-    top: 20em;
+    right: 12em;
+    top: 22em;
     display: block;
   }
 `;
 
-const StyledItemContainer = styled.div`
 
+const StyledItemContainer = styled.div`
   display: flex;
   justify-content: center;
-
 `;
 
-// @media ${min.mobile} {
-//     width: 24em;
-//   }
-//   @media ${min.tablet} {
-//     width: 14em;
-//   }
-//   @media ${min.tabletLg} {
-//     width: 19em;
-//   }
-//   @media ${min.desktop} {
-
-//   }
-
-// const StyledMobileImage = styled.img`
-
-//   @media ${min.tabletSm} {
-//     width: 23em;
-//   }
-// `;
-
 const StyledCenterImage = styled.img`
-
   align-self: center;
-
   width: 100%;
   object-fit:cover;
 `;

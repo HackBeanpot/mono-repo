@@ -15,8 +15,7 @@ const SponsorUsHeading: React.FC = () => {
       <StyledSponsorUsSectionContainer>
         <StyledSponsorUsHeader>Sponsor Us</StyledSponsorUsHeader>
         <StyledParagraph color={colors.TEXT_BROWN}>
-          Sponsors empower HackBeanpot in{' '}
-          <b>celebrating innovation, diversity, and inclusion</b> in the tech
+          Sponsors empower HackBeanpot in <strong>celebrating innovation, diversity, and inclusion</strong> in the tech
           community. HackBeanpot is a selective hackathon, drawing candidates
           from schools throughout Boston to propel passionate, committed, and
           motivated technologists to grow their skillset. We provide sponsors

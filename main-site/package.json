@@ -1,22 +1,25 @@
 {
-  "name": "main-site",
-  "version": "1.0.0",
-  "private": true,
-  "description": "main-site",
-  "author": "jzhzhang66",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "antd": "^5.7.0",
-    "gatsby": "^4.20.0"
-  }
+    "name": "main-site",
+    "version": "1.0.0",
+    "private": true,
+    "description": "main-site",
+    "author": "jzhzhang66",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "typecheck": "tsc --noEmit"
+    },
+    "engines": {
+        "node": "18.x"
+    },
+    "dependencies": {
+        "antd": "^5.7.0",
+        "gatsby": "^4.20.0"
+    }
 }
