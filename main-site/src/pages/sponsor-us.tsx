@@ -8,6 +8,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import WhySponsor from '../../components/sponsor-us-section/whySponsor/WhySponsor';
 import SponsorUsLanding from '../../components/sponsor-us-section/sponsorUsLanding/SponsorUsLanding';
+import SponsorPerk from '../../components/sponsor-us-section/sponsorPerk/SponsorPerk';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -41,6 +42,7 @@ const SponsorUsPage: React.FC = () => {
         <Header tabs={mainSiteTabInfo} isDay={true} />
         <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
         <WhySponsor />
+        <SponsorPerk />
       </StyledPageContainer>
     </>
   );
