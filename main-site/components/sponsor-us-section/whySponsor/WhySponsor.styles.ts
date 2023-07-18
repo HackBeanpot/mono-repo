@@ -76,14 +76,14 @@ const StyledFennecFox = styled.img`
   }
 
  @media ${min.desktop} {
-    right: 0em;
+    right: 5em;
     top: 22em;
     height: 20em;
     width: 20em;
     display: block;
   }
   @media ${min.desktopLg} {
-    right: 12em;
+    right: 14em;
     top: 22em;
     display: block;
   }
