@@ -18,7 +18,6 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledLandingSectionContainer>
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
-
       {isDay ? (
         <StyledStar animate="animate" variants={sunRays} src={Sun} />
       ) : (
