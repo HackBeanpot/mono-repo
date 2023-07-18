@@ -3,6 +3,11 @@ import { min, max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H2, P } from '../../../../shared-ui/style/typography';
 
+const StyledContainer = styled.div`
+  position: relative;
+  padding-top: 21em;
+  `;
+
 const StyledSponsorUsHeader = styled(H2)`
   color: ${colors.TEXT_BROWN};
   padding-bottom: 0.5em;
@@ -18,6 +23,12 @@ const StyledSponsorUsSectionContainer = styled.div`
   @media ${min.tabletLg} {
     width: 55em;
   }
+   @media ${min.desktop} {
+    width: 60em;
+  }
+  @media ${min.desktopLg} {
+    width: 75em;
+  }
 `;
 
 const StyledParagraph = styled(P)`
@@ -29,4 +40,4 @@ const StyledButtonContainer = styled.div`
   text-align: left;
 `;
 
-export {StyledSponsorUsHeader, StyledSponsorUsSectionContainer, StyledParagraph, StyledButtonContainer};
+export {StyledSponsorUsHeader, StyledSponsorUsSectionContainer, StyledParagraph, StyledButtonContainer, StyledContainer};

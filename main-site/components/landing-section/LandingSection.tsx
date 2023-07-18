@@ -13,14 +13,11 @@ import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
 import { moonRock, sunRays } from './LandingSection.animations';
 import LocationTimeSection from '../location-time-section/LocationDateSection';
-import SponsorUsHeading from '../sponsor-us-section/sponsorUsHeading/SponsorUsHeading';
 
-const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay, isSponsorPage }) => {
+const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledLandingSectionContainer>
-      {!isSponsorPage && (
-        <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
-      )}
+      <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
 
       {isDay ? (
         <StyledStar animate="animate" variants={sunRays} src={Sun} />
@@ -28,22 +25,14 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay, isSpon
         <StyledStar animate="animate" variants={moonRock} src={Moon} />
       )}
       <StyledLandingTextContainer>
-        {!isSponsorPage ? (
-          <>
-            <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
-            <StyledThemeText>Desert Exploration</StyledThemeText>
-            <LocationTimeSection isDay={isDay} />
-            <StyledLandingButtonContainer
-              btnText="Join our mailing list"
-              btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
-              newTab
-            />
-          </>
-        ) : (
-          <>
-            <SponsorUsHeading />
-          </>
-        )}
+        <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
+        <StyledThemeText>Desert Exploration</StyledThemeText>
+        <LocationTimeSection isDay={isDay} />
+        <StyledLandingButtonContainer
+          btnText="Join our mailing list"
+          btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
+          newTab
+        />
       </StyledLandingTextContainer>
     </StyledLandingSectionContainer>
   );

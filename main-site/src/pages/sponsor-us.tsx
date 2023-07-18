@@ -6,8 +6,8 @@ import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
-import LandingSection from '../../components/landing-section/LandingSection';
 import WhySponsor from '../../components/sponsor-us-section/whySponsor/WhySponsor';
+import SponsorUsLanding from '../../components/sponsor-us-section/sponsorUsLanding/SponsorUsLanding';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -39,13 +39,8 @@ const SponsorUsPage: React.FC = () => {
     <>
       <StyledPageContainer className={getBackgroundClassName()}>
         <Header tabs={mainSiteTabInfo} isDay={true} />
-        <LandingSection
-          isDay={isDay}
-          setIsDay={setIsDay}
-          isSponsorPage={true}
-        />
+        <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
         <WhySponsor />
-
       </StyledPageContainer>
     </>
   );

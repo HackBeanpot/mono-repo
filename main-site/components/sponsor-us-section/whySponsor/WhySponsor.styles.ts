@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../../shared-ui/style/colors';
 import { P } from '../../../../shared-ui/style/typography';
-import { min, max } from '../../../../shared-ui/lib/responsive';
+import { min } from '../../../../shared-ui/lib/responsive';
 
 const StyledTextContainer = styled.div`
   padding: 3em;
@@ -67,7 +67,7 @@ const StyledFennecFox = styled.img`
     display: none;
   }
 
-   @media ${min.tablet} {
+  @media ${min.tablet} {
     right: 2em;
     top: 25em;
     height: 15em;
