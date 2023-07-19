@@ -39,6 +39,7 @@ const mainSiteTabInfo: TabInfo[] = [
   { name: 'About', link: '/#about' },
   { name: 'Calendar', link: '/#calendar' },
   { name: 'FAQ', link: '/#faq' },
+  { name: 'Sponsor Us', link: 'https://drive.google.com/file/d/1ttohaF5r457ymHIPI9Tx2jXkt9HLz8gn/view?usp=sharing', newTab: true },
   { name: 'Team', link: '/#team' }
 ];
 
