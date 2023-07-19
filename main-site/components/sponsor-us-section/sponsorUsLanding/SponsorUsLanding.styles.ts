@@ -12,6 +12,7 @@ const StyledSponsorUsHeader = styled(H2)`
   color: ${colors.TEXT_BROWN};
   padding-bottom: 0.5em;
   text-align: left;
+  letter-spacing: 2px;
 `;
 
 const StyledSponsorUsSectionContainer = styled.div`

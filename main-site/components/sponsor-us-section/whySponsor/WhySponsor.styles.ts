@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../../shared-ui/style/colors';
-import { P } from '../../../../shared-ui/style/typography';
+import { H4, P } from '../../../../shared-ui/style/typography';
 import { min } from '../../../../shared-ui/lib/responsive';
 
 const StyledTextContainer = styled.div`
@@ -55,6 +55,12 @@ const StyledWhySponsorContainer = styled.div`
   }
 `;
 
+const StyledHeaderLabel = styled(H4)`
+  color: white;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+`;
+
 const StyledParagraph = styled(P)`
   padding: 1.5em 0;
 `;
@@ -105,6 +111,7 @@ export {
   StyledTextContainer,
   StyledWhySponsorContainer,
   StyledParagraph,
+  StyledHeaderLabel,
   StyledFennecFox,
   StyledItemContainer,
   StyledCenterImage

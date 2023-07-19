@@ -25,11 +25,15 @@ const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({ isDay, setIsDay }) 
         <StyledStar animate="animate" variants={moonRock} src={Moon} />
       )}
       <StyledSponsorUsSectionContainer>
-        <StyledSponsorUsHeader>Sponsor Us</StyledSponsorUsHeader>
+        <StyledSponsorUsHeader>
+          <b>Sponsor Us</b>
+        </StyledSponsorUsHeader>
         <StyledParagraph color={colors.TEXT_BROWN}>
           Sponsors empower HackBeanpot in{' '}
-          <strong>celebrating innovation, diversity, and inclusion</strong> in
-          the tech community. HackBeanpot is a selective hackathon, drawing
+          <strong style={{ color: colors.TEXT_DARKBROWN }}>
+            celebrating innovation, diversity, and inclusion
+          </strong>{' '}
+          in the tech community. HackBeanpot is a selective hackathon, drawing
           candidates from schools throughout Boston to propel passionate,
           committed, and motivated technologists to grow their skillset. We
           provide sponsors the ability to provide mentorship that will shape the

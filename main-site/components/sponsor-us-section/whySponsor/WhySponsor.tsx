@@ -5,7 +5,8 @@ import {
   StyledWhySponsorContainer,
   StyledCenterImage,
   StyledItemContainer,
-  StyledFennecFox
+  StyledFennecFox,
+  StyledHeaderLabel
 } from './WhySponsor.styles';
 
 import { P, H3, H4 } from '../../../../shared-ui/style/typography';
@@ -25,27 +26,27 @@ const WnySponsor: React.FC = () => {
         <StyledParagraph>
           <Row gutter={20}>
             <Col span={12} className="gutter-row">
-              <H4 color={colors.WHITE} style={{ marginBottom: '0.5em' }}>
-                Recruitment
-              </H4>
+              <StyledHeaderLabel>Recruitment</StyledHeaderLabel>
               <P>
                 Scout the next generation of talent here. Sponsoring HackBeanpot
                 is a great way to expand and diversify your company’s
-                full-time,  internship, co-op program’s applicant pool! <br /> <br /> <br />
+                full-time,  internship, co-op program’s applicant pool! 
+                <br /> <br /> <br />
               </P>
               <StyledItemContainer>
                 <StyledCenterImage src={Recruitment} />
               </StyledItemContainer>
             </Col>
             <Col span={12} className="gutter-row">
-              <H4 color={colors.WHITE} style={{ marginBottom: '0.5em' }}>
+              <StyledHeaderLabel>
                 Market your company and product
-              </H4>
+              </StyledHeaderLabel>
               <P>
                 Market your product and receive feedback by sponsoring a
                 company-specific prize, hosting a workshop, giving a product
                 demo, or mentoring hackers that are eager to hear your advice
-                and implement your technologies for their projects. <br /><br />
+                and implement your technologies for their projects. <br />
+                <br />
               </P>
               <StyledItemContainer>
                 <StyledCenterImage src={MarketCompany} />
