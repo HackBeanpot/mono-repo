@@ -6,10 +6,11 @@ import {
   StyledCenterImage,
   StyledItemContainer,
   StyledFennecFox,
-  StyledHeaderLabel
-} from './WhySponsor.styles';
+  StyledHeaderLabel,
+  StyledTextSpacing
+} from './WhySponsorSection.styles';
 
-import { P, H3, H4 } from '../../../../shared-ui/style/typography';
+import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import FennecFox from '../../../../shared-ui/images/fennec-fox.svg';
 import { Col, Row } from 'antd';
@@ -24,15 +25,15 @@ const WnySponsor: React.FC = () => {
           How can sponsoring HackBeanpot help your company?
         </H3>
         <StyledParagraph>
-          <Row gutter={20}>
+          <Row gutter={35}>
             <Col span={12} className="gutter-row">
               <StyledHeaderLabel>Recruitment</StyledHeaderLabel>
-              <P style={{ letterSpacing: '0.5px' }}>
+              <StyledTextSpacing>
                 Scout the next generation of talent here. Sponsoring HackBeanpot
                 is a great way to expand and diversify your company’s
                 full-time,  internship, co-op program’s applicant pool! 
                 <br /> <br /> <br />
-              </P>
+              </StyledTextSpacing>
               <StyledItemContainer>
                 <StyledCenterImage src={Recruitment} />
               </StyledItemContainer>
@@ -41,13 +42,13 @@ const WnySponsor: React.FC = () => {
               <StyledHeaderLabel>
                 Market your company and product
               </StyledHeaderLabel>
-              <P style={{ letterSpacing: '0.5px' }}>
+              <StyledTextSpacing>
                 Market your product and receive feedback by sponsoring a
                 company-specific prize, hosting a workshop, giving a product
                 demo, or mentoring hackers that are eager to hear your advice
                 and implement your technologies for their projects. <br />
                 <br />
-              </P>
+              </StyledTextSpacing>
               <StyledItemContainer>
                 <StyledCenterImage src={MarketCompany} />
               </StyledItemContainer>

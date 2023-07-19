@@ -5,7 +5,7 @@ import {
   StyledButtonContainer,
   StyledParagraph,
   StyledContainer
-} from './SponsorUsLanding.styles';
+} from './SponsorLandingPage.styles';
 
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 import { colors } from '../../../../shared-ui/style/colors';

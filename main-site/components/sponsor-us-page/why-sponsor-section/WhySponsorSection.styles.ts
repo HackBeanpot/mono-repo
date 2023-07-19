@@ -3,40 +3,12 @@ import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P } from '../../../../shared-ui/style/typography';
 import { min } from '../../../../shared-ui/lib/responsive';
 
-const StyledTextContainer = styled.div`
-  padding: 3em;
-  border-radius: 3em;
-  margin-top: 5em;
-
-  @media ${min.tabletSm} {
-    width: 20em;
-    background-color: ${colors.TEXT_BOX};
-    margin-top: 0;
-  }
-  @media ${min.tablet} {
-    width: 38em;
-    background-color: ${colors.TEXT_BOX};
-    margin-top: 0;
-  }
-  @media ${min.tabletLg} {
-    width: 52em;
-    background-color: ${colors.TEXT_BOX};
-    margin-top: 0;
-  }
-  @media ${min.desktop} {
-    width: 52em;
-    background-color: ${colors.TEXT_BOX};
-    margin-top: 0;
-  }
-`;
-
 const StyledWhySponsorContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 8em;
   position: relative;
-  padding-bottom: 20em;
+  padding-bottom: 10em;
 
   @media ${min.mobile} {
     margin-top: 14em;
@@ -51,7 +23,27 @@ const StyledWhySponsorContainer = styled.div`
     margin-top: 10em;
   }
   @media ${min.desktop} {
-    margin-top: 23em;
+    padding-top: 5em;
+  }
+`;
+
+const StyledTextContainer = styled.div`
+  padding: 4em;
+  border-radius: 3em;
+  margin-top: 0;
+  background-color: ${colors.TEXT_BOX};
+
+  @media ${min.tabletSm} {
+    width: 20em;
+  }
+  @media ${min.tablet} {
+    width: 38em;
+  }
+  @media ${min.tabletLg} {
+    width: 52em;
+  }
+  @media ${min.desktop} {
+    width: 52em;
   }
 `;
 
@@ -62,17 +54,19 @@ const StyledHeaderLabel = styled(H4)`
 `;
 
 const StyledParagraph = styled(P)`
-  padding: 1.5em 0;
+  padding-top: 1.5em;
+`;
+
+const StyledTextSpacing = styled(P)`
+  letter-spacing: 0.5px;
 `;
 
 const StyledFennecFox = styled.img`
-
   position: absolute;
 
   @media ${min.tabletSm} {
     display: none;
   }
-
   @media ${min.tablet} {
     right: 2em;
     top: 25em;
@@ -80,21 +74,19 @@ const StyledFennecFox = styled.img`
     width: 15em;
     display: block;
   }
-
  @media ${min.desktop} {
-    right: 5em;
-    top: 22em;
+    right: 7em;
+    top: 30em;
     height: 20em;
     width: 20em;
     display: block;
   }
   @media ${min.desktopLg} {
-    right: 14em;
-    top: 22em;
+    right: 20em;
+    top: 30em;
     display: block;
   }
 `;
-
 
 const StyledItemContainer = styled.div`
   display: flex;
@@ -112,6 +104,7 @@ export {
   StyledWhySponsorContainer,
   StyledParagraph,
   StyledHeaderLabel,
+  StyledTextSpacing,
   StyledFennecFox,
   StyledItemContainer,
   StyledCenterImage
