@@ -27,7 +27,7 @@ const WnySponsor: React.FC = () => {
           <Row gutter={20}>
             <Col span={12} className="gutter-row">
               <StyledHeaderLabel>Recruitment</StyledHeaderLabel>
-              <P>
+              <P style={{ letterSpacing: '0.5px' }}>
                 Scout the next generation of talent here. Sponsoring HackBeanpot
                 is a great way to expand and diversify your company’s
                 full-time,  internship, co-op program’s applicant pool! 
@@ -41,7 +41,7 @@ const WnySponsor: React.FC = () => {
               <StyledHeaderLabel>
                 Market your company and product
               </StyledHeaderLabel>
-              <P>
+              <P style={{ letterSpacing: '0.5px' }}>
                 Market your product and receive feedback by sponsoring a
                 company-specific prize, hosting a workshop, giving a product
                 demo, or mentoring hackers that are eager to hear your advice
