@@ -11,8 +11,8 @@ const StyledContainer = styled.div`
 const StyledSponsorUsHeader = styled(H2)`
   color: ${colors.TEXT_BROWN};
   text-align: left;
-  letter-spacing: 2px;
-  font-size: 4em;
+  letter-spacing: 1px;
+  font-size: 4.5em;
 `;
 
 const StyledSponsorUsSectionContainer = styled.div`
