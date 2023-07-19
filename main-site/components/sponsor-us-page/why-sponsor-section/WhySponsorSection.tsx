@@ -5,10 +5,12 @@ import {
   StyledWhySponsorContainer,
   StyledCenterImage,
   StyledItemContainer,
-  StyledFennecFox
-} from './WhySponsor.styles';
+  StyledFennecFox,
+  StyledHeaderLabel,
+  StyledTextSpacing
+} from './WhySponsorSection.styles';
 
-import { P, H3, H4 } from '../../../../shared-ui/style/typography';
+import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import FennecFox from '../../../../shared-ui/images/fennec-fox.svg';
 import { Col, Row } from 'antd';
@@ -23,30 +25,30 @@ const WnySponsor: React.FC = () => {
           How can sponsoring HackBeanpot help your company?
         </H3>
         <StyledParagraph>
-          <Row gutter={20}>
+          <Row gutter={35}>
             <Col span={12} className="gutter-row">
-              <H4 color={colors.WHITE} style={{ marginBottom: '0.5em' }}>
-                Recruitment
-              </H4>
-              <P>
+              <StyledHeaderLabel>Recruitment</StyledHeaderLabel>
+              <StyledTextSpacing>
                 Scout the next generation of talent here. Sponsoring HackBeanpot
                 is a great way to expand and diversify your company’s
-                full-time,  internship, co-op program’s applicant pool! <br /> <br /> <br />
-              </P>
+                full-time,  internship, co-op program’s applicant pool! 
+                <br /> <br /> <br />
+              </StyledTextSpacing>
               <StyledItemContainer>
                 <StyledCenterImage src={Recruitment} />
               </StyledItemContainer>
             </Col>
             <Col span={12} className="gutter-row">
-              <H4 color={colors.WHITE} style={{ marginBottom: '0.5em' }}>
+              <StyledHeaderLabel>
                 Market your company and product
-              </H4>
-              <P>
+              </StyledHeaderLabel>
+              <StyledTextSpacing>
                 Market your product and receive feedback by sponsoring a
                 company-specific prize, hosting a workshop, giving a product
                 demo, or mentoring hackers that are eager to hear your advice
-                and implement your technologies for their projects. <br /><br />
-              </P>
+                and implement your technologies for their projects. <br />
+                <br />
+              </StyledTextSpacing>
               <StyledItemContainer>
                 <StyledCenterImage src={MarketCompany} />
               </StyledItemContainer>

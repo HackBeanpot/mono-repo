@@ -6,7 +6,7 @@ import {
   StyledExplorer,
   StyledCamel
 } from './SponsorPerk.styles';
-import Camel from '../../../../shared-ui/images/camel.svg';
+import CamelBody from '../../../../shared-ui/images/CamelBody.svg';
 import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import Explorer from '../../../../shared-ui/images/explorer.svg';
@@ -41,7 +41,7 @@ const SponsorPerk: React.FC = () => {
           HackBeanpot 2024 sponsor!
         </StyledParagraph>
       </StyledTextContainer>
-      <StyledCamel src={Camel} />
+      <StyledCamel src={CamelBody} />
     </StyledSponsorPerkSectionContainer>
   );
 };

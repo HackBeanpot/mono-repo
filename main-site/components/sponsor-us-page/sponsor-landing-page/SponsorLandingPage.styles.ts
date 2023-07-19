@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { min, max } from '../../../../shared-ui/lib/responsive';
+import { min } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H2, P } from '../../../../shared-ui/style/typography';
 
@@ -10,8 +10,9 @@ const StyledContainer = styled.div`
 
 const StyledSponsorUsHeader = styled(H2)`
   color: ${colors.TEXT_BROWN};
-  padding-bottom: 0.5em;
   text-align: left;
+  letter-spacing: 1px;
+  font-size: 4.5em;
 `;
 
 const StyledSponsorUsSectionContainer = styled.div`
@@ -20,14 +21,12 @@ const StyledSponsorUsSectionContainer = styled.div`
   padding-bottom: 5em;
   border-radius: 3em;
 
-  @media ${min.tabletLg} {
-    width: 55em;
-  }
    @media ${min.desktop} {
-    width: 60em;
+    width: 50em;
+
   }
   @media ${min.desktopLg} {
-    width: 75em;
+    width: 60em;
   }
 `;
 

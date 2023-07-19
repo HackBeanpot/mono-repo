@@ -4,24 +4,10 @@ import { P } from '../../../../shared-ui/style/typography';
 import { min, max } from '../../../../shared-ui/lib/responsive';
 import { motion } from 'framer-motion';
 
-const StyledTextContainer = styled.div`
-  padding: 3em;
-  border-radius: 3em;
-  margin-top: 5em;
-  @media ${min.tablet} {
-    width: 34em;
-    background-color: ${colors.TEXT_BOX};
-    margin-left: 5em;
-    margin-top: 0;
-  }
-  @media ${min.tabletLg} {
-    width: 38em;
-  }
-`;
-
 const StyledSponsorPerkSectionContainer = styled.div`
   padding-top: 16em;
-  margin-top: 8em;
+  margin-bottom: 8em;
+
   position: relative;
   @media ${min.mobile} {
     margin-top: 14em;
@@ -36,12 +22,27 @@ const StyledSponsorPerkSectionContainer = styled.div`
     margin-top: 10em;
   }
   @media ${min.desktop} {
-    margin-top: 23em;
+    margin-top: 5em;
+  }
+`;
+
+const StyledTextContainer = styled.div`
+  padding: 4em;
+  border-radius: 3em;
+  margin-top: 5em;
+  @media ${min.tablet} {
+    width: 34em;
+    background-color: ${colors.TEXT_BOX};
+    margin-left: 5em;
+    margin-top: 0;
+  }
+  @media ${min.desktop} {
+    width: 50em;
   }
 `;
 
 const StyledParagraph = styled(P)`
-  padding: 1.5em 0;
+  padding: 0.5em 0;
 `;
 
 const StyledExplorer = styled.img`
@@ -59,10 +60,8 @@ const StyledExplorer = styled.img`
 const StyledCamel = styled(motion.img)`
   position: absolute;
   top: 20em;
-  right: 10em;
-
+  right: 0em;
   z-index: 1;
-
 
   @media ${max.tabletLg} {
     height: 20em;

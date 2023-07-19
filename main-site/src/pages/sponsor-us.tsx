@@ -6,9 +6,9 @@ import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
-import WhySponsor from '../../components/sponsor-us-section/whySponsor/WhySponsor';
-import SponsorUsLanding from '../../components/sponsor-us-section/sponsorUsLanding/SponsorUsLanding';
-import SponsorPerk from '../../components/sponsor-us-section/sponsorPerk/SponsorPerk';
+import WhySponsor from '../../components/sponsor-us-page/why-sponsor-section/WhySponsorSection';
+import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-page/SponsorLandingPage';
+import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerk';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
