@@ -51,6 +51,7 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
               onClick={(): void => setIsOpen(false)}
               href={tab.link}
               key={tab.name}
+              target= {tab.newTab ? "_blank" : "_self"}
             >
               <StyledTab>{tab.name}</StyledTab>
             </StyledLink>
