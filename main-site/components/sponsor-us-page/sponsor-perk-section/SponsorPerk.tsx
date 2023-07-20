@@ -26,7 +26,8 @@ const SponsorPerk: React.FC = () => {
               Hacker resumes (optionally filtered by career interests or
               experience)
             </li>
-            <li>Sponsoring a company specific prize Onsite interviews</li>
+            <li>Sponsoring a company specific prize </li>
+            <li>Onsite interviews</li>
             <li>A spot in our career fair</li>
             <li>
               Promotion on our newsletter and social medias (cumulative reach of
