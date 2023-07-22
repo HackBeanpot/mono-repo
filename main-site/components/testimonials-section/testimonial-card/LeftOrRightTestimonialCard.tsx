@@ -1,6 +1,5 @@
 import React from 'react';
 import { LeftOrRightTestimonialCardProps } from '../../../lib/types';
-import { getImage } from '../../../lib/utils';
 import {
   StyledTestimonialCardContainer,
   StyledTestimonialCardBox,
@@ -16,7 +15,7 @@ const LeftOrRightTestimonialCard: React.FC<LeftOrRightTestimonialCardProps> = ({
   return (
     <StyledTestimonialCardContainer>
       <StyledTestimonialCardBox>
-        <StyledTestimonialCardImage src={getImage(testimonial.author)} />
+        <StyledTestimonialCardImage src={testimonial.image}/>
 
         <StyledTestimonialCardAuthor>
           {testimonial.author}

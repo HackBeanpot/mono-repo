@@ -1,6 +1,5 @@
 import React from 'react';
 import { TestimonialCardProps } from '../../../lib/types';
-import { getImage } from '../../../lib/utils';
 import {
   StyledTestimonialCardContainer,
   StyledTestimonialCardBox,
@@ -15,7 +14,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   author,
   year,
   quote,
-  currentIndex
+  currentIndex, 
+  image
 }) => {
   const isSelected = currentIndex == id;
 
@@ -23,7 +23,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     return (
       <StyledTestimonialCardContainer>
         <StyledTestimonialCardBox>
-          <StyledTestimonialCardImage src={getImage(author)} />
+          <StyledTestimonialCardImage src={image}/>
           <StyledTestimonialCardAuthor>{author}</StyledTestimonialCardAuthor>
           <StyledTestimonialCardYear>{year}</StyledTestimonialCardYear>
           <StyledTestimonialCardQuote quote={quote} >{quote}</StyledTestimonialCardQuote>

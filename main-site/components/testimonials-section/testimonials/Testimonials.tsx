@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import useMatchMedia from 'react-use-match-media';
-import { testimonialSectionData } from '../../../lib/data';
 import { getLeftOrRight, getLeftOrRightTestimonial } from '../../../lib/utils';
 import TestimonialCard from '../testimonial-card/TestimonialCard';
 import { StyledTestimonialButtons } from '../testimonial-card/TestimonialCard.styles';
@@ -19,14 +18,21 @@ import cactus3 from '../../../../shared-ui/images/cactus3.png';
 import cactus4 from '../../../../shared-ui/images/cactus4.png';
 import LeftOrRightTestimonialCard from '../testimonial-card/LeftOrRightTestimonialCard';
 import { TestimonialData } from '../../../lib/types';
+//sponsor testimonial data
 import { min } from '../../../../shared-ui/lib/responsive';
 import Arrow from '../../../../shared-ui/components/arrow/Arrow';
+import { TestimonialsSectionProps } from '../../../lib/types';
 
-const Testimonials: React.FC = () => {
+
+const Testimonials: React.FC<TestimonialsSectionProps> = ({
+  isSponsor, 
+  testimonialData
+}) => {
   const isDesktop = useMatchMedia(min.tablet);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const goToTestimonial = (index: number): void => {
     setCurrentIndex(index);
+
   };
 
   function getCactus(index: number): string {
@@ -41,34 +47,34 @@ const Testimonials: React.FC = () => {
     }
     return cactus4;
   }
-  const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
-    'left',
-    testimonialSectionData,
-    currentIndex
-  );
-  const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
-    'right',
-    testimonialSectionData,
-    currentIndex
-  );
+  // const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
+  //   'left',
+  //   testimonialData,
+  //   currentIndex
+  // );
+  // const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
+  //   'right',
+  //   testimonialData,
+  //   currentIndex
+  // );
   return (
     <>
       <StyledTestimonialsContainer>
-        {isDesktop && (
+        {/* {isDesktop && (
           <StyledTestimonialsLeftContainer>
             <LeftOrRightTestimonialCard testimonial={getLeftTestimonial} />
           </StyledTestimonialsLeftContainer>
-        )}
+        )} */}
         {!isDesktop && (
           <Arrow
             left
             onClick={(): void =>
               setCurrentIndex(
-                testimonialSectionData[
+                testimonialData[
                   getLeftOrRight<TestimonialData>(
                     'left',
-                    testimonialSectionData,
-                    testimonialSectionData[currentIndex]
+                    testimonialData,
+                    testimonialData[currentIndex]
                   ).id
                 ].id
               )
@@ -76,7 +82,7 @@ const Testimonials: React.FC = () => {
           />
         )}
         <StyledTestimonialsCenterContainer>
-          {testimonialSectionData.map((data) => (
+          {testimonialData.map((data) => (
             <TestimonialCard
               key={data.id}
               id={data.id}
@@ -84,6 +90,8 @@ const Testimonials: React.FC = () => {
               year={data.year}
               quote={data.quote}
               currentIndex={currentIndex}
+              image={data.image}
+              isSponsor={isSponsor}
             />
           ))}
         </StyledTestimonialsCenterContainer>
@@ -92,26 +100,26 @@ const Testimonials: React.FC = () => {
             left={false}
             onClick={(): void =>
               setCurrentIndex(
-                testimonialSectionData[
+                testimonialData[
                   getLeftOrRight<TestimonialData>(
                     'right',
-                    testimonialSectionData,
-                    testimonialSectionData[currentIndex]
+                    testimonialData,
+                    testimonialData[currentIndex]
                   ).id
                 ].id
               )
             }
           />
         )}
-        {isDesktop && (
+        {/* {isDesktop && (
           <StyledTestimonialsRightContainer>
             <LeftOrRightTestimonialCard testimonial={getRightTestimonial} />
           </StyledTestimonialsRightContainer>
-        )}
+        )} */}
       </StyledTestimonialsContainer>
       {isDesktop && (
         <StyledTestimonialButtons>
-          {testimonialSectionData.map((_, testimonialIndex) => (
+          {testimonialData.map((_, testimonialIndex) => (
             <StyledButtonNumberContainer key={`testimonial-${testimonialIndex}`}>
               <StyledCactusButtons
                 src={getCactus(testimonialIndex)}

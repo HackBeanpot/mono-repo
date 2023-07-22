@@ -12,6 +12,11 @@ import Page14 from '../images/Page14Image.jpg';
 import FreshFarm from '../images/FreshFarmImage.jpg';
 import FormFusion from '../images/FormFusionImage.jpg';
 import FeedTheDesert from '../images/FeedTheDesertImage.jpg';
+import karyna from '../../shared-ui/images/Karyna.png';
+import jimin from '../../shared-ui/images/Jimin.png';
+import spencer2 from '../../shared-ui/images/spencer2.png';
+import group from '../../shared-ui/images/group.png';
+
 
 
 export const aboutSectionData: AboutSectionData[] = [
@@ -117,21 +122,24 @@ export const testimonialSectionData: TestimonialData[] = [
     author: 'Karyna Yen',
     year: "Northeastern '25",
     quote:
-      '"I had a ton of fun at HackBeanpot! We made a Chrome extension that censored inappropriate language on the internet. My favorite part was when one of my teammates got an animated duck to quack when clicking on the extension icon!"'
+      '"I had a ton of fun at HackBeanpot! We made a Chrome extension that censored inappropriate language on the internet. My favorite part was when one of my teammates got an animated duck to quack when clicking on the extension icon!"',
+    image: karyna
   },
   {
     id: 1,
     author: 'Ji-min Kim',
     year: "Northeastern '22",
     quote:
-      '"I joined the astronaut bootcamp event in 2021, and I wanted to highlight my great experience there. I was able to connect with friendly people, learn about web development through workshops, and have free pizza for lunch! It was a really unique experience I had during the weekend, and this event also gave me motivation for me to join my first hackathon event in bostonhacks!"'
+      '"I joined the astronaut bootcamp event in 2021, and I wanted to highlight my great experience there. I was able to connect with friendly people, learn about web development through workshops, and have free pizza for lunch! It was a really unique experience I had during the weekend, and this event also gave me motivation for me to join my first hackathon event in bostonhacks!"',
+    image: jimin
   },
   {
     id: 2,
     author: 'Spencer Shao',
     year: "Northeastern '24",
     quote:
-      '"I loved the collaboration between me, my teammates, and the amazing mentors! I really felt like it was a very welcoming environment for me to prioritize learning and having fun over 3 days. Prior to this hackathon I had never touched any kind of React or front-end web development but I came out of it feeling accomplished, having achieved a working website!"'
+      '"I loved the collaboration between me, my teammates, and the amazing mentors! I really felt like it was a very welcoming environment for me to prioritize learning and having fun over 3 days. Prior to this hackathon I had never touched any kind of React or front-end web development but I came out of it feeling accomplished, having achieved a working website!"',
+    image: spencer2
   },
 
   {
@@ -139,7 +147,39 @@ export const testimonialSectionData: TestimonialData[] = [
     author: 'Raisa Bhuiyan',
     year: "Northeastern '25",
     quote:
-      '"I enjoyed working with my teammates and trying to debug our mistakes. Debugging is a lot more fun when you have people doing it with you."'
+      '"I enjoyed working with my teammates and trying to debug our mistakes. Debugging is a lot more fun when you have people doing it with you."',
+    image: group
+  }
+];
+
+export const sponsorTestimonialData: TestimonialData[] = [
+  {
+    id: 0,
+    author: 'Rob Antczak',
+    company:"WoodMackenzie", 
+    image:"" , 
+    quote: '"If I could describe HBP in one word - invigorating. We had a lot of folks who weren’t  sure what the experience would be like, and they left feeling united - really energized and really impressed with the amount of talent that was on display as well as the  atmosphere."'
+  },
+  {
+    id: 1,
+    author: 'Sanders, Mentor',
+    company:"Microsoft", 
+    image:"" , 
+    quote: '"“HackBeanpot is the best hackathon I’ve been to, hands down. Being a mentor is super rewarding because I got to see a ton of projects go from the idea phase to a working demo."'
+  },
+  {
+    id: 2,
+    author: 'William Guo',
+    company:"Co-op Experiential Lead at WoodMackenzie", 
+    image:"" , 
+    quote: '"I’ve talked to every single project group that participated in the hackathon, observing their capabilities to explain and communicate their project to an outsider – the very things we look for at WoodMac"'
+  },
+  {
+    id: 3,
+    author: 'Emily',
+    company:"Intuit", 
+    image:"" , 
+    quote: '"The energy that people have at HackBeanpot is awesome, and the talent is very engaged"'
   }
 ];
 
@@ -237,3 +277,5 @@ export const eventsCalendarData: EventsCalendarData[] = [
     room: "West Village H 366",
   },
 ];
+
+

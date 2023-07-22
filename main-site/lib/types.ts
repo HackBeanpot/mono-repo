@@ -26,16 +26,25 @@ export interface LandingSectionProps {
 export interface TestimonialData {
   id: number;
   author: string;
-  year: string;
+  year?: string;
   quote: string;
+  company?: string;
+  image: string;
+}
+
+export interface TestimonialsSectionProps {
+  isSponsor?: boolean;
+  testimonialData: TestimonialData[];
 }
 
 export interface TestimonialCardProps {
   id: number;
   author: string;
-  year: string;
+  year?: string;
   quote: string;
   currentIndex: number;
+  image: string;
+  isSponsor?: boolean;
 }
 
 export interface StyledTestimonialCardQuoteProps {
