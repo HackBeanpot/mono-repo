@@ -16,6 +16,9 @@ import karyna from '../../shared-ui/images/Karyna.png';
 import jimin from '../../shared-ui/images/Jimin.png';
 import spencer2 from '../../shared-ui/images/spencer2.png';
 import group from '../../shared-ui/images/group.png';
+import intuitLogo from '../../shared-ui/images/intuitLogo.png';
+import microsoftLogo from '../../shared-ui/images/microsoftLogo.png';
+import woodMackenzieLogo from '../../shared-ui/images/woodMackenzieLogo.png';
 
 
 
@@ -157,28 +160,28 @@ export const sponsorTestimonialData: TestimonialData[] = [
     id: 0,
     author: 'Rob Antczak',
     company:"WoodMackenzie", 
-    image:"" , 
+    image: woodMackenzieLogo, 
     quote: '"If I could describe HBP in one word - invigorating. We had a lot of folks who weren’t  sure what the experience would be like, and they left feeling united - really energized and really impressed with the amount of talent that was on display as well as the  atmosphere."'
   },
   {
     id: 1,
     author: 'Sanders, Mentor',
     company:"Microsoft", 
-    image:"" , 
+    image: microsoftLogo, 
     quote: '"“HackBeanpot is the best hackathon I’ve been to, hands down. Being a mentor is super rewarding because I got to see a ton of projects go from the idea phase to a working demo."'
   },
   {
     id: 2,
     author: 'William Guo',
     company:"Co-op Experiential Lead at WoodMackenzie", 
-    image:"" , 
+    image: woodMackenzieLogo, 
     quote: '"I’ve talked to every single project group that participated in the hackathon, observing their capabilities to explain and communicate their project to an outsider – the very things we look for at WoodMac"'
   },
   {
     id: 3,
     author: 'Emily',
     company:"Intuit", 
-    image:"" , 
+    image: intuitLogo, 
     quote: '"The energy that people have at HackBeanpot is awesome, and the talent is very engaged"'
   }
 ];

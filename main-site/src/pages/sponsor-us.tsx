@@ -11,6 +11,7 @@ import AboutSection from '../../components/about-section/AboutSection';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
+import { sponsorTestimonialData } from '../../lib/data';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -44,7 +45,7 @@ const SponsorUsPage: React.FC = () => {
       <ExploreSection />
       <AboutSection />
       <EventsCalendarSection />
-      <TestimonialsSection />
+      <TestimonialsSection testimonialData={sponsorTestimonialData}/>
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
     </StyledPageContainer>
   );
