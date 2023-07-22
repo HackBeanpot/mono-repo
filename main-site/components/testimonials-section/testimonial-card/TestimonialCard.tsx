@@ -6,7 +6,8 @@ import {
   StyledTestimonialCardAuthor,
   StyledTestimonialCardImage,
   StyledTestimonialCardQuote,
-  StyledTestimonialCardYear
+  StyledTestimonialCardYear,
+  StyledTestimonialTextWrapper
 } from './TestimonialCard.styles';
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -15,7 +16,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   year,
   quote,
   currentIndex, 
-  image
+  image,
+  isSponsor
 }) => {
   const isSelected = currentIndex == id;
 
@@ -23,10 +25,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     return (
       <StyledTestimonialCardContainer>
         <StyledTestimonialCardBox>
-          <StyledTestimonialCardImage src={image}/>
-          <StyledTestimonialCardAuthor>{author}</StyledTestimonialCardAuthor>
-          <StyledTestimonialCardYear>{year}</StyledTestimonialCardYear>
+          <StyledTestimonialCardImage src={image} isSponsor={isSponsor}/>
+          <StyledTestimonialTextWrapper>
+          <StyledTestimonialCardAuthor isSponsor={isSponsor}>{author}</StyledTestimonialCardAuthor>
+          <StyledTestimonialCardYear isSponsor={isSponsor}>{year}</StyledTestimonialCardYear>
           <StyledTestimonialCardQuote quote={quote} >{quote}</StyledTestimonialCardQuote>
+          </StyledTestimonialTextWrapper>
         </StyledTestimonialCardBox>
       </StyledTestimonialCardContainer>
     )

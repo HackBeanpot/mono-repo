@@ -47,8 +47,13 @@ export interface TestimonialCardProps {
   isSponsor?: boolean;
 }
 
+export interface StyledTestimonialCardAuthorYearImageProps {
+  isSponsor?: boolean;
+}
+
 export interface StyledTestimonialCardQuoteProps {
   quote: string;
+  isSponsor?: boolean;
 }
 
 export interface LeftOrRightTestimonialCardProps {

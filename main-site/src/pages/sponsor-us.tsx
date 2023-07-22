@@ -45,7 +45,7 @@ const SponsorUsPage: React.FC = () => {
       <ExploreSection />
       <AboutSection />
       <EventsCalendarSection />
-      <TestimonialsSection testimonialData={sponsorTestimonialData}/>
+      <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
     </StyledPageContainer>
   );

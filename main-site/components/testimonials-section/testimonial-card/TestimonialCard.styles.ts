@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P } from '../../../../shared-ui/style/typography';
-import { StyledTestimonialCardQuoteProps } from '../../../lib/types';
+import { StyledTestimonialCardAuthorYearImageProps, StyledTestimonialCardQuoteProps } from '../../../lib/types';
+
+
+// ${(StyledTestimonialCardAuthorYearImageProps): string => 
+//    StyledTestimonialCardAuthorYearImageProps.isSponsor ? `center` : `left`};`
+
 
 const StyledTestimonialCardContainer = styled.div`
   overflow: hidden;
@@ -32,8 +37,11 @@ const StyledTestimonialCardBox = styled.div`
   }
 `;
 
-const StyledTestimonialCardImage = styled.img`
-  object-fit: cover;
+const StyledTestimonialCardImage = styled.img<StyledTestimonialCardAuthorYearImageProps>`
+  object-fit: ${(StyledTestimonialCardAuthorYearImageProps): string => 
+  StyledTestimonialCardAuthorYearImageProps.isSponsor
+? "contain"
+: "fill"};
   width: 100%;
   height: 50%;
   text-align: center;
@@ -44,16 +52,19 @@ const StyledTestimonialCardImage = styled.img`
   }
 `;
 
-const StyledTestimonialCardAuthor = styled(H4)`
+const StyledTestimonialCardAuthor = styled(H4)<StyledTestimonialCardAuthorYearImageProps>`
   font-size: 1.2em;
   margin-bottom: 0.4em;
 `;
 
-const StyledTestimonialCardYear = styled(P)`
+const StyledTestimonialCardYear = styled(P)<StyledTestimonialCardAuthorYearImageProps>`
   font-size: 1em;
   color: ${colors.TEXT_GREY};
   margin-bottom: 0.4em;
 `;
+
+const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearImageProps>`
+  text-align: center;`
 
 const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
   font-size: ${(StyledTestimonialCardQuoteProps): string => 
@@ -109,5 +120,6 @@ export {
   StyledTestimonialCardAuthor,
   StyledTestimonialCardYear,
   StyledTestimonialCardQuote,
-  StyledTestimonialButtons
+  StyledTestimonialButtons,
+  StyledTestimonialTextWrapper
 };

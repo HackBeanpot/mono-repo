@@ -16,9 +16,9 @@ import karyna from '../../shared-ui/images/Karyna.png';
 import jimin from '../../shared-ui/images/Jimin.png';
 import spencer2 from '../../shared-ui/images/spencer2.png';
 import group from '../../shared-ui/images/group.png';
-import intuitLogo from '../../shared-ui/images/intuitLogo.png';
-import microsoftLogo from '../../shared-ui/images/microsoftLogo.png';
-import woodMackenzieLogo from '../../shared-ui/images/woodMackenzieLogo.png';
+import intuitLogo from '../images/intuitLogo.png';
+import microsoftLogo from '../images/microsoftLogo.png';
+import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
 
 
 
