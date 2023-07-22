@@ -47,24 +47,24 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
     }
     return cactus4;
   }
-  // const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
-  //   'left',
-  //   testimonialData,
-  //   currentIndex
-  // );
-  // const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
-  //   'right',
-  //   testimonialData,
-  //   currentIndex
-  // );
+  const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
+    'left',
+    testimonialData,
+    currentIndex
+  );
+  const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
+    'right',
+    testimonialData,
+    currentIndex
+  );
   return (
     <>
       <StyledTestimonialsContainer>
-        {/* {isDesktop && (
+        {isDesktop && (
           <StyledTestimonialsLeftContainer>
             <LeftOrRightTestimonialCard testimonial={getLeftTestimonial} />
           </StyledTestimonialsLeftContainer>
-        )} */}
+        )}
         {!isDesktop && (
           <Arrow
             left
@@ -111,11 +111,11 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
             }
           />
         )}
-        {/* {isDesktop && (
+        {isDesktop && (
           <StyledTestimonialsRightContainer>
             <LeftOrRightTestimonialCard testimonial={getRightTestimonial} />
           </StyledTestimonialsRightContainer>
-        )} */}
+        )}
       </StyledTestimonialsContainer>
       {isDesktop && (
         <StyledTestimonialButtons>
