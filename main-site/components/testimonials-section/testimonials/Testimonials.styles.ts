@@ -50,19 +50,20 @@ const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
   align-item: center;
   margin-bottom: ${(StyledCactusButtonsProps): string =>
     StyledCactusButtonsProps.isToggled ? '-0.5em' : '0'};
- `;
+`;
 
 const StyledTestimonialNumbers = styled.div<StyledCactusButtonsProps>`
   font-family: ${fonts.nunitoSansRegular};
   font-size: 1.3em;
-  color: ${(StyledCactusButtonsProps): string => 
-    StyledCactusButtonsProps.isToggled ? colors.DIRECTORS_YELLOW : colors.BLACK};
+  color: ${(StyledCactusButtonsProps): string =>
+    StyledCactusButtonsProps.isToggled
+      ? colors.DIRECTORS_YELLOW
+      : colors.BLACK};
 `;
 
 const StyledButtonNumberContainer = styled.div`
   display: inline-block;
 `;
-
 
 export {
   StyledTestimonialsCenterContainer,

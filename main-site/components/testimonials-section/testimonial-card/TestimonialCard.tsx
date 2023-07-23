@@ -15,30 +15,35 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   author,
   year,
   quote,
-  currentIndex, 
+  currentIndex,
   image,
-  isSponsor
+  isSponsor,
+  company
 }) => {
   const isSelected = currentIndex == id;
 
   if (isSelected) {
     return (
       <StyledTestimonialCardContainer>
-        <StyledTestimonialCardBox>
-          <StyledTestimonialCardImage src={image} isSponsor={isSponsor}/>
-          <StyledTestimonialTextWrapper>
-          <StyledTestimonialCardAuthor isSponsor={isSponsor}>{author}</StyledTestimonialCardAuthor>
-          <StyledTestimonialCardYear isSponsor={isSponsor}>{year}</StyledTestimonialCardYear>
-          <StyledTestimonialCardQuote quote={quote} >{quote}</StyledTestimonialCardQuote>
+        <StyledTestimonialCardBox isSponsor={isSponsor}>
+          <StyledTestimonialCardImage src={image} isSponsor={isSponsor} />
+          <StyledTestimonialTextWrapper isSponsor={isSponsor}>
+            <StyledTestimonialCardAuthor isSponsor={isSponsor}>
+              {author}
+            </StyledTestimonialCardAuthor>
+            <StyledTestimonialCardYear isSponsor={isSponsor}>
+              {isSponsor ? company : year}
+            </StyledTestimonialCardYear>
+            <StyledTestimonialCardQuote quote={quote} isSponsor={isSponsor}>
+              {quote}
+            </StyledTestimonialCardQuote>
           </StyledTestimonialTextWrapper>
         </StyledTestimonialCardBox>
       </StyledTestimonialCardContainer>
-    )
+    );
   } else {
     return null;
-  };
-
+  }
 };
-
 
 export default TestimonialCard;

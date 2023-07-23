@@ -23,16 +23,14 @@ import { min } from '../../../../shared-ui/lib/responsive';
 import Arrow from '../../../../shared-ui/components/arrow/Arrow';
 import { TestimonialsSectionProps } from '../../../lib/types';
 
-
 const Testimonials: React.FC<TestimonialsSectionProps> = ({
-  isSponsor, 
+  isSponsor,
   testimonialData
 }) => {
   const isDesktop = useMatchMedia(min.tablet);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const goToTestimonial = (index: number): void => {
     setCurrentIndex(index);
-
   };
 
   function getCactus(index: number): string {
@@ -62,7 +60,10 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
       <StyledTestimonialsContainer>
         {isDesktop && (
           <StyledTestimonialsLeftContainer>
-            <LeftOrRightTestimonialCard testimonial={getLeftTestimonial} />
+            <LeftOrRightTestimonialCard
+              isSponsor={isSponsor}
+              testimonial={getLeftTestimonial}
+            />
           </StyledTestimonialsLeftContainer>
         )}
         {!isDesktop && (
@@ -92,6 +93,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
               currentIndex={currentIndex}
               image={data.image}
               isSponsor={isSponsor}
+              company={data.company}
             />
           ))}
         </StyledTestimonialsCenterContainer>
@@ -113,26 +115,32 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
         )}
         {isDesktop && (
           <StyledTestimonialsRightContainer>
-            <LeftOrRightTestimonialCard testimonial={getRightTestimonial} />
+            <LeftOrRightTestimonialCard
+              isSponsor={isSponsor}
+              testimonial={getRightTestimonial}
+            />
           </StyledTestimonialsRightContainer>
         )}
       </StyledTestimonialsContainer>
       {isDesktop && (
         <StyledTestimonialButtons>
           {testimonialData.map((_, testimonialIndex) => (
-            <StyledButtonNumberContainer key={`testimonial-${testimonialIndex}`}>
+            <StyledButtonNumberContainer
+              key={`testimonial-${testimonialIndex}`}
+            >
               <StyledCactusButtons
                 src={getCactus(testimonialIndex)}
                 onClick={(): void => goToTestimonial(testimonialIndex)}
                 isToggled={testimonialIndex === currentIndex}
               />
-              <StyledTestimonialNumbers isToggled={testimonialIndex === currentIndex}>
+              <StyledTestimonialNumbers
+                isToggled={testimonialIndex === currentIndex}
+              >
                 {testimonialIndex + 1}
               </StyledTestimonialNumbers>
             </StyledButtonNumberContainer>
           ))}
         </StyledTestimonialButtons>
-
       )}
     </>
   );

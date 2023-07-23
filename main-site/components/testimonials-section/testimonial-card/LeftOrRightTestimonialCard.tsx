@@ -6,28 +6,37 @@ import {
   StyledTestimonialCardAuthor,
   StyledTestimonialCardImage,
   StyledTestimonialCardQuote,
-  StyledTestimonialCardYear
+  StyledTestimonialCardYear,
+  StyledTestimonialTextWrapper
 } from './TestimonialCard.styles';
 
 const LeftOrRightTestimonialCard: React.FC<LeftOrRightTestimonialCardProps> = ({
-  testimonial
+  testimonial,
+  isSponsor
 }) => {
   return (
     <StyledTestimonialCardContainer>
-      <StyledTestimonialCardBox>
-        <StyledTestimonialCardImage src={testimonial.image}/>
+      <StyledTestimonialCardBox isSponsor={isSponsor}>
+        <StyledTestimonialCardImage
+          isSponsor={isSponsor}
+          src={testimonial.image}
+        />
+        <StyledTestimonialTextWrapper isSponsor={isSponsor}>
+          <StyledTestimonialCardAuthor isSponsor={isSponsor}>
+            {testimonial.author}
+          </StyledTestimonialCardAuthor>
 
-        <StyledTestimonialCardAuthor>
-          {testimonial.author}
-        </StyledTestimonialCardAuthor>
+          <StyledTestimonialCardYear isSponsor={isSponsor}>
+            {testimonial.year}
+          </StyledTestimonialCardYear>
 
-        <StyledTestimonialCardYear>
-          {testimonial.year}
-        </StyledTestimonialCardYear>
-
-        <StyledTestimonialCardQuote quote={testimonial.quote}>
-          {testimonial.quote}
-        </StyledTestimonialCardQuote>
+          <StyledTestimonialCardQuote
+            isSponsor={isSponsor}
+            quote={testimonial.quote}
+          >
+            {testimonial.quote}
+          </StyledTestimonialCardQuote>
+        </StyledTestimonialTextWrapper>
       </StyledTestimonialCardBox>
     </StyledTestimonialCardContainer>
   );

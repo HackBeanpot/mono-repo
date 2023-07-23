@@ -45,6 +45,7 @@ export interface TestimonialCardProps {
   currentIndex: number;
   image: string;
   isSponsor?: boolean;
+  company?: string;
 }
 
 export interface StyledTestimonialCardAuthorYearImageProps {
@@ -58,6 +59,7 @@ export interface StyledTestimonialCardQuoteProps {
 
 export interface LeftOrRightTestimonialCardProps {
   testimonial: TestimonialData;
+  isSponsor?: boolean;
 }
 
 export interface StyledCactusButtonsProps {
@@ -88,4 +90,3 @@ export interface EventsCalendarData {
   location?: string;
   room?: string;
 }
-
