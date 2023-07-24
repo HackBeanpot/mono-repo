@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
 import Header from '../../../shared-ui/components/header/Header';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
-import Footer from '../../../shared-ui/components/footer/Footer';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
-import AboutSection from '../../components/about-section/AboutSection';
-import ExploreSection from '../../components/explore-section/ExploreSection';
-import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
 import { sponsorTestimonialData } from '../../lib/data';
+import WhySponsor from '../../components/sponsor-us-page/why-sponsor-section/WhySponsorSection';
+import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-page/SponsorLandingPage';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -30,7 +28,7 @@ const SponsorUsPage: React.FC = () => {
     }
     return 'mobile-dark-background';
   };
-  
+
   useEffect(() => {
     setIsLoading(false);
   }, []);
@@ -40,14 +38,14 @@ const SponsorUsPage: React.FC = () => {
   }
 
   return (
-    <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={mainSiteTabInfo} isDay={isDay} />
-      <ExploreSection />
-      <AboutSection />
-      <EventsCalendarSection />
-      <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
-      <Footer tabs={mainSiteTabInfo} isDay={isDay} />
-    </StyledPageContainer>
+    <>
+      <StyledPageContainer className={getBackgroundClassName()}>
+        <Header tabs={mainSiteTabInfo} isDay={true} />
+        <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
+        <WhySponsor />
+        <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
+      </StyledPageContainer>
+    </>
   );
 };
 
