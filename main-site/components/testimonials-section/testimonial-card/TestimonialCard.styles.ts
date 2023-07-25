@@ -56,7 +56,7 @@ const StyledTestimonialCardAuthor = styled(H4)<StyledTestimonialCardAuthorYearIm
   color: ${(props): string => (props.isSponsor ? colors.TEXT_BOX : '')};
 `;
 
-const StyledTestimonialCardYear = styled(P)<StyledTestimonialCardAuthorYearImageProps>`
+const StyledTestimonialCardYearCompany = styled(P)<StyledTestimonialCardAuthorYearImageProps>`
   font-size:${(props): string => (props.isSponsor ? '1.2em' : '1em')};
   color: ${(props): string =>
     props.isSponsor ? colors.BLACK : colors.TEXT_GREY};
@@ -124,7 +124,7 @@ export {
   StyledTestimonialCardBox,
   StyledTestimonialCardImage,
   StyledTestimonialCardAuthor,
-  StyledTestimonialCardYear,
+  StyledTestimonialCardYearCompany,
   StyledTestimonialCardQuote,
   StyledTestimonialButtons,
   StyledTestimonialTextWrapper

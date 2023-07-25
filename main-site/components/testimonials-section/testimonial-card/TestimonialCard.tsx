@@ -6,7 +6,7 @@ import {
   StyledTestimonialCardAuthor,
   StyledTestimonialCardImage,
   StyledTestimonialCardQuote,
-  StyledTestimonialCardYear,
+  StyledTestimonialCardYearCompany,
   StyledTestimonialTextWrapper
 } from './TestimonialCard.styles';
 
@@ -31,9 +31,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             <StyledTestimonialCardAuthor isSponsor={isSponsor}>
               {author}
             </StyledTestimonialCardAuthor>
-            <StyledTestimonialCardYear isSponsor={isSponsor}>
+            <StyledTestimonialCardYearCompany isSponsor={isSponsor}>
               {isSponsor ? company : year}
-            </StyledTestimonialCardYear>
+            </StyledTestimonialCardYearCompany>
             <StyledTestimonialCardQuote quote={quote} isSponsor={isSponsor}>
               {quote}
             </StyledTestimonialCardQuote>

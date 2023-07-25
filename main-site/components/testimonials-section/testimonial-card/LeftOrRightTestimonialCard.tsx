@@ -6,7 +6,7 @@ import {
   StyledTestimonialCardAuthor,
   StyledTestimonialCardImage,
   StyledTestimonialCardQuote,
-  StyledTestimonialCardYear,
+  StyledTestimonialCardYearCompany,
   StyledTestimonialTextWrapper
 } from './TestimonialCard.styles';
 
@@ -26,9 +26,9 @@ const LeftOrRightTestimonialCard: React.FC<LeftOrRightTestimonialCardProps> = ({
             {testimonial.author}
           </StyledTestimonialCardAuthor>
 
-          <StyledTestimonialCardYear isSponsor={isSponsor}>
-            {testimonial.year}
-          </StyledTestimonialCardYear>
+          <StyledTestimonialCardYearCompany isSponsor={isSponsor}>
+          {isSponsor ? testimonial.company : testimonial.year}
+          </StyledTestimonialCardYearCompany>
 
           <StyledTestimonialCardQuote
             isSponsor={isSponsor}
