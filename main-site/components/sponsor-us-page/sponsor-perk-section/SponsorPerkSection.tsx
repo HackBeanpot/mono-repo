@@ -5,7 +5,7 @@ import {
   StyledSponsorPerkSectionContainer,
   StyledExplorer,
   StyledCamel
-} from './SponsorPerk.styles';
+} from './SponsorPerkSection.styles';
 import CamelBody from '../../../../shared-ui/images/CamelBody.svg';
 import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
@@ -20,7 +20,7 @@ const SponsorPerk: React.FC = () => {
       <StyledExplorer src={Explorer} />
       <StyledTextContainer>
         <H3 color={colors.BUTTON_GREEN}>Sponsorship perks include:</H3>
-        <StyledParagraph color={isDesktop ? colors.WHITE : colors.TEXT_BROWN}>
+        <StyledParagraph color={colors.WHITE}>
           <ul>
             <li>
               Hacker resumes (optionally filtered by career interests or

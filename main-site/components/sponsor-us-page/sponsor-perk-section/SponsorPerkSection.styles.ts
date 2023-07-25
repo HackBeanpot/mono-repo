@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 const StyledSponsorPerkSectionContainer = styled.div`
   padding-top: 16em;
   margin-bottom: 8em;
-
   position: relative;
+
   @media ${min.mobile} {
     margin-top: 14em;
   }
@@ -30,6 +30,7 @@ const StyledTextContainer = styled.div`
   padding: 4em;
   border-radius: 3em;
   margin-top: 5em;
+
   @media ${min.tablet} {
     width: 34em;
     background-color: ${colors.TEXT_BOX};
@@ -50,6 +51,7 @@ const StyledExplorer = styled.img`
   left: 2em;
   top: 3em;
   width: 8em;
+  
   @media ${min.tablet} {
     width: 13em;
     top: -1.5em;
