@@ -7,7 +7,8 @@ const fonts = {
   nunitoSansBold: 'NunitoSans-Bold',
   nunitoSansLight: 'NunitoSans-Light',
   nunitoSansRegular: 'NunitoSans-Regular',
-  nunitoSansSemibold: 'NunitoSans-SemiBold'
+  nunitoSansSemibold: 'NunitoSans-SemiBold',
+  nunitoRegular: 'Nunito-Regular'
 };
 
 const H1 = styled.h1`

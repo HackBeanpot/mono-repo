@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
-import { H4, P } from '../../../../shared-ui/style/typography';
+import { H4, P, fonts } from '../../../../shared-ui/style/typography';
 import {
   StyledTestimonialCardAuthorYearImageProps,
   StyledTestimonialCardQuoteProps
 } from '../../../lib/types';
-
-// ${(StyledTestimonialCardAuthorYearImageProps): string =>
-//    StyledTestimonialCardAuthorYearImageProps.isSponsor ? `center` : `left`};`
 
 const StyledTestimonialCardContainer = styled.div`
   overflow: hidden;
@@ -52,6 +49,7 @@ const StyledTestimonialCardImage = styled.img<StyledTestimonialCardAuthorYearIma
 
 const StyledTestimonialCardAuthor = styled(H4)<StyledTestimonialCardAuthorYearImageProps>`
   font-size:${(props): string => (props.isSponsor ? '1.8em' : '1.2em')};
+  font-family:${(props): string => (props.isSponsor ? fonts.nunitoRegular : '')};
   margin-bottom: ${(props): string => (props.isSponsor ? '0em' : '0.4em')};
   color: ${(props): string => (props.isSponsor ? colors.TEXT_BOX : '')};
 `;
@@ -61,6 +59,7 @@ const StyledTestimonialCardYearCompany = styled(P)<StyledTestimonialCardAuthorYe
   color: ${(props): string =>
     props.isSponsor ? colors.BLACK : colors.TEXT_GREY};
   margin-bottom: 0.4em;
+  font-family:${(props): string => (props.isSponsor ? fonts.nunitoSansSemibold : '')};
 `;
 
 const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearImageProps>`
@@ -68,19 +67,19 @@ const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearI
 `;
 
 const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
-font-size: ${(props): string =>
-  props.isSponsor
-    ? `1.1em`
-    : props.quote
-    ? props.quote.length < 230
-      ? `calc(${props.quote.length / 105}em)` // raisa
-      : props.quote.length < 300
-      ? `calc(${props.quote.length / 220}em)` // karyna
-      : props.quote.length < 370
-      ? `calc(${props.quote.length / 440}em)` //spencer
-      : `calc(${props.quote.length / 460}em)` //jimin
-    : `0.85em`}};
-
+  font-size: ${(props): string =>
+    props.isSponsor
+      ? `1.1em`
+      : props.quote
+      ? props.quote.length < 230
+        ? `calc(${props.quote.length / 105}em)` // raisa
+        : props.quote.length < 300
+        ? `calc(${props.quote.length / 220}em)` // karyna
+        : props.quote.length < 370
+        ? `calc(${props.quote.length / 440}em)` //spencer
+        : `calc(${props.quote.length / 460}em)` //jimin
+      : `0.85em`}};
+      
   letter-spacing: 0.05em;
 
   @media ${max.tablet} {
