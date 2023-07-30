@@ -10,6 +10,7 @@ import TestimonialsSection from '../../components/testimonials-section/Testimoni
 import { sponsorTestimonialData } from '../../lib/data';
 import WhySponsor from '../../components/sponsor-us-page/why-sponsor-section/WhySponsorSection';
 import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-page/SponsorLandingPage';
+import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -44,6 +45,7 @@ const SponsorUsPage: React.FC = () => {
         <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
         <WhySponsor />
         <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
+        <SponsorPerk />
       </StyledPageContainer>
     </>
   );
