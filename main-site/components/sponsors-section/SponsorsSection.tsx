@@ -25,6 +25,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
 
+
 const SponsorsSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tabletLg);
   const sponsorLevelsInfo = ['Diamond Level', 'Gold Level', 'Silver Level'];

@@ -20,6 +20,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
+import { testimonialSectionData } from '../../lib/data';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -53,7 +54,7 @@ const IndexPage: React.FC = () => {
       <ExploreSection />
       <AboutSection />
       <EventsCalendarSection />
-      <TestimonialsSection />
+      <TestimonialsSection testimonialData={testimonialSectionData}/>
       <PastProjectsSection />
       <FaqSection />
       <PastPhotosSection />

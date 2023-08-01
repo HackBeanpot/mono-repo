@@ -6,6 +6,8 @@ import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
+import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
+import { sponsorTestimonialData } from '../../lib/data';
 import WhySponsor from '../../components/sponsor-us-page/why-sponsor-section/WhySponsorSection';
 import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-page/SponsorLandingPage';
 import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
@@ -42,6 +44,7 @@ const SponsorUsPage: React.FC = () => {
         <Header tabs={mainSiteTabInfo} isDay={true} />
         <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
         <WhySponsor />
+        <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
         <SponsorPerk />
       </StyledPageContainer>
     </>

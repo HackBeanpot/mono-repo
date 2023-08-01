@@ -1,13 +1,13 @@
 import React from 'react';
 import { TestimonialCardProps } from '../../../lib/types';
-import { getImage } from '../../../lib/utils';
 import {
   StyledTestimonialCardContainer,
   StyledTestimonialCardBox,
   StyledTestimonialCardAuthor,
   StyledTestimonialCardImage,
   StyledTestimonialCardQuote,
-  StyledTestimonialCardYear
+  StyledTestimonialCardYearCompany,
+  StyledTestimonialTextWrapper
 } from './TestimonialCard.styles';
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -15,26 +15,35 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   author,
   year,
   quote,
-  currentIndex
+  currentIndex,
+  image,
+  isSponsor,
+  company
 }) => {
   const isSelected = currentIndex == id;
 
   if (isSelected) {
     return (
       <StyledTestimonialCardContainer>
-        <StyledTestimonialCardBox>
-          <StyledTestimonialCardImage src={getImage(author)} />
-          <StyledTestimonialCardAuthor>{author}</StyledTestimonialCardAuthor>
-          <StyledTestimonialCardYear>{year}</StyledTestimonialCardYear>
-          <StyledTestimonialCardQuote quote={quote} >{quote}</StyledTestimonialCardQuote>
+        <StyledTestimonialCardBox isSponsor={isSponsor}>
+          <StyledTestimonialCardImage src={image} isSponsor={isSponsor} />
+          <StyledTestimonialTextWrapper isSponsor={isSponsor}>
+            <StyledTestimonialCardAuthor isSponsor={isSponsor}>
+              {author}
+            </StyledTestimonialCardAuthor>
+            <StyledTestimonialCardYearCompany isSponsor={isSponsor}>
+              {isSponsor ? company : year}
+            </StyledTestimonialCardYearCompany>
+            <StyledTestimonialCardQuote quote={quote} isSponsor={isSponsor}>
+              {quote}
+            </StyledTestimonialCardQuote>
+          </StyledTestimonialTextWrapper>
         </StyledTestimonialCardBox>
       </StyledTestimonialCardContainer>
-    )
+    );
   } else {
     return null;
-  };
-
+  }
 };
-
 
 export default TestimonialCard;

@@ -62,3 +62,8 @@ body {
     font-family: 'NunitoSans-SemiBold';
     src: local('NunitoSans-SemiBold'), url('./fonts/NunitoSans-SemiBold.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: local('Nunito-Regular'), url('./fonts/Nunito.ttf') format('truetype');
+}

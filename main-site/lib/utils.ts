@@ -1,10 +1,5 @@
 import { TestimonialData } from './types';
 
-import karyna from '../../shared-ui/images/Karyna.png';
-import jimin from '../../shared-ui/images/Jimin.png';
-import spencer2 from '../../shared-ui/images/spencer2.png';
-import group from '../../shared-ui/images/group.png';
-
 export function getLeftOrRight<T>(
   direction: string,
   sectionData: T[],
@@ -33,6 +28,7 @@ export function getLeftOrRightTestimonial(
   currentIndex: number
 ): TestimonialData {
   const testimonialDatalength = testimonialData.length;
+  console.log(testimonialDatalength);
   if (side == 'left') {
     if (currentIndex == 0) {
       return testimonialData[testimonialDatalength - 2];
@@ -40,6 +36,7 @@ export function getLeftOrRightTestimonial(
       return testimonialData[currentIndex - 1];
     }
   }
+
 
   if (side == 'right') {
     if (currentIndex == testimonialDatalength - 1) {
@@ -51,15 +48,3 @@ export function getLeftOrRightTestimonial(
   return testimonialData[currentIndex];
 }
 
-export function getImage(author: string): string {
-  if (author === 'Karyna Yen') {
-    return karyna;
-  }
-  if (author === 'Ji-min Kim') {
-    return jimin;
-  }
-  if (author === 'Spencer Shao') {
-    return spencer2;
-  }
-  return group;
-}

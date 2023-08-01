@@ -31,24 +31,40 @@ export interface SponsorUsLandingProps {
 export interface TestimonialData {
   id: number;
   author: string;
-  year: string;
+  year?: string;
   quote: string;
+  company?: string;
+  image: string;
+}
+
+export interface TestimonialsSectionProps {
+  isSponsor?: boolean;
+  testimonialData: TestimonialData[];
 }
 
 export interface TestimonialCardProps {
   id: number;
   author: string;
-  year: string;
+  year?: string;
   quote: string;
   currentIndex: number;
+  image: string;
+  isSponsor?: boolean;
+  company?: string;
+}
+
+export interface StyledTestimonialCardAuthorYearImageProps {
+  isSponsor?: boolean;
 }
 
 export interface StyledTestimonialCardQuoteProps {
   quote: string;
+  isSponsor?: boolean;
 }
 
 export interface LeftOrRightTestimonialCardProps {
   testimonial: TestimonialData;
+  isSponsor?: boolean;
 }
 
 export interface StyledCactusButtonsProps {
@@ -79,4 +95,3 @@ export interface EventsCalendarData {
   location?: string;
   room?: string;
 }
-
