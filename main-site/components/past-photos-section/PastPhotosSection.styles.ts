@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max } from '../../../shared-ui/lib/responsive';
 
 const StyledPhotosSection = styled.div`

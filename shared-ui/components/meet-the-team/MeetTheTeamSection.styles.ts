@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const StyledMeetTheTeamSection = styled.div`
   padding-top: 12em, 0;

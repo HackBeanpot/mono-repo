@@ -46,7 +46,7 @@ const IndexPage: React.FC = () => {
   if (isLoading) {
     return null;
   }
-
+  // hi
   return (
     <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={mainSiteTabInfo} isDay={isDay} />

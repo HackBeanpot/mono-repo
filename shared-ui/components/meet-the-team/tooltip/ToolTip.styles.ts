@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { team } from '../../../lib/data';
 import { max } from '../../../lib/responsive';
 import { StyledToolTipProps } from '../../../lib/types';
