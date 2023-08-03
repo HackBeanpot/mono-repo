@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const StyledArrow = styled.img`
   z-index: 5;

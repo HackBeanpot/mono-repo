@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max } from '../../lib/responsive';
 import { StyledSecondaryButtonProps } from '../../lib/types';
 import { colors } from '../../style/colors';

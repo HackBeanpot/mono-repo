@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { min, max } from '../../../shared-ui/lib/responsive';
 import { StyledFooterProps } from '../../lib/types';
 import { colors } from '../../style/colors';

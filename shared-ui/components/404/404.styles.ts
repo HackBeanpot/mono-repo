@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { fonts, H1, H4 } from '../../style/typography';
 import { colors } from '../../style/colors';
 import { max } from '../../lib/responsive';
