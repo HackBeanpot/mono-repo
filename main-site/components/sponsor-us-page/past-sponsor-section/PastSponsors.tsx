@@ -1,39 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
     StyledPastSponsorsContainer, 
     StyledPastSponsorsImagesContainer,
-    StyledTextSpacing 
+    StyledTextSpacing,
+    StyledCenterImage,
+    StyledBlurbText,
+    StyledButtonContainer
 } from './PastSponsor.styles'
 import { H2 } from '../../../../shared-ui/style/typography';
-import { min } from '../../../../shared-ui/lib/responsive';
+import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
+import { breakpoints } from '../../../../shared-ui/lib/responsive';
 import DesktopSizeImage from '../../../../shared-ui/images/sponsor-us/desktop-sponsors.png';
 import MobileSizeImage from '../../../../shared-ui/images/sponsor-us/mobile-sponsors.png';
 
 
 const PastSponsors: React.FC = () => {
-    const mql = window.matchMedia(min.mobile)
-    const showMobileImage: boolean = mql.matches;
+    let imageUrl: string = DesktopSizeImage;
 
-
-    
-
-    // if (showMobileImage) {
-    //     imageUrl = DesktopSizeImage
-    // } else {
-    //     imageUrl = MobileSizeImage
-    // }
+    if (window.innerWidth <= breakpoints.mobile) {
+        imageUrl = MobileSizeImage;
+    }
 
     return (
         <StyledPastSponsorsContainer>
             <H2>Past Sponsors</H2>
-            <br/>
             <StyledPastSponsorsImagesContainer>
-                <img src={DesktopSizeImage}/>
+                <StyledCenterImage src={imageUrl}/>
             <StyledTextSpacing>
-                Due to HackBeanpot's status as a 501c3 nonprofit organization, all sponsorship package<br/>
+                Due to HackBeanpot's status as a 501c3 nonprofit organization, all sponsorship package
                 purchases are considered tax deductible.
             </StyledTextSpacing>
             </StyledPastSponsorsImagesContainer>
+
+            <StyledBlurbText>
+                Interested in joining the HackBeanpot universe?
+                <br/><br/>
+                We would love to hear from you! Reach out to us at core@hackbeanpot.com 
+                to discuss further and thank you for considering us.
+            </StyledBlurbText>
+
+            <StyledButtonContainer>
+            <PrimaryButton
+                btnText="Contact Us"
+                btnLink="#"
+                newTab
+            />
+            </StyledButtonContainer>
         </StyledPastSponsorsContainer>
     );
 };

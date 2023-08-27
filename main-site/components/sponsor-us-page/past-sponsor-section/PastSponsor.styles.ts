@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { min } from '../../../../shared-ui/lib/responsive';
-import { P } from '../../../../shared-ui/style/typography';
+import { fonts, P } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 
 const StyledPastSponsorsContainer = styled.div`
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
   padding-bottom: 10em;
 
@@ -30,7 +32,7 @@ const StyledPastSponsorsContainer = styled.div`
 const StyledPastSponsorsImagesContainer = styled.div`
   padding: 4em;
   border-radius: 3em;
-  margin-top: 0;
+  margin-top: 3em;
   background-color: ${colors.DUNE_HIGHLIGHT};
 
   @media ${min.tabletSm} {
@@ -48,11 +50,43 @@ const StyledPastSponsorsImagesContainer = styled.div`
 `;
 
 const StyledTextSpacing = styled(P)`
+  margin-top: 2em;
   letter-spacing: 0.5px;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  font-family: ${fonts.nunitoSansSemibold};
+  font-style: italic;
+
+`;
+
+const StyledBlurbText = styled(P)`
+  margin-top: 3em;
+  letter-spacing: 0.5px;
+  color: ${colors.TEXT_BROWN};
+  text-align: center;
+  font-size: 24px;
+  font-family: ${fonts.nunitoSansSemibold};
+  font-style: italic;
+
+`;
+
+const StyledCenterImage = styled.img`
+  align-self: center;
+  width: 100%;
+  object-fit:cover;
+`;
+
+const StyledButtonContainer = styled.div`
+  margin-top: 2em;
+  text-align: left;
 `;
 
 export { 
     StyledPastSponsorsContainer, 
     StyledPastSponsorsImagesContainer,
-    StyledTextSpacing 
+    StyledTextSpacing,
+    StyledCenterImage,
+    StyledBlurbText,
+    StyledButtonContainer 
 };
