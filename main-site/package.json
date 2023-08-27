@@ -16,7 +16,7 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
-        "antd": "^5.8.4",
+        "antd": "^5.7.0",
         "gatsby": "^4.20.0"
     }
 }
