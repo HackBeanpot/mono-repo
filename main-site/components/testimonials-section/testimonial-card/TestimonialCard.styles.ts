@@ -26,12 +26,12 @@ const StyledTestimonialCardBox = styled.div<StyledTestimonialCardAuthorYearImage
   @media ${max.tablet} {
     width: 18em;
     padding: 2em;
-    height: 32em;
+    height: ${(props): string => (props.isSponsor ? `39em` : `32em`)};
   }
 
   @media ${max.tabletXs} {
     width: 12em;
-    height: 35em;
+    height: ${(props): string => (props.isSponsor ? `auto` : `35em`)};
     padding: 1.5em;
   }
 `;
@@ -47,19 +47,25 @@ const StyledTestimonialCardImage = styled.img<StyledTestimonialCardAuthorYearIma
   }
 `;
 
-const StyledTestimonialCardAuthor = styled(H4)<StyledTestimonialCardAuthorYearImageProps>`
-  font-size:${(props): string => (props.isSponsor ? '1.8em' : '1.2em')};
-  font-family:${(props): string => (props.isSponsor ? fonts.nunitoRegular : '')};
+const StyledTestimonialCardAuthor = styled(
+  H4
+)<StyledTestimonialCardAuthorYearImageProps>`
+  font-size: ${(props): string => (props.isSponsor ? '1.8em' : '1.2em')};
+  font-family: ${(props): string =>
+    props.isSponsor ? fonts.nunitoRegular : ''};
   margin-bottom: ${(props): string => (props.isSponsor ? '0em' : '0.4em')};
   color: ${(props): string => (props.isSponsor ? colors.TEXT_BOX : '')};
 `;
 
-const StyledTestimonialCardYearCompany = styled(P)<StyledTestimonialCardAuthorYearImageProps>`
-  font-size:${(props): string => (props.isSponsor ? '1.2em' : '1em')};
+const StyledTestimonialCardYearCompany = styled(
+  P
+)<StyledTestimonialCardAuthorYearImageProps>`
+  font-size: ${(props): string => (props.isSponsor ? '1.2em' : '1em')};
   color: ${(props): string =>
     props.isSponsor ? colors.BLACK : colors.TEXT_GREY};
   margin-bottom: 0.4em;
-  font-family:${(props): string => (props.isSponsor ? fonts.nunitoSansSemibold : '')};
+  font-family: ${(props): string =>
+    props.isSponsor ? fonts.nunitoSansSemibold : ''};
 `;
 
 const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearImageProps>`
@@ -85,7 +91,11 @@ const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
   @media ${max.tablet} {
     font-size: ${(props): string =>
       props.quote
-        ? props.quote.length < 230
+        ? props.quote.length < 90
+          ? `1.85em`
+          : props.quote.length < 210
+          ? `1.25em`
+          : props.quote.length < 230
           ? `calc(${props.quote.length / 105}em)` // raisa
           : props.quote.length < 300
           ? `calc(${props.quote.length / 226}em)` // karyna
@@ -98,13 +108,17 @@ const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
   @media ${max.tabletXs} {
     font-size: ${(props): string =>
       props.quote
-        ? props.quote.length < 230
-          ? `calc(${props.quote.length / 125}em)` // raisa
+        ? props.quote.length < 90
+          ? `1.5em`
+          : props.quote.length < 210
+          ? `1em`
+          : props.quote.length < 230
+          ? `calc(${props.quote.length / 105}em)` // raisa
           : props.quote.length < 300
-          ? `calc(${props.quote.length / 256}em)` // karyna
+          ? `calc(${props.quote.length / 226}em)` // karyna
           : props.quote.length < 370
-          ? `calc(${props.quote.length / 488}em)` //spencer
-          : `calc(${props.quote.length / 520}em)` //jimin
+          ? `calc(${props.quote.length / 415}em)` //spencer
+          : `calc(${props.quote.length / 473}em)` //jimin
         : `0.85em`};
   }
 
