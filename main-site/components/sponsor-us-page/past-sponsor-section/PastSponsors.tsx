@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { 
     StyledPastSponsorsContainer, 
     StyledPastSponsorsImagesContainer,
@@ -15,17 +15,11 @@ import MobileSizeImage from '../../../../shared-ui/images/sponsor-us/mobile-spon
 
 
 const PastSponsors: React.FC = () => {
-    let imageUrl: string = DesktopSizeImage;
-
-    if (window.innerWidth <= breakpoints.mobile) {
-        imageUrl = MobileSizeImage;
-    }
-
     return (
         <StyledPastSponsorsContainer>
             <H2>Past Sponsors</H2>
             <StyledPastSponsorsImagesContainer>
-                <StyledCenterImage src={imageUrl}/>
+            <StyledCenterImage src={window.innerWidth <= breakpoints.mobile ? MobileSizeImage : DesktopSizeImage}/>
             <StyledTextSpacing>
                 Due to HackBeanpot's status as a 501c3 nonprofit organization, all sponsorship package
                 purchases are considered tax deductible.
@@ -43,7 +37,6 @@ const PastSponsors: React.FC = () => {
             <PrimaryButton
                 btnText="Contact Us"
                 btnLink="#"
-                newTab
             />
             </StyledButtonContainer>
         </StyledPastSponsorsContainer>
