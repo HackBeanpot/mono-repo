@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const StyledTestimonialsSectionContainer = styled.div`
   text-align: center;

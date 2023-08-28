@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { colors } from '../../../shared-ui/style/colors';
 import { P } from '../../../shared-ui/style/typography';
 import { min, max } from '../../../shared-ui/lib/responsive';
