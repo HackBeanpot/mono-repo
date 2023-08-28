@@ -31,7 +31,7 @@ const WnySponsor: React.FC = () => {
               <StyledTextSpacing>
                 Scout the next generation of talent here. Sponsoring HackBeanpot
                 is a great way to expand and diversify your company’s
-                full-time,  internship, co-op program’s applicant pool! 
+                full-time, internship, co-op program’s applicant pool!
                 <br /> <br /> <br />
               </StyledTextSpacing>
               <StyledItemContainer>

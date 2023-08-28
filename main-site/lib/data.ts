@@ -17,7 +17,7 @@ import jimin from '../../shared-ui/images/Jimin.png';
 import spencer2 from '../../shared-ui/images/spencer2.png';
 import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
-import microsoftLogo from '../images/microsoftLogo.png';
+import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
 
 
@@ -174,7 +174,7 @@ export const sponsorTestimonialData: TestimonialData[] = [
     id: 2,
     author: 'Sanders',
     company:"Mentor, Microsoft", 
-    image: microsoftLogo, 
+    image: microsoftLogoPadded, 
     quote: '"HackBeanpot is the best hackathon I’ve been to, hands down. Being a mentor is super rewarding because I got to see a ton of projects go from the idea phase to a working demo."'
   },
   {
