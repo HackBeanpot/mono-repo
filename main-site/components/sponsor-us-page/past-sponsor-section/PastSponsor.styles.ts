@@ -30,7 +30,7 @@ const StyledPastSponsorsContainer = styled.div`
 `;
 
 const StyledPastSponsorsImagesContainer = styled.div`
-  padding: 4em;
+  padding: 2.5em;
   border-radius: 3em;
   margin-top: 3em;
   background-color: ${colors.DUNE_HIGHLIGHT};
