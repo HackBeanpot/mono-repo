@@ -31,7 +31,7 @@ const StyledTestimonialCardBox = styled.div<StyledTestimonialCardAuthorYearImage
 
   @media ${max.tabletXs} {
     width: 12em;
-    height: ${(props): string => (props.isSponsor ? `auto` : `35em`)};
+    height: ${(props): string => (props.isSponsor ? `auto` : `45em`)};
     padding: 1.5em;
   }
 `;
@@ -114,7 +114,7 @@ const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
           ? `1em`
           : props.quote.length < 230
           ? `calc(${props.quote.length / 105}em)` // raisa
-          : props.quote.length < 280
+          : (props.quote.length < 280 && props.isSponsor)
           ? `1.0em`
           : props.quote.length < 300
           ? `calc(${props.quote.length / 226}em)` // karyna
