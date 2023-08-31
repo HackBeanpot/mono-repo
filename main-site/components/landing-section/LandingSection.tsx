@@ -12,7 +12,6 @@ import Sun from '../../../shared-ui/images/sun.svg';
 import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
 import { moonRock, sunRays } from './LandingSection.animations';
-import LocationTimeSection from '../location-time-section/LocationDateSection';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
@@ -24,9 +23,10 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
         <StyledStar animate="animate" variants={moonRock} src={Moon} />
       )}
       <StyledLandingTextContainer>
-        <StyledHackathonText>HackBeanpot 2023</StyledHackathonText>
-        <StyledThemeText>Desert Exploration</StyledThemeText>
-        <LocationTimeSection isDay={isDay} />
+        {/* <StyledHackathonText>HackBeanpot 2024</StyledHackathonText> */}
+        <StyledThemeText>Hackbeanpot 2024</StyledThemeText>
+        <StyledHackathonText>More information soon!</StyledHackathonText>
+        {/* <LocationTimeSection isDay={isDay} /> */}
         <StyledLandingButtonContainer
           btnText="Join our mailing list"
           btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
