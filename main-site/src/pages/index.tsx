@@ -7,10 +7,10 @@ import Header from '../../../shared-ui/components/header/Header';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ExploreSection from '../../components/explore-section/ExploreSection';
-import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
+// import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import FaqSection from '../../components/faq-section/FaqSection';
 import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
-import CovidSection from '../../components/covid-section/CovidSection';
+// import CovidSection from '../../components/covid-section/CovidSection';
 import PastPhotosSection from '../../components/past-photos-section/PastPhotosSection';
 import AboutSection from '../../components/about-section/AboutSection';
 import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
@@ -18,7 +18,7 @@ import MeetTheTeamSection from '../../../shared-ui/components/meet-the-team/Meet
 import PastProjectsSection from '../../components/past-projects-section/PastProjectsSection';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
-import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
+// import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 
@@ -53,16 +53,16 @@ const IndexPage: React.FC = () => {
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />
-      <EventsCalendarSection />
+      {/* <EventsCalendarSection /> */}
       <TestimonialsSection />
       <PastProjectsSection />
       <FaqSection />
       <PastPhotosSection />
-      <CovidSection />
+      {/* <CovidSection /> */}
       <MeetTheTeamSection />
       <SponsorsSection />
       <AdventureAheadSection />
-      <TimeRemaining target={new Date('02/10/2023 18:00:00')} />
+      {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />
     </StyledPageContainer>
   );
