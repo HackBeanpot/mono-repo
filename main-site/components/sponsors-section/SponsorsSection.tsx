@@ -42,6 +42,16 @@ const SponsorsSection: React.FC = () => {
 
   return (
     <StyledSponsorsSectionContainer>
+      <StyledContactText>
+        Interested in sponsoring Hackbeanpot 2024? <br /> <br />{' '}
+        Reach out to us at team@hackbeanpot.com or check out our sponsorship
+        packet!
+      </StyledContactText>
+      <PrimaryButton
+        btnText="View packet"
+        newTab={true}
+        btnLink="https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view?usp=sharing"
+      />
       <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
       {!isDesktop && (
         <>
@@ -96,16 +106,6 @@ const SponsorsSection: React.FC = () => {
           </div>
         </>
       )}
-      <StyledContactText>
-        Interested in joining the HackBeanpot desert exploration? <br /> <br />{' '}
-        Reach out to us at team@hackbeanpot.com or check out our sponsorship
-        packet!
-      </StyledContactText>
-      <PrimaryButton
-        btnText="View packet"
-        newTab
-        btnLink="https://drive.google.com/file/d/1J5JWo_ST-0UnxBLkK-eGDnc9lX3tCS2D/view"
-      />
     </StyledSponsorsSectionContainer>
   );
 };

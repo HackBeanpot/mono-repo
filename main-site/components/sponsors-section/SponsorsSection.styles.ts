@@ -11,7 +11,7 @@ const StyledSponsorsSectionContainer = styled.div`
 `;
 
 const StyledSponsorsHeader = styled(H2)`
-  margin-bottom: 1em;
+  margin: 1em 0;
 `;
 
 const StyledContactText = styled(H4)`
