@@ -43,7 +43,7 @@ const SponsorsSection: React.FC = () => {
   return (
     <StyledSponsorsSectionContainer>
       <StyledContactText>
-        Interested in sponsoring Hackbeanpot 2024? <br /> <br />{' '}
+        Interested in sponsoring HackBeanpot 2024? <br /> <br />{' '}
         Reach out to us at team@hackbeanpot.com or check out our sponsorship
         packet!
       </StyledContactText>
