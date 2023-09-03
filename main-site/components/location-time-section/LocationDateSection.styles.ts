@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max } from '../../../shared-ui/lib/responsive';
 import { StyledLocationSectionProps } from '../../../shared-ui/lib/types';
 import { colors } from '../../../shared-ui/style/colors';
