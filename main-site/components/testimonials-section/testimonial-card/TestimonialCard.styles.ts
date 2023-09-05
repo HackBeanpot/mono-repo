@@ -9,6 +9,7 @@ import {
 
 const StyledTestimonialCardContainer = styled.div`
   overflow: hidden;
+  height: auto;
 `;
 
 const StyledTestimonialCardBox = styled.div<StyledTestimonialCardAuthorYearImageProps>`
@@ -19,31 +20,30 @@ const StyledTestimonialCardBox = styled.div<StyledTestimonialCardAuthorYearImage
   border-radius: 2em;
   width: 22em;
   height: 28em;
-  @media ${max.tablet} {
-    margin-bottom: 10em;
-  }
 
   @media ${max.tablet} {
     width: 18em;
     padding: 2em;
+    margin-bottom: 10em;
     height: ${(props): string => (props.isSponsor ? `39em` : `32em`)};
   }
 
   @media ${max.tabletXs} {
     width: 12em;
+    margin-bottom: 0em;
     height: ${(props): string => (props.isSponsor ? `auto` : `45em`)};
     padding: 1.5em;
   }
 `;
 
 const StyledTestimonialCardImage = styled.img<StyledTestimonialCardAuthorYearImageProps>`
-  object-fit: ${(props): string => (props.isSponsor ? 'contain' : 'cover')};
+  object-fit: ${(props): string => (props.isSponsor ? 'scale-down' : 'cover')};
   width: 100%;
   scale: ${(props): string => (props.isSponsor ? '0.9' : '')};
   height: ${(props): string => (props.isSponsor ? '32%' : '50%')};
   margin-bottom: ${(props): string => (props.isSponsor ? '1em' : '1em')};
   @media ${max.tabletXs} {
-    border-radius: 1em;
+    border-radius: 0em;
   }
 `;
 

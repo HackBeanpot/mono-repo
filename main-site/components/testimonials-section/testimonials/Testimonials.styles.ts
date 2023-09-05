@@ -8,6 +8,7 @@ const StyledTestimonialsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin-top: 2em;
   overflow: hidden;
   text-align: left;
