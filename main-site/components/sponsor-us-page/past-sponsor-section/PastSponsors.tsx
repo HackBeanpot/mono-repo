@@ -2,9 +2,9 @@ import React from 'react';
 import {
   StyledPastSponsorsContainer,
   StyledPastSponsorsImagesContainer,
-  StyledTextSpacing,
+  StyledImageDescription,
   StyledCenterImage,
-  StyledBlurbText,
+  StyledContactText,
   StyledButtonContainer
 } from './PastSponsor.styles';
 import { H2 } from '../../../../shared-ui/style/typography';
@@ -26,23 +26,26 @@ const PastSponsors: React.FC = () => {
           }
         />
         {window.innerWidth > breakpoints.mobile && (
-          <StyledTextSpacing>
+          <StyledImageDescription>
             Due to HackBeanpot's status as a 501c3 nonprofit organization, all
             sponsorship package purchases are considered tax deductible.
-          </StyledTextSpacing>
+          </StyledImageDescription>
         )}
       </StyledPastSponsorsImagesContainer>
 
-      <StyledBlurbText>
+      <StyledContactText>
         Interested in joining the HackBeanpot universe?
         <br />
         <br />
         We would love to hear from you! Reach out to us at core@hackbeanpot.com
         to discuss further and thank you for considering us.
-      </StyledBlurbText>
+      </StyledContactText>
 
       <StyledButtonContainer>
-        <PrimaryButton btnText="Contact Us" btnLink="#" />
+        <PrimaryButton
+          btnText="Contact Us"
+          btnLink="mailto:team@hackbeanpot.com"
+        />
       </StyledButtonContainer>
     </StyledPastSponsorsContainer>
   );

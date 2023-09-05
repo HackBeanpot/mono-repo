@@ -30,7 +30,7 @@ const StyledPastSponsorsContainer = styled.div`
 `;
 
 const StyledPastSponsorsImagesContainer = styled.div`
-  padding: 2.5em;
+  padding: 3em;
   border-radius: 3em;
   margin-top: 3em;
   background-color: ${colors.DUNE_HIGHLIGHT};
@@ -49,7 +49,7 @@ const StyledPastSponsorsImagesContainer = styled.div`
   }
 `;
 
-const StyledTextSpacing = styled(P)`
+const StyledImageDescription = styled(P)`
   margin-top: 2em;
   letter-spacing: 0.5px;
   color: black;
@@ -60,7 +60,7 @@ const StyledTextSpacing = styled(P)`
 
 `;
 
-const StyledBlurbText = styled(P)`
+const StyledContactText = styled(P)`
   margin-top: 3em;
   letter-spacing: 0.5px;
   color: ${colors.TEXT_BROWN};
@@ -85,8 +85,8 @@ const StyledButtonContainer = styled.div`
 export { 
     StyledPastSponsorsContainer, 
     StyledPastSponsorsImagesContainer,
-    StyledTextSpacing,
+    StyledImageDescription,
     StyledCenterImage,
-    StyledBlurbText,
+    StyledContactText,
     StyledButtonContainer 
 };

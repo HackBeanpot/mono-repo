@@ -11,7 +11,7 @@ import { sponsorTestimonialData } from '../../lib/data';
 import WhySponsor from '../../components/sponsor-us-page/why-sponsor-section/WhySponsorSection';
 import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-page/SponsorLandingPage';
 import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
-import PastSponsors from '../../components/sponsor-us-page/past-sponsor-section/PastSponsors';
+import PastSponsorsSection from '../../components/sponsor-us-page/past-sponsor-section/PastSponsors';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -47,7 +47,7 @@ const SponsorUsPage: React.FC = () => {
         <WhySponsor />
         <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
         <SponsorPerk />
-        <PastSponsors />
+        <PastSponsorsSection />
       </StyledPageContainer>
     </>
   );
