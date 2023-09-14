@@ -10,6 +10,10 @@ const StyledContainer = styled.div`
     padding-top: 21em;
   }
 
+  @media ${min.tablet} {
+    padding-top: 15em;
+  }
+
   @media ${max.tablet} {
     padding-top: 10em;
   }
@@ -22,6 +26,10 @@ const StyledSponsorUsHeader = styled(H2)`
 
   @media ${min.desktop} {
     font-size: 4.5em;
+  }
+
+  @media ${min.tablet} {
+    font-size: 3em;
   }
 
   @media ${max.tablet} {
@@ -40,6 +48,10 @@ const StyledSponsorUsSectionContainer = styled.div`
     width: 50em;
   }
 
+  @media ${min.tablet} {
+    padding: 3em;
+  }
+
   @media ${max.tablet} {
     padding: 2em;
   }
@@ -53,6 +65,10 @@ const StyledParagraph = styled(P)`
 
 const StyledButtonContainer = styled.div`
   @media ${min.desktop} {
+    text-align: left;
+  }
+
+  @media ${min.tablet} {
     text-align: left;
   }
 

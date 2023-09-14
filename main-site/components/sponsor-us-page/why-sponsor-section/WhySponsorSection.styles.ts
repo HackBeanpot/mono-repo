@@ -12,6 +12,10 @@ const StyledWhySponsorContainer = styled.div`
     margin: 1.5em;
     padding-bottom: 5em;
   }
+  @media ${min.tablet} {
+    margin: 3em;
+    padding-bottom: 7em;
+  }
   @media ${min.desktop} {
     padding-top: 5em;
     padding-bottom: 10em;
@@ -22,6 +26,9 @@ const HideInMobileView = styled.div`
    @media ${max.tablet} {
     display: none;
   }
+  @media ${min.tablet} {
+    display: block;
+  }
   @media ${min.desktop} {
     display: block;
   }
@@ -30,6 +37,9 @@ const HideInMobileView = styled.div`
 const ShowInMobileView = styled.div`
   @media ${max.tablet} {
     display: block;
+  }
+  @media ${min.tablet} {
+    display: none;
   }
   @media ${min.desktop} {
     display: none;
@@ -44,6 +54,12 @@ const StyledTextContainer = styled.div`
     width: 38em;
     padding: 1.5em;
     border-radius: 1em;
+  }
+
+   @media ${min.tablet} {
+    width: 43em;
+    padding: 2.5em;
+    border-radius: 2em;
   }
 
   @media ${min.desktop} {
@@ -80,6 +96,14 @@ const StyledFennecFox = styled.img`
 
   @media ${max.tablet} {
     display: none;
+  }
+
+  @media ${min.tablet} {
+    right: 2em;
+    top: 30em;
+    height: 15em;
+    width: 15em;
+    display: block;
   }
 
   @media ${min.desktop} {
