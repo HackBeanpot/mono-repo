@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
-    "framer-motion": "^7.10.0",
+    "framer-motion": "^7.10.3",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^4.9.1",
     "gatsby-plugin-react-helmet": "^5.9.0",
@@ -57,7 +57,7 @@
     "react": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-media-match": "^1.14.2",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.11",
     "ts-node": "^10.9.1"
   }
 }
