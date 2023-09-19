@@ -44,7 +44,7 @@ const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({ isDay, setIsDay }) 
         <StyledButtonContainer>
           <PrimaryButton
             btnText="View our sponsorship packet"
-            btnLink="https://drive.google.com/file/d/1ttohaF5r457ymHIPI9Tx2jXkt9HLz8gn/view?usp=sharing"
+            btnLink="https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view"
             newTab
           />
         </StyledButtonContainer>
