@@ -10,11 +10,8 @@ import CamelBody from '../../../../shared-ui/images/CamelBody.svg';
 import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import Explorer from '../../../../shared-ui/images/explorer.svg';
-import { min } from '../../../../shared-ui/lib/responsive';
-import useMatchMedia from 'react-use-match-media';
 
 const SponsorPerk: React.FC = () => {
-  const isDesktop = useMatchMedia(min.tablet);
   return (
     <StyledSponsorPerkSectionContainer>
       <StyledExplorer src={Explorer} />

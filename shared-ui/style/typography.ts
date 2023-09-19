@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { min } from '../lib/responsive';
+import styled from '@emotion/styled';
+import { min, max } from '../lib/responsive';
 import { colors } from './colors';
 
 const fonts = {
@@ -33,6 +33,10 @@ const H3 = styled.h3`
   font-family: ${fonts.nunitoSansRegular};
   font-size: clamp(1.3em, 6.6vw, 2.1em);
   margin: 0;
+
+  @media ${max.tablet} {
+    padding: 0;
+  }
 `;
 
 const H4 = styled.h4`
