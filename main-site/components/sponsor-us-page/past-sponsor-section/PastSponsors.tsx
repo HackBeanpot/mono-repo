@@ -14,6 +14,7 @@ import useMatchMedia from 'react-use-match-media';
 import DesktopSizeImage from '../../../../shared-ui/images/sponsor-us/desktop-sponsors.png';
 import MobileSizeImage from '../../../../shared-ui/images/sponsor-us/mobile-sponsors.png';
 
+
 const PastSponsors: React.FC = () => {
   const isDesktop = useMatchMedia(min.mobile);
   return (

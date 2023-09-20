@@ -11,6 +11,7 @@ const StyledPastSponsorsContainer = styled.div`
   align-items: center;
   position: relative;
   padding-bottom: 10em;
+  margin: 1em;
 
   @media ${min.mobile} {
     margin-top: 14em;
@@ -30,13 +31,16 @@ const StyledPastSponsorsContainer = styled.div`
 `;
 
 const StyledPastSponsorsImagesContainer = styled.div`
-  padding: 3em;
+  padding: 1em;
   border-radius: 3em;
   margin-top: 3em;
   background-color: ${colors.DUNE_HIGHLIGHT};
 
   @media ${min.tabletSm} {
     width: 20em;
+  }
+  @media ${min.mobile} {
+    padding: 3em;
   }
   @media ${min.tablet} {
     width: 38em;
@@ -49,12 +53,13 @@ const StyledPastSponsorsImagesContainer = styled.div`
   }
 `;
 
+
 const StyledImageDescription = styled(P)`
   margin-top: 2em;
   letter-spacing: 0.5px;
   color: black;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-family: ${fonts.nunitoSansSemibold};
   font-style: italic;
 
@@ -68,7 +73,8 @@ const StyledContactText = styled(P)`
   font-size: 24px;
   font-family: ${fonts.nunitoSansSemibold};
   font-style: italic;
-
+  width: 25em
+  
 `;
 
 const StyledCenterImage = styled.img`
