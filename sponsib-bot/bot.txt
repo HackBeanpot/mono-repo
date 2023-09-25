@@ -1,7 +1,42 @@
 This bot has the following functionality
 
-- A slackbot interface, which has support for the following commmands
-
-
+- A slackbot interface, which has support for the following commmand
 - A function that parses the existing sponsorship workflow from google sheets 
+
+- Permission-gated access to features
+
+- Ability to generate emails from one of the templates with pre-filled details
+- Ability to schedule when we send emails out
+- Ability to bulk-schedule outreach to X different companies, with dynamic handling of the contact type, relationship, etc
+
+
+View Functions: 
+- Mongo stores the majority of our contacts and our relationship with them. Users can view this and update as needed
+
+Relationship Types 
+
+- Cold Reachout (someone we dont know, no relation to them, so we're gonna send them a standard email and follow the pipeline)
+- Alumni Connection (we know someone who knows someone. Lets ask them to reachout and wait for their response)
+- Prior Connection (they either expressed interest, or have sponsored us before. We're gonna talk about that and use it as momentum to re-up on that sponsorship)
+
+Basic Flow: 
+
+- Dynamicize based on how we know them, then we monitor the conversations we have with them. 
+    - If they're not responding, we reach out a couple times before marking them as ghosts
+    - If they respond with interest, we notify the sponsib team and have them take it from there
+    - If they respond without interest, we handle the relationship kindly, inquire about venue sponsors, judging, etc 
+        - Perhaps an experimental feature that passes our current "needs" (food sponsor, judge, keynote, whatever) to GPT-composer and has them follow up with that stuff?
+
+- GPT email-composition agent
+    - We use our templates and the GPT API to re-write each email, giving it access to as much relevant information as possible.
+    - Contextualized with HBP missions, past events, etc etc (S/O Jess)
+    - TODO: Host Llama2 or smth, compare billing with GPT credits (its prob way cheaper tbh) 
+    - TODO: AWS or Azure managed LLM???
+
+- Load context from Ordinate Linkedin Scraping service
+    - We can pull the company description, their mission, recent Linkedin posts and events and enrich our email with that
+
+- Use Mailcompose to read activity via IMAP, use this to notify users OR automatically update the thread progress
+- Maintain email state in Mongo
+
 
