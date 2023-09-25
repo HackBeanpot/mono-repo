@@ -1,0 +1,7 @@
+This bot has the following functionality
+
+- A slackbot interface, which has support for the following commmands
+
+
+- A function that parses the existing sponsorship workflow from google sheets 
+
