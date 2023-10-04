@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
-import '../../../shared-ui/style/globals.css';
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
@@ -21,6 +20,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 // import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
+import { testimonialSectionData } from '../../lib/data';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -54,7 +54,7 @@ const IndexPage: React.FC = () => {
       <ExploreSection />
       <AboutSection />
       {/* <EventsCalendarSection /> */}
-      <TestimonialsSection />
+      <TestimonialsSection testimonialData={testimonialSectionData}/>
       <PastProjectsSection />
       <FaqSection />
       <PastPhotosSection />

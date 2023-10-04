@@ -15,7 +15,7 @@ const StyledSponsorsHeader = styled(H2)`
 `;
 
 const StyledContactText = styled(H4)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.TEXT_BROWN} !important; 
   padding: 3em 12em;
   @media ${max.desktop} {
     padding: 3em;

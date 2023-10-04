@@ -1,34 +1,42 @@
 import React from 'react';
 import { LeftOrRightTestimonialCardProps } from '../../../lib/types';
-import { getImage } from '../../../lib/utils';
 import {
   StyledTestimonialCardContainer,
   StyledTestimonialCardBox,
   StyledTestimonialCardAuthor,
   StyledTestimonialCardImage,
   StyledTestimonialCardQuote,
-  StyledTestimonialCardYear
+  StyledTestimonialCardYearCompany,
+  StyledTestimonialTextWrapper
 } from './TestimonialCard.styles';
 
 const LeftOrRightTestimonialCard: React.FC<LeftOrRightTestimonialCardProps> = ({
-  testimonial
+  testimonial,
+  isSponsor
 }) => {
   return (
     <StyledTestimonialCardContainer>
-      <StyledTestimonialCardBox>
-        <StyledTestimonialCardImage src={getImage(testimonial.author)} />
+      <StyledTestimonialCardBox isSponsor={isSponsor}>
+        <StyledTestimonialCardImage
+          isSponsor={isSponsor}
+          src={testimonial.image}
+        />
+        <StyledTestimonialTextWrapper isSponsor={isSponsor}>
+          <StyledTestimonialCardAuthor isSponsor={isSponsor}>
+            {testimonial.author}
+          </StyledTestimonialCardAuthor>
 
-        <StyledTestimonialCardAuthor>
-          {testimonial.author}
-        </StyledTestimonialCardAuthor>
+          <StyledTestimonialCardYearCompany isSponsor={isSponsor}>
+          {isSponsor ? testimonial.company : testimonial.year}
+          </StyledTestimonialCardYearCompany>
 
-        <StyledTestimonialCardYear>
-          {testimonial.year}
-        </StyledTestimonialCardYear>
-
-        <StyledTestimonialCardQuote quote={testimonial.quote}>
-          {testimonial.quote}
-        </StyledTestimonialCardQuote>
+          <StyledTestimonialCardQuote
+            isSponsor={isSponsor}
+            quote={testimonial.quote}
+          >
+            {testimonial.quote}
+          </StyledTestimonialCardQuote>
+        </StyledTestimonialTextWrapper>
       </StyledTestimonialCardBox>
     </StyledTestimonialCardContainer>
   );

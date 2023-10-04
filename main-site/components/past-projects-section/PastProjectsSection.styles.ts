@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { colors } from '../../../shared-ui/style/colors';
-import { H2, P } from '../../../shared-ui/style/typography';
+import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { max } from '../../../shared-ui/lib/responsive';
 import { motion } from 'framer-motion';
 
@@ -15,7 +15,7 @@ const StyledPastProjectsHeader = styled(H2)`
   text-align: center;
   @media ${max.tablet} {
     padding-bottom: -10em;
-  }
+  };
 `;
 
 const StyledPastProjectsDiv = styled.div`
@@ -32,7 +32,7 @@ const StyledPastProjectsSection = styled.div`
   @media ${max.tablet} {
     background-color: transparent;
     text-align: center;
-  }
+  };
 `;
 
 const StyledPastProjectsContainer = styled.div`
@@ -42,7 +42,7 @@ const StyledPastProjectsContainer = styled.div`
   @media ${max.tablet} {
     display: absolute;
     padding-left: 0;
-  }
+  };
 `;
 
 const StyledPastProjectsContainerBottom = styled.div`
@@ -61,7 +61,7 @@ const StyledPastProjectsInfo = styled.div`
     text-align: center;
     padding-left: 0;
     padding-right: 3em;
-  }
+  };
 `;
 
 const StyledPastProjectsInfoContainer = styled.div`
@@ -69,7 +69,7 @@ const StyledPastProjectsInfoContainer = styled.div`
 `;
 
 const StyledPastProjectsTitle = styled(H2)`
-  font-size: 1.5625em;
+  font-size: 1.5625em !important;
   color: ${colors.BUTTON_GREEN};
   padding-bottom: 0.9em;
   width: 100%;
@@ -77,13 +77,13 @@ const StyledPastProjectsTitle = styled(H2)`
   @media ${max.tablet} {
     text-align: center;
     color: black;
-  }
+  };
 `;
 
-const StyledPastProjectsAward = styled(H2)`
+const StyledPastProjectsAward = styled(P)`
   font-size: 1em;
   text-align: right;
-  color: ${colors.YELLOW};
+  color: ${colors.YELLOW} !important;
   width: 100%;
 
   @media ${max.tabletLg} {

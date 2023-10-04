@@ -8,7 +8,7 @@ import {
   StyledHamburgerIcon,
   StyledXIcon
 } from './Header.styles';
-import HackBeanpotWhiteLogo from '../../images/hackbeanpot-white-logo.png';
+import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.png';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../lib/responsive';
 import Hamburger from '../../images/hamburger-icon.svg';
