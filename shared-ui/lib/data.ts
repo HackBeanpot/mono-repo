@@ -226,7 +226,7 @@ const alyssa: Person = {
 };
 
 const helenToolTip: ToolTipInfo = {
-  name: 'name: Helen Miao', 
+  name: 'name: Helen Miao',
   year: 'year: 3rd',
   major: 'major: CS + Design',
   pronouns: 'pronouns: she/her'
@@ -295,8 +295,8 @@ const mandyToolTip: ToolTipInfo = {
 const mandy: Person = {
   picture: Mandy,
   toolTipInfo: mandyToolTip
-}; 
-  
+};
+
 const emmaToolTip: ToolTipInfo = {
   name: 'name: Emma Vonbuelow',
   year: 'year: 2nd',
@@ -334,17 +334,17 @@ const luke: Person = {
 };
 
 const audreyToolTip: ToolTipInfo = {
-    name: 'name: Audrey Wong',
-    year: 'year: 2nd',
-    major: 'major: CS and Businss',
-    pronouns: 'pronouns: she/her'
-  };
-  
-  const audrey: Person = {
-    picture: Audrey,
-    toolTipInfo: audreyToolTip
-  };
-  
+  name: 'name: Audrey Wong',
+  year: 'year: 2nd',
+  major: 'major: CS and Businss',
+  pronouns: 'pronouns: she/her'
+};
+
+const audrey: Person = {
+  picture: Audrey,
+  toolTipInfo: audreyToolTip
+};
+
 const johnToolTip: ToolTipInfo = {
   name: 'name: John Sargent',
   year: 'year: 2nd',

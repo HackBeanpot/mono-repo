@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H4 } from '../../../shared-ui/style/typography';
@@ -11,7 +11,7 @@ const StyledSponsorsSectionContainer = styled.div`
 `;
 
 const StyledSponsorsHeader = styled(H2)`
-  margin-bottom: 1em;
+  margin: 1em 0;
 `;
 
 const StyledContactText = styled(H4)`

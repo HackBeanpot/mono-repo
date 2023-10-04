@@ -24,6 +24,7 @@ export interface DropdownProps {
 export interface TabInfo {
   name: string;
   link: string;
+  newTab?: boolean;
 }
 
 export interface TeamColumnInfo {

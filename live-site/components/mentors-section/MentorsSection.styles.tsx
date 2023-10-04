@@ -1,8 +1,7 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max, min } from '../../../shared-ui/lib/responsive';
-import { H3 } from '../../../shared-ui/style/typography';
+import { H3, fonts } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
-import { fonts } from '../../../shared-ui/style/typography';
 import { StyledDropdown } from '../../styled-components/SecondarySelect.styles';
 import { StyledCactusButtonsProps } from '../../lib/types';
 
