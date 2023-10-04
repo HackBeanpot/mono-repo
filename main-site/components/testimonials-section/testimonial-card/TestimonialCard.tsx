@@ -27,7 +27,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <StyledTestimonialCardContainer>
         <StyledTestimonialCardBox isSponsor={isSponsor}>
           <StyledTestimonialCardImage src={image} isSponsor={isSponsor} />
-          <StyledTestimonialTextWrapper isSponsor={isSponsor}>
             <StyledTestimonialCardAuthor isSponsor={isSponsor}>
               {author}
             </StyledTestimonialCardAuthor>
@@ -37,7 +36,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             <StyledTestimonialCardQuote quote={quote} isSponsor={isSponsor}>
               {quote}
             </StyledTestimonialCardQuote>
-          </StyledTestimonialTextWrapper>
         </StyledTestimonialCardBox>
       </StyledTestimonialCardContainer>
     );

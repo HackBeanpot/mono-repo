@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P, fonts } from '../../../../shared-ui/style/typography';
@@ -9,6 +9,7 @@ import {
 
 const StyledTestimonialCardContainer = styled.div`
   overflow: hidden;
+  height: auto;
 `;
 
 const StyledTestimonialCardBox = styled.div<StyledTestimonialCardAuthorYearImageProps>`
@@ -19,47 +20,52 @@ const StyledTestimonialCardBox = styled.div<StyledTestimonialCardAuthorYearImage
   border-radius: 2em;
   width: 22em;
   height: 28em;
-  @media ${max.tablet} {
-    margin-bottom: 10em;
-  }
 
   @media ${max.tablet} {
     width: 18em;
     padding: 2em;
-    height: 32em;
+    margin-bottom: 10em;
+    height: ${(props): string => (props.isSponsor ? `39em` : `32em`)};
   }
 
   @media ${max.tabletXs} {
     width: 12em;
-    height: 35em;
+    margin-bottom: 0em;
+    height: ${(props): string => (props.isSponsor ? `auto` : `45em`)};
     padding: 1.5em;
   }
 `;
 
 const StyledTestimonialCardImage = styled.img<StyledTestimonialCardAuthorYearImageProps>`
-  object-fit: ${(props): string => (props.isSponsor ? 'contain' : 'cover')};
+  object-fit: ${(props): string => (props.isSponsor ? 'scale-down' : 'cover')};
   width: 100%;
   scale: ${(props): string => (props.isSponsor ? '0.9' : '')};
   height: ${(props): string => (props.isSponsor ? '32%' : '50%')};
   margin-bottom: ${(props): string => (props.isSponsor ? '1em' : '1em')};
   @media ${max.tabletXs} {
-    border-radius: 1em;
+    border-radius: 0em;
   }
 `;
 
-const StyledTestimonialCardAuthor = styled(H4)<StyledTestimonialCardAuthorYearImageProps>`
-  font-size:${(props): string => (props.isSponsor ? '1.8em' : '1.2em')};
-  font-family:${(props): string => (props.isSponsor ? fonts.nunitoRegular : '')};
+const StyledTestimonialCardAuthor = styled(
+  H4
+)<StyledTestimonialCardAuthorYearImageProps>`
+  font-size: ${(props): string => (props.isSponsor ? '1.8em' : '1.2em')};
+  font-family: ${(props): string =>
+    props.isSponsor ? fonts.nunitoRegular : ''};
   margin-bottom: ${(props): string => (props.isSponsor ? '0em' : '0.4em')};
   color: ${(props): string => (props.isSponsor ? colors.TEXT_BOX : '')};
 `;
 
-const StyledTestimonialCardYearCompany = styled(P)<StyledTestimonialCardAuthorYearImageProps>`
-  font-size:${(props): string => (props.isSponsor ? '1.2em' : '1em')};
+const StyledTestimonialCardYearCompany = styled(
+  P
+)<StyledTestimonialCardAuthorYearImageProps>`
+  font-size: ${(props): string => (props.isSponsor ? '1.2em' : '1em')};
   color: ${(props): string =>
     props.isSponsor ? colors.BLACK : colors.TEXT_GREY};
   margin-bottom: 0.4em;
-  font-family:${(props): string => (props.isSponsor ? fonts.nunitoSansSemibold : '')};
+  font-family: ${(props): string =>
+    props.isSponsor ? fonts.nunitoSansSemibold : ''};
 `;
 
 const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearImageProps>`
@@ -70,44 +76,10 @@ const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
   font-size: ${(props): string =>
     props.isSponsor
       ? `1.1em`
-      : props.quote
-      ? props.quote.length < 230
-        ? `calc(${props.quote.length / 105}em)` // raisa
-        : props.quote.length < 300
-        ? `calc(${props.quote.length / 220}em)` // karyna
-        : props.quote.length < 370
-        ? `calc(${props.quote.length / 440}em)` //spencer
-        : `calc(${props.quote.length / 460}em)` //jimin
-      : `0.85em`}};
+      : `0.85em`
+    };
       
   letter-spacing: 0.05em;
-
-  @media ${max.tablet} {
-    font-size: ${(props): string =>
-      props.quote
-        ? props.quote.length < 230
-          ? `calc(${props.quote.length / 105}em)` // raisa
-          : props.quote.length < 300
-          ? `calc(${props.quote.length / 226}em)` // karyna
-          : props.quote.length < 370
-          ? `calc(${props.quote.length / 415}em)` //spencer
-          : `calc(${props.quote.length / 473}em)` //jimin
-        : `0.85em`};
-  }
-
-  @media ${max.tabletXs} {
-    font-size: ${(props): string =>
-      props.quote
-        ? props.quote.length < 230
-          ? `calc(${props.quote.length / 125}em)` // raisa
-          : props.quote.length < 300
-          ? `calc(${props.quote.length / 256}em)` // karyna
-          : props.quote.length < 370
-          ? `calc(${props.quote.length / 488}em)` //spencer
-          : `calc(${props.quote.length / 520}em)` //jimin
-        : `0.85em`};
-  }
-
   color: ${(props): string => (props.isSponsor ? colors.BLACK : colors.WHITE)};
   margin-top: ${(props): string => (props.isSponsor ? '2em' : '0em')};
 `;

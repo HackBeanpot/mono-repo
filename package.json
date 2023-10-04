@@ -58,7 +58,9 @@
     "react": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-media-match": "^1.14.2",
-    "styled-components": "^5.3.5",
-    "ts-node": "^10.9.1"
+    "styled-components": "^5.3.11",
+    "ts-node": "^10.9.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0"
   }
 }
