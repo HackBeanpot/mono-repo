@@ -23,7 +23,7 @@ const StyledCactus = styled.img`
 `;
 
 const StyledH4 = styled(H4)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.TEXT_BROWN} !important;
   margin-top: 3em;
   padding: 2em;
 `;
