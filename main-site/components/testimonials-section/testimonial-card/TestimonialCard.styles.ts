@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P, fonts } from '../../../../shared-ui/style/typography';
@@ -76,54 +76,10 @@ const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
   font-size: ${(props): string =>
     props.isSponsor
       ? `1.1em`
-      : props.quote
-      ? props.quote.length < 230
-        ? `calc(${props.quote.length / 105}em)` // raisa
-        : props.quote.length < 300
-        ? `calc(${props.quote.length / 220}em)` // karyna
-        : props.quote.length < 370
-        ? `calc(${props.quote.length / 440}em)` //spencer
-        : `calc(${props.quote.length / 460}em)` //jimin
-      : `0.85em`}};
+      : `0.85em`
+    };
       
   letter-spacing: 0.05em;
-
-  @media ${max.tablet} {
-    font-size: ${(props): string =>
-      props.quote
-        ? props.quote.length < 90
-          ? `1.85em`
-          : props.quote.length < 210
-          ? `1.25em`
-          : props.quote.length < 230
-          ? `calc(${props.quote.length / 105}em)` // raisa
-          : props.quote.length < 300
-          ? `calc(${props.quote.length / 226}em)` // karyna
-          : props.quote.length < 370
-          ? `calc(${props.quote.length / 415}em)` //spencer
-          : `calc(${props.quote.length / 473}em)` //jimin
-        : `0.85em`};
-  }
-
-  @media ${max.tabletXs} {
-    font-size: ${(props): string =>
-      props.quote
-        ? props.quote.length < 90
-          ? `1.5em`
-          : props.quote.length < 210
-          ? `1em`
-          : props.quote.length < 230
-          ? `calc(${props.quote.length / 105}em)` // raisa
-          : (props.quote.length < 280 && props.isSponsor)
-          ? `1.0em`
-          : props.quote.length < 300
-          ? `calc(${props.quote.length / 226}em)` // karyna
-          : props.quote.length < 370
-          ? `calc(${props.quote.length / 415}em)` //spencer
-          : `calc(${props.quote.length / 473}em)` //jimin
-        : `0.85em`};
-  }
-
   color: ${(props): string => (props.isSponsor ? colors.BLACK : colors.WHITE)};
   margin-top: ${(props): string => (props.isSponsor ? '2em' : '0em')};
 `;
