@@ -5,7 +5,9 @@ import {
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledLandingTextContainer,
-  StyledStar
+  StyledStar,
+  StyledThemeTextSmall,
+  StyledThemeTextParagraph
 } from './LandingSection.styles';
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import Sun from '../../../shared-ui/images/sun.svg';
@@ -23,12 +25,13 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
         <StyledStar animate="animate" variants={moonRock} src={Moon} />
       )}
       <StyledLandingTextContainer>
-        {/* <StyledHackathonText>HackBeanpot 2024</StyledHackathonText> */}
-        <StyledThemeText>HackBeanpot 2024</StyledThemeText>
-        <StyledHackathonText>More information soon!</StyledHackathonText>
+        <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
+        <StyledThemeText>Under the Sea</StyledThemeText>
+        <StyledThemeTextSmall>February 10-12, 2024</StyledThemeTextSmall>
+        <StyledThemeTextParagraph> @ Wood Mackenzie (Formerly known as PowerAdvocate) <br/> 179 Lincoln St, Boston, MA 02111</StyledThemeTextParagraph>
         {/* <LocationTimeSection isDay={isDay} /> */}
         <StyledLandingButtonContainer
-          btnText="Join our mailing list"
+          btnText="Apply"
           btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
           newTab
         />

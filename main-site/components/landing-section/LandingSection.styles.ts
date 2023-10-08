@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { H1, H3 } from '../../../shared-ui/style/typography';
+import { H1, H11, H3, H5, P } from '../../../shared-ui/style/typography';
 
-const StyledHackathonText = styled(H3)`
+const StyledHackathonText = styled(H5)`
    {
     color: ${colors.WHITE};
     padding-bottom: 0.2em;
@@ -42,6 +42,36 @@ const StyledThemeText = styled(H1)`
     color: ${colors.WHITE};
     padding-bottom: 0.1em;
     @media ${max.tablet} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2em, 0;
+    }
+  }
+`;
+
+const StyledThemeTextSmall = styled(H11)`
+   {
+    color: ${colors.WHITE};
+    padding-bottom: 0.1em;
+    @media ${max.tablet} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2em, 0;
+    }
+  }
+`;
+
+const StyledThemeTextParagraph = styled(P)`
+   {
+    color: ${colors.WHITE};
+    padding-bottom: 0.1em;
+    white-space: pre-line;
+    width: 25%;
+    @media ${max.tablet} {
+      white-space: pre-line;
+      width: 25%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -101,6 +131,8 @@ const StyledToggle = styled.img`
 export {
   StyledHackathonText,
   StyledThemeText,
+  StyledThemeTextSmall, 
+  StyledThemeTextParagraph,
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledToggle,

@@ -3,7 +3,7 @@ import { min, max } from '../lib/responsive';
 import { colors } from './colors';
 
 const fonts = {
-  calistogaRegular: 'Calistoga-Regular',
+  berkshireSwash: 'Berkshire-Swash',
   nunitoSansBold: 'NunitoSans-Bold',
   nunitoSansLight: 'NunitoSans-Light',
   nunitoSansRegular: 'NunitoSans-Regular',
@@ -12,11 +12,20 @@ const fonts = {
 };
 
 const H1 = styled.h1`
-  font-family: ${fonts.calistogaRegular};
+  font-family: ${fonts.berkshireSwash};
   color: ${(props): string => (props.color ? props.color : colors.WHITE)};
-  font-size: clamp(1.5em, 9.5vw, 6.5em);
+  font-size: clamp(3.2em, 10vw, 7.5em);
   letter-spacing: 0.04em;
   margin: 0;
+`;
+
+const H11 = styled.h1`
+  font-family: ${fonts.berkshireSwash};
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
+  font-size: clamp(0.5em, 8.5vw, 4.5em);
+  letter-spacing: 0.04em;
+  margin: 0;
+  margin-bottom: 0.2em;
 `;
 
 const H2 = styled.h2`
@@ -51,17 +60,30 @@ const H4 = styled.h4`
   letter-spacing: 0.1em;
 `;
 
+const H5 = styled.h4`
+  font-family: ${fonts.nunitoSansSemibold};
+  color: ${(props): string =>
+    props.color ? props.color : colors.WHITE};
+  margin: 0;
+  font-size: 1.5em;
+  @media ${min.tablet} {
+    font-size: 2.5em;
+  }
+  letter-spacing: 0.1em;
+`;
+
 const P = styled.p`
   margin: 0;
+  margin-bottom: 1em;
   font-family: ${fonts.nunitoSansRegular};
   font-size: 1.1em;
   line-height: 1.4em;
   color: ${(props): string => (props.color ? props.color : colors.WHITE)};
   @media ${min.mobile} {
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
   @media ${min.tablet} {
-    font-size: 1.25em;
+    font-size: 1.4em;
   }
 `;
 
@@ -71,4 +93,4 @@ const StyledLink = styled.a`
   }
 `;
 
-export { H1, H2, H3, H4, P, fonts, StyledLink };
+export { H1, H11, H2, H3, H4, H5, P, fonts, StyledLink };
