@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import { max } from '../../../shared-ui/lib/responsive';
+import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H1, H11, H3, H5, P } from '../../../shared-ui/style/typography';
 
@@ -19,23 +19,6 @@ const StyledHackathonText = styled(H5)`
   }
 `;
 
-const StyledStar = styled(motion.img)`
-  position: absolute;
-  z-index: 10;
-  width: 12%;
-  top: 9em;
-  right: 13em;
-  @media ${max.tabletLg} {
-    right: 8em;
-  }
-  @media ${max.tablet} {
-    right: 5em;
-    width: 14%;
-  }
-  @media ${max.tabletSm} {
-    right: 2em;
-  }
-`;
 
 const StyledThemeText = styled(H1)`
    {
@@ -79,6 +62,112 @@ const StyledThemeTextParagraph = styled(P)`
     }
   }
 `;
+
+const StyledLandingImageContainer = styled.div`
+  position: absolute;
+  padding-top: 21em;
+  @media ${max.tabletLg} {
+    padding-top: 14em;
+  }
+  @media ${max.tablet} {
+    padding-top: 18em;
+  }
+  @media ${max.tabletSm} {
+    padding-top: 13em;
+  }
+  @media ${max.mobile} {
+    padding-top: 10em;
+  }
+`;
+
+const StyledBubble1 = styled.img`
+  position: absolute;
+  @media ${min.mobile} {
+    width: 10%;
+    top: 15vh;
+    left: 6vw;
+  }
+  @media ${min.tablet} {
+    width: 5%;
+  }
+`
+
+const StyledBubble2 = styled.img`
+  position: absolute;
+  top: 50vh;
+  right: 5vw;
+  width: 10%;
+  @media ${max.tabletLg} {
+    top: 55vw;
+    right: -5vw;
+    width: 15%;
+  }
+  @media ${max.tablet} {
+    top: 75vw;
+  }
+  @media ${max.tabletSm} {
+    top: 90vw;
+    right: -5vw;
+  }
+`
+
+const StyledFish = styled.img`
+  position: absolute;
+  top: 75vh;
+  left: 5vw;
+  @media ${max.tabletLg} {
+    top: 70vw;
+    width: 15%;
+  }
+  @media ${max.tablet} {
+    top: 80vw;
+  }
+  @media ${max.tabletSm} {
+    top: 110vw;
+  }
+  @media ${max.mobile} {
+    top: 110vw;
+  }
+`
+
+const StyledJellyfish = styled.img`
+  position: absolute;
+  top: 75vh;
+  right: 0;
+  width: 15%;
+  @media ${max.tabletLg} {
+    top: 70vw;
+    width: 15%;
+  }
+  @media ${max.tablet} {
+    top: 95vw;
+  }
+  @media ${max.tabletSm} {
+    top: 110vw;
+  }
+  @media ${max.mobile} {
+    top: 110vw;
+  }
+`
+
+const StyledWhale = styled.img`
+  position: absolute;
+  top: 80vh;
+  left: 0;
+  width: 30%;
+  @media ${max.tabletLg} {
+    top: 80vw;
+  }
+  @media ${max.tablet} {
+    top: 110vw;
+  }
+  @media ${max.tabletSm} {
+    top: 120vw;
+  }
+  @media ${max.mobile} {
+    top: 120vw;
+  }
+`
 
 const StyledLandingTextContainer = styled.div`
   padding-top: 21em;
@@ -137,5 +226,10 @@ export {
   StyledLandingSectionContainer,
   StyledToggle,
   StyledLandingTextContainer,
-  StyledStar
+  StyledLandingImageContainer,
+  StyledBubble1,
+  StyledBubble2,
+  StyledFish,
+  StyledJellyfish,
+  StyledWhale
 };

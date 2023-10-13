@@ -5,25 +5,31 @@ import {
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledLandingTextContainer,
-  StyledStar,
   StyledThemeTextSmall,
-  StyledThemeTextParagraph
+  StyledThemeTextParagraph,
+  StyledBubble1,
+  StyledBubble2,
+  StyledFish,
+  StyledJellyfish,
+  StyledWhale
 } from './LandingSection.styles';
+import Bubble from '../../../shared-ui/images/bubbles.svg'
+import Bubble2 from '../../../shared-ui/images/bubbles2.svg'
+import Fish from '../../../shared-ui/images/fish.svg'
+import Jellyfish from '../../../shared-ui/images/jellyfish.svg'
+import Whale from '../../../shared-ui/images/whale.svg'
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
-import Sun from '../../../shared-ui/images/sun.svg';
-import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
-import { moonRock, sunRays } from './LandingSection.animations';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledLandingSectionContainer>
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
-      {isDay ? (
-        <StyledStar animate="animate" variants={sunRays} src={Sun} />
-      ) : (
-        <StyledStar animate="animate" variants={moonRock} src={Moon} />
-      )}
+      <StyledBubble1 src = {Bubble} />
+      <StyledBubble2 src = {Bubble2} />
+      <StyledFish src = {Fish} />
+      <StyledJellyfish src = {Jellyfish} />
+      <StyledWhale src = {Whale} />
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
         <StyledThemeText>Under the Sea</StyledThemeText>
