@@ -28,15 +28,15 @@ const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
-      return 'day-background-desktop';
+      return 'day-gradient-desktop';
     }
     if (isDay && !isDesktop) {
-      return 'mobile-light-background';
+      return 'mobile-light-gradient';
     }
     if (!isDay && isDesktop) {
-      return 'dark-background-desktop';
+      return 'dark-gradient-desktop';
     }
-    return 'mobile-dark-background';
+    return 'mobile-dark-gradient';
   };
 
   useEffect(() => {
