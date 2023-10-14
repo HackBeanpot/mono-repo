@@ -10,7 +10,7 @@ const StyledArrowContainer = styled.div`
 `;
 
 const StyledPastProjectsHeader = styled(H2)`
-  color: ${colors.BLACK};
+  color: ${colors.WHITE};
   padding-bottom: 0.5em;
   text-align: center;
   @media ${max.tablet} {
@@ -19,7 +19,7 @@ const StyledPastProjectsHeader = styled(H2)`
 `;
 
 const StyledPastProjectsDiv = styled.div`
-  margin: 0 1em;
+  margin: 0 4em;
 `;
 
 const StyledPastProjectsSection = styled.div`
@@ -54,6 +54,7 @@ const StyledPastProjectsContainerBottom = styled.div`
 const StyledPastProjectsInfo = styled.div`
   text-align: left;
   padding-left: 18.75em;
+  margin-left: 3em;
   padding-right: 3em;
 
   @media ${max.tablet} {
@@ -70,7 +71,7 @@ const StyledPastProjectsInfoContainer = styled.div`
 
 const StyledPastProjectsTitle = styled(H2)`
   font-size: 1.5625em !important;
-  color: ${colors.BUTTON_GREEN};
+  color: ${colors.WHITE};
   padding-bottom: 0.9em;
   width: 100%;
 
@@ -83,7 +84,7 @@ const StyledPastProjectsTitle = styled(H2)`
 const StyledPastProjectsAward = styled(P)`
   font-size: 1em;
   text-align: right;
-  color: ${colors.YELLOW} !important;
+  color: ${colors.WHITE} !important;
   width: 100%;
 
   @media ${max.tabletLg} {
@@ -94,6 +95,7 @@ const StyledPastProjectsAward = styled(P)`
   @media ${max.tablet} {
     text-align: center;
     padding-bottom: 1em;
+    font-size: 1.5em;
   }
 `;
 
@@ -111,6 +113,7 @@ const StyledPastProjectsMembers = styled(P)`
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
   margin-left: 2.8em;
+  font-style: italic;
 `;
 
 const StyledPastProjectsDescription = styled(P)`
@@ -120,7 +123,7 @@ const StyledPastProjectsDescription = styled(P)`
   margin-left: 2em;
 
   @media ${max.tablet} {
-    color: ${colors.TEXT_BROWN};
+    color: ${colors.WHITE};
     margin-left: 0em;
     text-align: left;
     padding-bottom: 2em;
@@ -140,7 +143,7 @@ const StyledPastProjectsViewText = styled(P)`
   line-height: 2;
   padding-left: 2em;
   padding-right: 2em;
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
 `;
 
 const StyledPastProjectsPhotos = styled.img`

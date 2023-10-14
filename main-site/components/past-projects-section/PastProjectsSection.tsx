@@ -52,7 +52,7 @@ const PastProjectsSection: React.FC = () => {
               <StyledPastProjectsInfo>
                 <StyledPastProjectsTitleAwardContainer>
                   <StyledPastProjectsTitle>
-                    {project.title}
+                    {project.title}, 2023
                   </StyledPastProjectsTitle>
                   <StyledPastProjectsAward>
                     {project.award}
@@ -81,46 +81,42 @@ const PastProjectsSection: React.FC = () => {
           <StyledPastProjectsSection>
             <StyledPastProjectsPhotos src={currItem.image} />
 
-            <StyledArrowContainer>
-              <Arrow
-                left
-                onClick={(): void =>
-                  setCurrItem(
-                    getLeftOrRight('left', pastProjectsData, currItem)
-                  )
-                }
-              />
-
-              <StyledPastProjectsDiv>
-                <StyledPastProjectsTitleAwardContainer>
+            <StyledPastProjectsDiv>
+              <StyledPastProjectsTitleAwardContainer>
+                <StyledArrowContainer>
+                  <Arrow
+                    left
+                    onClick={(): void =>
+                      setCurrItem(
+                        getLeftOrRight('left', pastProjectsData, currItem)
+                      )
+                    }
+                  />
                   <StyledPastProjectsTitle>
-                    {currItem.title}
+                    {currItem.title}, 2023
                   </StyledPastProjectsTitle>
-                  <StyledPastProjectsAward>
-                    {currItem.award}
-                  </StyledPastProjectsAward>
-                </StyledPastProjectsTitleAwardContainer>
-                <StyledPastProjectsMembers>
-                  {currItem.members}
-                </StyledPastProjectsMembers>
-                <StyledPastProjectsDescription>
-                  {currItem.description}
-                </StyledPastProjectsDescription>
-              </StyledPastProjectsDiv>
-              <Arrow
-                left={false}
-                onClick={(): void =>
-                  setCurrItem(
-                    getLeftOrRight('right', pastProjectsData, currItem)
-                  )
-                }
-              />
-            </StyledArrowContainer>
-
-            <PrimaryButton
-              btnText="View Project"
-              btnLink={currItem.btnLink}
-              newTab
+                  <PrimaryButton
+                    btnText="View Project"
+                    btnLink={currItem.btnLink}
+                    newTab
+                  />
+                </StyledArrowContainer>
+                <StyledPastProjectsAward>
+                  {currItem.award}
+                </StyledPastProjectsAward>
+              </StyledPastProjectsTitleAwardContainer>
+              <StyledPastProjectsMembers>
+                {currItem.members}
+              </StyledPastProjectsMembers>
+              <StyledPastProjectsDescription>
+                {currItem.description}
+              </StyledPastProjectsDescription>
+            </StyledPastProjectsDiv>
+            <Arrow
+              left={false}
+              onClick={(): void =>
+                setCurrItem(getLeftOrRight('right', pastProjectsData, currItem))
+              }
             />
           </StyledPastProjectsSection>
         </>
