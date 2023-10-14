@@ -1,17 +1,19 @@
 import React from 'react';
 import {
   EventsHeader,
-  EventsPBolded,
   EventsSubHeader,
   EventsP,
   StyledEventsBox,
   StyledTextContainer,
   EventsLocationP,
-  TextLeftContainer,
-  StyledDesktopTextsContainer
+  EventsLeftContainer,
+  StyledDesktopTextsContainer,
+  EventsRightContainer,
+  EventsLocationContainer,
+  EventsImage
 } from '../EventsCalendarSection.styles';
-import { EventsCalendarData } from '../../../lib/types';
 import { eventsCalendarData } from '../../../lib/data';
+import MissingPhoto from '../../../../shared-ui/images/missing_image.png'
 
 const DesktopTexts: React.FC = () => {
   const currentDate = new Date();
@@ -21,21 +23,22 @@ const DesktopTexts: React.FC = () => {
       {eventsCalendarData.map((event) => (
         <StyledEventsBox elapsedEvent = {currentDate > event.date}>
           <StyledTextContainer>
-            <TextLeftContainer>
+            <EventsLeftContainer>
               <EventsHeader>
-                {event.title} -- {event.date.getMonth()}/{event.date.getDate()} {event.time}
+                {event.title}
               </EventsHeader>
-              {event.subtitle && <EventsSubHeader>{event.subtitle}</EventsSubHeader>}
-              {event.punchline && <EventsPBolded>{event.punchline}</EventsPBolded>}
-              <br/>
+              {<EventsSubHeader>Prerequisites: {event.prerequisites || "XXX, XXX"}</EventsSubHeader>}
               {event.description && <EventsP>{event.description}</EventsP>}
-              {event.prerequisites && <EventsSubHeader>Prerequisites: {event.prerequisites}</EventsSubHeader>}
-            </TextLeftContainer>
-            <EventsLocationP>
-              {event.location}<br/>
-              {event.room}
-            </EventsLocationP>
-            
+            </EventsLeftContainer>
+            <EventsRightContainer>
+              <EventsImage src={ event.image || MissingPhoto}></EventsImage>
+              <EventsLocationContainer>
+                <EventsLocationP>When?</EventsLocationP>
+                <EventsLocationP>{event.date.toDateString()}<br/>{event.time}</EventsLocationP>
+                <EventsLocationP>Where?</EventsLocationP>
+                <EventsLocationP>{event.room}</EventsLocationP>
+              </EventsLocationContainer>
+            </EventsRightContainer>
           </StyledTextContainer>
         </StyledEventsBox>
       ))}

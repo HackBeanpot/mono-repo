@@ -26,12 +26,12 @@ const StyledEventsContainer = styled.div`
 
 const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
   border-radius: 2em;
-  
-  background-color: ${(props): string => (props.elapsedEvent ? colors.TEXT_BROWN : colors.BUTTON_DARK_GREEN)};
+  background-color: ${(props): string => (props.elapsedEvent ? colors.SAND_HIGHLIGHTS : colors.SAND_HIGHLIGHTS)};
   position: relative;
   flex-direction: column;
   display: flex;
   margin: 2em 1.5em;
+  padding: 0 1em;
   @media ${max.desktop} {
     margin: 2em 1em;
   }
@@ -44,13 +44,11 @@ const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
 `;
 
 const StyledTextContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
   margin: 2em;
   padding-top: 0.5em;
-  padding-bottom: 4em;
-  
-  
-  
   
   @media ${max.tablet} {
     margin: 1.5em;
@@ -64,18 +62,28 @@ const StyledTextContainer = styled.div`
   }
 `;
 
-const TextLeftContainer = styled.div`
+const EventsLeftContainer = styled.div`
   width: 95%;
+  display: grid;
+
   @media ${max.tabletSm} {
     width: 93%;
   }
 `;
 
+const EventsRightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2em;
+`
+
 const StyledEventsCalendar = styled.div`
   border-radius: 2em;
   width: 60%;
   
-  background-color: ${colors.BUTTON_GREEN};
+  background-color: ${colors.YELLOW_GREEN};
   position: relative;
   @media ${max.tabletLg} {
     width: 80%;
@@ -87,36 +95,45 @@ const StyledEventsCalendar = styled.div`
   }
 `;
 
-const StyledEventsCactus = styled.img`
+
+const StyledEventsSeaweed = styled.img<{numberOfEvents: number}>`
   position: absolute;
+  top: calc(${(props): number => props.numberOfEvents} * 15rem + 3vh);
+  width: 6%;
+  left: 16vw;
+  @media ${min.mobile}{
+    left: 6vw;
+  }
   @media ${min.tabletSm} {
-    right: 2em;
-    top: 50em;
-    height: 16em;
+    width: 8%;
+  }
+  @media ${min.tabletLg} {
+    left: 16vw;
   }
   @media ${min.desktop} {
-    right: 5em;
-    top: 40em;
-    height: 20em;
+    left: 16vw;
+    width: 7%;
   }
   @media ${min.desktopLg} {
-    right: 10em;
-    top: 45em;
-    height: 25em;
+    left: 16vw;
+    width: 8%;
   }
 `;
 
-const StyledEventsGrass = styled.img`
+const StyledEventsFishSchool = styled.img`
   position: absolute;
+  height: 10vw;
   @media ${min.tabletSm} {
-    height: 10em;
-    left: 2em;
-    top: -8em;
+    top: -16vh;
+    right: 2em;
   }
-  @media ${min.tabletLg} {
-    height: 15em;
-    left: 2em;
-    top: -8em;
+  @media ${min.desktop} {
+    top: -16vh;
+    right: 5em;
+  }
+  @media ${min.desktopLg} {
+    top: -20vh;
+    right: 8vw;
   }
 `;
 
@@ -124,8 +141,9 @@ const EventsHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   line-height: 1.2em;
   letter-spacing: 0.08em;
-    
+  color: #193C60;
   font-size: 1.7em;
+  font-weight: bold;
   @media ${max.tabletSm} {
     font-size: 1em;
 
@@ -137,12 +155,14 @@ const EventsHeader = styled(P)`
 
 const EventsP = styled(P)`
   font-size: 1.1em;
+  color: #000;
 `;
 
 const EventsSubHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 2em;
+  color: #000;
   @media ${max.tabletSm} {
     font-size: 0.8em;
   }
@@ -153,32 +173,45 @@ const EventsSubHeader = styled(P)`
 
 const StyledH2 = styled(H2)`
   text-align: center;
+  color: #FFF;
 `;
 
 const EventsPBolded = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.1em;
+  color: #000;
 `;
+
+const EventsImage = styled.img`
+  height: 5vh;
+  width: 5vh;
+`
+
+const EventsLocationContainer = styled.div`
+  border: 1px solid red;
+  padding: 2em;
+  border-radius: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  text-align: end;
+`
 
 const EventsLocationP = styled(P)`
   font-size: 1em;
-  position: absolute;
   right: 2em;
   bottom: 2em;
+  color: #000;
   @media ${max.tabletSm} {
     font-size: 0.5em;
     bottom: 1.5em;
   }
 `;
 
-
-
-
 export {
   StyledSectionContainer,
   StyledEventsCalendar,
-  StyledEventsCactus,
-  StyledEventsGrass,
+  StyledEventsSeaweed,
+  StyledEventsFishSchool,
   StyledEventsContainer,
   EventsHeader,
   EventsSubHeader,
@@ -187,7 +220,10 @@ export {
   StyledEventsBox,
   StyledTextContainer,
   EventsLocationP,
-  TextLeftContainer,
+  EventsLeftContainer,
+  EventsRightContainer,
   StyledH2,
-  StyledDesktopTextsContainer
+  StyledDesktopTextsContainer,
+  EventsLocationContainer,
+  EventsImage
 };
