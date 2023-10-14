@@ -51,7 +51,7 @@ const IndexPage: React.FC = () => {
     <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={mainSiteTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
-      <ExploreSection />
+      <ExploreSection isDay={isDay} />
       <AboutSection />
       {/* <EventsCalendarSection /> */}
       <TestimonialsSection testimonialData={testimonialSectionData}/>

@@ -70,8 +70,6 @@ const StyledThemeTextParagraph = styled(P)`
     white-space: pre-line;
     width: 25%;
     @media ${max.tablet} {
-      white-space: pre-line;
-      width: 25%;
       display: flex;
       justify-content: center;
       align-items: center;

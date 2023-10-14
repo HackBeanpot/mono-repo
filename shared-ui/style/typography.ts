@@ -38,7 +38,7 @@ const H2 = styled.h2`
 `;
 
 const H3 = styled.h3`
-  color: ${(props): string => (props.color ? props.color : colors.BLACK)};
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
   font-family: ${fonts.nunitoSansRegular};
   font-size: clamp(1.3em, 6.6vw, 2.1em);
   margin: 0;
