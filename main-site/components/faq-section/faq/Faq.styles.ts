@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { max, min } from '../../../../shared-ui/lib/responsive';
+import { max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { fonts, H4 } from '../../../../shared-ui/style/typography';
 

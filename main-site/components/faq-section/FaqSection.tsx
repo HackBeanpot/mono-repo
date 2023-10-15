@@ -11,6 +11,7 @@ import {
   StyledOctopus
 } from './FaqSection.styles';
 import Faq from './faq/Faq';
+import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 
 const FaqSection: React.FC = () => {
   return (
@@ -26,11 +27,11 @@ const FaqSection: React.FC = () => {
           <br />
           Reach out to us at team@hackbeanpot.com!
         </StyledH4>
-        <StyledContactUsButton
+        <PrimaryButton
           btnText={'Contact Us'}
           btnLink={'mailto:team@hackbeanpot.com'}
           newTab={true}
-        ></StyledContactUsButton>
+        ></PrimaryButton>
       </StyledFaqSectionContainer>
     </div>
   );

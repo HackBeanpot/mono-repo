@@ -3,6 +3,7 @@ import { StyledPrimaryButton } from '../../../shared-ui/components/primary-butto
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H2, H4 } from '../../../shared-ui/style/typography';
+import { ButtonProps } from '../../../shared-ui/lib/types';
 
 const StyledFaqSectionContainer = styled.div`
   text-align: center;
@@ -62,16 +63,14 @@ const StyledLightHouse = styled.img`
   left: -2.5em;
   top: 40em;
 }
-
-
-
-
 `;
 
 const StyledH4 = styled(H4)`
-  color: ${colors.TEXT_BROWN} !important;
-  margin-top: 3em;
+  color: ${colors.WHITE} !important;
+  font-family: ${fonts.nunitoRegular};
+  margin-top: 1em;
   padding: 2em;
+  font-weight: 400;
 `;
 
 const StyledFaqSectionTitle = styled(H2)`
@@ -82,7 +81,7 @@ const StyledFaqSectionTitle = styled(H2)`
     font-size: 2em;
 `;
 
-const StyledContactUsButton = styled(StyledPrimaryButton)`
+const StyledContactUsButton = styled(StyledPrimaryButton)<ButtonProps>`
   color: #FABB32;
   background-color: #FABB32;
   font-family: ${fonts.nunitoRegular};
@@ -90,7 +89,6 @@ const StyledContactUsButton = styled(StyledPrimaryButton)`
     color: #D29000
     background-color: #D29000
   }
-
 `;
 
 export { 
