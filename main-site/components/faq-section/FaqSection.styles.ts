@@ -10,17 +10,62 @@ const StyledFaqSectionContainer = styled.div`
   margin-top: 8em;
 `;
 
+const StyledOctopus = styled.img`
+  position: absolute;
+  top: -7em;
+  right: -1.5em;
+  width: 18em;
+  height: 21em;
+
+@media ${max.tabletLg} {
+    width: 14em;
+    height: 17em;
+}
+
+@media ${max.tablet} {
+    width: 10em;
+    height: 13em;
+    right: 0em;
+}
+
+ @media ${max.tabletXs} {
+  width: 8em;
+  height: 11em;
+  right: 0em;
+}
+
+`;
+
 const StyledLightHouse = styled.img`
   position: absolute;
-  margin-left: 5em;
-  top: 0.1em;
-  left: 1em;
+  top: 30em;
+  left: -5em;
+  width: 29em;
+  height: 32em;
 
-  @media ${max.desktop} {
+@media ${max.tabletLg} {
+    width: 23em;
+    height: 20em;
+    top: 45em;
+}
+
+@media ${max.tablet} {
     width: 13em;
-    top: -1em;
-    display: none;
-  }
+    height: 16em;
+    left: -4em;
+    top: 35em;
+}
+
+ @media ${max.tabletXs} {
+  width: 10em;
+  height: 13em;
+  left: -2.5em;
+  top: 40em;
+}
+
+
+
+
 `;
 
 const StyledH4 = styled(H4)`
@@ -32,6 +77,9 @@ const StyledH4 = styled(H4)`
 const StyledFaqSectionTitle = styled(H2)`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoRegular};
+
+  @media ${max.tablet} {
+    font-size: 2em;
 `;
 
 const StyledContactUsButton = styled(StyledPrimaryButton)`
@@ -46,6 +94,7 @@ const StyledContactUsButton = styled(StyledPrimaryButton)`
 `;
 
 export { 
+  StyledOctopus,
   StyledLightHouse, 
   StyledFaqSectionContainer, 
   StyledH4,

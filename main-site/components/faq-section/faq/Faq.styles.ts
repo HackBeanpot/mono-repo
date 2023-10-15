@@ -13,7 +13,7 @@ const StyledFaqContainer = styled.div`
   text-align: left;
 
 @media ${max.tablet} {
-    width: 80%;
+    width: 60%;
     padding: 0em; 
 }
 `;

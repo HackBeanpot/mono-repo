@@ -1,12 +1,14 @@
 import React from 'react';
 // import cactus from '../../../shared-ui/images/cactus.svg';
+import octopus from '../../../shared-ui/images/octopus.svg';
 import LightHouse from '../../../shared-ui/images/LightHouse.svg';
 import {
   StyledLightHouse,
   StyledContactUsButton,
   StyledFaqSectionContainer,
   StyledFaqSectionTitle,
-  StyledH4
+  StyledH4,
+  StyledOctopus
 } from './FaqSection.styles';
 import Faq from './faq/Faq';
 
@@ -15,6 +17,7 @@ const FaqSection: React.FC = () => {
     <div id="faq">
       <StyledFaqSectionContainer>
         <StyledFaqSectionTitle>FAQ</StyledFaqSectionTitle>
+        <StyledOctopus src={octopus} />
         <StyledLightHouse src={LightHouse} />
         <Faq />
         <StyledH4>

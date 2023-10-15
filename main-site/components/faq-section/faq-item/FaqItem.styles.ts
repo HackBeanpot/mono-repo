@@ -45,9 +45,6 @@ const StyledFaqDropdown = styled(P)`
 const StyledFaqPlusSign = styled.img`
   width: 1.5em;
   float: right;
-
-  @media ${max.tablet} {
-    display: none;
   }
 `;
 
