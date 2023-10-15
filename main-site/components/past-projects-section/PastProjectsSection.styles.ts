@@ -9,7 +9,7 @@ const StyledArrowContainer = styled.div`
   position: relative;
 `;
 
-const StyledPastProjectsHeader = styled(H2)`
+const StyledPastProjectsHeader = styled(H3)`
   color: ${colors.WHITE};
   padding-bottom: 0.5em;
   text-align: center;
@@ -19,25 +19,22 @@ const StyledPastProjectsHeader = styled(H2)`
 `;
 
 const StyledPastProjectsDiv = styled.div`
-  margin: 0 4em;
+  margin: 0 1em;
 `;
 
 const StyledPastProjectsSection = styled.div`
   position: relative;
-  background-color: ${colors.TEXT_BOX};
+  background-color: transparent;
   width: 80%;
   margin: auto;
   border-radius: 1.25em;
   height: 100%;
   @media ${max.tablet} {
-    background-color: transparent;
     text-align: center;
   };
 `;
 
 const StyledPastProjectsContainer = styled.div`
-  padding-top: 3em;
-  padding-left: 3em;
   padding-bottom: 4em;
   @media ${max.tablet} {
     display: absolute;
@@ -77,7 +74,6 @@ const StyledPastProjectsTitle = styled(H2)`
 
   @media ${max.tablet} {
     text-align: center;
-    color: black;
   };
 `;
 
@@ -95,13 +91,12 @@ const StyledPastProjectsAward = styled(P)`
   @media ${max.tablet} {
     text-align: center;
     padding-bottom: 1em;
-    font-size: 1.5em;
   }
 `;
 
 const StyledPastProjectsTitleAwardContainer = styled.div`
   display: flex;
-  margin: 0;
+  margin: 0 4em;
 
   @media ${max.tabletLg} {
     display: inline;
@@ -112,7 +107,6 @@ const StyledPastProjectsMembers = styled(P)`
   font-size: 0.8125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
-  margin-left: 2.8em;
   font-style: italic;
 `;
 
@@ -120,7 +114,6 @@ const StyledPastProjectsDescription = styled(P)`
   font-size: 1.125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
-  margin-left: 2em;
 
   @media ${max.tablet} {
     color: ${colors.WHITE};
@@ -132,7 +125,7 @@ const StyledPastProjectsDescription = styled(P)`
 `;
 
 const StyledViewProjectButtonWrapper = styled.div`
-  margin-left: 2em;
+  margin-left: 0em;
 `;
 
 const StyledPastProjectsViewText = styled(P)`
@@ -153,6 +146,7 @@ const StyledPastProjectsPhotos = styled.img`
   height: 13.75em;
   padding-right: 1em;
   object-fit: contain;
+  border-radius: 15%;
 
   @media ${max.tablet} {
     float: none;
@@ -192,6 +186,31 @@ const StyledCamel = styled(motion.img)`
     height: 20em;
   }
 `;
+
+const StyledPastProjectsLeftContainer = styled.div`
+  justify-content: left;
+  position: absolute;
+  left: -14em;
+  @media ${max.tabletLg} {
+    left: -20em;
+  }
+  @media ${max.tablet} {
+    left: -22em;
+  }
+`;
+
+const StyledPastProjectsRightContainer = styled.div`
+  justify-content: right;
+  position: absolute;
+  right: -14em;
+  @media ${max.tabletLg} {
+    right: -20em;
+  }
+  @media ${max.tablet} {
+    right: -22em;
+  }
+`;
+
 export {
   StyledPastProjectsSection,
   StyledPastProjectsHeader,
@@ -210,5 +229,7 @@ export {
   StyledPastProjectsDiv,
   StyledViewProjectButtonWrapper,
   StyledPastProjectsAward,
-  StyledPastProjectsTitleAwardContainer
+  StyledPastProjectsTitleAwardContainer,
+  StyledPastProjectsLeftContainer,
+  StyledPastProjectsRightContainer
 };
