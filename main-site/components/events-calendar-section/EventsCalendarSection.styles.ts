@@ -22,6 +22,8 @@ const StyledEventsContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
@@ -98,26 +100,10 @@ const StyledEventsCalendar = styled.div`
 
 const StyledEventsSeaweed = styled.img<{numberOfEvents: number}>`
   position: absolute;
-  top: calc(${(props): number => props.numberOfEvents} * 15rem + 3vh);
-  width: 6%;
-  left: 16vw;
-  @media ${min.mobile}{
-    left: 6vw;
-  }
-  @media ${min.tabletSm} {
-    width: 8%;
-  }
-  @media ${min.tabletLg} {
-    left: 16vw;
-  }
-  @media ${min.desktop} {
-    left: 16vw;
-    width: 7%;
-  }
-  @media ${min.desktopLg} {
-    left: 16vw;
-    width: 8%;
-  }
+  top: calc(${(props): number => props.numberOfEvents} * 30vh);
+  width: 15%;
+  left: -2vw;
+  width: 10%;
 `;
 
 const StyledEventsFishSchool = styled.img`

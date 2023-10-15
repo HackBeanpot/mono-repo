@@ -24,8 +24,8 @@ const EventsCalendarSection: React.FC = () => {
           {isDesktop && <StyledEventsFishSchool src = {EventsFishSchool}/>}
           <StyledEventsCalendar>
             <DesktopTexts />
+            {isDesktop && <StyledEventsSeaweed src={EventsSeaweed} numberOfEvents = {eventsCalendarData.length}/>}
           </StyledEventsCalendar>
-          {isDesktop && <StyledEventsSeaweed src={EventsSeaweed} numberOfEvents = {eventsCalendarData.length}/>}
         </StyledEventsContainer>
       </StyledSectionContainer>
     </div>
