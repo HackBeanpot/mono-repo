@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H3, P } from '../../../shared-ui/style/typography';
-import { max } from '../../../shared-ui/lib/responsive';
-import { motion } from 'framer-motion';
+import { max, min } from '../../../shared-ui/lib/responsive';
 
 const StyledArrowContainer = styled.div`
   display: flex;
@@ -11,7 +10,7 @@ const StyledArrowContainer = styled.div`
 
 const StyledPastProjectsHeader = styled(H3)`
   color: ${colors.WHITE};
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
   text-align: center;
   @media ${max.tablet} {
     padding-bottom: -10em;
@@ -31,14 +30,16 @@ const StyledPastProjectsSection = styled.div`
   height: 100%;
   @media ${max.tablet} {
     text-align: center;
+    width: 90%;
   };
 `;
 
 const StyledPastProjectsContainer = styled.div`
-  padding-bottom: 4em;
+  padding-bottom: 6em;
   @media ${max.tablet} {
     display: absolute;
     padding-left: 0;
+    padding-bottom: 4em;
   };
 `;
 
@@ -50,15 +51,16 @@ const StyledPastProjectsContainerBottom = styled.div`
 
 const StyledPastProjectsInfo = styled.div`
   text-align: left;
-  padding-left: 18.75em;
-  margin-left: 3em;
-  padding-right: 3em;
+  margin-left: 28em;
 
-  @media ${max.tablet} {
+  @media ${max.tabletLg} {
     font-size: 0.9375em;
-    text-align: center;
-    padding-left: 0;
     padding-right: 3em;
+    margin-left: 24em;
+  };
+
+   @media ${max.tablet} {
+    text-align: center;
   };
 `;
 
@@ -96,7 +98,6 @@ const StyledPastProjectsAward = styled(P)`
 
 const StyledPastProjectsTitleAwardContainer = styled.div`
   display: flex;
-  margin: 0 4em;
 
   @media ${max.tabletLg} {
     display: inline;
@@ -117,7 +118,8 @@ const StyledPastProjectsDescription = styled(P)`
 
   @media ${max.tablet} {
     color: ${colors.WHITE};
-    margin-left: 0em;
+    margin-left: 3em;
+    margin-right: 3em;
     text-align: left;
     padding-bottom: 2em;
     letter-spacing: 0.5px;
@@ -142,80 +144,96 @@ const StyledPastProjectsViewText = styled(P)`
 const StyledPastProjectsPhotos = styled.img`
   left: 0;
   float: left;
-  width: 20em;
-  height: 13.75em;
-  padding-right: 1em;
-  object-fit: contain;
-  border-radius: 15%;
+  width: 25em;
+  border-radius: 5%;
+
+  @media ${max.desktop} {
+    width: 19em;
+    height: 15em;
+  }
 
   @media ${max.tablet} {
+    width: 20em;
+    height: 13.75em;
     float: none;
-    padding-bottom: 1em;
     position: relative;
     display: inline-block;
-    padding-top: 0;
-    padding-right: 0;
   }
 
   @media ${max.tabletLg} {
-    position: relative;
+    width: 19em;
   }
 `;
 
-const StyledFennecFox = styled.img`
+const StyledTreasureChest = styled.img`
   position: absolute;
   right: 0;
-  padding-top: 51em;
+  padding-top: 150em;
   z-index: 1;
-  height: 20em;
   width: 20em;
 
+  @media ${max.desktopLg} {
+    padding-top: 170em;
+    width: 15em;
+  }
+
   @media ${max.tabletLg} {
-    display: none;
+    padding-top: 200em;
+    width: 15em;
+  }
+
+  @media ${max.tablet} {
+    padding-top: 60em;
+    width: 9em;
   }
 `;
 
-const StyledCamel = styled(motion.img)`
-  position: absolute;
-  right: 0;
-  overflow: hidden;
-  z-index: 1;
-  padding-top: 10em;
+const StyledPirateFlag = styled.img`
+  left: 2em;
+  top: 14em;
+  width: 13em;
+  position: relative;
+  @media ${min.tablet} {
+    top: 14em;
+    left: 4em;
+    width: 13em;
+  }
 
-  @media ${max.tabletLg} {
-    height: 20em;
+  @media ${max.tabletSm} {
+    top: 9em;
+    width: 10em;
   }
 `;
 
 const StyledPastProjectsLeftContainer = styled.div`
   justify-content: left;
   position: absolute;
-  left: -14em;
   @media ${max.tabletLg} {
-    left: -20em;
+    left: -17em;
   }
-  @media ${max.tablet} {
-    left: -22em;
+
+  @media ${max.tabletSm} {
+    left: -19em;
   }
 `;
 
 const StyledPastProjectsRightContainer = styled.div`
   justify-content: right;
   position: absolute;
-  right: -14em;
   @media ${max.tabletLg} {
-    right: -20em;
+    right: -17em;
   }
-  @media ${max.tablet} {
-    right: -22em;
+
+  @media ${max.tabletSm} {
+    right: -19em;
   }
 `;
 
 export {
   StyledPastProjectsSection,
   StyledPastProjectsHeader,
-  StyledFennecFox,
-  StyledCamel,
+  StyledTreasureChest,
+  StyledPirateFlag,
   StyledPastProjectsContainer,
   StyledPastProjectsTitle,
   StyledPastProjectsMembers,

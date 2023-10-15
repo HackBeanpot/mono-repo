@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import FennecFox from '../../../shared-ui/images/fennec-fox.svg';
-import Inky from '../../../shared-ui/images/inky.jpg';
-import Swaple from '../../../shared-ui/images/swaple.png';
-import Camel from '../../../shared-ui/images/camel.svg';
-import Duck from '../../../shared-ui/images/duck.png';
+import TreasureChest from '../../../shared-ui/images/treasureChestSea.png'
+import PirateFlag from '../../../shared-ui/images/pirateFlag.png'
 import useMatchMedia from 'react-use-match-media';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 
 import {
   StyledPastProjectsSection,
   StyledPastProjectsHeader,
-  StyledFennecFox,
   StyledPastProjectsContainer,
   StyledPastProjectsTitle,
   StyledPastProjectsMembers,
@@ -19,21 +15,21 @@ import {
   StyledPastProjectsInfo,
   StyledPastProjectsViewText,
   StyledPastProjectsInfoContainer,
-  StyledCamel,
   StyledArrowContainer,
   StyledPastProjectsDiv,
   StyledViewProjectButtonWrapper,
   StyledPastProjectsAward,
   StyledPastProjectsTitleAwardContainer,
   StyledPastProjectsLeftContainer,
-  StyledPastProjectsRightContainer
+  StyledPastProjectsRightContainer,
+  StyledTreasureChest,
+  StyledPirateFlag
 } from './PastProjectsSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
 import { pastProjectsData } from '../../lib/data';
 import { PastProjectData } from '../../lib/types';
 import { getLeftOrRight } from '../../lib/utils';
-import { camelBobbing } from './PastProjects.animations';
 
 const PastProjectsSection: React.FC = () => {
   const [currItem, setCurrItem] = useState<PastProjectData>(
@@ -43,8 +39,8 @@ const PastProjectsSection: React.FC = () => {
 
   return (
     <div>
-      {/* <StyledCamel src={Camel} animate="animate" variants={camelBobbing} /> */}
-      <StyledFennecFox src={FennecFox} />
+      <StyledPirateFlag src={PirateFlag} />
+      <StyledTreasureChest src={TreasureChest} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>
         {isDesktop &&
@@ -86,14 +82,13 @@ const PastProjectsSection: React.FC = () => {
                 src={getLeftOrRight('left', pastProjectsData, currItem).image}
               />
             </StyledPastProjectsLeftContainer>
-
-            <StyledPastProjectsPhotos src={currItem.image} />
-
             <StyledPastProjectsRightContainer>
               <StyledPastProjectsPhotos
                 src={getLeftOrRight('right', pastProjectsData, currItem).image}
               />
             </StyledPastProjectsRightContainer>
+            <StyledPastProjectsPhotos src={currItem.image} />
+
             <StyledPastProjectsDiv>
               <StyledArrowContainer>
                 <Arrow
