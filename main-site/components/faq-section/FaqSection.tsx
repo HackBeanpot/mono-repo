@@ -1,7 +1,8 @@
 import React from 'react';
-import cactus from '../../../shared-ui/images/cactus.svg';
+// import cactus from '../../../shared-ui/images/cactus.svg';
+import LightHouse from '../../../shared-ui/images/LightHouse.svg';
 import {
-  StyledCactus,
+  StyledLightHouse,
   StyledContactUsButton,
   StyledFaqSectionContainer,
   StyledFaqSectionTitle,
@@ -14,7 +15,7 @@ const FaqSection: React.FC = () => {
     <div id="faq">
       <StyledFaqSectionContainer>
         <StyledFaqSectionTitle>FAQ</StyledFaqSectionTitle>
-        <StyledCactus src={cactus} />
+        <StyledLightHouse src={LightHouse} />
         <Faq />
         <StyledH4>
           Don't see your question?

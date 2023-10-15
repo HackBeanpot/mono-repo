@@ -10,7 +10,7 @@ const StyledFaqSectionContainer = styled.div`
   margin-top: 8em;
 `;
 
-const StyledCactus = styled.img`
+const StyledLightHouse = styled.img`
   position: absolute;
   margin-left: 5em;
   top: 0.1em;
@@ -46,7 +46,7 @@ const StyledContactUsButton = styled(StyledPrimaryButton)`
 `;
 
 export { 
-  StyledCactus, 
+  StyledLightHouse, 
   StyledFaqSectionContainer, 
   StyledH4,
   StyledFaqSectionTitle,
