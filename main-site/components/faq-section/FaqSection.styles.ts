@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { H4 } from '../../../shared-ui/style/typography';
+import { fonts, H2, H4 } from '../../../shared-ui/style/typography';
 
 const StyledFaqSectionContainer = styled.div`
   text-align: center;
@@ -28,4 +28,14 @@ const StyledH4 = styled(H4)`
   padding: 2em;
 `;
 
-export { StyledCactus, StyledFaqSectionContainer, StyledH4 };
+const StyledFaqSectionTitle = styled(H2)`
+  color: ${colors.WHITE};
+  font-family: ${fonts.nunitoRegular};
+`;
+
+export { 
+  StyledCactus, 
+  StyledFaqSectionContainer, 
+  StyledH4,
+  StyledFaqSectionTitle
+};
