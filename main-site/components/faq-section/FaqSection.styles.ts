@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { StyledPrimaryButton } from '../../../shared-ui/components/primary-button/PrimaryButton.styles';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H2, H4 } from '../../../shared-ui/style/typography';
@@ -33,9 +34,21 @@ const StyledFaqSectionTitle = styled(H2)`
   font-family: ${fonts.nunitoRegular};
 `;
 
+const StyledContactUsButton = styled(StyledPrimaryButton)`
+  color: #FABB32;
+  background-color: #FABB32;
+  font-family: ${fonts.nunitoRegular};
+  &:hover {
+    color: #D29000
+    background-color: #D29000
+  }
+
+`;
+
 export { 
   StyledCactus, 
   StyledFaqSectionContainer, 
   StyledH4,
-  StyledFaqSectionTitle
+  StyledFaqSectionTitle,
+  StyledContactUsButton
 };

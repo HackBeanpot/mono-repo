@@ -2,11 +2,11 @@ import React from 'react';
 import cactus from '../../../shared-ui/images/cactus.svg';
 import {
   StyledCactus,
+  StyledContactUsButton,
   StyledFaqSectionContainer,
   StyledFaqSectionTitle,
   StyledH4
 } from './FaqSection.styles';
-import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import Faq from './faq/Faq';
 
 const FaqSection: React.FC = () => {
@@ -22,11 +22,11 @@ const FaqSection: React.FC = () => {
           <br />
           Reach out to us at team@hackbeanpot.com!
         </StyledH4>
-        <PrimaryButton
+        <StyledContactUsButton
           btnText={'Contact Us'}
           btnLink={'mailto:team@hackbeanpot.com'}
           newTab={true}
-        ></PrimaryButton>
+        ></StyledContactUsButton>
       </StyledFaqSectionContainer>
     </div>
   );
