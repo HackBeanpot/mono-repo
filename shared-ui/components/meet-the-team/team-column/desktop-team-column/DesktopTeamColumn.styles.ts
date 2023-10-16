@@ -37,6 +37,8 @@ display: flex
 align-items: center; 
 justify-content: center;
 text-decoration: none;
+font-family: 'Nunito Sans', sans-serif;
+margin-top: 0.5em;
 
 img {
   width: 1.0em;

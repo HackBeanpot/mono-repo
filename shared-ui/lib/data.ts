@@ -1,4 +1,4 @@
-import { Person, TabInfo, Team, TeamColumnInfo, ToolTipInfo } from './types';
+import { Person, TabInfo, Team, TeamColumnInfo } from './types';
 import Aaryan from "../../shared-ui/images/meet-the-team/aaryan.png"
 import Amanda from "../../shared-ui/images/meet-the-team/amanda.png";
 import Alyssa from "../../shared-ui/images/meet-the-team/alyssa.png";
@@ -168,7 +168,7 @@ const aaryan: Person = {
   year: '2nd',
   major: 'CS',
   pronouns: 'pronouns: he/him',
-  linkedIn: 'www.linkedin.com/in/aaryanja'
+  linkedIn: 'https://www.linkedin.com/in/aaryanja'
 };
 
 const alyssa: Person = {
@@ -231,7 +231,7 @@ const mandy: Person = {
   year: '2nd',
   major: 'Cybersecurity',
   pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/amanda-rodriques/'
+  linkedIn: 'https://www.linkedin.com/in/amanda-rodriques-725613217/'
 };
 
 const emma: Person = {
@@ -276,7 +276,7 @@ const john: Person = {
   year: '2nd',
   major: 'CS and Business',
   pronouns: 'pronouns: he/him',
-  linkedIn: 'www.linkedin.com/in/john-sargent'
+  linkedIn: 'https://www.linkedin.com/in/john--sargent/'
 };
 
 
