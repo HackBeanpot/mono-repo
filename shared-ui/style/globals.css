@@ -1,20 +1,20 @@
-.day-background-desktop {
-    background-image: url(../images/day-background-desktop.svg);
+.day-gradient-desktop {
+    background: linear-gradient(180deg, #358194, #193C60);
     background-size: cover;
 }
 
-.dark-background-desktop {
-    background-image: url(../images/dark-background-desktop.svg);
+.dark-gradient-desktop {
+    background: linear-gradient(180deg, #013265, #030236);
     background-size: cover;
 }
 
-.mobile-light-background {
-    background-image: url(../images/mobile-light-background.svg);
+.mobile-light-gradient {
+    background: linear-gradient(180deg, #358194, #193C60);
     background-size: cover;
 }
 
-.mobile-dark-background {
-    background-image: url(../images/mobile-dark-background.svg);
+.mobile-dark-gradient {
+    background: linear-gradient(180deg, #013265, #030236);
     background-size: cover;
 }
 
