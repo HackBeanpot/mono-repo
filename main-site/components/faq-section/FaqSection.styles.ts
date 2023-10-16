@@ -39,10 +39,10 @@ const StyledOctopus = styled.img`
 
 const StyledLightHouse = styled.img`
   position: absolute;
-  top: 30em;
+  top: 32em;
   left: -5em;
-  width: 29em;
-  height: 32em;
+  width: 27em;
+  height: 31em;
 
 @media ${max.tabletLg} {
     width: 23em;
