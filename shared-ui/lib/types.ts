@@ -34,19 +34,11 @@ export interface TeamColumnInfo {
 
 export interface Person {
   picture: string;
-  toolTipInfo: ToolTipInfo;
-}
-
-export interface ToolTipInfo {
   name: string;
   year: string;
   major: string;
   pronouns: string;
-}
-
-export interface ToolTipProps {
-  toolTipInfo: ToolTipInfo;
-  team: string;
+  linkedIn: string;
 }
 
 export interface Team {
