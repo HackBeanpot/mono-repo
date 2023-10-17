@@ -75,6 +75,7 @@ const StyledPastProjectsTitle = styled(H2)`
   width: 100%;
 
   @media ${max.tablet} {
+    margin-top: 1.5em;
     text-align: center;
   };
 `;
@@ -92,7 +93,7 @@ const StyledPastProjectsAward = styled(P)`
 
   @media ${max.tablet} {
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
   }
 `;
 
@@ -118,8 +119,8 @@ const StyledPastProjectsDescription = styled(P)`
 
   @media ${max.tablet} {
     color: ${colors.WHITE};
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: 5em;
+    margin-right: 5em;
     text-align: left;
     padding-bottom: 2em;
     letter-spacing: 0.5px;
@@ -136,9 +137,19 @@ const StyledPastProjectsViewText = styled(P)`
   padding-top: 3.5em;
   padding-bottom: 2em;
   line-height: 2;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 7em;
+  padding-right: 7em;
   color: ${colors.WHITE};
+
+  @media ${max.tabletLg} {
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+
+  @media ${max.tablet} {
+    margin-right: 0em;
+    margin-left: 0em;
+  }
 `;
 
 const StyledPastProjectsPhotos = styled.img`
@@ -168,22 +179,26 @@ const StyledPastProjectsPhotos = styled.img`
 const StyledTreasureChest = styled.img`
   position: absolute;
   right: 0;
-  padding-top: 150em;
+  padding-top: 170em;
   z-index: 1;
   width: 20em;
 
   @media ${max.desktopLg} {
-    padding-top: 170em;
+    width: 15em;
+  }
+
+  @media ${max.desktop} {
+    padding-top: 190em;
     width: 15em;
   }
 
   @media ${max.tabletLg} {
-    padding-top: 200em;
-    width: 15em;
+    padding-top: 230em;
+    width: 12em;
   }
 
   @media ${max.tablet} {
-    padding-top: 60em;
+    padding-top: 70em;
     width: 9em;
   }
 `;
