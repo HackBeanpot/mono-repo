@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { H1, H11, H3, H5, P } from '../../../shared-ui/style/typography';
+import { H1, H3, H5, H6, P } from '../../../shared-ui/style/typography';
 
 const StyledHackathonText = styled(H5)`
    {
@@ -33,7 +33,7 @@ const StyledThemeText = styled(H1)`
   }
 `;
 
-const StyledThemeTextSmall = styled(H11)`
+const StyledThemeTextSmall = styled(H6)`
    {
     color: ${colors.WHITE};
     padding-bottom: 0.1em;

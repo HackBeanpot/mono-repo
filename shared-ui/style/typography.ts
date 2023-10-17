@@ -19,15 +19,6 @@ const H1 = styled.h1`
   margin: 0;
 `;
 
-const H11 = styled.h1`
-  font-family: ${fonts.berkshireSwash};
-  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
-  font-size: clamp(0.5em, 8.5vw, 4.5em);
-  letter-spacing: 0.04em;
-  margin: 0;
-  margin-bottom: 0.2em;
-`;
-
 const H2 = styled.h2`
   font-family: ${fonts.nunitoSansRegular};
   font-size: clamp(1.5em, 8.2vw, 3.1em);
@@ -72,6 +63,15 @@ const H5 = styled.h4`
   letter-spacing: 0.1em;
 `;
 
+const H6 = styled.h1`
+  font-family: ${fonts.berkshireSwash};
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
+  font-size: clamp(0.5em, 8.5vw, 4.5em);
+  letter-spacing: 0.04em;
+  margin: 0;
+  margin-bottom: 0.2em;
+`;
+
 const P = styled.p`
   margin: 0;
   margin-bottom: 1em;
@@ -93,4 +93,4 @@ const StyledLink = styled.a`
   }
 `;
 
-export { H1, H11, H2, H3, H4, H5, P, fonts, StyledLink };
+export { H1, H2, H3, H4, H5, H6, P, fonts, StyledLink };

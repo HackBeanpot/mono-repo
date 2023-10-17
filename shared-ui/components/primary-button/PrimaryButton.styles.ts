@@ -6,30 +6,29 @@ import { motion } from 'framer-motion';
 import { StyledPrimaryButtonProps } from '../../lib/types';
 
 const StyledPrimaryButton = styled(motion.button)<StyledPrimaryButtonProps>`
-  color: ${colors.WHITE};
-  background-color: ${colors.BUTTON_RED};
-  border-color: ${colors.BUTTON_RED};
+  color: ${colors.HEADER_FOOTER_BLUE};
+  background-color: ${colors.BUTTON_GREEN};
+  border-color: ${colors.HEADER_FOOTER_BLUE};
   font-family: ${fonts.nunitoSansSemibold};
   transition-duration: 0.5s;
   &:hover {
-    color: ${colors.WHITE};
-    background-color: ${colors.BUTTON_DARK_RED};
-    border-color: ${colors.BUTTON_DARK_RED};
+    color: ${colors.BUTTON_GREEN};
+    background-color: ${colors.HEADER_FOOTER_BLUE};
+    border-color: ${colors.BUTTON_GREEN};
   }
   padding-right: ${(props): string =>
-    props.$isSmallPrimary ? '2.5em' : '2em'};
-  padding-left: ${(props): string => (props.$isSmallPrimary ? '2.5em' : '2em')};
-  padding-top: ${(props): string => (props.$isSmallPrimary ? '0.2em' : '0.4em')};
+    props.$isSmallPrimary ? '1.5em' : '1em'};
+  padding-left: ${(props): string => (props.$isSmallPrimary ? '1.5em' : '1em')};
+  padding-top: ${(props): string => (props.$isSmallPrimary ? '0.5em' : '1em')};
   padding-bottom: ${(props): string =>
-    props.$isSmallPrimary ? '0.2em' : '0.4em'};
-  border-radius: 1.5em;
-  cursor: pointer;
-  font-size: 1.6em;
+    props.$isSmallPrimary ? '0.5em' : '1em'};
+  border-radius: 2em;
+  border: 0.1em solid;
+  font-size: 1.4em;
   text-decoration: none;
   @media ${min.tablet} {
-    font-size: 1.8em;
+    font-size: 1.2em;
   }
-  box-shadow: 0px 0px 20px 0px rgba(19, 74, 95, 0.72);
 `;
 
 export { StyledPrimaryButton };

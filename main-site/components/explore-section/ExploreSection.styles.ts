@@ -24,10 +24,6 @@ const StyledTextContainer = styled.div<ExploreSectionProps>`
   @media ${min.mobile} {
     padding: 3em;
   }
-
-  // @media ${min.tabletLg} {
-  //   width: 38em;
-  // }
 `;
 
 const StyledExploreSectionContainer = styled.div`
