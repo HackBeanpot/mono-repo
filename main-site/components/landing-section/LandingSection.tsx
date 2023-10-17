@@ -5,30 +5,39 @@ import {
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
   StyledLandingTextContainer,
-  StyledStar
+  StyledThemeTextSmall,
+  StyledThemeTextParagraph,
+  StyledBubble1,
+  StyledBubble2,
+  StyledFish,
+  StyledJellyfish,
+  StyledWhale
 } from './LandingSection.styles';
+import Bubble from '../../../shared-ui/images/bubbles.svg'
+import Bubble2 from '../../../shared-ui/images/bubbles2.svg'
+import Fish from '../../../shared-ui/images/fish.svg'
+import Jellyfish from '../../../shared-ui/images/jellyfish.svg'
+import Whale from '../../../shared-ui/images/whale.svg'
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
-import Sun from '../../../shared-ui/images/sun.svg';
-import Moon from '../../../shared-ui/images/moon.svg';
 import { LandingSectionProps } from '../../lib/types';
-import { moonRock, sunRays } from './LandingSection.animations';
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledLandingSectionContainer>
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
-      {isDay ? (
-        <StyledStar animate="animate" variants={sunRays} src={Sun} />
-      ) : (
-        <StyledStar animate="animate" variants={moonRock} src={Moon} />
-      )}
+      <StyledBubble1 src = {Bubble} />
+      <StyledBubble2 src = {Bubble2} />
+      <StyledFish src = {Fish} />
+      <StyledJellyfish src = {Jellyfish} />
+      <StyledWhale src = {Whale} />
       <StyledLandingTextContainer>
-        {/* <StyledHackathonText>HackBeanpot 2024</StyledHackathonText> */}
-        <StyledThemeText>HackBeanpot 2024</StyledThemeText>
-        <StyledHackathonText>More information soon!</StyledHackathonText>
+        <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
+        <StyledThemeText>Under the Sea</StyledThemeText>
+        <StyledThemeTextSmall>February 10-12, 2024</StyledThemeTextSmall>
+        <StyledThemeTextParagraph> @ Wood Mackenzie (Formerly known as PowerAdvocate) <br/> 179 Lincoln St, Boston, MA 02111</StyledThemeTextParagraph>
         {/* <LocationTimeSection isDay={isDay} /> */}
         <StyledLandingButtonContainer
-          btnText="Join our mailing list"
+          btnText="Apply"
           btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
           newTab
         />

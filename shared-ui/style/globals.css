@@ -39,8 +39,8 @@ body {
 }
 
 @font-face {
-    font-family: 'Calistoga-Regular';
-    src: local('Calistoga-Regular'), url('./fonts/Calistoga-Regular.ttf') format('truetype');
+    font-family: 'Berkshire-Swash';
+    src: local('Berkshire-Swash'), url('./fonts/BerkshireSwash-Regular.ttf') format('truetype');
 }
 
 @font-face {
