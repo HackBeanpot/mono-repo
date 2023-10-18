@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { colors } from '../../../../shared-ui/style/colors';
 import { fonts, H4, P } from '../../../../shared-ui/style/typography';
-import { max } from '../../../../shared-ui/lib/responsive';
 
 const StyledFaqQuestionText = styled(H4)`
   color: ${colors.WHITE} !important;
