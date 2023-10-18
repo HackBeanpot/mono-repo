@@ -177,29 +177,24 @@ const StyledPastProjectsPhotos = styled.img`
 `;
 
 const StyledTreasureChest = styled.img`
-  position: absolute;
-  right: 0;
-  padding-top: 170em;
-  z-index: 1;
+  margin-left: auto;
+  display: block;
+  padding-right: 2em;
   width: 20em;
 
   @media ${max.desktopLg} {
-    width: 15em;
-  }
-
-  @media ${max.desktop} {
-    padding-top: 190em;
-    width: 15em;
+    width: 18em;
+    margin-top: -3em;
   }
 
   @media ${max.tabletLg} {
-    padding-top: 230em;
-    width: 12em;
+    width: 15em;
+    margin-top: -7em;
   }
 
   @media ${max.tablet} {
-    padding-top: 70em;
-    width: 9em;
+    margin-top: 1em;
+    width: 12em;
   }
 `;
 
@@ -208,15 +203,15 @@ const StyledPirateFlag = styled.img`
   top: 14em;
   width: 13em;
   position: relative;
-  @media ${min.tablet} {
-    top: 14em;
+  @media ${max.tablet} {
+    top: 10em;
     left: 4em;
-    width: 13em;
+    width: 10em;
   }
 
   @media ${max.tabletSm} {
-    top: 9em;
-    width: 10em;
+    top: 8em;
+    width: 9em;
   }
 `;
 
