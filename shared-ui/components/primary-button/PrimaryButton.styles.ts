@@ -24,7 +24,6 @@ const StyledPrimaryButton = styled(motion.button)<StyledPrimaryButtonProps>`
     props.$isSmallPrimary ? '0.5em' : '1em'};
   border-radius: 2em;
   border: 0.1em solid;
-  cursor: pointer;
   font-size: 1.4em;
   text-decoration: none;
   @media ${min.tablet} {

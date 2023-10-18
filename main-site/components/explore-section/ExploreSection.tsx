@@ -3,46 +3,40 @@ import {
   StyledTextContainer,
   StyledParagraph,
   StyledExploreSectionContainer,
-  StyledExplorer,
-  StyledVases,
+  StyledDiver,
+  StyledBubble3,
   StyledButtonContainer
 } from './ExploreSection.styles';
 import { H3 } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import Explorer from '../../../shared-ui/images/explorer.svg';
-import Vases from '../../../shared-ui/images/vases.svg';
+import Bubble3 from '../../../shared-ui/images/bubbles3.svg';
+import Diver from '../../../shared-ui/images/diver.svg';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
+import { ExploreSectionProps } from '../../lib/types';
 
-const ExploreSection: React.FC = () => {
+
+const ExploreSection: React.FC<ExploreSectionProps> = ({isDay}) => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <StyledExploreSectionContainer>
-      <StyledExplorer src={Explorer} />
-      <StyledTextContainer>
-        <H3 color={isDesktop ? colors.WHITE : colors.BLACK}>
-          Explore the Desert with HackBeanpot!
+      <StyledTextContainer isDay={isDay}>
+        <H3>
+          Dive deep and explore!
         </H3>
-        <StyledParagraph color={isDesktop ? colors.WHITE : colors.TEXT_BROWN}>
-          HackBeanpot 2023 is gonna be a journey through the desert! Join our
-          community of adventurers for a weekend of exploration, collaboration,
-          and fun! (Oh, and did we mention free food and swag?) <br /> <br />
-          Hackers can expect to put their resourcefulness to the test, while
-          sharing stories, and learning new skills from peers. So whether you're
-          a seasoned hackathon-goer, an ‘I-have-never-written-a-line-of-code’
-          beginner, or someone in-between, we’re excited for you to embark on
-          this adventure with us!
+        <StyledParagraph color={colors.WHITE}>
+          HackBeanpot 2024 is gonna be an adventure under the sea! Join our school 
+          of fish for a weekend of exploration, collaboration, and fun! (Oh, and did we
+          mention a tsunami of free food and treasures?) <br /> <br />
+          Hackers can expect to put their resourcefulness to the test while sharing stories, 
+          and learning new skills from peers. So whether you're a SEAsoned hackathon-goer, 
+          an ‘I-have-never-written-a-line-of-code’ beginner, or someone in-between, 
+          we’re so shore things will go swimmingly!
         </StyledParagraph>
-        <StyledButtonContainer>
-          <PrimaryButton
-            btnText="Join our mailing list"
-            btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
-            newTab
-          />
-        </StyledButtonContainer>
       </StyledTextContainer>
-      <StyledVases src={Vases} />
+      <StyledDiver src={Diver} />
+      <StyledBubble3 src={Bubble3} />
     </StyledExploreSectionContainer>
   );
 };
