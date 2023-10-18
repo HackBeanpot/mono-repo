@@ -1,25 +1,20 @@
 import React from 'react';
-// import cactus from '../../../shared-ui/images/cactus.svg';
-import octopus from '../../../shared-ui/images/octopus.svg';
-import LightHouse from '../../../shared-ui/images/LightHouse.svg';
+import cactus from '../../../shared-ui/images/cactus.svg';
 import {
-  StyledLightHouse,
-  StyledContactUsButton,
+  StyledCactus,
   StyledFaqSectionContainer,
-  StyledFaqSectionTitle,
-  StyledH4,
-  StyledOctopus
+  StyledH4
 } from './FaqSection.styles';
-import Faq from './faq/Faq';
+import { H2 } from '../../../shared-ui/style/typography';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
+import Faq from './faq/Faq';
 
 const FaqSection: React.FC = () => {
   return (
     <div id="faq">
       <StyledFaqSectionContainer>
-        <StyledFaqSectionTitle>FAQ</StyledFaqSectionTitle>
-        <StyledOctopus src={octopus} />
-        <StyledLightHouse src={LightHouse} />
+        <H2>FAQ</H2>
+        <StyledCactus src={cactus} />
         <Faq />
         <StyledH4>
           Don't see your question?
