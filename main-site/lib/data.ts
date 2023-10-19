@@ -298,18 +298,18 @@ export const eventsCalendarData: EventsCalendarData[] = [
     location: 'Northeastern University',
     room: 'Ryder Hall 253'
   },
-  {
-    title: 'Event 1',
-    subtitle: 'Sub-intro',
-    punchline:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-    prerequisites: 'NONE',
-    date: new Date(2022, 10, 16),
-    time: '1:30pm-3pm',
-    location: 'Northeastern University',
-    room: 'Ryder Hall 253'
-  }
+  // {
+  //   title: 'Event 1',
+  //   subtitle: 'Sub-intro',
+  //   punchline:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+  //   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  //   Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
+  //   Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
+  //   prerequisites: 'NONE',
+  //   date: new Date(2022, 10, 16),
+  //   time: '1:30pm-3pm',
+  //   location: 'Northeastern University',
+  //   room: 'Ryder Hall 253'
+  // }
 ];

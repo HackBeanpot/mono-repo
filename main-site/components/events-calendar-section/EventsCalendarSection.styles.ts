@@ -22,6 +22,8 @@ const StyledEventsContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
@@ -45,13 +47,19 @@ const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
 
 const StyledTextContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   grid-auto-flow: row;
   margin: 2em;
   padding-top: 0.5em;
+  gap: 4em;
   
-  @media ${max.tablet} {
-    margin: 1.5em;
+  @media ${max.tabletSm} {
+    margin: 1em 0;
+    height: fit-content;
+    grid-template-rows: 2fr 1fr;
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: 1em;
   }
   @media ${max.tabletSm} {
     padding-left: 1em;
@@ -75,8 +83,10 @@ const EventsRightContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
   gap: 2em;
+  @media ${max.tabletSm} {
+    gap: 0;
+  }
 `
 
 const StyledEventsCalendar = styled.div`
@@ -98,25 +108,18 @@ const StyledEventsCalendar = styled.div`
 
 const StyledEventsSeaweed = styled.img<{numberOfEvents: number}>`
   position: absolute;
-  top: calc(${(props): number => props.numberOfEvents} * 15rem + 3vh);
-  width: 6%;
-  left: 16vw;
-  @media ${min.mobile}{
-    left: 6vw;
-  }
+  top: calc(${(props): number => props.numberOfEvents} * 15em);
+  width: 8%;
+  left: 12vw;
+  width: 10%;
   @media ${min.tabletSm} {
-    width: 8%;
+    left: 5vw;
+  }
+  @media ${min.tablet} {
+    left: 5vw;
   }
   @media ${min.tabletLg} {
-    left: 16vw;
-  }
-  @media ${min.desktop} {
-    left: 16vw;
-    width: 7%;
-  }
-  @media ${min.desktopLg} {
-    left: 16vw;
-    width: 8%;
+    left: 14vw;
   }
 `;
 
@@ -143,9 +146,9 @@ const EventsHeader = styled(P)`
   letter-spacing: 0.08em;
   color: #193C60;
   font-size: 1.7em;
-  font-weight: bold;
+  font-weight: bolder;
   @media ${max.tabletSm} {
-    font-size: 1em;
+    font-size: 1.3em;
 
   }
   @media ${max.mobile} {
@@ -156,6 +159,9 @@ const EventsHeader = styled(P)`
 const EventsP = styled(P)`
   font-size: 1.1em;
   color: #000;
+  @media ${max.tabletSm} {
+    font-size: 0.8em;
+  }
 `;
 
 const EventsSubHeader = styled(P)`
@@ -185,16 +191,39 @@ const EventsPBolded = styled(P)`
 const EventsImage = styled.img`
   height: 5vh;
   width: 5vh;
+  align-self: flex-end;
+  @media ${max.tabletSm} {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+  }
 `
 
 const EventsLocationContainer = styled.div`
   border: 1px solid red;
   padding: 2em;
-  border-radius: 1.5em;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  text-align: end;
+  /* text-align: end; */
+  @media ${max.tabletSm} {
+    grid-template-columns: 1fr 2fr;
+    padding: 0.3em;
+    font-size: xx-large;
+  }
 `
+
+const EventsLocationPQuestion = styled(P)`
+  font-size: 1em;
+  right: 2em;
+  bottom: 2em;
+  color: #000;
+  @media ${max.tabletSm} {
+    font-size: 0.5em;
+    bottom: 1.5em;
+    justify-self: center;
+  }
+`;
 
 const EventsLocationP = styled(P)`
   font-size: 1em;
@@ -204,6 +233,7 @@ const EventsLocationP = styled(P)`
   @media ${max.tabletSm} {
     font-size: 0.5em;
     bottom: 1.5em;
+    justify-self: flex-start;
   }
 `;
 
@@ -225,5 +255,6 @@ export {
   StyledH2,
   StyledDesktopTextsContainer,
   EventsLocationContainer,
-  EventsImage
+  EventsImage,
+  EventsLocationPQuestion
 };

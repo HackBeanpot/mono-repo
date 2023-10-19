@@ -10,14 +10,17 @@ import {
   StyledDesktopTextsContainer,
   EventsRightContainer,
   EventsLocationContainer,
-  EventsImage
+  EventsImage,
+  EventsLocationPQuestion
 } from '../EventsCalendarSection.styles';
 import { eventsCalendarData } from '../../../lib/data';
-import MissingPhoto from '../../../../shared-ui/images/missing_image.png'
+import MissingPhoto from '../../../../shared-ui/images/missing_image.png';
+import { max } from '../../../../shared-ui/lib/responsive';
+import useMatchMedia from 'react-use-match-media';
 
 const DesktopTexts: React.FC = () => {
   const currentDate = new Date();
-
+  const isMobile = useMatchMedia(max.tabletSm);
   return (
     <StyledDesktopTextsContainer>
       {eventsCalendarData.map((event) => (
@@ -27,15 +30,15 @@ const DesktopTexts: React.FC = () => {
               <EventsHeader>
                 {event.title}
               </EventsHeader>
-              {<EventsSubHeader>Prerequisites: {event.prerequisites || "XXX, XXX"}</EventsSubHeader>}
+              {<EventsSubHeader>Prerequisites: {isMobile && <br/>}{event.prerequisites || "XXX, XXX"}</EventsSubHeader>}
               {event.description && <EventsP>{event.description}</EventsP>}
             </EventsLeftContainer>
             <EventsRightContainer>
               <EventsImage src={ event.image || MissingPhoto}></EventsImage>
               <EventsLocationContainer>
-                <EventsLocationP>When?</EventsLocationP>
+                <EventsLocationPQuestion>When?</EventsLocationPQuestion>
                 <EventsLocationP>{event.date.toDateString()}<br/>{event.time}</EventsLocationP>
-                <EventsLocationP>Where?</EventsLocationP>
+                <EventsLocationPQuestion>Where?</EventsLocationPQuestion>
                 <EventsLocationP>{event.room}</EventsLocationP>
               </EventsLocationContainer>
             </EventsRightContainer>
