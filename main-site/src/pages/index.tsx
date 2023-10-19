@@ -53,7 +53,7 @@ const IndexPage: React.FC = () => {
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection />
       <AboutSection />
-      <EventsCalendarSection />
+      <EventsCalendarSection isDay={isDay}/>
       <TestimonialsSection testimonialData={testimonialSectionData}/>
       <PastProjectsSection />
       <FaqSection />

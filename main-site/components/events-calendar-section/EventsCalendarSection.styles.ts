@@ -28,7 +28,7 @@ const StyledEventsContainer = styled.div`
 
 const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
   border-radius: 2em;
-  background-color: ${(props): string => (props.elapsedEvent ? colors.SAND_HIGHLIGHTS : colors.SAND_HIGHLIGHTS)};
+  background-color: ${colors.SAND_HIGHLIGHTS};
   position: relative;
   flex-direction: column;
   display: flex;
@@ -47,11 +47,11 @@ const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
 
 const StyledTextContainer = styled.div`
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   grid-auto-flow: row;
   margin: 2em;
   padding-top: 0.5em;
-  gap: 4em;
+  gap: 6em;
   
   @media ${max.tabletSm} {
     margin: 1em 0;
@@ -111,7 +111,7 @@ const StyledEventsSeaweed = styled.img<{numberOfEvents: number}>`
   top: calc(${(props): number => props.numberOfEvents} * 15em);
   width: 8%;
   left: 12vw;
-  width: 10%;
+  width: 8%;
   @media ${min.tabletSm} {
     left: 5vw;
   }
@@ -200,7 +200,7 @@ const EventsImage = styled.img`
 `
 
 const EventsLocationContainer = styled.div`
-  border: 1px solid red;
+  border: 1px solid ${colors.YELLOW_GREEN};
   padding: 2em;
   border-radius: 10px;
   display: grid;
