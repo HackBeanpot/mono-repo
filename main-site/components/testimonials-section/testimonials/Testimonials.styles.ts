@@ -21,24 +21,36 @@ const StyledTestimonialsCenterContainer = styled.div`
 const StyledTestimonialsLeftContainer = styled.div`
   justify-content: left;
   position: absolute;
-  left: -14em;
+  left: -10em;
+  @media (max-width: 1100px) {
+    left: -15em;
+  }
   @media ${max.tabletLg} {
     left: -20em;
   }
   @media ${max.tablet} {
-    left: -22em;
+    left: -16em;
+  }
+  @media (max-width: 660px) {
+    left: -20em;
   }
 `;
 
 const StyledTestimonialsRightContainer = styled.div`
   justify-content: right;
   position: absolute;
-  right: -14em;
+  right: -10em;
+  @media (max-width: 1100px) {
+    right: -15em;
+  }
   @media ${max.tabletLg} {
     right: -20em;
   }
   @media ${max.tablet} {
-    right: -22em;
+    right: -16em;
+  }
+  @media (max-width: 660px) {
+    right: -20em;
   }
 `;
 
@@ -66,6 +78,15 @@ const StyledButtonNumberContainer = styled.div`
   display: inline-block;
 `;
 
+const StyledArrowsContainer = styled.div`
+  margin-top: -8em;
+  margin-bottom: 6em;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 25em;
+`
+
 export {
   StyledTestimonialsCenterContainer,
   StyledTestimonialsLeftContainer,
@@ -73,5 +94,6 @@ export {
   StyledTestimonialsContainer,
   StyledCactusButtons,
   StyledTestimonialNumbers,
-  StyledButtonNumberContainer
+  StyledButtonNumberContainer,
+  StyledArrowsContainer
 };
