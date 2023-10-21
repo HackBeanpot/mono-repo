@@ -2,13 +2,20 @@ import React, { useState } from 'react';
 import useMatchMedia from 'react-use-match-media';
 import { getLeftOrRight, getLeftOrRightTestimonial } from '../../../lib/utils';
 import TestimonialCard from '../testimonial-card/TestimonialCard';
+import { StyledTestimonialButtons } from '../testimonial-card/TestimonialCard.styles';
 import {
+  StyledCactusButtons,
   StyledTestimonialsCenterContainer,
   StyledTestimonialsContainer,
   StyledTestimonialsLeftContainer,
   StyledTestimonialsRightContainer,
-  StyledArrowsContainer
+  StyledTestimonialNumbers,
+  StyledButtonNumberContainer
 } from './Testimonials.styles';
+import cactus1 from '../../../../shared-ui/images/cactus1.png';
+import cactus2 from '../../../../shared-ui/images/cactus2.png';
+import cactus3 from '../../../../shared-ui/images/cactus3.png';
+import cactus4 from '../../../../shared-ui/images/cactus4.png';
 import LeftOrRightTestimonialCard from '../testimonial-card/LeftOrRightTestimonialCard';
 import { TestimonialData } from '../../../lib/types';
 //sponsor testimonial data
@@ -22,7 +29,22 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
 }) => {
   const isDesktop = useMatchMedia(min.tablet);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const goToTestimonial = (index: number): void => {
+    setCurrentIndex(index);
+  };
 
+  function getCactus(index: number): string {
+    if (index === 0) {
+      return cactus1;
+    }
+    if (index === 1) {
+      return cactus2;
+    }
+    if (index === 2) {
+      return cactus3;
+    }
+    return cactus4;
+  }
   const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
     'left',
     testimonialData,
@@ -36,15 +58,15 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
   return (
     <>
       <StyledTestimonialsContainer>
-        {
+        {isDesktop && (
           <StyledTestimonialsLeftContainer>
             <LeftOrRightTestimonialCard
               isSponsor={isSponsor}
               testimonial={getLeftTestimonial}
             />
           </StyledTestimonialsLeftContainer>
-        }
-        {isDesktop && (
+        )}
+        {!isDesktop && (
           <Arrow
             left
             onClick={(): void =>
@@ -75,7 +97,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
             />
           ))}
         </StyledTestimonialsCenterContainer>
-        {isDesktop && (
+        {!isDesktop && (
           <Arrow
             left={false}
             onClick={(): void =>
@@ -91,50 +113,34 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
             }
           />
         )}
-        {
+        {isDesktop && (
           <StyledTestimonialsRightContainer>
             <LeftOrRightTestimonialCard
               isSponsor={isSponsor}
               testimonial={getRightTestimonial}
             />
           </StyledTestimonialsRightContainer>
-        }
+        )}
       </StyledTestimonialsContainer>
-      {!isDesktop && (
-        <StyledArrowsContainer>
-          {
-            <Arrow
-              left
-              onClick={(): void =>
-                setCurrentIndex(
-                  testimonialData[
-                    getLeftOrRight<TestimonialData>(
-                      'left',
-                      testimonialData,
-                      testimonialData[currentIndex]
-                    ).id
-                  ].id
-                )
-              }
-            />
-          }
-          {
-            <Arrow
-              left={false}
-              onClick={(): void =>
-                setCurrentIndex(
-                  testimonialData[
-                    getLeftOrRight<TestimonialData>(
-                      'right',
-                      testimonialData,
-                      testimonialData[currentIndex]
-                    ).id
-                  ].id
-                )
-              }
-            />
-          }
-        </StyledArrowsContainer>
+      {isDesktop && (
+        <StyledTestimonialButtons>
+          {testimonialData.map((_, testimonialIndex) => (
+            <StyledButtonNumberContainer
+              key={`testimonial-${testimonialIndex}`}
+            >
+              <StyledCactusButtons
+                src={getCactus(testimonialIndex)}
+                onClick={(): void => goToTestimonial(testimonialIndex)}
+                isToggled={testimonialIndex === currentIndex}
+              />
+              <StyledTestimonialNumbers
+                isToggled={testimonialIndex === currentIndex}
+              >
+                {testimonialIndex + 1}
+              </StyledTestimonialNumbers>
+            </StyledButtonNumberContainer>
+          ))}
+        </StyledTestimonialButtons>
       )}
     </>
   );
