@@ -7,7 +7,8 @@ const PrimaryButton: React.FC<ButtonProps> = ({
   btnText,
   btnLink,
   newTab = false,
-  isSmallPrimary = false
+  isSmallPrimary = false,
+  transparent = false
 }) => {
   const [isClicked, setIsClicked] = useState(false);
   if (!btnLink) {
@@ -27,7 +28,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
     };
     return (
       <a onClick={onClick}>
-        <StyledPrimaryButton $isSmallPrimary={isSmallPrimary}>
+        <StyledPrimaryButton $isSmallPrimary={isSmallPrimary} $transparent={transparent}>
           {ctaText}
         </StyledPrimaryButton>
       </a>
@@ -41,6 +42,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
         whileTap="tap"
         variants={buttonAnimations}
         $isSmallPrimary={isSmallPrimary}
+        $transparent={transparent}
       >
         {btnText}
       </StyledPrimaryButton>
