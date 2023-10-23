@@ -1,17 +1,16 @@
 import styled from '@emotion/styled';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H3, P } from '../../../shared-ui/style/typography';
-import { max } from '../../../shared-ui/lib/responsive';
-import { motion } from 'framer-motion';
+import { max, min } from '../../../shared-ui/lib/responsive';
 
 const StyledArrowContainer = styled.div`
   display: flex;
   position: relative;
 `;
 
-const StyledPastProjectsHeader = styled(H2)`
-  color: ${colors.BLACK};
-  padding-bottom: 0.5em;
+const StyledPastProjectsHeader = styled(H3)`
+  color: ${colors.WHITE};
+  padding-bottom: 1em;
   text-align: center;
   @media ${max.tablet} {
     padding-bottom: -10em;
@@ -24,24 +23,23 @@ const StyledPastProjectsDiv = styled.div`
 
 const StyledPastProjectsSection = styled.div`
   position: relative;
-  background-color: ${colors.TEXT_BOX};
+  background-color: transparent;
   width: 80%;
   margin: auto;
   border-radius: 1.25em;
   height: 100%;
   @media ${max.tablet} {
-    background-color: transparent;
     text-align: center;
+    width: 90%;
   };
 `;
 
 const StyledPastProjectsContainer = styled.div`
-  padding-top: 3em;
-  padding-left: 3em;
-  padding-bottom: 4em;
+  padding-bottom: 6em;
   @media ${max.tablet} {
     display: absolute;
     padding-left: 0;
+    padding-bottom: 4em;
   };
 `;
 
@@ -53,14 +51,16 @@ const StyledPastProjectsContainerBottom = styled.div`
 
 const StyledPastProjectsInfo = styled.div`
   text-align: left;
-  padding-left: 18.75em;
-  padding-right: 3em;
+  margin-left: 28em;
 
-  @media ${max.tablet} {
+  @media ${max.tabletLg} {
     font-size: 0.9375em;
-    text-align: center;
-    padding-left: 0;
     padding-right: 3em;
+    margin-left: 24em;
+  };
+
+   @media ${max.tablet} {
+    text-align: center;
   };
 `;
 
@@ -70,20 +70,20 @@ const StyledPastProjectsInfoContainer = styled.div`
 
 const StyledPastProjectsTitle = styled(H2)`
   font-size: 1.5625em !important;
-  color: ${colors.BUTTON_GREEN};
+  color: ${colors.WHITE};
   padding-bottom: 0.9em;
   width: 100%;
 
   @media ${max.tablet} {
+    margin-top: 1.5em;
     text-align: center;
-    color: black;
   };
 `;
 
 const StyledPastProjectsAward = styled(P)`
   font-size: 1em;
   text-align: right;
-  color: ${colors.YELLOW} !important;
+  color: ${colors.WHITE} !important;
   width: 100%;
 
   @media ${max.tabletLg} {
@@ -93,13 +93,12 @@ const StyledPastProjectsAward = styled(P)`
 
   @media ${max.tablet} {
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
   }
 `;
 
 const StyledPastProjectsTitleAwardContainer = styled.div`
   display: flex;
-  margin: 0;
 
   @media ${max.tabletLg} {
     display: inline;
@@ -110,18 +109,18 @@ const StyledPastProjectsMembers = styled(P)`
   font-size: 0.8125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
-  margin-left: 2.8em;
+  font-style: italic;
 `;
 
 const StyledPastProjectsDescription = styled(P)`
   font-size: 1.125em;
   color: ${colors.WHITE};
   padding-bottom: 0.9em;
-  margin-left: 2em;
 
   @media ${max.tablet} {
-    color: ${colors.TEXT_BROWN};
-    margin-left: 0em;
+    color: ${colors.WHITE};
+    margin-left: 5em;
+    margin-right: 5em;
     text-align: left;
     padding-bottom: 2em;
     letter-spacing: 0.5px;
@@ -129,7 +128,7 @@ const StyledPastProjectsDescription = styled(P)`
 `;
 
 const StyledViewProjectButtonWrapper = styled.div`
-  margin-left: 2em;
+  margin-left: 0em;
 `;
 
 const StyledPastProjectsViewText = styled(P)`
@@ -138,62 +137,113 @@ const StyledPastProjectsViewText = styled(P)`
   padding-top: 3.5em;
   padding-bottom: 2em;
   line-height: 2;
-  padding-left: 2em;
-  padding-right: 2em;
-  color: ${colors.TEXT_BROWN};
+  padding-left: 7em;
+  padding-right: 7em;
+  color: ${colors.WHITE};
+
+  @media ${max.tabletLg} {
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+
+  @media ${max.tablet} {
+    margin-right: 0em;
+    margin-left: 0em;
+  }
 `;
 
 const StyledPastProjectsPhotos = styled.img`
   left: 0;
   float: left;
-  width: 20em;
-  height: 13.75em;
-  padding-right: 1em;
-  object-fit: contain;
+  width: 25em;
+  border-radius: 5%;
+
+  @media ${max.desktop} {
+    width: 19em;
+    height: 15em;
+  }
 
   @media ${max.tablet} {
+    width: 20em;
+    height: 13.75em;
     float: none;
-    padding-bottom: 1em;
     position: relative;
     display: inline-block;
-    padding-top: 0;
-    padding-right: 0;
   }
 
   @media ${max.tabletLg} {
-    position: relative;
+    width: 19em;
   }
 `;
 
-const StyledFennecFox = styled.img`
-  position: absolute;
-  right: 0;
-  padding-top: 51em;
-  z-index: 1;
-  height: 20em;
+const StyledTreasureChest = styled.img`
+  margin-left: auto;
+  display: block;
+  padding-right: 2em;
   width: 20em;
 
+  @media ${max.desktopLg} {
+    width: 18em;
+    margin-top: -3em;
+  }
+
   @media ${max.tabletLg} {
-    display: none;
+    width: 15em;
+    margin-top: -7em;
+  }
+
+  @media ${max.tablet} {
+    margin-top: 1em;
+    width: 12em;
   }
 `;
 
-const StyledCamel = styled(motion.img)`
+const StyledPirateFlag = styled.img`
+  left: 2em;
+  top: 14em;
+  width: 13em;
+  position: relative;
+  @media ${max.tablet} {
+    top: 10em;
+    left: 4em;
+    width: 10em;
+  }
+
+  @media ${max.tabletSm} {
+    top: 8em;
+    width: 9em;
+  }
+`;
+
+const StyledPastProjectsLeftContainer = styled.div`
+  justify-content: left;
   position: absolute;
-  right: 0;
-  overflow: hidden;
-  z-index: 1;
-  padding-top: 10em;
-
   @media ${max.tabletLg} {
-    height: 20em;
+    left: -17em;
+  }
+
+  @media ${max.tabletSm} {
+    left: -19em;
   }
 `;
+
+const StyledPastProjectsRightContainer = styled.div`
+  justify-content: right;
+  position: absolute;
+  @media ${max.tabletLg} {
+    right: -17em;
+  }
+
+  @media ${max.tabletSm} {
+    right: -19em;
+  }
+`;
+
 export {
   StyledPastProjectsSection,
   StyledPastProjectsHeader,
-  StyledFennecFox,
-  StyledCamel,
+  StyledTreasureChest,
+  StyledPirateFlag,
   StyledPastProjectsContainer,
   StyledPastProjectsTitle,
   StyledPastProjectsMembers,
@@ -207,5 +257,7 @@ export {
   StyledPastProjectsDiv,
   StyledViewProjectButtonWrapper,
   StyledPastProjectsAward,
-  StyledPastProjectsTitleAwardContainer
+  StyledPastProjectsTitleAwardContainer,
+  StyledPastProjectsLeftContainer,
+  StyledPastProjectsRightContainer
 };
