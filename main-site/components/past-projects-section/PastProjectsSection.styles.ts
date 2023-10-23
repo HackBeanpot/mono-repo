@@ -6,9 +6,10 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 const StyledArrowContainer = styled.div`
   display: flex;
   position: relative;
+  margin-top: 2.1em;
 `;
 
-const StyledPastProjectsHeader = styled(H3)`
+const StyledPastProjectsHeader = styled(H2)`
   color: ${colors.WHITE};
   padding-bottom: 1em;
   text-align: center;
@@ -75,7 +76,6 @@ const StyledPastProjectsTitle = styled(H2)`
   width: 100%;
 
   @media ${max.tablet} {
-    margin-top: 1.5em;
     text-align: center;
   };
 `;
@@ -169,10 +169,12 @@ const StyledPastProjectsPhotos = styled.img`
     float: none;
     position: relative;
     display: inline-block;
+    margin-bottom: 1.5em;
   }
 
   @media ${max.tabletLg} {
     width: 19em;
+    margin-bottom: 1.5em;
   }
 `;
 

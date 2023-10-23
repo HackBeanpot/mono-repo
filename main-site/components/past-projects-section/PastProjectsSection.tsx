@@ -40,7 +40,6 @@ const PastProjectsSection: React.FC = () => {
   return (
     <div>
       <StyledPirateFlag src={PirateFlag} />
-      {/* <StyledTreasureChest src={TreasureChest} /> */}
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>
         {isDesktop &&
