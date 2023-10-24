@@ -213,7 +213,7 @@ const EventsLocationPQuestion = styled(P)`
   @media ${max.tablet} {
     font-size: 0.5em;
     bottom: 1.5em;
-    justify-self: center;
+    justify-self: left;
   }
 `;
 
@@ -222,13 +222,11 @@ const EventsLocationP = styled(P)`
   right: 2em;
   bottom: 2em;
   color: #000;
-  media ${max.desktopLg} {
-    margin: 50px;
-  }
   @media ${max.tablet} {
     font-size: 0.5em;
     bottom: 1.5em;
     justify-self: flex-end;
+    text-align: right;
   }
 `;
 

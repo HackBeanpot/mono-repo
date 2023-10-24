@@ -23,8 +23,10 @@ import EventsSeaweedDark from '../../../../shared-ui/images/seaweed-rock-dark.sv
 
 const DesktopTexts: React.FC = ({isDay}) => {
   const currentDate = new Date();
-  const isMobile = useMatchMedia(max.tabletSm);
-  const isDesktop = useMatchMedia(min.tablet);
+  const isTablet = useMatchMedia(min.tablet);
+  const isMobile = useMatchMedia(max.tabletLg);
+  const isDesktop = useMatchMedia(max.desktopLg);
+
   return (
     <StyledDesktopTextsContainer>
       {eventsCalendarData.map((event) => (
@@ -42,6 +44,7 @@ const DesktopTexts: React.FC = ({isDay}) => {
               <EventsLocationContainer>
                 <EventsLocationPQuestion>When?</EventsLocationPQuestion>
                 <EventsLocationP>{event.date.toDateString()}<br/>{event.time}</EventsLocationP>
+                {isTablet && isDesktop && <br></br>}
                 <EventsLocationPQuestion>Where?</EventsLocationPQuestion>
                 <EventsLocationP>{event.room}</EventsLocationP>
               </EventsLocationContainer>
