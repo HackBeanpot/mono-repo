@@ -6,15 +6,17 @@ import { motion } from 'framer-motion';
 import { StyledPrimaryButtonProps } from '../../lib/types';
 
 const StyledPrimaryButton = styled(motion.button)<StyledPrimaryButtonProps>`
-  color: ${colors.HEADER_FOOTER_BLUE};
-  background-color: ${colors.BUTTON_GREEN};
-  border-color: ${colors.HEADER_FOOTER_BLUE};
+  color: ${(props): string => 
+    props.$transparent ? colors.BUTTON_YELLOW : colors.TEXT_DARKBLUE};
+  background-color: ${(props): string => 
+    props.$transparent ? colors.TRANSPARENT : colors.BUTTON_YELLOW};
+  border-color: ${colors.BUTTON_YELLOW} !important;
   font-family: ${fonts.nunitoSansSemibold};
   transition-duration: 0.5s;
   &:hover {
-    color: ${colors.BUTTON_GREEN};
-    background-color: ${colors.HEADER_FOOTER_BLUE};
-    border-color: ${colors.BUTTON_GREEN};
+    color: ${colors.TEXT_DARKBLUE};
+    background-color: ${colors.BUTTON_DARK_YELLOW};
+    border-color: ${colors.BUTTON_DARK_YELLOW} !important;
   }
   padding-right: ${(props): string =>
     props.$isSmallPrimary ? '1.5em' : '1em'};

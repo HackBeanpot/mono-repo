@@ -2,6 +2,7 @@ import { MouseEventHandler } from 'react';
 
 export interface StyledPrimaryButtonProps {
   $isSmallPrimary: boolean | undefined;
+  $transparent: boolean | undefined;
 }
 
 export interface ButtonProps {
@@ -11,6 +12,7 @@ export interface ButtonProps {
   onClick?: MouseEventHandler;
   isSmallPrimary?: boolean;
   isClickable?: boolean;
+  transparent?: boolean;
 }
 
 export interface TimeRemainingProps {
