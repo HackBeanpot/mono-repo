@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { P } from '../../../shared-ui/style/typography';
-import { max } from '../../../shared-ui/lib/responsive';
+import { H3, P } from '../../../shared-ui/style/typography';
+import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 
 const StyledAdventureAheadSectionContainer = styled.div`
@@ -8,36 +8,57 @@ const StyledAdventureAheadSectionContainer = styled.div`
   margin: 10em 8em;
   @media ${max.tabletLg} {
     margin: 10em 0;
-  }
-  @media ${max.tablet} {
     flex-wrap: wrap;
-  }
+  };
 `;
+
+const StyledHeader = styled(H3)`
+  display: flex;
+`;
+
+const StyledHeaderDiv = styled.div`
+  text-align: center;
+  width: 100%
+`;
+
 
 const StyledParagraph = styled(P)`
   padding: 2em 0;
-  color: ${colors.TEXT_BROWN};
-`;
-const StyledSignpost = styled.img`
-  padding: 2em;
-  vertical-align: top;
-  @media ${max.tablet} {
-    width: 13em;
-    height: auto;
-    margin: 0em;
+  color: ${colors.WHITE};
+
+  @media ${max.tabletLg} {
+    text-align: center;
   }
 `;
 
-const StyledTextContainer = styled.div`
-  margin: 2em 3em;
-    justify-content: center;
-    color: ${colors.TEXT_BROWN}
-    padding: 2em;
+const StyledImageCore = styled.img`
+  margin-top: 2em;
+  right: 4em;
+  margin: auto;
+  width: 100%;
+
+  @media ${min.tabletLg} {
+    width: 50%;
+    margin-top: 2.5em;
+    margin-left: 2em;
+  }
 `;
+
+const StyledOceanLayers = styled.img`
+  max-width: 100%;
+  margin-bottom: -0.2em;
+`;
+
+const StyledTextContainer = styled.div`
+  margin: ;
+  padding-right: 2em;
+  padding-left: 2em;
+`;
+
 const StyledButtonContainer = styled.div`
   margin-top: 0.5em;
 
-  @media ${max.tablet} {
+  @media ${max.tabletLg} {
     justify-content: center;
     display: flex;
   }
@@ -45,8 +66,11 @@ const StyledButtonContainer = styled.div`
 
 export {
   StyledParagraph,
-  StyledSignpost,
+  StyledImageCore,
   StyledAdventureAheadSectionContainer,
   StyledTextContainer,
-  StyledButtonContainer
+  StyledButtonContainer,
+  StyledHeader,
+  StyledOceanLayers,
+  StyledHeaderDiv
 };
