@@ -25,6 +25,7 @@ const H2 = styled.h2`
   margin: 0;
   @media ${min.tablet} {
     letter-spacing: 0.1em;
+    font-size: 2.5em;
   }
 `;
 
@@ -80,7 +81,7 @@ const P = styled.p`
   line-height: 1.4em;
   color: ${(props): string => (props.color ? props.color : colors.WHITE)};
   @media ${min.mobile} {
-    font-size: 0.8em;
+    font-size: 1.3em;
   }
   @media ${min.tablet} {
     font-size: 1.4em;
