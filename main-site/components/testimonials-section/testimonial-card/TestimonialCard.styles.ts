@@ -40,7 +40,7 @@ const StyledTestimonialCardImage = styled.img<StyledTestimonialCardAuthorYearIma
   width: 100%;
   scale: ${(props): string => (props.isSponsor ? '0.9' : '')};
   height: ${(props): string => (props.isSponsor ? '32%' : '50%')};
-  margin-bottom: ${(props): string => (props.isSponsor ? '1em' : '1em')};
+  margin-bottom: ${'1em'};
   @media ${max.tabletXs} {
     border-radius: 0em;
   }
@@ -53,18 +53,16 @@ const StyledTestimonialCardAuthor = styled(
   font-family: ${(props): string =>
     props.isSponsor ? fonts.nunitoRegular : fonts.nunitoSansRegular};
   margin-bottom: ${(props): string => (props.isSponsor ? '0em' : '0.4em')};
-  color: ${(props): string => (props.isSponsor ? colors.WHITE : colors.WHITE)};
+  color: ${colors.WHITE};
 `;
 
 const StyledTestimonialCardYearCompany = styled(
   P
 )<StyledTestimonialCardAuthorYearImageProps>`
   font-size: ${(props): string => (props.isSponsor ? '1.2em' : '1em')};
-  color: ${(props): string =>
-    props.isSponsor ? colors.WHITE : colors.WHITE};
+  color: ${colors.WHITE};
   margin-bottom: 0.4em;
-  font-family: ${(props): string =>
-    props.isSponsor ? fonts.nunitoRegular : fonts.nunitoRegular};
+  font-family: ${fonts.nunitoRegular};
 `;
 
 const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearImageProps>`
