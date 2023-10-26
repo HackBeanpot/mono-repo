@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { H3, P } from '../../../shared-ui/style/typography';
-import { max, min } from '../../../shared-ui/lib/responsive';
+import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 
 const StyledAdventureAheadSectionContainer = styled.div`
   display: flex;
-  margin: 10em 8em;
-  @media ${max.tabletLg} {
+  
+  @media ${max.tablet} {
     margin: 10em 0;
     flex-wrap: wrap;
   };
@@ -14,33 +14,48 @@ const StyledAdventureAheadSectionContainer = styled.div`
 
 const StyledHeader = styled(H3)`
   display: flex;
+
+  @media ${max.tablet} {
+    justify-content: center;
+  };
 `;
 
 const StyledHeaderDiv = styled.div`
-  text-align: center;
-  width: 100%
+  width: 100%;
 `;
 
 
 const StyledParagraph = styled(P)`
-  padding: 2em 0;
+  margin-top: 1em;
   color: ${colors.WHITE};
 
-  @media ${max.tabletLg} {
+  @media ${max.tablet} {
     text-align: center;
+    margin-top: -1em;
   }
 `;
 
 const StyledImageCore = styled.img`
-  margin-top: 2em;
-  right: 4em;
+  width: 40%;  
   margin: auto;
-  width: 100%;
+  margin-left: 2em;
 
-  @media ${min.tabletLg} {
-    width: 50%;
-    margin-top: 2.5em;
-    margin-left: 2em;
+  @media ${max.tablet} {
+    width: 80%;
+    margin: auto;
+  }
+`;
+
+const StyledShell = styled.img`
+  position: absolute;
+  width: 8%;
+  margin-top: clamp(15em, 20%, 19em);
+  margin-left: 1em;
+
+  @media ${max.tablet} {
+    width: 15%;
+    margin-top: clamp(15em, 45%, 22em);
+    margin-left: 3em;
   }
 `;
 
@@ -50,23 +65,25 @@ const StyledOceanLayers = styled.img`
 `;
 
 const StyledTextContainer = styled.div`
-  margin: ;
-  padding-right: 2em;
-  padding-left: 2em;
+  margin-top: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
 `;
 
 const StyledButtonContainer = styled.div`
   margin-top: 0.5em;
 
-  @media ${max.tabletLg} {
+  @media ${max.tablet} {
     justify-content: center;
     display: flex;
+    margin-top: 2em;
   }
 `;
 
 export {
   StyledParagraph,
   StyledImageCore,
+  StyledShell,
   StyledAdventureAheadSectionContainer,
   StyledTextContainer,
   StyledButtonContainer,

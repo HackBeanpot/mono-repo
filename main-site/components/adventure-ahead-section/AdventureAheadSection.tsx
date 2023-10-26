@@ -1,6 +1,5 @@
 import React from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import { H3 } from '../../../shared-ui/style/typography';
 
 import {
   StyledAdventureAheadSectionContainer,
@@ -10,7 +9,8 @@ import {
   StyledButtonContainer,
   StyledHeader,
   StyledHeaderDiv,
-  StyledOceanLayers
+  StyledOceanLayers,
+  StyledShell
 } from './AdventureAheadSection.styles';
 
 import GroupPhoto from '../../../shared-ui/images/meet-the-team/group.png';
@@ -20,14 +20,15 @@ import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 
 const AdventureAheadSection: React.FC = () => {
-  const isDesktop = useMatchMedia(min.tabletLg);
+  const isDesktop = useMatchMedia(min.tablet);
   return (
     <>
     <StyledAdventureAheadSectionContainer>
-      {!isDesktop &&  <StyledHeaderDiv><StyledHeader>We can't wait to meet you!</StyledHeader></StyledHeaderDiv>};
+      {!isDesktop && <StyledHeaderDiv><StyledHeader>We can't wait to meet you!</StyledHeader></StyledHeaderDiv>};
+      <StyledShell src={shell1}/>
       <StyledImageCore src={GroupPhoto}/>
       <StyledTextContainer>
-      {isDesktop &&  <StyledHeader>We can't wait to meet you!</StyledHeader>}
+      {isDesktop && <StyledHeader>We can't wait to meet you!</StyledHeader>}
         <StyledParagraph>
           Stay up to date with all things HackBeanpot like when we announce the location, date, and when applications open! (no spam we promise!)
         </StyledParagraph>
