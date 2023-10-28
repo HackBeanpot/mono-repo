@@ -17,18 +17,27 @@ import useMatchMedia from 'react-use-match-media';
 import DesktopTexts from './texts/DesktopTexts';
 import { eventsCalendarData } from '../../lib/data';
 
-const EventsCalendarSection: React.FC = ({isDay}) => {
+const EventsCalendarSection: React.FC = ({ isDay }) => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
     <div id="calendar">
       <StyledSectionContainer>
         <StyledH2>Events Calendar</StyledH2>
         <StyledEventsContainer>
-          {isDesktop && <StyledEventsFishSchool src = {isDay ? EventsFishSchool : EventsFishSchoolDark}/>}
+          {isDesktop && (
+            <StyledEventsFishSchool
+              src={isDay ? EventsFishSchool : EventsFishSchoolDark}
+            />
+          )}
           <StyledEventsCalendar>
             <DesktopTexts />
           </StyledEventsCalendar>
-          {isDesktop && <StyledEventsSeaweed src={isDay ? EventsSeaweed : EventsSeaweedDark } numberOfEvents = {eventsCalendarData.length}/>}
+          {isDesktop && (
+            <StyledEventsSeaweed
+              src={isDay ? EventsSeaweed : EventsSeaweedDark}
+              numberOfEvents={eventsCalendarData.length}
+            />
+          )}
         </StyledEventsContainer>
       </StyledSectionContainer>
     </div>

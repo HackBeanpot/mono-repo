@@ -26,7 +26,7 @@ const StyledEventsContainer = styled.div`
   flex-direction: column;
 `;
 
-const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
+const StyledEventsBox = styled.div<{ elapsedEvent: boolean }>`
   border-radius: 2em;
   background-color: ${colors.SAND_HIGHLIGHTS};
   position: relative;
@@ -52,7 +52,7 @@ const StyledTextContainer = styled.div`
   margin: 2em;
   padding-top: 0.5em;
   gap: 6em;
-  
+
   @media ${max.tabletSm} {
     margin: 1em 0;
     height: fit-content;
@@ -87,12 +87,12 @@ const EventsRightContainer = styled.div`
   @media ${max.tabletSm} {
     gap: 0;
   }
-`
+`;
 
 const StyledEventsCalendar = styled.div`
   border-radius: 2em;
   width: 60%;
-  
+
   background-color: ${colors.YELLOW_GREEN};
   position: relative;
   @media ${max.tabletLg} {
@@ -105,8 +105,7 @@ const StyledEventsCalendar = styled.div`
   }
 `;
 
-
-const StyledEventsSeaweed = styled.img<{numberOfEvents: number}>`
+const StyledEventsSeaweed = styled.img<{ numberOfEvents: number }>`
   position: absolute;
   top: calc(${(props): number => props.numberOfEvents} * 15em);
   width: 8%;
@@ -144,12 +143,11 @@ const EventsHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   line-height: 1.2em;
   letter-spacing: 0.08em;
-  color: #193C60;
+  color: #193c60;
   font-size: 1.7em;
   font-weight: bolder;
   @media ${max.tabletSm} {
     font-size: 1.3em;
-
   }
   @media ${max.mobile} {
     font-size: 0.6em;
@@ -179,7 +177,7 @@ const EventsSubHeader = styled(P)`
 
 const StyledH2 = styled(H2)`
   text-align: center;
-  color: #FFF;
+  color: #fff;
 `;
 
 const EventsPBolded = styled(P)`
@@ -197,7 +195,7 @@ const EventsImage = styled.img`
     top: 2em;
     right: 2em;
   }
-`
+`;
 
 const EventsLocationContainer = styled.div`
   border: 1px solid ${colors.YELLOW_GREEN};
@@ -211,7 +209,7 @@ const EventsLocationContainer = styled.div`
     padding: 0.3em;
     font-size: xx-large;
   }
-`
+`;
 
 const EventsLocationPQuestion = styled(P)`
   font-size: 1em;
