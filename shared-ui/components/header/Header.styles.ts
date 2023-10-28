@@ -3,12 +3,14 @@ import { max, min } from '../../lib/responsive';
 import { StyledHeaderProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 import { P, fonts } from '../../style/typography';
+import PrimaryButton from '../primary-button/PrimaryButton';
+import SecondaryButton from '../secondary-button/SecondaryButton';
 
 const StyledHeader = styled.div<StyledHeaderProps>`
    {
     height: ${(props): string => (props.isOpen ? '45em' : '4.8em')};
     background-color: ${(props): string =>
-      props.isDay ? colors.HEADER_FOOTER_BLUE : colors.NIGHT_HEADER_COLOR};
+      props.isDay ? colors.HEADER_DAY_BLUE : colors.HEADER_NIGHT_BLUE};
     width: 100%;
     z-index: 20;
     position: fixed;
@@ -33,6 +35,27 @@ const StyledTab = styled(P)`
     }
   }
 `;
+
+const StyledPrimaryButtonContainer = styled(PrimaryButton)`
+  padding-top: 2em;
+  font-size: 0.5em;
+  @media ${max.tablet} {
+    float: bottom;
+    padding-top: 4em;
+    width: 5%;
+  }
+`;
+
+const StyledSecondaryButtonContainer = styled(SecondaryButton)`
+  padding-top: 2em;
+  font-size: 0.5em;
+  @media ${max.tablet} {
+    float: bottom;
+    padding-top: 4em;
+    width: 5%;
+  }
+`;
+
 const StyledTabsContainer = styled.div`
    {
     padding-top: 3em;
@@ -80,6 +103,8 @@ const StyledXIcon = styled.img`
 export {
   StyledHeader,
   StyledTab,
+  StyledPrimaryButtonContainer,
+  StyledSecondaryButtonContainer,
   StyledTabsContainer,
   StyledHackBeanpotLogo,
   StyledHamburgerIcon,

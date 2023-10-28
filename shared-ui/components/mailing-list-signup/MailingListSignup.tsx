@@ -45,7 +45,7 @@ const MailingListSignup: React.FunctionComponent = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <StyledEmailInput
-          placeholder="Enter your email"
+          placeholder="Enter email here"
           name="email"
           type="text"
           value={email}
@@ -55,9 +55,9 @@ const MailingListSignup: React.FunctionComponent = () => {
 
         <StyledButtonRow>
           <StyledPrimaryButton type="submit">
-            Join our mailing list
+            Join mailing list
           </StyledPrimaryButton>
-          <StyledSocialMediaButtons>
+          {/* <StyledSocialMediaButtons>
             <a href="https://www.instagram.com/hackbeanpot/" target="_blank">
               <img width="30" height="30" src={Instagram} />
             </a>
@@ -70,7 +70,7 @@ const MailingListSignup: React.FunctionComponent = () => {
             <a href="https://twitter.com/HackBeanpot" target="_blank">
               <img width="30" height="30" src={Twitter} />
             </a>
-          </StyledSocialMediaButtons>
+          </StyledSocialMediaButtons> */}
         </StyledButtonRow>
       </form>
     </div>

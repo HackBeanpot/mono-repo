@@ -7,17 +7,24 @@ import { P, fonts } from '../../style/typography';
 const StyledFooter = styled.div<StyledFooterProps>`
   width: 100%;
   background-color: ${(props): string =>
-    props.isDay ? colors.HEADER_FOOTER_BLUE : colors.NIGHT_HEADER_COLOR};
+    props.isDay ? colors.HEADER_DAY_BLUE : colors.HEADER_NIGHT_BLUE};
   display: flex;
-  flex-direction: column;
+
   align-items: center;
-  height: 39em;
+
+  justify-content: center;
+  @media ${min.tablet} {
+    justify-content: center;
+    height: 20em;
+  }
   @media ${min.tabletLg} {
+
     height: 28em;
     align-items: left;
   }
+
   @media ${min.desktop} {
-    height: 23em;
+    height: 30em;
     flex-direction: row;
     align-items: flex-start;
   }
@@ -26,21 +33,21 @@ const StyledFooter = styled.div<StyledFooterProps>`
 const StyledHBPContent = styled.div`
   box-sizing: border-box;
   display: flex;
+
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: flex-start;
 
-  @media ${max.tablet} {
-    padding: 0;
-    width: 20em;
-  }
+
   @media ${max.tabletLg} {
-    padding-top: 2em;
-  }
-  @media ${max.desktop} {
-    align-items: center;
-    gap: 1em;
+    padding-bottom: 2em;
+
     justify-content: center;
+    align-items: center
+  }
+
+  @media ${max.desktop} {
+
+    gap: 1em;
   }
 `;
 
@@ -48,12 +55,10 @@ const StyledHackBeanpotLogo = styled.img`
   align-self: flex-start;
   padding: 0.7em 0em 0em 0.7em;
   @media ${max.tabletLg} {
-    padding: 0.7em 0em 0em 5em;
-  }
-  @media ${max.tablet} {
     align-self: auto;
-    padding: 0.7em 0em 0em 0em;
   }
+
+
 `;
 
 const StyledFooterContentContainer = styled.div`
@@ -63,9 +68,10 @@ const StyledFooterContentContainer = styled.div`
   justify-content: space-around;
   width: 100%;
   height: 100%;
-  @media ${max.tablet} {
+  @media ${max.tabletLg} {
     flex-direction: column;
     gap: 1em;
+    display: none;
   }
 `;
 
@@ -78,11 +84,15 @@ const StyledTabContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-self: center;
+  @media ${min.desktop} {
+    padding: 4em 0;
+  }
   @media ${max.desktop} {
     padding: 4em 0;
   }
   @media ${max.tabletLg} {
     padding: 8em 0;
+    display: none;
   }
   @media ${max.tablet} {
     display: none;
@@ -105,7 +115,9 @@ const StyledButtonContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+
   @media ${max.tablet} {
+    display: none;
     padding: 0;
     width: 20em;
   }
@@ -136,18 +148,15 @@ const StyledEmailInput = styled.input`
   }
   @media ${max.desktop} {
     width: 15em;
-    text-align: center;
-    ::placeholder {
-      text-align: center;
-    }
+
   }
 `;
 
 const StyledButtonRow = styled.div`
-  display: flex;
+
   flex-direction: row;
   gap: 1em;
-  align-items: center;
+
   @media ${max.desktop} {
     flex-direction: column;
     margin-top: 0;
@@ -158,13 +167,20 @@ const StyledSocialMediaButtons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1em;
+  display: block;
+
+   @media ${min.tabletLg} {
+    display: none;
+    padding: 0.5em;
+  }
+
 `;
 
 const StyledFooterText = styled.div`
   font-size: 1em;
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansRegular};
-  padding: 0 3em;
+  margin-bottom: 1em;
 `;
 
 const StyledFooterTextLink = styled.a`
@@ -183,13 +199,18 @@ const StyledFooterCodeOfConduct = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 0em;
-  padding-top: 2em;
+
   text-align: center;
-  @media ${min.tablet} {
+
+  @media ${min.tabletSm} {
     padding-top: 0;
     display: flex;
   }
+
   @media ${min.tabletLg} {
+    display: none;
+  }
+  @media ${min.desktop} {
     text-align: left;
   }
 `;

@@ -76,6 +76,7 @@ export interface StyledHeaderProps {
 
 export interface FooterProps {
   tabs: TabInfo[];
+  secondaryTabs: TabInfo[];
   isDay: boolean;
 }
 

@@ -3,7 +3,11 @@ import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
-import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
+import {
+  mainSiteTabInfo,
+  mainSiteTabInfoFooter,
+  mainSiteTabInfoFooterSecondary
+} from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ExploreSection from '../../components/explore-section/ExploreSection';
 // import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
@@ -54,7 +58,7 @@ const IndexPage: React.FC = () => {
       <ExploreSection isDay={isDay} />
       <AboutSection />
       {/* <EventsCalendarSection /> */}
-      <TestimonialsSection testimonialData={testimonialSectionData}/>
+      <TestimonialsSection testimonialData={testimonialSectionData} />
       <PastProjectsSection />
       <FaqSection />
       <PastPhotosSection />
@@ -63,7 +67,11 @@ const IndexPage: React.FC = () => {
       <SponsorsSection />
       <AdventureAheadSection />
       {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
-      <Footer tabs={mainSiteTabInfo} isDay={isDay} />
+      <Footer
+        tabs={mainSiteTabInfoFooter}
+        secondaryTabs={mainSiteTabInfoFooterSecondary}
+        isDay={isDay}
+      />
     </StyledPageContainer>
   );
 };

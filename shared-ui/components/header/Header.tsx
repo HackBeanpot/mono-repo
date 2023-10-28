@@ -3,10 +3,13 @@ import { HeaderProps, TabInfo } from '../../lib/types';
 import {
   StyledHeader,
   StyledTab,
+  StyledLandingButtonContainer,
   StyledTabsContainer,
   StyledHackBeanpotLogo,
   StyledHamburgerIcon,
-  StyledXIcon
+  StyledXIcon,
+  StyledSecondaryButtonContainer,
+  StyledPrimaryButtonContainer
 } from './Header.styles';
 import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.png';
 import useMatchMedia from 'react-use-match-media';
@@ -51,9 +54,26 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
               onClick={(): void => setIsOpen(false)}
               href={tab.link}
               key={tab.name}
-              target= {tab.newTab ? "_blank" : "_self"}
+              target={tab.newTab ? '_blank' : '_self'}
             >
-              <StyledTab>{tab.name}</StyledTab>
+              {tab.name === 'Apply' && (
+                <StyledSecondaryButtonContainer
+                  btnText={tab.name}
+                  btnLink={tab.link}
+                  isClickable={true}
+                  newTab
+                />
+              )}
+              {tab.name === 'Sponsor Us' && (
+                <StyledPrimaryButtonContainer
+                  btnText={tab.name}
+                  btnLink={tab.link}
+                  newTab
+                />
+              )}
+              {tab.name !== 'Sponsor Us' && tab.name !== 'Apply' && (
+                <StyledTab>{tab.name}</StyledTab>
+              )}
             </StyledLink>
           ))}
         </StyledTabsContainer>

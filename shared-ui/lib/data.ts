@@ -37,10 +37,27 @@ const team: Team = {
 
 const mainSiteTabInfo: TabInfo[] = [
   { name: 'About', link: '/#about' },
-  { name: 'Calendar', link: '/#calendar' },
+  { name: 'Testimonials', link: '/#testimonials' },
+  { name: 'Projects', link: '/#projects' },
   { name: 'FAQ', link: '/#faq' },
+  { name: 'Sponsors', link: '/#sponsors' },
+  { name: 'Team', link: '/#team' },
   { name: 'Sponsor Us', link: '/sponsor-us' },
-  { name: 'Team', link: '/#team' }
+  { name: 'Apply', link: 'https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431' },
+];
+
+const mainSiteTabInfoFooter: TabInfo[] = [
+  { name: 'About', link: '/#about' },
+  { name: 'Stories', link: '/#stories' },
+  { name: 'COVID safety', link: '/#covid-safety' },
+  { name: 'FAQ', link: '/#faq' },
+  { name: 'Sponsors', link: '/#sponsors' },
+];
+
+const mainSiteTabInfoFooterSecondary: TabInfo[] = [
+  { name: 'Event archive', link: '/#event-archive' },
+  { name: 'Project gallery', link: '/#project-gallery' },
+  { name: 'Contact us', link: '/#contact-us' },
 ];
 
 const surbhi: Person = {
@@ -319,4 +336,4 @@ const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Sponsorship', listOfPictures: sponsorshipPictures }
 ];
 
-export { mainSiteTabInfo, teamInfo, team };
+export { mainSiteTabInfo, mainSiteTabInfoFooter, mainSiteTabInfoFooterSecondary, teamInfo, team };
