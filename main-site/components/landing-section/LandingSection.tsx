@@ -88,7 +88,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
         <StyledCountdownContainer>
           <StyledHourglass src={hourglass} />
           <StyledCountdown>
-            <Countdown targetDate={'2024-02-10T23:59:59Z'}/>
+            <Countdown targetDate={CountdownData[0].targetDate}/>
           </StyledCountdown>
         </StyledCountdownContainer>
       </StyledLandingTextContainer>
