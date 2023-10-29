@@ -30,14 +30,8 @@ const EventsCalendarSection: React.FC = ({ isDay }) => {
             />
           )}
           <StyledEventsCalendar>
-            <DesktopTexts />
+            <DesktopTexts isDay = {isDay} />
           </StyledEventsCalendar>
-          {isDesktop && (
-            <StyledEventsSeaweed
-              src={isDay ? EventsSeaweed : EventsSeaweedDark}
-              numberOfEvents={eventsCalendarData.length}
-            />
-          )}
         </StyledEventsContainer>
       </StyledSectionContainer>
     </div>

@@ -52,17 +52,14 @@ const StyledTextContainer = styled.div`
   margin: 2em;
   padding-top: 0.5em;
   gap: 6em;
-
-  @media ${max.tabletSm} {
+  
+  @media ${max.tablet} {
     margin: 1em 0;
     height: fit-content;
     grid-template-rows: 2fr 1fr;
     grid-auto-flow: column;
     grid-template-columns: none;
     gap: 1em;
-  }
-  @media ${max.tabletSm} {
-    padding-left: 1em;
   }
   @media ${max.mobile} {
     margin: 2em;
@@ -74,7 +71,7 @@ const EventsLeftContainer = styled.div`
   width: 95%;
   display: grid;
 
-  @media ${max.tabletSm} {
+  @media ${max.tablet} {
     width: 93%;
   }
 `;
@@ -84,7 +81,7 @@ const EventsRightContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 2em;
-  @media ${max.tabletSm} {
+  @media ${max.tablet} {
     gap: 0;
   }
 `;
@@ -107,25 +104,15 @@ const StyledEventsCalendar = styled.div`
 
 const StyledEventsSeaweed = styled.img<{ numberOfEvents: number }>`
   position: absolute;
-  top: calc(${(props): number => props.numberOfEvents} * 15em);
-  width: 8%;
-  left: 12vw;
-  width: 8%;
-  @media ${min.tabletSm} {
-    left: 5vw;
-  }
-  @media ${min.tablet} {
-    left: 5vw;
-  }
-  @media ${min.tabletLg} {
-    left: 14vw;
-  }
+  bottom: 0;
+  left: -8vw;
+    width: 11vw;
 `;
 
 const StyledEventsFishSchool = styled.img`
   position: absolute;
   height: 10vw;
-  @media ${min.tabletSm} {
+  @media ${min.tablet} {
     top: -16vh;
     right: 2em;
   }
@@ -146,7 +133,7 @@ const EventsHeader = styled(P)`
   color: #193c60;
   font-size: 1.7em;
   font-weight: bolder;
-  @media ${max.tabletSm} {
+  @media ${max.tablet} {
     font-size: 1.3em;
   }
   @media ${max.mobile} {
@@ -156,8 +143,8 @@ const EventsHeader = styled(P)`
 
 const EventsP = styled(P)`
   font-size: 1.1em;
-  color: #000;
-  @media ${max.tabletSm} {
+  color: ${colors.BLACK};
+  @media ${max.tablet} {
     font-size: 0.8em;
   }
 `;
@@ -166,8 +153,8 @@ const EventsSubHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.2em;
   line-height: 2em;
-  color: #000;
-  @media ${max.tabletSm} {
+  color: ${colors.BLACK};
+  @media ${max.tablet} {
     font-size: 0.8em;
   }
   @media ${max.mobile} {
@@ -177,20 +164,20 @@ const EventsSubHeader = styled(P)`
 
 const StyledH2 = styled(H2)`
   text-align: center;
-  color: #fff;
+  color: ${colors.WHITE};
 `;
 
 const EventsPBolded = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.1em;
-  color: #000;
+  color: ${colors.BLACK};
 `;
 
 const EventsImage = styled.img`
   height: 5vh;
   width: 5vh;
   align-self: flex-end;
-  @media ${max.tabletSm} {
+  @media ${max.tablet} {
     position: absolute;
     top: 2em;
     right: 2em;
@@ -203,8 +190,12 @@ const EventsLocationContainer = styled.div`
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  /* text-align: end; */
-  @media ${max.tabletSm} {
+  @media ${min.tabletLg && max.desktopLg} {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+
+  @media ${max.tablet} {
     grid-template-columns: 1fr 2fr;
     padding: 0.3em;
     font-size: xx-large;
@@ -215,11 +206,12 @@ const EventsLocationPQuestion = styled(P)`
   font-size: 1em;
   right: 2em;
   bottom: 2em;
-  color: #000;
-  @media ${max.tabletSm} {
+  color: black;
+  
+  @media ${max.tablet} {
     font-size: 0.5em;
     bottom: 1.5em;
-    justify-self: center;
+    justify-self: left;
   }
 `;
 
@@ -227,11 +219,12 @@ const EventsLocationP = styled(P)`
   font-size: 1em;
   right: 2em;
   bottom: 2em;
-  color: #000;
-  @media ${max.tabletSm} {
+  color: ${colors.BLACK};
+  @media ${max.tablet} {
     font-size: 0.5em;
     bottom: 1.5em;
-    justify-self: flex-start;
+    justify-self: flex-end;
+    text-align: right;
   }
 `;
 

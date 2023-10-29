@@ -11,16 +11,22 @@ import {
   EventsRightContainer,
   EventsLocationContainer,
   EventsImage,
-  EventsLocationPQuestion
+  EventsLocationPQuestion,
+  StyledEventsSeaweed
 } from '../EventsCalendarSection.styles';
 import { eventsCalendarData } from '../../../lib/data';
 import MissingPhoto from '../../../../shared-ui/images/missing_image.png';
-import { max } from '../../../../shared-ui/lib/responsive';
+import { max, min } from '../../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
+import EventsSeaweed from '../../../../shared-ui/images/seaweed-rock.svg';
+import EventsSeaweedDark from '../../../../shared-ui/images/seaweed-rock-dark.svg';
 
-const DesktopTexts: React.FC = () => {
+const DesktopTexts: React.FC = ({isDay}) => {
   const currentDate = new Date();
-  const isMobile = useMatchMedia(max.tabletSm);
+  const isTablet = useMatchMedia(min.tablet);
+  const isMobile = useMatchMedia(max.tabletLg);
+  const isDesktop = useMatchMedia(max.desktopLg);
+
   return (
     <StyledDesktopTextsContainer>
       {eventsCalendarData.map((event) => (
@@ -38,6 +44,7 @@ const DesktopTexts: React.FC = () => {
               <EventsLocationContainer>
                 <EventsLocationPQuestion>When?</EventsLocationPQuestion>
                 <EventsLocationP>{event.date.toDateString()}<br/>{event.time}</EventsLocationP>
+                {isTablet && isDesktop && <br></br>}
                 <EventsLocationPQuestion>Where?</EventsLocationPQuestion>
                 <EventsLocationP>{event.room}</EventsLocationP>
               </EventsLocationContainer>
@@ -45,6 +52,7 @@ const DesktopTexts: React.FC = () => {
           </StyledTextContainer>
         </StyledEventsBox>
       ))}
+      {!isMobile && <StyledEventsSeaweed src={isDay ? EventsSeaweed : EventsSeaweedDark } numberOfEvents = {eventsCalendarData.length}/>}
     </StyledDesktopTextsContainer>
   );
 };
