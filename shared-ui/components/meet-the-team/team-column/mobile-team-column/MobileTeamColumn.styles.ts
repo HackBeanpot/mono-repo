@@ -8,6 +8,7 @@ const StyledMobileTeamColumn = styled.div`
 const LabelArrowContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 const MobileImageContainer = styled.div`
@@ -30,6 +31,7 @@ const StyledHeadshot = styled.img`
 
 const StyledImageRow = styled.div`
   justify-content: center;
+  display: flex;
 `;
 
 const StyledSecondaryButtonWrapper = styled.div`
@@ -42,7 +44,6 @@ const StyledSecondaryButtonWrapper = styled.div`
 const StyledLinkedIn = styled.a`
   color: white;
   text-decoration: none;
-  display: inline-block;
   width: 100%;
   font-family: 'Nunito Sans', sans-serif;
   
@@ -54,7 +55,12 @@ const StyledLinkedIn = styled.a`
     top: 0.1em;
   }
 `
-
+const StyledPictureContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+`;
 
 
 export {
@@ -64,5 +70,6 @@ export {
   StyledImageRow,
   StyledHeadshot,
   StyledSecondaryButtonWrapper,
-  StyledLinkedIn
+  StyledLinkedIn,
+  StyledPictureContainer
 };
