@@ -20,7 +20,9 @@ import { StyledLink } from '../../style/typography';
 
 const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const isDesktopSmall = useMatchMedia(min.tabletSm);
   const isDesktop = useMatchMedia(min.tablet);
+  const isDesktopLarge = useMatchMedia(min.tabletLg);
   return (
     <StyledHeader isOpen={isOpen} isDay={isDay}>
       <a href="/">
@@ -64,13 +66,13 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
                   newTab
                 />
               )}
-              {tab.name === 'Sponsor Us' && (
-                <StyledPrimaryButtonContainer
-                  btnText={tab.name}
-                  btnLink={tab.link}
-                  newTab
-                />
-              )}
+              {tab.name === 'Sponsor Us' &&
+                  (<StyledPrimaryButtonContainer
+                    btnText={tab.name}
+                    btnLink={tab.link}
+                    newTab
+                  />
+                )}
               {tab.name !== 'Sponsor Us' && tab.name !== 'Apply' && (
                 <StyledTab>{tab.name}</StyledTab>
               )}

@@ -10,7 +10,8 @@ const StyledFooter = styled.div<StyledFooterProps>`
     props.isDay ? colors.HEADER_DAY_BLUE : colors.HEADER_NIGHT_BLUE};
   display: flex;
 
-  align-items: center;
+
+  align-items: flex-start;
 
   justify-content: center;
   @media ${min.tablet} {
@@ -19,7 +20,7 @@ const StyledFooter = styled.div<StyledFooterProps>`
   }
   @media ${min.tabletLg} {
 
-    height: 28em;
+    height: 30em;
     align-items: left;
   }
 
@@ -53,7 +54,7 @@ const StyledHBPContent = styled.div`
 
 const StyledHackBeanpotLogo = styled.img`
   align-self: flex-start;
-  padding: 0.7em 0em 0em 0.7em;
+  padding: 2em;
   @media ${max.tabletLg} {
     align-self: auto;
   }

@@ -25,41 +25,69 @@ const StyledTab = styled(P)`
     color: ${colors.WHITE};
     font-family: ${fonts.nunitoSansLight};
     font-size: 2.3em;
-    padding: 0.5em;
+    margin: 0.7em;
     @media ${min.tablet} {
-      padding: 1.3em;
-      font-size: 1.2em;
+      margin: 0.5em;
+      font-size: 1em;
     }
     @media ${min.tabletLg} {
-      font-size: 1.25em;
+      margin: 0.8em;
+      font-size: 1em;
+    }
+    @media ${min.desktopLg} {
+      font-size: 1.3em;
+      margin: 1em;
     }
   }
 `;
 
+
 const StyledPrimaryButtonContainer = styled(PrimaryButton)`
-  padding-top: 2em;
-  font-size: 0.5em;
-  @media ${max.tablet} {
-    float: bottom;
-    padding-top: 4em;
-    width: 5%;
-  }
+  margin: 0.5em;
+  display: flex;
+  align-items: center;
+
+  font-size: 2.3em;
+    @media ${min.tablet} {
+      margin: 0.5em;
+      font-size: 1em;
+    }
+    @media ${min.tabletLg} {
+      margin: 0.8em;
+      font-size: 1em;
+    }
+    @media ${min.desktopLg} {
+      font-size: 1.3em;
+      margin: 1em;
+    }
 `;
 
 const StyledSecondaryButtonContainer = styled(SecondaryButton)`
-  padding-top: 2em;
-  font-size: 0.5em;
-  @media ${max.tablet} {
-    float: bottom;
-    padding-top: 4em;
-    width: 5%;
-  }
+  margin: 0.5em;
+  display: flex;
+  align-items: center;
+
+  font-size: 2.3em;
+    margin: 0.5em;
+    @media ${min.tablet} {
+      margin: 0.5em;
+      font-size: 1em;
+    }
+    @media ${min.tabletLg} {
+      margin: 0.8em;
+      font-size: 1em;
+    }
+    @media ${min.desktopLg} {
+      font-size: 1.3em;
+      margin: 1em;
+    }
 `;
 
 const StyledTabsContainer = styled.div`
    {
     padding-top: 3em;
     text-align: center;
+
     @media ${min.tablet} {
       display: flex;
       float: right;
@@ -67,11 +95,11 @@ const StyledTabsContainer = styled.div`
       text-align: left;
     }
     @media ${min.tablet} and ${max.tabletLg} {
-      font-size: 0.8em;
+      font-size: 0.75em;
       padding-top: 0.9em;
     }
     @media ${min.tabletLg} {
-      padding-right: 3em;
+      padding-right: 1em;
     }
   }
 `;
