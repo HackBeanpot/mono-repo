@@ -215,6 +215,22 @@ const StyledToggle = styled.img`
   }
 `;
 
+const StyledCountdown = styled(P)`
+  margin-top: 1em;
+  color: ${'#E5C37D'};
+  font-weight: bold;
+  font-style: italic;
+`;
+
+const StyledHourglass = styled.img`
+  margin-right: 0.3em;
+`;
+
+const StyledCountdownContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export {
   StyledHackathonText,
   StyledThemeText,
@@ -229,5 +245,8 @@ export {
   StyledBubble2,
   StyledFish,
   StyledJellyfish,
-  StyledWhale
+  StyledWhale,
+  StyledCountdown,
+  StyledHourglass,
+  StyledCountdownContainer
 };

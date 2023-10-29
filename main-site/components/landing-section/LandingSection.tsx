@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   StyledHackathonText,
   StyledThemeText,
@@ -11,7 +11,10 @@ import {
   StyledBubble2,
   StyledFish,
   StyledJellyfish,
-  StyledWhale
+  StyledWhale,
+  StyledCountdown,
+  StyledHourglass,
+  StyledCountdownContainer
 } from './LandingSection.styles';
 import Bubble from '../../../shared-ui/images/bubbles.svg'
 import Bubble2 from '../../../shared-ui/images/bubbles2.svg'
@@ -19,7 +22,48 @@ import Fish from '../../../shared-ui/images/fish.svg'
 import Jellyfish from '../../../shared-ui/images/jellyfish.svg'
 import Whale from '../../../shared-ui/images/whale.svg'
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
-import { LandingSectionProps } from '../../lib/types';
+import { CountdownProps, LandingSectionProps } from '../../lib/types';
+import { CountdownData } from '../../lib/data';
+import hourglass from '../../../shared-ui/images/hourglass.svg'
+
+const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+  const calculateTimeLeft = () => {
+    const now = +new Date();
+    const target = +new Date(targetDate);
+
+    if (target > now) {
+      const difference = target - now;
+      return {
+        weeks: Math.floor(difference / (1000 * 60 * 60 * 24 * 7)),
+        days: Math.floor((difference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      };
+    }
+
+    // return null if the target date is in the past
+    return null; 
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  if (!timeLeft) {
+    return <div>{ 'No longer accepting applications :(' }</div>;
+  }
+
+  return (
+    <div>
+      {timeLeft.weeks} weeks, {timeLeft.days} days, {timeLeft.hours} hours left to apply!
+    </div>
+  );
+};
 
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
@@ -41,6 +85,12 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
           btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
           newTab
         />
+        <StyledCountdownContainer>
+          <StyledHourglass src={hourglass} />
+          <StyledCountdown>
+            <Countdown targetDate={'2024-02-10T23:59:59Z'}/>
+          </StyledCountdown>
+        </StyledCountdownContainer>
       </StyledLandingTextContainer>
     </StyledLandingSectionContainer>
   );

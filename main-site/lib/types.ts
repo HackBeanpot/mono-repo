@@ -99,3 +99,7 @@ export interface EventsCalendarData {
   location?: string;
   room?: string;
 }
+
+export interface CountdownProps {
+  targetDate: string;
+}
