@@ -8,7 +8,7 @@ import SecondaryButton from '../secondary-button/SecondaryButton';
 
 const StyledHeader = styled.div<StyledHeaderProps>`
    {
-    height: ${(props): string => (props.isOpen ? '45em' : '4.8em')};
+    height: ${(props): string => (props.isOpen ? '55em' : '4.8em')};
     background-color: ${(props): string =>
       props.isDay ? colors.HEADER_DAY_BLUE : colors.HEADER_NIGHT_BLUE};
     width: 100%;
@@ -25,14 +25,18 @@ const StyledTab = styled(P)`
     color: ${colors.WHITE};
     font-family: ${fonts.nunitoSansLight};
     font-size: 2.3em;
-    margin: 0.7em;
+
     @media ${min.tablet} {
       margin: 0.5em;
-      font-size: 1em;
+      font-size: 0.96em;
     }
     @media ${min.tabletLg} {
-      margin: 0.8em;
-      font-size: 1em;
+      margin: 1em;
+      font-size: 0.89em;
+    }
+    @media ${min.desktop} {
+      margin: 1em;
+      font-size: 1.1em;
     }
     @media ${min.desktopLg} {
       font-size: 1.3em;
@@ -43,23 +47,10 @@ const StyledTab = styled(P)`
 
 
 const StyledPrimaryButtonContainer = styled(PrimaryButton)`
-  margin: 0.5em;
   display: flex;
   align-items: center;
 
-  font-size: 2.3em;
-    @media ${min.tablet} {
-      margin: 0.5em;
-      font-size: 1em;
-    }
-    @media ${min.tabletLg} {
-      margin: 0.8em;
-      font-size: 1em;
-    }
-    @media ${min.desktopLg} {
-      font-size: 1.3em;
-      margin: 1em;
-    }
+
 `;
 
 const StyledSecondaryButtonContainer = styled(SecondaryButton)`
@@ -67,39 +58,31 @@ const StyledSecondaryButtonContainer = styled(SecondaryButton)`
   display: flex;
   align-items: center;
 
-  font-size: 2.3em;
-    margin: 0.5em;
-    @media ${min.tablet} {
-      margin: 0.5em;
-      font-size: 1em;
-    }
-    @media ${min.tabletLg} {
-      margin: 0.8em;
-      font-size: 1em;
-    }
-    @media ${min.desktopLg} {
-      font-size: 1.3em;
-      margin: 1em;
-    }
+
 `;
 
 const StyledTabsContainer = styled.div`
    {
-    padding-top: 3em;
     text-align: center;
 
     @media ${min.tablet} {
       display: flex;
       float: right;
-      padding-top: 0;
+      padding-top: 2em;
       text-align: left;
     }
     @media ${min.tablet} and ${max.tabletLg} {
       font-size: 0.75em;
-      padding-top: 0.9em;
     }
     @media ${min.tabletLg} {
+      padding-top: 1em;
       padding-right: 1em;
+    }
+    @media ${min.desktop} {
+      padding-top: 0.5em;
+    }
+    @media ${min.desktopLg} {
+      padding-top: 0em;
     }
   }
 `;

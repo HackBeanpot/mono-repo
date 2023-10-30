@@ -135,10 +135,11 @@ const StyledEmailInput = styled.input`
   color: ${colors.HEADER_FOOTER_BLUE};
   background-color: ${colors.WHITE};
   margin: 1em 0;
+  margin-right: 1em;
   padding: 1em;
   border-radius: 2em;
   border: none;
-  width: 25em;
+  width: 18em;
   ::placeholder {
     font-family: ${fonts.nunitoSansSemibold};
     color: ${colors.HEADER_FOOTER_BLUE};

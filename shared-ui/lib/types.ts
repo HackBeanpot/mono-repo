@@ -13,6 +13,7 @@ export interface ButtonProps {
   isSmallPrimary?: boolean;
   isClickable?: boolean;
   transparent?: boolean;
+  inHeader?: boolean;
 }
 
 export interface TimeRemainingProps {

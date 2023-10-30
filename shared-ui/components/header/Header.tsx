@@ -59,20 +59,26 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
               target={tab.newTab ? '_blank' : '_self'}
             >
               {tab.name === 'Apply' && (
-                <StyledSecondaryButtonContainer
-                  btnText={tab.name}
-                  btnLink={tab.link}
-                  isClickable={true}
-                  newTab
-                />
+                <div>
+                  <StyledSecondaryButtonContainer
+                    btnText={tab.name}
+                    btnLink={tab.link}
+                    isClickable={true}
+                    newTab
+                    inHeader={true}
+                  />
+                </div>
               )}
-              {tab.name === 'Sponsor Us' &&
-                  (<StyledPrimaryButtonContainer
+              {tab.name === 'Sponsor Us' && (
+                <div>
+                  <StyledPrimaryButtonContainer
                     btnText={tab.name}
                     btnLink={tab.link}
                     newTab
+                    inHeader={true}
                   />
-                )}
+                </div>
+              )}
               {tab.name !== 'Sponsor Us' && tab.name !== 'Apply' && (
                 <StyledTab>{tab.name}</StyledTab>
               )}

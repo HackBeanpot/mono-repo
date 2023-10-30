@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { StyledPrimaryButton } from './PrimaryButton.styles';
 import { ButtonProps } from '../../lib/types';
 import { buttonAnimations } from './PrimaryButton.animations';
+import { StyledPrimaryHeaderButton } from './PrimaryButtonHeader.styles';
 
 const PrimaryButton: React.FC<ButtonProps> = ({
   btnText,
   btnLink,
   newTab = false,
   isSmallPrimary = false,
-  transparent = false
+  transparent = false,
+  inHeader
 }) => {
   const [isClicked, setIsClicked] = useState(false);
   if (!btnLink) {
@@ -37,15 +39,27 @@ const PrimaryButton: React.FC<ButtonProps> = ({
 
   return (
     <a href={btnLink} target={newTab ? '_blank' : '_self'}>
-      <StyledPrimaryButton
-        whileHover="hover"
-        whileTap="tap"
-        variants={buttonAnimations}
-        $isSmallPrimary={isSmallPrimary}
-        $transparent={transparent}
-      >
-        {btnText}
-      </StyledPrimaryButton>
+      {inHeader ? (
+        <StyledPrimaryHeaderButton
+          whileHover="hover"
+          whileTap="tap"
+          variants={buttonAnimations}
+          $isSmallPrimary={isSmallPrimary}
+          $transparent={transparent}
+        >
+          {btnText}
+        </StyledPrimaryHeaderButton>
+      ) : (
+        <StyledPrimaryButton
+          whileHover="hover"
+          whileTap="tap"
+          variants={buttonAnimations}
+          $isSmallPrimary={isSmallPrimary}
+          $transparent={transparent}
+        >
+          {btnText}
+        </StyledPrimaryButton>
+      )}
     </a>
   );
 };

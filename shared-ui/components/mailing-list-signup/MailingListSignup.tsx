@@ -57,20 +57,6 @@ const MailingListSignup: React.FunctionComponent = () => {
           <StyledPrimaryButton type="submit">
             Join mailing list
           </StyledPrimaryButton>
-          {/* <StyledSocialMediaButtons>
-            <a href="https://www.instagram.com/hackbeanpot/" target="_blank">
-              <img width="30" height="30" src={Instagram} />
-            </a>
-            <a href="https://www.facebook.com/hackbeanpot" target="_blank">
-              <img width="30" height="30" src={Facebook} />
-            </a>
-            <a href="https://hackbeanpot.medium.com/" target="_blank">
-              <img width="30" height="30" src={Medium} />
-            </a>
-            <a href="https://twitter.com/HackBeanpot" target="_blank">
-              <img width="30" height="30" src={Twitter} />
-            </a>
-          </StyledSocialMediaButtons> */}
         </StyledButtonRow>
       </form>
     </div>
