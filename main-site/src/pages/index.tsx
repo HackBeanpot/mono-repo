@@ -6,7 +6,7 @@ import Header from '../../../shared-ui/components/header/Header';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ExploreSection from '../../components/explore-section/ExploreSection';
-// import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
+import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import FaqSection from '../../components/faq-section/FaqSection';
 import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
 // import CovidSection from '../../components/covid-section/CovidSection';
@@ -28,15 +28,15 @@ const IndexPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
-      return 'day-background-desktop';
+      return 'day-gradient-desktop';
     }
     if (isDay && !isDesktop) {
-      return 'mobile-light-background';
+      return 'mobile-light-gradient';
     }
     if (!isDay && isDesktop) {
-      return 'dark-background-desktop';
+      return 'dark-gradient-desktop';
     }
-    return 'mobile-dark-background';
+    return 'mobile-dark-gradient';
   };
 
   useEffect(() => {
@@ -51,9 +51,9 @@ const IndexPage: React.FC = () => {
     <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={mainSiteTabInfo} isDay={isDay} />
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
-      <ExploreSection />
+      <ExploreSection isDay={isDay} />
       <AboutSection />
-      {/* <EventsCalendarSection /> */}
+      <EventsCalendarSection isDay={isDay}/>
       <TestimonialsSection testimonialData={testimonialSectionData}/>
       <PastProjectsSection />
       <FaqSection />

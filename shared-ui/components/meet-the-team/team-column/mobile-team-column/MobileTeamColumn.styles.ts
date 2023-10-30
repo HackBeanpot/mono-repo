@@ -8,10 +8,12 @@ const StyledMobileTeamColumn = styled.div`
 const LabelArrowContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 const MobileImageContainer = styled.div`
   padding-top: 2em;
+  width: 100%;
 `;
 
 const StyledHeadshot = styled.img`
@@ -19,7 +21,7 @@ const StyledHeadshot = styled.img`
   @media ${max.tabletLg} {
     width: 9em;
   }
-  @media ${max.tablet} {
+  @media ${max.tablet}{
     width: 8em;
   }
   @media ${max.tabletSm} {
@@ -29,6 +31,7 @@ const StyledHeadshot = styled.img`
 
 const StyledImageRow = styled.div`
   justify-content: center;
+  display: flex;
 `;
 
 const StyledSecondaryButtonWrapper = styled.div`
@@ -38,11 +41,35 @@ const StyledSecondaryButtonWrapper = styled.div`
   }
 `;
 
+const StyledLinkedIn = styled.a`
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+  
+  img {
+    width: 1.0em;
+    height: 1.0em;
+    margin-right: 0.3em;
+    position: relative;
+    top: 0.1em;
+  }
+`
+const StyledPictureContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+`;
+
+
 export {
   LabelArrowContainer,
   MobileImageContainer,
   StyledMobileTeamColumn,
   StyledImageRow,
   StyledHeadshot,
-  StyledSecondaryButtonWrapper
+  StyledSecondaryButtonWrapper,
+  StyledLinkedIn,
+  StyledPictureContainer
 };

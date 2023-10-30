@@ -19,8 +19,7 @@ import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
 import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
-
-
+import SchoolofFish from '../images/school-fish.svg'
 
 export const aboutSectionData: AboutSectionData[] = [
   {
@@ -177,37 +176,42 @@ export const sponsorTestimonialData: TestimonialData[] = [
   {
     id: 0,
     author: 'Rob Antczak',
-    company:"CTO, Wood Mackenzie", 
-    image: woodMackenzieLogo, 
-    quote: '"If I could describe HBP in one word - invigorating. We had a lot of folks who weren’t  sure what the experience would be like, and they left feeling united - really energized and really impressed with the amount of talent that was on display as well as the  atmosphere."'
+    company: 'CTO, Wood Mackenzie',
+    image: woodMackenzieLogo,
+    quote:
+      '"If I could describe HBP in one word - invigorating. We had a lot of folks who weren’t  sure what the experience would be like, and they left feeling united - really energized and really impressed with the amount of talent that was on display as well as the  atmosphere."'
   },
   {
     id: 1,
     author: 'Emily',
-    company:"Recruiter, Intuit", 
-    image: intuitLogo, 
-    quote: '"The energy that people have at HackBeanpot is awesome, and the talent is very engaged"'
+    company: 'Recruiter, Intuit',
+    image: intuitLogo,
+    quote:
+      '"The energy that people have at HackBeanpot is awesome, and the talent is very engaged"'
   },
   {
     id: 2,
     author: 'Sanders',
-    company:"Mentor, Microsoft", 
-    image: microsoftLogoPadded, 
-    quote: '"HackBeanpot is the best hackathon I’ve been to, hands down. Being a mentor is super rewarding because I got to see a ton of projects go from the idea phase to a working demo."'
+    company: 'Mentor, Microsoft',
+    image: microsoftLogoPadded,
+    quote:
+      '"HackBeanpot is the best hackathon I’ve been to, hands down. Being a mentor is super rewarding because I got to see a ton of projects go from the idea phase to a working demo."'
   },
   {
     id: 3,
     author: 'William Guo',
-    company:"Co-op Experiential Lead, WoodMackenzie", 
-    image: woodMackenzieLogo, 
-    quote: '"I’ve talked to every single project group that participated in the hackathon, observing their capabilities to explain and communicate their project to an outsider – the very things we look for at WoodMac"'
+    company: 'Co-op Experiential Lead, WoodMackenzie',
+    image: woodMackenzieLogo,
+    quote:
+      '"I’ve talked to every single project group that participated in the hackathon, observing their capabilities to explain and communicate their project to an outsider – the very things we look for at WoodMac"'
   }
 ];
 
 export const pastProjectsData: PastProjectData[] = [
   {
     title: 'SNAPpy',
-    members: 'by Jacob Kline, Andrew Caplan, Daniel Ostapenko, and Emery Jacobowitz',
+    members:
+      'by Jacob Kline, Andrew Caplan, Daniel Ostapenko, and Emery Jacobowitz',
     description:
       'Worked on a combination of front-end and backend features by creating API pipelines which connect to the user interface. In addition to Python, utilized JS, which was new for them.',
     btnLink: 'https://devpost.com/software/snappy-rb81ku',
@@ -224,22 +228,20 @@ export const pastProjectsData: PastProjectData[] = [
     image: FreshFarm,
     award: '🏆 Best Dunes of the Sahara Award'
   },
-  
+
   {
     title: 'FormFusion',
     members: 'by Aditya Boddepalli',
     description:
-      "Our web app leverages the power of AI to analyze and improve your workout routine. Users upload recorded exercise videos, which are processed by the proprietary machine learning API that we wrote. This technology provides instant feedback on form, enabling users to optimize their workouts. The annotated videos, including information about joint angles, are then displayed within the app for easy review and tracking of progress.",
+      'Our web app leverages the power of AI to analyze and improve your workout routine. Users upload recorded exercise videos, which are processed by the proprietary machine learning API that we wrote. This technology provides instant feedback on form, enabling users to optimize their workouts. The annotated videos, including information about joint angles, are then displayed within the app for easy review and tracking of progress.',
     btnLink: 'https://devpost.com/software/formfusion',
     image: FormFusion,
     award: '🏆 Surviving the Desert Award'
-
   },
-  
+
   {
     title: 'Page 14',
-    members:
-      'by Mandy Rodriques',
+    members: 'by Mandy Rodriques',
     description:
       'A novel dating app perfectly tailored for our literary-loving folk, focusing on the normalization of "gaga" over books, being blissfully queer, etc Page 14 gives users a safe space to smile.',
     btnLink: 'https://devpost.com/software/page-14',
@@ -252,7 +254,7 @@ export const pastProjectsData: PastProjectData[] = [
     members:
       'by Euann Gu, Mallory Gilligan, Chris Wyatt, Danny Rollo, Rachael Cheung and Madeline Zhang',
     description:
-      "Feed the Desert illustrates a clear, user-friendly data-map highlighting spaces in local communities that can be further developed to provide equitable infrastructure and access to necessary resources.",
+      'Feed the Desert illustrates a clear, user-friendly data-map highlighting spaces in local communities that can be further developed to provide equitable infrastructure and access to necessary resources.',
     btnLink: 'https://devpost.com/software/feed-the-desert',
     image: FeedTheDesert,
     award: '🏆  Rookie of the Year Award'
@@ -260,10 +262,9 @@ export const pastProjectsData: PastProjectData[] = [
 
   {
     title: 'WiseWallet',
-    members:
-      'by Alyssa Mui, Justin Pong, and Nelson Dong',
+    members: 'by Alyssa Mui, Justin Pong, and Nelson Dong',
     description:
-      "WiseWallet is a budgeting Chrome Extension designed to help you keep track of your expenses and stop making frivolous online purchases.",
+      'WiseWallet is a budgeting Chrome Extension designed to help you keep track of your expenses and stop making frivolous online purchases.',
     btnLink: 'https://devpost.com/software/wisewallet-2iqrl8',
     image: WiseWallet,
     award: '🏆  Most Likely to Quest Award'
@@ -272,31 +273,61 @@ export const pastProjectsData: PastProjectData[] = [
 
 export const eventsCalendarData: EventsCalendarData[] = [
   {
-    title: "MiniHacks Workshop #1",
-    subtitle: "Intro to HTML, CSS, and JavaScript",
-    punchline: "Putting the FUN in Fundamentals of Web Development",
-    description: "Create your very first website with HTML, CSS, and JavaScript. Perfect for beginners who are looking to get started on their web development journey!",
-    prerequisites: "NONE",
+    title: 'Event 1',
+    subtitle: 'Sub-intro',
+    punchline:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
+    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
+    prerequisites: 'NONE',
     date: new Date(2022, 10, 16),
-    time: "1:30pm-3pm",
-    location: "Northeastern University",
-    room: "Shillman Hall 210",
+    time: '1:30pm-3pm',
+    location: 'Northeastern University',
+    room: 'Ryder Hall 253',
+    image: SchoolofFish
   },
 
   {
-    title: "MiniHacks Workshop #2",
-    subtitle: "Intro to React.js",
+    title: 'Event 1',
+    subtitle: 'Sub-intro',
+    punchline:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
+    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
+    prerequisites: 'NONE',
     date: new Date(2022, 10, 16),
-    time: "10am-12:30pm",
+    time: '1:30pm-3pm',
+    location: 'Northeastern University',
+    room: 'Ryder Hall 253'
   },
-
   {
-    title: "Cybersecurity Workshop + Minihack",
-    date: new Date(2023, 1, 15),
-    time: "12pm-3pm",
-    location: "Northeastern University",
-    room: "West Village H 366",
+    title: 'Event 1',
+    subtitle: 'Sub-intro',
+    punchline:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
+    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
+    prerequisites: 'NONE',
+    date: new Date(2022, 10, 16),
+    time: '1:30pm-3pm',
+    location: 'Northeastern University',
+    room: 'Ryder Hall 253'
   },
+  // {
+  //   title: 'Event 1',
+  //   subtitle: 'Sub-intro',
+  //   punchline:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+  //   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  //   Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
+  //   Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
+  //   prerequisites: 'NONE',
+  //   date: new Date(2022, 10, 16),
+  //   time: '1:30pm-3pm',
+  //   location: 'Northeastern University',
+  //   room: 'Ryder Hall 253'
+  // }
 ];
-
-

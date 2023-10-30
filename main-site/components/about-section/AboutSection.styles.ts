@@ -1,20 +1,20 @@
 import styled from '@emotion/styled';
 import { H2, H3, P } from '../../../shared-ui/style/typography';
-import { min } from '../../../shared-ui/lib/responsive';
+import { max, min } from '../../../shared-ui/lib/responsive';
 
 const StyledAboutSectionContainer = styled.div`
-  margin-top: 2em;
+  margin-top: 10em;
   padding-bottom: 10em;
   position: relative;
   overflow: hidden;
   @media ${min.tablet} {
-    margin-top: 6em;
+    margin-top: 10em;
   }
 `;
 
 const StyledItemsContainer = styled.div`
   display: flex;
-  margin-top: 5em;
+  margin: 5em;
   justify-content: center;
 `;
 
@@ -36,6 +36,7 @@ const StyledItemTextContainer = styled.div`
 `;
 
 const StyledTitle = styled(H2)`
+  color: white;
   text-align: center;
 `;
 
@@ -53,9 +54,10 @@ const StyledItemImage = styled.img`
 `;
 
 const StyledItemDescription = styled(P)`
-  margin: 1em 2em 0 2em;
+  margin: 4em 2em 0 2em;
   @media ${min.tablet} {
     margin: 0;
+    font-size: 1.125em;
   }
 `;
 
@@ -93,6 +95,7 @@ const StyledCenterImage = styled(StyledMobileImage)`
 
 const StyledLeftImage = styled(StyledMobileImage)`
   left: -14em;
+
   @media ${min.tabletSm} {
     left: -20em;
   }
@@ -100,6 +103,7 @@ const StyledLeftImage = styled(StyledMobileImage)`
 
 const StyledRightImage = styled(StyledMobileImage)`
   right: -14em;
+
   @media ${min.tabletSm} {
     right: -20em;
   }
@@ -107,6 +111,9 @@ const StyledRightImage = styled(StyledMobileImage)`
 
 const StyledArrowDescriptionContainer = styled.div`
   display: flex;
+  margin-left: -4.5em;
+  margin-right: -4.5em;
+  margin-top: -3.7em;
 `;
 
 const StyledRedRocks = styled.img`
@@ -126,6 +133,7 @@ const StyledRedRocks = styled.img`
 
 const StyledItemTitle = styled(H3)`
   font-size: 1.7em;
+  margin-bottom: 1em;
 `;
 
 export {

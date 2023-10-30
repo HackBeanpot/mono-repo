@@ -14,17 +14,16 @@ import {
   StyledLeftImage,
   StyledRightImage,
   StyledArrowDescriptionContainer,
-  StyledRedRocks,
   StyledItemTitle
 } from './AboutSection.styles';
 import { aboutSectionData } from '../../lib/data';
-import Community from '../../../shared-ui/images/community.png';
-import Exploration from '../../../shared-ui/images/exploration.png';
-import Growth from '../../../shared-ui/images/growth.png';
+import Community from '../../../shared-ui/images/communityShell.png';
+import Exploration from '../../../shared-ui/images/explorationShell.png';
+import Growth from '../../../shared-ui/images/growthShell.png';
 import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
-import RedRocks from '../../../shared-ui/images/red-rocks.svg';
 import { getLeftOrRight } from '../../lib/utils';
+import Shell from '../../../shared-ui/images/shell.png';
 
 function getImage(title: string): string {
   if (title === 'Community') {
@@ -48,15 +47,11 @@ const AboutSection: React.FC = () => {
         <StyledTitle>HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>
-            <StyledLeftImage
-              src={getImage(
-                getLeftOrRight('left', aboutSectionData, currItem).title
-              )}
-            />
+            <StyledLeftImage src={Shell} />
             <StyledItemContainer>
-              <StyledCenterImage src={getImage(currItem.title)} />
+              <StyledCenterImage src={Shell} />
               <StyledItemTextContainer>
-                <StyledItemTitle color={colors.TEXT_BROWN}>
+                <StyledItemTitle color={colors.WHITE}>
                   {currItem.title}
                 </StyledItemTitle>
 
@@ -69,7 +64,7 @@ const AboutSection: React.FC = () => {
                       )
                     }
                   />
-                  <StyledItemDescription color={colors.TEXT_BROWN}>
+                  <StyledItemDescription color={colors.WHITE}>
                     {currItem.description}
                   </StyledItemDescription>
                   <Arrow
@@ -83,11 +78,7 @@ const AboutSection: React.FC = () => {
                 </StyledArrowDescriptionContainer>
               </StyledItemTextContainer>
             </StyledItemContainer>
-            <StyledRightImage
-              src={getImage(
-                getLeftOrRight('right', aboutSectionData, currItem).title
-              )}
-            />
+            <StyledRightImage src={Shell} />
           </StyledItemsContainer>
         )}
 
@@ -95,12 +86,12 @@ const AboutSection: React.FC = () => {
           <StyledItemsContainer>
             {aboutSectionData.map((curr) => (
               <StyledItemContainer key={curr.title}>
-                <StyledItemImage src={getImage(curr.title)} />
+                <StyledItemImage src={Shell} />
                 <StyledItemTextContainer>
-                  <StyledItemTitle color={colors.TEXT_BROWN}>
+                  <StyledItemTitle color={colors.WHITE}>
                     {curr.title}
                   </StyledItemTitle>
-                  <StyledItemDescription color={colors.TEXT_BROWN}>
+                  <StyledItemDescription color={colors.WHITE}>
                     {curr.description}
                   </StyledItemDescription>
                 </StyledItemTextContainer>
@@ -108,7 +99,6 @@ const AboutSection: React.FC = () => {
             ))}
           </StyledItemsContainer>
         )}
-        <StyledRedRocks src={RedRocks} />
       </StyledAboutSectionContainer>
     </div>
   );
