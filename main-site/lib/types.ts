@@ -28,6 +28,10 @@ export interface SponsorUsLandingProps {
   setIsDay: (isDay: boolean) => void;
 }
 
+export interface ExploreSectionProps {
+  isDay: boolean;
+}
+
 export interface TestimonialData {
   id: number;
   author: string;
