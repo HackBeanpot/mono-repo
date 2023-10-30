@@ -94,5 +94,4 @@ export interface EventsCalendarData {
   time: string;
   location?: string;
   room?: string;
-  image?: string
 }

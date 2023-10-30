@@ -1,58 +1,44 @@
 import React from 'react';
 import {
   EventsHeader,
+  EventsPBolded,
   EventsSubHeader,
   EventsP,
   StyledEventsBox,
   StyledTextContainer,
   EventsLocationP,
-  EventsLeftContainer,
-  StyledDesktopTextsContainer,
-  EventsRightContainer,
-  EventsLocationContainer,
-  EventsImage,
-  EventsLocationPQuestion,
-  StyledEventsSeaweed
+  TextLeftContainer,
+  StyledDesktopTextsContainer
 } from '../EventsCalendarSection.styles';
+import { EventsCalendarData } from '../../../lib/types';
 import { eventsCalendarData } from '../../../lib/data';
-import MissingPhoto from '../../../../shared-ui/images/missing_image.png';
-import { max, min } from '../../../../shared-ui/lib/responsive';
-import useMatchMedia from 'react-use-match-media';
-import EventsSeaweed from '../../../../shared-ui/images/seaweed-rock.svg';
-import EventsSeaweedDark from '../../../../shared-ui/images/seaweed-rock-dark.svg';
 
-const DesktopTexts: React.FC = ({isDay}) => {
+const DesktopTexts: React.FC = () => {
   const currentDate = new Date();
-  const isTablet = useMatchMedia(min.tablet);
-  const isMobile = useMatchMedia(max.tabletLg);
-  const isDesktop = useMatchMedia(max.desktopLg);
 
   return (
     <StyledDesktopTextsContainer>
       {eventsCalendarData.map((event) => (
         <StyledEventsBox elapsedEvent = {currentDate > event.date}>
           <StyledTextContainer>
-            <EventsLeftContainer>
+            <TextLeftContainer>
               <EventsHeader>
-                {event.title}
+                {event.title} -- {event.date.getMonth()}/{event.date.getDate()} {event.time}
               </EventsHeader>
-              {<EventsSubHeader>Prerequisites: {isMobile && <br/>}{event.prerequisites || "XXX, XXX"}</EventsSubHeader>}
+              {event.subtitle && <EventsSubHeader>{event.subtitle}</EventsSubHeader>}
+              {event.punchline && <EventsPBolded>{event.punchline}</EventsPBolded>}
+              <br/>
               {event.description && <EventsP>{event.description}</EventsP>}
-            </EventsLeftContainer>
-            <EventsRightContainer>
-              <EventsImage src={ event.image || MissingPhoto}></EventsImage>
-              <EventsLocationContainer>
-                <EventsLocationPQuestion>When?</EventsLocationPQuestion>
-                <EventsLocationP>{event.date.toDateString()}<br/>{event.time}</EventsLocationP>
-                {isTablet && isDesktop && <br></br>}
-                <EventsLocationPQuestion>Where?</EventsLocationPQuestion>
-                <EventsLocationP>{event.room}</EventsLocationP>
-              </EventsLocationContainer>
-            </EventsRightContainer>
+              {event.prerequisites && <EventsSubHeader>Prerequisites: {event.prerequisites}</EventsSubHeader>}
+            </TextLeftContainer>
+            <EventsLocationP>
+              {event.location}<br/>
+              {event.room}
+            </EventsLocationP>
+            
           </StyledTextContainer>
         </StyledEventsBox>
       ))}
-      {!isMobile && <StyledEventsSeaweed src={isDay ? EventsSeaweed : EventsSeaweedDark } numberOfEvents = {eventsCalendarData.length}/>}
     </StyledDesktopTextsContainer>
   );
 };

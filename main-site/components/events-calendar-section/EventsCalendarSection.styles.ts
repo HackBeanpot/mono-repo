@@ -22,18 +22,16 @@ const StyledEventsContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 `;
 
-const StyledEventsBox = styled.div<{ elapsedEvent: boolean }>`
+const StyledEventsBox = styled.div<{ elapsedEvent: boolean}>`
   border-radius: 2em;
-  background-color: ${colors.SAND_HIGHLIGHTS};
+  
+  background-color: ${(props): string => (props.elapsedEvent ? colors.TEXT_BROWN : colors.BUTTON_DARK_GREEN)};
   position: relative;
   flex-direction: column;
   display: flex;
   margin: 2em 1.5em;
-  padding: 0 1em;
   @media ${max.desktop} {
     margin: 2em 1em;
   }
@@ -46,20 +44,19 @@ const StyledEventsBox = styled.div<{ elapsedEvent: boolean }>`
 `;
 
 const StyledTextContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  grid-auto-flow: row;
+  display: flex;
   margin: 2em;
   padding-top: 0.5em;
-  gap: 6em;
+  padding-bottom: 4em;
+  
+  
+  
   
   @media ${max.tablet} {
-    margin: 1em 0;
-    height: fit-content;
-    grid-template-rows: 2fr 1fr;
-    grid-auto-flow: column;
-    grid-template-columns: none;
-    gap: 1em;
+    margin: 1.5em;
+  }
+  @media ${max.tabletSm} {
+    padding-left: 1em;
   }
   @media ${max.mobile} {
     margin: 2em;
@@ -67,30 +64,18 @@ const StyledTextContainer = styled.div`
   }
 `;
 
-const EventsLeftContainer = styled.div`
+const TextLeftContainer = styled.div`
   width: 95%;
-  display: grid;
-
-  @media ${max.tablet} {
+  @media ${max.tabletSm} {
     width: 93%;
-  }
-`;
-
-const EventsRightContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2em;
-  @media ${max.tablet} {
-    gap: 0;
   }
 `;
 
 const StyledEventsCalendar = styled.div`
   border-radius: 2em;
   width: 60%;
-
-  background-color: ${colors.YELLOW_GREEN};
+  
+  background-color: ${colors.BUTTON_GREEN};
   position: relative;
   @media ${max.tabletLg} {
     width: 80%;
@@ -102,27 +87,36 @@ const StyledEventsCalendar = styled.div`
   }
 `;
 
-const StyledEventsSeaweed = styled.img<{ numberOfEvents: number }>`
+const StyledEventsCactus = styled.img`
   position: absolute;
-  bottom: 0;
-  left: -8vw;
-    width: 11vw;
-`;
-
-const StyledEventsFishSchool = styled.img`
-  position: absolute;
-  height: 10vw;
-  @media ${min.tablet} {
-    top: -16vh;
+  @media ${min.tabletSm} {
     right: 2em;
+    top: 50em;
+    height: 16em;
   }
   @media ${min.desktop} {
-    top: -16vh;
     right: 5em;
+    top: 40em;
+    height: 20em;
   }
   @media ${min.desktopLg} {
-    top: -20vh;
-    right: 8vw;
+    right: 10em;
+    top: 45em;
+    height: 25em;
+  }
+`;
+
+const StyledEventsGrass = styled.img`
+  position: absolute;
+  @media ${min.tabletSm} {
+    height: 10em;
+    left: 2em;
+    top: -8em;
+  }
+  @media ${min.tabletLg} {
+    height: 15em;
+    left: 2em;
+    top: -8em;
   }
 `;
 
@@ -130,11 +124,11 @@ const EventsHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   line-height: 1.2em;
   letter-spacing: 0.08em;
-  color: #193c60;
+    
   font-size: 1.7em;
-  font-weight: bolder;
-  @media ${max.tablet} {
-    font-size: 1.3em;
+  @media ${max.tabletSm} {
+    font-size: 1em;
+
   }
   @media ${max.mobile} {
     font-size: 0.6em;
@@ -143,18 +137,13 @@ const EventsHeader = styled(P)`
 
 const EventsP = styled(P)`
   font-size: 1.1em;
-  color: ${colors.BLACK};
-  @media ${max.tablet} {
-    font-size: 0.8em;
-  }
 `;
 
 const EventsSubHeader = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
-  font-size: 1.2em;
+  font-size: 1.5em;
   line-height: 2em;
-  color: ${colors.BLACK};
-  @media ${max.tablet} {
+  @media ${max.tabletSm} {
     font-size: 0.8em;
   }
   @media ${max.mobile} {
@@ -164,75 +153,32 @@ const EventsSubHeader = styled(P)`
 
 const StyledH2 = styled(H2)`
   text-align: center;
-  color: ${colors.WHITE};
 `;
 
 const EventsPBolded = styled(P)`
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.1em;
-  color: ${colors.BLACK};
-`;
-
-const EventsImage = styled.img`
-  height: 5vh;
-  width: 5vh;
-  align-self: flex-end;
-  @media ${max.tablet} {
-    position: absolute;
-    top: 2em;
-    right: 2em;
-  }
-`;
-
-const EventsLocationContainer = styled.div`
-  border: 1px solid ${colors.YELLOW_GREEN};
-  padding: 2em;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  @media ${min.tabletLg && max.desktopLg} {
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-  }
-
-  @media ${max.tablet} {
-    grid-template-columns: 1fr 2fr;
-    padding: 0.3em;
-    font-size: xx-large;
-  }
-`;
-
-const EventsLocationPQuestion = styled(P)`
-  font-size: 1em;
-  right: 2em;
-  bottom: 2em;
-  color: black;
-  
-  @media ${max.tablet} {
-    font-size: 0.5em;
-    bottom: 1.5em;
-    justify-self: left;
-  }
 `;
 
 const EventsLocationP = styled(P)`
   font-size: 1em;
+  position: absolute;
   right: 2em;
   bottom: 2em;
-  color: ${colors.BLACK};
-  @media ${max.tablet} {
+  @media ${max.tabletSm} {
     font-size: 0.5em;
     bottom: 1.5em;
-    justify-self: flex-end;
-    text-align: right;
   }
 `;
+
+
+
 
 export {
   StyledSectionContainer,
   StyledEventsCalendar,
-  StyledEventsSeaweed,
-  StyledEventsFishSchool,
+  StyledEventsCactus,
+  StyledEventsGrass,
   StyledEventsContainer,
   EventsHeader,
   EventsSubHeader,
@@ -241,11 +187,7 @@ export {
   StyledEventsBox,
   StyledTextContainer,
   EventsLocationP,
-  EventsLeftContainer,
-  EventsRightContainer,
+  TextLeftContainer,
   StyledH2,
-  StyledDesktopTextsContainer,
-  EventsLocationContainer,
-  EventsImage,
-  EventsLocationPQuestion
+  StyledDesktopTextsContainer
 };
