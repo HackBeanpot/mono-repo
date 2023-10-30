@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import SecondaryButton from '../../../shared-ui/components/secondary-button/SecondaryButton';
 import {
   StyledSponsorsSectionContainer,
+  StyledContactContainer,
+  StyledFish2,
   StyledDiamondLogo,
   StyledGoldLogos,
   StyledSilverLogos,
@@ -12,6 +14,7 @@ import {
   StyledSecondaryButtonWrapper,
   StyledArrowWrapper
 } from './SponsorsSection.styles';
+import fish2 from '../../../shared-ui/images/fish2.svg'
 import DiamondLogoDesktop from '../../images/diamond-level-logo-desktop.png';
 import GoldLogosDesktop from '../../images/gold-level-logos-desktop.png';
 import SilverLogosDesktop from '../../images/silver-level-logos-desktop.png';
@@ -24,7 +27,6 @@ import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
-
 
 const SponsorsSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tabletLg);
@@ -43,16 +45,18 @@ const SponsorsSection: React.FC = () => {
 
   return (
     <StyledSponsorsSectionContainer>
-      <StyledContactText>
-        Interested in sponsoring HackBeanpot 2024? <br /> <br />{' '}
-        Reach out to us at team@hackbeanpot.com or check out our sponsorship
-        packet!
-      </StyledContactText>
-      <PrimaryButton
-        btnText="View packet"
-        newTab={true}
-        btnLink="https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view?usp=sharing"
-      />
+      <StyledContactContainer>
+        <StyledContactText>
+          Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to
+          us at team@hackbeanpot.com or check out our sponsorship packet!
+        </StyledContactText>
+        <PrimaryButton
+          btnText="View packet"
+          newTab={true}
+          btnLink="https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view?usp=sharing"
+        />
+        <StyledFish2 src={fish2} />
+      </StyledContactContainer>
       <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
       {!isDesktop && (
         <>
