@@ -43,12 +43,7 @@ const colors = {
   ORANGE: '#FFA500',
   LIGHT_BLUE: '#ADD8E6',
   PURPLE_TAG: '#800080',
-  RACE_LINE: '#ffe799',
-
-  // for primary button
-  BUTTON_YELLOW: '#FABB32',
-  BUTTON_DARK_YELLOW: '#F4A939',
-  TRANSPARENT: 'transparent'
+  RACE_LINE: '#ffe799'
 };
 
 export { colors };
