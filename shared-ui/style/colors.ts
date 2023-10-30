@@ -38,10 +38,7 @@ const colors = {
   ORANGE: '#FFA500',
   LIGHT_BLUE: '#ADD8E6',
   PURPLE_TAG: '#800080',
-  RACE_LINE: '#ffe799',
-  YELLOW_GREEN: '#E5C37D',
-  SAND_HIGHLIGHTS: '#F3EFE3'
-
+  RACE_LINE: '#ffe799'
 };
 
 export { colors };
