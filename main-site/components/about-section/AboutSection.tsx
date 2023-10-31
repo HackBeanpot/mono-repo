@@ -17,9 +17,9 @@ import {
   StyledItemTitle
 } from './AboutSection.styles';
 import { aboutSectionData } from '../../lib/data';
-import Community from '../../../shared-ui/images/community.png';
-import Exploration from '../../../shared-ui/images/exploration.png';
-import Growth from '../../../shared-ui/images/growth.png';
+import Community from '../../../shared-ui/images/communityShell.png';
+import Exploration from '../../../shared-ui/images/explorationShell.png';
+import Growth from '../../../shared-ui/images/growthShell.png';
 import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
