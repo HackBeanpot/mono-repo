@@ -100,3 +100,7 @@ export interface EventsCalendarData {
   room?: string;
   image?: string
 }
+
+export interface CountdownProps {
+  targetDate: string;
+}

@@ -3,7 +3,8 @@ import {
   AboutSectionData,
   FaqData,
   TestimonialData,
-  EventsCalendarData
+  EventsCalendarData,
+  CountdownProps
 } from './types';
 
 import WiseWallet from '../images/WiseWalletImage.jpg';
@@ -331,3 +332,10 @@ export const eventsCalendarData: EventsCalendarData[] = [
   //   room: 'Ryder Hall 253'
   // }
 ];
+
+export const CountdownData: CountdownProps[] = [
+  {
+    targetDate: '2024-02-10T23:59:59Z'
+  }
+];
+
