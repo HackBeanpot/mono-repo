@@ -55,7 +55,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }, []);
 
   if (!timeLeft) {
-    return <div>{ 'No longer accepting applications :(' }</div>;
+    return <div>{ 'No longer accepting applications' }</div>;
   }
 
   return (
