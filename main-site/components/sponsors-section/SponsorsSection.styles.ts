@@ -34,12 +34,66 @@ const StyledFish2 = styled.img`
   }
 `;
 
+// const StyledRedStarfish = styled.img`
+// `;
+
+// const StyledGreenStarfish = styled.img`
+// `;
+
+// const StyledOrangeStarfish = styled.img`
+//   position: absolute;
+//   right: 36em;
+//   // @media ${max.desktop} {
+//   //   width: 20em;
+//   //   height: 20em;
+//   //   right: 0;
+//   // }
+//   // @media ${max.tabletLg} {
+//   //   width: 18em;
+//   //   height: 18em;
+//   //   right: 0;
+//   // }
+//   // @media ${max.mobile} {
+//   //   width: 12em;
+//   //   height: 12em;
+//   //   right: 10;
+//   // }
+// `;
+
 const StyledSponsorsHeader = styled(H2)`
   margin: 1em 0;
 `;
 
 const StyledDiamondLogo = styled.img`
+  margin-botton: 4em;
   margin: 4em 0;
+`;
+
+const StyledOrangeStarfish = styled.img`
+  position: absolute;
+  right: 30em;
+  margin-top: 2em;
+  width: 6%;
+`;
+
+const StyledRedStarfish = styled.img`
+  position: absolute;
+  left: 10em;
+  margin-top: 5em;
+`;
+
+const StyledGreenStarfish = styled.img`
+  position: absolute;
+  right: 10em;
+  margin-top: 2em;
+  width: 8%;
+`;
+
+const StyledStarfishMobile = styled.img`
+  position: absolute;
+  right: 30em;
+  margin-top: 2em;
+  width: 6%;
 `;
 
 const StyledGoldLogos = styled.img`
@@ -81,6 +135,13 @@ export {
   StyledSponsorsSectionContainer,
   StyledContactContainer,
   StyledFish2,
+  StyledOrangeStarfish,
+  StyledRedStarfish,
+  StyledGreenStarfish,
+  StyledStarfishMobile,
+  // StyledOrangeStarfishLevel,
+  // StyledRedStarfishLevel,
+  // StyledGreenStarfishLevel,
   StyledDiamondLogo,
   StyledGoldLogos,
   StyledSilverLogos,
