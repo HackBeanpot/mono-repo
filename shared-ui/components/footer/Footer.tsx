@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = ({ tabs, secondaryTabs, isDay }) => {
             HackBeanpot, Inc. is a registered 501(c)(3) organization.
           </StyledFooterText>
           <StyledFooterTextLink href="/code-of-conduct/">
-            Code of Conducts
+            Code of Conduct.
           </StyledFooterTextLink>
         </StyledFooterCodeOfConduct>
 
