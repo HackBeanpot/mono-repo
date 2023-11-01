@@ -57,7 +57,7 @@ const mainSiteTabInfoFooter: TabInfo[] = [
 const mainSiteTabInfoFooterSecondary: TabInfo[] = [
   { name: 'Event archive', link: '/#event-archive' },
   { name: 'Project gallery', link: '/#project-gallery' },
-  { name: 'Contact us', link: '/#contact-us' },
+  { name: 'Contact us', link: 'mailto:team@hackbeanpot.com' },
 ];
 
 const surbhi: Person = {

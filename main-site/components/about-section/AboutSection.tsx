@@ -23,6 +23,7 @@ import Growth from '../../../shared-ui/images/growthShell.png';
 import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
+import Shell from '../../../shared-ui/images/shell.png';
 
 function getImage(title: string): string {
   if (title === 'Community') {
@@ -46,19 +47,9 @@ const AboutSection: React.FC = () => {
         <StyledTitle>HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>
-<<<<<<< HEAD
-            <StyledLeftImage
-              src={getImage(
-                getLeftOrRight('left', aboutSectionData, currItem).title
-              )}
-            />
-            <StyledItemContainer>
-              <StyledCenterImage src={getImage(currItem.title)} />
-=======
             <StyledLeftImage src={Community} />
             <StyledItemContainer>
               <StyledCenterImage src={Exploration} />
->>>>>>> under-the-sea
               <StyledItemTextContainer>
                 <StyledItemTitle color={colors.WHITE}>
                   {currItem.title}
@@ -87,15 +78,7 @@ const AboutSection: React.FC = () => {
                 </StyledArrowDescriptionContainer>
               </StyledItemTextContainer>
             </StyledItemContainer>
-<<<<<<< HEAD
-            <StyledRightImage
-              src={getImage(
-                getLeftOrRight('right', aboutSectionData, currItem).title
-              )}
-            />
-=======
             <StyledRightImage src={Growth} />
->>>>>>> under-the-sea
           </StyledItemsContainer>
         )}
 

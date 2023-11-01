@@ -42,26 +42,27 @@ const SponsorsSection: React.FC = () => {
   }
 
   return (
-    <StyledSponsorsSectionContainer>
-      <StyledSponsorsHeader>2024 Sponsors Coming Soon!</StyledSponsorsHeader>
-      <StyledContactText>
-        Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to us
-        at team@hackbeanpot.com or check out our sponsorship packet!
-      </StyledContactText>
-      <ButtonWrapper>
-        <PrimaryButton
-          btnText="View Informational Packet"
-          newTab={true}
-          btnLink="https://drive.google.com/file/d/1MF2UVMxJspiTrQzGfr0CNjQPzX_p4nKl/view"
-        />
-        <PrimaryButton
-          btnText="View Sponsorship Packet"
-          newTab={true}
-          btnLink="https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view"
-        />
-      </ButtonWrapper>
-      {/* <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader> */}
-      {/* {!isDesktop && (
+    <div id="sponsors">
+      <StyledSponsorsSectionContainer>
+        <StyledSponsorsHeader>2024 Sponsors Coming Soon!</StyledSponsorsHeader>
+        <StyledContactText>
+          Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to
+          us at team@hackbeanpot.com or check out our sponsorship packet!
+        </StyledContactText>
+        <ButtonWrapper>
+          <PrimaryButton
+            btnText="View Informational Packet"
+            newTab={true}
+            btnLink="https://drive.google.com/file/d/1MF2UVMxJspiTrQzGfr0CNjQPzX_p4nKl/view"
+          />
+          <PrimaryButton
+            btnText="View Sponsorship Packet"
+            newTab={true}
+            btnLink="https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view"
+          />
+        </ButtonWrapper>
+        {/* <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader> */}
+        {/* {!isDesktop && (
         <>
           <StyledArrowWrapper>
             <Arrow
@@ -114,7 +115,8 @@ const SponsorsSection: React.FC = () => {
           </div>
         </>
       )} */}
-    </StyledSponsorsSectionContainer>
+      </StyledSponsorsSectionContainer>
+    </div>
   );
 };
 
