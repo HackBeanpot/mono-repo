@@ -47,9 +47,9 @@ const AboutSection: React.FC = () => {
         <StyledTitle>HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>
-            <StyledLeftImage src={Shell} />
+            <StyledLeftImage src={Community} />
             <StyledItemContainer>
-              <StyledCenterImage src={Shell} />
+              <StyledCenterImage src={Exploration} />
               <StyledItemTextContainer>
                 <StyledItemTitle color={colors.WHITE}>
                   {currItem.title}
@@ -78,7 +78,7 @@ const AboutSection: React.FC = () => {
                 </StyledArrowDescriptionContainer>
               </StyledItemTextContainer>
             </StyledItemContainer>
-            <StyledRightImage src={Shell} />
+            <StyledRightImage src={Growth} />
           </StyledItemsContainer>
         )}
 
@@ -86,7 +86,7 @@ const AboutSection: React.FC = () => {
           <StyledItemsContainer>
             {aboutSectionData.map((curr) => (
               <StyledItemContainer key={curr.title}>
-                <StyledItemImage src={Shell} />
+                <StyledItemImage src={getImage(curr.title)} />
                 <StyledItemTextContainer>
                   <StyledItemTitle color={colors.WHITE}>
                     {curr.title}

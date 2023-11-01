@@ -45,14 +45,14 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'When and where is HackBeanpot 2023?',
     answer:
-      'HackBeanpot 2023 will take place on February 10th-12th at the Wood Mackenzie (formerly known as Power Advocate) office building at 179 Lincoln St, Boston, MA, 02111!  We are so excited to be back in person for the first time since 2020, and we ask that all hackers review and abide by the Code of Conduct during the event.'
+      'HackBeanpot 2024 will take place on February 9th-11th! We will be releasing more details about the event location soon!'
   },
 
   {
     id: 2,
     question: 'Will HackBeanpot 2023 be in-person or virtual?',
     answer:
-      'HackBeanpot 2023 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
+      'HackBeanpot 2024 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
   },
 
   {
@@ -66,14 +66,14 @@ export const FaqSectionData: FaqData[] = [
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
     answer:
-      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 20th, 2023.'
+      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
   },
 
   {
     id: 5,
     question: 'What kind of projects can I work on?',
     answer:
-      'The desert is yours to explore! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
+      'The ocean is yours to explore! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
   },
 
   {
@@ -87,7 +87,7 @@ export const FaqSectionData: FaqData[] = [
     id: 7,
     question: 'What prizes are there this year?',
     answer:
-      '** fill in here **'
+      'We will be releasing more details about our prizes soon!'
   }
 
   // {
@@ -335,7 +335,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
 
 export const CountdownData: CountdownProps[] = [
   {
-    targetDate: '2024-02-10T23:59:59Z'
+    targetDate: '2024-01-26T23:59:59Z'
   }
 ];
 

@@ -77,8 +77,9 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
         <StyledThemeText>Under the Sea</StyledThemeText>
-        <StyledThemeTextSmall>February 10-12, 2024</StyledThemeTextSmall>
-        <StyledThemeTextParagraph> @ Wood Mackenzie (Formerly known as PowerAdvocate) <br/> 179 Lincoln St, Boston, MA 02111</StyledThemeTextParagraph>
+        <StyledThemeTextSmall>February 9-11, 2024</StyledThemeTextSmall>
+        <StyledThemeTextParagraph> Location TBD</StyledThemeTextParagraph>
+        {/* <StyledThemeTextParagraph> @ Wood Mackenzie (Formerly known as PowerAdvocate) <br/> 179 Lincoln St, Boston, MA 02111</StyledThemeTextParagraph> */}
         {/* <LocationTimeSection isDay={isDay} /> */}
         <StyledLandingButtonContainer
           btnText="Apply"

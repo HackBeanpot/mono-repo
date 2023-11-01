@@ -12,7 +12,7 @@ const MeetTheTeamSection: React.FC = () => {
     <div id="team">
       <StyledMeetTheTeamSection>
         <H2>Meet the Team</H2>
-        <MeetAllCore />
+        {/* <MeetAllCore /> */}
         <TeamColumn listOfColumnInfo={teamColumnsInfo} />
       </StyledMeetTheTeamSection>
     </div>
