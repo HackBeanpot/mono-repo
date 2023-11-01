@@ -14,16 +14,16 @@ import Sun from "../../../../shared-ui/images/sun.svg";
 import Moon from '../../../../shared-ui/images/moon.svg';
 import { moonRock, sunRays } from '../../landing-section/LandingSection.animations';
 import { SponsorUsLandingProps } from '../../../lib/types';
-import { StyledStar } from '../../landing-section/LandingSection.styles';
+// import { StyledStar } from '../../landing-section/LandingSection.styles';
 
 const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledContainer>
-      {isDay ? (
+      {/* {isDay ? (
         <StyledStar animate="animate" variants={sunRays} src={Sun} />
       ) : (
         <StyledStar animate="animate" variants={moonRock} src={Moon} />
-      )}
+      )} */}
       <StyledSponsorUsSectionContainer>
         <StyledSponsorUsHeader>
           <b>Sponsor Us</b>
