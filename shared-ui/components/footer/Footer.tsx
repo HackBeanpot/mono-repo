@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ tabs, secondaryTabs, isDay }) => {
           <StyledFooterText>
             HackBeanpot, Inc. is a registered 501(c)(3) organization.
           </StyledFooterText>
-          <StyledFooterTextLink href="https://hackbeanpot.com/code-of-conduct/">
+          <StyledFooterTextLink href="/code-of-conduct/">
             Code of Conducts
           </StyledFooterTextLink>
         </StyledFooterCodeOfConduct>
@@ -70,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ tabs, secondaryTabs, isDay }) => {
         </StyledTabContainer>
 
         <StyledTabContainer>
-          {secondaryTabs.map((tab: TabInfo) => (
+          {secondaryTabs?.map((tab: TabInfo) => (
             <StyledLink
               href={tab.link}
               key={tab.name}
