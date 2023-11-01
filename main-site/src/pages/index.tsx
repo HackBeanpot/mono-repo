@@ -60,7 +60,7 @@ const IndexPage: React.FC = () => {
       <PastPhotosSection />
       {/* <CovidSection /> */}
       <MeetTheTeamSection />
-      <SponsorsSection />
+      <SponsorsSection isDay={isDay} setIsDay={setIsDay}/>
       <AdventureAheadSection />
       {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />

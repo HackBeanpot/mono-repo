@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { max } from '../../../shared-ui/lib/responsive';
+import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H4 } from '../../../shared-ui/style/typography';
-import { StyledSponsorsImageProps } from '../../lib/types';
+import { SponsorsSectionProps, StyledSponsorsImageProps } from '../../lib/types';
 
 const StyledSponsorsSectionContainer = styled.div`
   text-align: center;
@@ -10,8 +10,9 @@ const StyledSponsorsSectionContainer = styled.div`
   position: relative;
 `;
 
-const StyledContactContainer = styled.div`
-  background-color: ${colors.SPONSOR_TEXT_BOX_BLUE};
+const StyledContactContainer = styled.div<SponsorsSectionProps>`
+  background-color: ${(props): string =>
+    props.isDay ? colors.SPONSOR_TEXT_BOX_BLUE : colors.SPONSOR_TEXT_BOX_BLUE_NIGHTMODE};
   padding-bottom: 4em;
 `;
 
@@ -25,12 +26,25 @@ const StyledContactText = styled(H4)`
 
 const StyledFish2 = styled.img`
   position: absolute;
-  right: 0em;
-  top: 17em;
+  right: 0vw;
+  top: 92vw;
   @media ${max.desktop} {
-    width: 20em;
-    right: 0;
-    top: -5em;
+    top: 105vw;
+  }
+  @media ${max.tablet} {
+    top: 20vw;
+    width: 20%;
+  }
+  @media ${max.tabletLg} {
+    top: 100vw;
+    width: 25%;
+  }
+  @media ${max.tabletSm} {
+    top: 202vw;
+    width: 27%;
+  }
+  @media ${max.mobile} {
+    top: 35vw;
   }
 `;
 
