@@ -10,7 +10,7 @@ import {
 } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ExploreSection from '../../components/explore-section/ExploreSection';
-// import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
+import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import FaqSection from '../../components/faq-section/FaqSection';
 import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
 // import CovidSection from '../../components/covid-section/CovidSection';
@@ -58,7 +58,10 @@ const IndexPage: React.FC = () => {
       <ExploreSection isDay={isDay} />
       <AboutSection />
       {/* <EventsCalendarSection /> */}
-      <TestimonialsSection testimonialData={testimonialSectionData} />
+
+      <EventsCalendarSection isDay={isDay}/>
+      <TestimonialsSection testimonialData={testimonialSectionData}/>
+
       <PastProjectsSection />
       <FaqSection />
       <PastPhotosSection />
