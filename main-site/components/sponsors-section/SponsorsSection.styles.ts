@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { max } from '../../../shared-ui/lib/responsive';
+import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H4 } from '../../../shared-ui/style/typography';
 import { StyledSponsorsImageProps } from '../../lib/types';
@@ -74,12 +74,24 @@ const StyledOrangeStarfish = styled.img`
   right: 30em;
   margin-top: 2em;
   width: 6%;
+
+  @media ${min.tabletLg} {
+    right: 20em;
+  }
+  @media ${min.tabletSm} {
+    right: 17em;
+  }
 `;
 
 const StyledRedStarfish = styled.img`
   position: absolute;
-  left: 10em;
+  left: 14em;
   margin-top: 5em;
+  width: 7.5%;
+  @media ${min.tabletLg} {
+    left: 4.8em;
+    margin-top: 2em;
+  }
 `;
 
 const StyledGreenStarfish = styled.img`
@@ -91,9 +103,9 @@ const StyledGreenStarfish = styled.img`
 
 const StyledStarfishMobile = styled.img`
   position: absolute;
-  right: 30em;
-  margin-top: 2em;
+  right: 10em;
   width: 6%;
+  margin-top: 13em;
 `;
 
 const StyledGoldLogos = styled.img`
