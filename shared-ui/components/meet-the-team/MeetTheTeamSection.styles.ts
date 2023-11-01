@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledMeetTheTeamSection = styled.div`
-  margin-top: 4em;
+  margin-top: 15em;
   padding-top: 12em, 0;
   text-align: center;
 `;

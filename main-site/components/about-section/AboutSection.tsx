@@ -46,6 +46,7 @@ const AboutSection: React.FC = () => {
         <StyledTitle>HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>
+<<<<<<< HEAD
             <StyledLeftImage
               src={getImage(
                 getLeftOrRight('left', aboutSectionData, currItem).title
@@ -53,6 +54,11 @@ const AboutSection: React.FC = () => {
             />
             <StyledItemContainer>
               <StyledCenterImage src={getImage(currItem.title)} />
+=======
+            <StyledLeftImage src={Community} />
+            <StyledItemContainer>
+              <StyledCenterImage src={Exploration} />
+>>>>>>> under-the-sea
               <StyledItemTextContainer>
                 <StyledItemTitle color={colors.WHITE}>
                   {currItem.title}
@@ -81,11 +87,15 @@ const AboutSection: React.FC = () => {
                 </StyledArrowDescriptionContainer>
               </StyledItemTextContainer>
             </StyledItemContainer>
+<<<<<<< HEAD
             <StyledRightImage
               src={getImage(
                 getLeftOrRight('right', aboutSectionData, currItem).title
               )}
             />
+=======
+            <StyledRightImage src={Growth} />
+>>>>>>> under-the-sea
           </StyledItemsContainer>
         )}
 
