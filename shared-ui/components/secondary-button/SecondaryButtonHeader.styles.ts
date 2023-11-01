@@ -25,7 +25,7 @@ const StyledSecondaryHeaderButton = styled.button<StyledSecondaryButtonProps>`
 
     @media ${min.tablet} {
       border-color: ${colors.BUTTON_RED};
-      font-size: 0.9em;
+      font-size: 1.2em;
       margin-right: 0.5em;
     }
     @media ${min.tabletLg} {

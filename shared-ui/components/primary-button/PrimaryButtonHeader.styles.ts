@@ -27,7 +27,7 @@ const StyledPrimaryHeaderButton = styled(motion.button)<StyledPrimaryButtonProps
     font-size: 2.3em;
     margin-bottom: 1.2em;
     @media ${min.tablet} {
-        font-size: 0.9em;
+        font-size: 1.2em;
         margin-right: 0.5em;
     }
     @media ${min.tabletLg} {

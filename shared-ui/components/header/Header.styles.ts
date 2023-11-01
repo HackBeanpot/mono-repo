@@ -28,7 +28,7 @@ const StyledTab = styled(P)`
 
     @media ${min.tablet} {
       margin: 0.5em;
-      font-size: 0.96em;
+      font-size: 1.2em;
     }
     @media ${min.tabletLg} {
       margin: 1em;
