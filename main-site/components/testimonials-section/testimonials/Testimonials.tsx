@@ -34,7 +34,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
     currentIndex
   );
   return (
-    <>
+    <div>
       <StyledTestimonialsContainer>
         {
           <StyledTestimonialsLeftContainer>
@@ -136,7 +136,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
           }
         </StyledArrowsContainer>
       )}
-    </>
+    </div>
   );
 };
 

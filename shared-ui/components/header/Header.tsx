@@ -3,7 +3,6 @@ import { HeaderProps, TabInfo } from '../../lib/types';
 import {
   StyledHeader,
   StyledTab,
-  StyledLandingButtonContainer,
   StyledTabsContainer,
   StyledHackBeanpotLogo,
   StyledHamburgerIcon,
@@ -20,9 +19,8 @@ import { StyledLink } from '../../style/typography';
 
 const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const isDesktopSmall = useMatchMedia(min.tabletSm);
   const isDesktop = useMatchMedia(min.tablet);
-  const isDesktopLarge = useMatchMedia(min.tabletLg);
+
   return (
     <StyledHeader isOpen={isOpen} isDay={isDay}>
       <a href="/">
@@ -64,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
                     btnText={tab.name}
                     btnLink={tab.link}
                     isClickable={true}
-                    newTab
+                    newTab={true}
                     inHeader={true}
                   />
                 </div>

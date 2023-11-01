@@ -42,72 +42,73 @@ const SponsorsSection: React.FC = () => {
   }
 
   return (
-    <StyledSponsorsSectionContainer>
-      <StyledContactText>
-        Interested in sponsoring HackBeanpot 2024? <br /> <br />{' '}
-        Reach out to us at team@hackbeanpot.com or check out our sponsorship
-        packet!
-      </StyledContactText>
-      <PrimaryButton
-        btnText="View packet"
-        newTab={true}
-        btnLink="https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view?usp=sharing"
-      />
-      <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
-      {!isDesktop && (
-        <>
-          <StyledArrowWrapper>
-            <Arrow
-              onClick={(): void =>
-                setCurrLevel(
-                  getLeftOrRight('left', sponsorLevelsInfo, currLevel)
-                )
-              }
-            />
-            <StyledSecondaryButtonWrapper>
-              <SecondaryButton btnText={currLevel} isClickable={false} />
-            </StyledSecondaryButtonWrapper>
-            <Arrow
-              left={false}
-              onClick={(): void =>
-                setCurrLevel(
-                  getLeftOrRight('right', sponsorLevelsInfo, currLevel)
-                )
-              }
-            />
-          </StyledArrowWrapper>
-          <br />
-          <StyledMobileLogo src={getImage(currLevel)} level={currLevel} />
-        </>
-      )}
+    <div id="sponsors">
+      <StyledSponsorsSectionContainer>
+        <StyledContactText>
+          Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to
+          us at team@hackbeanpot.com or check out our sponsorship packet!
+        </StyledContactText>
+        <PrimaryButton
+          btnText="View packet"
+          newTab={true}
+          btnLink="https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view?usp=sharing"
+        />
+        <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
+        {!isDesktop && (
+          <>
+            <StyledArrowWrapper>
+              <Arrow
+                onClick={(): void =>
+                  setCurrLevel(
+                    getLeftOrRight('left', sponsorLevelsInfo, currLevel)
+                  )
+                }
+              />
+              <StyledSecondaryButtonWrapper>
+                <SecondaryButton btnText={currLevel} isClickable={false} />
+              </StyledSecondaryButtonWrapper>
+              <Arrow
+                left={false}
+                onClick={(): void =>
+                  setCurrLevel(
+                    getLeftOrRight('right', sponsorLevelsInfo, currLevel)
+                  )
+                }
+              />
+            </StyledArrowWrapper>
+            <br />
+            <StyledMobileLogo src={getImage(currLevel)} level={currLevel} />
+          </>
+        )}
 
-      {isDesktop && (
-        <>
-          <StyledTreasureChest src={TreasureChest} alt="treasure chest" />
-          <div>
-            <SecondaryButton btnText="Diamond Level" isClickable={false} />
-            <br />
-            <StyledDiamondLogo
-              src={DiamondLogoDesktop}
-              alt="diamond level logo"
-            />
-          </div>
-          <div>
-            <SecondaryButton btnText="Gold Level" isClickable={false} />
-            <br />
-            <StyledGoldLogos src={GoldLogosDesktop} alt="gold level logos" />
-          </div>
-          <div>
-            <SecondaryButton btnText="Silver Level" isClickable={false} />
-            <br />
-            <StyledSilverLogos
-              src={SilverLogosDesktop}
-              alt="silver level logos"
-            />
-          </div>
-        </>
-      )}
-    </StyledSponsorsSectionContainer>
+        {isDesktop && (
+          <>
+            <StyledTreasureChest src={TreasureChest} alt="treasure chest" />
+            <div>
+              <SecondaryButton btnText="Diamond Level" isClickable={false} />
+              <br />
+              <StyledDiamondLogo
+                src={DiamondLogoDesktop}
+                alt="diamond level logo"
+              />
+            </div>
+            <div>
+              <SecondaryButton btnText="Gold Level" isClickable={false} />
+              <br />
+              <StyledGoldLogos src={GoldLogosDesktop} alt="gold level logos" />
+            </div>
+            <div>
+              <SecondaryButton btnText="Silver Level" isClickable={false} />
+              <br />
+              <StyledSilverLogos
+                src={SilverLogosDesktop}
+                alt="silver level logos"
+              />
+            </div>
+          </>
+        )}
+      </StyledSponsorsSectionContainer>
+    </div>
   );
 };
 
