@@ -32,7 +32,7 @@ const StyledTab = styled(P)`
     }
     @media ${min.tabletLg} {
       margin: 1em;
-      font-size: 0.89em;
+      font-size: 1.1em;
     }
     @media ${min.desktop} {
       margin: 1em;
@@ -45,20 +45,15 @@ const StyledTab = styled(P)`
   }
 `;
 
-
 const StyledPrimaryButtonContainer = styled(PrimaryButton)`
   display: flex;
   align-items: center;
-
-
 `;
 
 const StyledSecondaryButtonContainer = styled(SecondaryButton)`
   margin: 0.5em;
   display: flex;
   align-items: center;
-
-
 `;
 
 const StyledTabsContainer = styled.div`
@@ -75,7 +70,7 @@ const StyledTabsContainer = styled.div`
       font-size: 0.75em;
     }
     @media ${min.tabletLg} {
-      padding-top: 1em;
+      padding-top: 0.6em;
       padding-right: 1em;
     }
     @media ${min.desktop} {
