@@ -20,6 +20,7 @@
     "@emotion/styled": "^11.11.0",
     "antd": "^5.9.4",
     "gatsby": "^4.20.0",
-    "gatsby-plugin-mailchimp": "^5.2.2"
+    "gatsby-plugin-mailchimp": "^5.2.2",
+    "gatsby-plugin-react-helmet": "^6.12.0"
   }
 }
