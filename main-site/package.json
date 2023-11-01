@@ -19,6 +19,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "antd": "^5.9.4",
+    "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^4.20.0",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^5.12.3",
