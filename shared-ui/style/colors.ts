@@ -46,6 +46,8 @@ const colors = {
   RACE_LINE: '#ffe799',
   YELLOW_GREEN: '#E5C37D',
   SAND_HIGHLIGHTS: '#F3EFE3',
+  DEEP_SEA_BLUE: '#193C60',
+  DARK_BLUE: '#002041',
 
   // for primary button
   BUTTON_YELLOW: '#FABB32',

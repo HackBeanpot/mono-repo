@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { max, min } from '../../../shared-ui/lib/responsive';
+import { PastProjectProps } from '../../lib/types';
 
 const StyledArrowContainer = styled.div`
   display: flex;
@@ -65,8 +66,10 @@ const StyledPastProjectsInfo = styled.div`
   };
 `;
 
-const StyledPastProjectsInfoContainer = styled.div`
+const StyledPastProjectsInfoContainer = styled.div<PastProjectProps>`
   text-align: center;
+  background-color: ${(props): string => props.isDay ? colors.DARK_BLUE : colors.DEEP_SEA_BLUE};
+  padding-bottom: 5em;
 `;
 
 const StyledPastProjectsTitle = styled(H2)`
@@ -144,6 +147,9 @@ const StyledPastProjectsViewText = styled(P)`
   @media ${max.tabletLg} {
     margin-right: 3em;
     margin-left: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
+    font-size: 0.75em;
   }
 
   @media ${max.tablet} {
