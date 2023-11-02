@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { max } from '../../../../lib/responsive';
+import { fonts } from '../../../../../shared-ui/style/typography'
 
 const StyledTeamColumn = styled.div`
   flex-direction: column;
@@ -37,7 +38,7 @@ display: flex
 align-items: center; 
 justify-content: center;
 text-decoration: none;
-font-family: 'Nunito Sans', sans-serif;
+font-family: ${fonts.nunitoRegular}
 margin-top: 0.5em;
 
 img {
