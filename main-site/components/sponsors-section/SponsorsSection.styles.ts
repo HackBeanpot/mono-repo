@@ -6,7 +6,7 @@ import { SponsorsSectionProps, StyledSponsorsImageProps } from '../../lib/types'
 
 const StyledSponsorsSectionContainer = styled.div`
   text-align: center;
-  margin: 10em 0 5em 0;
+  margin: 15em 0 5em 0;
   position: relative;
 `;
 
@@ -75,7 +75,26 @@ const StyledFish2 = styled.img`
 // `;
 
 const StyledSponsorsHeader = styled(H2)`
+  color: ${colors.WHITE};
   margin: 1em 0;
+`;
+
+const StyledSpecificSponsorsHeader = styled(H2)`
+  color: ${colors.WHITE};
+  margin: 1em 2.5em 1em 2.5em;
+  font-size: 1.5em;
+  @media ${max.tablet} {
+    margin-top: 0.2em;
+    font-size: 1.3em;
+  }
+  @media ${max.tabletLg} {
+    margin-top: 0.2em;
+    font-size: 1.2em;
+  }
+  @media ${max.mobile} {
+    margin-top: 0.4em;
+    font-size: 1em;
+  }
 `;
 
 const StyledDiamondLogo = styled.img`
@@ -133,7 +152,7 @@ const StyledSilverLogos = styled.img`
 const StyledTreasureChest = styled.img`
   position: absolute;
   right: -2em;
-  top: -8em;
+  top: -11em;
   @media ${max.desktop} {
     width: 20em;
     right: 0;
@@ -172,6 +191,7 @@ export {
   StyledGoldLogos,
   StyledSilverLogos,
   StyledSponsorsHeader,
+  StyledSpecificSponsorsHeader,
   StyledContactText,
   StyledTreasureChest,
   StyledMobileLogo,

@@ -17,6 +17,7 @@ import {
   StyledRedStarfish,
   StyledGreenStarfish,
   StyledStarfishMobile,
+  StyledSpecificSponsorsHeader,
   // StyledOrangeStarfishLevel,
   // StyledRedStarfishLevel,
   // StyledGreenStarfishLevel,
@@ -62,7 +63,7 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
 
   return (
     <StyledSponsorsSectionContainer>
-      <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
+      <StyledSponsorsHeader>2024 Sponsors</StyledSponsorsHeader>
       {!isDesktop && (
         <>
           <StyledArrowWrapper>
@@ -74,7 +75,7 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
               }
             />
             <StyledSecondaryButtonWrapper>
-              <SecondaryButton btnText={currLevel} isClickable={false} />
+            <StyledSpecificSponsorsHeader> {currLevel} </StyledSpecificSponsorsHeader>
             </StyledSecondaryButtonWrapper>
             <Arrow
               left={false}
@@ -96,7 +97,7 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
           <StyledTreasureChest src={TreasureChest} alt="treasure chest" />
           <div>
           <StyledOrangeStarfish src={OrangeStarfish} alt="orange starfish" />
-            <SecondaryButton btnText="Diamond Level" isClickable={false} />
+            <StyledSpecificSponsorsHeader> Diamond Level </StyledSpecificSponsorsHeader>
             <br />
             <StyledDiamondLogo
               src={DiamondLogoDesktop}
@@ -104,13 +105,13 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
             />
           </div>
           <div>
-            <SecondaryButton btnText="Gold Level" isClickable={false} />
+          <StyledSpecificSponsorsHeader> Gold Level </StyledSpecificSponsorsHeader>
             <br />
             <StyledGoldLogos src={GoldLogosDesktop} alt="gold level logos" />
             <StyledRedStarfish src={RedStarfish} alt="red starfish" />
           </div>
           <div>
-            <SecondaryButton btnText="Silver Level" isClickable={false} />
+          <StyledSpecificSponsorsHeader> Silver Level </StyledSpecificSponsorsHeader>
             <br />
             <StyledSilverLogos
               src={SilverLogosDesktop}
