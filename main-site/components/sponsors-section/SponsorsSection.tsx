@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SecondaryButton from '../../../shared-ui/components/secondary-button/SecondaryButton';
 import {
   StyledSponsorsSectionContainer,
   StyledContactContainer,
@@ -9,7 +8,6 @@ import {
   StyledSilverLogos,
   StyledSponsorsHeader,
   StyledContactText,
-  // StyledTreasureChest,
   StyledMobileLogo,
   StyledSecondaryButtonWrapper,
   StyledArrowWrapper,
@@ -18,9 +16,6 @@ import {
   StyledGreenStarfish,
   StyledStarfishMobile,
   StyledSpecificSponsorsHeader,
-  // StyledOrangeStarfishLevel,
-  // StyledRedStarfishLevel,
-  // StyledGreenStarfishLevel,
 } from './SponsorsSection.styles';
 import fish2 from '../../../shared-ui/images/fish2.svg';
 import DiamondLogoDesktop from '../../images/diamond-level-logo-desktop.png';
@@ -29,7 +24,6 @@ import SilverLogosDesktop from '../../images/silver-level-logos-desktop.png';
 import DiamondLogoMobile from '../../images/diamond-level-logo-mobile.png';
 import GoldLogosMobile from '../../images/gold-level-logos-mobile.png';
 import SilverLogosMobile from '../../images/silver-level-logos-mobile.png';
-import TreasureChest from '../../images/treasure-chest.svg';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
@@ -39,9 +33,6 @@ import { SponsorsSectionProps } from '../../lib/types';
 import RedStarfish from '../../../shared-ui/images/Red Starfish.svg';
 import GreenStarfish from '../../../shared-ui/images/Green Starfish.svg';
 import OrangeStarfish from '../../../shared-ui/images/Orange Starfish.svg';
-// import OrangeStarfishDesktop from '../../../shared-ui/images/Orange starfish level.svg';
-// import RedStarfishDesktop from '../../../shared-ui/images/Red starfish level.svg';
-// import GreenStarfishDesktop from '../../../shared-ui/images/Green starfish level.svg';
 import MobileOrangeStarfish from '../../../shared-ui/images/OrangeStarfishMobile.svg';
 
 
@@ -52,7 +43,6 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
 
   function getImage(title: string): string {
     if (title === 'Diamond Level') {
-      //return styled diamond logo mobile would return diamondlogomobile + the styled starfish
       return DiamondLogoMobile;
     }
     if (title === 'Gold Level') {
@@ -94,7 +84,6 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
 
       {isDesktop && (
         <>
-          {/* <StyledTreasureChest src={TreasureChest} alt="treasure chest" /> */}
           <div>
           <StyledOrangeStarfish src={OrangeStarfish} alt="orange starfish" />
             <StyledSpecificSponsorsHeader> Diamond Level </StyledSpecificSponsorsHeader>

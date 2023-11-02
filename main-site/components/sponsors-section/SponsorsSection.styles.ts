@@ -6,7 +6,7 @@ import { SponsorsSectionProps, StyledSponsorsImageProps } from '../../lib/types'
 
 const StyledSponsorsSectionContainer = styled.div`
   text-align: center;
-  margin: 15em 0 5em 0;
+  margin: 12em 0 5em 0;
   position: relative;
 `;
 
@@ -19,7 +19,7 @@ const StyledContactContainer = styled.div<SponsorsSectionProps>`
 
 const StyledContactText = styled(H4)`
   color: ${colors.WHITE} !important; 
-  padding: 3em 10em 1.5em 10em;
+  padding: 3em 17em 1.5em 17em;
   @media ${max.desktop} {
     padding: 3em;
   }
@@ -41,13 +41,6 @@ const StyledFish2 = styled.img`
     margin-top: 2em;
     width: 25%;
   }
-  // @media ${max.tabletSm} {
-  //   margin-top: 15em;
-  //   width: 27%;
-  // }
-  // @media ${max.mobile} {
-  //   margin-top: 15em;
-  // }
 `;
 
 const StyledSponsorsHeader = styled(H2)`
@@ -160,9 +153,6 @@ export {
   StyledRedStarfish,
   StyledGreenStarfish,
   StyledStarfishMobile,
-  // StyledOrangeStarfishLevel,
-  // StyledRedStarfishLevel,
-  // StyledGreenStarfishLevel,
   StyledDiamondLogo,
   StyledGoldLogos,
   StyledSilverLogos,
