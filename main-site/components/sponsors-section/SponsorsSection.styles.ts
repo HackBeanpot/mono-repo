@@ -27,7 +27,7 @@ const StyledContactText = styled(H4)`
 const StyledFish2 = styled.img`
   position: absolute;
   right: 0vw;
-  top: 92vw;
+  top: 103vw;
   @media ${max.desktop} {
     top: 105vw;
   }
@@ -36,11 +36,11 @@ const StyledFish2 = styled.img`
     width: 20%;
   }
   @media ${max.tabletLg} {
-    top: 100vw;
+    top: 80vw;
     width: 25%;
   }
   @media ${max.tabletSm} {
-    top: 202vw;
+    top: 185vw;
     width: 27%;
   }
   @media ${max.mobile} {
