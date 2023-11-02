@@ -9,7 +9,7 @@ import {
   StyledSilverLogos,
   StyledSponsorsHeader,
   StyledContactText,
-  StyledTreasureChest,
+  // StyledTreasureChest,
   StyledMobileLogo,
   StyledSecondaryButtonWrapper,
   StyledArrowWrapper,
@@ -94,7 +94,7 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
 
       {isDesktop && (
         <>
-          <StyledTreasureChest src={TreasureChest} alt="treasure chest" />
+          {/* <StyledTreasureChest src={TreasureChest} alt="treasure chest" /> */}
           <div>
           <StyledOrangeStarfish src={OrangeStarfish} alt="orange starfish" />
             <StyledSpecificSponsorsHeader> Diamond Level </StyledSpecificSponsorsHeader>

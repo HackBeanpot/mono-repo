@@ -50,32 +50,6 @@ const StyledFish2 = styled.img`
   // }
 `;
 
-// const StyledRedStarfish = styled.img`
-// `;
-
-// const StyledGreenStarfish = styled.img`
-// `;
-
-// const StyledOrangeStarfish = styled.img`
-//   position: absolute;
-//   right: 36em;
-//   // @media ${max.desktop} {
-//   //   width: 20em;
-//   //   height: 20em;
-//   //   right: 0;
-//   // }
-//   // @media ${max.tabletLg} {
-//   //   width: 18em;
-//   //   height: 18em;
-//   //   right: 0;
-//   // }
-//   // @media ${max.mobile} {
-//   //   width: 12em;
-//   //   height: 12em;
-//   //   right: 10;
-//   // }
-// `;
-
 const StyledSponsorsHeader = styled(H2)`
   color: ${colors.WHITE};
   margin: 1em 0;
@@ -138,9 +112,9 @@ const StyledGreenStarfish = styled.img`
 
 const StyledStarfishMobile = styled.img`
   position: absolute;
-  right: 10em;
-  width: 6%;
-  margin-top: 13em;
+  right: 5em;
+  width: 10%;
+  margin-top: 15em;
 `;
 
 const StyledGoldLogos = styled.img`
