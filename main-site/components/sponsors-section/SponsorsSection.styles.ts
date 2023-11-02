@@ -13,12 +13,13 @@ const StyledSponsorsSectionContainer = styled.div`
 const StyledContactContainer = styled.div<SponsorsSectionProps>`
   background-color: ${(props): string =>
     props.isDay ? colors.SPONSOR_TEXT_BOX_BLUE : colors.SPONSOR_TEXT_BOX_BLUE_NIGHTMODE};
-  padding-bottom: 4em;
+    margin-top: 10em;
+    padding-bottom: 4em;
 `;
 
 const StyledContactText = styled(H4)`
   color: ${colors.WHITE} !important; 
-  padding: 3em 17em 1.5em 17em;
+  padding: 3em 10em 1.5em 10em;
   @media ${max.desktop} {
     padding: 3em;
   }
@@ -27,25 +28,26 @@ const StyledContactText = styled(H4)`
 const StyledFish2 = styled.img`
   position: absolute;
   right: 0vw;
-  top: 103vw;
+  marin-top: 103em;
   @media ${max.desktop} {
-    top: 105vw;
+    margin-top: 2em;
   }
   @media ${max.tablet} {
-    top: 20vw;
+    margin: 2em;
+    right: -1em;
     width: 20%;
   }
   @media ${max.tabletLg} {
-    top: 80vw;
+    margin-top: 2em;
     width: 25%;
   }
-  @media ${max.tabletSm} {
-    top: 185vw;
-    width: 27%;
-  }
-  @media ${max.mobile} {
-    top: 35vw;
-  }
+  // @media ${max.tabletSm} {
+  //   margin-top: 15em;
+  //   width: 27%;
+  // }
+  // @media ${max.mobile} {
+  //   margin-top: 15em;
+  // }
 `;
 
 // const StyledRedStarfish = styled.img`
