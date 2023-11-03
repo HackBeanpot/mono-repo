@@ -24,6 +24,8 @@ import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
 import Shell from '../../../shared-ui/images/shell.png';
+import { motion } from 'framer-motion';
+import variants from '../../../shared-ui/animations/variants';
 
 function getImage(title: string): string {
   if (title === 'Community') {
@@ -43,7 +45,12 @@ const AboutSection: React.FC = () => {
 
   return (
     <div id="about">
-      <StyledAboutSectionContainer>
+      <StyledAboutSectionContainer
+        variants={variants.container}
+        initial="hidden"
+        whileInView="fadeInAndUp"
+        amount="all"
+      >
         <StyledTitle>HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>

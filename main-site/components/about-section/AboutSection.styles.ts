@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { max, min } from '../../../shared-ui/lib/responsive';
+import { motion } from 'framer-motion';
 
-const StyledAboutSectionContainer = styled.div`
+const StyledAboutSectionContainer = styled(motion.div)`
   margin-top: 10em;
   padding-bottom: 10em;
   position: relative;
