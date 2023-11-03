@@ -5,8 +5,8 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { H1, H3, H5, H6, P } from '../../../shared-ui/style/typography';
 
-const StyledHackathonText = styled(H5)`
-   {
+const StyledHackathonText = styled(motion(H5))`
+  {
     color: ${colors.WHITE};
     padding-bottom: 0.2em;
     @media ${max.tablet} {
@@ -19,8 +19,7 @@ const StyledHackathonText = styled(H5)`
   }
 `;
 
-
-const StyledThemeText = styled(H1)`
+const StyledThemeText = styled(motion(H1))`
    {
     color: ${colors.WHITE};
     padding-bottom: 0.1em;
@@ -33,7 +32,7 @@ const StyledThemeText = styled(H1)`
   }
 `;
 
-const StyledThemeTextSmall = styled(H6)`
+const StyledThemeTextSmall = styled(motion(H6))`
    {
     color: ${colors.WHITE};
     padding-bottom: 0.1em;
@@ -46,7 +45,7 @@ const StyledThemeTextSmall = styled(H6)`
   }
 `;
 
-const StyledThemeTextParagraph = styled(P)`
+const StyledThemeTextParagraph = styled(motion(P))`
    {
     color: ${colors.WHITE};
     padding-bottom: 0.1em;
@@ -88,7 +87,7 @@ const StyledBubble1 = styled.img`
   @media ${min.tablet} {
     width: 5%;
   }
-`
+`;
 
 const StyledBubble2 = styled.img`
   position: absolute;
@@ -107,7 +106,7 @@ const StyledBubble2 = styled.img`
     top: 90vw;
     right: -5vw;
   }
-`
+`;
 
 const StyledFish = styled.img`
   position: absolute;
@@ -126,7 +125,7 @@ const StyledFish = styled.img`
   @media ${max.mobile} {
     top: 110vw;
   }
-`
+`;
 
 const StyledJellyfish = styled.img`
   position: absolute;
@@ -146,7 +145,7 @@ const StyledJellyfish = styled.img`
   @media ${max.mobile} {
     top: 110vw;
   }
-`
+`;
 
 const StyledWhale = styled.img`
   position: absolute;
@@ -165,9 +164,9 @@ const StyledWhale = styled.img`
   @media ${max.mobile} {
     top: 120vw;
   }
-`
+`;
 
-const StyledLandingTextContainer = styled.div`
+const StyledLandingTextContainer = styled(motion.div)`
   padding-top: 21em;
   text-align: center;
   @media ${max.tabletLg} {
@@ -184,11 +183,11 @@ const StyledLandingTextContainer = styled.div`
   }
 `;
 
-const StyledLandingSectionContainer = styled.div`
+const StyledLandingSectionContainer = styled(motion.div)`
   position: relative;
 `;
 
-const StyledLandingButtonContainer = styled(PrimaryButton)`
+const StyledLandingButtonContainer = styled(motion(PrimaryButton))`
   padding-top: 2em;
   position: fixed;
   justify-content: left;
@@ -218,7 +217,7 @@ const StyledToggle = styled.img`
 export {
   StyledHackathonText,
   StyledThemeText,
-  StyledThemeTextSmall, 
+  StyledThemeTextSmall,
   StyledThemeTextParagraph,
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
