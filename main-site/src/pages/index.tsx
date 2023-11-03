@@ -55,12 +55,12 @@ const IndexPage: React.FC = () => {
       <AboutSection />
       <EventsCalendarSection isDay={isDay}/>
       <TestimonialsSection testimonialData={testimonialSectionData}/>
-      <PastProjectsSection />
-      <FaqSection />
+      <PastProjectsSection isDay={isDay} />
       <PastPhotosSection />
+      <FaqSection />
       {/* <CovidSection /> */}
-      <MeetTheTeamSection />
       <SponsorsSection />
+      <MeetTheTeamSection />
       <AdventureAheadSection />
       {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />

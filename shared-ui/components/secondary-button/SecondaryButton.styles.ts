@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import { max, min } from '../../lib/responsive';
+import { max } from '../../lib/responsive';
 import { StyledSecondaryButtonProps } from '../../lib/types';
 import { colors } from '../../style/colors';
+import { fonts } from '../../../shared-ui/style/typography'
 
 const StyledSecondaryButton = styled.button<StyledSecondaryButtonProps>`
+  font-family: ${fonts.nunitoRegular};
   color: ${colors.WHITE};
   background-color: ${colors.BUTTON_RED};
   border-color: ${colors.BUTTON_RED};

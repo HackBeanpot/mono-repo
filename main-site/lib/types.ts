@@ -84,6 +84,10 @@ export interface PastProjectData {
   award?: string;
 }
 
+export interface PastProjectProps {
+  isDay: boolean;
+}
+
 export interface StyledSponsorsImageProps {
   level: string;
 }
