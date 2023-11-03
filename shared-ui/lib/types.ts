@@ -15,6 +15,7 @@ export interface ButtonProps {
   isClickable?: boolean;
   transparent?: boolean;
   isApplyButton?: boolean;
+  inHeader?: boolean;
 }
 
 export interface TimeRemainingProps {
@@ -78,6 +79,7 @@ export interface StyledHeaderProps {
 
 export interface FooterProps {
   tabs: TabInfo[];
+  secondaryTabs: TabInfo[];
   isDay: boolean;
 }
 

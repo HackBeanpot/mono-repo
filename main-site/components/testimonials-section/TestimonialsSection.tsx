@@ -9,10 +9,12 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   testimonialData
 }) => {
   return (
-    <StyledTestimonialsSectionContainer>
-      <H2>Testimonials</H2>
-      <Testimonials isSponsor={isSponsor} testimonialData={testimonialData} />
-    </StyledTestimonialsSectionContainer>
+    <div id="testimonials">
+      <StyledTestimonialsSectionContainer>
+        <H2>Testimonials</H2>
+        <Testimonials isSponsor={isSponsor} testimonialData={testimonialData} />
+      </StyledTestimonialsSectionContainer>
+    </div>
   );
 };
 

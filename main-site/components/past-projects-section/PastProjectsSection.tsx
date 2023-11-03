@@ -38,7 +38,7 @@ const PastProjectsSection: React.FC<PastProjectProps> = ({ isDay }) => {
   const isDesktop = useMatchMedia(min.tablet);
 
   return (
-    <div>
+    <div id="projects">
       <StyledPirateFlag src={PirateFlag} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>

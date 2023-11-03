@@ -6,7 +6,9 @@ import {
   StyledTabsContainer,
   StyledHackBeanpotLogo,
   StyledHamburgerIcon,
-  StyledXIcon
+  StyledXIcon,
+  StyledSecondaryButtonContainer,
+  StyledPrimaryButtonContainer
 } from './Header.styles';
 import HackBeanpotWhiteLogo from '../../images/hackbeanpot-logo-white.png';
 import useMatchMedia from 'react-use-match-media';
@@ -18,6 +20,7 @@ import { StyledLink } from '../../style/typography';
 const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isDesktop = useMatchMedia(min.tablet);
+
   return (
     <StyledHeader isOpen={isOpen} isDay={isDay}>
       <a href="/">
@@ -51,9 +54,32 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
               onClick={(): void => setIsOpen(false)}
               href={tab.link}
               key={tab.name}
-              target= {tab.newTab ? "_blank" : "_self"}
+              target={tab.newTab ? '_blank' : '_self'}
             >
-              <StyledTab>{tab.name}</StyledTab>
+              {tab.name === 'Apply' && (
+                <div>
+                  <StyledSecondaryButtonContainer
+                    btnText={tab.name}
+                    btnLink={tab.link}
+                    isClickable={true}
+                    newTab={true}
+                    inHeader={true}
+                  />
+                </div>
+              )}
+              {tab.name === 'Sponsor Us' && (
+                <div>
+                  <StyledPrimaryButtonContainer
+                    btnText={tab.name}
+                    btnLink={tab.link}
+                    newTab
+                    inHeader={true}
+                  />
+                </div>
+              )}
+              {tab.name !== 'Sponsor Us' && tab.name !== 'Apply' && (
+                <StyledTab>{tab.name}</StyledTab>
+              )}
             </StyledLink>
           ))}
         </StyledTabsContainer>
