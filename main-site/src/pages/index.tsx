@@ -6,7 +6,7 @@ import Header from '../../../shared-ui/components/header/Header';
 import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ExploreSection from '../../components/explore-section/ExploreSection';
-// import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
+import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import FaqSection from '../../components/faq-section/FaqSection';
 import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
 // import CovidSection from '../../components/covid-section/CovidSection';
@@ -53,14 +53,14 @@ const IndexPage: React.FC = () => {
       <LandingSection isDay={isDay} setIsDay={setIsDay} />
       <ExploreSection isDay={isDay} />
       <AboutSection />
-      {/* <EventsCalendarSection /> */}
+      <EventsCalendarSection isDay={isDay}/>
       <TestimonialsSection testimonialData={testimonialSectionData}/>
-      <PastProjectsSection />
-      <FaqSection />
+      <PastProjectsSection isDay={isDay} />
       <PastPhotosSection />
+      <FaqSection />
       {/* <CovidSection /> */}
-      <MeetTheTeamSection />
       <SponsorsSection />
+      <MeetTheTeamSection />
       <AdventureAheadSection />
       {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
       <Footer tabs={mainSiteTabInfo} isDay={isDay} />

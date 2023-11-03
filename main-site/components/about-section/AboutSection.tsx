@@ -17,9 +17,9 @@ import {
   StyledItemTitle
 } from './AboutSection.styles';
 import { aboutSectionData } from '../../lib/data';
-import Community from '../../../shared-ui/images/community.png';
-import Exploration from '../../../shared-ui/images/exploration.png';
-import Growth from '../../../shared-ui/images/growth.png';
+import Community from '../../../shared-ui/images/communityShell.png';
+import Exploration from '../../../shared-ui/images/explorationShell.png';
+import Growth from '../../../shared-ui/images/growthShell.png';
 import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
@@ -54,9 +54,9 @@ const AboutSection: React.FC = () => {
         <StyledTitle>HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>
-            <StyledLeftImage src={Shell} />
+            <StyledLeftImage src={Community} />
             <StyledItemContainer>
-              <StyledCenterImage src={Shell} />
+              <StyledCenterImage src={Exploration} />
               <StyledItemTextContainer>
                 <StyledItemTitle color={colors.WHITE}>
                   {currItem.title}
@@ -85,7 +85,7 @@ const AboutSection: React.FC = () => {
                 </StyledArrowDescriptionContainer>
               </StyledItemTextContainer>
             </StyledItemContainer>
-            <StyledRightImage src={Shell} />
+            <StyledRightImage src={Growth} />
           </StyledItemsContainer>
         )}
 
@@ -93,7 +93,7 @@ const AboutSection: React.FC = () => {
           <StyledItemsContainer>
             {aboutSectionData.map((curr) => (
               <StyledItemContainer key={curr.title}>
-                <StyledItemImage src={Shell} />
+                <StyledItemImage src={getImage(curr.title)} />
                 <StyledItemTextContainer>
                   <StyledItemTitle color={colors.WHITE}>
                     {curr.title}

@@ -15,7 +15,7 @@ const StyledAboutSectionContainer = styled(motion.div)`
 
 const StyledItemsContainer = styled.div`
   display: flex;
-  margin-top: 5em;
+  margin: 5em;
   justify-content: center;
 `;
 

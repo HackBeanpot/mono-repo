@@ -84,6 +84,10 @@ export interface PastProjectData {
   award?: string;
 }
 
+export interface PastProjectProps {
+  isDay: boolean;
+}
+
 export interface StyledSponsorsImageProps {
   level: string;
 }
@@ -98,4 +102,9 @@ export interface EventsCalendarData {
   time: string;
   location?: string;
   room?: string;
+  image?: string
+}
+
+export interface CountdownProps {
+  targetDate: string;
 }
