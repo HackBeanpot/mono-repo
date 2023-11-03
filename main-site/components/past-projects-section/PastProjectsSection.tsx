@@ -28,10 +28,10 @@ import {
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
 import { pastProjectsData } from '../../lib/data';
-import { PastProjectData } from '../../lib/types';
+import { PastProjectData, PastProjectProps } from '../../lib/types';
 import { getLeftOrRight } from '../../lib/utils';
 
-const PastProjectsSection: React.FC = () => {
+const PastProjectsSection: React.FC<PastProjectProps> = ({ isDay }) => {
   const [currItem, setCurrItem] = useState<PastProjectData>(
     pastProjectsData[0]
   );
@@ -131,7 +131,7 @@ const PastProjectsSection: React.FC = () => {
 
       <StyledTreasureChest src={TreasureChest} />
 
-      <StyledPastProjectsInfoContainer>
+      <StyledPastProjectsInfoContainer isDay={isDay}>
         <StyledPastProjectsViewText>
           Interested in seeing more about our past events and past hacker
           projects?

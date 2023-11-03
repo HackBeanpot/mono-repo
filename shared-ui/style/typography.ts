@@ -20,6 +20,7 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
+  color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansRegular};
   font-size: clamp(1.5em, 8.2vw, 3.1em);
   margin: 0;

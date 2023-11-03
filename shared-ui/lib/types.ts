@@ -3,6 +3,7 @@ import { MouseEventHandler } from 'react';
 export interface StyledPrimaryButtonProps {
   $isSmallPrimary: boolean | undefined;
   $transparent: boolean | undefined;
+  $isApplyButton: boolean | undefined;
 }
 
 export interface ButtonProps {
@@ -13,6 +14,7 @@ export interface ButtonProps {
   isSmallPrimary?: boolean;
   isClickable?: boolean;
   transparent?: boolean;
+  isApplyButton?: boolean;
   inHeader?: boolean;
 }
 
