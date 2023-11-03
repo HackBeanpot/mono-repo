@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 import { colors } from '../../../../shared-ui/style/colors';
-import { H4, P } from '../../../../shared-ui/style/typography';
-import { max } from '../../../../shared-ui/lib/responsive';
+import { fonts, H4, P } from '../../../../shared-ui/style/typography';
 
 const StyledFaqQuestionText = styled(H4)`
-  color: ${colors.TEXT_BROWN} !important;
+  color: ${colors.WHITE} !important;
+  font-family: ${fonts.nunitoRegular};
+  font-weight: 400;
   padding: 1em;
   padding-left: 0;
   text-align: left;
@@ -27,12 +28,13 @@ const StyledFaqButton = styled.button`
 `;
 
 const StyledFaqLine = styled.hr`
-  border: 1.5px solid ${colors.TEXT_BROWN};
+  border: 1.4px solid ${colors.WHITE};
   margin: 0;
 `;
 
 const StyledFaqDropdown = styled(P)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
+  font-family: ${fonts.nunitoRegular};
   text-align: left;
   margin: 0;
   padding: 1.5em;
@@ -42,9 +44,6 @@ const StyledFaqDropdown = styled(P)`
 const StyledFaqPlusSign = styled.img`
   width: 1.5em;
   float: right;
-
-  @media ${max.tablet} {
-    display: none;
   }
 `;
 

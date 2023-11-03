@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import FennecFox from '../../../shared-ui/images/fennec-fox.svg';
-import Inky from '../../../shared-ui/images/inky.jpg';
-import Swaple from '../../../shared-ui/images/swaple.png';
-import Camel from '../../../shared-ui/images/camel.svg';
-import Duck from '../../../shared-ui/images/duck.png';
+import TreasureChest from '../../../shared-ui/images/treasureChestSea.png'
+import PirateFlag from '../../../shared-ui/images/pirateFlag.png'
 import useMatchMedia from 'react-use-match-media';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 
 import {
   StyledPastProjectsSection,
   StyledPastProjectsHeader,
-  StyledFennecFox,
   StyledPastProjectsContainer,
   StyledPastProjectsTitle,
   StyledPastProjectsMembers,
@@ -19,30 +15,31 @@ import {
   StyledPastProjectsInfo,
   StyledPastProjectsViewText,
   StyledPastProjectsInfoContainer,
-  StyledCamel,
   StyledArrowContainer,
   StyledPastProjectsDiv,
   StyledViewProjectButtonWrapper,
   StyledPastProjectsAward,
-  StyledPastProjectsTitleAwardContainer
+  StyledPastProjectsTitleAwardContainer,
+  StyledPastProjectsLeftContainer,
+  StyledPastProjectsRightContainer,
+  StyledTreasureChest,
+  StyledPirateFlag
 } from './PastProjectsSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { min } from '../../../shared-ui/lib/responsive';
 import { pastProjectsData } from '../../lib/data';
-import { PastProjectData } from '../../lib/types';
+import { PastProjectData, PastProjectProps } from '../../lib/types';
 import { getLeftOrRight } from '../../lib/utils';
-import { camelBobbing } from './PastProjects.animations';
 
-const PastProjectsSection: React.FC = () => {
+const PastProjectsSection: React.FC<PastProjectProps> = ({ isDay }) => {
   const [currItem, setCurrItem] = useState<PastProjectData>(
     pastProjectsData[0]
   );
   const isDesktop = useMatchMedia(min.tablet);
 
   return (
-    <div>
-      <StyledCamel src={Camel} animate="animate" variants={camelBobbing} />
-      <StyledFennecFox src={FennecFox} />
+    <div id="projects">
+      <StyledPirateFlag src={PirateFlag} />
       <StyledPastProjectsHeader>Past Projects</StyledPastProjectsHeader>
       <StyledPastProjectsSection>
         {isDesktop &&
@@ -52,7 +49,7 @@ const PastProjectsSection: React.FC = () => {
               <StyledPastProjectsInfo>
                 <StyledPastProjectsTitleAwardContainer>
                   <StyledPastProjectsTitle>
-                    {project.title}
+                    {project.title}, 2023
                   </StyledPastProjectsTitle>
                   <StyledPastProjectsAward>
                     {project.award}
@@ -79,43 +76,49 @@ const PastProjectsSection: React.FC = () => {
       {!isDesktop && (
         <>
           <StyledPastProjectsSection>
+            <StyledPastProjectsLeftContainer>
+              <StyledPastProjectsPhotos
+                src={getLeftOrRight('left', pastProjectsData, currItem).image}
+              />
+            </StyledPastProjectsLeftContainer>
+            <StyledPastProjectsRightContainer>
+              <StyledPastProjectsPhotos
+                src={getLeftOrRight('right', pastProjectsData, currItem).image}
+              />
+            </StyledPastProjectsRightContainer>
             <StyledPastProjectsPhotos src={currItem.image} />
 
-            <StyledArrowContainer>
-              <Arrow
-                left
-                onClick={(): void =>
-                  setCurrItem(
-                    getLeftOrRight('left', pastProjectsData, currItem)
-                  )
-                }
-              />
-
-              <StyledPastProjectsDiv>
-                <StyledPastProjectsTitleAwardContainer>
-                  <StyledPastProjectsTitle>
-                    {currItem.title}
-                  </StyledPastProjectsTitle>
-                  <StyledPastProjectsAward>
-                    {currItem.award}
-                  </StyledPastProjectsAward>
-                </StyledPastProjectsTitleAwardContainer>
-                <StyledPastProjectsMembers>
-                  {currItem.members}
-                </StyledPastProjectsMembers>
-                <StyledPastProjectsDescription>
-                  {currItem.description}
-                </StyledPastProjectsDescription>
-              </StyledPastProjectsDiv>
-              <Arrow
-                left={false}
-                onClick={(): void =>
-                  setCurrItem(
-                    getLeftOrRight('right', pastProjectsData, currItem)
-                  )
-                }
-              />
-            </StyledArrowContainer>
+            <StyledPastProjectsDiv>
+              <StyledArrowContainer>
+                <Arrow
+                  left
+                  onClick={(): void =>
+                    setCurrItem(
+                      getLeftOrRight('left', pastProjectsData, currItem)
+                    )
+                  }
+                />
+                <StyledPastProjectsTitle>
+                  {currItem.title}, 2023
+                </StyledPastProjectsTitle>
+                <Arrow
+                  left={false}
+                  onClick={(): void =>
+                    setCurrItem(
+                      getLeftOrRight('right', pastProjectsData, currItem)
+                    )
+                  }
+                />
+              </StyledArrowContainer>
+              <StyledPastProjectsTitleAwardContainer>
+                <StyledPastProjectsAward>
+                  {currItem.award}
+                </StyledPastProjectsAward>
+              </StyledPastProjectsTitleAwardContainer>
+              <StyledPastProjectsDescription>
+                {currItem.description}
+              </StyledPastProjectsDescription>
+            </StyledPastProjectsDiv>
 
             <PrimaryButton
               btnText="View Project"
@@ -126,7 +129,9 @@ const PastProjectsSection: React.FC = () => {
         </>
       )}
 
-      <StyledPastProjectsInfoContainer>
+      <StyledTreasureChest src={TreasureChest} />
+
+      <StyledPastProjectsInfoContainer isDay={isDay}>
         <StyledPastProjectsViewText>
           Interested in seeing more about our past events and past hacker
           projects?
