@@ -6,6 +6,7 @@ import { fonts } from '../../style/typography';
 
 const StyledSecondaryHeaderButton = styled.button<StyledSecondaryButtonProps>`
   color: ${colors.WHITE};
+  cursor: pointer;
   background-color: ${colors.BUTTON_RED};
   box-shadow: 0px 0px 20px 0px rgba(19, 74, 95, 0.72);
   transition-duration: 0.5s;
@@ -13,7 +14,7 @@ const StyledSecondaryHeaderButton = styled.button<StyledSecondaryButtonProps>`
     color: ${colors.WHITE};
     background-color: ${colors.BUTTON_DARK_RED};
     border-color: ${colors.BUTTON_DARK_RED}
-  }
+  };
   font-family: ${fonts.nunitoSansSemibold};
   padding: 0.5em;
   border-radius: 2em;

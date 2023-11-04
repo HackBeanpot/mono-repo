@@ -2,6 +2,8 @@ import React from 'react';
 import { StyledSecondaryButton } from './SecondaryButton.styles';
 import { ButtonProps } from '../../lib/types';
 import { StyledSecondaryHeaderButton } from './SecondaryButtonHeader.styles';
+import { StyledLink } from '../../style/typography';
+
 
 const SecondaryButton: React.FC<ButtonProps> = ({
   btnText,
@@ -10,7 +12,7 @@ const SecondaryButton: React.FC<ButtonProps> = ({
   inHeader
 }) => {
   return (
-    <a href={btnLink}>
+    <StyledLink href={btnLink}>
       {inHeader ? (
         <StyledSecondaryHeaderButton isClickable={isClickable}>
           {btnText}
@@ -20,7 +22,7 @@ const SecondaryButton: React.FC<ButtonProps> = ({
           {btnText}
         </StyledSecondaryButton>
       )}
-    </a>
+    </StyledLink>
   );
 };
 

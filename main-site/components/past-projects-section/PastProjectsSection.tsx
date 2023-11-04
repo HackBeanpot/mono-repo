@@ -129,8 +129,6 @@ const PastProjectsSection: React.FC<PastProjectProps> = ({ isDay }) => {
         </>
       )}
 
-      <StyledTreasureChest src={TreasureChest} />
-
       <StyledPastProjectsInfoContainer isDay={isDay}>
         <StyledPastProjectsViewText>
           Interested in seeing more about our past events and past hacker

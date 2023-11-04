@@ -274,63 +274,46 @@ export const pastProjectsData: PastProjectData[] = [
 
 export const eventsCalendarData: EventsCalendarData[] = [
   {
-    title: 'Event 1',
-    subtitle: 'Sub-intro',
-    punchline:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-    prerequisites: 'NONE',
-    date: new Date(2022, 10, 16),
-    time: '1:30pm-3pm',
-    location: 'Northeastern University',
-    room: 'Ryder Hall 253',
-    image: SchoolofFish
+    title: 'Intro to Web Development',
+    subtitle: 'MiniHacks 1',
+    punchline: 'Learn the basics of React.js!',
+    description: 'Learn the basics of HTML, CSS, and JS',
+    prerequisites: 'None!',
+    date: new Date(2023, 10, 14), 
+    time: '12:30 pm-2 pm',
+    location: 'West Village H',
+    room: '104',
   },
 
   {
-    title: 'Event 1',
-    subtitle: 'Sub-intro',
-    punchline:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-    prerequisites: 'NONE',
-    date: new Date(2022, 10, 16),
-    time: '1:30pm-3pm',
-    location: 'Northeastern University',
-    room: 'Ryder Hall 253'
+    title: 'Intro to React',
+    subtitle: 'MiniHacks 2',
+    punchline: 'Learn the FUNdamentals of WebDev', 
+    description: 'Learn the basics of HTML, CSS, and JS',
+    prerequisites: 'None!',
+    date: new Date(2023, 10, 28), 
+    time: '12:30 pm-2 pm',
+    location: 'WVH',
+    room: '104',
   },
   {
-    title: 'Event 1',
-    subtitle: 'Sub-intro',
-    punchline:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-    prerequisites: 'NONE',
-    date: new Date(2022, 10, 16),
-    time: '1:30pm-3pm',
-    location: 'Northeastern University',
-    room: 'Ryder Hall 253'
+    title: 'A Builder’s Entrepreneurial Journey',
+    subtitle: 'An Intercollegiate Mixer',
+    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!', 
+    description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
+    prerequisites: 'None!',
+    date: new Date(2023, 11, 5), 
+    time: '12:00 pm-4:00 pm',
+    location: "Boston University's BUild Lab",
   },
-  // {
-  //   title: 'Event 1',
-  //   subtitle: 'Sub-intro',
-  //   punchline:
-  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-  //   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  //   Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-  //   Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-  //   prerequisites: 'NONE',
-  //   date: new Date(2022, 10, 16),
-  //   time: '1:30pm-3pm',
-  //   location: 'Northeastern University',
-  //   room: 'Ryder Hall 253'
-  // }
+  {
+    title: 'HackBeanpot x Gecko Robotics',
+    description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
+    prerequisites: 'None!',
+    date: new Date(2024, 1, 14), 
+    time: 'TBD',
+    location: 'Gecko Robotics Boston Office',
+  }
 ];
 
 export const CountdownData: CountdownProps[] = [

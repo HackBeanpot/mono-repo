@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { StyledPrimaryButtonProps } from '../../lib/types';
 
 const StyledPrimaryHeaderButton = styled(motion.button)<StyledPrimaryButtonProps>`
+    cursor: pointer;
     color: ${(props): string =>
         props.$transparent ? colors.BUTTON_YELLOW : colors.TEXT_DARKBLUE};
     background-color: ${(props): string =>

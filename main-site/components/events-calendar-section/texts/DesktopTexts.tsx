@@ -40,13 +40,15 @@ const DesktopTexts: React.FC = ({isDay}) => {
               {event.description && <EventsP>{event.description}</EventsP>}
             </EventsLeftContainer>
             <EventsRightContainer>
-              <EventsImage src={ event.image || MissingPhoto}></EventsImage>
+              {event.image &&
+              <EventsImage src={ event.image}></EventsImage>
+              }
               <EventsLocationContainer>
                 <EventsLocationPQuestion>When?</EventsLocationPQuestion>
                 <EventsLocationP>{event.date.toDateString()}<br/>{event.time}</EventsLocationP>
                 {isTablet && isDesktop && <br></br>}
                 <EventsLocationPQuestion>Where?</EventsLocationPQuestion>
-                <EventsLocationP>{event.room}</EventsLocationP>
+                <EventsLocationP>{event.location} {event.room}</EventsLocationP>
               </EventsLocationContainer>
             </EventsRightContainer>
           </StyledTextContainer>

@@ -44,7 +44,7 @@ const H3 = styled.h3`
 const H4 = styled.h4`
   font-family: ${fonts.nunitoSansRegular};
   color: ${(props): string =>
-    props.color ? props.color : colors.BUTTON_GREEN};
+    props.color ? props.color : colors.WHITE};
   margin: 0;
   font-size: 1.3em;
   @media ${min.tablet} {
@@ -90,9 +90,7 @@ const P = styled.p`
 `;
 
 const StyledLink = styled.a`
-   {
     text-decoration: none;
-  }
 `;
 
 export { H1, H2, H3, H4, H5, H6, P, fonts, StyledLink };
