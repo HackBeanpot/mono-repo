@@ -1,41 +1,49 @@
 import styled from '@emotion/styled';
+import { ExploreSectionProps } from '../../lib/types';
 import { colors } from '../../../shared-ui/style/colors';
 import { P } from '../../../shared-ui/style/typography';
 import { min, max } from '../../../shared-ui/lib/responsive';
 
-const StyledTextContainer = styled.div`
-  padding: 3em;
-  border-radius: 3em;
+const StyledTextContainer = styled.div<ExploreSectionProps>`
+  padding: 5em;
+  border-radius: 2em 0em 0em 2em;
   margin-top: 5em;
+  margin-left: 3em;
+  background-color: ${(props): string =>
+    props.isDay ? colors.TEXT_BOX_BLUE : colors.NIGHT_TEXT_BOX_BLUE};
   @media ${min.tablet} {
     width: 34em;
-    background-color: ${colors.TEXT_BOX};
-    margin-left: 5em;
+    margin-left: auto;
+    margin-right: 0;
     margin-top: 0;
   }
   @media ${min.tabletLg} {
     width: 38em;
   }
+
+  @media ${min.mobile} {
+    padding: 3em;
+  }
 `;
 
 const StyledExploreSectionContainer = styled.div`
-  padding-top: 16em;
+  padding-top: 0em;
   margin-top: 8em;
   position: relative;
   @media ${min.mobile} {
-    margin-top: 14em;
+    margin-top: 12em;
   }
   @media ${min.tabletSm} {
-    margin-top: 24em;
+    margin-top: 22em;
   }
   @media ${min.tablet} {
-    margin-top: 4em;
+    margin-top: 2em;
   }
   @media ${min.tabletLg} {
-    margin-top: 10em;
+    margin-top: 8em;
   }
   @media ${min.desktop} {
-    margin-top: 23em;
+    margin-top: 15em;
   }
 `;
 
@@ -43,30 +51,37 @@ const StyledParagraph = styled(P)`
   padding: 1.5em 0;
 `;
 
-const StyledExplorer = styled.img`
-  position: absolute;
-  left: 2em;
-  top: 3em;
-  width: 8em;
-  @media ${min.tablet} {
-    width: 13em;
-    top: -1.5em;
-    left: 7em;
-  }
-`;
+const StyledBubble3 = styled.img`
+position: absolute;
+left: 1em;
+top: 30em;
+width: 8%;
+@media ${min.tablet} {
+  width: 8%;
+  top: 36em;
+  left: 3em;
+}
+`
 
-const StyledVases = styled.img`
+const StyledDiver = styled.img`
   position: absolute;
   right: 2em;
-  top: 15em;
-  width: 7em;
+  top: 17em;
+  width: 20em;
   @media ${min.tablet} {
-    top: 45em;
+    top: 30em;
     right: 6em;
-    width: 13em;
+    width: 30em;
   }
   @media ${min.tabletLg} {
-    top: 25em;
+    top: 28em;
+  }
+  @media ${max.tabletSm} {
+    top: 108vw;
+    width: 60%;
+  }
+  @media ${max.mobile} {
+    margin-top: 10em;
   }
 `;
 
@@ -82,7 +97,7 @@ export {
   StyledTextContainer,
   StyledExploreSectionContainer,
   StyledParagraph,
-  StyledExplorer,
-  StyledVases,
+  StyledBubble3, 
+  StyledDiver,
   StyledButtonContainer
 };

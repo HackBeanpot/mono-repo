@@ -6,7 +6,7 @@ import { StyledSponsorsImageProps } from '../../lib/types';
 
 const StyledSponsorsSectionContainer = styled.div`
   text-align: center;
-  margin: 10em 0 5em 0;
+  margin: 15em 0 15em 0;
   position: relative;
 `;
 
@@ -15,7 +15,6 @@ const StyledSponsorsHeader = styled(H2)`
 `;
 
 const StyledContactText = styled(H4)`
-  color: ${colors.TEXT_BROWN} !important; 
   padding: 3em 12em;
   @media ${max.desktop} {
     padding: 3em;
@@ -61,6 +60,17 @@ const StyledArrowWrapper = styled.div`
   justify-content: center;
 `;
 
+// const ButtonWrapper = styled.div`
+//   display: flex;
+//   gap: 1em;
+//   justify-content: center;
+
+//   @media ${max.tablet} {
+//     flex-direction: column;
+//   }
+// ;
+// `;
+
 export {
   StyledSponsorsSectionContainer,
   StyledDiamondLogo,
@@ -71,5 +81,6 @@ export {
   StyledTreasureChest,
   StyledMobileLogo,
   StyledSecondaryButtonWrapper,
-  StyledArrowWrapper
+  StyledArrowWrapper,
 };
+

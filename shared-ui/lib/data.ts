@@ -1,4 +1,4 @@
-import { Person, TabInfo, Team, TeamColumnInfo, ToolTipInfo } from './types';
+import { Person, TabInfo, Team, TeamColumnInfo } from './types';
 import Aaryan from "../../shared-ui/images/meet-the-team/aaryan.png"
 import Amanda from "../../shared-ui/images/meet-the-team/amanda.png";
 import Alyssa from "../../shared-ui/images/meet-the-team/alyssa.png";
@@ -37,324 +37,262 @@ const team: Team = {
 
 const mainSiteTabInfo: TabInfo[] = [
   { name: 'About', link: '/#about' },
-  { name: 'Calendar', link: '/#calendar' },
+  { name: 'Testimonials', link: '/#testimonials' },
+  { name: 'Projects', link: '/#projects' },
   { name: 'FAQ', link: '/#faq' },
-  { name: 'Sponsor Us', link: '/sponsor-us' },
-  { name: 'Team', link: '/#team' }
+  { name: 'Sponsors', link: '/#sponsors' },
+  { name: 'Team', link: '/#team' },
+  { name: 'Sponsor Us', link: 'https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view', newTab: true },
+  // { name: 'Apply', link: 'https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431', newTab: true },
 ];
 
-const surbhiToolTip: ToolTipInfo = {
-  name: 'name: Surbhi Gulati',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
-};
+const mainSiteTabInfoFooter: TabInfo[] = [
+  { name: 'About', link: '/#about' },
+  { name: 'Testimonials', link: '/#testimonials' },
+  { name: 'Projects', link: '/#projects' },
+  { name: 'FAQ', link: '/#faq' },
+  { name: 'Sponsors', link: '/#sponsors' },
+];
+
+const mainSiteTabInfoFooterSecondary: TabInfo[] = [
+  { name: 'Project gallery', link: 'https://projects.hackbeanpot.com' },
+  { name: 'Contact us', link: 'mailto:team@hackbeanpot.com' },
+];
 
 const surbhi: Person = {
   picture: Surbhi,
-  toolTipInfo: surbhiToolTip
-};
-
-const mikeToolTip: ToolTipInfo = {
-  name: 'name: Mike Mundia',
-  year: 'year: 3rd',
-  major: 'major: CS + Theater',
-  pronouns: 'pronouns: he/him'
+  name: 'Surbhi Gulati',
+  year: '4th',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/surbhigulati/',
 };
 
 const mike: Person = {
   picture: Mike,
-  toolTipInfo: mikeToolTip
-};
-
-const dhivasToolTip: ToolTipInfo = {
-  name: 'name: Dhivas Sugumar',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: he/him'
+  name: 'Mike Mundia',
+  year: '3rd',
+  major: 'CS + Theater',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/michael-mundia/'
 };
 
 const dhivas: Person = {
   picture: Dhivas,
-  toolTipInfo: dhivasToolTip
-};
-
-const lisaToolTip: ToolTipInfo = {
-  name: 'name: Lisa Jiang',
-  year: 'year: 3rd',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  name: 'Dhivas Sugumar',
+  year: '4th',
+  major: 'CS',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/dhivas-sugumar/'
 };
 
 const lisa: Person = {
   picture: Lisa,
-  toolTipInfo: lisaToolTip
-};
-
-const spencerToolTip: ToolTipInfo = {
-  name: 'name: Spencer Shao',
-  year: 'year: 4th',
-  major: 'major: CS + Music Tech',
-  pronouns: 'pronouns: he/him'
+  name: 'Lisa Jiang',
+  year: '3rd',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/haiyijiang/'
 };
 
 const spencer: Person = {
   picture: Spencer,
-  toolTipInfo: spencerToolTip
-};
-
-const amandaToolTip: ToolTipInfo = {
-  name: 'name: Amanda Lee',
-  year: 'year: 3rd',
-  major: 'major: CS + Design',
-  pronouns: 'pronouns: she/her'
+  name: 'Spencer Shao',
+  year: '4th',
+  major: 'CS + Music Tech',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/spencer-shao/'
 };
 
 const amanda: Person = {
   picture: Amanda,
-  toolTipInfo: amandaToolTip
-};
-
-const onotinaToolTip: ToolTipInfo = {
-  name: 'name: Onotina Imoudu',
-  year: 'year: 3rd',
-  major: 'major: CS + Business',
-  pronouns: 'pronouns: she/her'
+  name: 'Amanda Lee',
+  year: '3rd',
+  major: 'CS + Design',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/amandayookyunglee/'
 };
 
 const onotina: Person = {
   picture: Onotina,
-  toolTipInfo: onotinaToolTip
-};
-
-const baydenToolTip: ToolTipInfo = {
-  name: 'name: Bayden Ibrahim',
-  year: 'year: 5th',
-  major: 'major: CS + Cogn Psych',
-  pronouns: 'pronouns: she/her'
+  name: 'Onotina Imoudu',
+  year: '3rd',
+  major: 'CS + Business',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/onotina-imoudu/'
 };
 
 const bayden: Person = {
   picture: Bayden,
-  toolTipInfo: baydenToolTip
-};
-
-const jessSuToolTip: ToolTipInfo = {
-  name: 'name: Jessica Su',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  name: 'Bayden Ibrahim',
+  year: '5th',
+  major: 'CS + Cogn Psych',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/bayden/'
 };
 
 const jessSu: Person = {
   picture: JessSu,
-  toolTipInfo: jessSuToolTip
-};
-
-const karynaToolTip: ToolTipInfo = {
-  name: 'name: Karyna Yen',
-  year: 'year: 3rd',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  name: 'Jessica Su',
+  year: '4th',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/jesssu/'
 };
 
 const karyna: Person = {
   picture: Karyna,
-  toolTipInfo: karynaToolTip
-};
-
-const karenToolTip: ToolTipInfo = {
-  name: 'name: Karen Li',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  name: 'Karyna Yen',
+  year: '3rd',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/karynayen/'
 };
 
 const karen: Person = {
   picture: Karen,
-  toolTipInfo: karenToolTip
+  name: 'Karen Li',
+  year: '4th',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/karen-x-li/'
 };
 
 // NEW MEMBERS
 
-const nelsonToolTip: ToolTipInfo = {
-  name: 'name: Nelson Dong',
-  year: 'year: 3rd',
-  major: 'major: CS',
-  pronouns: 'pronouns: he/him'
-};
-
 const nelson: Person = {
   picture: Nelson,
-  toolTipInfo: nelsonToolTip
-};
-
-const lucasToolTip: ToolTipInfo = {
-  name: 'name: Lucas Dunker',
-  year: 'year: 3rd',
-  major: 'major: CS',
-  pronouns: 'pronouns: he/him'
+  name: 'Nelson Dong',
+  year: '3rd',
+  major: 'CS',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/nelson-dong '
 };
 
 const lucas: Person = {
   picture: Lucas,
-  toolTipInfo: lucasToolTip
-};
-
-const aaryanToolTip: ToolTipInfo = {
-  name: 'name: Aaryan Jain',
-  year: 'year: 2nd',
-  major: 'major: CS + Econ',
-  pronouns: 'pronouns: he/him'
+  name: 'Lucas Dunker',
+  year: '3rd',
+  major: 'CS',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/lucasdunker/'
 };
 
 const aaryan: Person = {
   picture: Aaryan,
-  toolTipInfo: aaryanToolTip
-};
-
-const alyssaToolTip: ToolTipInfo = {
-  name: 'name: Alyssa Mui',
-  year: 'year: 4th',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  name: 'Aaryan Jain',
+  year: '2nd',
+  major: 'CS',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/aaryanja'
 };
 
 const alyssa: Person = {
   picture: Alyssa,
-  toolTipInfo: alyssaToolTip
-};
-
-const helenToolTip: ToolTipInfo = {
-  name: 'name: Helen Miao',
-  year: 'year: 3rd',
-  major: 'major: CS + Design',
-  pronouns: 'pronouns: she/her'
+  name: 'Alyssa Mui',
+  year: '4th',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/alyssamui'
 };
 
 const helen: Person = {
   picture: Helen,
-  toolTipInfo: helenToolTip
-};
-
-const jessYuToolTip: ToolTipInfo = {
-  name: 'name: Jessica Yu',
-  year: 'year: 4th',
-  major: 'major: CS + Math',
-  pronouns: 'pronouns: she/her'
+  name: 'Helen Miao',
+  year: '3rd',
+  major: 'CS + Design',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/helen-miao/'
 };
 
 const jessYu: Person = {
   picture: JessYu,
-  toolTipInfo: jessYuToolTip
-};
-
-const arethaToolTip: ToolTipInfo = {
-  name: 'name: Aretha Chen',
-  year: 'year: 3rd',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  name: 'Jessica Yu',
+  year: '4th',
+  major: 'CS + Math',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/jessicayu62/'
 };
 
 const aretha: Person = {
   picture: Aretha,
-  toolTipInfo: arethaToolTip
-};
-
-const katherineToolTip: ToolTipInfo = {
-  name: 'name: Katherine Zeng',
-  year: 'year: 4th',
-  major: 'major: CS + Business',
-  pronouns: 'pronouns: she/her'
+  name: 'Aretha Chen',
+  year: '3rd',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/aretha-chen'
 };
 
 const katherine: Person = {
   picture: Katherine,
-  toolTipInfo: katherineToolTip
-};
-
-const crystalToolTip: ToolTipInfo = {
-  name: 'name: Crystal Zhang',
-  year: 'year: 3rd',
-  major: 'major: CS + Design',
-  pronouns: 'pronouns: she/her'
+  name: 'Katherine Zeng',
+  year: '4th',
+  major: 'CS + Business',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/k-zeng/'
 };
 
 const crystal: Person = {
   picture: Crystal,
-  toolTipInfo: crystalToolTip
-};
-
-const mandyToolTip: ToolTipInfo = {
-  name: 'name: Mandy Rodriques',
-  year: 'year: 2nd',
-  major: 'major: Cybersecurity',
-  pronouns: 'pronouns: she/her'
+  name: 'Crystal Zhang',
+  year: '3rd',
+  major: 'CS + Design',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/cryystalzhang/'
 };
 
 const mandy: Person = {
   picture: Mandy,
-  toolTipInfo: mandyToolTip
-};
-
-const emmaToolTip: ToolTipInfo = {
-  name: 'name: Emma Vonbuelow',
-  year: 'year: 2nd',
-  major: 'major: CS',
-  pronouns: 'pronouns: she/her'
+  name: 'Mandy Rodriques',
+  year: '2nd',
+  major: 'Cybersecurity',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/amanda-rodriques-725613217/'
 };
 
 const emma: Person = {
   picture: Emma,
-  toolTipInfo: emmaToolTip
-};
-
-const nidhiToolTip: ToolTipInfo = {
-  name: 'name: Nidhi Pillai',
-  year: 'year: 3rd',
-  major: 'major: DS',
-  pronouns: 'pronouns: she/her'
+  name: 'Emma Vonbuelow',
+  year: '2nd',
+  major: 'CS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/ervb/'
 };
 
 const nidhi: Person = {
   picture: Nidhi,
-  toolTipInfo: nidhiToolTip
-};
-
-const lukeToolTip: ToolTipInfo = {
-  name: 'name: Luke Steimel',
-  year: 'year: 3rd',
-  major: 'major: CS',
-  pronouns: 'pronouns: he/him'
+  name: 'Nidhi Pillai',
+  year: '3rd',
+  major: 'DS',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-pillai-074a27180/'
 };
 
 const luke: Person = {
   picture: Luke,
-  toolTipInfo: lukeToolTip
-};
-
-const audreyToolTip: ToolTipInfo = {
-  name: 'name: Audrey Wong',
-  year: 'year: 2nd',
-  major: 'major: CS and Businss',
-  pronouns: 'pronouns: she/her'
+  name: 'Luke Steimel',
+  year: '3rd',
+  major: 'CS',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://linkedin.com/in/luke-steimel'
 };
 
 const audrey: Person = {
   picture: Audrey,
-  toolTipInfo: audreyToolTip
-};
-
-const johnToolTip: ToolTipInfo = {
-  name: 'name: John Sargent',
-  year: 'year: 2nd',
-  major: 'major: CS and Business',
-  pronouns: 'pronouns: he/him'
+  name: 'Audrey Wong',
+  year: '2nd',
+  major: 'CS and Businss',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/wong-audrey/'
 };
 
 const john: Person = {
   picture: John,
-  toolTipInfo: johnToolTip
+  name: 'John Sargent',
+  year: '2nd',
+  major: 'CS and Business',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/john--sargent/'
 };
 
 
@@ -397,4 +335,4 @@ const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Sponsorship', listOfPictures: sponsorshipPictures }
 ];
 
-export { mainSiteTabInfo, teamInfo, team };
+export { mainSiteTabInfo, mainSiteTabInfoFooter, mainSiteTabInfoFooterSecondary, teamInfo, team };

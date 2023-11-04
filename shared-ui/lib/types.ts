@@ -2,6 +2,8 @@ import { MouseEventHandler } from 'react';
 
 export interface StyledPrimaryButtonProps {
   $isSmallPrimary: boolean | undefined;
+  $transparent: boolean | undefined;
+  $isApplyButton: boolean | undefined;
 }
 
 export interface ButtonProps {
@@ -11,6 +13,9 @@ export interface ButtonProps {
   onClick?: MouseEventHandler;
   isSmallPrimary?: boolean;
   isClickable?: boolean;
+  transparent?: boolean;
+  isApplyButton?: boolean;
+  inHeader?: boolean;
 }
 
 export interface TimeRemainingProps {
@@ -34,19 +39,11 @@ export interface TeamColumnInfo {
 
 export interface Person {
   picture: string;
-  toolTipInfo: ToolTipInfo;
-}
-
-export interface ToolTipInfo {
   name: string;
   year: string;
   major: string;
   pronouns: string;
-}
-
-export interface ToolTipProps {
-  toolTipInfo: ToolTipInfo;
-  team: string;
+  linkedIn: string;
 }
 
 export interface Team {
@@ -82,6 +79,7 @@ export interface StyledHeaderProps {
 
 export interface FooterProps {
   tabs: TabInfo[];
+  secondaryTabs: TabInfo[];
   isDay: boolean;
 }
 
