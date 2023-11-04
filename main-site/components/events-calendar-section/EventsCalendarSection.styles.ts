@@ -3,12 +3,13 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H2, P } from '../../../shared-ui/style/typography';
 import { eventsCalendarData } from '../../lib/data';
+import {motion} from 'framer-motion'
 
 const StyledDesktopTextsContainer = styled.div`
   padding: 1em 0;
 `;
 
-const StyledSectionContainer = styled.div`
+const StyledSectionContainer = styled(motion.div)`
   padding-top: 5em;
   padding-bottom: 30em;
   @media ${max.tablet} {
@@ -17,7 +18,7 @@ const StyledSectionContainer = styled.div`
   }
 `;
 
-const StyledEventsContainer = styled.div`
+const StyledEventsContainer = styled(motion.div)`
   top: 3em;
   position: relative;
   display: flex;
@@ -162,7 +163,7 @@ const EventsSubHeader = styled(P)`
   }
 `;
 
-const StyledH2 = styled(H2)`
+const StyledH2 = styled(motion(H2))`
   text-align: center;
   color: ${colors.WHITE};
 `;

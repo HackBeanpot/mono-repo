@@ -3,14 +3,14 @@ import { StyledPrimaryButton } from './PrimaryButton.styles';
 import { ButtonProps } from '../../lib/types';
 import { buttonAnimations } from './PrimaryButton.animations';
 
-const PrimaryButton: React.FC<ButtonProps> = ({
+const PrimaryButton: React.FC<ButtonProps> = React.forwardRef(({
   btnText,
   btnLink,
   newTab = false,
   isSmallPrimary = false,
   transparent = false,
   isApplyButton = false,
-}) => {
+}, ref) => {
   const [isClicked, setIsClicked] = useState(false);
   if (!btnLink) {
     const ctaText = isClicked ? 'Copied to clipboard!' : btnText;
@@ -28,7 +28,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
       document.body.removeChild(el);
     };
     return (
-      <a onClick={onClick}>
+      <a ref = {ref} onClick={onClick}>
         <StyledPrimaryButton $isSmallPrimary={isSmallPrimary} $transparent={transparent} $isApplyButton={isApplyButton}>
           {ctaText}
         </StyledPrimaryButton>
@@ -37,7 +37,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
   }
 
   return (
-    <a href={btnLink} target={newTab ? '_blank' : '_self'}>
+    <a ref = {ref} href={btnLink} target={newTab ? '_blank' : '_self'}>
       <StyledPrimaryButton
         whileHover="hover"
         whileTap="tap"
@@ -50,5 +50,5 @@ const PrimaryButton: React.FC<ButtonProps> = ({
       </StyledPrimaryButton>
     </a>
   );
-};
+});
 export default PrimaryButton;

@@ -13,7 +13,7 @@ const StyledAboutSectionContainer = styled(motion.div)`
   }
 `;
 
-const StyledItemsContainer = styled.div`
+const StyledItemsContainer = styled(motion.div)`
   display: flex;
   margin: 5em;
   justify-content: center;
@@ -36,7 +36,7 @@ const StyledItemTextContainer = styled.div`
   }
 `;
 
-const StyledTitle = styled(H2)`
+const StyledTitle = styled(motion(H2))`
   color: white;
   text-align: center;
 `;
@@ -62,7 +62,7 @@ const StyledItemDescription = styled(P)`
   }
 `;
 
-const StyledItemContainer = styled.div`
+const StyledItemContainer = styled(motion.div)`
   width: 17em;
   display: flex;
   justify-content: center;

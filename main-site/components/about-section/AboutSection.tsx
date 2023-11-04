@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import { colors } from '../../../shared-ui/style/colors';
@@ -24,8 +24,9 @@ import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
 import Shell from '../../../shared-ui/images/shell.png';
-import { motion } from 'framer-motion';
-import variants from '../../../shared-ui/animations/variants';
+import { useInView } from 'react-intersection-observer';
+import {fadeInUp, hidden } from './AboutSection.animations';
+import { useAnimation } from 'framer-motion';
 
 function getImage(title: string): string {
   if (title === 'Community') {
@@ -43,15 +44,18 @@ const AboutSection: React.FC = () => {
     aboutSectionData[0]
   );
 
+  const animationControls = useAnimation();
+  const [ref, inView] = useInView();
+
+  // if the section is in view, start the animation for the section
+  useEffect(() => {
+    inView ? animationControls.start("animate") : animationControls.set("initial")
+  }, [animationControls, inView])
+
   return (
     <div id="about">
-      <StyledAboutSectionContainer
-        variants={variants.container}
-        initial="hidden"
-        whileInView="fadeInAndUp"
-        amount="all"
-      >
-        <StyledTitle>HackBeanpot is about...</StyledTitle>
+      <StyledAboutSectionContainer ref = {ref} initial = "initial" animate = {animationControls}>
+        <StyledTitle variants = {fadeInUp} >HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>
             <StyledLeftImage src={Community} />
@@ -92,7 +96,7 @@ const AboutSection: React.FC = () => {
         {isDesktop && (
           <StyledItemsContainer>
             {aboutSectionData.map((curr) => (
-              <StyledItemContainer key={curr.title}>
+              <StyledItemContainer key={curr.title} variants = {fadeInUp}>
                 <StyledItemImage src={getImage(curr.title)} />
                 <StyledItemTextContainer>
                   <StyledItemTitle color={colors.WHITE}>

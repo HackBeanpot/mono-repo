@@ -23,7 +23,7 @@ import Jellyfish from '../../../shared-ui/images/jellyfish.svg';
 import Whale from '../../../shared-ui/images/whale.svg';
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import { useInView } from 'framer-motion';
-import variants from '../../../shared-ui/animations/variants';
+import { fadeInUp, stagger } from './LandingSection.animations';
 import { CountdownProps, LandingSectionProps } from '../../lib/types';
 import { CountdownData } from '../../lib/data';
 import hourglass from '../../../shared-ui/images/hourglass.svg'
@@ -70,29 +70,29 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
 
   return (
-    <StyledLandingSectionContainer>
+    <StyledLandingSectionContainer initial = "initial" animate = "animate">
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
       <StyledBubble1 src = {Bubble} />
       <StyledBubble2 src = {Bubble2} />
       <StyledFish src = {Fish} />
       <StyledJellyfish src = {Jellyfish} />
       <StyledWhale src = {Whale} />
-      <StyledLandingTextContainer>
-        <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
-        <StyledThemeText>Under the Sea</StyledThemeText>
-        <StyledThemeTextSmall>February 9-11, 2024</StyledThemeTextSmall>
-        <StyledThemeTextParagraph> Location TBD</StyledThemeTextParagraph>
+      <StyledLandingTextContainer variants = {stagger} >
+        <StyledHackathonText variants = {fadeInUp}>HackBeanpot 2024</StyledHackathonText>
+        <StyledThemeText variants = {fadeInUp}>Under the Sea</StyledThemeText>
+        <StyledThemeTextSmall variants = {fadeInUp}>February 9-11, 2024</StyledThemeTextSmall>
+        <StyledThemeTextParagraph variants = {fadeInUp}> Location TBD</StyledThemeTextParagraph>
         {/* <StyledThemeTextParagraph> @ Wood Mackenzie (Formerly known as PowerAdvocate) <br/> 179 Lincoln St, Boston, MA 02111</StyledThemeTextParagraph> */}
         {/* <LocationTimeSection isDay={isDay} /> */}
         <StyledLandingButtonContainer
-          variants={variants.item}
+          variants={fadeInUp}
           btnText="Apply"
           btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
           isApplyButton={true}
           newTab
         />
         {/* <LocationTimeSection isDay={isDay} /> */}
-        <StyledCountdownContainer>
+        <StyledCountdownContainer variants = {fadeInUp}>
           <StyledHourglass src={hourglass} />
           <StyledCountdown>
             <Countdown targetDate={CountdownData[0].targetDate}/>

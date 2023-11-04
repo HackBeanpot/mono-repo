@@ -32,6 +32,10 @@ export interface ExploreSectionProps {
   isDay: boolean;
 }
 
+export interface EventsCalenderSectionProps {
+  isDay: boolean;
+}
+
 export interface TestimonialData {
   id: number;
   author: string;

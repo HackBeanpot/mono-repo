@@ -18,3 +18,53 @@ export const moonRock = {
     }
   }
 };
+
+
+export const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1
+    }
+  }
+};
+export const fadeInLeft = {
+  initial: {
+    x: -60,
+    opacity: 0
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1
+    }
+  }
+};
+
+export const fadeInRight = {
+  initial: {
+    x: 60,
+    opacity: 0
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1
+    }
+  }
+};
+
+export const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.5
+    }
+  }
+};

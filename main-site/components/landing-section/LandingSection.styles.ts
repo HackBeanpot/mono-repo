@@ -225,7 +225,7 @@ const StyledHourglass = styled.img`
   margin-right: 0.3em;
 `;
 
-const StyledCountdownContainer = styled.div`
+const StyledCountdownContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
 `;
