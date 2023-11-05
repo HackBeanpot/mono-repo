@@ -45,7 +45,7 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'When and where is HackBeanpot 2024?',
     answer:
-      'HackBeanpot 2024 will take place in a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
+      'HackBeanpot 2024 will take place over a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
   },
 
   {
