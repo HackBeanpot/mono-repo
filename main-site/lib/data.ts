@@ -20,7 +20,6 @@ import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
 import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
-import SchoolofFish from '../images/school-fish.svg'
 
 export const aboutSectionData: AboutSectionData[] = [
   {
