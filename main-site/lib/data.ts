@@ -43,14 +43,14 @@ export const aboutSectionData: AboutSectionData[] = [
 export const FaqSectionData: FaqData[] = [
   {
     id: 1,
-    question: 'When and where is HackBeanpot 2023?',
+    question: 'When and where is HackBeanpot 2024?',
     answer:
-      'HackBeanpot 2024 will take place on February 9th-11th! We will be releasing more details about the event location soon!'
+      'HackBeanpot 2024 will take place in a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
   },
 
   {
     id: 2,
-    question: 'Will HackBeanpot 2023 be in-person or virtual?',
+    question: 'Will HackBeanpot 2024 be in-person or virtual?',
     answer:
       'HackBeanpot 2024 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
   },
@@ -59,9 +59,9 @@ export const FaqSectionData: FaqData[] = [
     id: 3,
     question: 'How long is the event?',
     answer:
-    'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
+      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
   },
-  
+
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
@@ -279,7 +279,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: 'Learn the basics of React.js!',
     description: 'Learn the basics of HTML, CSS, and JS',
     prerequisites: 'None!',
-    date: new Date(2023, 10, 14), 
+    date: new Date(2023, 10, 14),
     time: '12:30 pm-2 pm',
     location: 'West Village H',
     room: '104',
@@ -288,10 +288,10 @@ export const eventsCalendarData: EventsCalendarData[] = [
   {
     title: 'Intro to React',
     subtitle: 'MiniHacks 2',
-    punchline: 'Learn the FUNdamentals of WebDev', 
+    punchline: 'Learn the FUNdamentals of WebDev',
     description: 'Learn the basics of HTML, CSS, and JS',
     prerequisites: 'None!',
-    date: new Date(2023, 10, 28), 
+    date: new Date(2023, 10, 28),
     time: '12:30 pm-2 pm',
     location: 'WVH',
     room: '104',
@@ -299,10 +299,10 @@ export const eventsCalendarData: EventsCalendarData[] = [
   {
     title: 'A Builder’s Entrepreneurial Journey',
     subtitle: 'An Intercollegiate Mixer',
-    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!', 
+    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
     description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
     prerequisites: 'None!',
-    date: new Date(2023, 11, 5), 
+    date: new Date(2023, 11, 5),
     time: '12:00 pm-4:00 pm',
     location: "Boston University's BUild Lab",
   },
@@ -310,7 +310,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     title: 'HackBeanpot x Gecko Robotics',
     description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
     prerequisites: 'None!',
-    date: new Date(2024, 1, 14), 
+    date: new Date(2024, 1, 14),
     time: 'TBD',
     location: 'Gecko Robotics Boston Office',
   }
