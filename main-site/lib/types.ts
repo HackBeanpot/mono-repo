@@ -14,8 +14,10 @@ export interface FaqItemProps {
 export type SectionData = AboutSectionData;
 
 export interface AboutSectionData {
+  id: number
   title: string;
   description: string;
+  image: string;
 }
 
 export interface LandingSectionProps {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useMatchMedia from 'react-use-match-media';
-import { getLeftOrRight, getLeftOrRightTestimonial } from '../../../lib/utils';
+import { getLeftOrRight, getLeftOrRightCarouselData } from '../../../lib/utils';
 import TestimonialCard from '../testimonial-card/TestimonialCard';
 import {
   StyledTestimonialsCenterContainer,
@@ -23,12 +23,12 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
   const isDesktop = useMatchMedia(min.tablet);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
+  const getLeftTestimonial: TestimonialData = getLeftOrRightCarouselData(
     'left',
     testimonialData,
     currentIndex
   );
-  const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
+  const getRightTestimonial: TestimonialData = getLeftOrRightCarouselData(
     'right',
     testimonialData,
     currentIndex
