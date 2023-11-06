@@ -20,7 +20,6 @@ import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
 import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
-import SchoolofFish from '../images/school-fish.svg'
 
 export const aboutSectionData: AboutSectionData[] = [
   {
@@ -65,8 +64,9 @@ export const FaqSectionData: FaqData[] = [
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
-    answer:
-      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+    // answer:
+    //   'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+    answer: "Applications will open soon! Keep an eye on this website and our instagram @hackbeanpot. We can't wait to read all of your amazing applications!"
   },
 
   {
@@ -279,7 +279,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: 'Learn the basics of React.js!',
     description: 'Learn the basics of HTML, CSS, and JS',
     prerequisites: 'None!',
-    date: new Date(2023, 10, 14),
+    date: convertToJSDate(2023, 10, 14),
     time: '12:30 pm-2 pm',
     location: 'West Village H',
     room: '104',
@@ -291,7 +291,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: 'Learn the FUNdamentals of WebDev',
     description: 'Learn the basics of HTML, CSS, and JS',
     prerequisites: 'None!',
-    date: new Date(2023, 10, 28),
+    date: convertToJSDate(2023, 10, 28),
     time: '12:30 pm-2 pm',
     location: 'WVH',
     room: '104',
@@ -302,7 +302,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
     description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
     prerequisites: 'None!',
-    date: new Date(2023, 11, 5),
+    date: convertToJSDate(2023, 11, 5),
     time: '12:00 pm-4:00 pm',
     location: "Boston University's BUild Lab",
   },
@@ -310,7 +310,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     title: 'HackBeanpot x Gecko Robotics',
     description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
     prerequisites: 'None!',
-    date: new Date(2024, 1, 14),
+    date: convertToJSDate(2024, 1, 14),
     time: 'TBD',
     location: 'Gecko Robotics Boston Office',
   }
@@ -322,3 +322,6 @@ export const CountdownData: CountdownProps[] = [
   }
 ];
 
+function convertToJSDate(year: number, month: number, date: number) {
+  return new Date(year, month-1, date);
+}

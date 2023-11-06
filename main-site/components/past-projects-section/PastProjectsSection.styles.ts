@@ -218,8 +218,9 @@ const StyledPirateFlag = styled.img`
   }
 
   @media ${max.tabletSm} {
-    top: 8em;
-    width: 9em;
+    top: 7em;
+    left: 3em;
+    width: 7em;
   }
 `;
 

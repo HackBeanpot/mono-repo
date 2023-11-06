@@ -91,7 +91,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
             }
           />
         )}
-           {
+        {
           <StyledTestimonialsRightContainer>
             <LeftOrRightTestimonialCard
               isSponsor={isSponsor}
