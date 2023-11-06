@@ -311,7 +311,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
     prerequisites: 'None!',
     date: convertToJSDate(2024, 1, 14),
-    time: 'TBD',
+    time: 'Time: TBD',
     location: 'Gecko Robotics Boston Office',
   }
 ];
