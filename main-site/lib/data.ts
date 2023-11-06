@@ -20,7 +20,6 @@ import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
 import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
-import SchoolofFish from '../images/school-fish.svg'
 
 export const aboutSectionData: AboutSectionData[] = [
   {
@@ -43,14 +42,14 @@ export const aboutSectionData: AboutSectionData[] = [
 export const FaqSectionData: FaqData[] = [
   {
     id: 1,
-    question: 'When and where is HackBeanpot 2023?',
+    question: 'When and where is HackBeanpot 2024?',
     answer:
-      'HackBeanpot 2024 will take place on February 9th-11th! We will be releasing more details about the event location soon!'
+      'HackBeanpot 2024 will take place over a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
   },
 
   {
     id: 2,
-    question: 'Will HackBeanpot 2023 be in-person or virtual?',
+    question: 'Will HackBeanpot 2024 be in-person or virtual?',
     answer:
       'HackBeanpot 2024 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
   },
@@ -59,14 +58,15 @@ export const FaqSectionData: FaqData[] = [
     id: 3,
     question: 'How long is the event?',
     answer:
-    'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
+      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
   },
-  
+
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
-    answer:
-      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+    // answer:
+    //   'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+    answer: "Applications will open soon! Keep an eye on this website and our instagram @hackbeanpot. We can't wait to read all of your amazing applications!"
   },
 
   {
@@ -288,7 +288,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
   {
     title: 'Intro to React',
     subtitle: 'MiniHacks 2',
-    punchline: 'Learn the FUNdamentals of WebDev', 
+    punchline: 'Learn the FUNdamentals of WebDev',
     description: 'Learn the basics of HTML, CSS, and JS',
     prerequisites: 'None!',
     date: convertToJSDate(2023, 10, 28),
@@ -299,7 +299,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
   {
     title: 'A Builder’s Entrepreneurial Journey',
     subtitle: 'An Intercollegiate Mixer',
-    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!', 
+    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
     description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
     prerequisites: 'None!',
     date: convertToJSDate(2023, 11, 5),
