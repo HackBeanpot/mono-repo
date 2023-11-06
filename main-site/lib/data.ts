@@ -279,7 +279,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: 'Learn the basics of React.js!',
     description: 'Learn the basics of HTML, CSS, and JS',
     prerequisites: 'None!',
-    date: new Date(2023, 10, 14),
+    date: convertToJSDate(2023, 10, 14),
     time: '12:30 pm-2 pm',
     location: 'West Village H',
     room: '104',
@@ -291,7 +291,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: 'Learn the FUNdamentals of WebDev',
     description: 'Learn the basics of HTML, CSS, and JS',
     prerequisites: 'None!',
-    date: new Date(2023, 10, 28),
+    date: convertToJSDate(2023, 10, 28),
     time: '12:30 pm-2 pm',
     location: 'WVH',
     room: '104',
@@ -302,7 +302,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
     description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
     prerequisites: 'None!',
-    date: new Date(2023, 11, 5),
+    date: convertToJSDate(2023, 11, 5),
     time: '12:00 pm-4:00 pm',
     location: "Boston University's BUild Lab",
   },
@@ -310,7 +310,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     title: 'HackBeanpot x Gecko Robotics',
     description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
     prerequisites: 'None!',
-    date: new Date(2024, 1, 14),
+    date: convertToJSDate(2024, 1, 14),
     time: 'TBD',
     location: 'Gecko Robotics Boston Office',
   }
@@ -322,3 +322,6 @@ export const CountdownData: CountdownProps[] = [
   }
 ];
 
+function convertToJSDate(year: number, month: number, date: number) {
+  return new Date(year, month-1, date);
+}
