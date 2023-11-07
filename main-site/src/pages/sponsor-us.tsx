@@ -13,8 +13,13 @@ import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-p
 import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
 import PastSponsorsSection from '../../components/sponsor-us-page/past-sponsor-section/PastSponsors';
 import Footer from '../../../shared-ui/components/footer/Footer';
+import { navigate } from "gatsby"
 
 const SponsorUsPage: React.FC = () => {
+
+  // currently under dev, remove when developing
+  return navigate("/404", { replace: true })
+
   const [isDay, setIsDay] = useState<boolean>(true);
   const isDesktop = useMatchMedia(min.tabletXs);
   const [isLoading, setIsLoading] = useState<boolean>(true);
