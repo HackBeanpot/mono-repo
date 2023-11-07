@@ -33,6 +33,7 @@ const StyledPastProjectsSection = styled.div`
   @media ${max.tablet} {
     text-align: center;
     width: 90%;
+    padding-bottom: 5vh;
   };
 `;
 
