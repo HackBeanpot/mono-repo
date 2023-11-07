@@ -30,6 +30,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { pastProjectsData } from '../../lib/data';
 import { PastProjectData, PastProjectProps } from '../../lib/types';
 import { getLeftOrRight } from '../../lib/utils';
+import { Divider } from 'antd';
 
 const PastProjectsSection: React.FC<PastProjectProps> = ({ isDay }) => {
   const [currItem, setCurrItem] = useState<PastProjectData>(
@@ -125,6 +126,7 @@ const PastProjectsSection: React.FC<PastProjectProps> = ({ isDay }) => {
               btnLink={currItem.btnLink}
               newTab
             />
+            <Divider />
           </StyledPastProjectsSection>
         </>
       )}
