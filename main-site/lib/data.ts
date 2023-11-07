@@ -20,22 +20,32 @@ import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
 import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
+import Community from '../../shared-ui/images/communityShell.png';
+import Exploration from '../../shared-ui/images/explorationShell.png';
+import Growth from '../../shared-ui/images/growthShell.png';
+
 
 export const aboutSectionData: AboutSectionData[] = [
   {
+    id: 0,
     title: 'Community',
     description:
-      'Connect with fellow students and our partners in the tech community. Make connections that will last a lifetime!'
+      'Connect with fellow students and our partners in the tech community. Make connections that will last a lifetime!',
+    image: Community,
   },
   {
+    id: 1,
     title: 'Exploration',
     description:
-      'Discover new ideas and technologies with the help of our experienced mentors, or learn new skills at our beginner-friendly workshops!'
+      'Discover new ideas and technologies with the help of our experienced mentors, or learn new skills at our beginner-friendly workshops!',
+    image: Exploration
   },
   {
+    id: 2,
     title: 'Growth',
     description:
-      'Expand beyond your horizons and grow your current skill set in a safe and supportive environment.'
+      'Expand beyond your horizons and grow your current skill set in a safe and supportive environment.',
+    image: Growth,
   }
 ];
 
@@ -323,5 +333,5 @@ export const CountdownData: CountdownProps[] = [
 ];
 
 function convertToJSDate(year: number, month: number, date: number) {
-  return new Date(year, month-1, date);
+  return new Date(year, month - 1, date);
 }

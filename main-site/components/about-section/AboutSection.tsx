@@ -17,23 +17,11 @@ import {
   StyledItemTitle
 } from './AboutSection.styles';
 import { aboutSectionData } from '../../lib/data';
-import Community from '../../../shared-ui/images/communityShell.png';
-import Exploration from '../../../shared-ui/images/explorationShell.png';
-import Growth from '../../../shared-ui/images/growthShell.png';
 import { AboutSectionData } from '../../lib/types';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
-import { getLeftOrRight } from '../../lib/utils';
+import { getLeftOrRight, getLeftOrRightCarouselData } from '../../lib/utils';
 import Shell from '../../../shared-ui/images/shell.png';
 
-function getImage(title: string): string {
-  if (title === 'Community') {
-    return Community;
-  }
-  if (title === 'Exploration') {
-    return Exploration;
-  }
-  return Growth;
-}
 
 const AboutSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
@@ -47,9 +35,9 @@ const AboutSection: React.FC = () => {
         <StyledTitle>HackBeanpot is about...</StyledTitle>
         {!isDesktop && (
           <StyledItemsContainer>
-            <StyledLeftImage src={Community} />
+            <StyledLeftImage src={getLeftOrRightCarouselData("left", aboutSectionData, currItem.id).image} />
             <StyledItemContainer>
-              <StyledCenterImage src={Exploration} />
+              <StyledCenterImage src={currItem.image} />
               <StyledItemTextContainer>
                 <StyledItemTitle color={colors.WHITE}>
                   {currItem.title}
@@ -78,7 +66,7 @@ const AboutSection: React.FC = () => {
                 </StyledArrowDescriptionContainer>
               </StyledItemTextContainer>
             </StyledItemContainer>
-            <StyledRightImage src={Growth} />
+            <StyledRightImage src={getLeftOrRightCarouselData("right", aboutSectionData, currItem.id).image} />
           </StyledItemsContainer>
         )}
 
@@ -86,7 +74,7 @@ const AboutSection: React.FC = () => {
           <StyledItemsContainer>
             {aboutSectionData.map((curr) => (
               <StyledItemContainer key={curr.title}>
-                <StyledItemImage src={getImage(curr.title)} />
+                <StyledItemImage src={curr.image} />
                 <StyledItemTextContainer>
                   <StyledItemTitle color={colors.WHITE}>
                     {curr.title}
