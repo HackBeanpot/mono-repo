@@ -47,7 +47,7 @@ const StyledLightHouse = styled.img`
 @media ${max.tabletLg} {
     width: 23em;
     height: 20em;
-    top: 45em;
+    top: 40em;
 }
 
 @media ${max.tablet} {
@@ -60,7 +60,7 @@ const StyledLightHouse = styled.img`
  @media ${max.tabletXs} {
   width: 10em;
   height: 13em;
-  left: -2.5em;
+  left: -4em;
   top: 40em;
 }
 `;
