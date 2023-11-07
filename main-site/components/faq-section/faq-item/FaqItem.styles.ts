@@ -35,6 +35,7 @@ const StyledFaqLine = styled.hr`
 const StyledFaqDropdown = styled(P)`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoRegular};
+  font-size: medium;
   text-align: left;
   margin: 0;
   padding: 1.5em;
