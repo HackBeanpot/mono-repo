@@ -28,7 +28,6 @@ const AboutSection: React.FC = () => {
   const [currItem, setCurrItem] = useState<AboutSectionData>(
     aboutSectionData[0]
   );
-  console.log(currItem);
 
   return (
     <div id="about">
