@@ -62,43 +62,26 @@ width: 8%;
   left: 3em;
 }
 `
-
 const StyledDiver = styled.img`
   position: absolute;
-  right: 2em;
-  top: 17em;
-  width: 20em;
-
+  right: 5em; 
+  bottom: 2em; 
+  width: 10em; 
+  @media ${min.mobile} {
+    right: 0em; 
+    bottom: -8em;
+    width: 20em; 
+  }
   @media ${min.tablet} {
-    top: 30em;
-    right: 6em;
-    width: 30em;
+    right: 8em; 
+    bottom: -7em; 
+    width: 25em; 
   }
   @media ${min.tabletLg} {
-    top: 28em;
-  }
-  @media (max-width: 767px) {
-    top: 30em;
-    right: 15em;
-  }
-  @media (max-width: 600px) {
-    top: 32em;
-    right: 5em;
-  }
-  @media (max-width: 540px) {
-    width: 50%;
-    top: 37em;
-  }
-  @media (max-width: 450px) {
-    top: 42em;
-  }
-  @media (max-width: 425px) {
-    top: 45em;
-  }
-  @media (max-width: 390px) {
-    top: 50em;
-  }
-`;
+    right: 4em; 
+    bottom: -9em;
+    width: 30em;
+  }`;
 
 const StyledButtonContainer = styled.div`
   @media ${max.tablet} {
