@@ -20,7 +20,6 @@ import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
 import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
-import SchoolofFish from '../images/school-fish.svg'
 import Community from '../../shared-ui/images/communityShell.png';
 import Exploration from '../../shared-ui/images/explorationShell.png';
 import Growth from '../../shared-ui/images/growthShell.png';
@@ -53,14 +52,14 @@ export const aboutSectionData: AboutSectionData[] = [
 export const FaqSectionData: FaqData[] = [
   {
     id: 1,
-    question: 'When and where is HackBeanpot 2023?',
+    question: 'When and where is HackBeanpot 2024?',
     answer:
-      'HackBeanpot 2024 will take place on February 9th-11th! We will be releasing more details about the event location soon!'
+      'HackBeanpot 2024 will take place over a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
   },
 
   {
     id: 2,
-    question: 'Will HackBeanpot 2023 be in-person or virtual?',
+    question: 'Will HackBeanpot 2024 be in-person or virtual?',
     answer:
       'HackBeanpot 2024 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
   },
@@ -75,8 +74,9 @@ export const FaqSectionData: FaqData[] = [
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
-    answer:
-      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+    // answer:
+    //   'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+    answer: "Applications will open soon! Keep an eye on this website and our instagram @hackbeanpot. We can't wait to read all of your amazing applications!"
   },
 
   {
@@ -321,7 +321,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
     prerequisites: 'None!',
     date: convertToJSDate(2024, 1, 14),
-    time: 'TBD',
+    time: 'Time: TBD',
     location: 'Gecko Robotics Boston Office',
   }
 ];
