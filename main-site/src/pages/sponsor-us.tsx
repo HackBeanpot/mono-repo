@@ -18,7 +18,7 @@ import { navigate } from "gatsby"
 const SponsorUsPage: React.FC = () => {
 
   // currently under dev, remove when developing
-  return navigate("/404", { replace: true })
+  return (<></>)
 
   const [isDay, setIsDay] = useState<boolean>(true);
   const isDesktop = useMatchMedia(min.tabletXs);
