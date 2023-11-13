@@ -74,9 +74,8 @@ export const FaqSectionData: FaqData[] = [
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
-    // answer:
-    //   'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
-    answer: "Applications will open soon! Keep an eye on this website and our instagram @hackbeanpot. We can't wait to read all of your amazing applications!"
+    answer:
+      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
   },
 
   {

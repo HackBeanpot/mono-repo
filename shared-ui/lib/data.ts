@@ -43,7 +43,7 @@ const mainSiteTabInfo: TabInfo[] = [
   { name: 'Sponsors', link: '/#sponsors' },
   { name: 'Team', link: '/#team' },
   { name: 'Sponsor Us', link: 'https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view', newTab: true },
-  // { name: 'Apply', link: 'https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431', newTab: true },
+  { name: 'Apply', link: 'https://apply.hackbeanpot.com', newTab: true },
 ];
 
 const mainSiteTabInfoFooter: TabInfo[] = [
