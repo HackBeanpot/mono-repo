@@ -81,13 +81,13 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
         <StyledThemeTextParagraph>Date & Location TBD</StyledThemeTextParagraph>
         {/* <StyledThemeTextParagraph> @ Wood Mackenzie (Formerly known as PowerAdvocate) <br/> 179 Lincoln St, Boston, MA 02111</StyledThemeTextParagraph> */}
         {/* <LocationTimeSection isDay={isDay} /> */}
-        {/* <StyledLandingButtonContainer
+        <StyledLandingButtonContainer
           btnText="Apply"
-          btnLink="https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431"
+          btnLink="https://apply.hackbeanpot.com"
           isApplyButton={true}
           newTab
-        /> */}
-        {/* <StyledCountdownContainer>
+        />
+        {/* <StyledCountdownContainer>x
           <StyledHourglass src={hourglass} />
           <StyledCountdown>
             <Countdown targetDate={CountdownData[0].targetDate}/>
