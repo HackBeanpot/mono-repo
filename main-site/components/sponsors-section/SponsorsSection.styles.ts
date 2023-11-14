@@ -11,7 +11,11 @@ const StyledSponsorsSectionContainer = styled.div`
 `;
 
 const StyledSponsorsHeader = styled(H2)`
-  margin: 1em 0;
+  margin: 1em;
+
+  @media ${max.tablet} {
+    margin: 0.75em;
+  }
 `;
 
 const StyledContactText = styled(H4)`
