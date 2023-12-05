@@ -48,7 +48,7 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
     StyledTabTitleWrapperProps.isSelected
       ? `${colors.BUTTON_GREEN}`
       : `${colors.BUTTON_DARK_GREEN}`};
-  height: 16em;
+  height: 14.27em;
   cursor: pointer;
   box-shadow: ${(StyledTabTitleWrapperProps): string =>
     StyledTabTitleWrapperProps.isLastIndex
@@ -59,7 +59,7 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
     padding-top: 0em;
     width: 50em;
     border-radius: 0em 0.75em 0em 0em;
-    margin: -0.1em;
+    margin-left: -0.25em;
     padding-right: 2em;
     box-shadow: none;
     border-bottom: none;
