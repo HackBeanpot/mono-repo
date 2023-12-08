@@ -3,7 +3,7 @@ import { max, min } from '../../../shared-ui/lib/responsive';
 import { H3, fonts } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
 import { StyledDropdown } from '../../styled-components/SecondarySelect.styles';
-import { StyledCactusButtonsProps } from '../../lib/types';
+import { StyledArrowButtonsProps } from '../../lib/types';
 
 const StyledMentorsSection = styled.div`
   padding-top: 5.5em;
@@ -14,7 +14,7 @@ const StyledMentorsSection = styled.div`
 `;
 
 const StyledMentorsFilterSection = styled.div`
-  padding-left: 5.5em;
+  padding-left: 8vw;
 
   @media ${max.tablet} {
     padding-left: 2.4em;
@@ -22,7 +22,9 @@ const StyledMentorsFilterSection = styled.div`
 `;
 
 const StyledMentorsHeader = styled(H3)`
-  margin-bottom: 1em;
+  padding-left: 8vw;
+  margin-bottom: 0.5em;
+  font-family: ${fonts.berkshireSwash};
 `;
 
 const StyledMentorsDropdownContainer = styled.div`
@@ -36,11 +38,14 @@ const StyledMentorsDropdownContainer = styled.div`
   }
   @media ${min.desktop} {
     display: inline-block;
+    margin-bottom: 3.5em;
   }
 `;
 
 const StyledMentorsDropdownWrapper = styled(StyledDropdown)`
-  width: 19em;
+  display: flex;
+  width: 20vw;
+  border-radius: 0.5em;
 
   @media ${max.tabletLg} {
     width: 50%;
@@ -49,7 +54,7 @@ const StyledMentorsDropdownWrapper = styled(StyledDropdown)`
     width: 60%;
   }
   @media ${max.mobile} {
-    width: 85%;
+    width: 15vw;
   }
 `;
 
@@ -87,6 +92,14 @@ const StyledMentorsListContainer = styled.div`
   }
 `;
 
+const StyledMermaid = styled.div`
+  position: absolute;
+  width: 30vh;
+  height: 30vw;
+  z-index: 0;
+  margin-left: 75vw;
+`;
+
 const StyledMentorContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -111,11 +124,14 @@ const StyledMentorContainer = styled.div`
 const StyledMentorName = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
-  font-size: 1.25em;
+  font-size: 1em;
   text-align: center;
+  margin-bottom: 0.2vh;
+  margin-top: 1vh;
+  z-index: 1;
 
   @media ${min.tabletLg} {
-    font-size: 1.7em;
+    font-size: 1.25em;
   }
 `;
 
@@ -123,6 +139,7 @@ const StyledMentorCompany = styled.div`
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 0.75em;
+  z-index: 1;
 
   @media ${min.tabletLg} {
     font-size: 1em;
@@ -130,10 +147,11 @@ const StyledMentorCompany = styled.div`
 `;
 
 const StyledMentorPosition = styled.div`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansLight};
   font-size: 0.75em;
   font-style: italic;
+  z-index: 1;
 
   @media ${min.desktop} {
     font-size: 1em;
@@ -144,6 +162,7 @@ const StyledMentorsPaginationContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 1em;
+
   @media ${min.desktop} {
     max-width: 95%;
   }
@@ -156,17 +175,16 @@ const StyledNoMentorsContainer = styled.div`
   gap: 0.75em;
 `;
 
-const StyledCactusButtons = styled.img<StyledCactusButtonsProps>`
-  width: ${(StyledCactusButtonsProps): string =>
-    StyledCactusButtonsProps.isToggled ? '3em' : '2em'};
-  height: ${(StyledCactusButtonsProps): string =>
-    StyledCactusButtonsProps.isToggled ? '3em' : '2em'};
+const StyledArrowButtons = styled.img<StyledArrowButtonsProps>`
+  width: 2em;
+  height: 2em;
   padding: 1em;
   align-self: center;
 `;
 
 const StyledImage = styled.img`
   border-radius: 50%;
+  z-index: 1;
 `;
 
 export {
@@ -182,7 +200,8 @@ export {
   StyledMentorCompany,
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
+  StyledMermaid,
   StyledNoMentorsContainer,
-  StyledCactusButtons,
+  StyledArrowButtons,
   StyledImage
 };

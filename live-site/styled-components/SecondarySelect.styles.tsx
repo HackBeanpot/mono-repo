@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import { min } from '../../shared-ui/lib/responsive';
 import { colors } from '../../shared-ui/style/colors';
 import { fonts } from '../../shared-ui/style/typography';
-
 export const StyledDropdown = styled.select`
-  border-color: ${colors.WHITE};
-  background-color: ${colors.BUTTON_DARK_GREEN};
+  border-color: ${colors.TRANSPARENT};
+  background-color: ${colors.BUTTON_DARK_BLUE};
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   border-radius: 0.3em;

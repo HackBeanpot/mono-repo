@@ -15,17 +15,17 @@ import {
   StyledMentorCompany,
   StyledMentorPosition,
   StyledMentorsPaginationContainer,
-  StyledCactusButtons,
+  StyledMermaid,
+  StyledArrowButtons,
   StyledNoMentorsContainer,
   StyledImage
 } from './MentorsSection.styles';
-import cactus1 from '../../../shared-ui/images/cactus1.png';
-import cactus2 from '../../../shared-ui/images/cactus2.png';
-import cactus3 from '../../../shared-ui/images/cactus3.png';
-import cactus4 from '../../../shared-ui/images/cactus4.png';
+import arrowLeft from '../../../shared-ui/images/arrowLeft.png';
+import arrowRight from '../../../shared-ui/images/arrowRight.png';
 import { MentorInfo } from '../../lib/types';
 import { StyledSecondaryButton } from '../../../shared-ui/components/secondary-button/SecondaryButton.styles';
 import MentorPopup from './mentor-popup/MentorPopup';
+import mermaid from './../../images/mermaid.png';
 
 const MentorsSection: React.FC = () => {
   const isSmallMobile = useMatchMedia(max.tabletSm);
@@ -63,7 +63,7 @@ const MentorsSection: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const pageSize = isSmallMobile ? 9 : isSmallTablet ? 12 : 15;
-  const imageSize = isMobile ? 100 : 160;
+  const imageSize = isMobile ? 90 : 140;
   const mentorsToDisplay = isMobile
     ? paginatedMentors[currentPage] ?? []
     : mentors;
@@ -195,17 +195,11 @@ const MentorsSection: React.FC = () => {
     setPopupMentor(undefined);
   };
 
-  const getCactus = (index: number): string => {
-    if (index % 4 === 0) {
-      return cactus1;
+  const getArrow = (index: number): string => {
+    if (index % 2 === 0) {
+      return arrowLeft;
     }
-    if (index % 4 === 1) {
-      return cactus2;
-    }
-    if (index % 4 === 2) {
-      return cactus3;
-    }
-    return cactus4;
+    return arrowRight;
   };
 
   useEffect(() => {
@@ -222,8 +216,8 @@ const MentorsSection: React.FC = () => {
         {displayMentorModal && (
           <MentorPopup mentor={modalMentor} onClose={closeMentorPopup} />
         )}
+        <StyledMentorsHeader>Mentors</StyledMentorsHeader>
         <StyledMentorsFilterSection>
-          <StyledMentorsHeader> Mentors </StyledMentorsHeader>
           <StyledMentorsDropdownContainer>
             <StyledMentorsDropdownWrapper
               id="expertise-filter"
@@ -266,7 +260,7 @@ const MentorsSection: React.FC = () => {
                 setOnShiftFilter((onShiftFilter) => !onShiftFilter)
               }
             />
-            <label htmlFor="onShiftMentors">Mentors on shift now</label>
+            <label htmlFor="onShiftMentors"> Mentors on shift now</label>
             <br />
             <input
               type="checkbox"
@@ -278,9 +272,12 @@ const MentorsSection: React.FC = () => {
                 setVirtualFilter((virtualFilter) => !virtualFilter)
               }
             />
-            <label htmlFor="virtualMentors">Virtual</label>
+            <label htmlFor="virtualMentors"> Virtual</label>
             <br />
           </StyledMentorsFilterRadio>
+          <StyledMermaid>
+            <img src={mermaid} />
+          </StyledMermaid>
         </StyledMentorsFilterSection>
         <StyledMentorsListContainer>
           {mentorsToDisplay.map((currMentor, index) => (
@@ -308,9 +305,9 @@ const MentorsSection: React.FC = () => {
         {isMobile && (
           <StyledMentorsPaginationContainer>
             {paginatedMentors.map((_, index) => (
-              <StyledCactusButtons
+              <StyledArrowButtons
                 key={index}
-                src={getCactus(index)}
+                src={getArrow(index)}
                 onClick={(): void => setCurrentPage(index)}
                 isToggled={index == currentPage}
               />
