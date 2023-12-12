@@ -5,14 +5,13 @@ import { colors } from '../../../../shared-ui/style/colors';
 
 const StyledResourceBox = styled.a`
   text-decoration: none;
-  width: 20em;
+  width: 17em;
   height: 22em;
-  background-color: ${colors.BUTTON_DARK_GREEN};
+  background-color: ${colors.LIGHT_GREEN};
   margin: 1em;
   border-radius: 1em;
-  border: 0.3em solid ${colors.PURPLE};
   cursor: pointer;
-  
+
   @media ${max.tabletLg} {
     height: 18em;
   }
@@ -30,9 +29,9 @@ const StyledResourceBox = styled.a`
 `;
 const StyledLabel = styled.div`
   font-family: ${fonts.nunitoSansBold};
-  margin: 0.6em;
+  margin: 2em;
   font-size: 2.8em;
-  color: ${colors.BUTTON_GREEN};
+  color: ${colors.WHITE};
 
   @media ${max.tabletLg} {
     font-size: 1.8em;
