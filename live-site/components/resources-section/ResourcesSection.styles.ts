@@ -7,10 +7,10 @@ const StyledResourcesSection = styled.div`
 `;
 
 const StyledHeader = styled(H3)`
-  font-family: ${fonts.nunitoSansSemibold};
+  font-family: ${fonts.berkshireSwash};
   padding-bottom: 1em;
   padding-left: 2.4em;
-  
+
   @media ${max.tablet} {
     padding-left: 1em;
     padding-bottom: 1em;
@@ -20,6 +20,8 @@ const StyledHeader = styled(H3)`
 const BoxesContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-left: 2em;
+  margin-right: 2em;
 
   @media ${max.tablet} {
     flex-wrap: wrap;

@@ -29,22 +29,42 @@ const StyledResourceBox = styled.a`
 `;
 const StyledLabel = styled.div`
   font-family: ${fonts.nunitoSansBold};
-  margin: 2em;
-  font-size: 2.8em;
+  margin: 1em;
+  font-size: 1.8em;
   color: ${colors.WHITE};
-
-  @media ${max.tabletLg} {
-    font-size: 1.8em;
-    margin: 0.4em;
-  }
-
-  @media ${max.tablet} {
-    font-size: 2.89em;
-  }
-
-  @media ${max.tabletSm} {
-    font-size: 1.8em;
-  }
 `;
 
-export { StyledResourceBox, StyledLabel };
+const StyledNewTabIcon = styled.img`
+  height: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: auto;
+  position: relative;
+`;
+
+const StyledBottomLeftStarfish = styled.img`
+  display: block;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 20%;
+`;
+
+const StyledPurpleStarfish = styled.img`
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 20%;
+`;
+
+const StyledRedStarfish = styled.img`
+  display: block;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 20%;
+`;
+
+export { StyledResourceBox, StyledLabel, StyledNewTabIcon, StyledBottomLeftStarfish, StyledPurpleStarfish, StyledRedStarfish };
