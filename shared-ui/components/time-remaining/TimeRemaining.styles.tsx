@@ -10,6 +10,7 @@ const StyledTimeRemainingContainer = styled.div`
 
 const StyledTimeRemaing = styled.div`
   box-sizing: border-box;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -19,19 +20,21 @@ const StyledTimeRemaing = styled.div`
 const StyledTimeRemainingText = styled(H2)`
    {
     display: flex;
-    padding-right: 0.2em;
-    color: white;
+    font-size: 60px;
+    letter-spacing: 0.001em; 
+    color: ${colors.TEXT_BOX_BLUE};
   }
 `;
 
 const StyledTimeRemainingLabel = styled(P)` {
-  color : ${colors.WHITE}
-  font-family: ${fonts.nunitoSansLight};
+  color : ${colors.TEXT_BOX_BLUE};
+  font-family: ${fonts.nunitoSansRegular};
   display: flex;
-  
+  font-size: 18px;
+  justify-content: center;
+  margin-top: -0.5em; 
 
   @media ${max.tabletLg} {
-    padding-left: 0.2em;
   }
 }`;
 
@@ -42,23 +45,23 @@ const StyledTimerContainer = styled.div`
 `;
 
 const StyledTimeRemainingDivider = styled(H2)`{
-  color : ${colors.WHITE}
+  color : ${colors.TEXT_BOX_BLUE};
   display: flex;
 }`;
 
 const StyledTimeRemainingHeader = styled(P)`
    {
-    color: ${colors.TEXT_BROWN};
-    font-family: ${fonts.nunitoSansLight};
-    font-size: 2em;
-    padding: 0.5em;
+    color: ${colors.TEXT_BOX_BLUE};
+    font-family: ${fonts.nunitoSansBold};
+    font-size: 1.25em;
+    margin: 0;
   }
 `;
 
 const StyledButtonContainer = styled.div`
   margin-top: 0.5em;
   justify-content: center;
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 7em;
 `;
 

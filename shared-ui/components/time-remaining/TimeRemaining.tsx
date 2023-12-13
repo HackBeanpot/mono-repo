@@ -20,10 +20,11 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
   const [seconds, setSeconds] = useState(0);
 
   const timeUnit: TimeRemainingInfo[] = [
-    { text: days, label: 'Days' },
-    { text: hours, label: 'Hours' },
-    { text: minutes, label: 'Minutes' },
-    { text: seconds, label: 'Seconds' }
+    { text: days, label: 'days' },
+    { text: -1, label: '\xa0'},
+    { text: hours, label: 'hours' },
+    { text: -1, label: '\xa0'},
+    { text: minutes, label: 'minutes' }
   ];
 
   useEffect(() => {
@@ -55,12 +56,12 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
 
   return (
     <StyledTimeRemainingContainer>
-      <StyledTimeRemainingHeader>Time Remaining</StyledTimeRemainingHeader>
+      <StyledTimeRemainingHeader>TIME REMAINING:</StyledTimeRemainingHeader>
       <StyledTimerContainer>
         {timeUnit.map((curr, index) => (
           <div key={`${curr.text}-${index}`}>
             <StyledTimeRemainingText>
-              {curr.text === 0 ? '00' : curr.text} {curr.label === 'Seconds' ? '' : ':'}
+              {`${curr.text === -1 ? '\xa0:\xa0' : curr.text === 0 ? '00' : curr.text}`}
             </StyledTimeRemainingText>
             <StyledTimeRemainingLabel>{curr.label}</StyledTimeRemainingLabel>
           </div>
