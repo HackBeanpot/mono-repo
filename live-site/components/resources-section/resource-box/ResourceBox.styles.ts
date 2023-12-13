@@ -3,68 +3,37 @@ import { max } from '../../../../shared-ui/lib/responsive';
 import { fonts } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 
-const StyledResourceBox = styled.a`
-  text-decoration: none;
-  width: 17em;
-  height: 22em;
-  background-color: ${colors.LIGHT_GREEN};
+const StyledResourceBox = styled.img`
   margin: 1em;
-  border-radius: 1em;
   cursor: pointer;
+  height: 21em;
 
   @media ${max.tabletLg} {
-    height: 18em;
+    height: 15em;
   }
 
   @media ${max.tablet} {
     height: 11em;
-    margin: 0.7em;
-    width: 43%;
-    height: 14em;
-  }
-
-  @media ${max.tabletSm} {
-    width: 40%;
   }
 `;
 const StyledLabel = styled.div`
-  font-family: ${fonts.nunitoSansBold};
-  margin: 1em;
-  font-size: 1.8em;
+  font-family: ${fonts.berkshireSwash};
+  margin: 0.6em;
+  font-size: 2.8em;
   color: ${colors.WHITE};
+
+  @media ${max.tabletLg} {
+    font-size: 1.8em;
+    margin: 0.4em;
+  }
+
+  @media ${max.tablet} {
+    font-size: 2.89em;
+  }
+
+  @media ${max.tabletSm} {
+    font-size: 1.8em;
+  }
 `;
 
-const StyledNewTabIcon = styled.img`
-  height: 10%;
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-  margin-top: auto;
-  position: relative;
-`;
-
-const StyledBottomLeftStarfish = styled.img`
-  display: block;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  height: 20%;
-`;
-
-const StyledPurpleStarfish = styled.img`
-  display: block;
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 20%;
-`;
-
-const StyledRedStarfish = styled.img`
-  display: block;
-  position: relative;
-  top: 0;
-  right: 0;
-  height: 20%;
-`;
-
-export { StyledResourceBox, StyledLabel, StyledNewTabIcon, StyledBottomLeftStarfish, StyledPurpleStarfish, StyledRedStarfish };
+export { StyledResourceBox, StyledLabel };

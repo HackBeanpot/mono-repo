@@ -1,4 +1,8 @@
 import { TabInfo, EventItem, Tag, TeamProps, ResourceBoxProps } from './types';
+import beginnerResourceGuide from '../images/beginnerResourceGuide.png'
+import projectGuide from '../images/projectGuide.png'
+import projectDemoGuide from '../images/projectDemoGuide.png'
+import judgingProcessGuide from '../images/judgingProcessGuide.png'
 
 const liveSiteTabInfo: TabInfo[] = [
   { name: 'Schedule', link: '/#schedule' },
@@ -11,19 +15,23 @@ const liveSiteTabInfo: TabInfo[] = [
 const resources: ResourceBoxProps[] = [
   {
     label: 'Beginner Resource Guide',
-    link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/edit?usp=sharing'
+    link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/edit?usp=sharing',
+    image: beginnerResourceGuide
   },
   {
     label: 'Project Guide',
-    link: '  https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing'
+    link: 'https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing',
+    image: projectGuide
   },
   {
     label: 'Project Demo Guide',
-    link: ''
+    link: '',
+    image: projectDemoGuide
   },
   {
     label: 'Judging Process Guide',
-    link: ''
+    link: '',
+    image: judgingProcessGuide
   }
 ];
 

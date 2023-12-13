@@ -7,8 +7,8 @@ const StyledWelcomeSectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left 1.3em;
-  margin-right: 1.3em;
+  margin-left: 5em;
+  margin-right: 5em;
   margin-top: 45%;
   @media ${max.tabletLg} {
     margin-top: 100%;
