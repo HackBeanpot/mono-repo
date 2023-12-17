@@ -5,6 +5,7 @@ import {
   StyledRaceSectionContainer,
   StyledRaceContainer,
   StyledRaceContent,
+  StyledRaceDescription,
   StyledCoralGroup
 } from '../WelcomeSection.styles';
 import Team from './Team';
@@ -25,7 +26,7 @@ const TeamRace: React.FC<TeamRaceProps> = ({teams,isDay}) => {
       <StyledRaceContainer isDay={isDay} teams={[]}>
         <StyledRaceContent>
           <StyledTeamHeader>Treasure Hunt Race</StyledTeamHeader>
-          <P>{`Earn points for yourself and your cabin by participating in events! Let’s see which cabin wins the 2024 Treasure Hunt Race!`}</P>
+          <StyledRaceDescription>Earn points for yourself and your cabin by participating in events! <br></br> Let’s see which cabin wins the 2024 Treasure Hunt Race!</StyledRaceDescription>
         </StyledRaceContent>
         {orderTeams(teams).map((team: TeamProps, position: number) => (
           <Team

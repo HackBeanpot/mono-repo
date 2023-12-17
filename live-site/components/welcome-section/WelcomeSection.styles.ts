@@ -39,14 +39,16 @@ const StyledRaceSectionContainer = styled.div`
 const StyledRaceContainer = styled.div<TeamRaceProps>`
   background-color: ${(props): string =>
     props.isDay ? colors.DEEP_SEA_BLUE : colors.NIGHT_TEXT_BOX_BLUE};
-  width: 45em;
-  border-radius: 6em;
-  padding: 3em 2em;
+  width: 40em;
+  border-radius: 4em;
+  padding: 3em 3em;
   @media ${max.tabletLg} {
     margin: 1.3em 0 0 0;
     width: 90%;
   }
 `;
+
+
 
 const StyledRaceContent = styled.div`
   display: flex;
@@ -80,6 +82,11 @@ const StyledWelcomeText = styled(P)`
   font-size: 1.2em;
 `;
 
+const StyledRaceDescription = styled(P)`
+color: ${colors.WHITE};
+  font-size: 1.2em;
+`;
+
 const StyledButtonContainer = styled.div`
   margin: 2em 0 0 0;
   @media ${max.tablet} {
@@ -96,7 +103,7 @@ const StyledTeamTextContainer = styled.div`
 
 const StyledCoralGroup = styled.img`
   position: relative;
-  right: -75%;
+  right: -63%;
   width: 30%;
   top: auto;
   bottom: -0.5vh;
@@ -111,9 +118,26 @@ const StyledCoralGroup = styled.img`
 
 `;
 
+const StyledFish = styled.img`
+  position: relative;
+  width: 35%;
+  top: 10vh;
+  right: -215%;
+  @media ${max.tabletLg} {
+    top: 15vh;
+    bottom: auto;
+  }
+  @media ${max.tablet} {
+    top: 15vh;
+    bottom: auto;
+  }
+
+`;
+
 export {
   StyledWelcomeSectionContainer,
   StyledRaceSectionContainer,
+  StyledRaceDescription,
   StyledRaceContainer,
   StyledWelcomeSectionContent,
   StyledWelcomeHeader,
@@ -121,5 +145,6 @@ export {
   StyledButtonContainer,
   StyledRaceContent,
   StyledTeamTextContainer,
-  StyledCoralGroup
+  StyledCoralGroup,
+  StyledFish
 };

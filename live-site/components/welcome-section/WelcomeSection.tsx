@@ -6,7 +6,8 @@ import {
   StyledWelcomeSectionContainer,
   StyledWelcomeSectionContent,
   StyledWelcomeHeader,
-  StyledWelcomeText
+  StyledWelcomeText,
+  StyledFish
 } from './WelcomeSection.styles';
 import {
   TeamInfo as defaultTeamInfo,
@@ -15,6 +16,7 @@ import {
 } from '../../lib/data';
 import { RaffleEntry, TeamProps, TeamRaceProps } from '../../lib/types';
 import { useAirtableApiWithPagination } from '../../src/hooks/useAirtable';
+import Fish from '../../images/fish-large-pink.svg';
 
 const WelcomeSection: React.FC<TeamRaceProps> = ({isDay}) => {
   const { data } = useAirtableApiWithPagination('Raffle', 'raffle');
@@ -80,6 +82,7 @@ const WelcomeSection: React.FC<TeamRaceProps> = ({isDay}) => {
             btnLink="https://join.slack.com/t/hackbeanpot2023/shared_invite/zt-1oo7nuvoh-l2~oR7Ba_HI_92ONG9WrPw"
           ></PrimaryButton>
         </StyledButtonContainer>
+        <StyledFish src={Fish}></StyledFish>
       </StyledWelcomeSectionContent>
       <TeamRace isDay = {isDay} teams={teamInfo} />
     </StyledWelcomeSectionContainer>
