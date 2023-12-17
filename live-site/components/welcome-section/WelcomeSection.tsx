@@ -13,10 +13,10 @@ import {
   onePointCodes,
   twoPointCodes
 } from '../../lib/data';
-import { RaffleEntry, TeamProps } from '../../lib/types';
+import { RaffleEntry, TeamProps, TeamRaceProps } from '../../lib/types';
 import { useAirtableApiWithPagination } from '../../src/hooks/useAirtable';
 
-const WelcomeSection: React.FC = () => {
+const WelcomeSection: React.FC<TeamRaceProps> = ({isDay}) => {
   const { data } = useAirtableApiWithPagination('Raffle', 'raffle');
 
   const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
@@ -63,16 +63,16 @@ const WelcomeSection: React.FC = () => {
   return (
     <StyledWelcomeSectionContainer>
       <StyledWelcomeSectionContent>
-        <StyledWelcomeHeader>Welcome to HackBeanpot 2023!</StyledWelcomeHeader>
+        <StyledWelcomeHeader>Dive into HackBeanpot 2024!</StyledWelcomeHeader>
         <StyledWelcomeText>
-          {`At HackBeanpot 2023, we aim to create a welcoming environment of
+        At HackBeanpot 2024, we aim to create a welcoming environment of
           ‘explorers’ focused on creativity, learning, and community
-          connection.\n\nHackers can expect to put their resourcefulness to the
+          connection. <br /> <br /> Hackers can expect to put their resourcefulness to the
           test during their hacking missions. Whether you’re a seasoned
           hackathon-goer, an ‘I-have-never-written-a-line-of-code beginner, or
           someone in between, we’re excited for you to embark on this adventure
-          with us!\n \nLearn more at `}
-          <u>www.hackbeanpot.com</u>
+          with us! <br /> <br /> Learn more at  
+          <u> www.hackbeanpot.com</u>
         </StyledWelcomeText>
         <StyledButtonContainer>
           <PrimaryButton
@@ -81,7 +81,7 @@ const WelcomeSection: React.FC = () => {
           ></PrimaryButton>
         </StyledButtonContainer>
       </StyledWelcomeSectionContent>
-      <TeamRace teams={teamInfo} />
+      <TeamRace isDay = {isDay} teams={teamInfo} />
     </StyledWelcomeSectionContainer>
   );
 };

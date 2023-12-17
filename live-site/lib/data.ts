@@ -24,11 +24,11 @@ const resources: ResourceBoxProps[] = [
 ];
 
 const TeamInfo: TeamProps[] = [
-  { name: 'Team Tatooine', points: 0, index: 0 },
-  { name: 'Team Essos', points: 0, index: 1 },
-  { name: 'Team SI Wong', points: 0, index: 2 },
-  { name: 'Team Arrakis', points: 0, index: 3 },
-  { name: 'Team Desert Biome', points: 0, index: 4 }
+  { name: 'Team XXX', points: 0, index: 0 },
+  { name: 'Team XXX', points: 0, index: 1 },
+  { name: 'Team XXX', points: 0, index: 2 },
+  { name: 'Team XXX', points: 0, index: 3 },
+  { name: 'Team XXX', points: 0, index: 4 }
 ];
 
 const onePointCodes = [

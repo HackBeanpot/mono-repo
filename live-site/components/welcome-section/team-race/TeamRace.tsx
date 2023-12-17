@@ -2,13 +2,16 @@ import React from 'react';
 import { P } from '../../../../shared-ui/style/typography';
 import { TeamProps, TeamRaceProps } from '../../../lib/types';
 import {
+  StyledRaceSectionContainer,
   StyledRaceContainer,
-  StyledRaceContent
+  StyledRaceContent,
+  StyledCoralGroup
 } from '../WelcomeSection.styles';
 import Team from './Team';
 import { StyledTeamHeader } from './Team.styles';
+import CoralGroup from '../../../images/coral-group.svg'
 
-const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
+const TeamRace: React.FC<TeamRaceProps> = ({teams,isDay}) => {
   const orderTeams = (teams: TeamProps[]): TeamProps[] => {
     return teams.sort(
       (team1: TeamProps, team2: TeamProps) => team2.points - team1.points
@@ -17,10 +20,12 @@ const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
 
   return (
     <>
-      <StyledRaceContainer>
+    <StyledRaceSectionContainer>
+    <StyledCoralGroup src = {CoralGroup} />
+      <StyledRaceContainer isDay={isDay} teams={[]}>
         <StyledRaceContent>
-          <StyledTeamHeader>Desert Race</StyledTeamHeader>
-          <P>{`Earn points for yourself and your cabin by participating in events! Let’s see which cabin wins the 2023 Desert Race!`}</P>
+          <StyledTeamHeader>Treasure Hunt Race</StyledTeamHeader>
+          <P>{`Earn points for yourself and your cabin by participating in events! Let’s see which cabin wins the 2024 Treasure Hunt Race!`}</P>
         </StyledRaceContent>
         {orderTeams(teams).map((team: TeamProps, position: number) => (
           <Team
@@ -32,6 +37,7 @@ const TeamRace: React.FC<TeamRaceProps> = ({ teams }) => {
           />
         ))}
       </StyledRaceContainer>
+      </StyledRaceSectionContainer>
     </>
   );
 };
