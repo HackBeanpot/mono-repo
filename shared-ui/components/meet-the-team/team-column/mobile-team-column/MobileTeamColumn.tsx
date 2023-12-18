@@ -18,6 +18,7 @@ import {
 } from './MobileTeamColumn.styles';
 import SecondaryButton from '../../../secondary-button/SecondaryButton';
 import linkedinLogo from '../../../../components/../images/meet-the-team/linkedin-logo.png';
+import { H4 } from '../../../../style/typography';
 
 const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
   listOfColumnInfo
@@ -42,7 +43,7 @@ const MobileTeamColumn: React.FC<MobileTeamColumnProps> = ({
           }
         />
         <StyledSecondaryButtonWrapper>
-          <SecondaryButton btnText={curColumn.teamLabel} isClickable={false} />
+          <H4 style={{ fontSize: '1.2em' }}>{curColumn.teamLabel}</H4>
         </StyledSecondaryButtonWrapper>
         <Arrow
           left={false}

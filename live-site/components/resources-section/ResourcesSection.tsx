@@ -5,8 +5,10 @@ import ResourceBox from './resource-box/ResourceBox';
 import {
   BoxesContainer,
   StyledHeader,
-  StyledResourcesSection
+  StyledResourcesSection,
+  StyledTurtle
 } from './ResourcesSection.styles';
+import Turtle from '../../images/turtle.png';
 
 const ResourcesSection: React.FC = () => {
   return (
@@ -19,9 +21,11 @@ const ResourcesSection: React.FC = () => {
               key={`${resource.link}-${index}`}
               link={resource.link}
               label={resource.label}
+              image={resource.image}
             />
           ))}
         </BoxesContainer>
+        <StyledTurtle src={Turtle} />
       </StyledResourcesSection>
     </div>
   );
