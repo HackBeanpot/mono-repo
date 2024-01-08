@@ -72,7 +72,7 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Launch Event',
     eventName: 'Opening Ceremony',
     eventLocation: 'The Hub',
-    tags: [Tag.beginner, Tag.workshop],
+    tags: [],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   },
@@ -94,7 +94,7 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Dinner',
     eventName: 'Dinner Pizza Party',
     eventLocation: 'Canteen',
-    tags: [Tag.workshop],
+    tags: [Tag.toast],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   },
@@ -105,7 +105,18 @@ const eventItemInfo: EventItem[] = [
     eventType: 'Workshop',
     eventName: 'Intro to Figma',
     eventLocation: 'Workshop Zone B',
-    tags: [Tag.meal],
+    tags: [],
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
+  },
+
+  {
+    id: 5,
+    time: '8:00 - 9:00 pm',
+    eventType: 'Activity',
+    eventName: 'Oasis Hula Hoop Contest',
+    eventLocation: 'Activity Zone B',
+    tags: [Tag.beginner, Tag.facebook],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis efficitur justo. Morbi in enim metus. Suspendisse id quam id mauris porttitor suscipit nec vel lacus. Mauris sit amet malesuada sapien. Nunc sagittis odio ut felis porttitor, id faucibus ipsum mollis. Vivamus tempor molestie ipsum, sed tincidunt neque porttitor sit amet. Quisque sit amet turpis pharetra, porta tellus sed, pharetra massa. Donec imperdiet et elit a feugiat. Nam egestas quam condimentum tellus maximus luctus. Aenean congue commodo volutpat. Praesent accumsan et odio non congue.'
   }

@@ -10,10 +10,10 @@ const tagColor = (tagType: string): string => {
       return colors.FIREBRICK;
       break;
     case 'Beginner-Friendly':
-      return colors.GREEN;
+      return colors.TEXT_LIGHT_GREEN;
       break;
     case 'Workshop':
-      return colors.PURPLE_TAG;
+      return colors.BRIGHT_PURPLE;
       break;
     case 'Action Item':
       return colors.RED;
@@ -33,13 +33,14 @@ const tagColor = (tagType: string): string => {
 };
 
 const StyledTag = styled.div<StyledTagAndTagTextProps>`
-  background-color: white;
-  border-color: ${(StyledTagAndTagTextProps): string => {
-    return tagColor(StyledTagAndTagTextProps.tag);
-  }};
-  border-style: solid;
+  background-color: ${colors.LIGHT_GREY};
   border-radius: 2em;
-  height: 2em;
+  padding-top: 0.25em;
+  height: 2.5em;
+
+  @media ${max.tabletLg} {
+    height: 2em;
+  }
 `;
 
 const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
