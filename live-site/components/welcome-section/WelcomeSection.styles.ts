@@ -73,9 +73,15 @@ const StyledWelcomeSectionContent = styled.div`
     margin-bottom: 2em;
     width: 90%;
   }
-  @media ${max.tabletSm} {
+  @media ${min.tabletSm} {
+    margin-right: 0;
+    margin-bottom: 2em;
+    width: 90%;
     margin-left: 5em;
   }
+  // @media ${max.tabletSm} {
+  //   margin-left: 5em;
+  // }
 `;
 
 const StyledWelcomeHeader = styled(H3)`
