@@ -45,11 +45,12 @@ const StyledRaceContainer = styled.div<TeamRaceProps>`
   @media ${max.tabletLg} {
     margin: 1.3em 0 0 0;
     width: 90%;
+    padding: 4em 4em;
   }
   @media ${max.tabletSm} {
     padding: 4em 4em;
   }
-  @media ${min.mobile} {
+  @media ${max.mobile} {
     padding: 4em 4em;
   }
 `;
@@ -77,7 +78,7 @@ const StyledWelcomeSectionContent = styled.div`
     margin-right: 0;
     margin-bottom: 2em;
     width: 90%;
-    margin-left: 5em;
+    margin-left: 4em;
   }
   // @media ${max.tabletSm} {
   //   margin-left: 5em;
