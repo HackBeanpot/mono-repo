@@ -44,11 +44,15 @@ const StyledRaceContainer = styled.div<TeamRaceProps>`
   padding: 3em 3em;
   @media ${max.tabletLg} {
     margin: 1.3em 0 0 0;
-    width: 90%;
+    width: 88%;
     padding: 4em 4em;
+  }
+  @media ${max.tablet} {
+    width: 80%;
   }
   @media ${max.tabletSm} {
     padding: 4em 4em;
+    width:74%;
   }
   @media ${max.mobile} {
     padding: 4em 4em;
@@ -80,9 +84,6 @@ const StyledWelcomeSectionContent = styled.div`
     width: 90%;
     margin-left: 4em;
   }
-  // @media ${max.tabletSm} {
-  //   margin-left: 5em;
-  // }
 `;
 
 const StyledWelcomeHeader = styled(H3)`
@@ -138,7 +139,7 @@ const StyledFish = styled.img`
   position: relative;
   width: 35%;
   top: 10vh;
-  right: -215%;
+  right: -210%;
   @media ${max.tabletLg} {
     top: 15vh;
     bottom: auto;
