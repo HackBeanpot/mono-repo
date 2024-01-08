@@ -29,12 +29,13 @@ const StyledTabTitle = styled(P)`
   }
 `;
 const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
-  border: 2px solid ${colors.HEADER_FOOTER_BLUE};
+  border: 2px solid ${colors.TRANSPARENT};
   border-radius: 0.75em 0px 0px 0.75em;
   width: 2.9em;
   padding-top: 1em;
   padding-left: 0.4em;
   padding-right: 0.4em;
+  margin-right: 0.2em;
   text-align: center;
   font-size: 0.8em;
   box-sizing: border-box;
@@ -42,12 +43,16 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
   transition-timing-function: linear;
   color: ${(StyledTabTitleWrapperProps): string =>
     StyledTabTitleWrapperProps.isSelected
-      ? `${colors.BLACK}`
+      ? `${colors.TEXT_DARKER_BROWN}`
       : `${colors.WHITE}`};
   background-color: ${(StyledTabTitleWrapperProps): string =>
     StyledTabTitleWrapperProps.isSelected
-      ? `${colors.BUTTON_GREEN}`
-      : `${colors.BUTTON_DARK_GREEN}`};
+      ? `${colors.YELLOW_GREEN}`
+      : `${colors.DARK_YELLOW_GREEN}`};
+  font-weight: ${(StyledTabTitleWrapperProps): string =>
+    StyledTabTitleWrapperProps.isSelected
+      ? `bold`
+      : `normal`};
   height: 16em;
   cursor: pointer;
   box-shadow: ${(StyledTabTitleWrapperProps): string =>
@@ -74,22 +79,23 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
 `;
 const StyledTabContent = styled(P)`
   padding-left: 1em;
-  padding-top: 0.5em;
-  color: ${colors.BLACK};
+  padding-top: 0.75em;
+  color: ${colors.TEXT_DARKER_BROWN};
+  font-weight: bold;
 `;
 const StyledTabContentContainer = styled.div`
-  background-color: ${colors.BUTTON_GREEN};
-  height: 47.7em;
+  background-color: ${colors.YELLOW_GREEN};
+  height: 53.5em;
   width: 100%;
   margin-right: 5em;
-  border: 2px solid ${colors.HEADER_FOOTER_BLUE};
+  border: 2px solid ${colors.TRANSPARENT};
   border-left: none;
   border-radius: 0px 0.75em 0.75em 0em;
-
+  
   @media ${max.tablet} {
     margin-left: 2em;
     width: auto;
-    border-left: 2px solid ${colors.HEADER_FOOTER_BLUE};
+    border-left: 2px solid ${colors.TRANSPARENT};
     margin-right: 2em;
     border-radius: 0em 0.75em 0em 0em;
   }
