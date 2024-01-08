@@ -19,7 +19,7 @@ const EventScheduleSection: React.FC = () => {
       <EventScheduleTextButtonContainer>
         <StyledEventScheduleSubText>
           Dates and times are displayed in your local timezone. Schedule in EST
-          can be found here.
+          can be found here. The password for all Zoom meetings can be found pinned in the #announcements Slack channel.
           <br />
           <StyledBoldSubText>
             Please be sure to attend all events labeled "Everyone".
