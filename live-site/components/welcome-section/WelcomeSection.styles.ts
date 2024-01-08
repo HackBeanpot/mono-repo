@@ -125,7 +125,7 @@ const StyledCoralGroup = styled.img`
   bottom: -0.5vh;
   @media ${max.tabletLg} {
     top: auto;
-    bottom: -0.5vh;
+    bottom: -2vh;
   }
   @media ${max.tablet} {
     top: auto;
