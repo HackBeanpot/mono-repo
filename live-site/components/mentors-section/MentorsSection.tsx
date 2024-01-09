@@ -25,7 +25,7 @@ import arrowRight from '../../../shared-ui/images/arrowRight.png';
 import { MentorInfo } from '../../lib/types';
 import { StyledSecondaryButton } from '../../../shared-ui/components/secondary-button/SecondaryButton.styles';
 import MentorPopup from './mentor-popup/MentorPopup';
-import mermaid from './../../images/mermaid.png';
+import mermaid from './../../images/Mermaid.svg';
 
 const MentorsSection: React.FC = () => {
   const isSmallMobile = useMatchMedia(max.tabletSm);
@@ -275,9 +275,7 @@ const MentorsSection: React.FC = () => {
             <label htmlFor="virtualMentors"> Virtual</label>
             <br />
           </StyledMentorsFilterRadio>
-          <StyledMermaid>
-            <img src={mermaid} />
-          </StyledMermaid>
+          <StyledMermaid src={mermaid} />
         </StyledMentorsFilterSection>
         <StyledMentorsListContainer>
           {mentorsToDisplay.map((currMentor, index) => (

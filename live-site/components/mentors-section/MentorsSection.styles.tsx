@@ -92,12 +92,11 @@ const StyledMentorsListContainer = styled.div`
   }
 `;
 
-const StyledMermaid = styled.div`
+const StyledMermaid = styled.img`
   position: absolute;
-  width: 30vh;
-  height: 30vw;
+  width: 15%;
+  right: 10vw;
   z-index: 0;
-  margin-left: 75vw;
 `;
 
 const StyledMentorContainer = styled.div`
