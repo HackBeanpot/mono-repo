@@ -51,30 +51,41 @@ const IndexPage: React.FC = () => {
     return null;
   }
 
-  return (
-    <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={mainSiteTabInfo} isDay={isDay} />
-      <LandingSection isDay={isDay} setIsDay={setIsDay} />
-      <ExploreSection isDay={isDay} />
-      <AboutSection />
-      {/* <EventsCalendarSection /> */}
+  const mlhStyles = {
+    display: 'block',
+    maxWidth: 100,
+    minWidth: '60',
+    position: 'fixed',
+    right: '50px',
+    top: '0',
+    width: '10%',
+    zIndex: '10000'
+  } as React.CSSProperties;
+  
 
-      <EventsCalendarSection isDay={isDay}/>
-      <TestimonialsSection testimonialData={testimonialSectionData}/>
-      <PastProjectsSection isDay={isDay} />
-      <PastPhotosSection />
-      <FaqSection />
-      {/* <CovidSection /> */}
-      <SponsorsSection />
-      <MeetTheTeamSection />
-      <AdventureAheadSection />
-      {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
-      <Footer
-        tabs={mainSiteTabInfoFooter}
-        secondaryTabs={mainSiteTabInfoFooterSecondary}
-        isDay={isDay}
-      />
-    </StyledPageContainer>
+  return (
+    <><StyledPageContainer className={getBackgroundClassName()}>
+        <Header tabs={mainSiteTabInfo} isDay={isDay} />
+        <LandingSection isDay={isDay} setIsDay={setIsDay} />
+        <ExploreSection isDay={isDay} />
+        <AboutSection />
+        {/* <EventsCalendarSection /> */}
+
+        <EventsCalendarSection isDay={isDay} />
+        <TestimonialsSection testimonialData={testimonialSectionData} />
+        <PastProjectsSection isDay={isDay} />
+        <PastPhotosSection />
+        <FaqSection />
+        {/* <CovidSection /> */}
+        <SponsorsSection />
+        <MeetTheTeamSection />
+        <AdventureAheadSection />
+        {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
+        <Footer
+          tabs={mainSiteTabInfoFooter}
+          secondaryTabs={mainSiteTabInfoFooterSecondary}
+          isDay={isDay} />
+      </StyledPageContainer></>
   );
 };
 

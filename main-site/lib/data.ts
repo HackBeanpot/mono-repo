@@ -20,37 +20,46 @@ import group from '../../shared-ui/images/group.png';
 import intuitLogo from '../images/intuitLogo.png';
 import microsoftLogoPadded from '../images/microsoftLogoPadded.png';
 import woodMackenzieLogo from '../images/woodMackenzieLogo.png';
-import SchoolofFish from '../images/school-fish.svg'
+import Community from '../../shared-ui/images/communityShell.png';
+import Exploration from '../../shared-ui/images/explorationShell.png';
+import Growth from '../../shared-ui/images/growthShell.png';
+
 
 export const aboutSectionData: AboutSectionData[] = [
   {
+    id: 0,
     title: 'Community',
     description:
-      'Connect with fellow students and our partners in the tech community. Make connections that will last a lifetime!'
+      'Connect with fellow students and our partners in the tech community. Make connections that will last a lifetime!',
+    image: Community,
   },
   {
+    id: 1,
     title: 'Exploration',
     description:
-      'Discover new ideas and technologies with the help of our experienced mentors, or learn new skills at our beginner-friendly workshops!'
+      'Discover new ideas and technologies with the help of our experienced mentors, or learn new skills at our beginner-friendly workshops!',
+    image: Exploration
   },
   {
+    id: 2,
     title: 'Growth',
     description:
-      'Expand beyond your horizons and grow your current skill set in a safe and supportive environment.'
+      'Expand beyond your horizons and grow your current skill set in a safe and supportive environment.',
+    image: Growth,
   }
 ];
 
 export const FaqSectionData: FaqData[] = [
   {
     id: 1,
-    question: 'When and where is HackBeanpot 2023?',
+    question: 'When and where is HackBeanpot 2024?',
     answer:
-      'HackBeanpot 2024 will take place on February 9th-11th! We will be releasing more details about the event location soon!'
+      'HackBeanpot 2024 will take place over a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
   },
 
   {
     id: 2,
-    question: 'Will HackBeanpot 2023 be in-person or virtual?',
+    question: 'Will HackBeanpot 2024 be in-person or virtual?',
     answer:
       'HackBeanpot 2024 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
   },
@@ -59,9 +68,9 @@ export const FaqSectionData: FaqData[] = [
     id: 3,
     question: 'How long is the event?',
     answer:
-    'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
+      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
   },
-  
+
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
@@ -274,63 +283,46 @@ export const pastProjectsData: PastProjectData[] = [
 
 export const eventsCalendarData: EventsCalendarData[] = [
   {
-    title: 'Event 1',
-    subtitle: 'Sub-intro',
-    punchline:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-    prerequisites: 'NONE',
-    date: new Date(2022, 10, 16),
-    time: '1:30pm-3pm',
-    location: 'Northeastern University',
-    room: 'Ryder Hall 253',
-    image: SchoolofFish
+    title: 'Intro to Web Development',
+    subtitle: 'MiniHacks 1',
+    punchline: 'Learn the basics of React.js!',
+    description: 'Learn the basics of HTML, CSS, and JS',
+    prerequisites: 'None!',
+    date: convertToJSDate(2023, 10, 14),
+    time: '12:30 pm-2 pm',
+    location: 'West Village H',
+    room: '104',
   },
 
   {
-    title: 'Event 1',
-    subtitle: 'Sub-intro',
-    punchline:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-    prerequisites: 'NONE',
-    date: new Date(2022, 10, 16),
-    time: '1:30pm-3pm',
-    location: 'Northeastern University',
-    room: 'Ryder Hall 253'
+    title: 'Intro to React',
+    subtitle: 'MiniHacks 2',
+    punchline: 'Learn the FUNdamentals of WebDev',
+    description: 'Learn the basics of HTML, CSS, and JS',
+    prerequisites: 'None!',
+    date: convertToJSDate(2023, 10, 28),
+    time: '12:30 pm-2 pm',
+    location: 'WVH',
+    room: '104',
   },
   {
-    title: 'Event 1',
-    subtitle: 'Sub-intro',
-    punchline:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-    Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-    prerequisites: 'NONE',
-    date: new Date(2022, 10, 16),
-    time: '1:30pm-3pm',
-    location: 'Northeastern University',
-    room: 'Ryder Hall 253'
+    title: 'A Builder’s Entrepreneurial Journey',
+    subtitle: 'An Intercollegiate Mixer',
+    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
+    description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
+    prerequisites: 'None!',
+    date: convertToJSDate(2023, 11, 5),
+    time: '12:00 pm-4:00 pm',
+    location: "Boston University's BUild Lab",
   },
-  // {
-  //   title: 'Event 1',
-  //   subtitle: 'Sub-intro',
-  //   punchline:
-  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-  //   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  //   Donec dolor quam, tincidunt sed dapibus at, molestie nec libero. 
-  //   Sed et commodo nibh. Nulla in ullamcorper tortor, et auctor elit.`,
-  //   prerequisites: 'NONE',
-  //   date: new Date(2022, 10, 16),
-  //   time: '1:30pm-3pm',
-  //   location: 'Northeastern University',
-  //   room: 'Ryder Hall 253'
-  // }
+  {
+    title: 'HackBeanpot x Gecko Robotics',
+    description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
+    prerequisites: 'None!',
+    date: convertToJSDate(2024, 1, 14),
+    time: 'Time: TBD',
+    location: 'Gecko Robotics Boston Office',
+  }
 ];
 
 export const CountdownData: CountdownProps[] = [
@@ -339,3 +331,6 @@ export const CountdownData: CountdownProps[] = [
   }
 ];
 
+function convertToJSDate(year: number, month: number, date: number) {
+  return new Date(year, month - 1, date);
+}

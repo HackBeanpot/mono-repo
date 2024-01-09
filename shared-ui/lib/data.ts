@@ -43,20 +43,19 @@ const mainSiteTabInfo: TabInfo[] = [
   { name: 'Sponsors', link: '/#sponsors' },
   { name: 'Team', link: '/#team' },
   { name: 'Sponsor Us', link: 'https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view', newTab: true },
-  { name: 'Apply', link: 'https://hackbeanpot.us10.list-manage.com/subscribe?u=a98050d47fdae2481521f0474&id=dccd8c8431', newTab: true },
+  { name: 'Apply', link: 'https://apply.hackbeanpot.com', newTab: true },
 ];
 
 const mainSiteTabInfoFooter: TabInfo[] = [
   { name: 'About', link: '/#about' },
-  { name: 'Stories', link: '/#stories' },
-  { name: 'COVID safety', link: '/#covid-safety' },
+  { name: 'Testimonials', link: '/#testimonials' },
+  { name: 'Projects', link: '/#projects' },
   { name: 'FAQ', link: '/#faq' },
   { name: 'Sponsors', link: '/#sponsors' },
 ];
 
 const mainSiteTabInfoFooterSecondary: TabInfo[] = [
-  { name: 'Event archive', link: '/#event-archive' },
-  { name: 'Project gallery', link: '/#project-gallery' },
+  { name: 'Project gallery', link: 'https://projects.hackbeanpot.com' },
   { name: 'Contact us', link: 'mailto:team@hackbeanpot.com' },
 ];
 

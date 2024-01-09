@@ -72,6 +72,7 @@ const StyledEventTimeTopicContainer = styled.div`
 
 const StyledEventItemHeader = styled(H3)`
   padding-left: 2em;
+  color: ${colors.BLACK}; // placeholder color plz remove when time
   padding-top: 1em;
   margin-bottom: 0.25em;
   font-size: 1.7em;

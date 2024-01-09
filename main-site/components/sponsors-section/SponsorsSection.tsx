@@ -49,18 +49,11 @@ const SponsorsSection: React.FC = () => {
           Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to
           us at team@hackbeanpot.com or check out our sponsorship packet!
         </StyledContactText>
-        <ButtonWrapper>
-          <PrimaryButton
-            btnText="View Informational Packet"
-            newTab={true}
-            btnLink="https://drive.google.com/file/d/1MF2UVMxJspiTrQzGfr0CNjQPzX_p4nKl/view"
-          />
           <PrimaryButton
             btnText="View Sponsorship Packet"
             newTab={true}
-            btnLink="https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view"
+            btnLink="https://drive.google.com/file/d/1Kgv_9lLeJcLLsIcqP-qngWeQNgjgLSU2/view"
           />
-        </ButtonWrapper>
         {/* <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader> */}
         {/* {!isDesktop && (
         <>

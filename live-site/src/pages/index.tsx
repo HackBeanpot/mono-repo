@@ -17,6 +17,8 @@ import EventScheduleSection from '../../components/event-schedule-section/EventS
 import WelcomeSection from '../../components/welcome-section/WelcomeSection';
 import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
+import { StyledOurTeamCore } from '../../../shared-ui/components/meet-the-team/meet-all-core/MeetAllCore.styles';
+import OurTeamSection from '../../components/our-team-section/OurTeamSection';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
@@ -30,15 +32,15 @@ const IndexPage: React.FC = () => {
 
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
-      return 'day-background-desktop';
+      return 'day-gradient-desktop';
     }
     if (isDay && !isDesktop) {
-      return 'mobile-light-background';
+      return 'mobile-light-gradient';
     }
     if (!isDay && isDesktop) {
-      return 'dark-background-desktop';
+      return 'dark-gradient-desktop';
     }
-    return 'mobile-dark-background';
+    return 'mobile-dark-gradient';
   };
 
   useEffect(() => {
@@ -61,6 +63,7 @@ const IndexPage: React.FC = () => {
       <EventScheduleSection />
       <MentorsSection />
       <ResourcesSection />
+      <OurTeamSection />
       <MeetTheTeamSection />
       <FeedbackJoinCoreSection />
       <TimeRemaining target={new Date('02/12/2023 14:00:00')} />

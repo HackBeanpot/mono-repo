@@ -1,5 +1,3 @@
-import { TestimonialData } from './types';
-
 export function getLeftOrRight<T>(
   direction: string,
   sectionData: T[],
@@ -22,29 +20,27 @@ export function getLeftOrRight<T>(
   return currItem;
 }
 
-export function getLeftOrRightTestimonial(
-  side: string,
-  testimonialData: TestimonialData[],
+// TO DO: Can refactor this and the above function into one. Avoiding for sake of speed
+export function getLeftOrRightCarouselData<CarouselData>(
+  side: "left" | "right",
+  carouselData: CarouselData[],
   currentIndex: number
-): TestimonialData {
-  const testimonialDatalength = testimonialData.length;
-  console.log(testimonialDatalength);
-  if (side == 'left') {
-    if (currentIndex == 0) {
-      return testimonialData[testimonialDatalength - 2];
+): CarouselData {
+  const carouselDataLength = carouselData.length;
+
+  if (side === "left") {
+    if (currentIndex === 0) {
+      return carouselData[carouselDataLength - 1];
     } else {
-      return testimonialData[currentIndex - 1];
+      return carouselData[currentIndex - 1];
+    }
+  } else {
+    if (currentIndex === carouselDataLength - 1) {
+      return carouselData[0];
+    } else {
+      return carouselData[currentIndex + 1];
     }
   }
 
-
-  if (side == 'right') {
-    if (currentIndex == testimonialDatalength - 1) {
-      return testimonialData[currentIndex - 2];
-    } else {
-      return testimonialData[currentIndex + 1];
-    }
-  }
-  return testimonialData[currentIndex];
+  return carouselData[currentIndex];
 }
-

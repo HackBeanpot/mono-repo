@@ -153,6 +153,7 @@ const StyledWhale = styled.img`
   top: 80vh;
   left: 0;
   width: 30%;
+  z-index: 1;
   @media ${max.tabletLg} {
     top: 80vw;
   }

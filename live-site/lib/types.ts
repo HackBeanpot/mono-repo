@@ -8,6 +8,7 @@ export interface TabInfo {
 export interface ResourceBoxProps {
   label: string;
   link: string;
+  image: string;
 }
 
 export interface JudgeOutputType {

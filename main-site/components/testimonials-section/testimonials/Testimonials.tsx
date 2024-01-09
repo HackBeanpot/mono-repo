@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useMatchMedia from 'react-use-match-media';
-import { getLeftOrRight, getLeftOrRightTestimonial } from '../../../lib/utils';
+import { getLeftOrRight, getLeftOrRightCarouselData } from '../../../lib/utils';
 import TestimonialCard from '../testimonial-card/TestimonialCard';
 import {
   StyledTestimonialsCenterContainer,
@@ -23,12 +23,16 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
   const isDesktop = useMatchMedia(min.tablet);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
+<<<<<<< HEAD
   const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
+=======
+  const getLeftTestimonial: TestimonialData = getLeftOrRightCarouselData(
+>>>>>>> 68dd83ee2593b77f98d857147e44094f55659acc
     'left',
     testimonialData,
     currentIndex
   );
-  const getRightTestimonial: TestimonialData = getLeftOrRightTestimonial(
+  const getRightTestimonial: TestimonialData = getLeftOrRightCarouselData(
     'right',
     testimonialData,
     currentIndex
@@ -91,7 +95,11 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
             }
           />
         )}
+<<<<<<< HEAD
            {
+=======
+        {
+>>>>>>> 68dd83ee2593b77f98d857147e44094f55659acc
           <StyledTestimonialsRightContainer>
             <LeftOrRightTestimonialCard
               isSponsor={isSponsor}

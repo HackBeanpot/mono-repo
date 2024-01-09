@@ -25,7 +25,7 @@ const FaqSection: React.FC = () => {
           Don't see your question?
           <br />
           <br />
-          Reach out to us at team@hackbeanpot.com!
+          Reach out to us at core@hackbeanpot.com!
         </StyledH4>
         <PrimaryButton
           btnText={'Contact Us'}

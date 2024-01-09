@@ -33,6 +33,7 @@ const StyledPastProjectsSection = styled.div`
   @media ${max.tablet} {
     text-align: center;
     width: 90%;
+    padding-bottom: 5vh;
   };
 `;
 
@@ -122,9 +123,9 @@ const StyledPastProjectsDescription = styled(P)`
 
   @media ${max.tablet} {
     color: ${colors.WHITE};
-    margin-left: 5em;
-    margin-right: 5em;
-    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
     padding-bottom: 2em;
     letter-spacing: 0.5px;
   }
@@ -218,8 +219,9 @@ const StyledPirateFlag = styled.img`
   }
 
   @media ${max.tabletSm} {
-    top: 8em;
-    width: 9em;
+    top: 7em;
+    left: 3em;
+    width: 7em;
   }
 `;
 

@@ -11,11 +11,18 @@ const StyledSponsorsSectionContainer = styled.div`
 `;
 
 const StyledSponsorsHeader = styled(H2)`
-  margin: 1em 0;
+  margin: 1em;
+
+  @media ${max.tablet} {
+    margin: 0.75em;
+  }
 `;
 
 const StyledContactText = styled(H4)`
+<<<<<<< HEAD
   color: ${colors.TEXT_BROWN} !important;
+=======
+>>>>>>> 68dd83ee2593b77f98d857147e44094f55659acc
   padding: 3em 12em;
   @media ${max.desktop} {
     padding: 3em;
@@ -61,6 +68,7 @@ const StyledArrowWrapper = styled.div`
   justify-content: center;
 `;
 
+<<<<<<< HEAD
 const ButtonWrapper = styled.div`
   display: flex;
   gap: 1em;
@@ -71,6 +79,18 @@ const ButtonWrapper = styled.div`
   }
 ;
 `;
+=======
+// const ButtonWrapper = styled.div`
+//   display: flex;
+//   gap: 1em;
+//   justify-content: center;
+
+//   @media ${max.tablet} {
+//     flex-direction: column;
+//   }
+// ;
+// `;
+>>>>>>> 68dd83ee2593b77f98d857147e44094f55659acc
 
 export {
   StyledSponsorsSectionContainer,
@@ -83,6 +103,9 @@ export {
   StyledMobileLogo,
   StyledSecondaryButtonWrapper,
   StyledArrowWrapper,
+<<<<<<< HEAD
   ButtonWrapper
+=======
+>>>>>>> 68dd83ee2593b77f98d857147e44094f55659acc
 };
 

@@ -55,6 +55,7 @@ const colors = {
   DARK_BLUE: '#002041',
   LIGHT_GREY: '#E1E1E1',
   BRIGHT_PURPLE: '#8D48E3',
+  LIGHT_GREEN: '#8EB439',
 
   // for primary button
   BUTTON_YELLOW: '#FABB32',
