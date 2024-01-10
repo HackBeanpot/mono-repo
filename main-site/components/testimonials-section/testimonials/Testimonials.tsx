@@ -23,11 +23,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
   const isDesktop = useMatchMedia(min.tablet);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-<<<<<<< HEAD
-  const getLeftTestimonial: TestimonialData = getLeftOrRightTestimonial(
-=======
   const getLeftTestimonial: TestimonialData = getLeftOrRightCarouselData(
->>>>>>> 68dd83ee2593b77f98d857147e44094f55659acc
     'left',
     testimonialData,
     currentIndex
@@ -95,11 +91,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
             }
           />
         )}
-<<<<<<< HEAD
-           {
-=======
         {
->>>>>>> 68dd83ee2593b77f98d857147e44094f55659acc
           <StyledTestimonialsRightContainer>
             <LeftOrRightTestimonialCard
               isSponsor={isSponsor}
