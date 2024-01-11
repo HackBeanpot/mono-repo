@@ -27,6 +27,14 @@ const StyledTabTitle = styled(P)`
     display: inline;
     margin-left: 1.75em;
   }
+  @media ${max.mobile} {
+    display: inline;
+    margin-left: 1.8em;
+    background-color: ${colors.BORDER_BROWN};
+    border: 1px solid ${colors.BORDER_BROWN};
+    border-radius: 0px 0.75em 0px 0px;
+    padding-left: 0.25em;
+  }
 `;
 const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
   border: 2px solid ${colors.TRANSPARENT};
@@ -75,6 +83,8 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
   }
   @media ${max.mobile} {
     font-size: 0.8em;
+    border: 2px solid ${colors.BORDER_BROWN};
+    border-radius: 0px 1em 2px 2px;
   } ;
 `;
 const StyledTabContent = styled(P)`
@@ -82,6 +92,12 @@ const StyledTabContent = styled(P)`
   padding-top: 0.75em;
   color: ${colors.TEXT_DARKER_BROWN};
   font-weight: bold;
+
+  @media ${max.mobile} {
+    padding-bottom: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-color: ${colors.BORDER_BROWN};
+  }
 `;
 const StyledTabContentContainer = styled.div`
   background-color: ${colors.YELLOW_GREEN};
@@ -98,6 +114,10 @@ const StyledTabContentContainer = styled.div`
     border-left: 2px solid ${colors.TRANSPARENT};
     margin-right: 2em;
     border-radius: 0em 0.75em 0em 0em;
+  }
+  @media ${max.mobile} {
+    padding-bottom: 1.5em;
+    border: 3px solid ${colors.BORDER_BROWN};
   }
   overflow-y: scroll;
 `;

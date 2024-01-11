@@ -16,6 +16,11 @@ const StyledEventItemContainer = styled.div`
     flex-direction: column;
     height: 15em;
   } ;
+
+  @media ${max.mobile} {
+    height: auto;
+    padding-bottom: 0.25em;
+  }
 `;
 
 const StyledEventItemLeftSideContainer = styled.div`
@@ -66,7 +71,8 @@ const StyledEventTimeTopicContainer = styled.div`
 
   @media ${max.mobile} {
     display: flex;
-    padding-bottom: 0.5em;
+    padding-bottom: 0em;
+    padding-left: 1em;
   } ;
 `;
 

@@ -41,6 +41,14 @@ const StyledTag = styled.div<StyledTagAndTagTextProps>`
   @media ${max.tabletLg} {
     height: 2em;
   }
+  @media ${max.mobile} {
+    height: 1.5em;
+    padding-bottom: 0.4em;
+    display: inline;
+    margin-top: -1em;
+    margin-bottom: 1em;
+    margin-left: 0.6em;
+  }
 `;
 
 const StyledTagText = styled(P)<StyledTagAndTagTextProps>`
