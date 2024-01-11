@@ -95,7 +95,7 @@ const StyledMentorsListContainer = styled.div`
 const StyledMermaid = styled.img`
   position: absolute;
   width: 15%;
-  right: 10vw;
+  right: 0vw;
   z-index: 0;
 `;
 
