@@ -27,7 +27,6 @@ const JudgingPage: React.FC = () => {
     return null;
   }
 
-
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
       return 'day-background-desktop';
@@ -42,8 +41,8 @@ const JudgingPage: React.FC = () => {
   };
 
   return (
-    <StyledPageContainer className = {getBackgroundClassName()}>
-      <Header tabs={liveSiteTabInfo} isDay={true} />
+    <StyledPageContainer className={getBackgroundClassName()}>
+      <Header tabs={liveSiteTabInfo} isDay={true} isLiveSite={true} />
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
@@ -55,4 +54,3 @@ const JudgingPage: React.FC = () => {
 };
 
 export default JudgingPage;
-

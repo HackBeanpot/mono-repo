@@ -52,9 +52,9 @@ const IndexPage: React.FC = () => {
 
   return (
     <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={liveSiteTabInfo} isDay />
+      <Header tabs={liveSiteTabInfo} isDay isLiveSite={true} />
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
-      <LandingSection />
+      <LandingSection isDay={isDay} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}

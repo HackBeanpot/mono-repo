@@ -39,12 +39,12 @@ const HackingRemaining: React.FC = () => {
   return (
     <StyledHackingRemainingContainer>
       <StyledHackingRemainingHeader>
-        HACKING REMAINING
+        HACKING REMAINING:
       </StyledHackingRemainingHeader>
       <StyledTime>
         {timeLeft.map((time) => (
           <>
-            <span>{time.value}</span>
+            <span>{time.value === 0 ? '00' : time.value}</span>
             {time.timeType !== 'seconds' && <span>:</span>}
           </>
         ))}

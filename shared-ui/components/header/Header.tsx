@@ -28,9 +28,7 @@ const mlhStyles = {
   bottom: '4.5px'
 } as React.CSSProperties;
 
-
-
-const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
+const Header: React.FC<HeaderProps> = ({ tabs, isDay, isLiveSite }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isDesktop = useMatchMedia(min.tablet);
 
@@ -43,7 +41,6 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           width={190}
         />
       </a>
-
       {!isDesktop && !isOpen && (
         <StyledHamburgerIcon
           src={Hamburger}
@@ -51,7 +48,6 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           onClick={(): void => setIsOpen(true)}
         />
       )}
-
       {!isDesktop && isOpen && (
         <StyledXIcon
           src={XIcon}
@@ -59,7 +55,6 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           alt="Close"
         />
       )}
-
       {(isDesktop || (!isDesktop && isOpen)) && (
         <StyledTabsContainer>
           {tabs.map((tab: TabInfo) => (
@@ -97,9 +92,20 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           ))}
         </StyledTabsContainer>
       )}
-      <a id="mlh-trust-badge" style={mlhStyles} href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue" target="_blank">
-      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg" alt="Major League Hacking 2024 Hackathon Season" style={{width:'100%'}} />
-    </a>
+      {!isLiveSite && (
+        <a
+          id="mlh-trust-badge"
+          style={mlhStyles}
+          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
+          target="_blank"
+        >
+          <img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
+            alt="Major League Hacking 2024 Hackathon Season"
+            style={{ width: '100%' }}
+          />
+        </a>
+      )}
     </StyledHeader>
   );
 };

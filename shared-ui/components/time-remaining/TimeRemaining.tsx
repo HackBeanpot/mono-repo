@@ -13,7 +13,7 @@ import {
   TimeRemainingProps
 } from '../../../shared-ui/lib/types';
 
-const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
+const TimeRemaining: React.FC<TimeRemainingProps> = ({ target, isDay }) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -21,9 +21,9 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
 
   const timeUnit: TimeRemainingInfo[] = [
     { text: days, label: 'days' },
-    { text: -1, label: '\xa0'},
+    { text: -1, label: '\xa0' },
     { text: hours, label: 'hours' },
-    { text: -1, label: '\xa0'},
+    { text: -1, label: '\xa0' },
     { text: minutes, label: 'minutes' }
   ];
 
@@ -44,11 +44,13 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
           (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
         setHours(hours);
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
         setMinutes(minutes);
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
         setSeconds(seconds);
-      }  
+      }
     }, 1000);
 
     return () => clearInterval(interval);
@@ -56,19 +58,33 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target }) => {
 
   return (
     <StyledTimeRemainingContainer>
-      <StyledTimeRemainingHeader>TIME REMAINING:</StyledTimeRemainingHeader>
+      <StyledTimeRemainingHeader isDay={isDay}>
+        TIME REMAINING:
+      </StyledTimeRemainingHeader>
       <StyledTimerContainer>
         {timeUnit.map((curr, index) => (
           <div key={`${curr.text}-${index}`}>
-            <StyledTimeRemainingText>
-              {`${curr.text === -1 ? '\xa0:\xa0' : curr.text === 0 ? '00' : curr.text}`}
+            <StyledTimeRemainingText isDay={isDay}>
+              {`${
+                curr.text === -1
+                  ? '\xa0:\xa0'
+                  : curr.text === 0
+                  ? '00'
+                  : curr.text
+              }`}
             </StyledTimeRemainingText>
-            <StyledTimeRemainingLabel>{curr.label}</StyledTimeRemainingLabel>
+            <StyledTimeRemainingLabel isDay={isDay}>
+              {curr.label}
+            </StyledTimeRemainingLabel>
           </div>
         ))}
       </StyledTimerContainer>
       <StyledButtonContainer>
-        <PrimaryButton btnText="Share with friends!" newTab />
+        <PrimaryButton
+          btnText="Share with your friends!"
+          newTab
+          isSmallPrimary={true}
+        />
       </StyledButtonContainer>
     </StyledTimeRemainingContainer>
   );

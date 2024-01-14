@@ -20,6 +20,10 @@ export interface ButtonProps {
 
 export interface TimeRemainingProps {
   target: Date;
+  isDay: boolean;
+}
+export interface TimeRemainingTextProps {
+  isDay: boolean;
 }
 
 export interface DropdownProps {
@@ -70,6 +74,7 @@ export interface TimeRemainingInfo {
 export interface HeaderProps {
   tabs: TabInfo[];
   isDay: boolean;
+  isLiveSite: boolean;
 }
 
 export interface StyledHeaderProps {
