@@ -28,9 +28,11 @@ const mlhStyles = {
   bottom: '4.5px'
 } as React.CSSProperties;
 
-
-
-const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
+const Header: React.FC<HeaderProps & { showMLHBadge?: boolean }> = ({
+  tabs,
+  isDay,
+  showMLHBadge = true
+}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isDesktop = useMatchMedia(min.tablet);
 
@@ -97,9 +99,20 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay }) => {
           ))}
         </StyledTabsContainer>
       )}
-      <a id="mlh-trust-badge" style={mlhStyles} href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue" target="_blank">
-      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg" alt="Major League Hacking 2024 Hackathon Season" style={{width:'100%'}} />
-    </a>
+      {showMLHBadge && (
+        <a
+          id="mlh-trust-badge"
+          style={mlhStyles}
+          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
+          target="_blank"
+        >
+          <img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
+            alt="Major League Hacking 2024 Hackathon Season"
+            style={{ width: '100%' }}
+          />
+        </a>
+      )}
     </StyledHeader>
   );
 };

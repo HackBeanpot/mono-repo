@@ -15,6 +15,7 @@ const colors = {
   CLAY_SHADOW: '#C1623C',
   WATER_UNNAMED: '#A5B0EC',
   TEXT_BOX: '#8D743E',
+  BUTTON_DARK_BLUE: '#193C60',
   BUTTON_GREEN: '#BED9AA',
   BUTTON_DARK_GREEN: '#5A978C',
   TEXT_BOX_BLUE: '#1B365D',
@@ -50,6 +51,7 @@ const colors = {
   SAND_HIGHLIGHTS: '#F3EFE3',
   DEEP_SEA_BLUE: '#193C60',
   DARK_BLUE: '#002041',
+  LIGHT_GREEN: '#8EB439',
 
   // for primary button
   BUTTON_YELLOW: '#FABB32',
