@@ -147,7 +147,7 @@ export interface MentorInfo {
   slack: string;
 }
 
-export interface StyledCactusButtonsProps {
+export interface StyledArrowButtonsProps {
   isToggled: boolean;
 }
 
