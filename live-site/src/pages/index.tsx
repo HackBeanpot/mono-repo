@@ -57,7 +57,7 @@ const IndexPage: React.FC = () => {
         <HackingRemaining />
       )}
       <ComingUpSection />
-      <WelcomeSection />
+      <WelcomeSection isDay={isDay} />
       <EventScheduleSection />
       <MentorsSection />
       <ResourcesSection />

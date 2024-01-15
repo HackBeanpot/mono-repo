@@ -2,13 +2,13 @@ import React from 'react';
 import { TeamProps } from '../../../lib/types';
 import { StyledTeamTextContainer } from '../WelcomeSection.styles';
 import {
-  StyledCarContainer,
+  StyledFishContainer,
   StyledTeamContainer,
   StyledTeamName,
   StyledTeamPoint,
   StyledTeamPosition
 } from './Team.styles';
-import TeamCar from './TeamCar';
+import TeamFish from './TeamFish';
 
 const Team: React.FC<TeamProps> = ({ name, points, position, index }) => {
   return (
@@ -17,10 +17,10 @@ const Team: React.FC<TeamProps> = ({ name, points, position, index }) => {
         <StyledTeamPosition>{position}:</StyledTeamPosition>
         <StyledTeamName> {name}</StyledTeamName>
       </StyledTeamTextContainer>
-      <StyledCarContainer>
-        <TeamCar points={points} index={index} />
+      <StyledFishContainer>
+        <TeamFish points={points} index={index} />
         <StyledTeamPoint>{points} PTS</StyledTeamPoint>
-      </StyledCarContainer>
+      </StyledFishContainer>
     </StyledTeamContainer>
   );
 };

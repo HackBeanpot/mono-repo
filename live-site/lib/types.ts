@@ -127,9 +127,10 @@ export interface TeamProps {
 
 export interface TeamRaceProps {
   teams: TeamProps[];
+  isDay: boolean;
 }
 
-export interface TeamCarProps {
+export interface TeamFishProps {
   points: number;
   index: number;
 }

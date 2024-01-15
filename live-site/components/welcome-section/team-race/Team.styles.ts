@@ -18,8 +18,8 @@ const StyledTeamHeader = styled(H3)`
 
 const StyledTeamName = styled(P)`
   text-transform: uppercase;
-  color: ${colors.BUTTON_GREEN};
-  font-size: 1.5em;
+  color: ${colors.YELLOW_GREEN};
+  font-size: 1.3em;
   @media ${max.tablet} {
     font-size: 1em;
   }
@@ -28,7 +28,7 @@ const StyledTeamName = styled(P)`
 const StyledTeamPoint = styled(P)`
   text-transform: uppercase;
   color: ${colors.RACE_LINE};
-  font-size: 1.5em;
+  font-size: 1.3em;
   @media ${max.tablet} {
     font-size: 1em;
   }
@@ -36,15 +36,15 @@ const StyledTeamPoint = styled(P)`
 
 const StyledTeamPosition = styled(P)`
   text-transform: uppercase;
-  color: ${colors.BUTTON_GREEN};
+  color: ${colors.YELLOW_GREEN};
   margin-right: 0.5em;
-  font-size: 1.5em;
+  font-size: 1.3em;
   @media ${max.tablet} {
     font-size: 1em;
   }
 `;
 
-const StyledTeamCarContainer = styled.div`
+const StyledTeamFishContainer = styled.div`
   border-bottom: 0.125em solid ${colors.RACE_LINE};
   width: 15em;
   margin-right: 2em;
@@ -55,11 +55,11 @@ const StyledTeamCarContainer = styled.div`
   }
 `;
 
-const StyledCarContainer = styled.div`
+const StyledFishContainer = styled.div`
   display: flex;
 `;
 
-const StyledTeamCar = styled.img<{ margin: number }>`
+const StyledTeamFish = styled.img<{ margin: number }>`
   margin-left: ${(props): number => props.margin}%;
   margin-bottom: -0.6em;
   position: absolute;
@@ -70,9 +70,9 @@ export {
   StyledTeamContainer,
   StyledTeamName,
   StyledTeamPoint,
-  StyledTeamCarContainer,
-  StyledTeamCar,
+  StyledTeamFishContainer,
+  StyledTeamFish,
   StyledTeamPosition,
   StyledTeamHeader,
-  StyledCarContainer
+  StyledFishContainer,
 };
