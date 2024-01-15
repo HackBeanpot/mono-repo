@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import type { HeadFC } from 'gatsby';
-import Header from '../../../shared-ui/components/header/Header';
 import '../../../shared-ui/style/globals.css';
 import HackingRemaining from '../../components/hacking-remaning/HackingRemaining';
 import { liveSiteTabInfo } from '../../lib/data';
@@ -17,6 +16,8 @@ import EventScheduleSection from '../../components/event-schedule-section/EventS
 import WelcomeSection from '../../components/welcome-section/WelcomeSection';
 import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
+import Header from '../../../shared-ui/components/header/Header';
+import OurTeamSection from '../../components/our-team-section/OurTeamSection';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
@@ -27,7 +28,6 @@ const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(handleMode());
   const isDesktop = useMatchMedia(min.tabletXs);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
       return 'day-gradient-desktop';
@@ -51,7 +51,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={liveSiteTabInfo} isDay />
+      <Header tabs={liveSiteTabInfo} isDay showMLHBadge={false} />
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
@@ -61,6 +61,7 @@ const IndexPage: React.FC = () => {
       <EventScheduleSection />
       <MentorsSection />
       <ResourcesSection />
+      <OurTeamSection />
       <MeetTheTeamSection />
       <FeedbackJoinCoreSection />
       <TimeRemaining target={new Date('02/12/2023 14:00:00')} />

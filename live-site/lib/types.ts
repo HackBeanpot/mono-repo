@@ -8,6 +8,7 @@ export interface TabInfo {
 export interface ResourceBoxProps {
   label: string;
   link: string;
+  image: string;
 }
 
 export interface JudgeOutputType {
@@ -147,7 +148,7 @@ export interface MentorInfo {
   slack: string;
 }
 
-export interface StyledCactusButtonsProps {
+export interface StyledArrowButtonsProps {
   isToggled: boolean;
 }
 
