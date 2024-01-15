@@ -17,7 +17,6 @@ import WelcomeSection from '../../components/welcome-section/WelcomeSection';
 import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import Header from '../../../shared-ui/components/header/Header';
-import { StyledOurTeamCore } from '../../../shared-ui/components/meet-the-team/meet-all-core/MeetAllCore.styles';
 import OurTeamSection from '../../components/our-team-section/OurTeamSection';
 
 const handleMode = (): boolean => {
