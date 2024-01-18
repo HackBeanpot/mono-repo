@@ -17,6 +17,7 @@ const StyledHeader = styled(H3)`
 
   @media ${max.tablet} {
     justify-content: center;
+    padding-bottom: 0.5em;
   };
 `;
 
