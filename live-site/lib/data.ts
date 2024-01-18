@@ -1,4 +1,8 @@
 import { TabInfo, EventItem, Tag, TeamProps, ResourceBoxProps } from './types';
+import beginnerResourceGuide from '../images/beginnerResourceGuide.png'
+import projectGuide from '../images/projectGuide.png'
+import projectDemoGuide from '../images/projectDemoGuide.png'
+import judgingProcessGuide from '../images/judgingProcessGuide.png'
 
 const liveSiteTabInfo: TabInfo[] = [
   { name: 'Schedule', link: '/#schedule' },
@@ -10,25 +14,33 @@ const liveSiteTabInfo: TabInfo[] = [
 
 const resources: ResourceBoxProps[] = [
   {
-    label: 'Project Guide',
-    link: '  https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing'
-  },
-  {
     label: 'Beginner Resource Guide',
-    link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/edit?usp=sharing'
+    link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/edit?usp=sharing',
+    image: beginnerResourceGuide
   },
   {
-    label: 'Hacker Guide',
-    link: 'https://drive.google.com/file/d/1FOmiCwMnxFlNil_SoRdNoAOujGcWwrtq/view?usp=sharing'
+    label: 'Project Guide',
+    link: 'https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing',
+    image: projectGuide
+  },
+  {
+    label: 'Project Demo Guide',
+    link: '',
+    image: projectDemoGuide
+  },
+  {
+    label: 'Judging Process Guide',
+    link: '',
+    image: judgingProcessGuide
   }
 ];
 
 const TeamInfo: TeamProps[] = [
-  { name: 'Team Tatooine', points: 0, index: 0 },
-  { name: 'Team Essos', points: 0, index: 1 },
-  { name: 'Team SI Wong', points: 0, index: 2 },
-  { name: 'Team Arrakis', points: 0, index: 3 },
-  { name: 'Team Desert Biome', points: 0, index: 4 }
+  { name: 'Team XXX', points: 0, index: 0 },
+  { name: 'Team XXX', points: 0, index: 1 },
+  { name: 'Team XXX', points: 0, index: 2 },
+  { name: 'Team XXX', points: 0, index: 3 },
+  { name: 'Team XXX', points: 0, index: 4 }
 ];
 
 const onePointCodes = [

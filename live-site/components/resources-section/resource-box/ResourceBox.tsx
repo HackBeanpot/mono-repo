@@ -1,12 +1,13 @@
 import React from 'react';
 import { ResourceBoxProps } from '../../../lib/types';
 import { StyledLabel, StyledResourceBox } from './ResourceBox.styles';
+import beginnerResourceGuideImage from '../../../images/beginnerResourceGuide.png';
 
-const ResourceBox: React.FC<ResourceBoxProps> = ({ label, link }) => {
+const ResourceBox: React.FC<ResourceBoxProps> = ({ label, link, image }) => {
   return (
-    <StyledResourceBox href={link} target="_blank">
-      <StyledLabel>{label}</StyledLabel>
-    </StyledResourceBox>
+    <a href={link} target="_blank">
+      <StyledResourceBox src={image} />
+    </a>
   );
 };
 

@@ -28,7 +28,11 @@ const mlhStyles = {
   bottom: '4.5px'
 } as React.CSSProperties;
 
-const Header: React.FC<HeaderProps> = ({ tabs, isDay, isLiveSite }) => {
+const Header: React.FC<HeaderProps & { showMLHBadge?: boolean }> = ({
+  tabs,
+  isDay,
+  showMLHBadge = true
+}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isDesktop = useMatchMedia(min.tablet);
 
@@ -92,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ tabs, isDay, isLiveSite }) => {
           ))}
         </StyledTabsContainer>
       )}
-      {!isLiveSite && (
+      {showMLHBadge && (
         <a
           id="mlh-trust-badge"
           style={mlhStyles}
