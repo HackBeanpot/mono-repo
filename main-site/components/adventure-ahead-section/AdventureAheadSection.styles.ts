@@ -5,7 +5,7 @@ import { colors } from '../../../shared-ui/style/colors';
 
 const StyledAdventureAheadSectionContainer = styled.div`
   display: flex;
-  
+
   @media ${max.tablet} {
     margin: 10em 0;
     flex-wrap: wrap;
@@ -36,9 +36,11 @@ const StyledParagraph = styled(P)`
 `;
 
 const StyledImageCore = styled.img`
-  width: 40%;  
+  width: 40%;
   margin: auto;
   margin-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 
   @media ${max.tablet} {
     width: 80%;
