@@ -2489,6 +2489,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/stylis@^4.0.2":
+  version "4.2.4"
+  resolved "https://registry.npmjs.org/@types/stylis/-/stylis-4.2.4.tgz"
+  integrity sha512-36ZrGJ8fgtBr6nwNnuJ9jXIj+bn/pF6UoqmrQT7+Y99+tFFeHHsoR54+194dHdyhPjgbeoNz3Qru0oRt0l6ASQ==
+
 "@types/tmp@^0.0.33":
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
