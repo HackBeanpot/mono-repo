@@ -21,15 +21,15 @@ const SponsorUsPage: React.FC = () => {
 
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
-      return 'day-background-desktop';
+      return 'day-gradient-desktop';
     }
     if (isDay && !isDesktop) {
-      return 'mobile-light-background';
+      return 'mobile-light-gradient';
     }
     if (!isDay && isDesktop) {
-      return 'dark-background-desktop';
+      return 'dark-gradient-desktop';
     }
-    return 'mobile-dark-background';
+    return 'mobile-dark-gradient';
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const SponsorUsPage: React.FC = () => {
       <StyledPageContainer className={getBackgroundClassName()}>
         <Header tabs={mainSiteTabInfo} isDay={true} />
         <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
-        <WhySponsor />
+        <WhySponsor isDay={isDay}/>
         <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
         <SponsorPerk />
         <PastSponsorsSection />

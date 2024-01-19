@@ -18,68 +18,16 @@ import FennecFox from '../../../../shared-ui/images/fennec-fox.svg';
 import { Col, Row } from 'antd';
 import Recruitment from '../../../../shared-ui/images/sponsor-us/recruitment.png';
 import MarketCompany from '../../../../shared-ui/images/sponsor-us/marketcompany.png';
+import { SponsorUsLandingProps } from '../../../lib/types';
 
-const WnySponsor: React.FC = () => {
+const WnySponsor: React.FC<SponsorUsLandingProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledWhySponsorContainer>
-      <StyledTextContainer>
-        <H3 color={colors.BUTTON_GREEN}>
+      <StyledTextContainer isDay={isDay}>
+        <H3 color={colors.WHITE}>
           How can sponsoring HackBeanpot help your company?
         </H3>
-        <StyledParagraph>
-          <HideInMobileView>
-            <Row gutter={35}>
-              <Col span={12} className="gutter-row">
-                <StyledHeaderLabel>Recruitment</StyledHeaderLabel>
-                <StyledTextSpacing>
-                  Scout the next generation of talent here. Sponsoring
-                  HackBeanpot is a great way to expand and diversify your
-                  company’s full-time, internship, co-op program’s applicant
-                  pool! 
-                  <br /> <br /> <br />
-                </StyledTextSpacing>
-                <StyledItemContainer>
-                  <StyledCenterImage src={Recruitment} />
-                </StyledItemContainer>
-              </Col>
-              <Col span={12} className="gutter-row">
-                <StyledHeaderLabel>
-                  Market your company and product
-                </StyledHeaderLabel>
-                <StyledTextSpacing>
-                  Market your product and receive feedback by sponsoring a
-                  company-specific prize, hosting a workshop, giving a product
-                  demo, or mentoring hackers that are eager to hear your advice
-                  and implement your technologies for their projects. <br />
-                  <br /><br />
-                </StyledTextSpacing>
-                <StyledItemContainer>
-                  <StyledCenterImage src={MarketCompany} />
-                </StyledItemContainer>
-              </Col>
-            </Row>
-          </HideInMobileView>
-          <ShowInMobileView>
-            <StyledHeaderLabel>Recruitment</StyledHeaderLabel>
-            <StyledTextSpacing>
-              Scout the next generation of talent here. Sponsoring HackBeanpot
-              is a great way to expand and diversify your company’s full-time, internship, co-op program’s applicant pool! 
-              <br /> <br /><br/>
-            </StyledTextSpacing>
-            <StyledHeaderLabel>
-              Market your company and product
-            </StyledHeaderLabel>
-            <StyledTextSpacing>
-              Market your product and receive feedback by sponsoring a
-              company-specific prize, hosting a workshop, giving a product demo,
-              or mentoring hackers that are eager to hear your advice and
-              implement your technologies for their projects. <br />
-              <br />
-            </StyledTextSpacing>
-          </ShowInMobileView>
-        </StyledParagraph>
       </StyledTextContainer>
-      <StyledFennecFox src={FennecFox} />
     </StyledWhySponsorContainer>
   );
 };

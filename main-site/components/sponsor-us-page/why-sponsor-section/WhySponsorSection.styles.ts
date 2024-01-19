@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H4, P } from '../../../../shared-ui/style/typography';
 import { max, min } from '../../../../shared-ui/lib/responsive';
+import { SponsorUsLandingProps } from '../../../lib/types';
 
 const StyledWhySponsorContainer = styled.div`
   position: relative;
@@ -46,9 +47,13 @@ const ShowInMobileView = styled.div`
   }
 `;
 
-const StyledTextContainer = styled.div`
+const StyledTextContainer = styled.div<SponsorUsLandingProps>`
   margin-top: 0;
-  background-color: ${colors.TEXT_BOX};
+  background-color: ${(props): string =>
+    props.isDay ? colors.TEXT_BOX_BLUE : colors.NIGHT_TEXT_BOX_BLUE};
+  
+  position: absolute:
+  right: 0;
 
   @media ${max.tablet} {
     width: 38em;

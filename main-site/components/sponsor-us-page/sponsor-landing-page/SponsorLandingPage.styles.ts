@@ -20,16 +20,17 @@ const StyledContainer = styled.div`
 `;
 
 const StyledSponsorUsHeader = styled(H2)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   text-align: left;
   letter-spacing: 1px;
+  font-family: 'Berkshire-Swash';
 
   @media ${min.desktop} {
-    font-size: 4.5em;
+    font-size: 5.5em;
   }
 
   @media ${min.tablet} {
-    font-size: 3em;
+    font-size: 4.5em;
   }
 
   @media ${max.tablet} {
@@ -49,7 +50,7 @@ const StyledSponsorUsSectionContainer = styled.div`
   }
 
   @media ${min.tablet} {
-    padding: 3em;
+    padding: 2em 4em 4em 5em;
   }
 
   @media ${max.tablet} {
@@ -61,6 +62,11 @@ const StyledParagraph = styled(P)`
   text-align: left;
   padding: 1em 0;
   font-size: 1.1em;
+  width: 75%;
+
+  @media ${max.tablet} {
+    width: 100%;
+  }
 `;
 
 const StyledButtonContainer = styled.div`
