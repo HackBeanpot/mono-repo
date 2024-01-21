@@ -11,7 +11,7 @@ interface AirtableData {
 export const useAirtableApi = (
   baseName: string,
   tableName: string,
-  isDev = false
+  isDev = true
 ): AirtableData => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

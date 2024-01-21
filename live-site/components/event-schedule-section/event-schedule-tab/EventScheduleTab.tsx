@@ -19,9 +19,9 @@ import {
 
 const AIRTABLE_BASE_NAME = 'Schedule';
 const AIRTABLE_SCHEDULE_TABLE_NAME = 'schedule';
-const FRI_DATE = new Date(2023, 1, 10);
-const SAT_DATE = new Date(2023, 1, 11);
-const SUN_DATE = new Date(2023, 1, 12);
+const FRI_DATE = new Date(2024, 0, 21);
+const SAT_DATE = new Date(2024, 0, 22);
+const SUN_DATE = new Date(2024, 0, 23);
 
 const renderEventData = (events: any[], activeTab: number): JSX.Element[] => {
   const toEventItemType = (event: any): EventItemType => {
