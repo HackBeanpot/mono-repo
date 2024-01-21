@@ -23,6 +23,8 @@ export const useAirtableApi = (
       fetch(url)
         .then((data) => {
           return data.json();
+          console.log(data.json());
+          
         })
         .then((responseJson) => {
           setIsLoading(false);

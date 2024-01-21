@@ -21,6 +21,7 @@ import { isHappeningNow } from '../../lib/utils';
 
 const ComingUpSection: React.FC = () => {
   const { data, isLoading } = useAirtableApi('Relevant', 'relevant', true);
+  console.log(data);
   const [comingUpEvents, setComingUpEvents] = useState<UpcomingEvent[]>([]);
   const isDesktop = useMatchMedia(min.tablet);
   let events: UpcomingEvent[] = [];
