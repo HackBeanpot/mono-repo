@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { max } from '../../../../shared-ui/lib/responsive';
+import { max, min } from '../../../../shared-ui/lib/responsive';
 
 const StyledTestimonialsContainer = styled.div`
   display: flex;
@@ -62,7 +62,11 @@ const StyledArrowsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 25em;
+  gap: 15em;
+  @media ${max.tabletSm} {
+    margin-top: 1em;
+    gap: 10em;
+  }
 `
 
 export {
