@@ -32,6 +32,7 @@ const StyledColumnTitle = styled.div`
   font-family: ${fonts.nunitoSansSemibold};
   color: ${colors.WHITE};
 `;
+
 const StyledOceanLayers = styled.img`
   width: 100%;
   margin-bottom: -0.2em;
