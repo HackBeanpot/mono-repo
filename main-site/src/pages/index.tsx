@@ -80,7 +80,6 @@ const IndexPage: React.FC = () => {
         <SponsorsSection />
         <MeetTheTeamSection />
         <AdventureAheadSection />
-        {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
         <Footer
           tabs={mainSiteTabInfoFooter}
           secondaryTabs={mainSiteTabInfoFooterSecondary}

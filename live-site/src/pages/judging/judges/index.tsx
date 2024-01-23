@@ -30,13 +30,13 @@ const JudgingScheduleJudgesPage: React.FC = () => {
   }
 
   return (
-    <StyledPageContainer className = {getBackgroundClassName()}>
-      <Header tabs={liveSiteTabInfo} isDay={true} />
+    <StyledPageContainer className={getBackgroundClassName()}>
+      <Header tabs={liveSiteTabInfo} isDay={true} isLiveSite={true} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
       <JudgingScheduleWelcome schedulePersonType={'Judge'} />;
-      <Footer tabs={liveSiteTabInfo} isDay/>
+      <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );
 };

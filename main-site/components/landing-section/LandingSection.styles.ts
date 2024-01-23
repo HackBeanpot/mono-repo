@@ -19,7 +19,6 @@ const StyledHackathonText = styled(H5)`
   }
 `;
 
-
 const StyledThemeText = styled(H1)`
    {
     color: ${colors.WHITE};
@@ -88,7 +87,7 @@ const StyledBubble1 = styled.img`
   @media ${min.tablet} {
     width: 5%;
   }
-`
+`;
 
 const StyledBubble2 = styled.img`
   position: absolute;
@@ -107,7 +106,7 @@ const StyledBubble2 = styled.img`
     top: 90vw;
     right: -5vw;
   }
-`
+`;
 
 const StyledFish = styled.img`
   position: absolute;
@@ -126,7 +125,7 @@ const StyledFish = styled.img`
   @media ${max.mobile} {
     top: 110vw;
   }
-`
+`;
 
 const StyledJellyfish = styled.img`
   position: absolute;
@@ -146,7 +145,7 @@ const StyledJellyfish = styled.img`
   @media ${max.mobile} {
     top: 110vw;
   }
-`
+`;
 
 const StyledWhale = styled.img`
   position: absolute;
@@ -166,7 +165,7 @@ const StyledWhale = styled.img`
   @media ${max.mobile} {
     top: 120vw;
   }
-`
+`;
 
 const StyledLandingTextContainer = styled.div`
   padding-top: 21em;
@@ -235,7 +234,7 @@ const StyledCountdownContainer = styled.div`
 export {
   StyledHackathonText,
   StyledThemeText,
-  StyledThemeTextSmall, 
+  StyledThemeTextSmall,
   StyledThemeTextParagraph,
   StyledLandingButtonContainer,
   StyledLandingSectionContainer,
