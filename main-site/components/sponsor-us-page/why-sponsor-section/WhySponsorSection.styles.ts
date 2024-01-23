@@ -23,6 +23,10 @@ const StyledWhySponsorContainer = styled.div`
   }
 `;
 
+const StyledDescriptionContainer = styled.div`
+  padding-top: 2em;
+`;
+
 const HideInMobileView = styled.div`
    @media ${max.tablet} {
     display: none;
@@ -52,8 +56,12 @@ const StyledTextContainer = styled.div<SponsorUsLandingProps>`
   background-color: ${(props): string =>
     props.isDay ? colors.TEXT_BOX_BLUE : colors.NIGHT_TEXT_BOX_BLUE};
   
-  position: absolute:
-  right: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 
   @media ${max.tablet} {
     width: 38em;
@@ -85,8 +93,6 @@ const StyledHeaderLabel = styled(H4)`
 `;
 
 const StyledParagraph = styled(P)`
-  padding-top: 1.7em;
-
   @media ${max.tablet} {
     font-size: 0.9em;
   }
@@ -137,15 +143,29 @@ const StyledCenterImage = styled.img`
   object-fit:cover;
 `;
 
+const StyledStarfish = styled.img`
+  position: relative;
+`;
+
+const StyledReasonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
+
 export {
   StyledTextContainer,
-  StyledWhySponsorContainer,
   StyledParagraph,
+  StyledWhySponsorContainer,
+  StyledDescriptionContainer,
+  StyledCenterImage,
+  StyledItemContainer,
+  StyledFennecFox,
   StyledHeaderLabel,
   StyledTextSpacing,
-  StyledFennecFox,
-  StyledItemContainer,
-  StyledCenterImage,
   HideInMobileView,
-  ShowInMobileView
+  ShowInMobileView,
+  StyledStarfish,
+  StyledReasonsContainer
 };
