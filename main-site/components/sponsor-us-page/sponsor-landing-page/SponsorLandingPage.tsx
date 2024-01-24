@@ -7,16 +7,10 @@ import {
   StyledContainer
 } from './SponsorLandingPage.styles';
 
-import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 import { colors } from '../../../../shared-ui/style/colors';
 
-import Sun from '../../../../shared-ui/images/sun.svg';
-import Moon from '../../../../shared-ui/images/moon.svg';
-import {
-  moonRock,
-  sunRays
-} from '../../landing-section/LandingSection.animations';
 import { SponsorUsLandingProps } from '../../../lib/types';
+import ToggleMode from '../../../../shared-ui/components/toggle-mode/ToggleMode';
 // import { StyledStar } from '../../landing-section/LandingSection.styles';
 
 const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({
@@ -25,11 +19,7 @@ const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({
 }) => {
   return (
     <StyledContainer>
-      {/* {isDay ? (
-        <StyledStar animate="animate" variants={sunRays} src={Sun} />
-      ) : (
-        <StyledStar animate="animate" variants={moonRock} src={Moon} />
-      )} */}
+      <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
       <StyledSponsorUsSectionContainer>
         <StyledSponsorUsHeader>
           <b>Sponsor Us</b>

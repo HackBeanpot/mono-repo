@@ -5,18 +5,6 @@ import { H2, P } from '../../../../shared-ui/style/typography';
 
 const StyledContainer = styled.div`
   position: relative;
-
-  @media ${min.desktop} {
-    padding-top: 21em;
-  }
-
-  @media ${min.tablet} {
-    padding-top: 15em;
-  }
-
-  @media ${max.tablet} {
-    padding-top: 10em;
-  }
 `;
 
 const StyledSponsorUsHeader = styled(H2)`
@@ -24,6 +12,7 @@ const StyledSponsorUsHeader = styled(H2)`
   text-align: left;
   letter-spacing: 1px;
   font-family: 'Berkshire-Swash';
+  margin-top: 3em;
 
   @media ${min.desktop} {
     font-size: 5.5em;
@@ -35,12 +24,12 @@ const StyledSponsorUsHeader = styled(H2)`
 
   @media ${max.tablet} {
     font-size: 2em;
+    margin-top: 6em;
   }
 `;
 
 const StyledSponsorUsSectionContainer = styled.div`
   position: relative;
-
   @media ${min.desktop} {
     padding-left: 5em;
     padding-right: 10em;
@@ -86,4 +75,10 @@ const StyledButtonContainer = styled.div`
   }
 `;
 
-export {StyledSponsorUsHeader, StyledSponsorUsSectionContainer, StyledParagraph, StyledButtonContainer, StyledContainer};
+export {
+  StyledSponsorUsHeader,
+  StyledSponsorUsSectionContainer,
+  StyledParagraph,
+  StyledButtonContainer,
+  StyledContainer
+};

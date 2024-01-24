@@ -7,14 +7,13 @@ import { SponsorUsLandingProps } from '../../../lib/types';
 const StyledWhySponsorContainer = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
+  right: 0;
+  justify-content: right;
 
   @media ${max.tablet} {
-    margin: 1.5em;
     padding-bottom: 5em;
   }
   @media ${min.tablet} {
-    margin: 3em;
     padding-bottom: 7em;
   }
   @media ${min.desktop} {
@@ -23,12 +22,20 @@ const StyledWhySponsorContainer = styled.div`
   }
 `;
 
+const StyledReason = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+`;
+
 const StyledDescriptionContainer = styled.div`
   padding-top: 2em;
 `;
 
 const HideInMobileView = styled.div`
-   @media ${max.tablet} {
+  @media ${max.tablet} {
     display: none;
   }
   @media ${min.tablet} {
@@ -55,7 +62,7 @@ const StyledTextContainer = styled.div<SponsorUsLandingProps>`
   margin-top: 0;
   background-color: ${(props): string =>
     props.isDay ? colors.TEXT_BOX_BLUE : colors.NIGHT_TEXT_BOX_BLUE};
-  
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -64,21 +71,21 @@ const StyledTextContainer = styled.div<SponsorUsLandingProps>`
   height: 100%;
 
   @media ${max.tablet} {
-    width: 38em;
+    width: 20em;
     padding: 1.5em;
-    border-radius: 1em;
+    border-radius: 1em 0em 0em 1em;
   }
 
-   @media ${min.tablet} {
-    width: 43em;
+  @media ${min.tablet} {
+    width: 40em;
     padding: 2.5em;
-    border-radius: 2em;
+    border-radius: 2em 0em 0em 2em;
   }
 
   @media ${min.desktop} {
     width: 52em;
     padding: 4em;
-    border-radius: 3em;
+    border-radius: 3em 0em 0em 3em;
   }
 `;
 
@@ -140,11 +147,15 @@ const StyledItemContainer = styled.div`
 const StyledCenterImage = styled.img`
   align-self: center;
   width: 100%;
-  object-fit:cover;
+  object-fit: cover;
 `;
 
 const StyledStarfish = styled.img`
   position: relative;
+  padding-right: 2em;
+  @media ${max.tablet} {
+    width: 15%;
+  }
 `;
 
 const StyledReasonsContainer = styled.div`
@@ -167,5 +178,6 @@ export {
   HideInMobileView,
   ShowInMobileView,
   StyledStarfish,
-  StyledReasonsContainer
+  StyledReasonsContainer,
+  StyledReason
 };

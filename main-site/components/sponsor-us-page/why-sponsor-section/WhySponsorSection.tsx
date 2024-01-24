@@ -12,7 +12,8 @@ import {
   HideInMobileView,
   ShowInMobileView,
   StyledStarfish,
-  StyledReasonsContainer
+  StyledReasonsContainer,
+  StyledReason
 } from './WhySponsorSection.styles';
 
 import { H3, H4 } from '../../../../shared-ui/style/typography';
@@ -34,28 +35,34 @@ const WhySponsor: React.FC<SponsorUsLandingProps> = ({ isDay, setIsDay }) => {
           How can sponsoring HackBeanpot help your company?
         </H3>
         <StyledReasonsContainer>
-          <StyledStarfish src={OrangeStarfish} />
-          <StyledDescriptionContainer>
-            <StyledHeaderLabel>Talent Recruitment</StyledHeaderLabel>
-            <StyledParagraph>
-              Direct access to high-quality hackers.
-            </StyledParagraph>
-          </StyledDescriptionContainer>
-          <StyledStarfish src={RedStarfish} />
-          <StyledDescriptionContainer>
-            <StyledHeaderLabel>Brand Exposure</StyledHeaderLabel>
-            <StyledParagraph>
-              Our social medias have a combined reach of over 4,000 students and
-              we can promote your company’s opportunities and product here.
-            </StyledParagraph>
-          </StyledDescriptionContainer>
-          <StyledStarfish src={GreenStarfish} />
-          <StyledDescriptionContainer>
-            <StyledHeaderLabel>Tax Benefits</StyledHeaderLabel>
-            <StyledParagraph>
-              We're a 501(c)(3) nonprofit, making all donations deductible.
-            </StyledParagraph>
-          </StyledDescriptionContainer>
+          <StyledReason>
+            <StyledStarfish src={OrangeStarfish} />
+            <StyledDescriptionContainer>
+              <StyledHeaderLabel>Talent Recruitment</StyledHeaderLabel>
+              <StyledParagraph>
+                Direct access to high-quality hackers.
+              </StyledParagraph>
+            </StyledDescriptionContainer>
+          </StyledReason>
+          <StyledReason>
+            <StyledStarfish src={RedStarfish} />
+            <StyledDescriptionContainer>
+              <StyledHeaderLabel>Brand Exposure</StyledHeaderLabel>
+              <StyledParagraph>
+                Our social medias have a combined reach of over 4,000 students and
+                we can promote your company’s opportunities and product here.
+              </StyledParagraph>
+            </StyledDescriptionContainer>
+          </StyledReason>
+          <StyledReason>
+            <StyledStarfish src={GreenStarfish} />
+            <StyledDescriptionContainer>
+              <StyledHeaderLabel>Tax Benefits</StyledHeaderLabel>
+              <StyledParagraph>
+                We're a 501(c)(3) nonprofit, making all donations deductible.
+              </StyledParagraph>
+            </StyledDescriptionContainer>
+          </StyledReason>
         </StyledReasonsContainer>
       </StyledTextContainer>
     </StyledWhySponsorContainer>
