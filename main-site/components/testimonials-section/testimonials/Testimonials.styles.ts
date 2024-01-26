@@ -15,6 +15,7 @@ const StyledTestimonialsContainer = styled.div`
 const StyledTestimonialsCenterContainer = styled.div`
   justify-content: center;
 `;
+
 const StyledTestimonialsLeftContainer = styled.div`
   justify-content: left;
   position: absolute;
@@ -62,7 +63,7 @@ const StyledArrowsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 15em;
+  gap: 25em;
   @media ${max.tabletSm} {
     margin-top: 1em;
     gap: 10em;

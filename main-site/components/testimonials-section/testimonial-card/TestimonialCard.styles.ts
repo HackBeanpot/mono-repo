@@ -19,6 +19,7 @@ const StyledTestimonialCardBox = styled.div<StyledTestimonialCardAuthorYearImage
   width: 22em;
   height: 28em;
   border: 1px solid white;
+  background-color: ${(props): string => (props.isSponsor? '#F3EFE3' : '')};
 
   @media ${max.tablet} {
     width: 18em;
@@ -53,16 +54,18 @@ const StyledTestimonialCardAuthor = styled(
   font-family: ${(props): string =>
     props.isSponsor ? fonts.nunitoRegular : fonts.nunitoSansRegular};
   margin-bottom: ${(props): string => (props.isSponsor ? '0em' : '0.4em')};
-  color: ${colors.WHITE};
+  color: ${(props): string => (props.isSponsor? '#7E451F' : colors.WHITE)};
+  text-align: ${(props): string => (props.isSponsor ? 'center' : '')};
 `;
 
 const StyledTestimonialCardYearCompany = styled(
   P
 )<StyledTestimonialCardAuthorYearImageProps>`
-  font-size: ${(props): string => (props.isSponsor ? '1.2em' : '1em')};
-  color: ${colors.WHITE};
+  font-size: ${(props): string => (props.isSponsor ? '1.5em' : '1em')};
+  color: ${(props): string => (props.isSponsor? '#193C60' : colors.WHITE)};
   margin-bottom: 0.4em;
   font-family: ${fonts.nunitoRegular};
+  text-align: ${(props): string => (props.isSponsor ? 'center' : '')};
 `;
 
 const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearImageProps>`
@@ -77,8 +80,9 @@ const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
     };
       
   letter-spacing: 0.05em;
-  color: ${(props): string => (props.isSponsor ? colors.BLACK : colors.WHITE)};
+  color: ${(props): string => (props.isSponsor ? '#193C60' : colors.WHITE)};
   margin-top: ${(props): string => (props.isSponsor ? '2em' : '0em')};
+  text-align: ${(props): string => (props.isSponsor ? 'center' : '')};
 `;
 
 const StyledTestimonialButtons = styled.div`
