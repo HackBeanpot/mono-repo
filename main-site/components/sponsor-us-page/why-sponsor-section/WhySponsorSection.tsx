@@ -4,32 +4,32 @@ import {
   StyledParagraph,
   StyledWhySponsorContainer,
   StyledDescriptionContainer,
-  StyledCenterImage,
-  StyledItemContainer,
-  StyledFennecFox,
   StyledHeaderLabel,
-  StyledTextSpacing,
-  HideInMobileView,
-  ShowInMobileView,
   StyledStarfish,
   StyledReasonsContainer,
-  StyledReason
+  StyledReason,
+  StyledWhale,
+  StyledFishSchool,
+  StyledJellyfish
 } from './WhySponsorSection.styles';
 
-import { H3, H4 } from '../../../../shared-ui/style/typography';
+import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
-import FennecFox from '../../../../shared-ui/images/fennec-fox.svg';
-import { Col, Row } from 'antd';
-import Recruitment from '../../../../shared-ui/images/sponsor-us/recruitment.png';
-import MarketCompany from '../../../../shared-ui/images/sponsor-us/marketcompany.png';
 import { SponsorUsLandingProps } from '../../../lib/types';
 import OrangeStarfish from '../../../../shared-ui/images/orange-starfish.svg';
 import RedStarfish from '../../../../shared-ui/images/red-starfish.svg';
 import GreenStarfish from '../../../../shared-ui/images/green-starfish.svg';
+import Whale from '../../../../shared-ui/images/whale.svg';
+import EventsFishSchool from '../../../../shared-ui/images/school-fish.svg';
+import EventsFishSchoolDark from '../../../../shared-ui/images/school-fish-dark.svg';
+import Jellyfish from '../../../../shared-ui/images/sponsor-us/sponsor-us-jellyfish.svg';
 
-const WhySponsor: React.FC<SponsorUsLandingProps> = ({ isDay, setIsDay }) => {
+
+const WhySponsor: React.FC<SponsorUsLandingProps> = ({ isDay }) => {
   return (
     <StyledWhySponsorContainer>
+      <StyledFishSchool src={isDay ? EventsFishSchool : EventsFishSchoolDark}/>
+      <StyledWhale src={Whale}/>
       <StyledTextContainer isDay={isDay}>
         <H3 color={colors.WHITE}>
           How can sponsoring HackBeanpot help your company?
@@ -64,6 +64,7 @@ const WhySponsor: React.FC<SponsorUsLandingProps> = ({ isDay, setIsDay }) => {
             </StyledDescriptionContainer>
           </StyledReason>
         </StyledReasonsContainer>
+        <StyledJellyfish src={Jellyfish}/>
       </StyledTextContainer>
     </StyledWhySponsorContainer>
   );

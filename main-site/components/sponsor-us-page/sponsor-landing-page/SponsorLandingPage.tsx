@@ -2,7 +2,7 @@ import React from 'react';
 import {
   StyledSponsorUsHeader,
   StyledSponsorUsSectionContainer,
-  StyledButtonContainer,
+  StyledBubbles,
   StyledParagraph,
   StyledContainer
 } from './SponsorLandingPage.styles';
@@ -10,8 +10,8 @@ import {
 import { colors } from '../../../../shared-ui/style/colors';
 
 import { SponsorUsLandingProps } from '../../../lib/types';
+import Bubbles from '../../../../shared-ui/images/sponsor-us/sponsor-us-bubbles.svg';
 import ToggleMode from '../../../../shared-ui/components/toggle-mode/ToggleMode';
-// import { StyledStar } from '../../landing-section/LandingSection.styles';
 
 const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({
   isDay,
@@ -23,6 +23,7 @@ const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({
       <StyledSponsorUsSectionContainer>
         <StyledSponsorUsHeader>
           <b>Sponsor Us</b>
+          <StyledBubbles src={Bubbles} />
         </StyledSponsorUsHeader>
         <StyledParagraph color={colors.WHITE}>
           With 11 years of experience working with sponsors to meet their

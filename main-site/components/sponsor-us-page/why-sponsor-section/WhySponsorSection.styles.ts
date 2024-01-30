@@ -5,6 +5,7 @@ import { max, min } from '../../../../shared-ui/lib/responsive';
 import { SponsorUsLandingProps } from '../../../lib/types';
 
 const StyledWhySponsorContainer = styled.div`
+  margin-top: 5em;
   position: relative;
   display: flex;
   right: 0;
@@ -165,6 +166,83 @@ const StyledReasonsContainer = styled.div`
   align-items: flex-start;
 `;
 
+const StyledWhale = styled.img`
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  @media ${min.mobile} {
+    transform: rotateY(0deg);
+    top: -10em;
+    width: 40%;
+  }
+
+  @media ${min.tablet} {
+    transform: rotateY(180deg);
+    top: -18em;
+    left: 70%;
+    width: 30%;
+  }
+
+  @media ${min.tabletLg} {
+    transform: rotateY(180deg);
+    top: -20em;
+    right: 0;
+    width: 30%;
+  }
+
+  @media ${min.desktopLg} {
+    transform: rotateY(180deg);
+    top: -26em;
+    width: 30%;
+    right: 0;
+  }
+`;
+
+const StyledFishSchool = styled.img`
+  position: absolute;
+  z-index: 5;
+  width: 20%;
+  transform: rotateY(180deg);
+
+  @media ${min.tablet} {
+    left: 3em;
+    top: -7em;
+  }
+
+  @media ${max.tablet} {
+    right: 0;
+    top: -7em;
+  }
+
+  @media ${min.desktopLg} {
+    top: -5em;
+  }
+`;
+
+const StyledJellyfish = styled.img`
+  position: absolute;
+  z-index: 5;
+  bottom: -5em;
+  left: -5em;
+
+  @media ${min.tablet} {
+    bottom: -8em;
+    left: -5em;
+    width: 30%;
+  }
+
+  @media ${max.tablet} {
+    width: 30%;
+    left: -1.5em;
+    bottom: -3em;
+  }
+
+  @media ${min.desktopLg} {
+    left: -8em;
+    bottom: -9em;
+  }
+`;
+
 export {
   StyledTextContainer,
   StyledParagraph,
@@ -179,5 +257,8 @@ export {
   ShowInMobileView,
   StyledStarfish,
   StyledReasonsContainer,
-  StyledReason
+  StyledReason,
+  StyledWhale,
+  StyledFishSchool,
+  StyledJellyfish
 };

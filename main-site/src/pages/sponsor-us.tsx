@@ -13,6 +13,7 @@ import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-p
 import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
 import PastSponsorsSection from '../../components/sponsor-us-page/past-sponsor-section/PastSponsors';
 import Footer from '../../../shared-ui/components/footer/Footer';
+import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);

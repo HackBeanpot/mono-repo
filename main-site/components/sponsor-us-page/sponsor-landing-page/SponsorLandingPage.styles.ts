@@ -29,7 +29,7 @@ const StyledSponsorUsHeader = styled(H2)`
 `;
 
 const StyledSponsorUsSectionContainer = styled.div`
-  position: relative;
+  display: block;
   @media ${min.desktop} {
     padding-left: 5em;
     padding-right: 10em;
@@ -75,10 +75,28 @@ const StyledButtonContainer = styled.div`
   }
 `;
 
+const StyledBubbles = styled.img`
+  position: absolute;
+  top: 3em;
+  padding-left: 3em;
+
+  @media ${min.tablet} {
+    padding-left: 2.5em;
+    width: 15%;
+  }
+
+  @media ${max.tablet} {
+    width: 15%;
+    top: 7em;
+    left: 6.5em;
+  }
+`;
+
 export {
   StyledSponsorUsHeader,
   StyledSponsorUsSectionContainer,
   StyledParagraph,
   StyledButtonContainer,
-  StyledContainer
+  StyledContainer,
+  StyledBubbles
 };
