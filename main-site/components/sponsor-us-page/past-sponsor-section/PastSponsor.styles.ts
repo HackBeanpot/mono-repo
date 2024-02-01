@@ -72,7 +72,6 @@ const StyledContactText = styled(P)`
   text-align: center;
   font-size: 24px;
   font-family: ${fonts.nunitoSansSemibold};
-  font-style: italic;
   width: 25em
   
 `;
@@ -88,11 +87,33 @@ const StyledButtonContainer = styled.div`
   text-align: left;
 `;
 
+const StyledFishGroup = styled.img`
+  position: absolute;
+  top: 0;
+  right: -3em;
+  display: flex;
+
+  @media ${min.mobile} {
+    display: none;
+  }
+
+  @media ${min.desktop} {
+    display: flex;
+  }
+
+  @media ${min.tablet} {
+    display: flex;
+    top: -5em;
+  }
+
+`;
+
 export { 
     StyledPastSponsorsContainer, 
     StyledPastSponsorsImagesContainer,
     StyledImageDescription,
     StyledCenterImage,
     StyledContactText,
-    StyledButtonContainer 
+    StyledButtonContainer,
+    StyledFishGroup
 };

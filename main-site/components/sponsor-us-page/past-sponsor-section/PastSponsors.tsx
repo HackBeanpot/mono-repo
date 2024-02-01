@@ -5,7 +5,8 @@ import {
   StyledImageDescription,
   StyledCenterImage,
   StyledContactText,
-  StyledButtonContainer
+  StyledButtonContainer,
+  StyledFishGroup
 } from './PastSponsor.styles';
 import { H2 } from '../../../../shared-ui/style/typography';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
@@ -13,12 +14,13 @@ import { min } from '../../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
 import DesktopSizeImage from '../../../../shared-ui/images/sponsor-us/desktop-sponsors.png';
 import MobileSizeImage from '../../../../shared-ui/images/sponsor-us/mobile-sponsors.png';
-
+import FishGroup from '../../../images/fish-group-orange.svg';
 
 const PastSponsors: React.FC = () => {
   const isDesktop = useMatchMedia(min.mobile);
   return (
     <StyledPastSponsorsContainer>
+      <StyledFishGroup src={FishGroup} />
       <H2>Past Sponsors</H2>
       <StyledPastSponsorsImagesContainer>
         <StyledCenterImage src={ isDesktop ? DesktopSizeImage : MobileSizeImage}/>
