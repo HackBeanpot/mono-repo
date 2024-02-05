@@ -25,9 +25,6 @@ import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
-import TestimonialsSection from '../../components/testimonials-section/TestimonialsSection';
-import { sponsorTestimonialData } from '../../lib/data';
-import StatsSection from '../sponsor-us-page/stats-section/StatsSection';
 
 const SponsorsSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tabletLg);
@@ -52,12 +49,12 @@ const SponsorsSection: React.FC = () => {
           Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to
           us at team@hackbeanpot.com or check out our sponsorship packet!
         </StyledContactText>
-          <PrimaryButton
-            btnText="View Sponsorship Packet"
-            newTab={true}
-            btnLink="https://drive.google.com/file/d/1Kgv_9lLeJcLLsIcqP-qngWeQNgjgLSU2/view"
-          />
-        <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader>
+        <PrimaryButton
+          btnText="View Sponsorship Packet"
+          newTab={true}
+          btnLink="https://drive.google.com/file/d/1Kgv_9lLeJcLLsIcqP-qngWeQNgjgLSU2/view"
+        />
+        {/* <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader> */}
         {/* {!isDesktop && (
         <>
           <StyledArrowWrapper>
