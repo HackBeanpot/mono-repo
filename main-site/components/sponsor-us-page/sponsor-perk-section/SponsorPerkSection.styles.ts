@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import { colors } from '../../../../shared-ui/style/colors';
 import { P } from '../../../../shared-ui/style/typography';
 import { min, max } from '../../../../shared-ui/lib/responsive';
-import { motion } from 'framer-motion';
+import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
+// import { motion } from 'framer-motion';
 
 const StyledSponsorPerkSectionContainer = styled.div`
   padding-top: 16em;
@@ -37,7 +38,7 @@ const StyledTextContainer = styled.div`
 
   @media ${min.tablet} {
     width: 34em;
-    background-color: ${colors.TEXT_BOX};
+    background-color: #1B365D;
     margin-left: 5em;
     margin-top: 0;
   }
@@ -45,7 +46,32 @@ const StyledTextContainer = styled.div`
   @media ${max.tablet} {
     width: 80vw;
     border-radius: 2em;
-    background-color: ${colors.TEXT_BOX};
+    background-color: #1B365D;
+    margin: auto;
+    padding: 5vw;
+    padding-bottom: 10vw;
+  }
+
+  @media ${min.desktop} {
+    width: 50em;
+  }
+`;
+
+const StyledTextContainerGreen = styled.div`
+  padding: 4em;
+  border-radius: 3em;
+  margin-top: 5em;
+  background-color: #56773C;
+
+  @media ${min.tablet} {
+    width: 34em;
+    margin-left: 5em;
+    margin-top: 0;
+  }
+
+  @media ${max.tablet} {
+    width: 80vw;
+    border-radius: 2em;
     margin: auto;
     padding: 5vw;
     padding-bottom: 10vw;
@@ -63,8 +89,21 @@ const StyledParagraph = styled(P)`
     padding: 0
   }
 `;
+const StyledSponsorPacketButtonContainer = styled(PrimaryButton)`
+margin-top: 1em;
+position: fixed;
+justify-content: center;
+font-size: 0.2em;
+`;
 
-const StyledExplorer = styled.img`
+const StyledInfoPacketButtonContainer = styled(PrimaryButton)`
+margin-top: 1em;
+position: fixed;
+justify-content: center;
+font-size: 0.2em;
+`;
+
+const StyledFlag = styled.img`
   position: absolute;
   
   @media ${max.tablet} {
@@ -85,31 +124,34 @@ const StyledExplorer = styled.img`
 
 `;
 
-const StyledCamel = styled(motion.img)`
+const StyledTreasureChest = styled.img`
   position: absolute;
-  top: 20em;
-  right: 0em;
-  z-index: 1;
+  top: 10em;
+  right: 30em;
+  transform: scale(0.8);
 
   @media ${max.tablet} {
-    position: relative;
-    top: -5vh;
-    width: 18vh;
-    margin-right: -7vh;
-    float: right;
-    transform: rotate(-12deg);
+    position: absolute;
+    top: 5em;
+    right: -5em;
+    transform: scale: (0.4);
   }
 
-  @media ${min.tablet} {
-    height: 20em;
-    size: 50px;
-  }
+  // @media ${min.tablet} {
+  //   position: absolute;
+  //   right: -8em;
+  //   height: 20em;
+  //   size: 50px;
+  // }
 `;
 
 export {
   StyledTextContainer,
+  StyledTextContainerGreen,
   StyledSponsorPerkSectionContainer,
   StyledParagraph,
-  StyledExplorer,
-  StyledCamel
+  StyledSponsorPacketButtonContainer,
+  StyledInfoPacketButtonContainer,
+  StyledFlag,
+  StyledTreasureChest
 };

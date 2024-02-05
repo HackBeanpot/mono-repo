@@ -3,20 +3,23 @@ import {
   StyledTextContainer,
   StyledParagraph,
   StyledSponsorPerkSectionContainer,
-  StyledExplorer,
-  StyledCamel
+  StyledSponsorPacketButtonContainer,
+  StyledInfoPacketButtonContainer,
+  StyledFlag,
+  StyledTreasureChest,
+  StyledTextContainerGreen
 } from './SponsorPerkSection.styles';
-import CamelBody from '../../../../shared-ui/images/CamelBody.svg';
+import TreasureChest from '../../../../shared-ui/images/treasureChestSea.png';
 import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
-import Explorer from '../../../../shared-ui/images/explorer.svg';
+import Flag from '../../../../shared-ui/images/pirateFlag.png';
 
 const SponsorPerk: React.FC = () => {
   return (
     <StyledSponsorPerkSectionContainer>
-      <StyledExplorer src={Explorer} />
+      <StyledFlag src={Flag} />
       <StyledTextContainer>
-        <H3 color={colors.BUTTON_GREEN}>Sponsorship perks include:</H3>
+        <H3 color={colors.WHITE}>Sponsorship perks include:</H3>
         <StyledParagraph color={colors.WHITE}>
           <ul>
             <li>
@@ -31,17 +34,38 @@ const SponsorPerk: React.FC = () => {
               4,000 students)
             </li>
             <li>Product demo</li>
+            <li>...and more!</li>
           </ul>
-          Additionally, we provide the flexibility to create your own perk or
+          Detailed perks and pricing can be found in our sponsorship packet.
+          <StyledSponsorPacketButtonContainer
+          btnText="View our sponsorship packet"
+          btnLink="https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view"
+          isSponsorPacketButton={true}
+          newTab
+        />
+        </StyledParagraph>
+      </StyledTextContainer>
+      <br />
+      <br />
+      <StyledTextContainerGreen>
+      <StyledParagraph>
+        Additionally, we provide the flexibility to create your own perk or
           package. Let us know your ideas and package choice at{' '}
           <u>core@hackbeanpot.com</u>. Our team will work with you to answer any
           questions and guide you through the next steps in becoming a
           HackBeanpot 2024 sponsor!
-        </StyledParagraph>
-      </StyledTextContainer>
-      <StyledCamel src={CamelBody} />
+          <StyledInfoPacketButtonContainer
+          btnText="View our information packet"
+          btnLink="https://drive.google.com/file/d/1x0OxOq_Ce-6RqzlhGkP5YxPNwrx0RdMW/view"
+          isInfoPacketButton={true}
+          newTab
+        />
+      </StyledParagraph>
+      </StyledTextContainerGreen>
+      <StyledTreasureChest src={TreasureChest} />
     </StyledSponsorPerkSectionContainer>
   );
 };
 
 export default SponsorPerk;
+
