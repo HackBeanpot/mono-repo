@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
 import Header from '../../../shared-ui/components/header/Header';
@@ -13,6 +13,7 @@ import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-p
 import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
 import PastSponsorsSection from '../../components/sponsor-us-page/past-sponsor-section/PastSponsors';
 import Footer from '../../../shared-ui/components/footer/Footer';
+import StatsSection from '../../components/sponsor-us-page/stats-section/StatsSection';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -46,7 +47,11 @@ const SponsorUsPage: React.FC = () => {
         <Header tabs={mainSiteTabInfo} isDay={true} />
         <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
         <WhySponsor />
-        <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
+        <TestimonialsSection
+          isSponsor={true}
+          testimonialData={sponsorTestimonialData}
+        />
+        <StatsSection />
         <SponsorPerk />
         <PastSponsorsSection />
         <Footer tabs={mainSiteTabInfo} isDay={true} />
