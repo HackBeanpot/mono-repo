@@ -15,7 +15,8 @@ const ToggleMode: React.FC<ToggleModeProps> = ({
   location
 }) => {
   return (
-    <ToggleContainer location={location === 'main-site' ? 'right' : 'left'}>``
+    <ToggleContainer location={'right'}>
+      ``
       {isDay ? (
         <StyledToggle
           src={ToggleDay}

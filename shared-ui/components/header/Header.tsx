@@ -45,7 +45,6 @@ const Header: React.FC<HeaderProps & { showMLHBadge?: boolean }> = ({
           width={190}
         />
       </a>
-
       {!isDesktop && !isOpen && (
         <StyledHamburgerIcon
           src={Hamburger}
@@ -53,7 +52,6 @@ const Header: React.FC<HeaderProps & { showMLHBadge?: boolean }> = ({
           onClick={(): void => setIsOpen(true)}
         />
       )}
-
       {!isDesktop && isOpen && (
         <StyledXIcon
           src={XIcon}
@@ -61,7 +59,6 @@ const Header: React.FC<HeaderProps & { showMLHBadge?: boolean }> = ({
           alt="Close"
         />
       )}
-
       {(isDesktop || (!isDesktop && isOpen)) && (
         <StyledTabsContainer>
           {tabs.map((tab: TabInfo) => (

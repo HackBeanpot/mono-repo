@@ -7,17 +7,17 @@ export interface EventDate {
 export const mockData: EventDate[] = [
   {
     id: 0,
-    title: 'FRI 10',
-    content: 'FRIDAY FEB 10'
+    title: 'FRI 11',
+    content: 'FRIDAY - FEBRUARY 11'
   },
   {
     id: 2,
-    title: 'SAT 11',
-    content: 'SATURDAY FEB 11'
+    title: 'SAT 12',
+    content: 'SATURDAY - FEBRUARY 12'
   },
   {
     id: 3,
-    title: 'SUN 12',
-    content: 'SUNDAY FEB 12'
+    title: 'SUN 13',
+    content: 'SUNDAY - FEBRUARY 13'
   }
 ];

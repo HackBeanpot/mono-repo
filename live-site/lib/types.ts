@@ -90,12 +90,14 @@ export interface styledArrowProps {
 
 export enum Tag {
   meal = 'Meal',
-  beginner = 'Beginner-Friendly',
+  beginner = 'Beginner friendly',
   workshop = 'Workshop',
   actionItem = 'Action Item',
   everyone = 'Everyone',
   sponsor = 'Sponsor Event',
-  social = 'Social/Fun Event'
+  social = 'Social/Fun Event',
+  facebook = 'Sponsored by Facebook',
+  toast = 'Sponsored by Toast'
 }
 export interface EventItem {
   id: number;

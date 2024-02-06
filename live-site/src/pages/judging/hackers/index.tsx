@@ -12,7 +12,6 @@ import { StyledPageContainer } from '../../../../../shared-ui/styled-components/
 import ToggleMode from '../../../../../shared-ui/components/toggle-mode/ToggleMode';
 
 const JudgingScheduleHackersPage: React.FC = () => {
-
   const isDesktop = useMatchMedia(min.tablet);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -32,8 +31,8 @@ const JudgingScheduleHackersPage: React.FC = () => {
   }
 
   return (
-    <StyledPageContainer className = {getBackgroundClassName()}>
-      <Header tabs={liveSiteTabInfo} isDay={true} />
+    <StyledPageContainer className={getBackgroundClassName()}>
+      <Header tabs={liveSiteTabInfo} isDay={true} isLiveSite={true} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}

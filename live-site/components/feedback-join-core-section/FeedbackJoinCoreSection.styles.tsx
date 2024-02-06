@@ -6,9 +6,10 @@ import { min, max } from '../../../shared-ui/lib/responsive';
 
 const StyledFeedbackJoinCoreSection = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: row;
   padding: 5.5em;
-  gap: 2em;
+  gap: 10em;
   @media ${max.tablet} {
     padding: 2.4em;
     flex-wrap: wrap;
@@ -29,16 +30,11 @@ const StyledColumn = styled.div`
 const StyledColumnTitle = styled.div`
   font-size: 2em;
   font-family: ${fonts.nunitoSansSemibold};
-  color: ${colors.OFF_BLACK};
-`;
-
-const StyledColumnText = styled(P)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
 `;
 
 export {
   StyledFeedbackJoinCoreSection,
   StyledColumn,
   StyledColumnTitle,
-  StyledColumnText
 };

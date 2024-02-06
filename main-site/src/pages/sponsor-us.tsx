@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
 import Header from '../../../shared-ui/components/header/Header';
@@ -13,7 +13,8 @@ import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-p
 import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
 import PastSponsorsSection from '../../components/sponsor-us-page/past-sponsor-section/PastSponsors';
 import Footer from '../../../shared-ui/components/footer/Footer';
-import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
+import BottomImageFooter from '../../../shared-ui/components/bottom-image-footer/BottomImageFooter';
+import OceanLayers2 from '../../../shared-ui/images/OceanLayers2.svg';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -46,10 +47,14 @@ const SponsorUsPage: React.FC = () => {
       <StyledPageContainer className={getBackgroundClassName()}>
         <Header tabs={mainSiteTabInfo} isDay={true} />
         <SponsorUsLanding isDay={isDay} setIsDay={setIsDay} />
-        <WhySponsor isDay={isDay}/>
-        <TestimonialsSection isSponsor={true} testimonialData={sponsorTestimonialData}/>
+        <WhySponsor isDay={isDay} />
+        <TestimonialsSection
+          isSponsor={true}
+          testimonialData={sponsorTestimonialData}
+        />
         <SponsorPerk />
         <PastSponsorsSection />
+        <BottomImageFooter oceanLayers={OceanLayers2} />
         <Footer tabs={mainSiteTabInfo} isDay={true} />
       </StyledPageContainer>
     </>

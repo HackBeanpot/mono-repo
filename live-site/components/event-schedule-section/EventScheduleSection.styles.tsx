@@ -28,7 +28,7 @@ const StyledEventScheduleHeader = styled(H3)`
 `;
 
 const StyledEventScheduleSubText = styled(P)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   margin-right: 7em;
   @media ${max.tablet} {
     text-align: left;
@@ -38,7 +38,7 @@ const StyledEventScheduleSubText = styled(P)`
 `;
 
 const StyledBoldSubText = styled(P)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   font-weight: bold;
   margin: 0;
   @media ${max.tablet} {

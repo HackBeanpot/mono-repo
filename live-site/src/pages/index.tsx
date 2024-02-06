@@ -16,8 +16,11 @@ import EventScheduleSection from '../../components/event-schedule-section/EventS
 import WelcomeSection from '../../components/welcome-section/WelcomeSection';
 import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
 import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
+import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import OurTeamSection from '../../components/our-team-section/OurTeamSection';
+import BottomImageFooter from '../../../shared-ui/components/bottom-image-footer/BottomImageFooter';
+import OceanLayers from '../../../shared-ui/images/OceanLayers.svg';
 
 const handleMode = (): boolean => {
   const currentHour = new Date().getHours();
@@ -53,6 +56,7 @@ const IndexPage: React.FC = () => {
     <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={liveSiteTabInfo} isDay showMLHBadge={false} />
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
+      <LandingSection isDay={isDay} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
         <HackingRemaining />
       )}
@@ -64,7 +68,7 @@ const IndexPage: React.FC = () => {
       <OurTeamSection />
       <MeetTheTeamSection />
       <FeedbackJoinCoreSection />
-      <TimeRemaining target={new Date('02/12/2023 14:00:00')} />
+      <BottomImageFooter oceanLayers={OceanLayers} />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );

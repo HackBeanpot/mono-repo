@@ -9,12 +9,10 @@ import {
   StyledButtonContainer,
   StyledHeader,
   StyledHeaderDiv,
-  StyledOceanLayers,
   StyledShell
 } from './AdventureAheadSection.styles';
 
 import GroupPhoto from '../../../shared-ui/images/meet-the-team/group.png';
-import OceanLayers from '../../../shared-ui/images/OceanLayers.svg';
 import shell1 from '../../../shared-ui/images/shell1.svg';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
@@ -41,7 +39,6 @@ const AdventureAheadSection: React.FC = () => {
         </StyledButtonContainer>
       </StyledTextContainer>
     </StyledAdventureAheadSectionContainer>
-    <StyledOceanLayers src={OceanLayers}/>
     </>
   );
 };
