@@ -24,14 +24,13 @@ import Community from '../../shared-ui/images/communityShell.png';
 import Exploration from '../../shared-ui/images/explorationShell.png';
 import Growth from '../../shared-ui/images/growthShell.png';
 
-
 export const aboutSectionData: AboutSectionData[] = [
   {
     id: 0,
     title: 'Community',
     description:
       'Connect with fellow students and our partners in the tech community. Make connections that will last a lifetime!',
-    image: Community,
+    image: Community
   },
   {
     id: 1,
@@ -45,7 +44,7 @@ export const aboutSectionData: AboutSectionData[] = [
     title: 'Growth',
     description:
       'Expand beyond your horizons and grow your current skill set in a safe and supportive environment.',
-    image: Growth,
+    image: Growth
   }
 ];
 
@@ -95,8 +94,7 @@ export const FaqSectionData: FaqData[] = [
   {
     id: 7,
     question: 'What prizes are there this year?',
-    answer:
-      'We will be releasing more details about our prizes soon!'
+    answer: 'We will be releasing more details about our prizes soon!'
   }
 
   // {
@@ -112,9 +110,6 @@ export const FaqSectionData: FaqData[] = [
   //   answer:
   //     'HackBeanpot is committed to ensuring that hackers feel safe and activities comply with local COVID-19 policies. For this reason, we ask that hackers upload proof of vaccination when asked after registration and encourage everyone to wear masks during the event as it is indoors.'
   // },
-
-
-
 
   // {
   //   id: 8,
@@ -291,7 +286,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     date: convertToJSDate(2023, 10, 14),
     time: '12:30 pm-2 pm',
     location: 'West Village H',
-    room: '104',
+    room: '104'
   },
 
   {
@@ -303,31 +298,34 @@ export const eventsCalendarData: EventsCalendarData[] = [
     date: convertToJSDate(2023, 10, 28),
     time: '12:30 pm-2 pm',
     location: 'WVH',
-    room: '104',
+    room: '104'
   },
   {
     title: 'A Builder’s Entrepreneurial Journey',
     subtitle: 'An Intercollegiate Mixer',
-    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
-    description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
+    punchline:
+      'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
+    description:
+      "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
     prerequisites: 'None!',
     date: convertToJSDate(2023, 11, 5),
     time: '12:00 pm-4:00 pm',
-    location: "Boston University's BUild Lab",
+    location: "Boston University's BUild Lab"
   },
   {
     title: 'HackBeanpot x Gecko Robotics',
-    description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
+    description:
+      'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
     prerequisites: 'None!',
     date: convertToJSDate(2024, 1, 14),
     time: 'Time: TBD',
-    location: 'Gecko Robotics Boston Office',
+    location: 'Gecko Robotics Boston Office'
   }
 ];
 
 export const CountdownData: CountdownProps[] = [
   {
-    targetDate: '2024-01-26T23:59:59Z'
+    targetDate: '2024-02-09T23:59:59Z'
   }
 ];
 

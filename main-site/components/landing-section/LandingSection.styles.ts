@@ -229,6 +229,7 @@ const StyledHourglass = styled.img`
 const StyledCountdownContainer = styled.div`
   display: flex;
   justify-content: center;
+  padding: 5em;
 `;
 
 export {
