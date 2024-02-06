@@ -20,7 +20,7 @@ import { useAirtableApi } from '../../src/hooks/useAirtable';
 import { isHappeningNow } from '../../lib/utils';
 
 const ComingUpSection: React.FC = () => {
-  const { data, isLoading } = useAirtableApi('Relevant', 'relevant', true);
+  const { data, isLoading } = useAirtableApi('Schedule', 'schedule', true);
   const [comingUpEvents, setComingUpEvents] = useState<UpcomingEvent[]>([]);
   const isDesktop = useMatchMedia(min.tablet);
   let events: UpcomingEvent[] = [];
@@ -30,11 +30,11 @@ const ComingUpSection: React.FC = () => {
       count = count + 1;
       return {
         id: count,
-        header: event.fields.title,
+        header: event.fields.eventName,
         startTime: event.fields.start_time,
         endTime: event.fields.end_time,
-        displayStartTime: event.fields.display_start_time,
-        body: event.fields.notes
+        displayStartTime: event.fields.start_time.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+        body: event.fields.description
       };
     });
     events = events.filter((e) => Date.now() < Date.parse(e.endTime));

@@ -119,7 +119,8 @@ const StyledBody = styled.div`
 
 const StyledHappeningNow = styled(P)`
   position: absolute;
-  color: ${colors.BUTTON_GREEN};
+  //color: ${colors.BUTTON_GREEN};
+  background-image: linear-gradient(to right, red , yellow);
   right: 1em;
   bottom: 0.8em;
   font-weight: bold;
