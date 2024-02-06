@@ -5,41 +5,31 @@ import { H2, P } from '../../../../shared-ui/style/typography';
 
 const StyledContainer = styled.div`
   position: relative;
-
-  @media ${min.desktop} {
-    padding-top: 21em;
-  }
-
-  @media ${min.tablet} {
-    padding-top: 15em;
-  }
-
-  @media ${max.tablet} {
-    padding-top: 10em;
-  }
 `;
 
 const StyledSponsorUsHeader = styled(H2)`
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   text-align: left;
   letter-spacing: 1px;
+  font-family: 'Berkshire-Swash';
+  margin-top: 3em;
 
   @media ${min.desktop} {
-    font-size: 4.5em;
+    font-size: 5.5em;
   }
 
   @media ${min.tablet} {
-    font-size: 3em;
+    font-size: 4.5em;
   }
 
   @media ${max.tablet} {
     font-size: 2em;
+    margin-top: 6em;
   }
 `;
 
 const StyledSponsorUsSectionContainer = styled.div`
-  position: relative;
-
+  display: block;
   @media ${min.desktop} {
     padding-left: 5em;
     padding-right: 10em;
@@ -49,7 +39,7 @@ const StyledSponsorUsSectionContainer = styled.div`
   }
 
   @media ${min.tablet} {
-    padding: 3em;
+    padding: 2em 4em 4em 5em;
   }
 
   @media ${max.tablet} {
@@ -61,6 +51,11 @@ const StyledParagraph = styled(P)`
   text-align: left;
   padding: 1em 0;
   font-size: 1.1em;
+  width: 75%;
+
+  @media ${max.tablet} {
+    width: 100%;
+  }
 `;
 
 const StyledButtonContainer = styled.div`
@@ -80,4 +75,28 @@ const StyledButtonContainer = styled.div`
   }
 `;
 
-export {StyledSponsorUsHeader, StyledSponsorUsSectionContainer, StyledParagraph, StyledButtonContainer, StyledContainer};
+const StyledBubbles = styled.img`
+  position: absolute;
+  top: 3em;
+  padding-left: 3em;
+
+  @media ${min.tablet} {
+    padding-left: 2.5em;
+    width: 15%;
+  }
+
+  @media ${max.tablet} {
+    width: 15%;
+    top: 7em;
+    left: 6.5em;
+  }
+`;
+
+export {
+  StyledSponsorUsHeader,
+  StyledSponsorUsSectionContainer,
+  StyledParagraph,
+  StyledButtonContainer,
+  StyledContainer,
+  StyledBubbles
+};
