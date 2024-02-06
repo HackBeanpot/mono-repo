@@ -33,14 +33,8 @@ const StyledColumnTitle = styled.div`
   color: ${colors.WHITE};
 `;
 
-const StyledOceanLayers = styled.img`
-  width: 100%;
-  margin-bottom: -0.2em;
-`;
-
 export {
   StyledFeedbackJoinCoreSection,
   StyledColumn,
   StyledColumnTitle,
-  StyledOceanLayers
 };
