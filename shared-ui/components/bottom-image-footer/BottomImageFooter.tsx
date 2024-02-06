@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledOceanLayers } from './BottomImageFooter';
+import { StyledOceanLayers } from './BottomImageFooter.styles';
 
 const BottomImageFooter: React.FC = ({ oceanLayers }) => {
   return (
