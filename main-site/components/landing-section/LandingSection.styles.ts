@@ -3,7 +3,15 @@ import styled from '@emotion/styled';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
-import { H1, H3, H5, H6, P } from '../../../shared-ui/style/typography';
+import {
+  H1,
+  H3,
+  H5,
+  H6,
+  P,
+  P1,
+  fonts
+} from '../../../shared-ui/style/typography';
 
 const StyledHackathonText = styled(H5)`
    {
@@ -45,9 +53,10 @@ const StyledThemeTextSmall = styled(H6)`
   }
 `;
 
-const StyledThemeTextParagraph = styled(P)`
+const StyledThemeTextParagraph = styled(P1)`
    {
     color: ${colors.WHITE};
+    font-family: ${fonts.nunitoSansRegular};
     padding-bottom: 0.1em;
     white-space: pre-line;
     width: 25%;
@@ -113,14 +122,14 @@ const StyledFish = styled.img`
   top: 75vh;
   left: 5vw;
   @media ${max.tabletLg} {
-    top: 70vw;
+    top: 40em;
     width: 15%;
   }
   @media ${max.tablet} {
     top: 80vw;
   }
   @media ${max.tabletSm} {
-    top: 110vw;
+    top: 28em;
   }
   @media ${max.mobile} {
     top: 110vw;
@@ -140,7 +149,7 @@ const StyledJellyfish = styled.img`
     top: 95vw;
   }
   @media ${max.tabletSm} {
-    top: 110vw;
+    top: 105vw;
   }
   @media ${max.mobile} {
     top: 110vw;
@@ -160,10 +169,10 @@ const StyledWhale = styled.img`
     top: 110vw;
   }
   @media ${max.tabletSm} {
-    top: 120vw;
+    top: 150vw;
   }
   @media ${max.mobile} {
-    top: 120vw;
+    top: 150vw;
   }
 `;
 
@@ -177,7 +186,7 @@ const StyledLandingTextContainer = styled.div`
     padding-top: 18em;
   }
   @media ${max.tabletSm} {
-    padding-top: 13em;
+    padding-top: 14em;
   }
   @media ${max.mobile} {
     padding-top: 10em;
@@ -229,7 +238,12 @@ const StyledHourglass = styled.img`
 const StyledCountdownContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 5em;
+  align-items: center;
+  margin: 1em 1em 25em 1em;
+  font-size: small;
+  @media ${max.tablet} {
+    margin: 1em 1em 5em 1em;
+  }
 `;
 
 export {

@@ -84,7 +84,6 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
         <StyledThemeText>Under the Sea</StyledThemeText>
         <StyledThemeTextSmall>February 23-25, 2024</StyledThemeTextSmall>
         <StyledThemeTextParagraph>
-          {' '}
           @ Wood Mackenzie (Formerly known as PowerAdvocate) <br /> 179 Lincoln
           St, Boston, MA 02111
         </StyledThemeTextParagraph>
