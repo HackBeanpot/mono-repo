@@ -13,7 +13,7 @@ import SponsorUsLanding from '../../components/sponsor-us-page/sponsor-landing-p
 import SponsorPerk from '../../components/sponsor-us-page/sponsor-perk-section/SponsorPerkSection';
 import PastSponsorsSection from '../../components/sponsor-us-page/past-sponsor-section/PastSponsors';
 import Footer from '../../../shared-ui/components/footer/Footer';
-import BottomOfTheSea from '../../../shared-ui/components/bottom-of-the-sea/BottomOfTheSea';
+import BottomImageFooter from '../../../shared-ui/components/bottom-image-footer/BottomImageFooter';
 import OceanLayers2 from '../../../shared-ui/images/OceanLayers2.svg';
 
 const SponsorUsPage: React.FC = () => {
@@ -54,7 +54,7 @@ const SponsorUsPage: React.FC = () => {
         />
         <SponsorPerk />
         <PastSponsorsSection />
-        <BottomOfTheSea oceanLayers={OceanLayers2} />
+        <BottomImageFooter oceanLayers={OceanLayers2} />
         <Footer tabs={mainSiteTabInfo} isDay={true} />
       </StyledPageContainer>
     </>

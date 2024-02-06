@@ -25,7 +25,7 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 import { testimonialSectionData } from '../../lib/data';
-import BottomOfTheSea from '../../../shared-ui/components/bottom-of-the-sea/BottomOfTheSea';
+import BottomImageFooter from '../../../shared-ui/components/bottom-image-footer/BottomImageFooter';
 import OceanLayers from '../../../shared-ui/images/OceanLayers.svg';
 
 const IndexPage: React.FC = () => {
@@ -82,7 +82,7 @@ const IndexPage: React.FC = () => {
         <SponsorsSection />
         <MeetTheTeamSection />
         <AdventureAheadSection />
-        <BottomOfTheSea oceanLayers={OceanLayers} />
+        <BottomImageFooter oceanLayers={OceanLayers} />
         <Footer
           tabs={mainSiteTabInfoFooter}
           secondaryTabs={mainSiteTabInfoFooterSecondary}

@@ -19,7 +19,7 @@ import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRema
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import OurTeamSection from '../../components/our-team-section/OurTeamSection';
-import BottomOfTheSea from '../../../shared-ui/components/bottom-of-the-sea/BottomOfTheSea';
+import BottomImageFooter from '../../../shared-ui/components/bottom-image-footer/BottomImageFooter';
 import OceanLayers from '../../../shared-ui/images/OceanLayers.svg';
 
 const handleMode = (): boolean => {
@@ -68,7 +68,7 @@ const IndexPage: React.FC = () => {
       <OurTeamSection />
       <MeetTheTeamSection />
       <FeedbackJoinCoreSection />
-      <BottomOfTheSea oceanLayers={OceanLayers}/>
+      <BottomImageFooter oceanLayers={OceanLayers} />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
   );
