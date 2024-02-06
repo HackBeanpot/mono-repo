@@ -72,7 +72,7 @@ const StyledTextContainer = styled.div<SponsorUsLandingProps>`
   height: 100%;
 
   @media ${max.tablet} {
-    width: 20em;
+    width: 18em;
     padding: 1.5em;
     border-radius: 1em 0em 0em 1em;
   }
@@ -233,7 +233,7 @@ const StyledJellyfish = styled.img`
 
   @media ${max.tablet} {
     width: 30%;
-    left: -1.5em;
+    left: -1em;
     bottom: -3em;
   }
 
