@@ -15,6 +15,8 @@ import PastSponsorsSection from '../../components/sponsor-us-page/past-sponsor-s
 import Footer from '../../../shared-ui/components/footer/Footer';
 import BottomImageFooter from '../../../shared-ui/components/bottom-image-footer/BottomImageFooter';
 import OceanLayers2 from '../../../shared-ui/images/OceanLayers2.svg';
+import StatsSection from '../../components/sponsor-us-page/stats-section/StatsSection';
+import StarfishBanner from './sponsor-us/StarfishBanner';
 
 const SponsorUsPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -52,6 +54,8 @@ const SponsorUsPage: React.FC = () => {
           isSponsor={true}
           testimonialData={sponsorTestimonialData}
         />
+        <StarfishBanner />
+        <StatsSection />
         <SponsorPerk />
         <PastSponsorsSection />
         <BottomImageFooter oceanLayers={OceanLayers2} />

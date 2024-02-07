@@ -51,7 +51,6 @@ const StyledTestimonialsRightContainer = styled.div`
   }
 `;
 
-
 const StyledButtonNumberContainer = styled.div`
   display: inline-block;
 `;
@@ -62,7 +61,7 @@ const StyledArrowsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 15em;
+  gap: 25em;
   @media ${max.tabletSm} {
     margin-top: 1em;
     gap: 10em;
