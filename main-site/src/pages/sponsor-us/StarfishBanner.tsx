@@ -13,13 +13,15 @@ import {
 
 const StarfishBanner: React.FC = () => {
   return (
-    <StyledStarfishContainer>
-      <StyledStarfishOne src={StarfishOrange} />
-      <StyledStarfishTwo src={StarfishRed} />
-      <StyledStarfishThree src={StarfishGreen} />
-      <StyledStarfishFour src={StarfishRed} />
-      <StyledStarfishFive src={StarfishOrange} />
-    </StyledStarfishContainer>
+    <div>
+      <StyledStarfishContainer>
+        <StyledStarfishOne src={StarfishOrange} />
+        <StyledStarfishTwo src={StarfishRed} />
+        <StyledStarfishThree src={StarfishGreen} />
+        <StyledStarfishFour src={StarfishRed} />
+        <StyledStarfishFive src={StarfishOrange} />
+      </StyledStarfishContainer>
+    </div>
   );
 };
 
