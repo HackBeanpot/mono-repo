@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { max } from "../../../../shared-ui/lib/responsive";
+import { max } from "../../../shared-ui/lib/responsive";
 
 const StyledStarfishContainer = styled.div`
   display: flex;
