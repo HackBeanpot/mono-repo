@@ -1,7 +1,7 @@
 import React from 'react';
-import StarfishOrange from '../../../images/starfish-orange.png';
-import StarfishRed from '../../../images/starfish-red.png';
-import StarfishGreen from '../../../images/starfish-green.png';
+import StarfishOrange from '../../images/starfish-orange.png';
+import StarfishRed from '../../images/starfish-red.png';
+import StarfishGreen from '../../images/starfish-green.png';
 import {
   StyledStarfishOne,
   StyledStarfishTwo,
