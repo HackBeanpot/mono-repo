@@ -8,6 +8,7 @@ export interface TabInfo {
 export interface ResourceBoxProps {
   label: string;
   link: string;
+  image: string;
 }
 
 export interface JudgeOutputType {
@@ -89,12 +90,14 @@ export interface styledArrowProps {
 
 export enum Tag {
   meal = 'Meal',
-  beginner = 'Beginner-Friendly',
+  beginner = 'Beginner friendly',
   workshop = 'Workshop',
   actionItem = 'Action Item',
   everyone = 'Everyone',
   sponsor = 'Sponsor Event',
-  social = 'Social/Fun Event'
+  social = 'Social/Fun Event',
+  facebook = 'Sponsored by Facebook',
+  toast = 'Sponsored by Toast'
 }
 export interface EventItem {
   id: number;
@@ -126,9 +129,10 @@ export interface TeamProps {
 
 export interface TeamRaceProps {
   teams: TeamProps[];
+  isDay: boolean;
 }
 
-export interface TeamCarProps {
+export interface TeamFishProps {
   points: number;
   index: number;
 }
@@ -146,7 +150,7 @@ export interface MentorInfo {
   slack: string;
 }
 
-export interface StyledCactusButtonsProps {
+export interface StyledArrowButtonsProps {
   isToggled: boolean;
 }
 

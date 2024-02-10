@@ -25,16 +25,28 @@ const StyledTabTitle = styled(P)`
   display: flex;
   @media ${max.tablet} {
     display: inline;
-    margin-left: 1.75em;
+    margin-left: 1.6em;
+    background-color: ${colors.BORDER_BROWN};
+    border: 1px solid ${colors.BORDER_BROWN};
+    border-radius: 0px 0.75em 0px 0px;
+  }
+  @media ${max.mobile} {
+    display: inline;
+    margin-left: 1.8em;
+    background-color: ${colors.BORDER_BROWN};
+    border: 1px solid ${colors.BORDER_BROWN};
+    border-radius: 0px 0.75em 0px 0px;
+    padding-left: 0.25em;
   }
 `;
 const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
-  border: 2px solid ${colors.HEADER_FOOTER_BLUE};
+  border: 2px solid ${colors.TRANSPARENT};
   border-radius: 0.75em 0px 0px 0.75em;
   width: 2.9em;
   padding-top: 1em;
   padding-left: 0.4em;
   padding-right: 0.4em;
+  margin-right: 0.2em;
   text-align: center;
   font-size: 0.8em;
   box-sizing: border-box;
@@ -42,12 +54,16 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
   transition-timing-function: linear;
   color: ${(StyledTabTitleWrapperProps): string =>
     StyledTabTitleWrapperProps.isSelected
-      ? `${colors.BLACK}`
+      ? `${colors.TEXT_DARKER_BROWN}`
       : `${colors.WHITE}`};
   background-color: ${(StyledTabTitleWrapperProps): string =>
     StyledTabTitleWrapperProps.isSelected
-      ? `${colors.BUTTON_GREEN}`
-      : `${colors.BUTTON_DARK_GREEN}`};
+      ? `${colors.YELLOW_GREEN}`
+      : `${colors.DARK_YELLOW_GREEN}`};
+  font-weight: ${(StyledTabTitleWrapperProps): string =>
+    StyledTabTitleWrapperProps.isSelected
+      ? `bold`
+      : `normal`};
   height: 16em;
   cursor: pointer;
   box-shadow: ${(StyledTabTitleWrapperProps): string =>
@@ -58,40 +74,52 @@ const StyledTabTitleWrapper = styled.label<StyledTabTitleWrapperProps>`
   @media ${max.tablet} {
     padding-top: 0em;
     width: 50em;
-    border-radius: 0em 0.75em 0em 0em;
-    margin: -0.1em;
+    margin-left: -0.25em;
     padding-right: 2em;
     box-shadow: none;
-    border-bottom: none;
     padding-bottom: 0.12em;
+    font-size: 0.8em;
+    border: 3px solid ${colors.BORDER_BROWN};
+    border-radius: 0px 1em 2px 2px;
   }
   @media (max-width: 338px) {
     padding-right: 1em;
+    border: 2px solid ${colors.BORDER_BROWN};
   }
-  @media ${max.mobile} {
-    font-size: 0.8em;
-  } ;
 `;
 const StyledTabContent = styled(P)`
   padding-left: 1em;
-  padding-top: 0.5em;
-  color: ${colors.BLACK};
-`;
-const StyledTabContentContainer = styled.div`
-  background-color: ${colors.BUTTON_GREEN};
-  height: 47.7em;
-  width: 100%;
-  margin-right: 5em;
-  border: 2px solid ${colors.HEADER_FOOTER_BLUE};
-  border-left: none;
-  border-radius: 0px 0.75em 0.75em 0em;
+  padding-top: 0.75em;
+  color: ${colors.TEXT_DARKER_BROWN};
+  font-weight: bold;
 
   @media ${max.tablet} {
-    margin-left: 2em;
+    border-bottom-style: solid;
+    border-bottom-color: ${colors.BORDER_BROWN};
+    padding-bottom: 0.5em;
+  }
+`;
+const StyledTabContentContainer = styled.div`
+  background-color: ${colors.YELLOW_GREEN};
+  height: 53.5em;
+  width: 100%;
+  margin-right: 5em;
+  border: 2px solid ${colors.TRANSPARENT};
+  border-left: none;
+  border-radius: 0px 0.75em 0.75em 0em;
+  
+  @media ${max.tablet} {
+    margin-left: 1.9em;
     width: auto;
-    border-left: 2px solid ${colors.HEADER_FOOTER_BLUE};
+    border: 4px solid ${colors.BORDER_BROWN};
     margin-right: 2em;
-    border-radius: 0em 0.75em 0em 0em;
+    padding-bottom: 2em;
+    margin-top: 1.75em;
+  }
+  @media ${max.mobile} {
+    margin-left: 2em;
+    padding-bottom: 1.5em;
+    margin-top: 0em;
   }
   overflow-y: scroll;
 `;

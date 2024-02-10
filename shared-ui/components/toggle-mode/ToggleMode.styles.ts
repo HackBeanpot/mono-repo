@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { max } from '../../lib/responsive';
 
-const ToggleContainer = styled.div<{location: string}>`
+const ToggleContainer = styled.div<{ location: string }>`
   @media ${max.tablet} {
     float: right;
   }

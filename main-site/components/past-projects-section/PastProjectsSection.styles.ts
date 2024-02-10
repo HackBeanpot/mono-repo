@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { colors } from '../../../shared-ui/style/colors';
 import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { max, min } from '../../../shared-ui/lib/responsive';
+import { PastProjectProps } from '../../lib/types';
 
 const StyledArrowContainer = styled.div`
   display: flex;
@@ -32,6 +33,7 @@ const StyledPastProjectsSection = styled.div`
   @media ${max.tablet} {
     text-align: center;
     width: 90%;
+    padding-bottom: 5vh;
   };
 `;
 
@@ -65,8 +67,10 @@ const StyledPastProjectsInfo = styled.div`
   };
 `;
 
-const StyledPastProjectsInfoContainer = styled.div`
+const StyledPastProjectsInfoContainer = styled.div<PastProjectProps>`
   text-align: center;
+  background-color: ${(props): string => props.isDay ? colors.DARK_BLUE : colors.DEEP_SEA_BLUE};
+  padding-bottom: 5em;
 `;
 
 const StyledPastProjectsTitle = styled(H2)`
@@ -119,9 +123,9 @@ const StyledPastProjectsDescription = styled(P)`
 
   @media ${max.tablet} {
     color: ${colors.WHITE};
-    margin-left: 5em;
-    margin-right: 5em;
-    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
     padding-bottom: 2em;
     letter-spacing: 0.5px;
   }
@@ -144,6 +148,9 @@ const StyledPastProjectsViewText = styled(P)`
   @media ${max.tabletLg} {
     margin-right: 3em;
     margin-left: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
+    font-size: 0.75em;
   }
 
   @media ${max.tablet} {
@@ -212,8 +219,9 @@ const StyledPirateFlag = styled.img`
   }
 
   @media ${max.tabletSm} {
-    top: 8em;
-    width: 9em;
+    top: 7em;
+    left: 3em;
+    width: 7em;
   }
 `;
 

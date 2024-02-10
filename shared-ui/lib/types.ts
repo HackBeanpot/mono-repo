@@ -3,6 +3,7 @@ import { MouseEventHandler } from 'react';
 export interface StyledPrimaryButtonProps {
   $isSmallPrimary: boolean | undefined;
   $transparent: boolean | undefined;
+  $isApplyButton: boolean | undefined;
 }
 
 export interface ButtonProps {
@@ -13,10 +14,16 @@ export interface ButtonProps {
   isSmallPrimary?: boolean;
   isClickable?: boolean;
   transparent?: boolean;
+  isApplyButton?: boolean;
+  inHeader?: boolean;
 }
 
 export interface TimeRemainingProps {
   target: Date;
+  isDay: boolean;
+}
+export interface TimeRemainingTextProps {
+  isDay: boolean;
 }
 
 export interface DropdownProps {
@@ -67,6 +74,7 @@ export interface TimeRemainingInfo {
 export interface HeaderProps {
   tabs: TabInfo[];
   isDay: boolean;
+  isLiveSite: boolean;
 }
 
 export interface StyledHeaderProps {
@@ -76,6 +84,7 @@ export interface StyledHeaderProps {
 
 export interface FooterProps {
   tabs: TabInfo[];
+  secondaryTabs: TabInfo[];
   isDay: boolean;
 }
 

@@ -37,10 +37,26 @@ const team: Team = {
 
 const mainSiteTabInfo: TabInfo[] = [
   { name: 'About', link: '/#about' },
-  { name: 'Calendar', link: '/#calendar' },
+  { name: 'Testimonials', link: '/#testimonials' },
+  { name: 'Projects', link: '/#projects' },
   { name: 'FAQ', link: '/#faq' },
-  { name: 'Sponsor Us', link: '/sponsor-us' },
-  { name: 'Team', link: '/#team' }
+  { name: 'Sponsors', link: '/#sponsors' },
+  { name: 'Team', link: '/#team' },
+  { name: 'Sponsor Us', link: 'https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view', newTab: true },
+  { name: 'Apply', link: 'https://apply.hackbeanpot.com', newTab: true },
+];
+
+const mainSiteTabInfoFooter: TabInfo[] = [
+  { name: 'About', link: '/#about' },
+  { name: 'Testimonials', link: '/#testimonials' },
+  { name: 'Projects', link: '/#projects' },
+  { name: 'FAQ', link: '/#faq' },
+  { name: 'Sponsors', link: '/#sponsors' },
+];
+
+const mainSiteTabInfoFooterSecondary: TabInfo[] = [
+  { name: 'Project gallery', link: 'https://projects.hackbeanpot.com' },
+  { name: 'Contact us', link: 'mailto:team@hackbeanpot.com' },
 ];
 
 const surbhi: Person = {
@@ -319,4 +335,4 @@ const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Sponsorship', listOfPictures: sponsorshipPictures }
 ];
 
-export { mainSiteTabInfo, teamInfo, team };
+export { mainSiteTabInfo, mainSiteTabInfoFooter, mainSiteTabInfoFooterSecondary, teamInfo, team };

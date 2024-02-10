@@ -62,28 +62,26 @@ width: 8%;
   left: 3em;
 }
 `
-
 const StyledDiver = styled.img`
   position: absolute;
-  right: 2em;
-  top: 17em;
-  width: 20em;
+  right: 5em;
+  bottom: 2em;
+  width: 10em;
+  @media ${min.mobile} {
+    right: 0em;
+    bottom: -8em;
+    width: 20em;
+  }
   @media ${min.tablet} {
-    top: 30em;
-    right: 6em;
-    width: 30em;
+    right: 8em;
+    bottom: -7em;
+    width: 25em;
   }
   @media ${min.tabletLg} {
-    top: 28em;
-  }
-  @media ${max.tabletSm} {
-    top: 108vw;
-    width: 60%;
-  }
-  @media ${max.mobile} {
-    margin-top: 10em;
-  }
-`;
+    right: 4em;
+    bottom: -9em;
+    width: 30em;
+  }`;
 
 const StyledButtonContainer = styled.div`
   @media ${max.tablet} {
@@ -97,7 +95,7 @@ export {
   StyledTextContainer,
   StyledExploreSectionContainer,
   StyledParagraph,
-  StyledBubble3, 
+  StyledBubble3,
   StyledDiver,
   StyledButtonContainer
 };

@@ -14,8 +14,10 @@ export interface FaqItemProps {
 export type SectionData = AboutSectionData;
 
 export interface AboutSectionData {
+  id: number
   title: string;
   description: string;
+  image: string;
 }
 
 export interface LandingSectionProps {
@@ -26,10 +28,6 @@ export interface LandingSectionProps {
 export interface SponsorUsLandingProps {
   isDay: boolean;
   setIsDay: (isDay: boolean) => void;
-}
-
-export interface SponsorsSectionProps {
-  isDay: boolean;
 }
 
 export interface ExploreSectionProps {
@@ -88,6 +86,10 @@ export interface PastProjectData {
   award?: string;
 }
 
+export interface PastProjectProps {
+  isDay: boolean;
+}
+
 export interface StyledSponsorsImageProps {
   level: string;
 }
@@ -102,4 +104,9 @@ export interface EventsCalendarData {
   time: string;
   location?: string;
   room?: string;
+  image?: string
+}
+
+export interface CountdownProps {
+  targetDate: string;
 }

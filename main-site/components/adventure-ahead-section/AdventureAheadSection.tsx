@@ -1,31 +1,34 @@
 import React from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import { H3 } from '../../../shared-ui/style/typography';
-import { colors } from '../../../shared-ui/style/colors';
 
 import {
   StyledAdventureAheadSectionContainer,
   StyledParagraph,
-  StyledSignpost,
+  StyledImageCore,
   StyledTextContainer,
-  StyledButtonContainer
+  StyledButtonContainer,
+  StyledHeader,
+  StyledHeaderDiv,
+  StyledShell
 } from './AdventureAheadSection.styles';
 
-import Signpost from '../../../shared-ui/images/signpost.svg';
+import GroupPhoto from '../../../shared-ui/images/meet-the-team/group.png';
+import shell1 from '../../../shared-ui/images/shell1.svg';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 
 const AdventureAheadSection: React.FC = () => {
   const isDesktop = useMatchMedia(min.tablet);
   return (
+    <>
     <StyledAdventureAheadSectionContainer>
-      {isDesktop && <StyledSignpost src={Signpost} />}
+      {!isDesktop && <StyledHeaderDiv><StyledHeader>We can't wait to meet you!</StyledHeader></StyledHeaderDiv>};
+      <StyledShell src={shell1}/>
+      <StyledImageCore src={GroupPhoto}/>
       <StyledTextContainer>
-        <H3 color={colors.TEXT_BROWN}>We can't wait to meet you!</H3>
+      {isDesktop && <StyledHeader>We can't wait to meet you!</StyledHeader>}
         <StyledParagraph>
-          Stay up to date with all things Hackbeanpot like when we announce the{' '}
-          <br />
-          location, date, and when applications open! (no spam we promise!)
+          Stay up to date with all things HackBeanpot like when we announce the location, date, and when applications open! (no spam we promise!)
         </StyledParagraph>
         <StyledButtonContainer>
           <PrimaryButton
@@ -35,8 +38,8 @@ const AdventureAheadSection: React.FC = () => {
           />
         </StyledButtonContainer>
       </StyledTextContainer>
-      {!isDesktop && <StyledSignpost src={Signpost} />}
     </StyledAdventureAheadSectionContainer>
+    </>
   );
 };
 

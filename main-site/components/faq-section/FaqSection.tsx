@@ -1,26 +1,31 @@
 import React from 'react';
-import cactus from '../../../shared-ui/images/cactus.svg';
+// import cactus from '../../../shared-ui/images/cactus.svg';
+import octopus from '../../../shared-ui/images/octopus.svg';
+import LightHouse from '../../../shared-ui/images/LightHouse.svg';
 import {
-  StyledCactus,
+  StyledLightHouse,
+  StyledContactUsButton,
   StyledFaqSectionContainer,
-  StyledH4
+  StyledFaqSectionTitle,
+  StyledH4,
+  StyledOctopus
 } from './FaqSection.styles';
-import { H2 } from '../../../shared-ui/style/typography';
-import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import Faq from './faq/Faq';
+import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 
 const FaqSection: React.FC = () => {
   return (
     <div id="faq">
       <StyledFaqSectionContainer>
-        <H2>FAQ</H2>
-        <StyledCactus src={cactus} />
+        <StyledFaqSectionTitle>FAQ</StyledFaqSectionTitle>
+        <StyledOctopus src={octopus} />
+        <StyledLightHouse src={LightHouse} />
         <Faq />
         <StyledH4>
           Don't see your question?
           <br />
           <br />
-          Reach out to us at team@hackbeanpot.com!
+          Reach out to us at core@hackbeanpot.com!
         </StyledH4>
         <PrimaryButton
           btnText={'Contact Us'}

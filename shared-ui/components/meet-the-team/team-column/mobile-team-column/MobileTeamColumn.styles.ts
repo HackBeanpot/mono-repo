@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { max } from '../../../../lib/responsive';
+import { fonts } from '../../../../../shared-ui/style/typography'
 
 const StyledMobileTeamColumn = styled.div`
   padding-top: 2.5em;
@@ -45,8 +46,8 @@ const StyledLinkedIn = styled.a`
   color: white;
   text-decoration: none;
   width: 100%;
-  font-family: 'Nunito Sans', sans-serif;
-  
+  font-family: ${fonts.nunitoSansRegular};
+
   img {
     width: 1.0em;
     height: 1.0em;

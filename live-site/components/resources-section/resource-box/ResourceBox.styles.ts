@@ -3,36 +3,24 @@ import { max } from '../../../../shared-ui/lib/responsive';
 import { fonts } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 
-const StyledResourceBox = styled.a`
-  text-decoration: none;
-  width: 20em;
-  height: 22em;
-  background-color: ${colors.BUTTON_DARK_GREEN};
+const StyledResourceBox = styled.img`
   margin: 1em;
-  border-radius: 1em;
-  border: 0.3em solid ${colors.PURPLE};
   cursor: pointer;
-  
+  height: 21em;
+
   @media ${max.tabletLg} {
-    height: 18em;
+    height: 15em;
   }
 
   @media ${max.tablet} {
     height: 11em;
-    margin: 0.7em;
-    width: 43%;
-    height: 14em;
-  }
-
-  @media ${max.tabletSm} {
-    width: 40%;
   }
 `;
 const StyledLabel = styled.div`
-  font-family: ${fonts.nunitoSansBold};
+  font-family: ${fonts.berkshireSwash};
   margin: 0.6em;
   font-size: 2.8em;
-  color: ${colors.BUTTON_GREEN};
+  color: ${colors.WHITE};
 
   @media ${max.tabletLg} {
     font-size: 1.8em;

@@ -3,10 +3,14 @@ import type { HeadFC } from 'gatsby';
 import '../../../shared-ui/style/globals.css';
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
-import { mainSiteTabInfo } from '../../../shared-ui/lib/data';
+import {
+  mainSiteTabInfo,
+  mainSiteTabInfoFooter,
+  mainSiteTabInfoFooterSecondary
+} from '../../../shared-ui/lib/data';
 import Footer from '../../../shared-ui/components/footer/Footer';
 import ExploreSection from '../../components/explore-section/ExploreSection';
-// import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
+import EventsCalendarSection from '../../components/events-calendar-section/EventsCalendarSection';
 import FaqSection from '../../components/faq-section/FaqSection';
 import AdventureAheadSection from '../../components/adventure-ahead-section/AdventureAheadSection';
 // import CovidSection from '../../components/covid-section/CovidSection';
@@ -21,6 +25,8 @@ import { min } from '../../../shared-ui/lib/responsive';
 import { StyledPageContainer } from '../../../shared-ui/styled-components/Background.styles';
 import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 import { testimonialSectionData } from '../../lib/data';
+import BottomImageFooter from '../../../shared-ui/components/bottom-image-footer/BottomImageFooter';
+import OceanLayers from '../../../shared-ui/images/OceanLayers.svg';
 
 const IndexPage: React.FC = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
@@ -47,24 +53,43 @@ const IndexPage: React.FC = () => {
     return null;
   }
 
+  const mlhStyles = {
+    display: 'block',
+    maxWidth: 100,
+    minWidth: '60',
+    position: 'fixed',
+    right: '50px',
+    top: '0',
+    width: '10%',
+    zIndex: '10000'
+  } as React.CSSProperties;
+
   return (
-    <StyledPageContainer className={getBackgroundClassName()}>
-      <Header tabs={mainSiteTabInfo} isDay={isDay} />
-      <LandingSection isDay={isDay} setIsDay={setIsDay} />
-      <ExploreSection isDay={isDay} />
-      <AboutSection />
-      {/* <EventsCalendarSection /> */}
-      <TestimonialsSection testimonialData={testimonialSectionData}/>
-      <PastProjectsSection />
-      <FaqSection />
-      <PastPhotosSection />
-      {/* <CovidSection /> */}
-      <MeetTheTeamSection />
-      <SponsorsSection isDay={isDay}/>
-      <AdventureAheadSection />
-      {/* <TimeRemaining target={new Date('02/10/2023 18:00:00')} /> */}
-      <Footer tabs={mainSiteTabInfo} isDay={isDay} />
-    </StyledPageContainer>
+    <>
+      <StyledPageContainer className={getBackgroundClassName()}>
+        <Header tabs={mainSiteTabInfo} isDay={isDay} />
+        <LandingSection isDay={isDay} setIsDay={setIsDay} />
+        <ExploreSection isDay={isDay} />
+        <AboutSection />
+        {/* <EventsCalendarSection /> */}
+
+        <EventsCalendarSection isDay={isDay} />
+        <TestimonialsSection testimonialData={testimonialSectionData} />
+        <PastProjectsSection isDay={isDay} />
+        <PastPhotosSection />
+        <FaqSection />
+        {/* <CovidSection /> */}
+        <SponsorsSection />
+        <MeetTheTeamSection />
+        <AdventureAheadSection />
+        <BottomImageFooter oceanLayers={OceanLayers} />
+        <Footer
+          tabs={mainSiteTabInfoFooter}
+          secondaryTabs={mainSiteTabInfoFooterSecondary}
+          isDay={isDay}
+        />
+      </StyledPageContainer>
+    </>
   );
 };
 

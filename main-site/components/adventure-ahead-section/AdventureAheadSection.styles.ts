@@ -1,52 +1,90 @@
 import styled from '@emotion/styled';
-import { P } from '../../../shared-ui/style/typography';
+import { H3, P } from '../../../shared-ui/style/typography';
 import { max } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 
 const StyledAdventureAheadSectionContainer = styled.div`
   display: flex;
-  margin: 10em 8em;
-  @media ${max.tabletLg} {
-    margin: 10em 0;
-  }
+
   @media ${max.tablet} {
+    margin: 10em 0;
     flex-wrap: wrap;
+  };
+`;
+
+const StyledHeader = styled(H3)`
+  display: flex;
+
+  @media ${max.tablet} {
+    justify-content: center;
+    padding-bottom: 0.5em;
+  };
+`;
+
+const StyledHeaderDiv = styled.div`
+  width: 100%;
+`;
+
+
+const StyledParagraph = styled(P)`
+  margin-top: 1em;
+  color: ${colors.WHITE};
+
+  @media ${max.tablet} {
+    text-align: center;
+    margin-top: -1em;
   }
 `;
 
-const StyledParagraph = styled(P)`
-  padding: 2em 0;
-  color: ${colors.TEXT_BROWN};
-`;
-const StyledSignpost = styled.img`
-  padding: 2em;
-  vertical-align: top;
+const StyledImageCore = styled.img`
+  width: 40%;
+  margin: auto;
+  margin-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
   @media ${max.tablet} {
-    width: 13em;
-    height: auto;
-    margin: 0em;
+    width: 80%;
+    margin: auto;
+  }
+`;
+
+const StyledShell = styled.img`
+  position: absolute;
+  width: 8%;
+  margin-top: clamp(15em, 20%, 19em);
+  margin-left: 1em;
+
+  @media ${max.tablet} {
+    width: 15%;
+    margin-top: clamp(15em, 45%, 22em);
+    margin-left: 3em;
   }
 `;
 
 const StyledTextContainer = styled.div`
-  margin: 2em 3em;
-    justify-content: center;
-    color: ${colors.TEXT_BROWN}
-    padding: 2em;
+  margin-top: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
 `;
+
 const StyledButtonContainer = styled.div`
   margin-top: 0.5em;
 
   @media ${max.tablet} {
     justify-content: center;
     display: flex;
+    margin-top: 2em;
   }
 `;
 
 export {
   StyledParagraph,
-  StyledSignpost,
+  StyledImageCore,
+  StyledShell,
   StyledAdventureAheadSectionContainer,
   StyledTextContainer,
-  StyledButtonContainer
+  StyledButtonContainer,
+  StyledHeader,
+  StyledHeaderDiv
 };

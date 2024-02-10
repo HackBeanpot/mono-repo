@@ -1,19 +1,69 @@
 {
-  "name": "mono-repo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier-format": "prettier --config .prettierrc '**/src/**/*.ts' --write",
-    "build": "tsc",
-    "lint": "eslint . --ext .ts",
-    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "mono-repo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prettier-format": "prettier --config .prettierrc '**/src/**/*.ts' --write",
+        "build": "tsc",
+        "lint": "eslint . --ext .ts",
+        "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.{ts,tsx}": [
+            "eslint . --fix",
+            "prettier --write ."
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HackBeanpot/mono-repo.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/HackBeanpot/mono-repo/issues"
+    },
+    "homepage": "https://github.com/HackBeanpot/mono-repo#readme",
+    "devDependencies": {
+        "@types/react": "18.0.19",
+        "@types/react-copy-to-clipboard": "5.0.4",
+        "@types/styled-components": "5.1.26",
+        "@typescript-eslint/eslint-plugin": "5.32.0",
+        "@typescript-eslint/parser": "5.32.0",
+        "eslint": "8.21.0",
+        "eslint-config-prettier": "8.5.0",
+        "prettier": "2.7.1",
+        "react-dom": "18.2.0",
+        "react-use-match-media": "1.4.0",
+        "typescript": "4.7.4"
+    },
+    "dependencies": {
+        "@emotion/react": "11.11.1",
+        "@emotion/styled": "11.11.0",
+        "babel-plugin-styled-components": "2.0.7",
+        "framer-motion": "7.10.0",
+        "gatsby-plugin-mailchimp": "5.2.2",
+        "gatsby-plugin-manifest": "4.9.1",
+        "gatsby-plugin-react-helmet": "5.9.0",
+        "gatsby-plugin-styled-components": "5.24.0",
+        "husky": "8.0.1",
+        "lint-staged": "13.0.3",
+        "nanoid": "4.0.0",
+        "path": "0.12.7",
+        "react": "18.2.0",
+        "react-helmet": "6.1.0",
+        "react-media-match": "1.14.2",
+        "styled-components": "5.3.11",
+        "ts-node": "10.9.1"
     }
+<<<<<<< HEAD
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
@@ -63,3 +113,6 @@
     "ts-node": "^10.9.1"
   }
 }
+=======
+}
+>>>>>>> main

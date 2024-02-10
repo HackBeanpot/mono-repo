@@ -10,12 +10,17 @@ const StyledEventItemContainer = styled.div`
   margin-top: 1em;
   border-radius: 2em;
   height: 8em;
-  background-color: ${colors.WHITE};
+  background-color: ${colors.SAND_HIGHLIGHTS};
   @media (max-width: 460px) {
     display: flex;
     flex-direction: column;
     height: 15em;
   } ;
+
+  @media ${max.mobile} {
+    height: auto;
+    padding-bottom: 0.25em;
+  }
 `;
 
 const StyledEventItemLeftSideContainer = styled.div`
@@ -28,6 +33,7 @@ const StyledEventItemLeftSideContainer = styled.div`
 
   @media ${max.tablet} {
     display: block;
+    padding-left: 1em;
   }
 
   @media ${max.tabletXs} {
@@ -62,18 +68,25 @@ const StyledEventTimeTopicContainer = styled.div`
     display: flex;
     padding-right: 0;
     padding-bottom: 0;
+    padding-top: 1.5em;
+    padding-left: 0.7em;
   }
 
   @media ${max.mobile} {
     display: flex;
-    padding-bottom: 0.5em;
+    padding-bottom: 0em;
+    padding-left: 1em;
+    padding-top: 2em;
   } ;
 `;
 
 const StyledEventItemHeader = styled(H3)`
   padding-left: 2em;
+  color: ${colors.BLACK}; // placeholder color plz remove when time
   padding-top: 1em;
+  margin-bottom: 0.25em;
   font-size: 1.7em;
+  color: ${colors.OFF_BLACK};
 
   @media ${max.tabletLg} {
     font-size: 1.4em;
@@ -84,7 +97,14 @@ const StyledEventItemHeader = styled(H3)`
   @media ${max.tablet} {
     font-size: 1.2em;
     padding: 0;
+    margin-top: -0.5em;
+    padding-left: 0.5em;
   } ;
+
+  @media ${max.mobile} {
+    margin-top: 0em;
+    padding-left: 0em;
+  }
 `;
 
 const StyledEventItemLocation = styled(P)`
@@ -96,8 +116,8 @@ const StyledEventItemLocation = styled(P)`
     padding-left: 0.5em;
   }
 
-  @media ${max.tabletSm} {
-    padding-left: 0;
+  @media ${max.tablet} {
+    padding-left: 0.4em;
   }
 
   @media ${max.mobile} {
@@ -137,17 +157,19 @@ const StyledPinpoint = styled.img`
   height: 20%;
 
   @media ${max.tabletLg} {
-    padding-left: 1.2em;
+    padding-left: 1.5em;
   }
 
   @media ${max.tablet} {
     padding: 0;
     height: 1.5em;
     padding-right: 0.5em;
+    padding-left: 0.6em;
   }
 
   @media ${max.mobile} {
     height: 1em;
+    padding-left: 0.1em;
   } ;
 `;
 
@@ -160,13 +182,13 @@ const StyledArrow = styled.img<styledArrowProps>`
     width: 20px;
   }
   padding-top: ${(styledArrowProps): string =>
-    styledArrowProps.isOpen ? `0` : `3em`};
+    styledArrowProps.isOpen ? `0` : `3.5em`};
   padding-right: ${(styledArrowProps): string =>
     styledArrowProps.isOpen ? `0` : `3em`};
   padding-bottom: ${(styledArrowProps): string =>
-    styledArrowProps.isOpen ? `3em` : `0`};
+    styledArrowProps.isOpen ? `3.5em` : `0`};
   padding-left: ${(styledArrowProps): string =>
-    styledArrowProps.isOpen ? `3em` : `0`};
+    styledArrowProps.isOpen ? `3.5em` : `0`};
   float: right;
   transform: ${(styledArrowProps): string =>
     styledArrowProps.isOpen ? `rotate(180deg)` : `rotate(0deg)`};
@@ -196,7 +218,7 @@ const StyledTagsContainer = styled.div`
   } ;
 `;
 const StyledEventItemDescription = styled.div`
-  background-color: white;
+  background-color: ${colors.DUNE_HIGHLIGHT};
   border-radius: 2em;
   margin-left: 1em;
   margin-right: 1em;
