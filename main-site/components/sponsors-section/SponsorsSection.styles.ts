@@ -18,7 +18,7 @@ const StyledContactContainer = styled.div<SponsorsSectionProps>`
 `;
 
 const StyledContactText = styled(H4)`
-  color: ${colors.WHITE} !important; 
+  color: ${colors.WHITE} !important;
   padding: 3em 17em 1.5em 17em;
   @media ${max.desktop} {
     padding: 3em;
@@ -66,9 +66,10 @@ const StyledSpecificSponsorsHeader = styled(H2)`
   }
 `;
 
-const StyledDiamondLogo = styled.img`
+const StyledPlatinumLogos = styled.img`
   margin-botton: 4em;
   margin: 4em 0;
+  width: 40%;
 `;
 
 const StyledOrangeStarfish = styled.img`
@@ -112,10 +113,12 @@ const StyledStarfishMobile = styled.img`
 
 const StyledGoldLogos = styled.img`
   margin-bottom: 3em;
+  width: 50%;
 `;
 
-const StyledSilverLogos = styled.img`
+const StyledBronzeLogos = styled.img`
   margin-top: 3em;
+  width: 50%;
 `;
 
 const StyledTreasureChest = styled.img`
@@ -130,10 +133,8 @@ const StyledTreasureChest = styled.img`
 `;
 
 const StyledMobileLogo = styled.img<StyledSponsorsImageProps>`
-  margin-top: ${(props): string =>
-    props.level === 'Diamond Level' || props.level === 'Silver Level'
-      ? '4em'
-      : '0'};
+  margin-top: 1em;
+  width: 80%;
 `;
 
 const StyledSecondaryButtonWrapper = styled.div`
@@ -153,9 +154,9 @@ export {
   StyledRedStarfish,
   StyledGreenStarfish,
   StyledStarfishMobile,
-  StyledDiamondLogo,
+  StyledPlatinumLogos,
   StyledGoldLogos,
-  StyledSilverLogos,
+  StyledBronzeLogos,
   StyledSponsorsHeader,
   StyledSpecificSponsorsHeader,
   StyledContactText,

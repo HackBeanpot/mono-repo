@@ -3,9 +3,7 @@ import {
   StyledSponsorsSectionContainer,
   StyledContactContainer,
   StyledFish2,
-  StyledDiamondLogo,
   StyledGoldLogos,
-  StyledSilverLogos,
   StyledSponsorsHeader,
   StyledContactText,
   StyledMobileLogo,
@@ -16,14 +14,16 @@ import {
   StyledGreenStarfish,
   StyledStarfishMobile,
   StyledSpecificSponsorsHeader,
+  StyledPlatinumLogos,
+  StyledBronzeLogos,
 } from './SponsorsSection.styles';
 import fish2 from '../../../shared-ui/images/fish2.svg';
-import DiamondLogoDesktop from '../../images/diamond-level-logo-desktop.png';
-import GoldLogosDesktop from '../../images/gold-level-logos-desktop.png';
-import SilverLogosDesktop from '../../images/silver-level-logos-desktop.png';
-import DiamondLogoMobile from '../../images/diamond-level-logo-mobile.png';
-import GoldLogosMobile from '../../images/gold-level-logos-mobile.png';
-import SilverLogosMobile from '../../images/silver-level-logos-mobile.png';
+import PlatinumLogos from '../../images/platinum-level-logos-desktop.png';
+import GoldLogos from '../../images/gold-level-logos-desktop.png';
+import BronzeLogos from '../../images/bronze-level-logos-desktop.png';
+// import DiamondLogoMobile from '../../images/diamond-level-logo-mobile.png';
+// import GoldLogosMobile from '../../images/gold-level-logos-mobile.png';
+// import SilverLogosMobile from '../../images/silver-level-logos-mobile.png';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
@@ -38,17 +38,17 @@ import MobileOrangeStarfish from '../../../shared-ui/images/OrangeStarfishMobile
 
 const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
   const isDesktop = useMatchMedia(min.tabletLg);
-  const sponsorLevelsInfo = ['Diamond Level', 'Gold Level', 'Silver Level'];
+  const sponsorLevelsInfo = ['Platinum Level', 'Gold Level', 'Bronze Level'];
   const [currLevel, setCurrLevel] = useState(sponsorLevelsInfo[0]);
 
   function getImage(title: string): string {
-    if (title === 'Diamond Level') {
-      return DiamondLogoMobile;
+    if (title === 'Platinum Level') {
+      return PlatinumLogos;
     }
     if (title === 'Gold Level') {
-      return GoldLogosMobile;
+      return GoldLogos;
     }
-    return SilverLogosMobile;
+    return BronzeLogos;
   }
 
   return (
@@ -86,25 +86,25 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
         <>
           <div>
           <StyledOrangeStarfish src={OrangeStarfish} alt="orange starfish" />
-            <StyledSpecificSponsorsHeader> Diamond Level </StyledSpecificSponsorsHeader>
+            <StyledSpecificSponsorsHeader> Platinum Level </StyledSpecificSponsorsHeader>
             <br />
-            <StyledDiamondLogo
-              src={DiamondLogoDesktop}
-              alt="diamond level logo"
+            <StyledPlatinumLogos
+              src={PlatinumLogos}
+              alt="platinum level logo"
             />
           </div>
           <div>
           <StyledSpecificSponsorsHeader> Gold Level </StyledSpecificSponsorsHeader>
             <br />
-            <StyledGoldLogos src={GoldLogosDesktop} alt="gold level logos" />
+            <StyledGoldLogos src={GoldLogos} alt="gold level logos" />
             <StyledRedStarfish src={RedStarfish} alt="red starfish" />
           </div>
           <div>
-          <StyledSpecificSponsorsHeader> Silver Level </StyledSpecificSponsorsHeader>
+          <StyledSpecificSponsorsHeader> Bronze Level </StyledSpecificSponsorsHeader>
             <br />
-            <StyledSilverLogos
-              src={SilverLogosDesktop}
-              alt="silver level logos"
+            <StyledBronzeLogos
+              src={BronzeLogos}
+              alt="bronze level logos"
             />
             <StyledGreenStarfish src={GreenStarfish} alt="green starfish" />
           </div>
