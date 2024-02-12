@@ -64,21 +64,21 @@ width: 8%;
 `
 const StyledDiver = styled.img`
   position: absolute;
-  right: 5em; 
-  bottom: 2em; 
-  width: 10em; 
+  right: 5em;
+  bottom: 2em;
+  width: 10em;
   @media ${min.mobile} {
-    right: 0em; 
+    right: 0em;
     bottom: -8em;
-    width: 20em; 
+    width: 20em;
   }
   @media ${min.tablet} {
-    right: 8em; 
-    bottom: -7em; 
-    width: 25em; 
+    right: 8em;
+    bottom: -7em;
+    width: 25em;
   }
   @media ${min.tabletLg} {
-    right: 4em; 
+    right: 4em;
     bottom: -9em;
     width: 30em;
   }`;
@@ -95,7 +95,7 @@ export {
   StyledTextContainer,
   StyledExploreSectionContainer,
   StyledParagraph,
-  StyledBubble3, 
+  StyledBubble3,
   StyledDiver,
   StyledButtonContainer
 };

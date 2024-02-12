@@ -35,7 +35,7 @@ const StyledLinkedIn = styled.a`
 width: 14em;
 color: white;
 display: flex
-align-items: center; 
+align-items: center;
 justify-content: center;
 text-decoration: none;
 font-family: ${fonts.nunitoSansRegular};

@@ -1,61 +1,60 @@
 import React, { useState } from 'react';
-import SecondaryButton from '../../../shared-ui/components/secondary-button/SecondaryButton';
 import {
   StyledSponsorsSectionContainer,
-  StyledDiamondLogo,
+  StyledContactContainer,
+  StyledFish2,
   StyledGoldLogos,
-  StyledSilverLogos,
   StyledSponsorsHeader,
   StyledContactText,
-  StyledTreasureChest,
   StyledMobileLogo,
   StyledSecondaryButtonWrapper,
   StyledArrowWrapper,
-  ButtonWrapper
+  StyledOrangeStarfish,
+  StyledRedStarfish,
+  StyledGreenStarfish,
+  StyledStarfishMobile,
+  StyledSpecificSponsorsHeader,
+  StyledPlatinumLogos,
+  StyledBronzeLogos,
 } from './SponsorsSection.styles';
-import DiamondLogoDesktop from '../../images/diamond-level-logo-desktop.png';
-import GoldLogosDesktop from '../../images/gold-level-logos-desktop.png';
-import SilverLogosDesktop from '../../images/silver-level-logos-desktop.png';
-import DiamondLogoMobile from '../../images/diamond-level-logo-mobile.png';
-import GoldLogosMobile from '../../images/gold-level-logos-mobile.png';
-import SilverLogosMobile from '../../images/silver-level-logos-mobile.png';
-import TreasureChest from '../../images/treasure-chest.svg';
+import fish2 from '../../../shared-ui/images/fish2.svg';
+import PlatinumLogos from '../../images/platinum-level-logos-desktop.png';
+import GoldLogos from '../../images/gold-level-logos-desktop.png';
+import BronzeLogos from '../../images/bronze-level-logos-desktop.png';
+// import DiamondLogoMobile from '../../images/diamond-level-logo-mobile.png';
+// import GoldLogosMobile from '../../images/gold-level-logos-mobile.png';
+// import SilverLogosMobile from '../../images/silver-level-logos-mobile.png';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import useMatchMedia from 'react-use-match-media';
 import { min } from '../../../shared-ui/lib/responsive';
 import Arrow from '../../../shared-ui/components/arrow/Arrow';
 import { getLeftOrRight } from '../../lib/utils';
+import { SponsorsSectionProps } from '../../lib/types';
+import RedStarfish from '../../../shared-ui/images/Red Starfish.svg';
+import GreenStarfish from '../../../shared-ui/images/Green Starfish.svg';
+import OrangeStarfish from '../../../shared-ui/images/Orange Starfish.svg';
+import MobileOrangeStarfish from '../../../shared-ui/images/OrangeStarfishMobile.svg';
 
-const SponsorsSection: React.FC = () => {
+
+const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
   const isDesktop = useMatchMedia(min.tabletLg);
-  const sponsorLevelsInfo = ['Diamond Level', 'Gold Level', 'Silver Level'];
+  const sponsorLevelsInfo = ['Platinum Level', 'Gold Level', 'Bronze Level'];
   const [currLevel, setCurrLevel] = useState(sponsorLevelsInfo[0]);
 
   function getImage(title: string): string {
-    if (title === 'Diamond Level') {
-      return DiamondLogoMobile;
+    if (title === 'Platinum Level') {
+      return PlatinumLogos;
     }
     if (title === 'Gold Level') {
-      return GoldLogosMobile;
+      return GoldLogos;
     }
-    return SilverLogosMobile;
+    return BronzeLogos;
   }
 
   return (
-    <div id="sponsors">
-      <StyledSponsorsSectionContainer>
-        <StyledSponsorsHeader>2024 Sponsors Coming Soon!</StyledSponsorsHeader>
-        <StyledContactText>
-          Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to
-          us at team@hackbeanpot.com or check out our sponsorship packet!
-        </StyledContactText>
-          <PrimaryButton
-            btnText="View Sponsorship Packet"
-            newTab={true}
-            btnLink="https://drive.google.com/file/d/1Kgv_9lLeJcLLsIcqP-qngWeQNgjgLSU2/view"
-          />
-        {/* <StyledSponsorsHeader>2023 Sponsors</StyledSponsorsHeader> */}
-        {/* {!isDesktop && (
+    <StyledSponsorsSectionContainer>
+      <StyledSponsorsHeader>2024 Sponsors</StyledSponsorsHeader>
+      {!isDesktop && (
         <>
           <StyledArrowWrapper>
             <Arrow
@@ -66,7 +65,7 @@ const SponsorsSection: React.FC = () => {
               }
             />
             <StyledSecondaryButtonWrapper>
-              <SecondaryButton btnText={currLevel} isClickable={false} />
+            <StyledSpecificSponsorsHeader> {currLevel} </StyledSpecificSponsorsHeader>
             </StyledSecondaryButtonWrapper>
             <Arrow
               left={false}
@@ -79,37 +78,51 @@ const SponsorsSection: React.FC = () => {
           </StyledArrowWrapper>
           <br />
           <StyledMobileLogo src={getImage(currLevel)} level={currLevel} />
+          <StyledStarfishMobile src={MobileOrangeStarfish} alt="mobile orange starfish" />
         </>
       )}
 
       {isDesktop && (
         <>
-          <StyledTreasureChest src={TreasureChest} alt="treasure chest" />
           <div>
-            <SecondaryButton btnText="Diamond Level" isClickable={false} />
+          <StyledOrangeStarfish src={OrangeStarfish} alt="orange starfish" />
+            <StyledSpecificSponsorsHeader> Platinum Level </StyledSpecificSponsorsHeader>
             <br />
-            <StyledDiamondLogo
-              src={DiamondLogoDesktop}
-              alt="diamond level logo"
+            <StyledPlatinumLogos
+              src={PlatinumLogos}
+              alt="platinum level logo"
             />
           </div>
           <div>
-            <SecondaryButton btnText="Gold Level" isClickable={false} />
+          <StyledSpecificSponsorsHeader> Gold Level </StyledSpecificSponsorsHeader>
             <br />
-            <StyledGoldLogos src={GoldLogosDesktop} alt="gold level logos" />
+            <StyledGoldLogos src={GoldLogos} alt="gold level logos" />
+            <StyledRedStarfish src={RedStarfish} alt="red starfish" />
           </div>
           <div>
-            <SecondaryButton btnText="Silver Level" isClickable={false} />
+          <StyledSpecificSponsorsHeader> Bronze Level </StyledSpecificSponsorsHeader>
             <br />
-            <StyledSilverLogos
-              src={SilverLogosDesktop}
-              alt="silver level logos"
+            <StyledBronzeLogos
+              src={BronzeLogos}
+              alt="bronze level logos"
             />
+            <StyledGreenStarfish src={GreenStarfish} alt="green starfish" />
           </div>
         </>
-      )} */}
-      </StyledSponsorsSectionContainer>
-    </div>
+      )}
+      <StyledContactContainer isDay={isDay}>
+        <StyledContactText>
+          Interested in sponsoring HackBeanpot 2024? <br /> <br /> Reach out to
+          us at team@hackbeanpot.com or check out our sponsorship packet!
+        </StyledContactText>
+        <PrimaryButton
+          btnText="View packet"
+          newTab={true}
+          btnLink="https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view?usp=sharing"
+        />
+        <StyledFish2 src={fish2} />
+      </StyledContactContainer>
+    </StyledSponsorsSectionContainer>
   );
 };
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max } from '../../lib/responsive';
+import { max, min } from '../../lib/responsive';
 import { StyledSecondaryButtonProps } from '../../lib/types';
 import { colors } from '../../style/colors';
 import { fonts } from '../../../shared-ui/style/typography'
