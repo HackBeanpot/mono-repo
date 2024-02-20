@@ -12,7 +12,8 @@ import {
   StyledEvents,
   StyledOneEventContainer,
   StyledLoadingText,
-  StyledHappeningNow
+  StyledHappeningNow,
+  StyledHappeningNowBanner
 } from './ComingUp.styles';
 import { min } from '../../../shared-ui/lib/responsive';
 import useMatchMedia from 'react-use-match-media';
@@ -33,7 +34,8 @@ const ComingUpSection: React.FC = () => {
         header: event.fields.eventName,
         startTime: event.fields.start_time,
         endTime: event.fields.end_time,
-        displayStartTime: event.fields.start_time.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+        displayStartTime: new Date(event.fields.start_time).toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+        displayEndTime: new Date(event.fields.end_time).toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
         body: event.fields.description
       };
     });
@@ -52,20 +54,20 @@ const ComingUpSection: React.FC = () => {
   if (comingUpEvents.length === 0) {
     return <NoUpcoming />;
   }
-  if (comingUpEvents.length === 1 && !isDesktop) {
+  if (comingUpEvents.length === 1 || !isDesktop) {
     const event: UpcomingEvent = comingUpEvents[0];
     return (
       <StyledSectionContainer>
         <StyledSectionHeader>{'Coming up...'}</StyledSectionHeader>
         <StyledOneEventContainer>
           <StyledEvent key={event.id}>
+            {isHappeningNow(event.startTime, event.endTime) && (
+            <StyledHappeningNowBanner><StyledHappeningNow>Happening now!</StyledHappeningNow></StyledHappeningNowBanner>
+             )}
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.displayStartTime}</StyledTime>
+              <StyledTime>{event.displayStartTime + ' - ' + event.displayEndTime}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
-              {isHappeningNow(event.startTime, event.endTime) && (
-                <StyledHappeningNow>happening now!</StyledHappeningNow>
-              )}
             </StyledTextContainer>
           </StyledEvent>
         </StyledOneEventContainer>
@@ -78,13 +80,13 @@ const ComingUpSection: React.FC = () => {
       <StyledEvents>
         {comingUpEvents.map((event: UpcomingEvent) => (
           <StyledEvent key={event.id}>
+            {isHappeningNow(event.startTime, event.endTime) && (
+            <StyledHappeningNowBanner><StyledHappeningNow>Happening now!</StyledHappeningNow></StyledHappeningNowBanner>
+            )}
             <StyledTextContainer>
               <StyledHeader>{event.header}</StyledHeader>
-              <StyledTime>{event.displayStartTime}</StyledTime>
+              <StyledTime>{event.displayStartTime + ' - ' + event.displayEndTime}</StyledTime>
               <StyledBody>{event.body}</StyledBody>
-              {isHappeningNow(event.startTime, event.endTime) && (
-                <StyledHappeningNow>happening now!</StyledHappeningNow>
-              )}
             </StyledTextContainer>
           </StyledEvent>
         ))}
