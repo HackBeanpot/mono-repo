@@ -105,44 +105,49 @@ font-size: 0.2em;
 
 const StyledFlag = styled.img`
   position: absolute;
-  
+  left: 10em;
+  top: 3em;
+  width: 15.5%;
+  z-index: -1;
+
   @media ${max.tablet} {
-    position: relative;
-    width: 15vh;
-    margin-left: 3vh;
-    margin-bottom: -2vh;
+    left: 6em;
+    top: -8em;
   }
 
-  @media ${min.tablet} {
-    left: 2em;
+  @media ${max.mobile} {
+    left: 10em;
     top: 3em;
-    width: 8em;
-    width: 13em;
-    top: -1.5em;
-    left: 7em;
   }
 
 `;
 
 const StyledTreasureChest = styled.img`
-  position: absolute;
+position: absolute;
+left: 47em;
+top: 10em;
+width: 18%;
+
+@media ${max.tablet} {
+  left: 30em;
   top: 10em;
-  right: 30em;
-  transform: scale(0.8);
+}
 
-  @media ${max.tablet} {
-    position: absolute;
-    top: 5em;
-    right: -5em;
-    transform: scale: (0.4);
-  }
+@media ${max.mobile} {
+  left: 30em;
+  top: 10em;
+}
 
-  // @media ${min.tablet} {
-  //   position: absolute;
-  //   right: -8em;
-  //   height: 20em;
-  //   size: 50px;
-  // }
+@media ${min.mobile} {
+  left: 36em;
+  top: 12em;
+}
+
+`;
+
+const StyledFlexPerksContainer = styled.div`
+margin-top: 1em;
+margin-bottom: 1em;
 `;
 
 export {
@@ -153,5 +158,6 @@ export {
   StyledSponsorPacketButtonContainer,
   StyledInfoPacketButtonContainer,
   StyledFlag,
-  StyledTreasureChest
+  StyledTreasureChest,
+  StyledFlexPerksContainer
 };

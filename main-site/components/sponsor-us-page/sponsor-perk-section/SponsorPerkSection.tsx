@@ -7,17 +7,19 @@ import {
   StyledInfoPacketButtonContainer,
   StyledFlag,
   StyledTreasureChest,
-  StyledTextContainerGreen
+  StyledTextContainerGreen,
+  StyledFlexPerksContainer
 } from './SponsorPerkSection.styles';
 import TreasureChest from '../../../../shared-ui/images/treasureChestSea.png';
 import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
-import Flag from '../../../../shared-ui/images/pirateFlag.png';
+import Flag from '../../../../shared-ui/images/PirateFlagLonger.svg';
 
 const SponsorPerk: React.FC = () => {
   return (
     <StyledSponsorPerkSectionContainer>
       <StyledFlag src={Flag} />
+      <StyledTreasureChest src={TreasureChest} />
       <StyledTextContainer>
         <H3 color={colors.WHITE}>Sponsorship perks include:</H3>
         <StyledParagraph color={colors.WHITE}>
@@ -36,36 +38,40 @@ const SponsorPerk: React.FC = () => {
             <li>Product demo</li>
             <li>...and more!</li>
           </ul>
-          Detailed perks and pricing can be found in our sponsorship packet.
-          <StyledSponsorPacketButtonContainer
-          btnText="View our sponsorship packet"
-          btnLink="https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view"
-          isSponsorPacketButton={true}
-          newTab
-        />
+          <div className="perks-pricing-wrapper">
+            Detailed perks and pricing can be found in our sponsorship packet.
+            <StyledSponsorPacketButtonContainer
+              btnText="View our sponsorship packet"
+              btnLink="https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view"
+              isSponsorPacketButton={true}
+              newTab
+            />
+          </div>
         </StyledParagraph>
       </StyledTextContainer>
       <br />
       <br />
       <StyledTextContainerGreen>
-      <StyledParagraph>
-        Additionally, we provide the flexibility to create your own perk or
-          package. Let us know your ideas and package choice at{' '}
-          <u>core@hackbeanpot.com</u>. Our team will work with you to answer any
-          questions and guide you through the next steps in becoming a
-          HackBeanpot 2024 sponsor!
-          <StyledInfoPacketButtonContainer
-          btnText="View our information packet"
-          btnLink="https://drive.google.com/file/d/1x0OxOq_Ce-6RqzlhGkP5YxPNwrx0RdMW/view"
-          isInfoPacketButton={true}
-          newTab
-        />
-      </StyledParagraph>
+        <StyledParagraph>
+          <StyledFlexPerksContainer>
+            Additionally, we provide the flexibility to create your own perk or
+            package. Let us know your ideas and package choice at{' '}
+            <u>core@hackbeanpot.com</u>. Our team will work with you to answer
+            any questions and guide you through the next steps in becoming a
+            HackBeanpot 2024 sponsor!
+            <StyledInfoPacketButtonContainer
+              btnText="View our information packet"
+              btnLink="https://drive.google.com/file/d/1x0OxOq_Ce-6RqzlhGkP5YxPNwrx0RdMW/view"
+              isInfoPacketButton={true}
+              newTab
+            />
+          </StyledFlexPerksContainer>
+        </StyledParagraph>
       </StyledTextContainerGreen>
-      <StyledTreasureChest src={TreasureChest} />
     </StyledSponsorPerkSectionContainer>
   );
 };
+
 
 export default SponsorPerk;
 
