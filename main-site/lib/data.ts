@@ -67,7 +67,7 @@ export const FaqSectionData: FaqData[] = [
     id: 3,
     question: 'How long is the event?',
     answer:
-      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday.'
+      'The event will start on Friday, February 23rd at 6pm EST, and will lead into the weekend, continuing until 1:45 EST on Sunday.'
   },
 
   {
