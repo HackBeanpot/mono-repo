@@ -124,7 +124,7 @@ const StyledFlag = styled.img`
 
 const StyledTreasureChest = styled.img`
 position: absolute;
-left: 47em;
+left: 48em;
 top: 10em;
 width: 18%;
 
@@ -133,20 +133,20 @@ width: 18%;
   top: 10em;
 }
 
+@media ${min.tablet} {
+  left: 38em;
+  top: 11em;
+}
+
+// for the life of me i cant figure out how to get mobile to work
 @media ${max.mobile} {
-  left: 30em;
-  top: 10em;
+  left: 10em;
+  top: 2em;
 }
-
-@media ${min.mobile} {
-  left: 36em;
-  top: 12em;
-}
-
 `;
 
 const StyledFlexPerksContainer = styled.div`
-margin-top: 1em;
+margin-top: .5em;
 margin-bottom: 1em;
 `;
 

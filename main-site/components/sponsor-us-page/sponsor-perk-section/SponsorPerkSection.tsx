@@ -38,15 +38,15 @@ const SponsorPerk: React.FC = () => {
             <li>Product demo</li>
             <li>...and more!</li>
           </ul>
-          <div className="perks-pricing-wrapper">
+          <StyledFlexPerksContainer>
             Detailed perks and pricing can be found in our sponsorship packet.
+            </StyledFlexPerksContainer>
             <StyledSponsorPacketButtonContainer
               btnText="View our sponsorship packet"
               btnLink="https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view"
               isSponsorPacketButton={true}
               newTab
             />
-          </div>
         </StyledParagraph>
       </StyledTextContainer>
       <br />
@@ -59,13 +59,13 @@ const SponsorPerk: React.FC = () => {
             <u>core@hackbeanpot.com</u>. Our team will work with you to answer
             any questions and guide you through the next steps in becoming a
             HackBeanpot 2024 sponsor!
+            </StyledFlexPerksContainer>
             <StyledInfoPacketButtonContainer
               btnText="View our information packet"
               btnLink="https://drive.google.com/file/d/1x0OxOq_Ce-6RqzlhGkP5YxPNwrx0RdMW/view"
               isInfoPacketButton={true}
               newTab
             />
-          </StyledFlexPerksContainer>
         </StyledParagraph>
       </StyledTextContainerGreen>
     </StyledSponsorPerkSectionContainer>
