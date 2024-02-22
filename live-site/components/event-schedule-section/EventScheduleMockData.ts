@@ -4,20 +4,20 @@ export interface EventDate {
   content: string;
 }
 
-export const mockData: EventDate[] = [
+export const tabTitles: EventDate[] = [
   {
     id: 0,
-    title: 'FRI 11',
-    content: 'FRIDAY - FEBRUARY 11'
+    title: 'FRI 23',
+    content: 'FRIDAY - FEBRUARY 23'
   },
   {
     id: 2,
-    title: 'SAT 12',
-    content: 'SATURDAY - FEBRUARY 12'
+    title: 'SAT 24',
+    content: 'SATURDAY - FEBRUARY 24'
   },
   {
     id: 3,
-    title: 'SUN 13',
-    content: 'SUNDAY - FEBRUARY 13'
+    title: 'SUN 25',
+    content: 'SUNDAY - FEBRUARY 25'
   }
 ];

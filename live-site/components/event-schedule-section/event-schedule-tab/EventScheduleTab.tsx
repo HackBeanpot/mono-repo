@@ -17,11 +17,11 @@ import {
   StyledEventScheduleTabContainer
 } from './EventScheduleTab.styles';
 
-const AIRTABLE_BASE_NAME = 'Schedule';
+const AIRTABLE_BASE_ID = 'appVDH8SEck8ofHLr';
 const AIRTABLE_SCHEDULE_TABLE_NAME = 'schedule';
-const FRI_DATE = new Date(2024, 1, 11);
-const SAT_DATE = new Date(2024, 1, 12);
-const SUN_DATE = new Date(2024, 1, 13);
+const FRI_DATE = new Date(2024, 1, 23);
+const SAT_DATE = new Date(2024, 1, 24);
+const SUN_DATE = new Date(2024, 1, 25);
 
 const renderEventData = (events: any[], activeTab: number): JSX.Element[] => {
   const toEventItemType = (event: any): EventItemType => {
@@ -71,7 +71,7 @@ const EventScheduleTab: React.FC<EventScheduleTabProps> = (tabs) => {
     setActiveTab(index);
   };
   const { data: eventData, isLoading } = useAirtableApi(
-    AIRTABLE_BASE_NAME,
+    AIRTABLE_BASE_ID,
     AIRTABLE_SCHEDULE_TABLE_NAME
   );
 

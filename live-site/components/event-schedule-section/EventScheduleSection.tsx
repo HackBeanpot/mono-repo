@@ -1,6 +1,6 @@
 import React from 'react';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
-import { mockData } from './EventScheduleMockData';
+import { tabTitles } from './EventScheduleMockData';
 
 import {
   StyledBoldSubText,
@@ -31,7 +31,7 @@ const EventScheduleSection: React.FC = () => {
           ></PrimaryButton>
         </ButtonContainer>
       </EventScheduleTextButtonContainer>
-      <EventScheduleTab tabs={mockData}></EventScheduleTab>
+      <EventScheduleTab tabs={tabTitles}></EventScheduleTab>
     </EventScheduleSectionContainer>
   );
 };

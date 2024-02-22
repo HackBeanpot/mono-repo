@@ -32,8 +32,8 @@ const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tablet);
   const isTablet = useMatchMedia(max.tabletLg)
 
-  const { data } = useAirtableApi('Mentors', 'mentors', true);
-  const { data: shiftData } = useAirtableApi('Mentors', 'shifts', true);
+  const { data } = useAirtableApi('appexkZgUcQ9vucI9', 'mentors', true);
+  const { data: shiftData } = useAirtableApi('appexkZgUcQ9vucI9', 'shifts', true);
   const [mentorData, setMentorData] = useState<MentorInfo[]>([]);
   const [mentors, setMentors] = useState<MentorInfo[]>([]);
   const [expertiseFilter, setExpertiseFilter] = useState('All');
@@ -108,7 +108,7 @@ const MentorsSection: React.FC = () => {
           name: mentor.fields.name,
           company: mentor.fields.company,
           position: mentor.fields.position,
-          imageUrl: mentor.fields.image[0].url,
+          imageUrl: mentor.fields.image,
           expertise: mentor.fields.expertise ?? [],
           virtual: mentor.fields.virtual ?? false,
           shiftStart: mentor.fields.shift_start ?? '',

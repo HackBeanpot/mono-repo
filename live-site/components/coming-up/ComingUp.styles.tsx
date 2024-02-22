@@ -83,13 +83,10 @@ const StyledHeader = styled.div`
 `;
 
 const StyledSectionHeader = styled(H3)`
-   {
-    font-family: ${fonts.nunitoSansSemibold};
-    padding-left: 3em;
-    @media ${max.tablet} {
-      padding-left: 1em;
-      padding-bottom: 1em;
-    }
+  font-family: ${fonts.nunitoSansSemibold};
+  text-align: center;
+  @media ${max.tablet} {
+    padding-bottom: 1em;
   }
 `;
 
