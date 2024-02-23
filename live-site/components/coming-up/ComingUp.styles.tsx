@@ -28,13 +28,14 @@ const StyledTextContainer = styled.div`
 `;
 
 const StyledEvent = styled.div`
-  background-color: ${colors.TEXT_BOX};
+  background-color: ${colors.COMING_UP_BLUE};
   width: 25em;
   height: 17em;
   border-radius: 1.5em;
   margin: 1.3em;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   @media ${max.tablet} {
     margin: 0.7em;
     width: 14em;
@@ -69,6 +70,7 @@ const StyledOneEventContainer = styled.div`
 `;
 
 const StyledHeader = styled.div`
+  margin-top: -0.5em;
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.5em;
@@ -81,21 +83,20 @@ const StyledHeader = styled.div`
 `;
 
 const StyledSectionHeader = styled(H3)`
-   {
-    font-family: ${fonts.nunitoSansSemibold};
-    padding-left: 3em;
-    @media ${max.tablet} {
-      padding-left: 1em;
-      padding-bottom: 1em;
-    }
+  font-family: Berkshire-Swash;
+  font-size: 2.7em;
+  text-align: center;
+  @media ${max.tablet} {
+    padding-bottom: 1em;
   }
 `;
 
 const StyledTime = styled.div`
-  margin: 0.5em, 0;
+  margin: 0.5em;
+  margin-left: 0em;
   font-size: 1em;
-  font-family: ${fonts.nunitoSansRegular};
-  color: ${colors.BUTTON_GREEN};
+  font-family: ${fonts.nunitoSansBold};
+  color: ${colors.DEEP_SEA_BLUE};
   @media ${max.tablet} {
     font-size: 0.9em;
   }
@@ -117,14 +118,38 @@ const StyledBody = styled.div`
   }
 `;
 
-const StyledHappeningNow = styled(P)`
-  position: absolute;
-  color: ${colors.BUTTON_GREEN};
-  right: 1em;
-  bottom: 0.8em;
-  font-weight: bold;
+const StyledHappeningNowBanner = styled.div`
+  background-image: linear-gradient(to right, #3181A9, ${colors.COMING_UP_BLUE});
+  display: flex;
+  width: 100%;
+  text-align: center;
+`;
+
+
+const StyledHappeningNow = styled.div`
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.3em;
+  color: ${colors.DEEP_SEA_BLUE};
+  font-family: ${fonts.nunitoSansBold};
+
+  margin: 1em;
+  margin-left: 2em;
+  @media ${max.tablet} {
+    margin: 1.5em;
+    // width: 12em;
+    // height: 12.5em;
+  }
   @media ${max.tabletSm} {
-    display: none;
+    margin: 0.9em;
+
+  }
+
+  @media ${max.tablet} {
+    font-size: 0.9em;
+  }
+  @media ${max.tabletSm} {
+    font-size: 0.75em;
   }
 `;
 
@@ -139,5 +164,6 @@ export {
   StyledSectionHeader,
   StyledOneEventContainer,
   StyledLoadingText,
-  StyledHappeningNow
+  StyledHappeningNow,
+  StyledHappeningNowBanner
 };

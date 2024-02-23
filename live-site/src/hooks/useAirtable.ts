@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 
-const BASEURL = 'https://airtable.hackbeanpot.com';
+// const BASEURL = 'https://airtable.hackbeanpot.com';
+const BASEURL = 'https://api.airtable.com/v0';
+
 
 interface AirtableData {
   data: any[];
@@ -9,18 +11,22 @@ interface AirtableData {
 }
 
 export const useAirtableApi = (
-  baseName: string,
+  baseID: string,
   tableName: string,
-  isDev = false
+  isDev = true
 ): AirtableData => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    const url = `${BASEURL}/${baseName}/${tableName}${
+    const url = `${BASEURL}/${baseID}/${tableName}${
       isDev ? '?isDev=true' : ''
     }`;
     try {
-      fetch(url)
+      fetch(url, {
+        headers: {
+        Authorization: `Bearer ${process.env.GATSBY_AIRTABLE_TOKEN_ID}`
+      },
+  })
         .then((data) => {
           return data.json();
         })
@@ -31,20 +37,20 @@ export const useAirtableApi = (
     } catch (err) {
       setIsLoading(false);
     }
-  }, [baseName, tableName]);
+  }, [baseID, tableName]);
 
   return { data, isLoading };
 };
 
 export const useAirtableApiWithPagination = (
-  baseName: string,
+  baseID: string,
   tableName: string
 ): AirtableData => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const url = `${BASEURL}/${baseName}/${tableName}`;
+    const url = `${BASEURL}/${baseID}/${tableName}`;
     let offset = '';
     const records: any[] = [];
     const getData = async (): Promise<void> => {
@@ -66,6 +72,6 @@ export const useAirtableApiWithPagination = (
     } catch (err) {
       setIsLoading(false);
     }
-  }, [baseName, tableName]);
+  }, [baseID, tableName]);
   return { data, isLoading };
 };

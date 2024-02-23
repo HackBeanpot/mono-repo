@@ -58,6 +58,7 @@ const colors = {
   BRIGHT_PURPLE: '#8D48E3',
   LIGHT_GREEN: '#8EB439',
   BORDER_BROWN: '#8f701d',
+  COMING_UP_BLUE: '#44a1cd',
 
   // for primary button
   BUTTON_YELLOW: '#FABB32',

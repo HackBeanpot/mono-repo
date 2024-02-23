@@ -1,6 +1,5 @@
 import { TabInfo, EventItem, Tag, TeamProps, ResourceBoxProps } from './types';
 import beginnerResourceGuide from '../images/beginnerResourceGuide.png'
-import projectGuide from '../images/projectGuide.png'
 import projectDemoGuide from '../images/projectDemoGuide.png'
 import judgingProcessGuide from '../images/judgingProcessGuide.png'
 
@@ -15,22 +14,22 @@ const liveSiteTabInfo: TabInfo[] = [
 const resources: ResourceBoxProps[] = [
   {
     label: 'Beginner Resource Guide',
-    link: 'https://docs.google.com/document/d/1ogiTG4qaefJpdYJc05tx0jWiPZGtozIOzJcyu7a2aX8/edit?usp=sharing',
+    link: 'https://docs.google.com/document/d/1hCp65HYkdIAMaImxtkD5BKFhajtC1R-Hkbq374nYGjw/edit',
     image: beginnerResourceGuide
   },
   {
-    label: 'Project Guide',
-    link: 'https://docs.google.com/document/d/1kob1aZ6VLQ0li-66onzF09WxdI9sjHPI-zHznm353tk/edit?usp=sharing',
-    image: projectGuide
+    label: 'Hacker Welcome Guide',
+    link: 'https://drive.google.com/file/d/1vkL3p5dqivuesVPywMi-C6ogNIyEv37H/view?usp=sharing',
+    image: beginnerResourceGuide
   },
   {
     label: 'Project Demo Guide',
-    link: '',
+    link: 'https://docs.google.com/document/d/1Dv8U1G4lTaPD1e_f5du5skj2cxPo2AiNqXFUiYvddJY/edit',
     image: projectDemoGuide
   },
   {
     label: 'Judging Process Guide',
-    link: '',
+    link: 'https://docs.google.com/document/d/1Dv8U1G4lTaPD1e_f5du5skj2cxPo2AiNqXFUiYvddJY/edit',
     image: judgingProcessGuide
   }
 ];

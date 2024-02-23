@@ -19,48 +19,48 @@ import { useAirtableApiWithPagination } from '../../src/hooks/useAirtable';
 import Fish from '../../images/fish-large-pink.svg';
 
 const WelcomeSection: React.FC<TeamRaceProps> = ({isDay}) => {
-  const { data } = useAirtableApiWithPagination('Raffle', 'raffle');
+  // const { data } = useAirtableApiWithPagination('app9pkEjk7iSp7mR4', 'raffle');
 
-  const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
-  const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
+  // const [raffleEntries, setRaffleEntries] = useState<RaffleEntry[]>([]);
+  // const [teamInfo, setTeamInfo] = useState<TeamProps[]>(defaultTeamInfo);
 
-  useEffect(() => {
-    setRaffleEntries(
-      data.map((entry) => {
-        return {
-          name: entry.fields.Name ?? '',
-          cabin: entry.fields.Cabin ?? '',
-          eventCode: entry.fields['Event Code'] ?? ''
-        };
-      })
-    );
-  }, [data, setRaffleEntries]);
+  // useEffect(() => {
+  //   setRaffleEntries(
+  //     data.map((entry) => {
+  //       return {
+  //         name: entry.fields.Name ?? '',
+  //         cabin: entry.fields.Cabin ?? '',
+  //         eventCode: entry.fields['Event Code'] ?? ''
+  //       };
+  //     })
+  //   );
+  // }, [data, setRaffleEntries]);
 
-  useEffect(() => {
-    const newTeamInfo = defaultTeamInfo.map((team) => {
-      return { ...team };
-    });
+  // useEffect(() => {
+  //   const newTeamInfo = defaultTeamInfo.map((team) => {
+  //     return { ...team };
+  //   });
 
-    // make sure we don't double count a entry with the same name and event code
-    const seenEntries = new Set<string>();
+  //   // make sure we don't double count a entry with the same name and event code
+  //   const seenEntries = new Set<string>();
 
-    raffleEntries.forEach((entry) => {
-      newTeamInfo.forEach((team) => {
-        if (
-          team.name === entry.cabin &&
-          !seenEntries.has(entry.name + entry.eventCode)
-        ) {
-          if (onePointCodes.includes(entry.eventCode.toUpperCase())) {
-            team.points += 1;
-          } else if (twoPointCodes.includes(entry.eventCode)) {
-            team.points += 2;
-          }
-          seenEntries.add(entry.name + entry.eventCode);
-        }
-      });
-    });
-    setTeamInfo(newTeamInfo);
-  }, [raffleEntries, defaultTeamInfo, setTeamInfo]);
+  //   raffleEntries.forEach((entry) => {
+  //     newTeamInfo.forEach((team) => {
+  //       if (
+  //         team.name === entry.cabin &&
+  //         !seenEntries.has(entry.name + entry.eventCode)
+  //       ) {
+  //         if (onePointCodes.includes(entry.eventCode.toUpperCase())) {
+  //           team.points += 1;
+  //         } else if (twoPointCodes.includes(entry.eventCode)) {
+  //           team.points += 2;
+  //         }
+  //         seenEntries.add(entry.name + entry.eventCode);
+  //       }
+  //     });
+  //   });
+  //   setTeamInfo(newTeamInfo);
+  // }, [raffleEntries, defaultTeamInfo, setTeamInfo]);
 
   return (
     <StyledWelcomeSectionContainer>
@@ -73,18 +73,18 @@ const WelcomeSection: React.FC<TeamRaceProps> = ({isDay}) => {
           test during their hacking missions. Whether you’re a seasoned
           hackathon-goer, an ‘I-have-never-written-a-line-of-code beginner, or
           someone in between, we’re excited for you to embark on this adventure
-          with us! <br /> <br /> Learn more at  
-          <u> www.hackbeanpot.com</u>
+          with us! <br /> <br /> Learn more at   
+          {' '}<u>www.hackbeanpot.com</u>
         </StyledWelcomeText>
         <StyledButtonContainer>
           <PrimaryButton
             btnText="Join our Slack"
-            btnLink="https://join.slack.com/t/hackbeanpot2023/shared_invite/zt-1oo7nuvoh-l2~oR7Ba_HI_92ONG9WrPw"
+            btnLink="https://join.slack.com/t/hackbeanpot2024/shared_invite/zt-2d63ix85z-y4TGRo2fzyeSLkoMFVA6Fg"
           ></PrimaryButton>
         </StyledButtonContainer>
         <StyledFish src={Fish}></StyledFish>
       </StyledWelcomeSectionContent>
-      <TeamRace isDay = {isDay} teams={teamInfo} />
+      {/* <TeamRace isDay = {isDay} teams={teamInfo} /> */}
     </StyledWelcomeSectionContainer>
   );
 };

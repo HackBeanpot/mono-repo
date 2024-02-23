@@ -57,6 +57,7 @@ export interface UpcomingEvent {
   startTime: string;
   endTime: string;
   displayStartTime: string;
+  displayEndTime: string;
   body: string;
 }
 

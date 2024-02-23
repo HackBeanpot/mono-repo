@@ -21,7 +21,7 @@ const FeedbackJoinCoreSection: React.FC = () => {
         </P>
         <PrimaryButton
           btnText="Send Feedback"
-          btnLink="https://forms.gle/Fw8vXzJuzx4h1yvJA"
+          btnLink='#'
           newTab />
       </StyledColumn>
       <StyledColumn>

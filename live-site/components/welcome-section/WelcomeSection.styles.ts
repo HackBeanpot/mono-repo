@@ -5,12 +5,9 @@ import { P, H3 } from '../../../shared-ui/style/typography';
 import { TeamRaceProps } from '../../lib/types';
 
 const StyledWelcomeSectionContainer = styled.div`
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   margin-left: 1.2em;
   margin-right: 1.3em;
-  margin-top: 45%;
   @media ${max.tabletLg} {
     margin-top: 100%;
     flex-direction: column;
@@ -87,7 +84,7 @@ const StyledWelcomeSectionContent = styled.div`
 `;
 
 const StyledWelcomeHeader = styled(H3)`
-margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 1em;
   color: ${colors.WHITE};
   font-family: Berkshire-Swash;

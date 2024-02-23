@@ -26,7 +26,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay }) => {
       <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
       <StyledThemeText>Under the Sea</StyledThemeText>
       <StyledHourglass src={hourglass} />
-      <TimeRemaining target={new Date('02/12/2023 14:00:00')} isDay={isDay} />
+      <TimeRemaining target={new Date('02/25/2024 9:00:00')} isDay={isDay} />
       <StyledCountdownBubble src={Bubble} />
       <StyledBubbleLeft src={LeftBubble} />
       <StyledBubbleRight src={RightBubble} />

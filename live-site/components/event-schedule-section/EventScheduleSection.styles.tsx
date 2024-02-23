@@ -5,13 +5,13 @@ import { H3, P } from '../../../shared-ui/style/typography';
 
 const EventScheduleSectionContainer = styled.div`
   margin-left: auto;
-  padding-top: 10em;
   margin-right: 0;
 `;
 
 const EventScheduleTextButtonContainer = styled.div`
   padding: 5em;
   padding-top: 1em;
+  padding-bottom: 1em;
   display: flex;
   @media ${max.tablet} {
     display: inline;
@@ -21,7 +21,9 @@ const EventScheduleTextButtonContainer = styled.div`
 `;
 
 const StyledEventScheduleHeader = styled(H3)`
-  padding-left: 2.4em;
+  font-family: Berkshire-Swash;
+  font-size: 2.7em;
+  padding-left: 2em;
   @media ${max.tablet} {
     padding-left: 0.8em;
   }
