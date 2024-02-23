@@ -22,6 +22,12 @@ export interface TimeRemainingProps {
   target: Date;
   isDay: boolean;
 }
+
+export interface HackingRemainingProps {
+  target: Date;
+  isDay: boolean;
+}
+
 export interface TimeRemainingTextProps {
   isDay: boolean;
 }

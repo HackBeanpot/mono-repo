@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { StyledTimerContainer, StyledTimeRemainingText, StyledTimeRemainingLabel } from '../../../shared-ui/components/time-remaining/TimeRemaining.styles';
+import { HackingRemainingProps, TimeRemainingInfo } from '../../../shared-ui/lib/types';
 import { TimeLeft } from '../../lib/data';
 import {
   StyledHackingRemainingContainer,
@@ -7,7 +9,7 @@ import {
 } from './HackingRemaining.styles';
 
 const calculateTimeLeft = (): TimeLeft[] => {
-  const endDate = new Date('2023-02-12T09:00:00-05:00').getTime();
+  const endDate = new Date('2024-02-25T09:00:00-05:00').getTime();
   const now = Date.now();
   const difference = endDate - now;
   let timeLeft = [
@@ -27,28 +29,72 @@ const calculateTimeLeft = (): TimeLeft[] => {
   return timeLeft;
 };
 
-const HackingRemaining: React.FC = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-  });
+const HackingRemaining: React.FC<HackingRemainingProps> = ({ target, isDay }) => {
+    const [days, setDays] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
+  
+    const timeUnit: TimeRemainingInfo[] = [
+      { text: days, label: 'days' },
+      { text: -1, label: '\xa0' },
+      { text: hours, label: 'hours' },
+      { text: -1, label: '\xa0' },
+      { text: minutes, label: 'minutes' }
+    ];
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        const now = new Date();
+        const difference = target.getTime() - now.getTime();
+  
+        if (difference <= 0) {
+          setDays(0);
+          setHours(0);
+          setMinutes(0);
+          setSeconds(0);
+        } else {
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          setDays(days);
+          const hours = Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          setHours(hours);
+          const minutes = Math.floor(
+            (difference % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          setMinutes(minutes);
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+          setSeconds(seconds);
+        }
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }, []);
 
   return (
     <StyledHackingRemainingContainer>
       <StyledHackingRemainingHeader>
         HACKING REMAINING:
       </StyledHackingRemainingHeader>
-      <StyledTime>
-        {timeLeft.map((time) => (
-          <>
-            <span>{time.value === 0 ? '00' : time.value}</span>
-            {time.timeType !== 'seconds' && <span>:</span>}
-          </>
-        ))}
-      </StyledTime>
+      <StyledTime isDay={isDay}>
+        {timeUnit.map((curr, index) => (
+            <div key={`${curr.text}-${index}`}>
+              <StyledTimeRemainingText isDay={isDay}>
+                {`${
+                  curr.text === -1
+                    ? '\xa0:\xa0'
+                    : curr.text === 0
+                    ? '00'
+                    : curr.text
+                }`}
+              </StyledTimeRemainingText>
+              <StyledTimeRemainingLabel isDay={isDay}>
+                {curr.label}
+              </StyledTimeRemainingLabel>
+            </div>
+          ))} 
+      </StyledTime> 
     </StyledHackingRemainingContainer>
   );
 };

@@ -23,7 +23,7 @@ const StyledHackingRemainingHeader = styled(P)`
   color: ${colors.TEXT_BOX_BLUE};
 `;
 
-const StyledTime = styled.p`
+const StyledTime = styled.p<TimeRemainingTextProps>`
   font-size: 1.5em;
   font-family: ${fonts.nunitoSansBold};
   color: ${colors.TEXT_BOX_BLUE};

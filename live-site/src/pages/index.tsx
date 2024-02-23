@@ -55,8 +55,8 @@ const IndexPage: React.FC = () => {
       <Header tabs={liveSiteTabInfo} isDay showMLHBadge={false} />
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
       <LandingSection isDay={isDay} />
-      {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
-        <HackingRemaining />
+      {isDesktop && new Date() < new Date('2024-02-25T09:00:00-05:00') && (
+        <TimeRemaining target={new Date('02/25/2024 9:00:00')} isDay={false} />
       )}
       <ComingUpSection />
       <WelcomeSection isDay={isDay} />
