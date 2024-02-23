@@ -58,7 +58,7 @@ const ComingUpSection: React.FC = () => {
     const event: UpcomingEvent = comingUpEvents[0];
     return (
       <StyledSectionContainer>
-        <StyledSectionHeader>{'Coming up...'}</StyledSectionHeader>
+        <StyledSectionHeader>Coming up...</StyledSectionHeader>
         <StyledOneEventContainer>
           <StyledEvent key={event.id}>
             {isHappeningNow(event.startTime, event.endTime) && (

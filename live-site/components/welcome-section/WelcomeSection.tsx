@@ -73,13 +73,13 @@ const WelcomeSection: React.FC<TeamRaceProps> = ({isDay}) => {
           test during their hacking missions. Whether you’re a seasoned
           hackathon-goer, an ‘I-have-never-written-a-line-of-code beginner, or
           someone in between, we’re excited for you to embark on this adventure
-          with us! <br /> <br /> Learn more at  
-          <u> www.hackbeanpot.com</u>
+          with us! <br /> <br /> Learn more at   
+          {' '}<u>www.hackbeanpot.com</u>
         </StyledWelcomeText>
         <StyledButtonContainer>
           <PrimaryButton
             btnText="Join our Slack"
-            btnLink="https://join.slack.com/t/hackbeanpot2023/shared_invite/zt-1oo7nuvoh-l2~oR7Ba_HI_92ONG9WrPw"
+            btnLink="https://join.slack.com/t/hackbeanpot2024/shared_invite/zt-2d63ix85z-y4TGRo2fzyeSLkoMFVA6Fg"
           ></PrimaryButton>
         </StyledButtonContainer>
         <StyledFish src={Fish}></StyledFish>

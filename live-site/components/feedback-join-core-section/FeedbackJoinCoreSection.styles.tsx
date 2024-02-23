@@ -29,7 +29,7 @@ const StyledColumn = styled.div`
 
 const StyledColumnTitle = styled.div`
   font-size: 2em;
-  font-family: ${fonts.nunitoSansSemibold};
+  font-family: Berkshire-Swash;
   color: ${colors.WHITE};
 `;
 

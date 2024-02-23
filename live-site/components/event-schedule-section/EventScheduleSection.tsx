@@ -24,12 +24,12 @@ const EventScheduleSection: React.FC = () => {
           <br />
           <b>Please be sure to attend all events labeled "Everyone".</b>
         </StyledEventScheduleSubText>
-        <ButtonContainer>
+        {/* <ButtonContainer>
           <PrimaryButton
             btnText="Add to Calendar +"
             btnLink="https://calendar.google.com/calendar/ical/678296909d9c3c56059479fa83fecd0de5bf7ed2630fdef9bfbe16a700d196cb%40group.calendar.google.com/public/basic.ics"
           ></PrimaryButton>
-        </ButtonContainer>
+        </ButtonContainer> */}
       </EventScheduleTextButtonContainer>
       <EventScheduleTab tabs={tabTitles}></EventScheduleTab>
     </EventScheduleSectionContainer>

@@ -30,7 +30,7 @@ const renderEventData = (events: any[], activeTab: number): JSX.Element[] => {
   const convertStringToDate = (event: EventItemType): EventItemType => {
     return {
       ...event,
-      time: new Date(Date.parse(event.end_time as unknown as string))
+      time: new Date(Date.parse(event.start_time as unknown as string))
     };
   };
   const filterByDate = (event: EventItemType): boolean => {

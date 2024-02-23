@@ -70,7 +70,7 @@ const StyledOneEventContainer = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  margin-top: -0.5em;;
+  margin-top: -0.5em;
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.5em;
@@ -83,7 +83,8 @@ const StyledHeader = styled.div`
 `;
 
 const StyledSectionHeader = styled(H3)`
-  font-family: ${fonts.nunitoSansSemibold};
+  font-family: Berkshire-Swash;
+  font-size: 2.7em;
   text-align: center;
   @media ${max.tablet} {
     padding-bottom: 1em;
