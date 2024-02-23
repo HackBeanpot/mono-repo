@@ -53,21 +53,21 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'When and where is HackBeanpot 2024?',
     answer:
-      'HackBeanpot 2024 will take place over a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
+      'HackBeanpot 2024 will take place on February 23rd-25th at Wood Mackenzie. The address is 179 Lincoln Street, Boston MA 02111'
   },
 
   {
     id: 2,
     question: 'Will HackBeanpot 2024 be in-person or virtual?',
     answer:
-      'HackBeanpot 2024 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
+      'HackBeanpot 2024 will be in-person! We’re super excited to see everyone in person again!'
   },
 
   {
     id: 3,
     question: 'How long is the event?',
     answer:
-      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
+      'The event will start on Friday, February 23rd at 6pm EST, and will lead into the weekend, continuing until 1:45 EST on Sunday.'
   },
 
   {
