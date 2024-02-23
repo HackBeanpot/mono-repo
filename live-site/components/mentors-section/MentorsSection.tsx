@@ -32,8 +32,8 @@ const MentorsSection: React.FC = () => {
   const isMobile = useMatchMedia(max.tablet);
   const isTablet = useMatchMedia(max.tabletLg)
 
-  const { data } = useAirtableApi('appexkZgUcQ9vucI9', 'mentors', true);
-  const { data: shiftData } = useAirtableApi('appexkZgUcQ9vucI9', 'shifts', true);
+  const { data } = useAirtableApi(`${process.env.GATSBY_MENTOR_BASE_ID}`, 'mentors', true);
+  const { data: shiftData } = useAirtableApi(`${process.env.GATSBY_MENTOR_BASE_ID}`, 'shifts', true);
   const [mentorData, setMentorData] = useState<MentorInfo[]>([]);
   const [mentors, setMentors] = useState<MentorInfo[]>([]);
   const [expertiseFilter, setExpertiseFilter] = useState('All');

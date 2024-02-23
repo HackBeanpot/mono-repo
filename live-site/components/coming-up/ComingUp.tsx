@@ -21,7 +21,7 @@ import { useAirtableApi } from '../../src/hooks/useAirtable';
 import { isHappeningNow } from '../../lib/utils';
 
 const ComingUpSection: React.FC = () => {
-  const { data, isLoading } = useAirtableApi('appVDH8SEck8ofHLr', 'schedule', true);
+  const { data, isLoading } = useAirtableApi(`${process.env.GATSBY_SCHEDULE_BASE_ID}`, 'schedule', true);
   const [comingUpEvents, setComingUpEvents] = useState<UpcomingEvent[]>([]);
   const isDesktop = useMatchMedia(min.tablet);
   let events: UpcomingEvent[] = [];

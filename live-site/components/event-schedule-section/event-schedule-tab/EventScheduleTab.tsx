@@ -17,7 +17,7 @@ import {
   StyledEventScheduleTabContainer
 } from './EventScheduleTab.styles';
 
-const AIRTABLE_BASE_ID = 'appVDH8SEck8ofHLr';
+const AIRTABLE_BASE_ID = `${process.env.GATSBY_SCHEDULE_BASE_ID}`;
 const AIRTABLE_SCHEDULE_TABLE_NAME = 'schedule';
 const FRI_DATE = new Date(2024, 1, 23);
 const SAT_DATE = new Date(2024, 1, 24);

@@ -24,7 +24,7 @@ export const useAirtableApi = (
     try {
       fetch(url, {
         headers: {
-        Authorization: 'Bearer patnyuxsXyirsirCe.0cf4f2d67769fa3e183127ba0995f2bff9817f12378e88a18465f99edc3bf3f7'
+        Authorization: `Bearer ${process.env.GATSBY_AIRTABLE_TOKEN_ID}`
       },
   })
         .then((data) => {
