@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { max } from '../../lib/responsive';
+import { colors } from '../../style/colors';
+import { H3 } from '../../style/typography';
 
 const StyledMeetTheTeamSection = styled.div`
   padding-top: 12em, 0;
@@ -8,6 +10,12 @@ const StyledMeetTheTeamSection = styled.div`
   @media ${max.tabletLg} {
     padding-bottom: 0em;
   } ;
+`;
+
+const StyledHeader = styled(H3)`
+  color: ${colors.WHITE};
+  font-family: Berkshire-Swash;
+  font-size: 2.7em;
 `;
 
 const StyledImageContainer = styled.div`
@@ -23,4 +31,4 @@ const StyledSchoolOfFish = styled.img`
   width: 10%;
 `;
 
-export { StyledMeetTheTeamSection, StyledImageContainer, StyledSchoolOfFish };
+export { StyledMeetTheTeamSection, StyledImageContainer, StyledSchoolOfFish, StyledHeader};

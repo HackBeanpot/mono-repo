@@ -9,18 +9,8 @@ const StyledWelcomeSectionContainer = styled.div`
   margin-left: 1.2em;
   margin-right: 1.3em;
   @media ${max.tabletLg} {
-    margin-top: 100%;
     flex-direction: column;
     align-items: center;
-  }
-  @media ${max.tablet} {
-    margin-top: 80%;
-  }
-  @media ${max.tabletSm} {
-    margin-top: 60%;
-  }
-  @media ${max.mobile} {
-    margin-top: 50%;
   }
 `;
 
@@ -70,14 +60,13 @@ const StyledWelcomeSectionContent = styled.div`
   margin-left: 4em;
   margin-top: 4em;
   margin-right: 1em;
+  margin-bottom: -5em;
   @media ${max.tabletLg} {
     margin-right: 0;
-    margin-bottom: 2em;
     width: 90%;
   }
   @media ${min.tabletSm} {
     margin-right: 0;
-    margin-bottom: 2em;
     width: 90%;
     margin-left: 4em;
   }

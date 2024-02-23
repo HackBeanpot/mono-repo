@@ -15,7 +15,6 @@ import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import EventScheduleSection from '../../components/event-schedule-section/EventScheduleSection';
 import WelcomeSection from '../../components/welcome-section/WelcomeSection';
 import FeedbackJoinCoreSection from '../../components/feedback-join-core-section/FeedbackJoinCoreSection';
-import TimeRemaining from '../../../shared-ui/components/time-remaining/TimeRemaining';
 import LandingSection from '../../components/landing-section/LandingSection';
 import Header from '../../../shared-ui/components/header/Header';
 import OurTeamSection from '../../components/our-team-section/OurTeamSection';
@@ -56,7 +55,7 @@ const IndexPage: React.FC = () => {
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
       <LandingSection isDay={isDay} />
       {isDesktop && new Date() < new Date('2024-02-25T09:00:00-05:00') && (
-        <TimeRemaining target={new Date('02/25/2024 9:00:00')} isDay={false} />
+        <HackingRemaining target={new Date('02/25/2024 9:00:00')} isDay={isDay} />
       )}
       <ComingUpSection />
       <WelcomeSection isDay={isDay} />

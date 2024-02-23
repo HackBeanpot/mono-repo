@@ -71,6 +71,7 @@ const StyledOneEventContainer = styled.div`
 
 const StyledHeader = styled.div`
   margin-top: -0.5em;
+  margin-bottom: 1em;
   color: ${colors.WHITE};
   font-family: ${fonts.nunitoSansSemibold};
   font-size: 1.5em;

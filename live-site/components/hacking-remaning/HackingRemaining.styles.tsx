@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { P, fonts } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
+import { TimeRemainingTextProps } from '../../../shared-ui/lib/types';
 
 const StyledHackingRemainingContainer = styled.div`
   z-index: 21;

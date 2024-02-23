@@ -77,24 +77,21 @@ const HackingRemaining: React.FC<HackingRemainingProps> = ({ target, isDay }) =>
       <StyledHackingRemainingHeader>
         HACKING REMAINING:
       </StyledHackingRemainingHeader>
-      <StyledTime isDay={isDay}>
+      <StyledTimerContainer>
         {timeUnit.map((curr, index) => (
-            <div key={`${curr.text}-${index}`}>
-              <StyledTimeRemainingText isDay={isDay}>
-                {`${
-                  curr.text === -1
-                    ? '\xa0:\xa0'
-                    : curr.text === 0
-                    ? '00'
-                    : curr.text
-                }`}
-              </StyledTimeRemainingText>
-              <StyledTimeRemainingLabel isDay={isDay}>
-                {curr.label}
-              </StyledTimeRemainingLabel>
-            </div>
-          ))} 
-      </StyledTime> 
+          <div key={`${curr.text}-${index}`}>
+            <StyledTime isDay={isDay}>
+              {`${
+                curr.text === -1
+                  ? '\xa0:\xa0'
+                  : curr.text === 0
+                  ? '00'
+                  : curr.text
+              }`}
+            </StyledTime>
+          </div>
+        ))}
+      </StyledTimerContainer>
     </StyledHackingRemainingContainer>
   );
 };

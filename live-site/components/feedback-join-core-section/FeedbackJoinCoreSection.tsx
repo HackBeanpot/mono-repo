@@ -37,7 +37,7 @@ const FeedbackJoinCoreSection: React.FC = () => {
         </P>
         <PrimaryButton
           btnText="Apply"
-          btnLink="https://docs.google.com/forms/d/e/1FAIpQLScyEQzS4RBkkuPSC4cRlVFUYqnu0mkAcC4ypA21aR4aC2C6LQ/viewform"
+          btnLink="https://docs.google.com/forms/d/e/1FAIpQLSeOQ8IVvFfBQt-iWuyKObCFRqXR4vLS847Y6YUf2mLo7zNsKA/viewform"
           newTab />
       </StyledColumn>
     </StyledFeedbackJoinCoreSection><StyledOceanLayers src={OceanLayers} /></>
