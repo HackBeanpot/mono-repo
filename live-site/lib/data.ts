@@ -1,6 +1,5 @@
 import { TabInfo, EventItem, Tag, TeamProps, ResourceBoxProps } from './types';
 import beginnerResourceGuide from '../images/beginnerResourceGuide.png'
-import hackerWelcomeGuide from '../images/hackerWelcomeGuide.png'
 import projectDemoGuide from '../images/projectDemoGuide.png'
 import judgingProcessGuide from '../images/judgingProcessGuide.png'
 
@@ -21,7 +20,7 @@ const resources: ResourceBoxProps[] = [
   {
     label: 'Hacker Welcome Guide',
     link: 'https://drive.google.com/file/d/1vkL3p5dqivuesVPywMi-C6ogNIyEv37H/view?usp=sharing',
-    image: hackerWelcomeGuide
+    image: beginnerResourceGuide
   },
   {
     label: 'Project Demo Guide',
