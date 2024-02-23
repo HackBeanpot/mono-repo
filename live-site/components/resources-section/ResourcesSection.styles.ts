@@ -1,20 +1,19 @@
 import styled from '@emotion/styled';
 import { max } from '../../../shared-ui/lib/responsive';
+import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H2, H3 } from '../../../shared-ui/style/typography';
 
 const StyledResourcesSection = styled.div`
   margin: 10em 0;
 `;
 
-const StyledHeader = styled(H2)`
-  font-family: ${fonts.berkshireSwash};
-  padding-bottom: 1em;
-  padding-left: 2.4em;
-
-  @media ${max.tablet} {
-    padding-left: 1em;
-    padding-bottom: 1em;
-  }
+const StyledHeader = styled(H3)`
+  padding-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: ${colors.WHITE};
+  font-family: Berkshire-Swash;
+  font-size: 2.7em;
 `;
 
 const BoxesContainer = styled.div`

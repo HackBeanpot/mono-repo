@@ -59,7 +59,7 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ target, isDay }) => {
   return (
     <StyledTimeRemainingContainer>
       <StyledTimeRemainingHeader isDay={isDay}>
-        TIME REMAINING:
+        HACKING REMAINING:
       </StyledTimeRemainingHeader>
       <StyledTimerContainer>
         {timeUnit.map((curr, index) => (

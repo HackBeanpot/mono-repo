@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { P, fonts } from '../../../shared-ui/style/typography';
 import { colors } from '../../../shared-ui/style/colors';
+import { TimeRemainingTextProps } from '../../../shared-ui/lib/types';
 
 const StyledHackingRemainingContainer = styled.div`
   z-index: 21;
@@ -23,7 +24,7 @@ const StyledHackingRemainingHeader = styled(P)`
   color: ${colors.TEXT_BOX_BLUE};
 `;
 
-const StyledTime = styled.p`
+const StyledTime = styled.p<TimeRemainingTextProps>`
   font-size: 1.5em;
   font-family: ${fonts.nunitoSansBold};
   color: ${colors.TEXT_BOX_BLUE};
