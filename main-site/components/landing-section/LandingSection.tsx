@@ -16,15 +16,15 @@ import {
   StyledHourglass,
   StyledCountdownContainer
 } from './LandingSection.styles';
-import Bubble from '../../../shared-ui/images/bubbles.svg'
-import Bubble2 from '../../../shared-ui/images/bubbles2.svg'
-import Fish from '../../../shared-ui/images/fish.svg'
-import Jellyfish from '../../../shared-ui/images/jellyfish.svg'
-import Whale from '../../../shared-ui/images/whale.svg'
+import Bubble from '../../../shared-ui/images/bubbles.svg';
+import Bubble2 from '../../../shared-ui/images/bubbles2.svg';
+import Fish from '../../../shared-ui/images/fish.svg';
+import Jellyfish from '../../../shared-ui/images/jellyfish.svg';
+import Whale from '../../../shared-ui/images/whale.svg';
 import ToggleMode from '../../../shared-ui/components/toggle-mode/ToggleMode';
 import { CountdownProps, LandingSectionProps } from '../../lib/types';
 import { CountdownData } from '../../lib/data';
-import hourglass from '../../../shared-ui/images/hourglass.svg'
+import hourglass from '../../../shared-ui/images/hourglass.svg';
 
 const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -35,13 +35,17 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
       const difference = target - now;
       return {
         weeks: Math.floor(difference / (1000 * 60 * 60 * 24 * 7)),
-        days: Math.floor((difference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        days: Math.floor(
+          (difference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)
+        ),
+        hours: Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        )
       };
     }
 
     // return null if the target date is in the past
-    return null; 
+    return null;
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -55,12 +59,13 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }, []);
 
   if (!timeLeft) {
-    return <div>{ 'No longer accepting applications' }</div>;
+    return <div>{'No longer accepting applications'}</div>;
   }
 
   return (
     <div>
-      {timeLeft.weeks} weeks, {timeLeft.days} days, {timeLeft.hours} hours left to apply!
+      {timeLeft.weeks} weeks, {timeLeft.days} days, {timeLeft.hours} hours left
+      to apply!
     </div>
   );
 };
@@ -69,17 +74,19 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
   return (
     <StyledLandingSectionContainer>
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'main-site'} />
-      <StyledBubble1 src = {Bubble} />
-      <StyledBubble2 src = {Bubble2} />
-      <StyledFish src = {Fish} />
-      <StyledJellyfish src = {Jellyfish} />
-      <StyledWhale src = {Whale} />
+      <StyledBubble1 src={Bubble} />
+      <StyledBubble2 src={Bubble2} />
+      <StyledFish src={Fish} />
+      <StyledJellyfish src={Jellyfish} />
+      <StyledWhale src={Whale} />
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
         <StyledThemeText>Under the Sea</StyledThemeText>
-        {/* <StyledThemeTextSmall>February 9-11, 2024</StyledThemeTextSmall> */}
-        <StyledThemeTextParagraph>Date & Location TBD</StyledThemeTextParagraph>
-        {/* <StyledThemeTextParagraph> @ Wood Mackenzie (Formerly known as PowerAdvocate) <br/> 179 Lincoln St, Boston, MA 02111</StyledThemeTextParagraph> */}
+        <StyledThemeTextSmall>February 23-25, 2024</StyledThemeTextSmall>
+        <StyledThemeTextParagraph>
+          @ Wood Mackenzie (Formerly known as PowerAdvocate) <br /> 179 Lincoln
+          St, Boston, MA 02111
+        </StyledThemeTextParagraph>
         {/* <LocationTimeSection isDay={isDay} /> */}
         <StyledLandingButtonContainer
           btnText="Apply"
@@ -87,12 +94,12 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
           isApplyButton={true}
           newTab
         />
-        {/* <StyledCountdownContainer>x
+        <StyledCountdownContainer>
           <StyledHourglass src={hourglass} />
           <StyledCountdown>
-            <Countdown targetDate={CountdownData[0].targetDate}/>
+            <Countdown targetDate={CountdownData[0].targetDate} />
           </StyledCountdown>
-        </StyledCountdownContainer> */}
+        </StyledCountdownContainer>
       </StyledLandingTextContainer>
     </StyledLandingSectionContainer>
   );

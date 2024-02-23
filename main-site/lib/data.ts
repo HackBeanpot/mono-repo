@@ -24,14 +24,13 @@ import Community from '../../shared-ui/images/communityShell.png';
 import Exploration from '../../shared-ui/images/explorationShell.png';
 import Growth from '../../shared-ui/images/growthShell.png';
 
-
 export const aboutSectionData: AboutSectionData[] = [
   {
     id: 0,
     title: 'Community',
     description:
       'Connect with fellow students and our partners in the tech community. Make connections that will last a lifetime!',
-    image: Community,
+    image: Community
   },
   {
     id: 1,
@@ -45,7 +44,7 @@ export const aboutSectionData: AboutSectionData[] = [
     title: 'Growth',
     description:
       'Expand beyond your horizons and grow your current skill set in a safe and supportive environment.',
-    image: Growth,
+    image: Growth
   }
 ];
 
@@ -54,21 +53,21 @@ export const FaqSectionData: FaqData[] = [
     id: 1,
     question: 'When and where is HackBeanpot 2024?',
     answer:
-      'HackBeanpot 2024 will take place over a weekend in February 2024! We will be releasing more details about the exact event date and event location soon!'
+      'HackBeanpot 2024 will take place on February 23rd-25th at Wood Mackenzie. The address is 179 Lincoln Street, Boston MA 02111'
   },
 
   {
     id: 2,
     question: 'Will HackBeanpot 2024 be in-person or virtual?',
     answer:
-      'HackBeanpot 2024 will be in-person! We will be requiring proof of vaccination for attendees, and we’re super excited to see everyone in person again!'
+      'HackBeanpot 2024 will be in-person! We’re super excited to see everyone in person again!'
   },
 
   {
     id: 3,
     question: 'How long is the event?',
     answer:
-      'The event will last an entire weekend in February, starting at around 7pm EST the Friday leading into the weekend and continuing until 3:30pm EST on Sunday. Please note that these times are tentative and subject to change as we get closer to the event date - please check our Instagram (@hackbeanpot) for the most updated information! Throughout the weekend, there will be different workshops, activities, and opportunities to network with sponsors. A more detailed schedule will be released about a month out from the event. Sign up for our newsletter to stay updated!'
+      'The event will start on Friday, February 23rd at 6pm EST, and will lead into the weekend, continuing until 1:45 EST on Sunday.'
   },
 
   {
@@ -95,8 +94,7 @@ export const FaqSectionData: FaqData[] = [
   {
     id: 7,
     question: 'What prizes are there this year?',
-    answer:
-      'We will be releasing more details about our prizes soon!'
+    answer: 'We will be releasing more details about our prizes soon!'
   }
 
   // {
@@ -112,9 +110,6 @@ export const FaqSectionData: FaqData[] = [
   //   answer:
   //     'HackBeanpot is committed to ensuring that hackers feel safe and activities comply with local COVID-19 policies. For this reason, we ask that hackers upload proof of vaccination when asked after registration and encourage everyone to wear masks during the event as it is indoors.'
   // },
-
-
-
 
   // {
   //   id: 8,
@@ -291,7 +286,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
     date: convertToJSDate(2023, 10, 14),
     time: '12:30 pm-2 pm',
     location: 'West Village H',
-    room: '104',
+    room: '104'
   },
 
   {
@@ -303,31 +298,34 @@ export const eventsCalendarData: EventsCalendarData[] = [
     date: convertToJSDate(2023, 10, 28),
     time: '12:30 pm-2 pm',
     location: 'WVH',
-    room: '104',
+    room: '104'
   },
   {
     title: 'A Builder’s Entrepreneurial Journey',
     subtitle: 'An Intercollegiate Mixer',
-    punchline: 'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
-    description: "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
+    punchline:
+      'A collab event with Sandbox, Entrepreneurs Club, and Odds on VC!',
+    description:
+      "This is a great opportunity to experience the process of pursuing a venture idea from a technical founder's perspective and network with aspiring student founders from Northeastern, BU, Bentley, and more!",
     prerequisites: 'None!',
     date: convertToJSDate(2023, 11, 5),
     time: '12:00 pm-4:00 pm',
-    location: "Boston University's BUild Lab",
+    location: "Boston University's BUild Lab"
   },
   {
     title: 'HackBeanpot x Gecko Robotics',
-    description: 'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
+    description:
+      'Technical and career prep workshops led by Gecko Robotics. Come learn about industry tips with the opportunity to network with engineers, recruiters, and other students!',
     prerequisites: 'None!',
     date: convertToJSDate(2024, 1, 14),
     time: 'Time: TBD',
-    location: 'Gecko Robotics Boston Office',
+    location: 'Gecko Robotics Boston Office'
   }
 ];
 
 export const CountdownData: CountdownProps[] = [
   {
-    targetDate: '2024-01-26T23:59:59Z'
+    targetDate: '2024-02-09T23:59:59Z'
   }
 ];
 

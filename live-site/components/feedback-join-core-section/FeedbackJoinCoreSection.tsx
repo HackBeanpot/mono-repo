@@ -4,11 +4,9 @@ import {
   StyledColumnText,
   StyledColumnTitle,
   StyledFeedbackJoinCoreSection,
-  StyledOceanLayers
 } from './FeedbackJoinCoreSection.styles';
 import PrimaryButton from '../../../shared-ui/components/primary-button/PrimaryButton';
 import { P } from '../../../shared-ui/style/typography';
-import OceanLayers from '../../../shared-ui/images/OceanLayers.svg';
 
 const FeedbackJoinCoreSection: React.FC = () => {
   return (
@@ -40,7 +38,8 @@ const FeedbackJoinCoreSection: React.FC = () => {
           btnLink="https://docs.google.com/forms/d/e/1FAIpQLSeOQ8IVvFfBQt-iWuyKObCFRqXR4vLS847Y6YUf2mLo7zNsKA/viewform"
           newTab />
       </StyledColumn>
-    </StyledFeedbackJoinCoreSection><StyledOceanLayers src={OceanLayers} /></>
+    </StyledFeedbackJoinCoreSection>
+    </>
 
   );
 };

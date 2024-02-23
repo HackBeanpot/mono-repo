@@ -62,11 +62,6 @@ const StyledShell = styled.img`
   }
 `;
 
-const StyledOceanLayers = styled.img`
-  width: 100%;
-  margin-bottom: -0.2em;
-`;
-
 const StyledTextContainer = styled.div`
   margin-top: 2em;
   margin-right: 2em;
@@ -91,6 +86,5 @@ export {
   StyledTextContainer,
   StyledButtonContainer,
   StyledHeader,
-  StyledOceanLayers,
   StyledHeaderDiv
 };

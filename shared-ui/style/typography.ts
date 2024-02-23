@@ -43,8 +43,7 @@ const H3 = styled.h3`
 
 const H4 = styled.h4`
   font-family: ${fonts.nunitoSansRegular};
-  color: ${(props): string =>
-    props.color ? props.color : colors.WHITE};
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
   margin: 0;
   font-size: 1.3em;
   @media ${min.tablet} {
@@ -55,8 +54,7 @@ const H4 = styled.h4`
 
 const H5 = styled.h4`
   font-family: ${fonts.nunitoSansSemibold};
-  color: ${(props): string =>
-    props.color ? props.color : colors.WHITE};
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
   margin: 0;
   font-size: 1.5em;
   @media ${min.tablet} {
@@ -89,8 +87,23 @@ const P = styled.p`
   }
 `;
 
-const StyledLink = styled.a`
-    text-decoration: none;
+const P1 = styled.p`
+  margin: 0 0.5em 0 0.5em;
+  margin-bottom: 1em;
+  font-family: ${fonts.nunitoSansLight};
+  font-size: 3em;
+  line-height: 1.4em;
+  color: ${(props): string => (props.color ? props.color : colors.WHITE)};
+  @media ${min.mobile} {
+    font-size: 1em;
+  }
+  @media ${min.tablet} {
+    font-size: 2em;
+  }
 `;
 
-export { H1, H2, H3, H4, H5, H6, P, fonts, StyledLink };
+const StyledLink = styled.a`
+  text-decoration: none;
+`;
+
+export { H1, H2, H3, H4, H5, H6, P, P1, fonts, StyledLink };

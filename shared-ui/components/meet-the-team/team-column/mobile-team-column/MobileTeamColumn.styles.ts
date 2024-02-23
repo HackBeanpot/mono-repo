@@ -47,7 +47,7 @@ const StyledLinkedIn = styled.a`
   text-decoration: none;
   width: 100%;
   font-family: ${fonts.nunitoSansRegular};
-  
+
   img {
     width: 1.0em;
     height: 1.0em;

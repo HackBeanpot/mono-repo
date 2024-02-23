@@ -9,12 +9,12 @@ const StyledPastSponsorsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding-bottom: 10em;
-  margin: 1em;
+  margin: 0em;
 
   @media ${min.mobile} {
-    margin-top: 14em;
+    margin: 0em;
+    width: 100%;
   }
   @media ${min.tabletSm} {
     margin-top: 24em;
@@ -33,6 +33,7 @@ const StyledPastSponsorsContainer = styled.div`
 const StyledPastSponsorsImagesContainer = styled.div`
   padding: 1em;
   border-radius: 3em;
+  margin: 1em;
   margin-top: 3em;
   background-color: ${colors.DUNE_HIGHLIGHT};
 
@@ -53,34 +54,46 @@ const StyledPastSponsorsImagesContainer = styled.div`
   }
 `;
 
-
 const StyledImageDescription = styled(P)`
   margin-top: 2em;
   letter-spacing: 0.5px;
-  color: black;
+  color: ${colors.DEEP_SEA_BLUE};
   text-align: center;
   font-size: 16px;
   font-family: ${fonts.nunitoSansSemibold};
   font-style: italic;
-
 `;
 
 const StyledContactText = styled(P)`
   margin-top: 3em;
   letter-spacing: 0.5px;
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   text-align: center;
   font-size: 24px;
   font-family: ${fonts.nunitoSansSemibold};
-  font-style: italic;
-  width: 25em
-  
+  width: 25em;
+
+  @media ${min.mobile} {
+    width: 90%;
+  }
+
+  @media ${min.tablet} {
+    width: 25em;
+  }
+
+  @media ${min.tabletLg} {
+    width: 25em;
+  }
+
+  @media ${min.desktop} {
+    width: 25em;
+  }
 `;
 
 const StyledCenterImage = styled.img`
   align-self: center;
   width: 100%;
-  object-fit:cover;
+  object-fit: cover;
 `;
 
 const StyledButtonContainer = styled.div`
@@ -88,11 +101,54 @@ const StyledButtonContainer = styled.div`
   text-align: left;
 `;
 
-export { 
-    StyledPastSponsorsContainer, 
-    StyledPastSponsorsImagesContainer,
-    StyledImageDescription,
-    StyledCenterImage,
-    StyledContactText,
-    StyledButtonContainer 
+const StyledFishGroup = styled.img`
+  position: absolute;
+  top: 0;
+  right: -3em;
+  display: flex;
+
+  @media ${min.mobile} {
+    display: none;
+  }
+
+  @media ${min.desktop} {
+    display: flex;
+  }
+
+  @media ${min.tablet} {
+    display: flex;
+    top: -5em;
+    width: 18%;
+  }
+`;
+
+const StyledSeahorseGroup = styled.img`
+  position: absolute;
+  top: 5em;
+  left: 0;
+  display: flex;
+  width: 10%;
+
+  @media ${min.mobile} {
+    display: none;
+  }
+
+  @media ${min.desktop} {
+    display: flex;
+  }
+
+  @media ${min.tablet} {
+    display: flex;
+  }
+`;
+
+export {
+  StyledPastSponsorsContainer,
+  StyledPastSponsorsImagesContainer,
+  StyledImageDescription,
+  StyledCenterImage,
+  StyledContactText,
+  StyledButtonContainer,
+  StyledFishGroup,
+  StyledSeahorseGroup
 };
