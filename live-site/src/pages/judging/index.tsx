@@ -29,15 +29,15 @@ const JudgingPage: React.FC = () => {
 
   const getBackgroundClassName = (): string => {
     if (isDay && isDesktop) {
-      return 'day-background-desktop';
+      return 'day-gradient-desktop';
     }
     if (isDay && !isDesktop) {
-      return 'mobile-light-background';
+      return 'mobile-light-gradient';
     }
     if (!isDay && isDesktop) {
-      return 'dark-background-desktop';
+      return 'dark-gradient-desktop';
     }
-    return 'mobile-dark-background';
+    return 'mobile-dark-gradient';
   };
 
   return (
@@ -45,7 +45,7 @@ const JudgingPage: React.FC = () => {
       <Header tabs={liveSiteTabInfo} isDay={true} isLiveSite={true} />
       <ToggleMode isDay={isDay} setIsDay={setIsDay} location={'live-site'} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
-        <HackingRemaining />
+        <HackingRemaining target={new Date('02/25/2024 9:00:00')} isDay={isDay} />
       )}
       <JudgingSelection />
       <Footer tabs={liveSiteTabInfo} isDay />

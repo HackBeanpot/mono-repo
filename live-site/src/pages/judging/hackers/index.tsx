@@ -16,10 +16,16 @@ const JudgingScheduleHackersPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getBackgroundClassName = (): string => {
-    if (isDesktop) {
-      return 'day-background-desktop';
+    if (isDay && isDesktop) {
+      return 'day-gradient-desktop';
     }
-    return 'mobile-light-background';
+    if (isDay && !isDesktop) {
+      return 'mobile-light-gradient';
+    }
+    if (!isDay && isDesktop) {
+      return 'dark-gradient-desktop';
+    }
+    return 'mobile-dark-gradient';
   };
 
   useEffect(() => {
@@ -34,8 +40,8 @@ const JudgingScheduleHackersPage: React.FC = () => {
     <StyledPageContainer className={getBackgroundClassName()}>
       <Header tabs={liveSiteTabInfo} isDay={true} isLiveSite={true} />
       {isDesktop && new Date() > new Date('2023-02-10T17:00:00-05:00') && (
-        <HackingRemaining />
-      )}
+        <HackingRemaining target={new Date('02/25/2024 9:00:00')} isDay={isDay} />
+        )}
       <JudgingScheduleHackers />
       <Footer tabs={liveSiteTabInfo} isDay />
     </StyledPageContainer>
