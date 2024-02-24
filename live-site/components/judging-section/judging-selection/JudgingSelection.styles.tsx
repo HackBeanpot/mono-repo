@@ -1,17 +1,21 @@
 import styled from '@emotion/styled';
 import { min, max } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
-import { H2 } from '../../../../shared-ui/style/typography';
+import { H3 } from '../../../../shared-ui/style/typography';
 
 const StyledJudgingSelection = styled.div`
-  padding: 10em 0;
+  padding: 10em 0 10em 10em;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 `;
 
-const StyledJudgingWelcomeHeader = styled(H2)`
+const StyledJudgingWelcomeHeader = styled(H3)`
+  font-family: Berkshire-Swash;
+  font-size: 2.7em;
   text-align: center;
   padding-bottom: 2em;
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
 `;
 
 const StyledPersonTypeSelectSection = styled.div`

@@ -4,7 +4,7 @@ import { P } from "../../../../shared-ui/style/typography";
 
 const StyledHackerP = styled(P)`
   text-align: center;
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   font-size: 1.5em;
 `;
 

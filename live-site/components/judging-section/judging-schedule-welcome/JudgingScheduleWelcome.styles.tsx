@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { H2 } from '../../../../shared-ui/style/typography';
+import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import { max } from '../../../../shared-ui/lib/responsive';
 import { StyledDropdown } from '../../../styled-components/SecondarySelect.styles';
@@ -21,10 +21,12 @@ const StyledJudgingScheduleSection = styled.div`
   flex: none;
 `;
 
-const StyledWelcomePerson = styled(H2)`
+const StyledWelcomePerson = styled(H3)`
+  font-family: Berkshire-Swash;
+  font-size: 2.7em;
   text-align: center;
   padding-bottom: 0.5em;
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
 `;
 
 const StyledJudgesDropdownContainer = styled.div`
@@ -37,7 +39,7 @@ const StyledInfoContainer = styled.div`
 
 const StyledJudgeP = styled(P)`
   text-align: center;
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.WHITE};
   font-size: 1.5em;
   padding-top: 1.7em;
 `;
