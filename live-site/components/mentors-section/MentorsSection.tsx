@@ -108,7 +108,7 @@ const MentorsSection: React.FC = () => {
           name: mentor.fields.name,
           company: mentor.fields.company,
           position: mentor.fields.position,
-          imageUrl: mentor.fields.image,
+          imageUrl: mentor.fields.image[0].url,
           expertise: mentor.fields.expertise ?? [],
           virtual: mentor.fields.virtual ?? false,
           shiftStart: mentor.fields.shift_start ?? '',

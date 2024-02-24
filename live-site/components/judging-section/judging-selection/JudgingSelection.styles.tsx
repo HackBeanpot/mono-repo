@@ -4,15 +4,15 @@ import { colors } from '../../../../shared-ui/style/colors';
 import { H3 } from '../../../../shared-ui/style/typography';
 
 const StyledJudgingSelection = styled.div`
-  padding: 10em 0;
+  padding: 10em 0 10em 10em;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledJudgingWelcomeHeader = styled(H3)`
   font-family: Berkshire-Swash;
   font-size: 2.7em;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   padding-bottom: 2em;
   color: ${colors.WHITE};
