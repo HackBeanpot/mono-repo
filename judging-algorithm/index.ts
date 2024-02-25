@@ -4,7 +4,8 @@ import { parseHackerTeamCSV, parseJudgeCSV, parseRoomsCSV } from "./parser";
 import { convertHackersTablesToJson, convertJudgesTablesToJson } from "./formJsonOutput";
 
 // hardcode based on hackathon needs
-const allTimes: string[] = ['10:00', '10:09', '10:18', '10:27', '10:36', '10:45', '10:54', '11:03', '11:12', '11:21'];
+// const allTimes: string[] = ['10:00', '10:09', '10:18', '10:27', '10:36', '10:45', '10:54', '11:03', '11:12', '11:21'];
+const allTimes: string[] = ['10:30', '10:39', '10:48', '10:57', '11:06', '11:15', '11:24', '11:33', '11:42', '11:51'];
 
 function main(): FinalOutputTables {
   // read the CSV files with judge / hacker / room data
