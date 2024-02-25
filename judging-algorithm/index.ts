@@ -18,7 +18,7 @@ function main(): FinalOutputTables {
   const allHackers: HackerTeam[] = parseHackerTeamCSV(teamsCsvFilePath);
 
   // apply constraints to parsed data
-  const allAwardEligibleHackers = allHackers.filter(team => team.liveDemo === 'yes');  
+  const allAwardEligibleHackers = allHackers.filter(team => team.liveDemo === 'TRUE');  // should he parsed into a boolean 
 
   // extract string names for: judges, hackers and teams
   const judgeStringsForSorting = allJudges.map(judge => judge.name);
@@ -28,6 +28,7 @@ function main(): FinalOutputTables {
 
   // handles randomized placement and outputs a judge table and a hacker table for front-end
   const allPeopleSorted = sortJudgesAndPeople(allTimes, allRooms, allAwardEligibleHackers, judgeStringsForSorting);
+
 
   // parse the judgeOutput and place in JSON files for the front-end to consume
   convertHackersTablesToJson(allPeopleSorted);
