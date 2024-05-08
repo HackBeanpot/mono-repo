@@ -7,12 +7,11 @@ import {
   CountdownProps
 } from './types';
 
-import WiseWallet from '../images/WiseWalletImage.jpg';
-import SNAPpy from '../images/snappyImage2.jpg';
-import Page14 from '../images/Page14Image.jpg';
-import FreshFarm from '../images/FreshFarmImage.jpg';
-import FormFusion from '../images/FormFusionImage.jpg';
-import FeedTheDesert from '../images/FeedTheDesertImage.jpg';
+import ClosetCompanion from '../images/closet_companion.png';
+import FindingFishE from '../images/finding_fishe.jpeg';
+import LastMinute from '../images/last_minute.png';
+import Poqua from '../images/poqua.jpeg';
+import PerfectPantry from '../images/the_perfect_pantry.jpeg';
 import karyna from '../../shared-ui/images/Karyna.png';
 import jimin from '../../shared-ui/images/Jimin.png';
 import spencer2 from '../../shared-ui/images/spencer2.png';
@@ -214,65 +213,58 @@ export const sponsorTestimonialData: TestimonialData[] = [
 
 export const pastProjectsData: PastProjectData[] = [
   {
-    title: 'SNAPpy',
+    title: 'Poqua',
     members:
-      'by Jacob Kline, Andrew Caplan, Daniel Ostapenko, and Emery Jacobowitz',
+      'by Jalen Wu, Caleb Lee, Kyle Sung, Elaine Min, Dewi Kalis',
     description:
-      'Worked on a combination of front-end and backend features by creating API pipelines which connect to the user interface. In addition to Python, utilized JS, which was new for them.',
+      'Poqua is an aquarium tank monitor software application that gives users a platform to simulate their aquarium when away from home.',
     btnLink: 'https://devpost.com/software/snappy-rb81ku',
-    image: SNAPpy,
-    award: '🏆 Fighting the Drought Award'
+    image: Poqua,
+    award: '🏆 Pirate with the Most Booty - Best Overall'
   },
 
   {
-    title: 'FreshFarm',
-    members: 'by Kat Dizon, Allen Lin, Julia Lee, Daniel Kamen, and Kelly Lau',
-    description:
-      "We get really upset seeing so much food going to waste on campus. This got us to think about how food is being wasted all throughout our community, and not just on the table. This project, FreshFarm, focuses on minimizing food waste right at the source. Fresh produce doesn't grow perfectly, so when grocery stores, markets, and restaurants demand perfect produce, 33% of food goes to waste due to small imperfections.",
-    btnLink: 'https://devpost.com/software/freshfarm',
-    image: FreshFarm,
-    award: '🏆 Best Dunes of the Sahara Award'
-  },
-
-  {
-    title: 'FormFusion',
-    members: 'by Aditya Boddepalli',
-    description:
-      'Our web app leverages the power of AI to analyze and improve your workout routine. Users upload recorded exercise videos, which are processed by the proprietary machine learning API that we wrote. This technology provides instant feedback on form, enabling users to optimize their workouts. The annotated videos, including information about joint angles, are then displayed within the app for easy review and tracking of progress.',
-    btnLink: 'https://devpost.com/software/formfusion',
-    image: FormFusion,
-    award: '🏆 Surviving the Desert Award'
-  },
-
-  {
-    title: 'Page 14',
-    members: 'by Mandy Rodriques',
-    description:
-      'A novel dating app perfectly tailored for our literary-loving folk, focusing on the normalization of "gaga" over books, being blissfully queer, etc Page 14 gives users a safe space to smile.',
-    btnLink: 'https://devpost.com/software/page-14',
-    image: Page14,
-    award: '🏆  Fun in the Sun Award'
-  },
-
-  {
-    title: 'Feed the Desert',
+    title: 'Last Minute',
     members:
-      'by Euann Gu, Mallory Gilligan, Chris Wyatt, Danny Rollo, Rachael Cheung and Madeline Zhang',
+      'by Yujin Park, Justin Kim, Emily Ye, Oscar Fang',
     description:
-      'Feed the Desert illustrates a clear, user-friendly data-map highlighting spaces in local communities that can be further developed to provide equitable infrastructure and access to necessary resources.',
-    btnLink: 'https://devpost.com/software/feed-the-desert',
-    image: FeedTheDesert,
-    award: '🏆  Rookie of the Year Award'
+      'Last Minute allows users to upload pictures of their leftover food, which can then be picked up by anyone in the area who needs a meal at the very last minute.',
+    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    image: LastMinute,
+    award: '🏆 Hydro Homie - Social Impact / Sustainability'
   },
 
   {
-    title: 'WiseWallet',
-    members: 'by Alyssa Mui, Justin Pong, and Nelson Dong',
+    title: 'Closet Companion',
+    members:
+      'by Krystal Qiao',
     description:
-      'WiseWallet is a budgeting Chrome Extension designed to help you keep track of your expenses and stop making frivolous online purchases.',
-    btnLink: 'https://devpost.com/software/wisewallet-2iqrl8',
-    image: WiseWallet,
-    award: '🏆  Most Likely to Quest Award'
+      'Effortlessly curate outfits from your wardrobe, tailored to your unique taste. Say goodbye to fashion dilemmas and hello to organized and digital fashion solutions.',
+    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    image: ClosetCompanion,
+    award: '🏆 Splash - Best Beginner'
+  },
+
+  {
+    title: 'The Perfect Pantry',
+    members:
+      'by Yomi Addey, Arushi Aggarwal',
+    description:
+      'Have you ever looked at an empty pantry and wondered what you could make with such few ingredients? The Perfect Pantry can help you find out!',
+    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    image: PerfectPantry,
+    award: '🏆 [MLH] Best Domain Name from GoDaddy Registry'
+  },
+
+  {
+    title: 'Finding FishE',
+    members:
+      'by Alina Gonzalez, Alex Chen, Spring Yan, Dao Ho',
+    description:
+      'Finding FishE is a web app designed to help small business owners by providing them with the ability to determine if receipts represent suspicious spending on their company cards.',
+    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    image: FindingFishE,
+    award: '🏆 [MLH] Best DEI Hack sponsored by Fidelity'
   }
 ];
 
