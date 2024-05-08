@@ -8,10 +8,10 @@ import {
 } from './types';
 
 import ClosetCompanion from '../images/closet_companion.png';
-import FindingFishE from '../images/finding_fishe.jpeg';
+import FindingFishE from '../images/finding_fishe.jpg';
 import LastMinute from '../images/last_minute.png';
-import Poqua from '../images/poqua.jpeg';
-import PerfectPantry from '../images/the_perfect_pantry.jpeg';
+import Poqua from '../images/poqua.jpg';
+import PerfectPantry from '../images/the_perfect_pantry.jpg';
 import karyna from '../../shared-ui/images/Karyna.png';
 import jimin from '../../shared-ui/images/Jimin.png';
 import spencer2 from '../../shared-ui/images/spencer2.png';
@@ -218,7 +218,7 @@ export const pastProjectsData: PastProjectData[] = [
       'by Jalen Wu, Caleb Lee, Kyle Sung, Elaine Min, Dewi Kalis',
     description:
       'Poqua is an aquarium tank monitor software application that gives users a platform to simulate their aquarium when away from home.',
-    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    btnLink: 'https://devpost.com/software/poqua',
     image: Poqua,
     award: '🏆 Pirate with the Most Booty - Best Overall'
   },
@@ -229,7 +229,7 @@ export const pastProjectsData: PastProjectData[] = [
       'by Yujin Park, Justin Kim, Emily Ye, Oscar Fang',
     description:
       'Last Minute allows users to upload pictures of their leftover food, which can then be picked up by anyone in the area who needs a meal at the very last minute.',
-    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    btnLink: 'https://devpost.com/software/last-minute-1midqp',
     image: LastMinute,
     award: '🏆 Hydro Homie - Social Impact / Sustainability'
   },
@@ -240,7 +240,7 @@ export const pastProjectsData: PastProjectData[] = [
       'by Krystal Qiao',
     description:
       'Effortlessly curate outfits from your wardrobe, tailored to your unique taste. Say goodbye to fashion dilemmas and hello to organized and digital fashion solutions.',
-    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    btnLink: 'https://devpost.com/software/closet-companion',
     image: ClosetCompanion,
     award: '🏆 Splash - Best Beginner'
   },
@@ -251,7 +251,7 @@ export const pastProjectsData: PastProjectData[] = [
       'by Yomi Addey, Arushi Aggarwal',
     description:
       'Have you ever looked at an empty pantry and wondered what you could make with such few ingredients? The Perfect Pantry can help you find out!',
-    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    btnLink: 'https://devpost.com/software/the-perfect-pantry',
     image: PerfectPantry,
     award: '🏆 [MLH] Best Domain Name from GoDaddy Registry'
   },
@@ -262,7 +262,7 @@ export const pastProjectsData: PastProjectData[] = [
       'by Alina Gonzalez, Alex Chen, Spring Yan, Dao Ho',
     description:
       'Finding FishE is a web app designed to help small business owners by providing them with the ability to determine if receipts represent suspicious spending on their company cards.',
-    btnLink: 'https://devpost.com/software/snappy-rb81ku',
+    btnLink: 'https://devpost.com/software/finding-fishe',
     image: FindingFishE,
     award: '🏆 [MLH] Best DEI Hack sponsored by Fidelity'
   }
