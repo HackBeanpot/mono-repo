@@ -32,13 +32,13 @@ const StyledSponsorPerkSectionContainer = styled.div`
 
 const StyledTextContainer = styled.div`
   padding: 4em;
-  border-radius: 3em;
+  border-radius: 0em 2em 2em 0em;;
   margin-top: 5em;
+  margin-bottom: 3em;
 
   @media ${min.tablet} {
     width: 34em;
-    background-color: ${colors.TEXT_BOX};
-    margin-left: 5em;
+    background-color: ${colors.TEXT_BOX_BLUE};
     margin-top: 0;
   }
 
@@ -52,7 +52,32 @@ const StyledTextContainer = styled.div`
   }
 
   @media ${min.desktop} {
-    width: 50em;
+    width: 44em;
+  }
+`;
+
+const StyledTextSmallerContainer = styled.div`
+  padding: 3em;
+  border-radius: 0em 2em 2em 0em;
+  margin-top: 5em;
+
+  @media ${min.tablet} {
+    width: 34em;
+    background-color: ${colors.SAGE_GREEN};
+    margin-top: 0;
+  }
+
+  @media ${max.tablet} {
+    width: 80vw;
+    border-radius: 2em;
+    background-color: ${colors.TEXT_BOX};
+    margin: auto;
+    padding: 5vw;
+    padding-bottom: 10vw;
+  }
+
+  @media ${min.desktop} {
+    width: 32.25em;
   }
 `;
 
@@ -64,52 +89,9 @@ const StyledParagraph = styled(P)`
   }
 `;
 
-const StyledExplorer = styled.img`
-  position: absolute;
-  
-  @media ${max.tablet} {
-    position: relative;
-    width: 15vh;
-    margin-left: 3vh;
-    margin-bottom: -2vh;
-  }
-
-  @media ${min.tablet} {
-    left: 2em;
-    top: 3em;
-    width: 8em;
-    width: 13em;
-    top: -1.5em;
-    left: 7em;
-  }
-
-`;
-
-const StyledCamel = styled(motion.img)`
-  position: absolute;
-  top: 20em;
-  right: 0em;
-  z-index: 1;
-
-  @media ${max.tablet} {
-    position: relative;
-    top: -5vh;
-    width: 18vh;
-    margin-right: -7vh;
-    float: right;
-    transform: rotate(-12deg);
-  }
-
-  @media ${min.tablet} {
-    height: 20em;
-    size: 50px;
-  }
-`;
-
 export {
   StyledTextContainer,
   StyledSponsorPerkSectionContainer,
   StyledParagraph,
-  StyledExplorer,
-  StyledCamel
+  StyledTextSmallerContainer
 };
