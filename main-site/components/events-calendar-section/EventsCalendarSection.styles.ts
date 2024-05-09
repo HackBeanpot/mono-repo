@@ -26,7 +26,7 @@ const StyledEventsContainer = styled.div`
   flex-direction: column;
 `;
 
-const StyledEventsBox = styled.div<{ elapsedEvent: boolean }>`
+const StyledEventsBox = styled.div`
   border-radius: 2em;
   background-color: ${colors.SAND_HIGHLIGHTS};
   position: relative;
@@ -139,6 +139,11 @@ const EventsHeader = styled(P)`
   @media ${max.mobile} {
     font-size: 0.6em;
   }
+`;
+
+const StyledEventsSoon = styled(H2)`
+text-align: center;
+color: #193c60;;
 `;
 
 const EventsP = styled(P)`
