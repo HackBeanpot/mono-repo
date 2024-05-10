@@ -252,5 +252,6 @@ export {
   StyledDesktopTextsContainer,
   EventsLocationContainer,
   EventsImage,
-  EventsLocationPQuestion
+  EventsLocationPQuestion,
+  StyledEventsSoon
 };

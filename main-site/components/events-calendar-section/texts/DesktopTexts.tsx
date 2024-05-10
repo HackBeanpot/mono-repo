@@ -74,13 +74,11 @@ const DesktopTexts: React.FC<{ isDay: boolean }> = ({ isDay }) => {
             </StyledEventsBox>
       )))
       : (
-
           <StyledEventsBox>
             <StyledEventsSoon>
               Events Coming Soon!
             </StyledEventsSoon>
           </StyledEventsBox>
-
       )
       }
 
@@ -90,7 +88,6 @@ const DesktopTexts: React.FC<{ isDay: boolean }> = ({ isDay }) => {
           numberOfEvents={eventsCalendarData.length}
         />
       )}
-
 
     </StyledDesktopTextsContainer>
   );
