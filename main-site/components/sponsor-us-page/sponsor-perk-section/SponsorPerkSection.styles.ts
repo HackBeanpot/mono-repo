@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { colors } from '../../../../shared-ui/style/colors';
 import { P } from '../../../../shared-ui/style/typography';
 import { min, max } from '../../../../shared-ui/lib/responsive';
-import { motion } from 'framer-motion';
 
 const StyledSponsorPerkSectionContainer = styled.div`
   padding-top: 16em;
@@ -31,8 +30,8 @@ const StyledSponsorPerkSectionContainer = styled.div`
 `;
 
 const StyledTextContainer = styled.div`
-  padding: 4em;
-  border-radius: 0em 2em 2em 0em;;
+  padding: 6em;
+  border-radius: 0em 2em 2em 0em;
   margin-top: 5em;
   margin-bottom: 3em;
 
@@ -43,12 +42,15 @@ const StyledTextContainer = styled.div`
   }
 
   @media ${max.tablet} {
-    width: 80vw;
-    border-radius: 2em;
-    background-color: ${colors.TEXT_BOX};
-    margin: auto;
-    padding: 5vw;
-    padding-bottom: 10vw;
+    width: 64vw;
+    border-radius: 0em 2em 2em 0em;
+    background-color: ${colors.TEXT_BOX_BLUE};
+    margin-bottom: 3em;
+    padding: 10vw 10vw 10vw 5vw;
+  }
+
+  @media ${max.mobile} {
+    width: 15.75em;
   }
 
   @media ${min.desktop} {
@@ -59,7 +61,7 @@ const StyledTextContainer = styled.div`
 const StyledTextSmallerContainer = styled.div`
   padding: 3em;
   border-radius: 0em 2em 2em 0em;
-  margin-top: 5em;
+  margin-top: 3em;
 
   @media ${min.tablet} {
     width: 34em;
@@ -68,16 +70,77 @@ const StyledTextSmallerContainer = styled.div`
   }
 
   @media ${max.tablet} {
-    width: 80vw;
-    border-radius: 2em;
-    background-color: ${colors.TEXT_BOX};
-    margin: auto;
+    width: 61vw;
+    border-radius: 0em 2em 2em 0em;
+    background-color: ${colors.SAGE_GREEN};
     padding: 5vw;
     padding-bottom: 10vw;
   }
 
+  @media ${max.mobile} {
+    width: 15em;
+  }
+
   @media ${min.desktop} {
     width: 32.25em;
+  }
+`;
+
+const StyledTreasureChestGroup = styled.img`
+  position: absolute;
+  top: 3em;
+  padding-left: 3em;
+
+
+  @media ${min.tablet} {
+    padding-left: 2.5em;
+    width: 23%;
+    left: 27em;
+    top: 7em;
+  }
+
+  @media ${max.tablet} {
+    width: 25%;
+    top: -5em;
+    right: 10em;
+  }
+
+  @media ${max.mobile} {
+    width: 40%;
+    left: 6.5em;
+    top: -4.5em;
+
+  }
+`;
+
+const StyledPirateFlagGroup = styled.img`
+  position: absolute;
+  top: 3em;
+  padding-left: 3em;
+
+  // @media ${max.desktop} {
+  //   width: 15%;
+  //   top: -3em;
+  //   left: 1em;
+  // }
+
+  @media ${max.tablet} {
+    width: 16%;
+    top: -12em;
+    left: -1em;
+  }
+
+  @media ${min.tablet} {
+    padding-left: 2.5em;
+    width: 13%;
+    top: -4em;
+  }
+
+  @media ${max.mobile} {
+    width: 20%;
+    left: -2em;
+    top: -6.4em;
+
   }
 `;
 
@@ -93,5 +156,7 @@ export {
   StyledTextContainer,
   StyledSponsorPerkSectionContainer,
   StyledParagraph,
-  StyledTextSmallerContainer
+  StyledTextSmallerContainer,
+  StyledTreasureChestGroup,
+  StyledPirateFlagGroup
 };

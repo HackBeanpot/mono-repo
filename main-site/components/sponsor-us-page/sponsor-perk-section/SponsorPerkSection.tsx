@@ -4,17 +4,21 @@ import {
   StyledParagraph,
   StyledSponsorPerkSectionContainer,
   StyledTextSmallerContainer,
+  StyledTreasureChestGroup,
+  StyledPirateFlagGroup,
 } from './SponsorPerkSection.styles';
 import { StyledButtonContainer } from '../past-sponsor-section/PastSponsor.styles';
 import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
-import Testing123 from '../../../images/treasure-chest.png';
+import TreasureChestGroup from '../../../images/treasure-chest.png';
+import PirateFlagGroup from '../../../images/pirate_flag.svg';
 
 const SponsorPerk: React.FC = () => {
   return (
     <StyledSponsorPerkSectionContainer>
-      <Testing123/>
+      <StyledPirateFlagGroup src={PirateFlagGroup} />
+      <StyledTreasureChestGroup src={TreasureChestGroup} />
       <StyledTextContainer>
         <H3 color={colors.WHITE}>Sponsorship perks include:</H3>
         <StyledParagraph color={colors.WHITE}>
