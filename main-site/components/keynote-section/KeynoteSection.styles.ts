@@ -3,137 +3,140 @@ import { H2, H3, P } from '../../../shared-ui/style/typography';
 import { max, min } from '../../../shared-ui/lib/responsive';
 
 const StyledKeynoteSectionContainer = styled.div`
-  margin-top: 10em;
   padding-bottom: 10em;
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-row: 1fr 7fr;
-  @media ${min.tablet} {
-    margin-top: 10em;
-  }
-`;
+  height: 100%;
+  max-height: 100%;
+  margin: 0 8vw;
 
-const StyledBlurbContainer = styled.div`
-  display: flex;
-  margin: 5em;
-  justify-content: center;
+  @media ${min.tablet} {
+    grid-template-rows: repeat(3, auto) 3fr;
+    grid-template-columns: 1fr 5fr 3fr;
+    grid-template-areas:
+      'empty1 title empty2'
+      'empty3 name name'
+      'image header header'
+      'image blurb blurb';
+  }
+
+  @media ${max.tablet} {
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+      'title'
+      'image'
+      'name'
+      'header'
+      'blurb';
+  }
 `;
 
 const StyledTitle = styled(H2)`
   color: white;
+  grid-area: title;
   text-align: center;
-`;
-
-const StyledItemImage = styled.img`
-  position: absolute;
+  text-wrap: nowrap;
   @media ${min.tablet} {
-    width: 14em;
+    margin-left: 5vw;
+    text-align: left;
   }
   @media ${min.tabletLg} {
-    width: 19em;
+    margin-left: 5vw;
+    text-align: left;
   }
   @media ${min.desktop} {
-    width: 21em;
+    text-align: left;
+    margin-left: 10vw;
   }
 `;
 
-const StyledItemDescription = styled(P)`
-  margin: 4em 2em 0 2em;
+const StyledSpeakerImage = styled.img`
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  grid-area: image;
+  justify-self: center;
+  border-radius: 50%;
+  width: 45vw;
+  margin: 5vw 0;
   @media ${min.tablet} {
-    margin: 0;
-    font-size: 1.125em;
-  }
-`;
-
-const StyledItemContainer = styled.div`
-  width: 17em;
-  display: flex;
-  justify-content: center;
-  margin: 0 1em;
-  @media ${min.mobile} {
-    width: 24em;
-  }
-  @media ${min.tablet} {
-    width: 14em;
+    width: 35vw;
   }
   @media ${min.tabletLg} {
-    width: 19em;
+    width: 30vw;
   }
   @media ${min.desktop} {
-    width: 23em;
-  }
-`;
-
-const StyledMobileImage = styled.img`
-  position: absolute;
-  width: 16em;
-  @media ${min.tabletSm} {
-    width: 23em;
-  }
-`;
-
-const StyledCenterImage = styled(StyledMobileImage)`
-  align-self: center;
-  top: 9em;
-`;
-
-const StyledLeftImage = styled(StyledMobileImage)`
-  left: -14em;
-
-  @media ${min.tabletSm} {
-    left: -20em;
-  }
-`;
-
-const StyledRightImage = styled(StyledMobileImage)`
-  right: -14em;
-
-  @media ${min.tabletSm} {
-    right: -20em;
-  }
-`;
-
-const StyledArrowDescriptionContainer = styled.div`
-  display: flex;
-  margin-left: -4.5em;
-  margin-right: -4.5em;
-  margin-top: -3.7em;
-`;
-
-const StyledRedRocks = styled.img`
-  position: absolute;
-  bottom: 2em;
-  right: 3em;
-  width: 10em;
-  @media ${min.tabletLg} {
-    right: 16em;
-    width: 17em;
-  }
-  @media ${min.desktop} {
-    right: 20em;
-    width: 17em;
+    width: 21vw;
   }
 `;
 
 const StyledItemTitle = styled(H3)`
-  font-size: 1.7em;
-  margin-bottom: 1em;
+  grid-area: name;
+  font-size: 1.7rem;
+  margin-top: 1vw;
+  
+  text-align: center;
+  @media ${min.tablet} {
+    margin-left: 5vw;
+    text-align: left;
+  }
+  @media ${min.tabletLg} {
+    margin-left: 5vw;
+    text-align: left;
+  }
+  @media ${min.desktop} {
+    text-align: left;
+    margin-left: 10vw;
+  }
+`;
+
+const StyledTitleDescription = styled(P)`
+  grid-area: header;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 2vw 0 2vw 5vw;
+  text-align: center;
+  @media ${min.tablet} {
+    m
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  @media ${min.tabletLg} {
+   
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  @media ${min.desktop} {
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 2vw 0vw 2vw 10vw;
+  }
+`;
+
+const StyledItemDescription = styled(P)`
+  grid-area: blurb;
+  
+  font-size: 1rem;
+  text-align: left;
+  @media ${min.tablet} {
+    margin-left: 5vw;
+    text-align: left;
+  }
+  @media ${min.tabletLg} {
+    margin-left: 5vw;
+    text-align: left;
+  }
+  @media ${min.desktop} {
+    font-size: 1.2rem;
+    margin-left: 10vw;
+  }
 `;
 
 export {
   StyledKeynoteSectionContainer,
-  StyledItemsContainer,
   StyledTitle,
   StyledItemDescription,
-  StyledItemTextContainer,
-  StyledItemImage,
-  StyledItemContainer,
-  StyledCenterImage,
-  StyledLeftImage,
-  StyledRightImage,
-  StyledArrowDescriptionContainer,
-  StyledRedRocks,
-  StyledItemTitle,
-  StyledBlurbContainer
+  StyledSpeakerImage,
+  StyledTitleDescription,
+  StyledItemTitle
 };
