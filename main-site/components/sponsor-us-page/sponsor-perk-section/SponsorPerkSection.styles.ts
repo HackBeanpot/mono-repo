@@ -92,17 +92,23 @@ const StyledTreasureChestGroup = styled.img`
   padding-left: 3em;
 
 
-  @media ${min.tablet} {
-    padding-left: 2.5em;
-    width: 23%;
-    left: 27em;
-    top: 7em;
-  }
-
   @media ${max.tablet} {
     width: 25%;
     top: -5em;
-    right: 10em;
+    right: 12em;
+  }
+
+  @media ${min.tablet} {
+    padding-left: 2.5em;
+    width: 23%;
+    left: 30em;
+    top: 9em;
+  }
+
+  @media ${max.tabletSm} {
+    width: 25%;
+    top: -3em;
+    right: 9em;
   }
 
   @media ${max.mobile} {
@@ -114,32 +120,49 @@ const StyledTreasureChestGroup = styled.img`
 `;
 
 const StyledPirateFlagGroup = styled.img`
+  width: 12%;
   position: absolute;
   top: 3em;
   padding-left: 3em;
 
-  // @media ${max.desktop} {
-  //   width: 15%;
-  //   top: -3em;
-  //   left: 1em;
-  // }
+  @media ${min.desktopLg} {
+    top: -4em;
+  }
 
-  @media ${max.tablet} {
-    width: 16%;
-    top: -12em;
-    left: -1em;
+  @media ${min.desktop} {
+    top: -4em;
   }
 
   @media ${min.tablet} {
-    padding-left: 2.5em;
-    width: 13%;
-    top: -4em;
+    left: 1em;
+    top: 5.5em;
+  }
+
+  @media ${max.tablet} {
+    top: -7em;
+    left: -1em;
+  }
+
+  @media ${min.tabletLg} {
+    top: 2em;
+  }
+
+  @media ${max.tabletSm} {
+    width: 15%;
+    top: -7em;
+    right: 8em;
+  }
+
+  @media ${max.tabletXs} {
+    width: 15%;
+    top: -6em;
+    right: 8em;
   }
 
   @media ${max.mobile} {
     width: 20%;
-    left: -2em;
-    top: -6.4em;
+    left: -1.5em;
+    top: -6em;
 
   }
 `;
