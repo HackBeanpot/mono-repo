@@ -79,6 +79,7 @@ const StyledTextSmallerContainer = styled.div`
 
   @media ${max.mobile} {
     width: 15em;
+    margin-bottom: 7em;
   }
 
   @media ${min.desktop} {

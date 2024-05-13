@@ -10,14 +10,13 @@ const StyledPastSponsorsContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 10em;
-  margin: 0em;
 
   @media ${min.mobile} {
-    margin: 0em;
+    margin: 5em 0 0 0;
     width: 100%;
   }
   @media ${min.tabletSm} {
-    margin-top: 24em;
+    margin-top: 10em;
   }
   @media ${min.tablet} {
     margin-top: 4em;
@@ -100,13 +99,8 @@ const StyledButtonContainer = styled.div`
   margin-top: 2em;
   text-align: left;
 
-  @media ${max.tablet} {
-    padding: 0em 0em 0em 3em;
-  }
-
   @media ${max.mobile} {
     width: 16em;
-    margin-left: -2.5em;
   }
 
 `;
