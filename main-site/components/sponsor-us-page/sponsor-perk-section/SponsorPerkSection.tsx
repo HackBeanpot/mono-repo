@@ -12,7 +12,7 @@ import { H3 } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 import PrimaryButton from '../../../../shared-ui/components/primary-button/PrimaryButton';
 import TreasureChestGroup from '../../../images/treasure-chest.png';
-import PirateFlagGroup from '../../../images/pirate_flag.svg';
+import PirateFlagGroup from '../../../../shared-ui/images/pirateFlag.png';
 
 const SponsorPerk: React.FC = () => {
   return (
