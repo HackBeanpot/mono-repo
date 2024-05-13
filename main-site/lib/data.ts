@@ -8,8 +8,12 @@ import {
 } from './types';
 
 import ClosetCompanion from '../images/closet_companion.png';
+import DiscountBytes from '../images/discount_bytes.png';
 import FindingFishE from '../images/finding_fishe.jpg';
 import LastMinute from '../images/last_minute.png';
+import Maritime from '../images/maritime.jpeg';
+import LetsLink from '../images/lets_link.jpeg';
+import Futura from '../images/futura.png';
 import Poqua from '../images/poqua.jpg';
 import PerfectPantry from '../images/the_perfect_pantry.jpg';
 import karyna from '../../shared-ui/images/Karyna.png';
@@ -224,6 +228,17 @@ export const pastProjectsData: PastProjectData[] = [
   },
 
   {
+    title: 'DiscountBytes',
+    members:
+      'by Shashwath Sunkum, B D S Aritra, Samuel Steinmetz, Sahil Shah',
+    description:
+      'DiscountBytes is an advanced web application designed specifically for restaurants, allowing them to dynamically adjust their menu pricing based on real-time customer traffic.',
+    btnLink: 'https://devpost.com/software/discountbytes',
+    image: DiscountBytes,
+    award: '🏆 Silly Sailor - Most Creative / Goofy'
+  },
+
+  {
     title: 'Last Minute',
     members:
       'by Yujin Park, Justin Kim, Emily Ye, Oscar Fang',
@@ -246,9 +261,43 @@ export const pastProjectsData: PastProjectData[] = [
   },
 
   {
+    title: 'Maritime',
+    members:
+      'by Kaylee Wu, Mouad Tiahi, Kenneth Chap, Borui Chen',
+    description:
+      'Maritime is an iOS, Android, and web application that promotes recycling and mitigating waste, specifically in the world\'s oceans.',
+    btnLink: 'https://devpost.com/software/maritime',
+    image: Maritime,
+    award: '🏆 Deep Dive Award - Most Technically Challenging'
+  },
+
+  {
+    title: 'Futura',
+    members:
+      'by Zahra Wibisana, Ange Najam, Sania Hasan, Saidah Ly, Tina Ni',
+    description:
+      'Futura strives to normalize gender-aggregated data. We\'re dedicated to transforming urban planning by highlighting the gender-data gap. We aim to promote gender equality in urban planning and design.',
+    btnLink: 'https://devpost.com/software/maritime',
+    image: Futura,
+    award: '🏆 Heart of the Sea - Best UI/UX'
+  },
+
+  {
+    title: 'Let\'s Link',
+    members:
+      'by Russell Leung, Aahil Nishad, Michael Mehall, Donny Le, Andrew Zhu',
+    description:
+      'We\'re all busy people. Finding times to meet can be hard. Introduce Let\'s Link, all you do is connect your Google Calendar and we\'ll provide the most optimal times for you to meet with friends!',
+    btnLink: 'https://devpost.com/software/maritime',
+    image: LetsLink,
+    award: '🏆 [MLH] Best Use of MongoDB Atlas'
+  },
+
+
+  {
     title: 'The Perfect Pantry',
     members:
-      'by Yomi Addey, Arushi Aggarwal',
+      'Ayomide Addey, Arushi Aggarwal',
     description:
       'Have you ever looked at an empty pantry and wondered what you could make with such few ingredients? The Perfect Pantry can help you find out!',
     btnLink: 'https://devpost.com/software/the-perfect-pantry',
