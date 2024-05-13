@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { max, min } from '../../../../shared-ui/lib/responsive';
 import { colors } from '../../../../shared-ui/style/colors';
 import { H2, P } from '../../../../shared-ui/style/typography';
-//hi
+
 const StyledContainer = styled.div`
   position: relative;
 `;
