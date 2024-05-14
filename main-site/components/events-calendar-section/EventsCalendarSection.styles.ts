@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { max, min } from '../../../shared-ui/lib/responsive';
 import { colors } from '../../../shared-ui/style/colors';
 import { fonts, H2, P } from '../../../shared-ui/style/typography';
-import { eventsCalendarData } from '../../lib/data';
 
 const StyledDesktopTextsContainer = styled.div`
   padding: 1em 0;
@@ -26,7 +25,7 @@ const StyledEventsContainer = styled.div`
   flex-direction: column;
 `;
 
-const StyledEventsBox = styled.div<{ elapsedEvent: boolean }>`
+const StyledEventsBox = styled.div`
   border-radius: 2em;
   background-color: ${colors.SAND_HIGHLIGHTS};
   position: relative;
@@ -141,6 +140,15 @@ const EventsHeader = styled(P)`
   }
 `;
 
+const StyledEventsSoon = styled(H2)`
+text-align: center;
+color: #193c60;
+padding: 2em;
+padding-left: 0;
+padding-right: 0;
+font-size: 2em;
+`;
+
 const EventsP = styled(P)`
   font-size: 1.1em;
   color: ${colors.BLACK};
@@ -247,5 +255,6 @@ export {
   StyledDesktopTextsContainer,
   EventsLocationContainer,
   EventsImage,
-  EventsLocationPQuestion
+  EventsLocationPQuestion,
+  StyledEventsSoon
 };

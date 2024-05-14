@@ -24,8 +24,8 @@ const H2 = styled.h2`
   font-family: ${fonts.nunitoSansRegular};
   font-size: clamp(1.5em, 8.2vw, 3.1em);
   margin: 0;
+  letter-spacing: 0.1em;
   @media ${min.tablet} {
-    letter-spacing: 0.1em;
     font-size: 2.5em;
   }
 `;
