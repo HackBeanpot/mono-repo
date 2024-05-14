@@ -49,7 +49,7 @@ const PastProjectsSection: React.FC<PastProjectProps> = ({ isDay }) => {
               <StyledPastProjectsInfo>
                 <StyledPastProjectsTitleAwardContainer>
                   <StyledPastProjectsTitle>
-                    {project.title}, 2023
+                    {project.title}, 2024
                   </StyledPastProjectsTitle>
                   <StyledPastProjectsAward>
                     {project.award}
