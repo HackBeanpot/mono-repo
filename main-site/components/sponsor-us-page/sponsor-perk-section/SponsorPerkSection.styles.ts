@@ -131,7 +131,6 @@ const StyledPirateFlagGroup = styled.img`
   width: 12%;
   position: absolute;
   top: 3em;
-  //padding-left: 3em;
 
   @media ${min.desktop} {
     top: -4em;
