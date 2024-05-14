@@ -100,15 +100,13 @@ const StyledTreasureChestGroup = styled.img`
 
   @media ${min.desktop} {
     top: 2em;
-    //margin-top: -10em;
   }
 
   @media ${min.tablet} {
-    //background-color: red;
     padding-left: 2.5em;
     width: 20%;
     left: 30em;
-    top: 8em;
+    top: 12em;
   }
 
   @media ${max.tabletSm} {
@@ -124,21 +122,16 @@ const StyledTreasureChestGroup = styled.img`
   }
 
   @media ${min.desktopLg} {
-    width: 15%;
-    top: 5em;
+    width: 16%;
+    top: 7em;
   }
-
 `;
 
 const StyledPirateFlagGroup = styled.img`
   width: 12%;
   position: absolute;
   top: 3em;
-  padding-left: 3em;
-
-  @media ${min.desktopLg} {
-    top: -4em;
-  }
+  //padding-left: 3em;
 
   @media ${min.desktop} {
     top: -4em;
@@ -152,6 +145,7 @@ const StyledPirateFlagGroup = styled.img`
   @media ${max.tablet} {
     top: -7em;
     left: -1em;
+    padding-left: 3em;
   }
 
   @media ${min.tabletLg} {
@@ -177,8 +171,8 @@ const StyledPirateFlagGroup = styled.img`
   }
 
   @media ${min.desktopLg} {
-    width: 8%;
-    top: -3em;
+    width: 9%;
+    top: 2em;
   }
 `;
 
