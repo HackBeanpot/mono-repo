@@ -82,7 +82,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay, setIsDay }) => {
       <StyledLandingTextContainer>
         <StyledHackathonText>HackBeanpot 2024</StyledHackathonText>
         <StyledThemeText>Under the Sea</StyledThemeText>
-        <StyledThemeTextSmall>February 23-25, 2024</StyledThemeTextSmall>
+        <StyledThemeTextSmall>Coming back in 2025!</StyledThemeTextSmall>
         <StyledThemeTextParagraph>
           @ Wood Mackenzie (Formerly known as PowerAdvocate) <br /> 179 Lincoln
           St, Boston, MA 02111
