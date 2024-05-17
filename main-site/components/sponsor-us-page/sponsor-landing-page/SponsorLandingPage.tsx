@@ -28,7 +28,7 @@ const SponsorUsLanding: React.FC<SponsorUsLandingProps> = ({
         <StyledParagraph color={colors.WHITE}>
           With 11 years of experience working with sponsors to meet their
           marketing and recruiting needs, HackBeanpot uniquely positions
-          sponsors to connect with young talent and innovators. 
+          sponsors to connect with young talent and innovators.
         </StyledParagraph>
       </StyledSponsorUsSectionContainer>
     </StyledContainer>

@@ -11,7 +11,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   return (
     <div id="testimonials">
       <StyledTestimonialsSectionContainer>
-        <H2>Testimonials</H2>
+        <H2>Sponsor Testimonials</H2>
         <Testimonials isSponsor={isSponsor} testimonialData={testimonialData} />
       </StyledTestimonialsSectionContainer>
     </div>
