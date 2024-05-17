@@ -54,7 +54,7 @@ const StyledTextContainer = styled.div`
   }
 
   @media ${min.desktop} {
-    width: 44em;
+    width: 60em;
   }
 `;
 
@@ -83,95 +83,71 @@ const StyledTextSmallerContainer = styled.div`
   }
 
   @media ${min.desktop} {
-    width: 32.25em;
+    width: 45em;
   }
 `;
 
 const StyledTreasureChestGroup = styled.img`
   position: absolute;
-  top: 3em;
-  padding-left: 3em;
+  left: 45em;
+  top: 5em;
+
+  @media ${max.desktop} {
+    transform: scale(0.9);
+    left: 22em;
+  }
 
   @media ${max.tablet} {
-    width: 25%;
-    top: -5em;
-    right: 12em;
-  }
-
-  @media ${min.desktop} {
-    top: 2em;
-  }
-
-  @media ${min.tablet} {
-    padding-left: 2.5em;
-    width: 20%;
-    left: 30em;
-    top: 12em;
+    transform: scale(0.56);
+    left: 40vw;
+    top: -9.5em;
   }
 
   @media ${max.tabletSm} {
-    width: 25%;
-    top: -3em;
-    right: 9em;
-  }
-
-  @media ${max.mobile} {
-    width: 40%;
-    left: 6.5em;
-    top: -4.5em;
-  }
-
-  @media ${min.desktopLg} {
-    width: 16%;
-    top: 7em;
+    transform: scale(0.4);
+    left: 15vw;
+    top: -9.5em;
   }
 `;
 
 const StyledPirateFlagGroup = styled.img`
-  width: 12%;
   position: absolute;
-  top: 3em;
 
-  @media ${min.desktop} {
-    top: -4em;
-  }
-
+  //above 768
   @media ${min.tablet} {
-    left: 1em;
-    top: 5.5em;
+    width: 10em;
+    top: 0em;
+    left: 4em;
   }
 
+  //below 1280
+   @media ${max.desktop} {
+    width: 10em;
+    left: 4em;
+    top: 0em;
+   }
+
+   //below 768
   @media ${max.tablet} {
-    top: -7em;
-    left: -1em;
-    padding-left: 3em;
+    //position: relative;
+    width: 5em;
+    top: -8em;
+    left: 2em;
   }
 
-  @media ${min.tabletLg} {
-    top: 2em;
-  }
+  //below 768
+  // @media ${max.tablet} {
+  //   position: relative;
+  //   width: 15em;
+  //   top: 9em;
+  //   left: 22em;
+  // }
 
-  @media ${max.tabletSm} {
-    width: 15%;
-    top: -7em;
-    right: 8em;
-  }
-
-  @media ${max.tabletXs} {
-    width: 15%;
-    top: -6em;
-    right: 8em;
-  }
-
+  //below 320
   @media ${max.mobile} {
-    width: 20%;
-    left: -1.5em;
-    top: -6em;
-  }
-
-  @media ${min.desktopLg} {
-    width: 9%;
-    top: 2em;
+    width: 5em;
+    top: -8em;
+    left: 2em;
   }
 `;
 
