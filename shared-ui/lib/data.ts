@@ -21,10 +21,45 @@ import Luke from '../../shared-ui/images/meet-the-team/luke.png';
 import Mandy from "../../shared-ui/images/meet-the-team/mandy.png";
 import Mike from "../../shared-ui/images/meet-the-team/mike.png";
 import Nelson from "../../shared-ui/images/meet-the-team/nelson.png";
-import Nidhi from "../../shared-ui/images/meet-the-team/nidhi.png";
+import NidhiP from "../../shared-ui/images/meet-the-team/nidhi_p.png";
 import Onotina from "../../shared-ui/images/meet-the-team/onotina.png";
 import Spencer from "../../shared-ui/images/meet-the-team/spencer.png";
 import Surbhi from '../../shared-ui/images/meet-the-team/surbhi.png';
+import Alex from '../../shared-ui/images/meet-the-team/alex.png';
+import Alina from '../../shared-ui/images/meet-the-team/alina.png';
+import Yumiko from '../../shared-ui/images/meet-the-team/yumiko.png';
+import Ally from '../../shared-ui/images/meet-the-team/alexandra.png';
+import Carrie from '../../shared-ui/images/meet-the-team/carrie.png';
+import Zahra from '../../shared-ui/images/meet-the-team/Zahra.png';
+import NidhiB from '../../shared-ui/images/meet-the-team/nidhi_b.png';
+import Trisha from '../../shared-ui/images/meet-the-team/trisha.png';
+import Megan from '../../shared-ui/images/meet-the-team/megan.png';
+import Sammi from '../../shared-ui/images/meet-the-team/sammi.png';
+import Amy from '../../shared-ui/images/meet-the-team/amy.png';
+import Isabella from '../../shared-ui/images/meet-the-team/isabella.png';
+import Harini from '../../shared-ui/images/meet-the-team/harini.png';
+import Zoe from '../../shared-ui/images/meet-the-team/zoe.png';
+import Annabelle from '../../shared-ui/images/meet-the-team/annabelle.png';
+import Nicole from '../../shared-ui/images/meet-the-team/nicole.png';
+import Swar from '../../shared-ui/images/meet-the-team/swar.png';
+import Rachel from '../../shared-ui/images/meet-the-team/rachel.png';
+import Tiffany from '../../shared-ui/images/meet-the-team/tiffany.png';
+import Steven from '../../shared-ui/images/meet-the-team/steven.png';
+import Jalen from '../../shared-ui/images/meet-the-team/jalen.png';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const team: Team = {
@@ -32,7 +67,8 @@ const team: Team = {
   tech: 'Tech',
   design: 'Design',
   socialOutreach: 'Social Outreach',
-  sponsorship: 'Sponsorship'
+  sponsorship: 'Sponsorship',
+  operations: "Operations"
 };
 
 const mainSiteTabInfo: TabInfo[] = [
@@ -259,8 +295,8 @@ const emma: Person = {
   linkedIn: 'https://www.linkedin.com/in/ervb/'
 };
 
-const nidhi: Person = {
-  picture: Nidhi,
+const nidhi_p: Person = {
+  picture: NidhiP,
   name: 'Nidhi Pillai',
   year: '3rd',
   major: 'DS',
@@ -295,6 +331,196 @@ const john: Person = {
   linkedIn: 'https://www.linkedin.com/in/john--sargent/'
 };
 
+// NEW PPL
+
+const alex: Person = {
+  picture: Alex,
+  name: 'Alexander Chen',
+  year: '3rd',
+  major: 'Data Science',
+  pronouns: 'pronouns: he/him',
+  linkedIn: 'https://www.linkedin.com/in/alexchen04/'
+};
+
+const alina: Person = {
+  picture: Alina,
+  name: 'Alina Gonzalez',
+  year: '3rd',
+  major: 'Data Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://linkedin.com/in/agonzalez26'
+};
+
+const yumiko: Person = {
+  picture: Yumiko,
+  name: 'Yumiko Chow',
+  year: '2nd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/yumiko-chow/'
+};
+
+const ally: Person = {
+  picture: Ally,
+  name: 'Alexandra (Ally) Hu',
+  year: '2nd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/alexandra-hu/'
+};
+
+const carrie: Person = {
+  picture: Carrie,
+  name: 'Carrie Wang',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/carrie-wang-/'
+};
+
+const zahra: Person = {
+  picture: Zahra,
+  name: 'Zahra Wibisana',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/zahra-wibisana-0b0bb2222/'
+};
+
+const nidhi_b: Person = {
+  picture: NidhiB,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const trisha: Person = {
+  picture: Trisha,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const megan: Person = {
+  picture: Megan,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const sammi: Person = {
+  picture: Sammi,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const ami: Person = {
+  picture: Amy,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const isabella: Person = {
+  picture: Isabella,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const harini: Person = {
+  picture: Harini,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const zoe: Person = {
+  picture: Zoe,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const annabelle: Person = {
+  picture: Annabelle,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const nicole: Person = {
+  picture: Nicole,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const swar: Person = {
+  picture: Swar,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const rachel: Person = {
+  picture: Rachel,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const tiffany: Person = {
+  picture: Tiffany,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const steven: Person = {
+  picture: Steven,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
+
+const jalen: Person = {
+  picture: Jalen,
+  name: 'Nidhi Bendre',
+  year: '2rd',
+  major: 'Computer Science',
+  pronouns: 'pronouns: she/her',
+  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+};
 
 
 
@@ -317,7 +543,7 @@ const designPictures: Person[][] = [
 const socialOutreachPictures: Person[][] = [
   [bayden],
   [jessYu, lucas],
-  [emma, nidhi]
+  [emma, nidhi_p]
 ];
 
 const sponsorshipPictures: Person[][] = [
@@ -332,7 +558,8 @@ const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Tech', listOfPictures: techPictures },
   { teamLabel: 'Design', listOfPictures: designPictures },
   { teamLabel: 'Social Outreach', listOfPictures: socialOutreachPictures },
-  { teamLabel: 'Sponsorship', listOfPictures: sponsorshipPictures }
+  { teamLabel: 'Sponsorship', listOfPictures: sponsorshipPictures },
+  {teamLabel: "Operations", listOfPictures: sponsorshipPictures}
 ];
 
 export { mainSiteTabInfo, mainSiteTabInfoFooter, mainSiteTabInfoFooterSecondary, teamInfo, team };

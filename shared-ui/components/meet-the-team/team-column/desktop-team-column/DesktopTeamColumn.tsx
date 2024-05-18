@@ -12,6 +12,9 @@ import { H4 } from '../../../../style/typography';
 
 const DesktopTeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
   const listOfPictures: Person[][] = columnInfo.listOfPictures; // data for each team
+  // testing
+  console.log("List of Pictures:", listOfPictures);
+
   return (
     <StyledTeamColumn>
       <H4 style={{fontSize: '1.2em'}}>{columnInfo.teamLabel}</H4>
