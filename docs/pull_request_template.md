@@ -1,6 +1,6 @@
 # <Summary line - One sentence describing your intended set of changes>
 
-## 🎫 Ticket #<bug number>.
+## 🎫 Issue #<bug number>.
 
 ### ▶ Changelist:
 
