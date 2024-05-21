@@ -355,25 +355,25 @@ const yumiko: Person = {
   picture: Yumiko,
   name: 'Yumiko Chow',
   year: '2nd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
+  major: 'Computer Science and Design',
+  pronouns: 'pronouns: ',
   linkedIn: 'https://www.linkedin.com/in/yumiko-chow/'
 };
 
 const ally: Person = {
   picture: Ally,
-  name: 'Alexandra (Ally) Hu',
+  name: 'Alexandra Hu',
   year: '2nd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
+  major: '',
+  pronouns: 'pronouns: ',
   linkedIn: 'https://www.linkedin.com/in/alexandra-hu/'
 };
 
 const carrie: Person = {
   picture: Carrie,
   name: 'Carrie Wang',
-  year: '2rd',
-  major: 'Computer Science',
+  year: '2nd',
+  major: '',
   pronouns: 'pronouns: she/her',
   linkedIn: 'https://www.linkedin.com/in/carrie-wang-/'
 };
@@ -381,177 +381,185 @@ const carrie: Person = {
 const zahra: Person = {
   picture: Zahra,
   name: 'Zahra Wibisana',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
   linkedIn: 'https://www.linkedin.com/in/zahra-wibisana-0b0bb2222/'
 };
 
 const nidhi_b: Person = {
   picture: NidhiB,
   name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
   linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
 };
 
 const trisha: Person = {
   picture: Trisha,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
+  name: 'Trisha',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
   linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
 };
 
 const megan: Person = {
   picture: Megan,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Megan Lai',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/meganplai/'
 };
 
 const sammi: Person = {
   picture: Sammi,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Sammi Chen',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'www.linkedin.com/in/chensammi '
 };
 
 const ami: Person = {
   picture: Amy,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Amy Wang',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/amy-wang-17b526248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
 };
 
 const isabella: Person = {
   picture: Isabella,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Isabella Borda',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/isabella-borda-03537b306/'
 };
 
 const harini: Person = {
   picture: Harini,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Harini Avula',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/harini-avula/'
 };
 
 const zoe: Person = {
   picture: Zoe,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Zoe gao',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/zoe-gao-khoury/'
 };
 
 const annabelle: Person = {
   picture: Annabelle,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Annabelle Chung',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/annabelle-c-2ba49327b/'
 };
 
 const nicole: Person = {
   picture: Nicole,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Nicole Ni',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/nicole-ni-37718b307'
 };
 
 const swar: Person = {
   picture: Swar,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Swar Kewelia',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/swar-kewalia-271a19292'
 };
 
 const rachel: Person = {
   picture: Rachel,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Rachel Pao',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/rachelpaocyber/'
 };
 
 const tiffany: Person = {
   picture: Tiffany,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Tiffany Zheng',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'https://www.linkedin.com/in/tiff-zheng'
 };
 
 const steven: Person = {
   picture: Steven,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Steven',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: ''
 };
 
 const jalen: Person = {
   picture: Jalen,
-  name: 'Nidhi Bendre',
-  year: '2rd',
-  major: 'Computer Science',
-  pronouns: 'pronouns: she/her',
-  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
+  name: 'Jalen Wu',
+  year: '2nd',
+  major: '',
+  pronouns: 'pronouns: ',
+  linkedIn: 'www.linkedin.com/in/jalen-wu'
 };
 
 
 
-const directorsPictures: Person[][] = [[spencer, dhivas]];
+const directorsPictures: Person[][] = [[mike, lisa]];
 
 const techPictures: Person[][] = [
-  [mike],
-  [nelson, alyssa],
-  [mandy, john],
-  [aaryan, katherine]
+  [john],
+  [nelson, amanda],
+  [aaryan, lucas],
+  [crystal, aretha],
+  [alex, yumiko],
+  [alina]
 ];
 
 const designPictures: Person[][] = [
-  [amanda],
-  [audrey, helen],
-  [aretha, onotina],
-  [crystal]
+  [audrey],
+  [zahra, trisha],
+  [isabella, annabelle]
 ];
 
 const socialOutreachPictures: Person[][] = [
-  [bayden],
-  [jessYu, lucas],
-  [emma, nidhi_p]
+  [emma],
+  [nidhi_b, megan],
+  [carrie, nicole]
 ];
 
 const sponsorshipPictures: Person[][] = [
-  [jessSu],
-  [karyna, surbhi],
-  [karen, lisa],
-  [luke]
+  [luke],
+  [nidhi_p, sammi],
+  [harini, swar],
+  [tiffany]
 ];
+
+const operationsPictures: Person[][] = [
+  [katherine],
+  [ally, ami], 
+  [zoe, rachel],
+  [steven, jalen]
+]
 
 const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Directors', listOfPictures: directorsPictures },
@@ -559,7 +567,7 @@ const teamInfo: TeamColumnInfo[] = [
   { teamLabel: 'Design', listOfPictures: designPictures },
   { teamLabel: 'Social Outreach', listOfPictures: socialOutreachPictures },
   { teamLabel: 'Sponsorship', listOfPictures: sponsorshipPictures },
-  {teamLabel: "Operations", listOfPictures: sponsorshipPictures}
+  {teamLabel: "Operations", listOfPictures: operationsPictures}
 ];
 
 export { mainSiteTabInfo, mainSiteTabInfoFooter, mainSiteTabInfoFooterSecondary, teamInfo, team };
