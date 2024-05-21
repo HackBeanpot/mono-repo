@@ -54,37 +54,37 @@ export const aboutSectionData: AboutSectionData[] = [
 export const FaqSectionData: FaqData[] = [
   {
     id: 1,
-    question: 'When and where is HackBeanpot 2024?',
+    question: 'When and where is HackBeanpot 2025?',
     answer:
-      'HackBeanpot 2024 will take place on February 23rd-25th at Wood Mackenzie. The address is 179 Lincoln Street, Boston MA 02111'
+      'The location and date for HackBeanpot 2025 are currently TBD!'
   },
 
   {
     id: 2,
-    question: 'Will HackBeanpot 2024 be in-person or virtual?',
+    question: 'Will HackBeanpot 2025 be in-person or virtual?',
     answer:
-      'HackBeanpot 2024 will be in-person! We’re super excited to see everyone in person again!'
+      'HackBeanpot 2025 will be in-person! We’re super excited to see everyone in person again!'
   },
 
   {
     id: 3,
     question: 'How long is the event?',
     answer:
-      'The event will start on Friday, February 23rd at 6pm EST, and will lead into the weekend, continuing until 1:45 EST on Sunday.'
+      'The event will start on a Friday and will continue until midday Sunday.'
   },
 
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
     answer:
-      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+      'Applications are not currently open for HackBeanpot 2025, but when applications open, hackers can apply through our application portal at apply.hackbeanpot.com!'
   },
 
   {
     id: 5,
     question: 'What kind of projects can I work on?',
     answer:
-      'The ocean is yours to explore! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
+      'We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
   },
 
   {
