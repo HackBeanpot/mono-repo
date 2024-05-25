@@ -6,6 +6,7 @@ const StyledAboutSectionContainer = styled.div`
   margin-top: 10em;
   position: relative;
   overflow: hidden;
+  padding-bottom: 11em;
   @media ${min.tablet} {
     margin-top: 10em;
   }
