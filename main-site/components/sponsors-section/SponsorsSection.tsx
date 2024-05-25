@@ -52,6 +52,7 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
   }
 
   return (
+    <div id='sponsors'>
     <StyledSponsorsSectionContainer>
       <StyledSponsorsHeader>2024 Sponsors</StyledSponsorsHeader>
       {!isDesktop && (
@@ -123,6 +124,7 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ isDay }) => {
         <StyledFish2 src={fish2} />
       </StyledContactContainer>
     </StyledSponsorsSectionContainer>
+    </div>
   );
 };
 
