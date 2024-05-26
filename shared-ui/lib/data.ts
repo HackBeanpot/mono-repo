@@ -1,18 +1,10 @@
 import { Person, TabInfo, Team, TeamColumnInfo } from './types';
 import Aaryan from "../../shared-ui/images/meet-the-team/aaryan.png"
-import Alyssa from "../../shared-ui/images/meet-the-team/alyssa.png";
 import Aretha from "../../shared-ui/images/meet-the-team/aretha.png";
 import Audrey from "../../shared-ui/images/meet-the-team/audrey.png";
-import Bayden from "../../shared-ui/images/meet-the-team/bayden.png";
 import Crystal from "../../shared-ui/images/meet-the-team/crystal.png";
-import Dhivas from "../../shared-ui/images/meet-the-team/dhivas.png";
 import Emma from "../../shared-ui/images/meet-the-team/emma.png";
-import Helen from "../../shared-ui/images/meet-the-team/helen.png";
-import JessSu from "../../shared-ui/images/meet-the-team/jessSu.png";
-import JessYu from "../../shared-ui/images/meet-the-team/jessYu.png";
-import John from "../../shared-ui/images/meet-the-team/john.png";
-import Karen from "../../shared-ui/images/meet-the-team/karen.png";
-import Karyna from "../../shared-ui/images/meet-the-team/karyna.png";
+import John from "../../shared-ui/images/meet-the-team/johny.png";
 import Katherine from "../../shared-ui/images/meet-the-team/katherine.png";
 import Lisa from "../../shared-ui/images/meet-the-team/lisa.png";
 import Lucas from "../../shared-ui/images/meet-the-team/lucas.png";
@@ -20,17 +12,14 @@ import Luke from '../../shared-ui/images/meet-the-team/luke.png';
 import Mandy from "../../shared-ui/images/meet-the-team/mandy.png";
 import Mike from "../../shared-ui/images/meet-the-team/mike.png";
 import Nelson from "../../shared-ui/images/meet-the-team/nelson.png";
-import NidhiP from "../../shared-ui/images/meet-the-team/nidhi_p.png";
-import Onotina from "../../shared-ui/images/meet-the-team/onotina.png";
-import Spencer from "../../shared-ui/images/meet-the-team/spencer.png";
-import Surbhi from '../../shared-ui/images/meet-the-team/surbhi.png';
+import NidhiP from "../../shared-ui/images/meet-the-team/nidhiP.png";
 import Alex from '../../shared-ui/images/meet-the-team/alex.png';
 import Alina from '../../shared-ui/images/meet-the-team/alina.png';
 import Yumiko from '../../shared-ui/images/meet-the-team/yumiko.png';
 import Ally from '../../shared-ui/images/meet-the-team/alexandra.png';
 import Carrie from '../../shared-ui/images/meet-the-team/carrie.png';
-import Zahra from '../../shared-ui/images/meet-the-team/Zahra.png';
-import NidhiB from '../../shared-ui/images/meet-the-team/nidhi_b.png';
+import Zahra from '../../shared-ui/images/meet-the-team/zahra.png';
+import NidhiB from '../../shared-ui/images/meet-the-team/nidhiB.png';
 import Trisha from '../../shared-ui/images/meet-the-team/trisha.png';
 import Megan from '../../shared-ui/images/meet-the-team/megan.png';
 import Sammi from '../../shared-ui/images/meet-the-team/sammi.png';
@@ -45,37 +34,6 @@ import Rachel from '../../shared-ui/images/meet-the-team/rachel.png';
 import Tiffany from '../../shared-ui/images/meet-the-team/tiffany.png';
 import Steven from '../../shared-ui/images/meet-the-team/steven.png';
 import Jalen from '../../shared-ui/images/meet-the-team/jalen.png';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const team: Team = {
  directors: 'Directors',
@@ -114,16 +72,6 @@ const mainSiteTabInfoFooterSecondary: TabInfo[] = [
 ];
 
 
-const surbhi: Person = {
- picture: Surbhi,
- name: 'Surbhi Gulati',
- year: '4th',
- major: 'CS',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/surbhigulati/',
-};
-
-
 const mike: Person = {
  picture: Mike,
  name: 'Mike Mundia',
@@ -133,17 +81,6 @@ const mike: Person = {
  linkedIn: 'https://www.linkedin.com/in/michael-mundia/'
 };
 
-
-const dhivas: Person = {
- picture: Dhivas,
- name: 'Dhivas Sugumar',
- year: '4th',
- major: 'CS',
- pronouns: 'pronouns: he/him',
- linkedIn: 'https://www.linkedin.com/in/dhivas-sugumar/'
-};
-
-
 const lisa: Person = {
  picture: Lisa,
  name: 'Lisa Jiang',
@@ -152,72 +89,6 @@ const lisa: Person = {
  pronouns: 'pronouns: she/her',
  linkedIn: 'https://www.linkedin.com/in/haiyijiang/'
 };
-
-
-const spencer: Person = {
- picture: Spencer,
- name: 'Spencer Shao',
- year: '4th',
- major: 'CS + Music Tech',
- pronouns: 'pronouns: he/him',
- linkedIn: 'https://www.linkedin.com/in/spencer-shao/'
-};
-
-
-
-
-const onotina: Person = {
- picture: Onotina,
- name: 'Onotina Imoudu',
- year: '3rd',
- major: 'CS + Business',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/onotina-imoudu/'
-};
-
-
-const bayden: Person = {
- picture: Bayden,
- name: 'Bayden Ibrahim',
- year: '5th',
- major: 'CS + Cogn Psych',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/bayden/'
-};
-
-
-const jessSu: Person = {
- picture: JessSu,
- name: 'Jessica Su',
- year: '4th',
- major: 'CS',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/jesssu/'
-};
-
-
-const karyna: Person = {
- picture: Karyna,
- name: 'Karyna Yen',
- year: '3rd',
- major: 'CS',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/karynayen/'
-};
-
-
-const karen: Person = {
- picture: Karen,
- name: 'Karen Li',
- year: '4th',
- major: 'CS',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/karen-x-li/'
-};
-
-
-// NEW MEMBERS
-
 
 const nelson: Person = {
  picture: Nelson,
@@ -248,37 +119,6 @@ const aaryan: Person = {
  linkedIn: 'https://www.linkedin.com/in/aaryanja'
 };
 
-
-const alyssa: Person = {
- picture: Alyssa,
- name: 'Alyssa Mui',
- year: '4th',
- major: 'CS',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/alyssamui'
-};
-
-
-const helen: Person = {
- picture: Helen,
- name: 'Helen Miao',
- year: '3rd',
- major: 'CS + Design',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/helen-miao/'
-};
-
-
-const jessYu: Person = {
- picture: JessYu,
- name: 'Jessica Yu',
- year: '4th',
- major: 'CS + Math',
- pronouns: 'pronouns: she/her',
- linkedIn: 'https://www.linkedin.com/in/jessicayu62/'
-};
-
-
 const aretha: Person = {
  picture: Aretha,
  name: 'Aretha Chen',
@@ -287,7 +127,6 @@ const aretha: Person = {
  pronouns: 'pronouns: she/her',
  linkedIn: 'https://www.linkedin.com/in/aretha-chen'
 };
-
 
 const katherine: Person = {
  picture: Katherine,
@@ -298,7 +137,6 @@ const katherine: Person = {
  linkedIn: 'https://www.linkedin.com/in/k-zeng/'
 };
 
-
 const crystal: Person = {
  picture: Crystal,
  name: 'Crystal Zhang',
@@ -307,7 +145,6 @@ const crystal: Person = {
  pronouns: 'pronouns: she/her',
  linkedIn: 'https://www.linkedin.com/in/cryystalzhang/'
 };
-
 
 const mandy: Person = {
  picture: Mandy,
@@ -318,7 +155,6 @@ const mandy: Person = {
  linkedIn: 'https://www.linkedin.com/in/amanda-rodriques-725613217/'
 };
 
-
 const emma: Person = {
  picture: Emma,
  name: 'Emma Vonbuelow',
@@ -327,7 +163,6 @@ const emma: Person = {
  pronouns: 'pronouns: she/her',
  linkedIn: 'https://www.linkedin.com/in/ervb/'
 };
-
 
 const nidhi_p: Person = {
  picture: NidhiP,
@@ -338,7 +173,6 @@ const nidhi_p: Person = {
  linkedIn: 'https://www.linkedin.com/in/nidhi-pillai-074a27180/'
 };
 
-
 const luke: Person = {
  picture: Luke,
  name: 'Luke Steimel',
@@ -347,7 +181,6 @@ const luke: Person = {
  pronouns: 'pronouns: he/him',
  linkedIn: 'https://linkedin.com/in/luke-steimel'
 };
-
 
 const audrey: Person = {
  picture: Audrey,
@@ -358,7 +191,6 @@ const audrey: Person = {
  linkedIn: 'https://www.linkedin.com/in/wong-audrey/'
 };
 
-
 const john: Person = {
  picture: John,
  name: 'John Sargent',
@@ -367,10 +199,6 @@ const john: Person = {
  pronouns: 'pronouns: he/him',
  linkedIn: 'https://www.linkedin.com/in/john--sargent/'
 };
-
-
-// NEW PPL
-
 
 const alex: Person = {
  picture: Alex,
@@ -381,7 +209,6 @@ const alex: Person = {
  linkedIn: 'https://www.linkedin.com/in/alexchen04/'
 };
 
-
 const alina: Person = {
  picture: Alina,
  name: 'Alina Gonzalez',
@@ -390,7 +217,6 @@ const alina: Person = {
  pronouns: 'pronouns: she/her',
  linkedIn: 'https://linkedin.com/in/agonzalez26'
 };
-
 
 const yumiko: Person = {
  picture: Yumiko,
@@ -401,7 +227,6 @@ const yumiko: Person = {
  linkedIn: 'https://www.linkedin.com/in/yumiko-chow/'
 };
 
-
 const ally: Person = {
  picture: Ally,
  name: 'Alexandra Hu',
@@ -410,7 +235,6 @@ const ally: Person = {
  pronouns: 'pronouns: ',
  linkedIn: 'https://www.linkedin.com/in/alexandra-hu/'
 };
-
 
 const carrie: Person = {
  picture: Carrie,
@@ -421,7 +245,6 @@ const carrie: Person = {
  linkedIn: 'https://www.linkedin.com/in/carrie-wang-/'
 };
 
-
 const zahra: Person = {
  picture: Zahra,
  name: 'Zahra Wibisana',
@@ -430,7 +253,6 @@ const zahra: Person = {
  pronouns: 'pronouns: ',
  linkedIn: 'https://www.linkedin.com/in/zahra-wibisana-0b0bb2222/'
 };
-
 
 const nidhi_b: Person = {
  picture: NidhiB,
@@ -441,7 +263,6 @@ const nidhi_b: Person = {
  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
 };
 
-
 const trisha: Person = {
  picture: Trisha,
  name: 'Trisha',
@@ -450,7 +271,6 @@ const trisha: Person = {
  pronouns: 'pronouns: ',
  linkedIn: 'https://www.linkedin.com/in/nidhi-bendre-928423218/ '
 };
-
 
 const megan: Person = {
  picture: Megan,
@@ -461,7 +281,6 @@ const megan: Person = {
  linkedIn: 'https://www.linkedin.com/in/meganplai/'
 };
 
-
 const sammi: Person = {
  picture: Sammi,
  name: 'Sammi Chen',
@@ -470,7 +289,6 @@ const sammi: Person = {
  pronouns: 'pronouns: ',
  linkedIn: 'www.linkedin.com/in/chensammi '
 };
-
 
 const ami: Person = {
  picture: Amy,
@@ -581,13 +399,7 @@ const jalen: Person = {
  linkedIn: 'www.linkedin.com/in/jalen-wu'
 };
 
-
-
-
-
-
 const directorsPictures: Person[][] = [[mike, lisa]];
-
 
 const techPictures: Person[][] = [
  [john],
@@ -598,20 +410,17 @@ const techPictures: Person[][] = [
  [alina]
 ];
 
-
 const designPictures: Person[][] = [
  [audrey],
  [zahra, trisha],
  [isabella, annabelle]
 ];
 
-
 const socialOutreachPictures: Person[][] = [
  [emma],
  [nidhi_b, megan],
  [carrie, nicole]
 ];
-
 
 const sponsorshipPictures: Person[][] = [
  [luke],
@@ -620,14 +429,12 @@ const sponsorshipPictures: Person[][] = [
  [tiffany]
 ];
 
-
 const operationsPictures: Person[][] = [
  [katherine],
  [ally, ami],
  [zoe, rachel],
  [steven, jalen]
 ]
-
 
 const teamInfo: TeamColumnInfo[] = [
  { teamLabel: 'Directors', listOfPictures: directorsPictures },
