@@ -6,8 +6,7 @@ import {
   StyledTestimonialCardAuthor,
   StyledTestimonialCardImage,
   StyledTestimonialCardQuote,
-  StyledTestimonialCardYearCompany,
-  StyledTestimonialTextWrapper
+  StyledTestimonialCardYearCompany
 } from './TestimonialCard.styles';
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
