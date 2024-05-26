@@ -20,7 +20,7 @@ const StyledTestimonialsLeftContainer = styled.div`
   justify-content: left;
   position: absolute;
   left: -10em;
-  @media (max-width: 1100px) {
+  @media (max-width: 1150px) {
     left: -15em;
   }
   @media ${max.tabletLg} {
@@ -33,13 +33,16 @@ const StyledTestimonialsLeftContainer = styled.div`
     left: -20em;
   }
   opacity: ${(props): string => (props.isSponsor) ? 0.4 : 1.0};
+  @media (max-width: 830px) {
+    left: -22em;
+  }
 `;
 
 const StyledTestimonialsRightContainer = styled.div`
   justify-content: right;
   position: absolute;
   right: -10em;
-  @media (max-width: 1100px) {
+  @media (max-width: 1150px) {
     right: -15em;
   }
   @media ${max.tabletLg} {
@@ -52,8 +55,10 @@ const StyledTestimonialsRightContainer = styled.div`
     right: -20em;
   }
   opacity: ${(props): string => (props.isSponsor) ? 0.4 : 1.0};
+  @media (max-width: 830px) {
+    right: -22em;
+  }
 `;
-
 
 const StyledButtonNumberContainer = styled.div`
   display: inline-block;
@@ -65,7 +70,7 @@ const StyledArrowsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 15em;
+  gap: 25em;
   @media ${max.tabletSm} {
     margin-top: 1em;
     gap: 10em;

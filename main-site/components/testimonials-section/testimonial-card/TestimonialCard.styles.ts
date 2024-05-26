@@ -66,6 +66,7 @@ const StyledTestimonialCardYearCompany = styled(
   text-align: ${(props): string => (props.isSponsor) ? 'center': 'left'};
   margin-bottom: 0.4em;
   font-family: ${fonts.nunitoRegular};
+  text-align: ${(props): string => (props.isSponsor ? 'center' : '')};
 `;
 
 const StyledTestimonialTextWrapper = styled.div<StyledTestimonialCardAuthorYearImageProps>`
@@ -83,6 +84,7 @@ const StyledTestimonialCardQuote = styled(P)<StyledTestimonialCardQuoteProps>`
   color: ${(props): string => (props.isSponsor ? '#193C60' : colors.WHITE)};
   text-align: ${(props): string => (props.isSponsor) ? 'center': 'left'};
   margin-top: ${(props): string => (props.isSponsor ? '2em' : '0em')};
+  text-align: ${(props): string => (props.isSponsor ? 'center' : '')};
 `;
 
 const StyledTestimonialButtons = styled.div`

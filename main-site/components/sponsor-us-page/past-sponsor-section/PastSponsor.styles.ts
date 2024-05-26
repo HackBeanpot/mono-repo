@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { min } from '../../../../shared-ui/lib/responsive';
+import { min, max } from '../../../../shared-ui/lib/responsive';
 import { fonts, P } from '../../../../shared-ui/style/typography';
 import { colors } from '../../../../shared-ui/style/colors';
 
@@ -10,14 +10,13 @@ const StyledPastSponsorsContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 10em;
-  margin: 0em;
 
   @media ${min.mobile} {
-    margin: 0em;
+    margin: 5em 0 0 0;
     width: 100%;
   }
   @media ${min.tabletSm} {
-    margin-top: 24em;
+    margin-top: 10em;
   }
   @media ${min.tablet} {
     margin-top: 4em;
@@ -99,6 +98,11 @@ const StyledCenterImage = styled.img`
 const StyledButtonContainer = styled.div`
   margin-top: 2em;
   text-align: left;
+
+  @media ${max.mobile} {
+    width: 16em;
+  }
+
 `;
 
 const StyledFishGroup = styled.img`

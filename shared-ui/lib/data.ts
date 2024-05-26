@@ -42,7 +42,7 @@ const mainSiteTabInfo: TabInfo[] = [
   { name: 'FAQ', link: '/#faq' },
   { name: 'Sponsors', link: '/#sponsors' },
   { name: 'Team', link: '/#team' },
-  { name: 'Sponsor Us', link: 'https://drive.google.com/file/d/17hO3lgm_XYCrxd066B-AXIfq8gBnu8aE/view', newTab: true },
+  { name: 'Sponsor Us', link: 'https://drive.google.com/file/d/1G1qBIdoTtaCFI3E38ZYA1cVJSECSwMot/view', newTab: true },
   { name: 'Apply', link: 'https://apply.hackbeanpot.com', newTab: true },
 ];
 

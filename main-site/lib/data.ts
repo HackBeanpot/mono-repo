@@ -7,12 +7,15 @@ import {
   CountdownProps
 } from './types';
 
-import WiseWallet from '../images/WiseWalletImage.jpg';
-import SNAPpy from '../images/snappyImage2.jpg';
-import Page14 from '../images/Page14Image.jpg';
-import FreshFarm from '../images/FreshFarmImage.jpg';
-import FormFusion from '../images/FormFusionImage.jpg';
-import FeedTheDesert from '../images/FeedTheDesertImage.jpg';
+import ClosetCompanion from '../images/closet_companion.png';
+import DiscountBytes from '../images/discount_bytes.png';
+import FindingFishE from '../images/finding_fishe.jpg';
+import LastMinute from '../images/last_minute.png';
+import Maritime from '../images/maritime.jpeg';
+import LetsLink from '../images/lets_link.jpeg';
+import Futura from '../images/futura.png';
+import Poqua from '../images/poqua.jpg';
+import PerfectPantry from '../images/the_perfect_pantry.jpg';
 import karyna from '../../shared-ui/images/Karyna.png';
 import jimin from '../../shared-ui/images/Jimin.png';
 import spencer2 from '../../shared-ui/images/spencer2.png';
@@ -51,37 +54,37 @@ export const aboutSectionData: AboutSectionData[] = [
 export const FaqSectionData: FaqData[] = [
   {
     id: 1,
-    question: 'When and where is HackBeanpot 2024?',
+    question: 'When and where is HackBeanpot 2025?',
     answer:
-      'HackBeanpot 2024 will take place on February 23rd-25th at Wood Mackenzie. The address is 179 Lincoln Street, Boston MA 02111'
+      'The location and date for HackBeanpot 2025 are currently TBD!'
   },
 
   {
     id: 2,
-    question: 'Will HackBeanpot 2024 be in-person or virtual?',
+    question: 'Will HackBeanpot 2025 be in-person or virtual?',
     answer:
-      'HackBeanpot 2024 will be in-person! We’re super excited to see everyone in person again!'
+      'HackBeanpot 2025 will be in-person! We’re super excited to see everyone in person again!'
   },
 
   {
     id: 3,
     question: 'How long is the event?',
     answer:
-      'The event will start on Friday, February 23rd at 6pm EST, and will lead into the weekend, continuing until 1:45 EST on Sunday.'
+      'The event will start on a Friday and will continue until midday Sunday.'
   },
 
   {
     id: 4,
     question: 'How do I apply to attend HackBeanpot?',
     answer:
-      'Apply through our application portal at apply.hackbeanpot.com! Keep an eye in your inbox for acceptance details in mid-January. Applications close January 26th, 2024.'
+      'Applications are not currently open for HackBeanpot 2025, but when applications open, hackers can apply through our application portal at apply.hackbeanpot.com!'
   },
 
   {
     id: 5,
     question: 'What kind of projects can I work on?',
     answer:
-      'The ocean is yours to explore! We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
+      'We encourage you to work on anything you want including websites, mobile apps, data visualizations, games, etc. Our prizes are meant to be very broad so that the direction of your project can be determined by your passions and what you want to learn! Feel free to check out some of our past projects for inspiration. Please note that you are free to work on past projects if you want to, but these will not qualify for prizes as this is unfair to other hackers!'
   },
 
   {
@@ -214,65 +217,103 @@ export const sponsorTestimonialData: TestimonialData[] = [
 
 export const pastProjectsData: PastProjectData[] = [
   {
-    title: 'SNAPpy',
+    title: 'Poqua',
     members:
-      'by Jacob Kline, Andrew Caplan, Daniel Ostapenko, and Emery Jacobowitz',
+      'by Jalen Wu, Caleb Lee, Kyle Sung, Elaine Min, Dewi Kalis',
     description:
-      'Worked on a combination of front-end and backend features by creating API pipelines which connect to the user interface. In addition to Python, utilized JS, which was new for them.',
-    btnLink: 'https://devpost.com/software/snappy-rb81ku',
-    image: SNAPpy,
-    award: '🏆 Fighting the Drought Award'
+      'Poqua is an aquarium tank monitor software application that gives users a platform to simulate their aquarium when away from home.',
+    btnLink: 'https://devpost.com/software/poqua',
+    image: Poqua,
+    award: '🏆 Pirate with the Most Booty - Best Overall'
   },
 
   {
-    title: 'FreshFarm',
-    members: 'by Kat Dizon, Allen Lin, Julia Lee, Daniel Kamen, and Kelly Lau',
-    description:
-      "We get really upset seeing so much food going to waste on campus. This got us to think about how food is being wasted all throughout our community, and not just on the table. This project, FreshFarm, focuses on minimizing food waste right at the source. Fresh produce doesn't grow perfectly, so when grocery stores, markets, and restaurants demand perfect produce, 33% of food goes to waste due to small imperfections.",
-    btnLink: 'https://devpost.com/software/freshfarm',
-    image: FreshFarm,
-    award: '🏆 Best Dunes of the Sahara Award'
-  },
-
-  {
-    title: 'FormFusion',
-    members: 'by Aditya Boddepalli',
-    description:
-      'Our web app leverages the power of AI to analyze and improve your workout routine. Users upload recorded exercise videos, which are processed by the proprietary machine learning API that we wrote. This technology provides instant feedback on form, enabling users to optimize their workouts. The annotated videos, including information about joint angles, are then displayed within the app for easy review and tracking of progress.',
-    btnLink: 'https://devpost.com/software/formfusion',
-    image: FormFusion,
-    award: '🏆 Surviving the Desert Award'
-  },
-
-  {
-    title: 'Page 14',
-    members: 'by Mandy Rodriques',
-    description:
-      'A novel dating app perfectly tailored for our literary-loving folk, focusing on the normalization of "gaga" over books, being blissfully queer, etc Page 14 gives users a safe space to smile.',
-    btnLink: 'https://devpost.com/software/page-14',
-    image: Page14,
-    award: '🏆  Fun in the Sun Award'
-  },
-
-  {
-    title: 'Feed the Desert',
+    title: 'DiscountBytes',
     members:
-      'by Euann Gu, Mallory Gilligan, Chris Wyatt, Danny Rollo, Rachael Cheung and Madeline Zhang',
+      'by Shashwath Sunkum, B D S Aritra, Samuel Steinmetz, Sahil Shah',
     description:
-      'Feed the Desert illustrates a clear, user-friendly data-map highlighting spaces in local communities that can be further developed to provide equitable infrastructure and access to necessary resources.',
-    btnLink: 'https://devpost.com/software/feed-the-desert',
-    image: FeedTheDesert,
-    award: '🏆  Rookie of the Year Award'
+      'DiscountBytes is an advanced web application designed specifically for restaurants, allowing them to dynamically adjust their menu pricing based on real-time customer traffic.',
+    btnLink: 'https://devpost.com/software/discountbytes',
+    image: DiscountBytes,
+    award: '🏆 Silly Sailor - Most Creative / Goofy'
   },
 
   {
-    title: 'WiseWallet',
-    members: 'by Alyssa Mui, Justin Pong, and Nelson Dong',
+    title: 'Last Minute',
+    members:
+      'by Yujin Park, Justin Kim, Emily Ye, Oscar Fang',
     description:
-      'WiseWallet is a budgeting Chrome Extension designed to help you keep track of your expenses and stop making frivolous online purchases.',
-    btnLink: 'https://devpost.com/software/wisewallet-2iqrl8',
-    image: WiseWallet,
-    award: '🏆  Most Likely to Quest Award'
+      'Last Minute allows users to upload pictures of their leftover food, which can then be picked up by anyone in the area who needs a meal at the very last minute.',
+    btnLink: 'https://devpost.com/software/last-minute-1midqp',
+    image: LastMinute,
+    award: '🏆 Hydro Homie - Social Impact / Sustainability'
+  },
+
+  {
+    title: 'Closet Companion',
+    members:
+      'by Krystal Qiao',
+    description:
+      'Effortlessly curate outfits from your wardrobe, tailored to your unique taste. Say goodbye to fashion dilemmas and hello to organized and digital fashion solutions.',
+    btnLink: 'https://devpost.com/software/closet-companion',
+    image: ClosetCompanion,
+    award: '🏆 Splash - Best Beginner'
+  },
+
+  {
+    title: 'Maritime',
+    members:
+      'by Kaylee Wu, Mouad Tiahi, Kenneth Chap, Borui Chen',
+    description:
+      'Maritime is an iOS, Android, and web application that promotes recycling and mitigating waste, specifically in the world\'s oceans.',
+    btnLink: 'https://devpost.com/software/maritime',
+    image: Maritime,
+    award: '🏆 Deep Dive Award - Most Technically Challenging'
+  },
+
+  {
+    title: 'Futura',
+    members:
+      'by Zahra Wibisana, Ange Najam, Sania Hasan, Saidah Ly, Tina Ni',
+    description:
+      'Futura strives to normalize gender-aggregated data. We\'re dedicated to transforming urban planning by highlighting the gender-data gap. We aim to promote gender equality in urban planning and design.',
+    btnLink: 'https://devpost.com/software/maritime',
+    image: Futura,
+    award: '🏆 Heart of the Sea - Best UI/UX'
+  },
+
+  {
+    title: 'Let\'s Link',
+    members:
+      'by Russell Leung, Aahil Nishad, Michael Mehall, Donny Le, Andrew Zhu',
+    description:
+      'We\'re all busy people. Finding times to meet can be hard. Introduce Let\'s Link, all you do is connect your Google Calendar and we\'ll provide the most optimal times for you to meet with friends!',
+    btnLink: 'https://devpost.com/software/maritime',
+    image: LetsLink,
+    award: '🏆 [MLH] Best Use of MongoDB Atlas'
+  },
+
+
+  {
+    title: 'The Perfect Pantry',
+    members:
+      'Ayomide Addey, Arushi Aggarwal',
+    description:
+      'Have you ever looked at an empty pantry and wondered what you could make with such few ingredients? The Perfect Pantry can help you find out!',
+    btnLink: 'https://devpost.com/software/the-perfect-pantry',
+    image: PerfectPantry,
+    award: '🏆 [MLH] Best Domain Name from GoDaddy Registry'
+  },
+
+  {
+    title: 'Finding FishE',
+    members:
+      'by Alina Gonzalez, Alex Chen, Spring Yan, Dao Ho',
+    description:
+      'Finding FishE is a web app designed to help small business owners by providing them with the ability to determine if receipts represent suspicious spending on their company cards.',
+    btnLink: 'https://devpost.com/software/finding-fishe',
+    image: FindingFishE,
+    award: '🏆 [MLH] Best DEI Hack sponsored by Fidelity'
   }
 ];
 
