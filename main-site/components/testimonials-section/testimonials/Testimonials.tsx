@@ -37,7 +37,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
     <div>
       <StyledTestimonialsContainer>
         {
-          <StyledTestimonialsLeftContainer>
+          <StyledTestimonialsLeftContainer isSponsor={isSponsor}>
             <LeftOrRightTestimonialCard
               isSponsor={isSponsor}
               testimonial={getLeftTestimonial}
@@ -92,7 +92,7 @@ const Testimonials: React.FC<TestimonialsSectionProps> = ({
           />
         )}
         {
-          <StyledTestimonialsRightContainer>
+          <StyledTestimonialsRightContainer isSponsor={isSponsor}>
             <LeftOrRightTestimonialCard
               isSponsor={isSponsor}
               testimonial={getRightTestimonial}

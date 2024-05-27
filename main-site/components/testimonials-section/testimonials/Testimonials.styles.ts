@@ -15,6 +15,7 @@ const StyledTestimonialsContainer = styled.div`
 const StyledTestimonialsCenterContainer = styled.div`
   justify-content: center;
 `;
+
 const StyledTestimonialsLeftContainer = styled.div`
   justify-content: left;
   position: absolute;
@@ -31,6 +32,7 @@ const StyledTestimonialsLeftContainer = styled.div`
   @media (max-width: 660px) {
     left: -20em;
   }
+  opacity: ${(props): string => (props.isSponsor) ? 0.4 : 1.0};
   @media (max-width: 830px) {
     left: -22em;
   }
@@ -52,6 +54,7 @@ const StyledTestimonialsRightContainer = styled.div`
   @media (max-width: 660px) {
     right: -20em;
   }
+  opacity: ${(props): string => (props.isSponsor) ? 0.4 : 1.0};
   @media (max-width: 830px) {
     right: -22em;
   }
