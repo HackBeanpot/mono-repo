@@ -6,7 +6,7 @@ import { TeamRaceProps } from '../../lib/types';
 
 const StyledWelcomeSectionContainer = styled.div`
   justify-content: center;
-  margin-left: 1.2em;
+  margin-left: 4em;
   margin-right: 1.3em;
   @media ${max.tabletLg} {
     flex-direction: column;
