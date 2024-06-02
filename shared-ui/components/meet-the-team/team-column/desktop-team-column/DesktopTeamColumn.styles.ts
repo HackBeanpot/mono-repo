@@ -8,9 +8,6 @@ const StyledTeamColumn = styled.div`
   @media ${max.desktop} {
     width: 11em;
   }
-  @media ${max.tabletLg} {
-    width: clamp(9.5em, 20vw, 11em);
-  }
 `;
 
 const StyledHeadshot = styled.img`

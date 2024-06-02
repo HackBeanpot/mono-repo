@@ -62,6 +62,7 @@ export interface Team {
   design: string;
   socialOutreach: string;
   sponsorship: string;
+  operations: string;
 }
 
 export interface StyledToolTipProps {
