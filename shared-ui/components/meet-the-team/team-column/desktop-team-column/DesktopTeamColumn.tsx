@@ -5,16 +5,16 @@ import linkedinLogo from '../../../../components/../images/meet-the-team/linkedi
 import {
   StyledTeamColumn,
   StyledHeadshot,
-  StyledLinkedIn,
-  StyledTeamText
+  StyledLinkedIn
 } from './DesktopTeamColumn.styles';
+import { H4 } from '../../../../style/typography';
 
 const DesktopTeamColumn: React.FC<TeamColumnProps> = ({ columnInfo }) => {
   const listOfPictures: Person[][] = columnInfo.listOfPictures; // data for each team
 
   return (
     <StyledTeamColumn>
-      <StyledTeamText>{columnInfo.teamLabel}</StyledTeamText>
+      <H4 style={{ fontSize: '1.2em' }}>{columnInfo.teamLabel}</H4>
       <div>
         {listOfPictures.map((rowPics: Person[], index) => (
           <div key={`desktop-column-${index}`}>

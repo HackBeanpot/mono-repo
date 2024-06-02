@@ -7,7 +7,7 @@ import DesktopTeamColumn from './desktop-team-column/DesktopTeamColumn';
 import MobileTeamColumn from './mobile-team-column/MobileTeamColumn';
 
 const TeamColumn: React.FC<MobileTeamColumnProps> = ({ listOfColumnInfo }) => {
-  const isDesktop = useMatchMedia(min.tablet);
+  const isDesktop = useMatchMedia(min.tabletLg);
   return (
     <div id="teamColumnInfo">
       {isDesktop && (
