@@ -9,9 +9,20 @@ const StyledTeamColumn = styled.div`
     width: 11em;
   }
   @media ${max.tabletLg} {
-    width: clamp(9.5em, 20vw, 11em);
+    width: 9em;
+  }
+  @media (max-width: 795px) {
+    width: 8em;
   }
 `;
+
+const StyledTeamText = styled.div`
+  font-size: 1.4em;
+  color: white;
+  @media ${max.tabletLg} {
+    font-size: 1.2em;
+  }
+`
 
 const StyledHeadshot = styled.img`
   padding-top: 2em;
@@ -67,4 +78,4 @@ img {
 }
 `
 
-export { StyledTeamColumn, StyledHeadshot, StyledLinkedIn };
+export { StyledTeamColumn, StyledTeamText, StyledHeadshot, StyledLinkedIn };
