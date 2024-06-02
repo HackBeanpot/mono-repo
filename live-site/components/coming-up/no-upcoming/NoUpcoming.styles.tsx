@@ -26,7 +26,7 @@ const NoUpcomingContainer = styled.div`
 const StyledH2 = styled(H2)`
   letter-spacing: 0.01em;
   font-size: 2em;
-  color: ${colors.TEXT_BROWN};
+  color: ${colors.TEXT_BOX_BLUE};
   @media ${max.tablet} {
     font-size: 2em;
   }
