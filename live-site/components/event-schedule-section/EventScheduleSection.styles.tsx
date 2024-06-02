@@ -6,6 +6,7 @@ import { H3, P } from '../../../shared-ui/style/typography';
 const EventScheduleSectionContainer = styled.div`
   margin-left: auto;
   margin-right: 0;
+  padding-bottom: 1em;
 `;
 
 const EventScheduleTextButtonContainer = styled.div`
@@ -36,6 +37,7 @@ const StyledEventScheduleSubText = styled(P)`
     text-align: left;
     font-size: 1em;
     margin: 0 1.5em;
+    padding-bottom: 1em;
   }
 `;
 

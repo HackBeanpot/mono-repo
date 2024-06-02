@@ -70,6 +70,9 @@ const StyledWelcomeSectionContent = styled.div`
     width: 90%;
     margin-left: 4em;
   }
+   @media ${min.mobile} {
+    margin-left: 1em;
+  }
 `;
 
 const StyledWelcomeHeader = styled(H3)`
@@ -91,9 +94,10 @@ color: ${colors.WHITE};
 `;
 
 const StyledButtonContainer = styled.div`
-  margin: 2em 0 0 0;
+  margin: 2em 0 -4em 0;
   @media ${max.tablet} {
     align-self: center;
+    margin: 0 0 3em 0;
   }
 `;
 
