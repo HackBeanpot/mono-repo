@@ -14,8 +14,7 @@ import {
   StyledHackathonText,
   StyledThemeText
 } from '../../../main-site/components/landing-section/LandingSection.styles';
-import SandDay from '../../../shared-ui/images/live-site-landing-section-sand-day.svg';
-import SandNight from '../../../shared-ui/images/live-site-landing-section-sand-night.svg';
+import Sand from '../../../shared-ui/images/live-site-landing-section-sand.svg';
 import Bubble from '../../../shared-ui/images/live-site-bubble-countdown.svg';
 import LeftBubble from '../../../shared-ui/images/live-site-landing-bubbles-left.svg';
 import RightBubble from '../../../shared-ui/images/live-site-landing-bubbles-right.svg';
@@ -31,7 +30,7 @@ const LandingSection: React.FC<LandingSectionProps> = ({ isDay }) => {
       <StyledCountdownBubble src={Bubble} />
       <StyledBubbleLeft src={LeftBubble} />
       <StyledBubbleRight src={RightBubble} />
-      <StyledLandingSectionSand src={isDay ? SandDay : SandNight} />
+      <StyledLandingSectionSand src={Sand} />
     </StyledLandingSectionContainer>
   );
 };
