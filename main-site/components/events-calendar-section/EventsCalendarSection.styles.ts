@@ -9,7 +9,7 @@ const StyledDesktopTextsContainer = styled.div`
 
 const StyledSectionContainer = styled.div`
   padding-top: 5em;
-  padding-bottom: 30em;
+  padding-bottom: 17em;
   @media ${max.tablet} {
     padding-top: 0.6em;
     padding-bottom: 10em;

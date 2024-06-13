@@ -12,7 +12,7 @@ const StyledPastSponsorsContainer = styled.div`
   padding-bottom: 10em;
 
   @media ${min.mobile} {
-    margin: 5em 0 0 0;
+    margin: 4em 0 0 0;
     width: 100%;
   }
   @media ${min.tabletSm} {
