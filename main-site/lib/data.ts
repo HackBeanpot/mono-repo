@@ -366,7 +366,7 @@ export const eventsCalendarData: EventsCalendarData[] = [
 
 export const CountdownData: CountdownProps[] = [
   {
-    targetDate: '2024-02-09T23:59:59Z'
+    targetDate: '2024-11-19T23:59:59Z'
   }
 ];
 
