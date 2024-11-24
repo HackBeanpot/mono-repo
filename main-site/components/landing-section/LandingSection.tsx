@@ -58,14 +58,19 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     return () => clearInterval(timer);
   }, []);
 
+  const getTimeUnit = (value: number, unit: string): string => {
+    return value === 1 ? unit : unit + 's';
+  };
+
   if (!timeLeft) {
     return <div>{'No longer accepting applications'}</div>;
   }
 
   return (
     <div>
-      {timeLeft.weeks} weeks, {timeLeft.days} days, {timeLeft.hours} hours left
-      to apply!
+      {timeLeft.weeks} {getTimeUnit(timeLeft.weeks, 'week')}, 
+      {' '}{timeLeft.days} {getTimeUnit(timeLeft.days, 'day')},
+      {' '}{timeLeft.hours} {getTimeUnit(timeLeft.hours, 'hour')} left to apply!
     </div>
   );
 };
